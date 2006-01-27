@@ -14,7 +14,7 @@
  * Copyright (c) 2005 UK Citizens Online Democracy. All rights reserved.
  * Email: francis@mysociety.org; WWW: http://www.mysociety.org
  *
- * $Id: general-example,v 1.6 2006-01-26 20:40:43 francis Exp $
+ * $Id: general-example,v 1.7 2006-01-27 03:44:20 francis Exp $
  * 
  */
 
@@ -27,7 +27,4 @@ define('OPTION_MS_DB_HOST', '');
 // MoinMoin
 define('OPTION_MS_CAPTCHA_URL', '.../captcha');
 define('OPTION_MS_MOIN_SCRIPT', '.../www.mysociety.org/.../moin_script.cgi');
-
-// Service locations
-define('OPTION_EVEL_URL', '.../blah/evel.cgi');
 

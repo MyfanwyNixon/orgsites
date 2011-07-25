@@ -21,3 +21,6 @@
 /cee/web/wp
 /cee/web/cfp
 
+/secure/conf/general
+/secure/conf/general.deployed
+/secure/web/down.html

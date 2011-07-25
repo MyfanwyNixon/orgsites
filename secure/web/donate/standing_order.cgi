@@ -14,7 +14,7 @@
 
 ############################################################################
 import sys
-sys.path.append("../../../pylib")
+sys.path.append("../../../commonlib/pylib")
 
 import fcgi
 import gettext

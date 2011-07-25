@@ -11,9 +11,9 @@
  */
 
 require_once "../../conf/general";
-require_once "../../../phplib/utility.php";
-require_once "../../../phplib/validate.php";
-require_once "../../../phplib/db.php";
+require_once "../../../commonlib/phplib/utility.php";
+require_once "../../../commonlib/phplib/validate.php";
+require_once "../../../commonlib/phplib/db.php";
 
 $giftaid = trim(get_http_var('giftaid', true));
 if (!$giftaid) {

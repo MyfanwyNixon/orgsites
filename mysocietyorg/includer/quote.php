@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(__FILE__) . "/../../phplib/evel.php";
+require_once dirname(__FILE__) . "/../../commonlib/phplib/evel.php";
 
 $sent = false;
 

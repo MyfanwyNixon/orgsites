@@ -1,6 +1,6 @@
 <?php 
 $menu_proposals2006 = true;
-require_once "../../phplib/utility.php";
+require_once "../../commonlib/phplib/utility.php";
 
 # Get all variables before we include WordPress
 $q_page = get_http_var('page');

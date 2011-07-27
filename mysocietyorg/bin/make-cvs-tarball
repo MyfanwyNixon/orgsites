@@ -14,7 +14,7 @@ cvs -Q export -D now mysociety
 tar cfz mysociety-new.tar.gz mysociety
 
 cd $MAIN_DIR
-cd ../../../mysociety/ms/web
+cd ../web
 mkdir -p cvs
 cd cvs
 

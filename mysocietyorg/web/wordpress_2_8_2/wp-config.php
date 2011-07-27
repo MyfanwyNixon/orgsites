@@ -28,10 +28,6 @@ $table_prefix  = 'wp_';   // example: 'wp_' or 'b2' or 'mylogin_'
 // to enable German language support.
 define ('WPLANG', '');
 
-$toppath = $_SERVER['DOCUMENT_ROOT']; 
-$trimmed = rtrim($toppath, "ms/web");
-define('TOP_PATH', $trimmed);
-
 /* Stop editing */
 
 $server = DB_HOST;

@@ -12,6 +12,6 @@ MAILTO=sysadmin@mysociety.org
 0 2 * * * mswww /bin/chmod -R a+rx /data/vhost/!!(*= $vhost *)!!/moindata/
 
 # Make tarball of CVS repository
-39 3 * * * mswww cd /data/vhost/!!(*= $vhost *)!!/mysociety/ms/bin && ./make-cvs-tarball
+39 3 * * * mswww cd /data/vhost/!!(*= $vhost *)!!/orgsites/mysocietyorg/bin && ./make-cvs-tarball
 
 

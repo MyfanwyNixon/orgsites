@@ -1,3 +1,4 @@
+*.pyc
 
 /mysocietyorg/conf/general
 /mysocietyorg/conf/general.deployed

@@ -394,16 +394,16 @@ div.proposalsintro p {margin-top:0;}
 }
 
 #mysoc-projects .project-box .sticker-council {
-    background-image:url(contimg/project-images/red-council-sticker.png);
+    background-image:url(/contimg/project-images/red-council-sticker.png);
 }
 #mysoc-projects .project-box .sticker-council-charity {
-    background-image:url(contimg/project-images/orange-council-sticker.png);
+    background-image:url(/contimg/project-images/orange-council-sticker.png);
 }
 #mysoc-projects .project-box .sticker-business {
-    background-image:url(contimg/project-images/blue-business-sticker.png);
+    background-image:url(/contimg/project-images/blue-business-sticker.png);
 }
 #mysoc-projects .project-box .sticker-transport {
-    background-image:url(contimg/project-images/yellow-transport-sticker.png);
+    background-image:url(/contimg/project-images/yellow-transport-sticker.png);
 }
 #mysoc-projects .project-box .sticker-new {
     position: absolute;
@@ -413,7 +413,7 @@ div.proposalsintro p {margin-top:0;}
     background-position: top center;
     display:block;
     background-color: transparent;
-    background-image:url(contimg/project-images/green-new-sticker.png);
+    background-image:url(/contimg/project-images/green-new-sticker.png);
     top:100px;
     left: 24px;    
 }

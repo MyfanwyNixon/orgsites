@@ -275,6 +275,7 @@ div.proposalsintro p {margin-top:0;}
 
 #mysoc-projects .project-box h1, #mysoc-projects .left-col h1, #mysoc-projects .right-col h1  {
 	font-size: 130%;
+	text-align: center;
 	min-height: 0px; /* IE7 fix to display despite -ve top margin */
 	margin:-1em 12px 0.5em 12px;	
 	border: 2px solid #2c9f2a;

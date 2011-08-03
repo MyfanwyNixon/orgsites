@@ -18,7 +18,8 @@ body {text-align:center;font-family:tahoma, Geneva, sans-serif; font-size:1em; c
 #divMenu {background:url(images/menu.png) left bottom repeat-x; border:solid 1px #dfdfdf;
         height:2em; position:relative;}
 #divMenu ul {position:relative; top:0.3em; left:0.8em;width:100%;}
-#divMenu ul li a {padding-right:1.3em;}
+#divMenu ul li a {padding-right:0.6em; padding-left:0.6em; border-left:1px dotted #cccccc;font-size:94%;}
+#divMenu ul li.first-child a {padding-left:0; border-left:none;}
 #divMenu ul li a, #divMenu ul li a:visited {text-decoration:none; color:#535353;}        
 #divMenu ul li a:hover {color:#2c4a9e;}
 

@@ -26,3 +26,5 @@
 /secure/conf/general.deployed
 /secure/web/down.html
 /secure/web/nonsecure
+
+.DS_Store

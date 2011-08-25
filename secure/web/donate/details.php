@@ -63,8 +63,8 @@ function save_donor_info($donor){
     
     db_query("insert into donor 
                      (title, firstname, surname, address1, address2, town, county, 
-                 postcode, country, giftaid) 
-                 values (?,?,?,?,?,?,?,?,?,?)", 
+                 postcode, country, giftaid, created_at) 
+                 values (?,?,?,?,?,?,?,?,?,?,CURRENT_TIMESTAMP)", 
     array(    $donor['title'], 
         $donor['firstname'], 
         $donor['surname'], 

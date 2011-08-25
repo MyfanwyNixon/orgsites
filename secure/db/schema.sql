@@ -22,7 +22,8 @@ create table donor (
     county text,
     postcode text not null,
     country text not null, 
-    giftaid boolean not null default false
+    giftaid boolean not null default false,
+    created_at timestamp
 );
 
 -- secret

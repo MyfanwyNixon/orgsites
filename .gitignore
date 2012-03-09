@@ -27,4 +27,6 @@
 /secure/web/down.html
 /secure/web/nonsecure
 
+/blogs/web/*
+
 .DS_Store

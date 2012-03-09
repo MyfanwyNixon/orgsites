@@ -27,6 +27,8 @@
 /secure/web/down.html
 /secure/web/nonsecure
 
+/blogs/conf/general
+/blogs/conf/general.deployed
 /blogs/web/*
 !/blogs/web/placeholder.txt
 

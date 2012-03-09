@@ -28,5 +28,6 @@
 /secure/web/nonsecure
 
 /blogs/web/*
+!/blogs/web/placeholder.txt
 
 .DS_Store

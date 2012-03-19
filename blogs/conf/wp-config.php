@@ -1,4 +1,7 @@
 <?php
+
+    // Reference for the possible settings: http://codex.wordpress.org/Editing_wp-config.php
+
     /* 
      * Assume that the system we're running on has all errors muted by default, so switch them on as we want here.
      */
@@ -82,6 +85,15 @@
     $toppath = $_SERVER['DOCUMENT_ROOT']; 
     $trimmed = rtrim($toppath, "blogs/web");
     define('TOP_PATH', $trimmed);
+    
+    
+    /**
+     * We want to store the changing content outside the main wordpress tree.
+     * For all the plugins, themes and uploads we'll preserve them by backing up
+     * rather than keeping them in a repo. This will mean that the site is
+     * easier to maintain without dev intervention being required.
+     **/
+    define( 'WP_CONTENT_DIR', __DIR__ . '/../../../blogs-wp-content' );
     
     /* Stop editing */
     

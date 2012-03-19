@@ -1,0 +1,11 @@
+# Let's ignore anything from wordpress
+wp-*
+
+# and some other things that are present but not explicitly wordpress
+index.php
+license.txt
+readme.html
+xmlrpc.php
+
+# And the .svn folder - as we get wordpress from a svn checkout from their repo
+.svn/

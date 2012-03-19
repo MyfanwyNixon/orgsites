@@ -93,7 +93,7 @@
      * rather than keeping them in a repo. This will mean that the site is
      * easier to maintain without dev intervention being required.
      **/
-    define( 'WP_CONTENT_DIR', __DIR__ . '/../../../blogs-wp-content' );
+    define( 'WP_CONTENT_DIR', OPTION_WORDPRESS_WP_CONTENT_DIR );
     
     /* Stop editing */
     

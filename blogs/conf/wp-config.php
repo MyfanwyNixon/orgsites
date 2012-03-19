@@ -58,16 +58,7 @@
     $toppath = $_SERVER['DOCUMENT_ROOT']; 
     $trimmed = rtrim($toppath, "blogs/web");
     define('TOP_PATH', $trimmed);
-    
-    
-    /**
-     * We want to store the changing content outside the main wordpress tree.
-     * For all the plugins, themes and uploads we'll preserve them by backing up
-     * rather than keeping them in a repo. This will mean that the site is
-     * easier to maintain without dev intervention being required.
-     **/
-    define( 'WP_CONTENT_DIR', OPTION_WORDPRESS_WP_CONTENT_DIR );
-    
+        
     /* Stop editing */
     
     // $server   = DB_HOST;

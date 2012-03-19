@@ -25,9 +25,6 @@ define('OPTION_BLOGS_DB_PASS', '');
 define('OPTION_BLOGS_DB_HOST', '');
 define('OPTION_STAGING', '0');
 
-// Where should we keep the wp-content?
-define('OPTION_WORDPRESS_WP_CONTENT_DIR', '/data/vhost/!!(*= $vhost *)!!/blogs-wp-content' );
-
 // Secret keys - you can use this service to generate them: https://api.wordpress.org/secret-key/1.1/salt/
 // note you'll need to add the 'OPTION_WORDPRESS_' prefix to the generated code
 define('OPTION_WORDPRESS_AUTH_KEY',         'XXXX - put random string in here - XXXX');

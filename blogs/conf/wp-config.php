@@ -2,33 +2,6 @@
 
     // Reference for the possible settings: http://codex.wordpress.org/Editing_wp-config.php
 
-    /* 
-     * Assume that the system we're running on has all errors muted by default, so switch them on as we want here.
-     */
-
-    /* Never display errors to user. */
-    ini_set('display_errors', 'Off');
-    ini_set('display_startup_errors', 'Off');
-
-    /* Log errors */
-    ini_set('log_errors', 'On');
-
-    /* But do not place any arbitrary limits on the length of errors logged by
-     * error_log. */
-    ini_set('log_errors_max_len', '0');
-
-    /* And try, as hard as possible, to make logged errors go to the server's
-     * error log. */
-    ini_set('error_log', null);
-
-    /* Trap all errors. */
-    ini_set('ignore_repeated_errors', 'Off');
-
-    /* Don't put HTML tags in error messages. */
-    ini_set('html_errors', 'Off');
-    
-
-
     // load the config from the general config file.
     // Note - this file is copied to the 'web' dir during deploy, so the path
     // needs to be relative to that location, not the location it is in in the

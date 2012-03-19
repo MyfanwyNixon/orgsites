@@ -1,3 +1,10 @@
 #!/bin/sh
-PHP_FCGI_CHILDREN=1 PHPRC=/etc/php5/fcgi exec /usr/bin/php5-cgi
+
+# Work out where the conf dir is - we have a php.ini there
+CONF_DIR="$( cd "$( dirname $0 )/../../conf" && pwd )"
+
+# echo $0
+# echo $CONF_DIR
+
+PHP_FCGI_CHILDREN=1 PHPRC=$CONF_DIR exec /usr/bin/php5-cgi
 

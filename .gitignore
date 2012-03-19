@@ -29,7 +29,5 @@
 
 /blogs/conf/general
 /blogs/conf/general.deployed
-/blogs/web/*
-!/blogs/web/placeholder.txt
 
 .DS_Store

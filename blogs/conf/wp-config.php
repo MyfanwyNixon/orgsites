@@ -10,6 +10,19 @@
         print "Error including conf/general in wp-config.php on mysociety blogs WordPress - we are in " .__DIR__;
         exit;
     }
+    
+    
+    // If we are on staging switch on lots of debugging
+    if ( OPTION_STAGING ) {
+        // http://codex.wordpress.org/Editing_wp-config.php#Debug
+        define('WP_DEBUG',         true);
+        define('WP_DEBUG_LOG',     true);
+        define('WP_DEBUG_DISPLAY', true);
+        // define('SCRIPT_DEBUG',     true); // use development css and js
+        @ini_set('log_errors','On');
+        @ini_set('display_errors', true);
+        @ini_set('error_log', __DIR__ . '/../../../logs/blogs_php_error.log');
+    }
 
     // ** MySQL settings ** //
     define('DB_NAME',     OPTION_BLOGS_DB_NAME);  // The name of the database

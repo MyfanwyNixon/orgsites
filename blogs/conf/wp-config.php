@@ -19,10 +19,12 @@
         define('WP_DEBUG_LOG',     true);
         define('WP_DEBUG_DISPLAY', true);
         // define('SCRIPT_DEBUG',     true); // use development css and js
-        @ini_set('log_errors','On');
         @ini_set('display_errors', true);
-        @ini_set('error_log', __DIR__ . '/../../../logs/blogs_php_error.log');
     }
+
+    // Log php errors directly to Apache
+    @ini_set('log_errors','On');
+    @ini_set('error_log', null);
 
     // ** MySQL settings ** //
     define('DB_NAME',     OPTION_BLOGS_DB_NAME);  // The name of the database

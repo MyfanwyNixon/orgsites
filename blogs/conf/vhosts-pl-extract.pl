@@ -10,26 +10,7 @@ $sites->{'blogs'} = {
     crontab        => 0,
     exec_extras    => {
         user => [
-
-            # get WP from their svn server
-            'svn co http://core.svn.wordpress.org/tags/3.3.1 blogs/web;',
-
-            # copy in our custom php
-            'bash blogs/custom_php/copy_php_to_web_directory.bash',
-
-            # uploads and plugins are both stored outside version control and
-            # are backed up
-            'rm -rfv blogs/web/wp-content/uploads',
-            'rm -rfv blogs/web/wp-content/plugins',
-            'rm -rfv blogs/web/wp-content/blogs.dir',
-            'mkdir -pv ../blog-uploads ../blog-plugins ../blogs.dir',
-            'ln -sfv  ../../../../blog-uploads blogs/web/wp-content/uploads',
-            'ln -sfv  ../../../../blog-plugins blogs/web/wp-content/plugins',
-            'ln -sfv  ../../../../blogs.dir blogs/web/wp-content/blogs.dir',
-
-            # Themes are store under VC but not in the WP structure
-            'rm -rfv blogs/web/wp-content/themes',
-            'ln -sfv ../../themes blogs/web/wp-content/themes',
+            'bash blogs/bin/post_deploy.bash',
         ]
     },
 };

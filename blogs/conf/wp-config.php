@@ -60,7 +60,17 @@
     // For example, install de.mo to wp-includes/languages and set WPLANG to 'de'
     // to enable German language support.
     define ('WPLANG', '');
-        
+    
+    // start using multisites
+    define( 'WP_ALLOW_MULTISITE', true );
+    define( 'MULTISITE', true );
+    define( 'SUBDOMAIN_INSTALL', false );
+    $base = '/';
+    define( 'DOMAIN_CURRENT_SITE', OPTION_VHOST_NAME );
+    define( 'PATH_CURRENT_SITE', '/' );
+    define( 'SITE_ID_CURRENT_SITE', 1 );
+    define( 'BLOG_ID_CURRENT_SITE', 1 );
+            
     $toppath = $_SERVER['DOCUMENT_ROOT']; 
     $trimmed = rtrim($toppath, "blogs/web");
     define('TOP_PATH', $trimmed);

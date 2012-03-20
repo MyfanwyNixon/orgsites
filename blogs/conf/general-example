@@ -18,6 +18,9 @@
  * 
  */
 
+// What is our vhost name - needed for the multisite setup
+define('OPTION_VHOST_NAME', '!!(* $vhost *)!!');
+
 // MySQL database for mySociety blogs WordPress
 define('OPTION_BLOGS_DB_NAME', '');
 define('OPTION_BLOGS_DB_USER', '');

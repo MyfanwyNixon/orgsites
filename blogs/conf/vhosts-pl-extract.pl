@@ -21,9 +21,11 @@ $sites->{'blogs'} = {
             # are backed up
             'rm -rfv blogs/web/wp-content/uploads',
             'rm -rfv blogs/web/wp-content/plugins',
-            'mkdir -pv ../blog-uploads ../blog-plugins',
+            'rm -rfv blogs/web/wp-content/blogs.dir',
+            'mkdir -pv ../blog-uploads ../blog-plugins ../blogs.dir',
             'ln -sfv  ../../../../blog-uploads blogs/web/wp-content/uploads',
             'ln -sfv  ../../../../blog-plugins blogs/web/wp-content/plugins',
+            'ln -sfv  ../../../../blogs.dir blogs/web/wp-content/blogs.dir',
 
             # Themes are store under VC but not in the WP structure
             'rm -rfv blogs/web/wp-content/themes',

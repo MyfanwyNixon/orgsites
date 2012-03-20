@@ -15,7 +15,7 @@ $sites->{'blogs'} = {
             'svn co http://core.svn.wordpress.org/tags/3.3.1 blogs/web;',
 
             # copy in our custom php
-            'cp -pfuv blogs/custom_php/*.php blogs/web/',
+            'bash blogs/custom_php/copy_php_to_web_directory.bash',
 
             # uploads and plugins are both stored outside version control and
             # are backed up

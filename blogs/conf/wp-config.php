@@ -60,16 +60,7 @@
     // For example, install de.mo to wp-includes/languages and set WPLANG to 'de'
     // to enable German language support.
     define ('WPLANG', '');
-    
-    /**
-     * For developers: WordPress debugging mode.
-     *
-     * Change this to true to enable the display of notices during development.
-     * It is strongly recommended that plugin and theme developers use WP_DEBUG
-     * in their development environments.
-     */
-    define('WP_DEBUG', false);
-    
+        
     $toppath = $_SERVER['DOCUMENT_ROOT']; 
     $trimmed = rtrim($toppath, "blogs/web");
     define('TOP_PATH', $trimmed);

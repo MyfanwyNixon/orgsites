@@ -14,8 +14,8 @@ $sites->{'blogs'} = {
             # get WP from their svn server
             'svn co http://core.svn.wordpress.org/tags/3.3.1 blogs/web;',
 
-            # replace the default wp-config with our own
-            'cp -pfuv blogs/conf/wp-config.php blogs/web/wp-config.php',
+            # copy in our custom php
+            'cp -pfuv blogs/custom_php/*.php blogs/web/',
 
             # uploads and plugins are both stored outside version control and
             # are backed up
@@ -39,12 +39,15 @@ $vhosts = {
 
     # ...
     'blogs.dev.mysociety.org' => {
-        site        => 'blogs',
-        staging     => 1,
-        servers     => ['eclipse'],
-        databases   => ['blogs-staging'],
-        user        => 'mswww-staging',
-        git_ref     => 'origin/blogs',
+        aliases =>
+          [ 'main-blog.dev.mysociety.org', 'other-blog.dev.mysociety.org', ],
+        site      => 'blogs',
+        staging   => 1,
+        servers   => ['eclipse'],
+        databases => ['blogs-staging'],
+        user      => 'mswww-staging',
+        git_ref   => 'origin/blogs',
+
         # backup_dirs => [ 'blog-uploads', 'blog-plugins' ],
     },
 

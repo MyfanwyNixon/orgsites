@@ -29,5 +29,7 @@
 
 /blogs/conf/general
 /blogs/conf/general.deployed
+/blogs/themes/mysociety/assets/.sass-cache
+/blogs/themes/mysociety/assets/compass_app_log.txt
 
 .DS_Store

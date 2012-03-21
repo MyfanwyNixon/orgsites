@@ -1,0 +1,25 @@
+@import "_mixins";
+@import "compass";
+
+
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 60em;
+}
+
+
+.wrapper {
+  display: table;
+  caption-side: top;
+  width: 100%;
+  .table-cell {
+    display:table-cell;
+  }
+}
+
+
+#nav-wrapper {
+  display: table-caption;
+}

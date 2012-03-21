@@ -1,1 +1,283 @@
+@import "_mixins";
 @import "compass";
+
+
+/* HEADINGS and TYPOGRAPHY */
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_300-webfont.eot');
+  src: url('../fonts/MuseoSans_300-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_300-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_300-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_300-webfont.svg#MuseoSans300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_300_Italic-webfont.eot');
+  src: url('../fonts/MuseoSans_300_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_300_Italic-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_300_Italic-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_300_Italic-webfont.svg#MuseoSans300Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_500-webfont.eot');
+  src: url('../fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_500-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_500-webfont.svg#MuseoSans500') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_500_Italic-webfont.eot');
+  src: url('../fonts/MuseoSans_500_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_500_Italic-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_500_Italic-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_500_Italic-webfont.svg#MuseoSans500Italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Museo300-display';
+  src: url('../fonts/Museo300-Regular-webfont.eot');
+  src: url('../fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Museo300-Regular-webfont.woff') format('woff'),
+       url('../fonts/Museo300-Regular-webfont.ttf') format('truetype'),
+       url('../fonts/Museo300-Regular-webfont.svg#Museo300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Opera has a bug (from around 10.5 upwards to current 11.6) with showing the
+ * table caption *at all* if the header is set to a font-face :( */
+noindex:-o-prefocus, #site-header {
+  font-family: sans-serif;
+}
+
+
+body {
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  font-size:1em;
+  line-height:1.5;
+  color:#222;
+}
+
+
+p {
+  font-size: 1em;
+  font-weight: normal;
+  margin:0 0 1em 0;
+}
+
+small{
+  font-family: 'helvetica', 'arial',sans-serif;
+  font-style: italic;
+  font-size: 0.8125em;
+  line-height: 1.2307em;
+}
+
+h1 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: normal;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.5em; /*24px*/
+  line-height: 1.3333em; /*32px*/
+  font-weight: normal;
+  margin-top: 1.333333333em; /*32px*/
+  margin-bottom: 0.666666666em; /*16px*/
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.20em;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  font-weight: bold
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1em; 
+}
+
+// default list styles
+ul, ol {
+  font-size: 1em;
+  margin-bottom: 2em;  
+  margin-left: 2em;
+  padding:0;
+}
+
+li{
+  margin-bottom: 0.5em;
+}
+
+ul li{
+  list-style: square;
+}
+
+ol li {
+  list-style:decimal;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+  dt {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: bold;
+  }
+  dd {
+    font-weight: 1em;
+    line-height: 1.5em;
+    margin:0 0 1em 0;
+  }
+}
+
+blockquote {
+  p:before {
+    content: '“';
+  }
+  p:after {
+    content: '”';
+  }
+}
+
+pre {
+  font-family: monospace;
+}
+
+img {
+  //do this otherwise IE will just not display
+  //any img without a height defined
+  height:auto;
+}
+
+select, input, textarea {
+  font-size: 99%;
+  max-width: 95%;
+}
+
+
+// links
+a,
+a:visited {
+  text-decoration:none;
+  color:#0BA7D1;
+  &:hover,
+  &:active {
+    text-decoration:underline;
+    color:#0D7CCE;    
+  }
+}
+
+
+/* FORMS */
+
+// input placeholders, these need to be on separate lines as if the browser
+// can't understand a selector it will invalidate the whole line.
+::-webkit-input-placeholder {
+  color: #666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+:-moz-placeholder {
+  color:#666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+:-ms-placeholder {
+  color:#666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+//this only gets used when the browser doesn't support @placeholder and js adds it
+.placeholder {
+  color:#666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+textarea {
+  width: 100%;
+}
+
+textarea {
+  border: 0.125em solid #888888;
+  @include border-radius(0.25em);
+  display: block;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: 'helvetica', 'arial', sans-serif;
+  min-height:8em;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  border: 0.125em solid #888888;
+  @include border-radius(0.25em);
+  display: block;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+
+label{
+  display: block;
+  margin-top: 1.25em;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+  &.inline{
+    display: inline;
+    padding: 0 2em 0 1em;
+    font-weight: normal;
+  }
+}
+
+
+
+/*** LAYOUT ***/
+
+// Padding creates page margins on mobile
+.container{
+  width:100%;
+  padding: 0 1em;
+}
+
+// Use full width to reverse .container margins
+.full-width {
+  margin: 0 -1em;
+}

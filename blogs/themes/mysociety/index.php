@@ -1,1 +1,9 @@
-hello world
+<? get_header(); ?>
+    <h1>why hello world</h1>
+    <h2>why hello world</h2>
+    <h3>why hello world</h3>
+    <h4>why hello world</h4>
+    <h5>why hello world</h5>
+    <h6>why hello world</h6>
+    <p>why hello world</p>
+<? get_footer(); ?>

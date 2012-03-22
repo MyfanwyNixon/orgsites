@@ -71,7 +71,7 @@ body {
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
   font-size:1em;
   line-height:1.5;
-  color:#222;
+  color:#222222;
 }
 
 
@@ -155,6 +155,10 @@ dl {
   }
 }
 
+ul.plain-list {
+  @include list-reset-soft;
+}
+
 blockquote {
   p:before {
     content: '“';
@@ -174,23 +178,20 @@ img {
   height:auto;
 }
 
-select, input, textarea {
-  font-size: 99%;
-  max-width: 95%;
-}
-
-
 // links
 a,
 a:visited {
   text-decoration:none;
   color:#0BA7D1;
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     text-decoration:underline;
-    color:#0D7CCE;    
+    color:#0D7CCE;
+    outline: 0;
   }
 }
+
 
 
 /* FORMS */
@@ -227,33 +228,34 @@ a:visited {
   }
 }
 
-input[type=text],
-input[type=password],
-input[type=email],
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input,
 textarea {
   width: 100%;
+  font-size: 1em;
+  padding:0.25em;
+  border: 0.125em solid #888888;
+  @include border-radius(0.25em);
+  &:focus {
+    border-color:#333333;
+  }
 }
 
 textarea {
-  border: 0.125em solid #888888;
-  @include border-radius(0.25em);
-  display: block;
-  font-size: 1em;
-  line-height: 1.5em;
   font-family: 'helvetica', 'arial', sans-serif;
-  min-height:8em;
+  line-height: 1.5em;
 }
 
-input[type=text],
-input[type=password],
-input[type=email] {
-  border: 0.125em solid #888888;
-  @include border-radius(0.25em);
-  display: block;
-  font-size: 1em;
+input {
   line-height: 1em;
 }
-
 
 label{
   display: block;
@@ -269,15 +271,55 @@ label{
 
 
 
+/* BUTTONS */
+
+.button,
+button,
+input.button,
+a.button {
+  width:auto; //reset from other inputs being width:100%;
+  @include inline-block;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background:#333333;
+  color:#ffffff;
+  border:none;
+  margin:0;
+  padding:0.5em 1.5em;
+  line-height:1em;
+  @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 5px);
+  @include border-radius(0.25em);
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration:none;
+    color:#ffffff;
+    background:#000000;
+  }
+}
+//for some reason these properties need forcing
+.ie6 a.button {
+  color:#ffffff;
+  text-decoration:none;
+  padding:0.6em 1.5em;//slight padding discrepency
+}
+
+
+
 /*** LAYOUT ***/
 
 // Padding creates page margins on mobile
 .container{
   width:100%;
   padding: 0 1em;
+  // background:#cccccc;
 }
+
+.content {
+  // background:red;
+}
+
 
 // Use full width to reverse .container margins
 .full-width {
-  margin: 0 -1em;
+  margin:0 -1em;
 }

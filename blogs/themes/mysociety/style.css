@@ -11,13 +11,6 @@ Version: 1.0
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  /*
-  hack to get IE6/7 to accept the border-box model
-  see here: http://html5please.com/#box-sizing
-  and here: https://github.com/Schepp/box-sizing-polyfill
-  path must be relative to the html page rendered
-  */
-  *behavior: url(/wp-content/themes/mysociety/assets/boxsizing.htc);
 }
 
 
@@ -31,14 +24,7 @@ audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body { margin: 0; font-size: 13px; line-height: 1.231; }
-body, button, input, select, textarea { font-family: sans-serif; color: #222; }
-
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
-a:hover, a:active { outline: 0; }
+body { margin: 0; }
 
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }

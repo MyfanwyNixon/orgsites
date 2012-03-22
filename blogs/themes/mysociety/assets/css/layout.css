@@ -1,3 +1,14 @@
+/*
+polyfill to get IE6/7 to accept the border-box model
+see here: http://html5please.com/#box-sizing
+and here: https://github.com/Schepp/box-sizing-polyfill
+path must be relative to the html page rendered
+*/
+.ie6 *,
+.ie7 * {
+  behavior: url(/wp-content/themes/mysociety/assets/boxsizing.htc);
+}
+
 .container {
   margin: 0 auto;
   padding: 0;
@@ -15,4 +26,16 @@
 
 #nav-wrapper {
   display: table-caption;
+}
+
+.full-width {
+  margin: 0;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 48em) and (max-width: 61em) {
+  .container {
+    width: 100%;
+    padding: 0 1em;
+  }
 }

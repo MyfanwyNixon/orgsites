@@ -71,6 +71,18 @@ body {
   color: #222222;
 }
 
+::-moz-selection {
+  background: #555555;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+::selection {
+  background: #555555;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
 p {
   font-size: 1em;
   font-weight: normal;

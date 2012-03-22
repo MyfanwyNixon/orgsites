@@ -1,5 +1,12 @@
 <?php
-  register_nav_menu( 'primary', __( 'Primary Menu', 'mysociety' ) );
+  if ( function_exists( 'register_nav_menus' ) ) {
+    register_nav_menus(
+      array(
+        'primary' => 'Primary Menu',
+        'secondary' => 'Secondary Menu'
+      )
+    );
+  }
 
   if ( function_exists('register_sidebar') )
   register_sidebar(array(

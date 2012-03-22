@@ -2,6 +2,27 @@
 @import "compass";
 
 
+/*
+GENERAL NOTES
+
+Image replacement:
+  This project used the teqniue employed by H5BP and the Compass framework
+  See http://nicolasgallagher.com/another-css-image-replacement-technique/
+  It will generally follow this pattern:
+  .selector {
+    font: 0/0 a;
+    color: transpranet;
+  }
+  .ie6 .selector {
+    text-indent:-999999px;
+  }
+
+  We then apply the more traditional text-indent method to IE6 as otherwise
+  you are left with a small line over the image.
+
+*/
+
+
 /* HEADINGS and TYPOGRAPHY */
 
 @font-face {
@@ -277,49 +298,113 @@ label{
 button,
 input.button,
 a.button {
-  width:auto; //reset from other inputs being width:100%;
-  @include inline-block;
-  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background:#333333;
-  color:#ffffff;
-  border:none;
-  margin:0;
-  padding:0.5em 1.5em;
-  line-height:1em;
-  @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 5px);
-  @include border-radius(0.25em);
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration:none;
-    color:#ffffff;
-    background:#000000;
-  }
+  @include button-reset;
 }
 //for some reason these properties need forcing
-.ie6 a.button {
-  color:#ffffff;
-  text-decoration:none;
-  padding:0.6em 1.5em;//slight padding discrepency
+.ie6, .ie7 {
+  a.button {
+    color:#ffffff;
+    text-decoration:none;
+    padding:0.6em 1.5em;//slight padding discrepency
+  }
 }
 
 
 
-/*** LAYOUT ***/
+/*** LAYOUT and STYLE ***/
+
+body {
+  background:#ffffff url(../images/grid.gif) center repeat;
+}
 
 // Padding creates page margins on mobile
 .container{
   width:100%;
   padding: 0 1em;
-  // background:#cccccc;
 }
 
+/* HEADER */
+#site-header {
+  background:#ffffff;
+  height:4em;
+  @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+  .container {
+    padding:1em;
+    height:4em;
+    position:relative;
+    #site-logo {
+      display:block;
+      background:url(../images/sprite.png) 0 0 no-repeat;
+      width:122px;
+      height:25px;
+      font:0/0 a;
+      color:transparent;
+      margin-top:4px;
+    }
+    #skip-to-nav {
+      @include button-reset(#555555, #333333);
+      text-transform:uppercase;
+      font-size:0.8125em;
+      padding:1em 2em;
+      position:absolute;
+      right:1em;
+      top:1em;
+    }
+  }
+}
+.ie6 #site-logo {
+  text-indent:-999999px;
+}
+/* MENU */
+#nav-wrapper {
+  .container {
+    ul {
+      @include list-reset-soft;
+      @extend .full-width;
+      li {
+        a {
+          display:block;
+          padding:0.5em;
+          font-size:1.375em;
+          color:#555555;
+          border-bottom:1px solid #ffffff;
+          &:hover {
+            text-decoration:none;
+            background:#dddddd;
+          }
+        }
+        &:last-child a {
+          border-bottom:none;
+        }
+      }
+      &#secondary-menu li a {
+        background:#eeeeee;
+        &:hover {
+          background:#dddddd;
+        }
+      }
+      &#primary-menu li a {
+        background:#f6f6f6;
+        border-color:1px solid #eeeeee;
+        &:hover {
+          background:#dddddd;
+        }
+      }
+    }
+    #site-search {
+
+    }
+  }
+}
+
+/* MAIN CONTENT */
 .content {
-  // background:red;
+
 }
 
 
-// Use full width to reverse .container margins
+// Use .full-width to reverse .container margins
+// It is at the end so it overrides properly when @extended
 .full-width {
   margin:0 -1em;
 }

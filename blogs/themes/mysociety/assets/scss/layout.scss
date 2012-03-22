@@ -13,6 +13,62 @@ path must be relative to the html page rendered
 }
 
 
+/* MOVE MENU TO TOP */
+
+//set up for the menu being on top
+.wrapper {
+  display: table;
+  caption-side: top;
+  width: 100%;
+  .table-cell {
+    display:table-cell;//this keeps Opera happy
+  }
+}
+//make menu table-caption, which will but it on top of .wrapper
+#nav-wrapper {
+  display: table-caption;
+  height:4em;
+}
+//IE6 and 7 don't support display:table;
+.ie6, .ie7 {
+  .wrapper {
+    display:block;
+    padding-top:4em;
+  }
+  #nav-wrapper {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+  }
+}
+
+
+/* MENU */
+#nav-wrapper {
+  .container {
+    ul {
+      @include list-reset;
+      &#secondary-menu li a {
+        background:none;
+        font-size:1.125em;
+        color:#999999;
+      }
+      &#primary-menu li a {
+        background:none;
+        font-size:0.8125em;
+        text-transform:uppercase;
+      }
+    }
+  }
+}
+
+
+
+
+/* LAYOUT */
+
+//fix the width and take off the padding
 .container {
   margin: 0 auto;
   padding: 0;
@@ -20,21 +76,7 @@ path must be relative to the html page rendered
 }
 
 
-.wrapper {
-  display: table;
-  caption-side: top;
-  width: 100%;
-  .table-cell {
-    display:table-cell;
-  }
-}
-
-
-#nav-wrapper {
-  display: table-caption;
-}
-
-
+//reset .full-widths for desktop
 .full-width {
   margin:0;
 }

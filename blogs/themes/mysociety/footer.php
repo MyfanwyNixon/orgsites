@@ -7,14 +7,23 @@
     </div><?//.table-cell?>
     
     <div id="nav-wrapper">
-      <div id="main-nav" role="navigation" class="container">
-        <ul id="mysoc-menu">
-          <li><a id="mysoc-logo" href="http://www.mysociety.org/">mySociety</a></li>
-          <li><a href="http://mysociety.org/donate/">Donate</a></li>
-          <li><a href="http://mysociety.org/projects/">Our Sites</a></li>
-        </ul>
+      <div role="navigation" class="container">
+        <?
+          wp_nav_menu(array(
+            'theme_location' => 'secondary',
+            'container'      => false, 
+            'menu_id'        => 'secondary-menu'
+          ));
 
-        <? wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+          wp_nav_menu(array(
+            'theme_location' => 'primary',
+            'container'      => false, 
+            'menu_id'        => 'primary-menu'
+          ));
+        ?>
+        <form role="search">
+          search
+        </form>
       </div>
     </div>
   </div><?//.wrapper?>

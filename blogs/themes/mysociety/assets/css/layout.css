@@ -9,12 +9,7 @@ path must be relative to the html page rendered
   behavior: url(/wp-content/themes/mysociety/assets/boxsizing.htc);
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0;
-  width: 60em;
-}
-
+/* MOVE MENU TO TOP */
 .wrapper {
   display: table;
   caption-side: top;
@@ -26,6 +21,53 @@ path must be relative to the html page rendered
 
 #nav-wrapper {
   display: table-caption;
+  height: 4em;
+}
+
+.ie6 .wrapper, .ie7 .wrapper {
+  display: block;
+  padding-top: 4em;
+}
+.ie6 #nav-wrapper, .ie7 #nav-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* MENU */
+#nav-wrapper .container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#nav-wrapper .container ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  float: left;
+}
+#nav-wrapper .container ul li a {
+  float: left;
+  display: block;
+}
+#nav-wrapper .container ul#secondary-menu li a {
+  background: none;
+  font-size: 1.125em;
+  color: #999999;
+}
+#nav-wrapper .container ul#primary-menu li a {
+  background: none;
+  font-size: 0.8125em;
+  text-transform: uppercase;
+}
+
+/* LAYOUT */
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 60em;
 }
 
 .full-width {

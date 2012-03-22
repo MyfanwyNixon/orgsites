@@ -1,3 +1,22 @@
+/*
+GENERAL NOTES
+
+Image replacement:
+  This project used the teqniue employed by H5BP and the Compass framework
+  See http://nicolasgallagher.com/another-css-image-replacement-technique/
+  It will generally follow this pattern:
+  .selector {
+    font: 0/0 a;
+    color: transpranet;
+  }
+  .ie6 .selector {
+    text-indent:-999999px;
+  }
+
+  We then apply the more traditional text-indent method to IE6 as otherwise
+  you are left with a small line over the image.
+
+*/
 /* HEADINGS and TYPOGRAPHY */
 @font-face {
   font-family: 'MuseoSans';
@@ -257,9 +276,10 @@ a.button {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
+  cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
   background: #333333;
-  color: #ffffff;
+  color: white;
   border: none;
   margin: 0;
   padding: 0.5em 1.5em;
@@ -290,22 +310,132 @@ a.button:hover,
 a.button:focus,
 a.button:active {
   text-decoration: none;
-  color: #ffffff;
-  background: #000000;
+  color: white;
+  background: black;
 }
 
-.ie6 a.button {
+.ie6 a.button, .ie7 a.button {
   color: #ffffff;
   text-decoration: none;
   padding: 0.6em 1.5em;
 }
 
-/*** LAYOUT ***/
+/*** LAYOUT and STYLE ***/
+body {
+  background: white url(../images/grid.gif) center repeat;
+}
+
 .container {
   width: 100%;
   padding: 0 1em;
 }
 
-.full-width {
+/* HEADER */
+#site-header {
+  background: #ffffff;
+  height: 4em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+}
+#site-header .container {
+  padding: 1em;
+  height: 4em;
+  position: relative;
+}
+#site-header .container #site-logo {
+  display: block;
+  background: url(../images/sprite.png) 0 0 no-repeat;
+  width: 122px;
+  height: 25px;
+  font: 0/0 a;
+  color: transparent;
+  margin-top: 4px;
+}
+#site-header .container #skip-to-nav {
+  width: auto;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background: #555555;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  line-height: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.8125em;
+  padding: 1em 2em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+#site-header .container #skip-to-nav {
+  *display: inline;
+}
+#site-header .container #skip-to-nav:hover, #site-header .container #skip-to-nav:focus, #site-header .container #skip-to-nav:active {
+  text-decoration: none;
+  color: white;
+  background: #333333;
+}
+
+.ie6 #site-logo {
+  text-indent: -999999px;
+}
+
+/* MENU */
+#nav-wrapper .container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#nav-wrapper .container ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+#nav-wrapper .container ul li a {
+  display: block;
+  padding: 0.5em;
+  font-size: 1.375em;
+  color: #555555;
+  border-bottom: 1px solid #ffffff;
+}
+#nav-wrapper .container ul li a:hover {
+  text-decoration: none;
+  background: #dddddd;
+}
+#nav-wrapper .container ul li:last-child a {
+  border-bottom: none;
+}
+#nav-wrapper .container ul#secondary-menu li a {
+  background: #eeeeee;
+}
+#nav-wrapper .container ul#secondary-menu li a:hover {
+  background: #dddddd;
+}
+#nav-wrapper .container ul#primary-menu li a {
+  background: #f6f6f6;
+  border-color: 1px solid #eeeeee;
+}
+#nav-wrapper .container ul#primary-menu li a:hover {
+  background: #dddddd;
+}
+
+/* MAIN CONTENT */
+.full-width, #nav-wrapper .container ul {
   margin: 0 -1em;
 }

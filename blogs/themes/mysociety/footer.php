@@ -8,6 +8,9 @@
     
     <div id="nav-wrapper">
       <div role="navigation" class="container">
+        <header class="mob-only">
+          <a href="#site-header" id="skip-to-top">Top</a>
+        </header>
         <?
           wp_nav_menu(array(
             'theme_location' => 'secondary',
@@ -21,8 +24,10 @@
             'menu_id'        => 'primary-menu'
           ));
         ?>
-        <form role="search">
-          search
+        <form id="site-search" role="search">
+          <label for="search" class="visuallyhidden">Search</label>
+          <input id="search" type="text" placeholder="Keywords...">
+          <button type="submit" class="">Go</button>
         </form>
       </div>
     </div>

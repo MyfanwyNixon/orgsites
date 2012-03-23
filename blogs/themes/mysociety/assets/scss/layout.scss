@@ -20,53 +20,34 @@ path must be relative to the html page rendered
   display: table;
   caption-side: top;
   width: 100%;
+  //this keeps Opera happy by providing a table cell for the caption to sit on top of
   .table-cell {
-    display:table-cell;//this keeps Opera happy
+    display:table-cell;
+  }
+  //make menu table-caption, which will but it on top of .wrapper
+  #nav-wrapper {
+    display: table-caption;
   }
 }
-//make menu table-caption, which will but it on top of .wrapper
-#nav-wrapper {
-  display: table-caption;
-  height:4em;
-}
-//IE6 and 7 don't support display:table;
+
+//IE6 and 7 don't support display:table; so push
+//#nav-wrapper up with position absolute
 .ie6, .ie7 {
   .wrapper {
     display:block;
     padding-top:4em;
-  }
-  #nav-wrapper {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-  }
-}
-
-
-/* MENU */
-#nav-wrapper {
-  .container {
-    ul {
-      @include list-reset;
-      &#secondary-menu li a {
-        background:none;
-        font-size:1.125em;
-        color:#999999;
-      }
-      &#primary-menu li a {
-        background:none;
-        font-size:0.8125em;
-        text-transform:uppercase;
-      }
+    #nav-wrapper {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
     }
   }
 }
 
 
 
-
-/* LAYOUT */
+/*** LAYOUT and STYLE ***/
 
 //fix the width and take off the padding
 .container {
@@ -75,10 +56,114 @@ path must be relative to the html page rendered
   width: 60em;
 }
 
+/* HEADER */
+//stick it to the top of the page
+#site-header {
+  width:100%;
+  position: absolute;
+  top:0;
+  .container {
+    padding:1em 0;
+    #site-logo {
+      margin-top:2px;
+    }
+  }
+}
+
+/* MENU */
+#nav-wrapper {
+  //pull over the top of #site-header
+  position: relative;
+  z-index: 10;
+  //force height so everything under it (.content etc) start at the right point
+  height:4em;
+  .container {
+    padding-left:130px; //pad left by the width of #site-logo plus a bit of safety
+    position:relative; //so we can place the #primary-menu and #site-search
+    ul {
+      @include list-reset;
+      li a {
+        padding:1em;
+        border:none;
+      }
+      &#secondary-menu li a {
+        background:none;
+        font-size:1.125em;
+        color:#999999;
+        padding:0;
+        margin:1em;
+        &:hover {
+          background:none;
+          color:#555555;
+        }
+      }
+      &#primary-menu {
+        position: absolute;
+        right:6em;
+        top:1.5em;
+        li a {
+          padding:0;
+          margin:0 1em;
+          background:none;
+          font-size:0.8125em;
+          text-transform:uppercase;
+          &:hover {
+            background:none;
+            color:#999999;
+          }
+        }
+      }
+    }
+    #site-search {
+      position: absolute;
+      right:0;
+      top:1.75em;
+      width:8em;
+      margin:0;
+      padding:0;
+      font-size:0.75em;
+      background:none;
+      @include box-shadow(rgba(0, 0, 0, 0) 0 0 0);
+      input {
+        width:70%;
+        height:2em;
+        padding:0.25em;
+      }
+      button {
+        width:30%;
+        height:2em;
+        padding:0.5em;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* HELPERS */
 
 //reset .full-widths for desktop
 .full-width {
   margin:0;
+}
+
+// show on desktop
+.desk-only {
+  display: block;
+  visibility: visible;
+}
+// hide stuff on mobile
+.mob-only {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 

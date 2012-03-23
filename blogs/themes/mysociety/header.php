@@ -37,7 +37,7 @@
       <header id="site-header" role="banner">
         <div class="container">
           <a href="<?= site_url()?>" id="site-logo">mySociety</a>
-          <a href="#primary-menu" id="skip-to-nav">menu</a>
+          <a href="#primary-menu" id="skip-to-nav" class="mob-only">menu</a>
         </div>
       </header>
 

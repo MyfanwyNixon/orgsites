@@ -23,7 +23,7 @@ Image replacement:
 */
 
 
-/* HEADINGS and TYPOGRAPHY */
+/*** TYPOGRAPHY ***/
 
 @font-face {
   font-family: 'MuseoSans';
@@ -143,7 +143,7 @@ h4 {
   margin-bottom: 1em; 
 }
 
-// default list styles
+/* LISTS */
 ul, ol {
   font-size: 1em;
   margin-bottom: 2em;  
@@ -195,13 +195,7 @@ pre {
   font-family: monospace;
 }
 
-img {
-  //do this otherwise IE will just not display
-  //any img without a height defined
-  height:auto;
-}
-
-// links
+/* LINKS */
 a,
 a:visited {
   text-decoration:none;
@@ -216,10 +210,16 @@ a:visited {
 }
 
 
+/* IMAGES */
+img {
+  height:auto;
+  max-width:100%;
+}
+
 
 /* FORMS */
 
-// input placeholders, these need to be on separate lines as if the browser
+// Input placeholders: these need to be on separate lines as if the browser
 // can't understand a selector it will invalidate the whole line.
 ::-webkit-input-placeholder {
   color: #666666;
@@ -346,10 +346,10 @@ body {
     #skip-to-nav {
       @include button-reset(#555555, #333333);
       text-transform:uppercase;
-      font-size:0.8125em;
+      font-size:0.8125em; //13px
       padding:1em 2em;
       position:absolute;
-      right:1em;
+      right:1.2308em; //16px
       top:1em;
     }
   }
@@ -360,14 +360,31 @@ body {
 /* MENU */
 #nav-wrapper {
   .container {
+    header {
+      @extend .full-width;
+      background:#FFFFFF;
+      padding:1em;
+      height:4em;
+      position:relative;
+      @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+      #skip-to-top {
+        @include button-reset(#555555, #333333);
+        text-transform:uppercase;
+        font-size:0.8125em; //13px
+        padding:1em 2em;
+        position:absolute;
+        right:1.2308em; //16px
+        top:1em;
+      }
+    }
     ul {
       @include list-reset-soft;
       @extend .full-width;
       li {
         a {
           display:block;
-          padding:0.5em;
-          font-size:1.375em;
+          font-size:1.375em; //22px
+          padding:0.7272em; //16px
           color:#555555;
           border-bottom:1px solid #ffffff;
           &:hover {
@@ -394,7 +411,29 @@ body {
       }
     }
     #site-search {
-
+      @extend .full-width;
+      background:#FFFFFF;
+      padding:1em;
+      height:4em;
+      @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+      input {
+        width:80%;
+        float:left;
+        color:#555555;
+        border-right:0;
+        border-color:#333333;
+        @include border-radius(0.25em 0 0 0.25em);
+        &:focus {
+          border-color:#000000;
+        }
+      }
+      button {
+        width:20%;
+        float:left;
+        padding:0.45em 1.5em;
+        @include border-radius(0 0.25em 0.25em 0);
+        @include box-shadow(rgba(0, 0, 0, 0) 0 0 0);
+      }
     }
   }
 }
@@ -405,8 +444,32 @@ body {
 }
 
 
+/* HELPERS */
+
 // Use .full-width to reverse .container margins
 // It is at the end so it overrides properly when @extended
 .full-width {
   margin:0 -1em;
+}
+
+// hide on mobile, show on desktop
+.desk-only,
+// hide anything with this class if js is working
+.js .hidden-js,
+// hide anything with this class if js is NOT working
+.no-js .hidden-nojs {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

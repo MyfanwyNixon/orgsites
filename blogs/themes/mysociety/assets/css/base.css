@@ -17,7 +17,7 @@ Image replacement:
   you are left with a small line over the image.
 
 */
-/* HEADINGS and TYPOGRAPHY */
+/*** TYPOGRAPHY ***/
 @font-face {
   font-family: 'MuseoSans';
   src: url("../fonts/MuseoSans_300-webfont.eot");
@@ -132,6 +132,7 @@ h4 {
   margin-bottom: 1em;
 }
 
+/* LISTS */
 ul, ol {
   font-size: 1em;
   margin-bottom: 2em;
@@ -189,10 +190,7 @@ pre {
   font-family: monospace;
 }
 
-img {
-  height: auto;
-}
-
+/* LINKS */
 a,
 a:visited {
   text-decoration: none;
@@ -205,6 +203,12 @@ a:visited:focus {
   text-decoration: underline;
   color: #0D7CCE;
   outline: 0;
+}
+
+/* IMAGES */
+img {
+  height: auto;
+  max-width: 100%;
 }
 
 /* FORMS */
@@ -391,7 +395,7 @@ body {
   font-size: 0.8125em;
   padding: 1em 2em;
   position: absolute;
-  right: 1em;
+  right: 1.2308em;
   top: 1em;
 }
 #site-header .container #skip-to-nav {
@@ -408,6 +412,53 @@ body {
 }
 
 /* MENU */
+#nav-wrapper .container header {
+  background: #FFFFFF;
+  padding: 1em;
+  height: 4em;
+  position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+}
+#nav-wrapper .container header #skip-to-top {
+  width: auto;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background: #555555;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  line-height: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.8125em;
+  padding: 1em 2em;
+  position: absolute;
+  right: 1.2308em;
+  top: 1em;
+}
+#nav-wrapper .container header #skip-to-top {
+  *display: inline;
+}
+#nav-wrapper .container header #skip-to-top:hover, #nav-wrapper .container header #skip-to-top:focus, #nav-wrapper .container header #skip-to-top:active {
+  text-decoration: none;
+  color: white;
+  background: #333333;
+}
 #nav-wrapper .container ul {
   list-style-type: none;
   padding: 0;
@@ -421,8 +472,8 @@ body {
 }
 #nav-wrapper .container ul li a {
   display: block;
-  padding: 0.5em;
   font-size: 1.375em;
+  padding: 0.7272em;
   color: #555555;
   border-bottom: 1px solid #ffffff;
 }
@@ -446,8 +497,64 @@ body {
 #nav-wrapper .container ul#primary-menu li a:hover {
   background: #dddddd;
 }
+#nav-wrapper .container #site-search {
+  background: #FFFFFF;
+  padding: 1em;
+  height: 4em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+}
+#nav-wrapper .container #site-search input {
+  width: 80%;
+  float: left;
+  color: #555555;
+  border-right: 0;
+  border-color: #333333;
+  -webkit-border-radius: 0.25em 0 0 0.25em;
+  -moz-border-radius: 0.25em 0 0 0.25em;
+  -ms-border-radius: 0.25em 0 0 0.25em;
+  -o-border-radius: 0.25em 0 0 0.25em;
+  border-radius: 0.25em 0 0 0.25em;
+}
+#nav-wrapper .container #site-search input:focus {
+  border-color: #000000;
+}
+#nav-wrapper .container #site-search button {
+  width: 20%;
+  float: left;
+  padding: 0.45em 1.5em;
+  -webkit-border-radius: 0 0.25em 0.25em 0;
+  -moz-border-radius: 0 0.25em 0.25em 0;
+  -ms-border-radius: 0 0.25em 0.25em 0;
+  -o-border-radius: 0 0.25em 0.25em 0;
+  border-radius: 0 0.25em 0.25em 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+  box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+}
 
 /* MAIN CONTENT */
-.full-width, #nav-wrapper .container ul {
+/* HELPERS */
+.full-width, #nav-wrapper .container header, #nav-wrapper .container ul, #nav-wrapper .container #site-search {
   margin: 0 -1em;
+}
+
+.desk-only,
+.js .hidden-js,
+.no-js .hidden-nojs {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

@@ -25,33 +25,32 @@
       <button class="button">a button</button>
     </form>
 
-    <section class="full-width">
-      <ul class="plain-list">
-        <li>
-          <h4>This is a title</h4>
-          <img src="http://dummyimage.com/60x30">
-          <p>This is some content and there may be other stuff too like an image.</p>
-        </li>
-        <li>
-          <h4>This is a title</h4>
-          <img src="http://dummyimage.com/60x30">
-          <p>This is some content and there may be other stuff too like an image.</p>
-        </li>
-        <li>
-          <h4>This is a title</h4>
-          <img src="http://dummyimage.com/60x30">
-          <p>This is some content and there may be other stuff too like an image.</p>
-        </li>
-        <li>
-          <h4>This is a title</h4>
-          <img src="http://dummyimage.com/60x30">
-          <p>This is some content and there may be other stuff too like an image.</p>
-        </li>
-        <li>
-          <h4>This is a title</h4>
-          <img src="http://dummyimage.com/60x30">
-          <p>This is some content and there may be other stuff too like an image.</p>
-        </li>
-      </ul>
-    </section>
+  
+    <ul class="plain-list">
+      <li>
+        <h4>This is a title</h4>
+        <img src="http://dummyimage.com/800x300">
+        <p>This is some content and there may be other stuff too like an image.</p>
+      </li>
+      <li>
+        <h4>This is a title</h4>
+        <img src="http://dummyimage.com/60x30">
+        <p>This is some content and there may be other stuff too like an image.</p>
+      </li>
+      <li>
+        <h4>This is a title</h4>
+        <img src="http://dummyimage.com/60x30">
+        <p>This is some content and there may be other stuff too like an image.</p>
+      </li>
+      <li>
+        <h4>This is a title</h4>
+        <img src="http://dummyimage.com/60x30">
+        <p>This is some content and there may be other stuff too like an image.</p>
+      </li>
+      <li>
+        <h4>This is a title</h4>
+        <img src="http://dummyimage.com/60x30">
+        <p>This is some content and there may be other stuff too like an image.</p>
+      </li>
+    </ul>
 <? get_footer(); ?>

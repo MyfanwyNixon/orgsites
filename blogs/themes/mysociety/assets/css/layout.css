@@ -18,24 +18,51 @@ path must be relative to the html page rendered
 .wrapper .table-cell {
   display: table-cell;
 }
-
-#nav-wrapper {
+.wrapper #nav-wrapper {
   display: table-caption;
-  height: 4em;
 }
 
 .ie6 .wrapper, .ie7 .wrapper {
   display: block;
   padding-top: 4em;
 }
-.ie6 #nav-wrapper, .ie7 #nav-wrapper {
+.ie6 .wrapper #nav-wrapper, .ie7 .wrapper #nav-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
 
+/*** LAYOUT and STYLE ***/
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 60em;
+}
+
+/* HEADER */
+#site-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+#site-header .container {
+  padding: 1em 0;
+}
+#site-header .container #site-logo {
+  margin-top: 2px;
+}
+
 /* MENU */
+#nav-wrapper {
+  position: relative;
+  z-index: 10;
+  height: 4em;
+}
+#nav-wrapper .container {
+  padding-left: 130px;
+  position: relative;
+}
 #nav-wrapper .container ul {
   list-style-type: none;
   padding: 0;
@@ -52,26 +79,74 @@ path must be relative to the html page rendered
   float: left;
   display: block;
 }
+#nav-wrapper .container ul li a {
+  padding: 1em;
+  border: none;
+}
 #nav-wrapper .container ul#secondary-menu li a {
   background: none;
   font-size: 1.125em;
   color: #999999;
+  padding: 0;
+  margin: 1em;
+}
+#nav-wrapper .container ul#secondary-menu li a:hover {
+  background: none;
+  color: #555555;
+}
+#nav-wrapper .container ul#primary-menu {
+  position: absolute;
+  right: 6em;
+  top: 1.5em;
 }
 #nav-wrapper .container ul#primary-menu li a {
+  padding: 0;
+  margin: 0 1em;
   background: none;
   font-size: 0.8125em;
   text-transform: uppercase;
 }
-
-/* LAYOUT */
-.container {
-  margin: 0 auto;
+#nav-wrapper .container ul#primary-menu li a:hover {
+  background: none;
+  color: #999999;
+}
+#nav-wrapper .container #site-search {
+  position: absolute;
+  right: 0;
+  top: 1.75em;
+  width: 8em;
+  margin: 0;
   padding: 0;
-  width: 60em;
+  font-size: 0.75em;
+  background: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+  box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+}
+#nav-wrapper .container #site-search input {
+  width: 70%;
+  height: 2em;
+  padding: 0.25em;
+}
+#nav-wrapper .container #site-search button {
+  width: 30%;
+  height: 2em;
+  padding: 0.5em;
 }
 
+/* HELPERS */
 .full-width {
   margin: 0;
+}
+
+.desk-only {
+  display: block;
+  visibility: visible;
+}
+
+.mob-only {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 /* MEDIA QUERIES */

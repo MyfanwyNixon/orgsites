@@ -55,4 +55,23 @@
     );
 
   }
+
+
+  // ADVANCED CUSTOM FIELDS
+  // http://www.advancedcustomfields.com/
+  /**
+  * Activate Add-ons
+  */ 
+  if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', "QJF7-L4IX-UCNP-RF2W");
+
+  /**
+   * Register field groups
+   */
+  if(function_exists("register_field_group"))
+  {
+    include('fields/basic.php');
+    include('fields/projects-and-products.php');
+  }
+
+
 ?>

@@ -27,10 +27,10 @@
     @ini_set('error_log', null);
 
     // ** MySQL settings ** //
-    define('DB_NAME',     OPTION_BLOGS_DB_NAME);  // The name of the database
-    define('DB_USER',     OPTION_BLOGS_DB_USER);  // Your MySQL username
-    define('DB_PASSWORD', OPTION_BLOGS_DB_PASS);  // ...and password
-    define('DB_HOST',     OPTION_BLOGS_DB_HOST);  // 99% chance you won't need to change this value
+    define('DB_NAME',     OPTION_MS_DB_NAME);  // The name of the database
+    define('DB_USER',     OPTION_MS_DB_USER);  // Your MySQL username
+    define('DB_PASSWORD', OPTION_MS_DB_PASS);  // ...and password
+    define('DB_HOST',     OPTION_MS_DB_HOST);  // 99% chance you won't need to change this value
     
     /** Database Charset to use in creating database tables. */
     define('DB_CHARSET', 'utf8');
@@ -53,7 +53,7 @@
      define('NONCE_SALT',       OPTION_WORDPRESS_NONCE_SALT       );
     
     // Change the prefix if you want to have multiple blogs in a single database.
-    $table_prefix  = 'wp_';   // example: 'wp_' or 'b2' or 'mylogin_'
+    $table_prefix  = OPTION_WORDPRESS_TABLE_PREFIX;   // example: 'wp_' or 'b2' or 'mylogin_'
     
     // Change this to localize WordPress.  A corresponding MO file for the
     // chosen language must be installed to wp-includes/languages.
@@ -78,10 +78,10 @@
         
     /* Stop editing */
     
-    // $server   = DB_HOST;
-    // $loginsql = DB_USER;
-    // $passsql  = DB_PASSWORD;
-    // $base     = DB_NAME;
+    $server   = DB_HOST;
+    $loginsql = DB_USER;
+    $passsql  = DB_PASSWORD;
+    $base     = DB_NAME;
     
     /* That's all, stop editing! Happy blogging. */
     

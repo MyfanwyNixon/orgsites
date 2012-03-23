@@ -29,7 +29,7 @@ $vhosts = {
         user      => 'mswww-staging',
         git_ref   => 'origin/blogs',
 
-        # backup_dirs => [ 'blog-uploads', 'blog-plugins' ],
+        # backup_dirs => [ 'blog-uploads', 'blog-plugins', 'blogs.dir', ],
     },
 
     # ...

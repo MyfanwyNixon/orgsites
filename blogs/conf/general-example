@@ -22,10 +22,10 @@
 define('OPTION_VHOST_NAME', '!!(*= $vhost *)!!');
 
 // MySQL database for mySociety blogs WordPress
-define('OPTION_BLOGS_DB_NAME', '');
-define('OPTION_BLOGS_DB_USER', '');
-define('OPTION_BLOGS_DB_PASS', '');
-define('OPTION_BLOGS_DB_HOST', '');
+define('OPTION_MS_DB_NAME', '');
+define('OPTION_MS_DB_USER', '');
+define('OPTION_MS_DB_PASS', '');
+define('OPTION_MS_DB_HOST', '');
 define('OPTION_STAGING', '0');
 
 // Secret keys - you can use this service to generate them: https://api.wordpress.org/secret-key/1.1/salt/
@@ -38,3 +38,7 @@ define('OPTION_WORDPRESS_AUTH_SALT',        'XXXX - put random string in here - 
 define('OPTION_WORDPRESS_SECURE_AUTH_SALT', 'XXXX - put random string in here - XXXX');
 define('OPTION_WORDPRESS_LOGGED_IN_SALT',   'XXXX - put random string in here - XXXX');
 define('OPTION_WORDPRESS_NONCE_SALT',       'XXXX - put random string in here - XXXX');
+
+// Change the table prefix from the default of 'wp_' here 
+define('OPTION_WORDPRESS_TABLE_PREFIX', 'wp_');
+

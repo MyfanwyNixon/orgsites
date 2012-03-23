@@ -78,10 +78,10 @@
         
     /* Stop editing */
     
-    // $server   = DB_HOST;
-    // $loginsql = DB_USER;
-    // $passsql  = DB_PASSWORD;
-    // $base     = DB_NAME;
+    $server   = DB_HOST;
+    $loginsql = DB_USER;
+    $passsql  = DB_PASSWORD;
+    $base     = DB_NAME;
     
     /* That's all, stop editing! Happy blogging. */
     

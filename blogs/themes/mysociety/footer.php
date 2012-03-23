@@ -1,4 +1,3 @@
-        </div><?//.content[role=main]?>
       </div><?//.container?>
 
       <footer role="contentinfo">

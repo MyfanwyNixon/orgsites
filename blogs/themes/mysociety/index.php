@@ -1,4 +1,5 @@
 <? get_header(); ?>
+  <div class="content" role="main">
     <h1>why hello world</h1>
     <h2>why hello world</h2>
     <h3>why hello world</h3>
@@ -53,4 +54,5 @@
         <p>This is some content and there may be other stuff too like an image.</p>
       </li>
     </ul>
+  </div>
 <? get_footer(); ?>

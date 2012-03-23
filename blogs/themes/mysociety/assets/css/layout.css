@@ -52,12 +52,14 @@ path must be relative to the html page rendered
 }
 #site-header .container #site-logo {
   margin-top: 2px;
+  position: relative;
+  z-index: 3;
 }
 
 /* MENU */
 #nav-wrapper {
   position: relative;
-  z-index: 10;
+  z-index: 2;
   height: 4em;
 }
 #nav-wrapper .container {

@@ -67,6 +67,9 @@ path must be relative to the html page rendered
     padding:1em 0;
     #site-logo {
       margin-top:2px;
+      //pull on top of #nav-wrapper so the link is clickable
+      position:relative;
+      z-index:3;
     }
   }
 }
@@ -75,7 +78,7 @@ path must be relative to the html page rendered
 #nav-wrapper {
   //pull over the top of #site-header
   position: relative;
-  z-index: 10;
+  z-index: 2;
   //force height so everything under it (.content etc) start at the right point
   height:4em;
   .container {

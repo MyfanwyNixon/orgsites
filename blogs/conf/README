@@ -34,4 +34,6 @@ Search for 'MU Domain Mapping'. Find the 'WordPress MU Domain Mapping' plugin (v
 
 Once installed click on 'Network Activate'.
 
+The activation of the multisite will have made changes to the '.htaccess' file in web. Use 'git status' to find it and 'git checkout' to restore it, otherwise future deployments will get blocked.
+
 All done :)

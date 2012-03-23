@@ -45,6 +45,7 @@ path must be relative to the html page rendered
   width: 100%;
   position: absolute;
   top: 0;
+  left: 0;
 }
 #site-header .container {
   padding: 1em 0;

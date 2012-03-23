@@ -53,7 +53,7 @@
      define('NONCE_SALT',       OPTION_WORDPRESS_NONCE_SALT       );
     
     // Change the prefix if you want to have multiple blogs in a single database.
-    $table_prefix  = 'wp_';   // example: 'wp_' or 'b2' or 'mylogin_'
+    $table_prefix  = OPTION_WORDPRESS_TABLE_PREFIX;   // example: 'wp_' or 'b2' or 'mylogin_'
     
     // Change this to localize WordPress.  A corresponding MO file for the
     // chosen language must be installed to wp-includes/languages.

@@ -76,13 +76,6 @@
     $trimmed = rtrim($toppath, "blogs/web");
     define('TOP_PATH', $trimmed);
         
-    /* Stop editing */
-    
-    $server   = DB_HOST;
-    $loginsql = DB_USER;
-    $passsql  = DB_PASSWORD;
-    $base     = DB_NAME;
-    
     /* That's all, stop editing! Happy blogging. */
     
     /** Absolute path to the WordPress directory. */

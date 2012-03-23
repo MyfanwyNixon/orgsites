@@ -22,10 +22,10 @@
 define('OPTION_VHOST_NAME', '!!(*= $vhost *)!!');
 
 // MySQL database for mySociety blogs WordPress
-define('OPTION_BLOGS_DB_NAME', '');
-define('OPTION_BLOGS_DB_USER', '');
-define('OPTION_BLOGS_DB_PASS', '');
-define('OPTION_BLOGS_DB_HOST', '');
+define('OPTION_MS_DB_NAME', '');
+define('OPTION_MS_DB_USER', '');
+define('OPTION_MS_DB_PASS', '');
+define('OPTION_MS_DB_HOST', '');
 define('OPTION_STAGING', '0');
 
 // Secret keys - you can use this service to generate them: https://api.wordpress.org/secret-key/1.1/salt/

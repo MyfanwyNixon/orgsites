@@ -27,10 +27,10 @@
     @ini_set('error_log', null);
 
     // ** MySQL settings ** //
-    define('DB_NAME',     OPTION_BLOGS_DB_NAME);  // The name of the database
-    define('DB_USER',     OPTION_BLOGS_DB_USER);  // Your MySQL username
-    define('DB_PASSWORD', OPTION_BLOGS_DB_PASS);  // ...and password
-    define('DB_HOST',     OPTION_BLOGS_DB_HOST);  // 99% chance you won't need to change this value
+    define('DB_NAME',     OPTION_MS_DB_NAME);  // The name of the database
+    define('DB_USER',     OPTION_MS_DB_USER);  // Your MySQL username
+    define('DB_PASSWORD', OPTION_MS_DB_PASS);  // ...and password
+    define('DB_HOST',     OPTION_MS_DB_HOST);  // 99% chance you won't need to change this value
     
     /** Database Charset to use in creating database tables. */
     define('DB_CHARSET', 'utf8');

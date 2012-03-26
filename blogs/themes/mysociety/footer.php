@@ -23,9 +23,9 @@
             'menu_id'        => 'primary-menu'
           ));
         ?>
-        <form id="site-search" role="search">
+        <form id="site-search" role="search" action="/" type="get">
           <label for="search" class="visuallyhidden">Search</label>
-          <input id="search" type="text" placeholder="Keywords...">
+          <input id="search" name="s" type="text" placeholder="Keywords...">
           <button type="submit" class="">Go</button>
         </form>
       </div>

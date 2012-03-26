@@ -1,7 +1,10 @@
 <?php
   //include image resizing extension
+  //script is here: https://gist.github.com/1367237
+  //based off this: http://core.trac.wordpress.org/ticket/15311
   include('scripts/vt_resize.php');
 
+  //register menus
   if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus(
       array(
@@ -11,13 +14,17 @@
     );
   }
 
-  if ( function_exists('register_sidebar') )
-  register_sidebar(array(
+  //register sidebars
+  if ( function_exists('register_sidebar') ) {
+    register_sidebar(
+      array(
           'id' => 'blog-sidebar',
           'name' => 'Blog Sidebar'
-      ));
+      )
+    );
+  }
 
-
+  //register custom post types
   add_action( 'init', 'create_post_type' );
   function create_post_type() {
     

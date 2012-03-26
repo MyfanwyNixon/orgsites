@@ -1,5 +1,4 @@
 <article id="post-<? the_ID() ?>" <? post_class() ?>>
-
   <header class="entry-header">
     <h1 class="entry-title"><a href="<? the_permalink() ?>"><? the_title() ?></a></h1>
     <div class="entry-date"><? mysociety_posted_on() ?></div>

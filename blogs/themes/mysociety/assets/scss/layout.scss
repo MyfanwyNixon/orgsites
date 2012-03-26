@@ -145,8 +145,25 @@ path must be relative to the html page rendered
 
 
 
+/* MAIN CONTENT */
 
+.content {
+  max-width:100%;
+  img {
+    max-width:100%;
+  }
+}
 
+// This should probably be using percentages...
+.content-with-sidebar {
+  max-width:40em;
+  overflow:hidden;
+  float:left;
+}
+#sidebar {
+  max-width:20em;
+  float:left;
+}
 
 
 

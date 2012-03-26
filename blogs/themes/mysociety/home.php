@@ -1,5 +1,5 @@
 <? get_header(); ?>
-  <div class="content" role="main">
+  <div class="content content-with-sidebar" role="main">
     <?
       if ( have_posts() ) :
         
@@ -24,4 +24,7 @@
 
     <? endif; ?>
   </div>
+
+<? get_sidebar(); ?>
+
 <? get_footer(); ?>

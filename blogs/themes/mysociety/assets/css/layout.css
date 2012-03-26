@@ -137,6 +137,25 @@ path must be relative to the html page rendered
   padding: 0.5em;
 }
 
+/* MAIN CONTENT */
+.content {
+  max-width: 100%;
+}
+.content img {
+  max-width: 100%;
+}
+
+.content-with-sidebar {
+  max-width: 40em;
+  overflow: hidden;
+  float: left;
+}
+
+#sidebar {
+  max-width: 20em;
+  float: left;
+}
+
 /* HELPERS */
 .full-width {
   margin: 0;

@@ -34,7 +34,7 @@
         'labels' => array(
           'name'                => __( 'Projects' ),
           'singular_name'       => __( 'Project' ),
-          'add_new_item'        => __( 'Add New Project'),
+          'add_new_item'        => __( 'Add New Project' ),
           'search_items'        => __( 'Search Projects' ),
           'not_found'           => __( 'No projects found' ),
           'not_found_in_trash'  => __( 'No projects found in Trash' )

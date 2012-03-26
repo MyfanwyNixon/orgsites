@@ -7,8 +7,8 @@ register_field_group(array (
     0 => 
     array (
       'key' => 'field_4f6c7faec06f5',
-      'label' => 'Hero Image',
-      'name' => 'hero-image',
+      'label' => 'Gallery',
+      'name' => 'gallery',
       'type' => 'repeater',
       'sub_fields' => 
       array (

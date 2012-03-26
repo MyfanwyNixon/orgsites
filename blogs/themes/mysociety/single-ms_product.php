@@ -7,11 +7,9 @@
     
     <div class="body"><? the_field('body') ?></div>
     
-
-    <h3>At the moment timthumb throws a 500 server error if the image filename starts with a Capital letter. Boo. Resolve this.</h3>
-    <? if(get_field('hero-image')): ?>
+    <? if(get_field('gallery')): ?>
 		<ul class="plain-list">
-		<? foreach(get_field('hero-image') as $image): ?>
+		<? foreach(get_field('gallery') as $image): ?>
 			<li>
 				<? $sized = vt_resize( $image[image], '', 250, 250, true ); ?>
 				<img src="<?= $sized[url]; ?>" width="<?= $sized[width]; ?>" height="<?= $sized[height]; ?>" alt="<?= $image['alt'] ?>" />

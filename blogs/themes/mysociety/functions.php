@@ -1,4 +1,7 @@
 <?php
+  //include image resizing extension
+  include('scripts/vt_resize.php');
+
   if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus(
       array(

@@ -18,7 +18,7 @@ register_field_group(array (
           'label' => 'Image',
           'name' => 'image',
           'type' => 'image',
-          'save_format' => 'url',
+          'save_format' => 'id',
           'preview_size' => 'thumbnail',
           'order_no' => '0',
         ),

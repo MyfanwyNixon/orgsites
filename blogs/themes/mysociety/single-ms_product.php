@@ -13,7 +13,8 @@
 		<ul class="plain-list">
 		<? foreach(get_field('hero-image') as $image): ?>
 			<li>
-				<img src="<?= get_bloginfo( 'template_url' ) . '/scripts/timthumb.php?src=' . $image['image'] . '&w=320' ?>" alt="<?= $image['alt'] ?>">
+				<? $sized = vt_resize( $image[image], '', 250, 250, true ); ?>
+				<img src="<?= $sized[url]; ?>" width="<?= $sized[width]; ?>" height="<?= $sized[height]; ?>" alt="<?= $image['alt'] ?>" />
 			</li>
 		<? endforeach; ?>
 		</ul>

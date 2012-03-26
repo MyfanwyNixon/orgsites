@@ -5,8 +5,8 @@
       comments_template( '', true );
     ?>
       <nav id="pagination" class="nav-single">
-            <span class="nav-previous"><? previous_post_link( '%link', __( 'Previous' ) ); ?></span>
-            <span class="nav-next"><? next_post_link( '%link', __( 'Next' ) ); ?></span>
+            <span class="nav-previous"><? previous_post_link( '%link', __( 'Previous', 'mysociety' ) ); ?></span>
+            <span class="nav-next"><? next_post_link( '%link', __( 'Next', 'mysociety' ) ); ?></span>
       </nav>
     <?
       endwhile;

@@ -32,12 +32,12 @@
       'ms_project',
       array(
         'labels' => array(
-          'name'                => __( 'Projects' ),
-          'singular_name'       => __( 'Project' ),
-          'add_new_item'        => __( 'Add New Project' ),
-          'search_items'        => __( 'Search Projects' ),
-          'not_found'           => __( 'No projects found' ),
-          'not_found_in_trash'  => __( 'No projects found in Trash' )
+          'name'                => __( 'Projects', 'mysociety' ),
+          'singular_name'       => __( 'Project', 'mysociety' ),
+          'add_new_item'        => __( 'Add New Project', 'mysociety' ),
+          'search_items'        => __( 'Search Projects', 'mysociety' ),
+          'not_found'           => __( 'No projects found', 'mysociety' ),
+          'not_found_in_trash'  => __( 'No projects found in Trash', 'mysociety' )
         ),
        'public'         => true,
        'has_archive'    => true,
@@ -50,12 +50,12 @@
       'ms_product',
       array(
         'labels' => array(
-          'name'                => __( 'Products' ),
-          'singular_name'       => __( 'Product' ),
-          'add_new_item'        => __( 'Add New Product'),
-          'search_items'        => __( 'Search Products' ),
-          'not_found'           => __( 'No products found' ),
-          'not_found_in_trash'  => __( 'No products found in Trash' )
+          'name'                => __( 'Products', 'mysociety' ),
+          'singular_name'       => __( 'Product', 'mysociety' ),
+          'add_new_item'        => __( 'Add New Product', 'mysociety' ),
+          'search_items'        => __( 'Search Products', 'mysociety' ),
+          'not_found'           => __( 'No products found', 'mysociety' ),
+          'not_found_in_trash'  => __( 'No products found in Trash', 'mysociety' )
         ),
        'public'         => true,
        'has_archive'    => true,
@@ -101,7 +101,7 @@
       esc_attr( get_the_date( 'c' ) ),
       esc_html( get_the_date( 'l, F jS, Y' ) ),
       esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-      esc_attr( sprintf( __( 'View all posts by %s'), get_the_author() ) ),
+      esc_attr( sprintf( __( 'View all posts by %s', 'mysociety' ), get_the_author() ) ),
       get_the_author()
     );
   }
@@ -118,8 +118,8 @@
 
       if ( $wp_query->max_num_pages > 1 ) : ?>
         <nav id="pagination" class="<?php echo $nav_class; ?>">
-          <div class="nav-previous"><?php next_posts_link( __( 'Previous' ) ); ?></div>
-          <div class="nav-next"><?php previous_posts_link( __( 'Next' ) ); ?></div>
+          <div class="nav-previous"><?php next_posts_link( __( 'Previous', 'mysociety' ) ); ?></div>
+          <div class="nav-next"><?php previous_posts_link( __( 'Next', 'mysociety' ) ); ?></div>
         </nav>
       <?php endif;
     }

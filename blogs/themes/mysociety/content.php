@@ -8,7 +8,7 @@
       if ( $categories_list ):
     ?>
       <div class="entry-categories">
-        <? printf( __( '<span>Posted in:</span> %1$s' ), $categories_list ); ?>
+        <? printf( __( '<span>Posted in:</span> %1$s', 'mysociety' ), $categories_list ); ?>
       </div>
     <? endif; ?>
   </header>
@@ -24,13 +24,13 @@
       if ( $tags_list ):
     ?>
       <div class="entry-tags">
-        <? printf( __( '<span>Tagged:</span> %1$s' ), $tags_list ); ?>
+        <? printf( __( '<span>Tagged:</span> %1$s', 'mysociety' ), $tags_list ); ?>
       </div>
     <? endif; ?>
 
     <?
       if ( comments_open() && ! post_password_required() ) : 
-        comments_popup_link(  __( 'Comment' ), _x( '1 Comment', 'comments number' ), _x( '% Comments', 'comments number' ), 'comment-button' );
+        comments_popup_link(  __( 'Comment', 'mysociety' ), _x( '1 Comment', 'comments number' ), _x( '% Comments', 'comments number' ), 'comment-button' );
       endif;
     ?>
   </div>

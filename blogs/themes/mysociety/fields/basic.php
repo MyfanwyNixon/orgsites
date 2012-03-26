@@ -82,7 +82,7 @@ register_field_group(array (
       'instructions' => '',
       'required' => '0',
       'order_no' => '2',
-    ),
+    )
   ),
   'location' => 
   array (
@@ -108,9 +108,9 @@ register_field_group(array (
         'operator' => '==',
         'value' => 'ms_product',
         'order_no' => '2',
-      ),
+      )
     ),
-    'allorany' => 'any',
+    'allorany' => 'any'
   ),
   'options' => 
   array (
@@ -122,9 +122,9 @@ register_field_group(array (
       1 => 'comments',
       2 => 'slug',
       3 => 'author',
-    ),
+    )
   ),
-  'menu_order' => 0,
+  'menu_order' => 0
 ));
 
 ?>

@@ -95,7 +95,7 @@ register_field_group(array (
       'instructions' => 'Please provide the Campaign ID (CHECK WHAT THIS IS) from MailChimp here.',
       'required' => '0',
       'order_no' => '3',
-    ),
+    )
   ),
   'location' => 
   array (
@@ -116,7 +116,7 @@ register_field_group(array (
         'order_no' => '1',
       ),
     ),
-    'allorany' => 'any',
+    'allorany' => 'any'
   ),
   'options' => 
   array (
@@ -129,9 +129,9 @@ register_field_group(array (
       2 => 'comments',
       3 => 'slug',
       4 => 'author',
-    ),
+    )
   ),
-  'menu_order' => 0,
+  'menu_order' => 0
 ));
 
 ?>

@@ -194,4 +194,32 @@
     }
   }
 
+
+
+
+  /**
+   * Fixed img captions
+   * 
+   * See here for reference: http://wp-snippets.com/remove-default-inline-style-of-wp-caption/
+   * 
+   */
+  add_shortcode('wp_caption', 'mysociety_img_caption_shortcode');
+  add_shortcode('caption', 'mysociety_img_caption_shortcode');
+  
+  function mysociety_img_caption_shortcode($attr, $content = null) {
+    $output = apply_filters('img_caption_shortcode', '', $attr, $content);
+    if ( $output != '' ) return $output;
+    extract(shortcode_atts(array(
+      'id'=> '',
+      'align' => 'alignnone',
+      'width' => '',
+      'caption' => ''), $attr));
+    if ( 1 > (int) $width || empty($caption) )
+    return $content;
+    if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+    return '<div ' . $id . 'class="wp-caption ' . esc_attr($align)
+    . '">'
+    . do_shortcode( $content ) . '<p class="wp-caption-text">'
+    . $caption . '</p></div>';
+  }
 ?>

@@ -20,7 +20,7 @@ register_field_group(array (
           'type' => 'image',
           'save_format' => 'id',
           'preview_size' => 'thumbnail',
-          'order_no' => '0',
+          'order_no' => '0'
         ),
         1 => 
         array (
@@ -30,7 +30,7 @@ register_field_group(array (
           'type' => 'text',
           'default_value' => '',
           'formatting' => 'none',
-          'order_no' => '1',
+          'order_no' => '1'
         ),
         2 => 
         array (
@@ -40,7 +40,7 @@ register_field_group(array (
           'type' => 'text',
           'default_value' => '',
           'formatting' => 'none',
-          'order_no' => '2',
+          'order_no' => '2'
         ),
         3 => 
         array (
@@ -50,14 +50,14 @@ register_field_group(array (
           'type' => 'text',
           'default_value' => '',
           'formatting' => 'none',
-          'order_no' => '3',
-        ),
+          'order_no' => '3'
+        )
       ),
       'row_limit' => '',
       'layout' => 'table',
       'instructions' => '',
       'required' => '0',
-      'order_no' => '0',
+      'order_no' => '0'
     ),
     1 => 
     array (
@@ -69,7 +69,7 @@ register_field_group(array (
       'formatting' => 'none',
       'instructions' => '',
       'required' => '0',
-      'order_no' => '1',
+      'order_no' => '1'
     ),
     2 => 
     array (
@@ -81,7 +81,7 @@ register_field_group(array (
       'media_upload' => 'yes',
       'instructions' => '',
       'required' => '0',
-      'order_no' => '2',
+      'order_no' => '2'
     )
   ),
   'location' => 
@@ -93,21 +93,28 @@ register_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'page',
-        'order_no' => '0',
+        'order_no' => '0'
       ),
       1 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_project',
-        'order_no' => '1',
+        'order_no' => '1'
       ),
       2 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_product',
-        'order_no' => '2',
+        'order_no' => '2'
+      ),
+      3 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'post',
+        'order_no' => '3'
       )
     ),
     'allorany' => 'any'
@@ -121,7 +128,7 @@ register_field_group(array (
       0 => 'discussion',
       1 => 'comments',
       2 => 'slug',
-      3 => 'author',
+      3 => 'author'
     )
   ),
   'menu_order' => 0

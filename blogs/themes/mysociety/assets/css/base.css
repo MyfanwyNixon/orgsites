@@ -98,37 +98,42 @@ small {
 
 h1 {
   font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
-  font-size: 3.125em;
-  line-height: 1.1em;
-  margin-top: 0.32em;
-  margin-bottom: 0.32em;
+  font-size: 2em;
+  line-height: 1.125em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
   font-weight: normal;
   color: #555555;
 }
 
 h2 {
   font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
-  font-size: 2.875em;
-  line-height: 1.08695652173913em;
-  margin-top: 0.34782608695652em;
-  margin-bottom: 0.34782608695652em;
+  font-size: 1.875em;
+  line-height: 1.1em;
+  margin-top: 0.53333333333333em;
+  margin-bottom: 0.53333333333333em;
   font-weight: normal;
   color: #AAAAAA;
 }
 
 h3 {
-  font-size: 1.25em;
-  line-height: 1.2em;
-  margin-top: 1.2em;
-  margin-bottom: 0.8em;
-  font-weight: bold;
+  font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.375em;
+  line-height: 1.18181818181818em;
+  margin-top: 0.72727272727273em;
+  margin-bottom: 0.72727272727273em;
+  font-weight: normal;
   color: #555555;
 }
 
 h4 {
-  font-size: 1em;
-  margin-bottom: 1em;
-  font-weight: bold;
+  font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  font-weight: normal;
+  color: #000000;
 }
 
 /* LISTS */

@@ -4,8 +4,8 @@
   </header>
     
   <div class="entry-content">
-    <p class="intro"><? the_field('intro') ?></p>
-    <div class="body"><? the_field('body') ?></div>
+    <? if(get_field('intro')): ?><p class="entry-intro"><? the_field('intro') ?></p><? endif; ?>
+    <? if(get_field('body')): ?><div class="entry-body"><? the_field('body') ?></div><? endif; ?>
     
     <?
       $images = get_field('gallery');

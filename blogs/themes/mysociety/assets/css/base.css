@@ -67,7 +67,7 @@ noindex:-o-prefocus, #site-header {
 body {
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.5em;
   color: #222222;
 }
 
@@ -93,43 +93,42 @@ small {
   font-family: 'helvetica', 'arial',sans-serif;
   font-style: italic;
   font-size: 0.8125em;
-  line-height: 1.2307em;
+  line-height: 1.23076923076923em;
 }
 
 h1 {
   font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
-  font-size: 2em;
-  line-height: 1em;
+  font-size: 3.125em;
+  line-height: 1.1em;
+  margin-top: 0.32em;
+  margin-bottom: 0.32em;
   font-weight: normal;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  color: #555555;
 }
 
 h2 {
   font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
-  font-size: 1.5em;
-  /*24px*/
-  line-height: 1.3333em;
-  /*32px*/
+  font-size: 2.875em;
+  line-height: 1.08695652173913em;
+  margin-top: 0.34782608695652em;
+  margin-bottom: 0.34782608695652em;
   font-weight: normal;
-  margin-top: 1.333333333em;
-  /*32px*/
-  margin-bottom: 0.666666666em;
-  /*16px*/
+  color: #AAAAAA;
 }
 
 h3 {
   font-size: 1.25em;
-  line-height: 1.20em;
+  line-height: 1.2em;
   margin-top: 1.2em;
   margin-bottom: 0.8em;
   font-weight: bold;
+  color: #555555;
 }
 
 h4 {
   font-size: 1em;
-  font-weight: bold;
   margin-bottom: 1em;
+  font-weight: bold;
 }
 
 /* LISTS */
@@ -535,6 +534,37 @@ body {
 }
 
 /* MAIN CONTENT */
+/* GENERAL ELEMENTS */
+.block-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  margin: 0 -1em 0 0;
+}
+.block-list li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  float: left;
+}
+.block-list li a {
+  float: left;
+  display: block;
+}
+.block-list li {
+  width: 18em;
+  margin: 0 1em 1em 0;
+  height: 14em;
+}
+.block-list li h2, .block-list li p {
+  clear: both;
+}
+.block-list li .thumb {
+  margin-bottom: 0.5em;
+}
+
 /* HELPERS */
 .full-width, #nav-wrapper .container header, #nav-wrapper .container ul, #nav-wrapper .container #site-search {
   margin: 0 -1em;

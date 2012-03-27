@@ -70,6 +70,7 @@ path must be relative to the html page rendered
   list-style-type: none;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 #nav-wrapper .container ul li {
   list-style-type: none;
@@ -156,6 +157,18 @@ path must be relative to the html page rendered
   float: left;
 }
 
+/* GENERAL ELEMENTS */
+.block-list {
+  margin: 0;
+}
+.block-list li {
+  margin-right: 3em;
+  height: 18.75em;
+}
+.block-list li.last {
+  margin-right: 0;
+}
+
 /* HELPERS */
 .full-width {
   margin: 0;
@@ -176,5 +189,13 @@ path must be relative to the html page rendered
   .container {
     width: 100%;
     padding: 0 1em;
+  }
+
+  /* GENERAL ELEMENTS */
+  .block-list {
+    margin: 0 -1em 0 0;
+  }
+  .block-list li, .block-list li.last {
+    margin-right: 1em;
   }
 }

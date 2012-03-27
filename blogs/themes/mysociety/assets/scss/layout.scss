@@ -167,6 +167,22 @@ path must be relative to the html page rendered
 
 
 
+/* GENERAL ELEMENTS */
+.block-list {
+  // reset rhs negative margin
+  margin:0;
+  li {
+    // now we are on desktop (probably) we can use the last class
+    // to get the right spacing for a 3 col layout
+    margin-right:3em;
+    height:18.75em; //300px
+    &.last {
+      margin-right:0;
+    }
+  }
+}
+
+
 
 
 /* HELPERS */
@@ -195,4 +211,13 @@ path must be relative to the html page rendered
     width: 100%;
     padding:0 1em;
   }
+
+  /* GENERAL ELEMENTS */
+  .block-list {
+    // go back to previous method and sizing
+    margin:0 -1em 0 0;
+    li, li.last {
+      margin-right:1em;
+    }
+  }  
 }

@@ -7,7 +7,7 @@
         $static_page = get_post($static_page_id);
       ?>
       <header class="entry-header">
-          <h1 class="entry-title"><?= $static_page->post_title ?></h1>
+        <h1 class="entry-title"><?= $static_page->post_title ?></h1>
       </header>
 
       <div class="entry-content">

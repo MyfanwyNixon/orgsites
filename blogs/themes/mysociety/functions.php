@@ -81,6 +81,7 @@
   {
     include('fields/basic.php');
     include('fields/projects-and-products.php');
+    include('fields/products-front.php');
   }
 
 

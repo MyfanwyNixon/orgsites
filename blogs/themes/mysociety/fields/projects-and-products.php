@@ -14,7 +14,7 @@ register_field_group(array (
       'media_upload' => 'yes',
       'instructions' => '',
       'required' => '0',
-      'order_no' => '0',
+      'order_no' => '0'
     ),
     1 => 
     array (
@@ -26,7 +26,7 @@ register_field_group(array (
       'media_upload' => 'yes',
       'instructions' => '',
       'required' => '0',
-      'order_no' => '1',
+      'order_no' => '1'
     ),
     2 => 
     array (
@@ -44,7 +44,7 @@ register_field_group(array (
           'type' => 'text',
           'default_value' => '',
           'formatting' => 'none',
-          'order_no' => '0',
+          'order_no' => '0'
         ),
         1 => 
         array (
@@ -54,7 +54,7 @@ register_field_group(array (
           'type' => 'text',
           'default_value' => '',
           'formatting' => 'none',
-          'order_no' => '1',
+          'order_no' => '1'
         ),
         2 => 
         array (
@@ -70,19 +70,19 @@ register_field_group(array (
             'twitter' => 'Twitter',
             'example' => 'Example',
             'download' => 'Download',
-            'link' => 'Link',
+            'link' => 'Link'
           ),
           'default_value' => '',
           'allow_null' => '0',
           'multiple' => '0',
-          'order_no' => '2',
-        ),
+          'order_no' => '2'
+        )
       ),
       'row_limit' => '',
       'layout' => 'table',
       'instructions' => 'For each type please provide a valid URL except for the Twitter type, where it is required that you just provide the username without the preceding "@".',
       'required' => '0',
-      'order_no' => '2',
+      'order_no' => '2'
     ),
     3 => 
     array (
@@ -94,11 +94,11 @@ register_field_group(array (
       'formatting' => 'none',
       'instructions' => 'Please provide the Campaign ID (CHECK WHAT THIS IS) from MailChimp here.',
       'required' => '0',
-      'order_no' => '3',
+      'order_no' => '3'
     ),
     4 => 
     array (
-      'key' => 'field_4f6c899cb3abc',
+      'key' => 'field_4f71cc84c31b8',
       'label' => 'Colour',
       'name' => 'colour',
       'type' => 'select',
@@ -109,7 +109,17 @@ register_field_group(array (
       'default_value' => '',
       'allow_null' => '0',
       'multiple' => '0',
-      'order_no' => '4',
+      'order_no' => '4'
+    ),
+    5 => 
+    array (
+      'key' => 'field_4f71ced276f70',
+      'label' => 'Council',
+      'name' => 'council',
+      'type' => 'text',
+      'default_value' => '',
+      'formatting' => 'none',
+      'order_no' => '5'
     )
   ),
   'location' => 
@@ -121,15 +131,15 @@ register_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_project',
-        'order_no' => '0',
+        'order_no' => '0'
       ),
       1 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_product',
-        'order_no' => '1',
-      ),
+        'order_no' => '1'
+      )
     ),
     'allorany' => 'any'
   ),
@@ -143,7 +153,7 @@ register_field_group(array (
       1 => 'discussion',
       2 => 'comments',
       3 => 'slug',
-      4 => 'author',
+      4 => 'author'
     )
   ),
   'menu_order' => 0

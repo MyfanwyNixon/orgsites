@@ -90,34 +90,41 @@ register_field_group(array (
     array (
       0 => 
       array (
-        'param' => 'post_type',
-        'operator' => '==',
-        'value' => 'page',
+        'param' => 'page_template',
+        'operator' => '!==',
+        'value' => 'products.php',
         'order_no' => '0'
       ),
       1 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
-        'value' => 'ms_project',
+        'value' => 'page',
         'order_no' => '1'
       ),
       2 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
-        'value' => 'ms_product',
+        'value' => 'ms_project',
         'order_no' => '2'
       ),
       3 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
-        'value' => 'post',
+        'value' => 'ms_product',
         'order_no' => '3'
+      ),
+      4 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'post',
+        'order_no' => '4'
       )
     ),
-    'allorany' => 'any'
+    'allorany' => 'all'
   ),
   'options' => 
   array (

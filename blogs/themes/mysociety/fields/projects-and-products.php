@@ -95,6 +95,21 @@ register_field_group(array (
       'instructions' => 'Please provide the Campaign ID (CHECK WHAT THIS IS) from MailChimp here.',
       'required' => '0',
       'order_no' => '3',
+    ),
+    4 => 
+    array (
+      'key' => 'field_4f6c899cb3abc',
+      'label' => 'Colour',
+      'name' => 'colour',
+      'type' => 'select',
+      'choices' => array(
+        'yellow' => 'Yellow',
+        'blue' => 'Blue'
+      ),
+      'default_value' => '',
+      'allow_null' => '0',
+      'multiple' => '0',
+      'order_no' => '4',
     )
   ),
   'location' => 

@@ -47,5 +47,12 @@
       <? endforeach; ?>
       </ul>
     <? endif; ?>
+
+    <?
+      $colour = get_field('colour');
+      if($colour){
+        echo $colour;
+      }
+    ?>
   </div>
 </article>

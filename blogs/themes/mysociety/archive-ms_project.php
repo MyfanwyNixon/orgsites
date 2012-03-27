@@ -20,7 +20,7 @@
         ?>
         <ul class="block-list">
           <? $i = 0; while (have_posts()) : the_post(); $i++; ?>
-            <li id="product-<? the_ID() ?>" class="<? if ($i == 3){echo "last";$i = 0;} ?>">             
+            <li id="project-<? the_ID() ?>" class="<? if ($i == 3){echo "last";$i = 0;} ?>">
               <?
                 $images = get_field('gallery');
                 if($images) {

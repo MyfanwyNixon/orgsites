@@ -486,6 +486,7 @@ body {
 /* PAGE SPECIFIC */
 
 .product-section-header {
+  clear:both;
   h2 {// font base size is 30px
     //go full width
     margin-left:-0.53333333333333em; //16px
@@ -497,7 +498,18 @@ body {
     margin-top:1em;
   }
 }
+.product-intros {
+  clear:both;
+  // make rhs stick to edge
+  margin:0 -1em 0 0;
+  div {
+    float:left;
+    width: 18em; //288px
+    margin:0 1em 1em 0;
+  }
+}
 .product-examples {
+  clear:both;
   @extend .full-width;
   background:#F7F7F7;
   overflow:hidden;

@@ -198,6 +198,16 @@ p.entry-intro {
   border-bottom: 0.06521739130435em solid #AAAAAA;
 }
 
+.product-intros {
+  margin: 0;
+}
+.product-intros div {
+  margin-right: 3em;
+}
+.product-intros div.last {
+  margin: 0;
+}
+
 .product-examples {
   margin: 0;
   border: 0.0625em solid #E6E7E8;

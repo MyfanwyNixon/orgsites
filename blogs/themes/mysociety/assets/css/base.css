@@ -576,6 +576,9 @@ body {
 }
 
 /* PAGE SPECIFIC */
+.product-section-header {
+  clear: both;
+}
 .product-section-header h2 {
   margin-left: -0.533em;
   margin-right: -0.533em;
@@ -586,7 +589,18 @@ body {
   margin-top: 1em;
 }
 
+.product-intros {
+  clear: both;
+  margin: 0 -1em 0 0;
+}
+.product-intros div {
+  float: left;
+  width: 18em;
+  margin: 0 1em 1em 0;
+}
+
 .product-examples {
+  clear: both;
   background: #F7F7F7;
   overflow: hidden;
   padding: 1em 0 1em 1em;

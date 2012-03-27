@@ -214,7 +214,15 @@ p.entry-intro {
     border-bottom:0.06521739130435em solid #AAAAAA; //3px
   }
 }
-
+.product-intros {
+  margin:0;
+  div {
+    margin-right:3em;
+    &.last {
+      margin:0;
+    }
+  }
+}
 .product-examples {
   margin:0;
   border:0.0625em solid #E6E7E8; //1px

@@ -58,7 +58,7 @@
           'not_found_in_trash'  => __( 'No products found in Trash', 'mysociety' )
         ),
        'public'         => true,
-       'has_archive'    => true,
+       'has_archive'    => false,
        'menu_position'  => 5,
        'rewrite'        => array('slug' => 'products')
       )

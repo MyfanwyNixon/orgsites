@@ -190,6 +190,27 @@ p.entry-intro {
   margin-right: 0;
 }
 
+/* PAGE SPECIFIC */
+.product-section-header h2 {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 0 0.17391304347826em 0;
+  border-bottom: 0.06521739130435em solid #AAAAAA;
+}
+
+.product-examples {
+  margin: 0;
+  border: 0.0625em solid #E6E7E8;
+  padding: 1.5em;
+}
+.product-examples div {
+  width: 18em;
+  margin-right: 1.4375em;
+}
+.product-examples div.last {
+  margin-right: 0;
+}
+
 /* HELPERS */
 .full-width {
   margin: 0;

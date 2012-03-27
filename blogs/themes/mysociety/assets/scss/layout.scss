@@ -204,6 +204,38 @@ p.entry-intro {
 }
 
 
+/* PAGE SPECIFIC */
+
+.product-section-header {
+  h2 {// font base size is 46px
+    margin-left:0;
+    margin-right:0;
+    padding:0 0 0.17391304347826em 0; // 8px
+    border-bottom:0.06521739130435em solid #AAAAAA; //3px
+  }
+}
+
+.product-examples {
+  margin:0;
+  border:0.0625em solid #E6E7E8; //1px
+  padding:1.5em;
+  div {
+    width:18em; //288px
+    margin-right:1.4375em; //23px
+  //   h3 {
+  //   }
+  //   p {
+  //     &.meta {
+  //     }
+  //   }
+    &.last {
+      margin-right:0;
+    }
+  }
+}
+
+
+
 
 
 /* HELPERS */

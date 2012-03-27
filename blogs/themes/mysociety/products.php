@@ -55,8 +55,8 @@ get_header();
                   echo "<a class='thumb' href='".get_permalink()."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
                 }
               ?>
-              <h4><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></h4>
-              <h5><? the_field('council', $rel_id) ?></h5>
+              <h3><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></h3>
+              <p class="meta"><? the_field('council', $rel_id) ?></p>
               <p><?= $ps[text_snippet] ?></p>
             </div>
           <?if($i == 5):?>
@@ -85,8 +85,8 @@ get_header();
                   echo "<a class='thumb' href='".get_permalink()."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
                 }
               ?>
-              <h4><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></h4>
-              <h5><? the_field('council', $rel_id) ?></h5>
+              <h3><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></h3>
+              <p class="meta"><? the_field('council', $rel_id) ?></p>
               <p><?= $ps[text_snippet] ?></p>
             </div>
           <?if($i == 8):?>

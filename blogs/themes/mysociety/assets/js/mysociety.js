@@ -8,6 +8,7 @@ function hideShow(elem, trig, height) {
         //animate this
         trig.removeClass('active').addClass('inactive');
       });
+      //need scrollTo elem offset
       return 'closed';
     } else {
       $('div', this).fadeIn(1000);
@@ -16,6 +17,7 @@ function hideShow(elem, trig, height) {
         //animate this
         trig.addClass('active').removeClass('inactive');
       });
+      //need scrollTo elem offset
       return 'open';
     }
   });
@@ -37,8 +39,8 @@ $(function(){
   /*
    * Examples hide show - bit of a fudge but it works
    */
-  var init_example_products_h = $('#example_products').height()+20;
-  var init_example_projects_h = $('#example_projects').height()+20;
+  var init_example_products_h = $('#example_products').height()+32;
+  var init_example_projects_h = $('#example_projects').height()+32;
 
   $('.product-examples div').hide();
   $('.product-examples').height(0).addClass('closed');

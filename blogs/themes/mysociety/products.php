@@ -52,10 +52,10 @@ get_header();
                 $rel_images = get_field('gallery', $rel_id);
                 if($rel_images) {
                   $sized = vt_resize( $rel_images[0][image], '', 288, 180, true );
-                  echo "<a class='thumb' href='".get_permalink()."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
+                  echo "<a class='thumb' href='".get_permalink($rel_id)."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
                 }
               ?>
-              <h3><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></h3>
+              <h3><a href="<?=get_permalink($rel_id)?>"><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></a></h3>
               <p class="meta"><? the_field('council', $rel_id) ?></p>
               <p><?= $ps[text_snippet] ?></p>
             </div>
@@ -83,10 +83,10 @@ get_header();
                 $rel_images = get_field('gallery', $rel_id);
                 if($rel_images) {
                   $sized = vt_resize( $rel_images[0][image], '', 288, 180, true );
-                  echo "<a class='thumb' href='".get_permalink()."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
+                  echo "<a class='thumb' href='".get_permalink($rel_id)."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
                 }
               ?>
-              <h3><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></h3>
+              <h3><a href="<?=get_permalink($rel_id)?>"><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></a></h3>
               <p class="meta"><? the_field('council', $rel_id) ?></p>
               <p><?= $ps[text_snippet] ?></p>
             </div>

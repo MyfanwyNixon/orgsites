@@ -29,7 +29,7 @@ get_header();
           </div>
           <section class="product-intros">           
           <?endif;?>
-            <div <?if($i == 2){echo 'class="last"';}?>>
+            <div <?=($i == 2 ? 'class="last"' : '');?>>
               <h3><?= $ps[title] ?></h3>
               <p><?= $ps[text_snippet] ?></p>
             </div>
@@ -46,7 +46,7 @@ get_header();
           <?if($i == 3):?>
           <section id="example_products" class="product-examples">
           <?endif;?>
-            <div <?if($i == 5){echo 'class="last"';}?>>
+            <div <?=($i == 5 ? 'class="last"' : '');?>>
               <?
                 $rel_id = $ps[product][0]->ID;
                 $rel_images = get_field('gallery', $rel_id);
@@ -55,7 +55,7 @@ get_header();
                   echo "<a class='thumb' href='".get_permalink($rel_id)."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
                 }
               ?>
-              <h3><a href="<?=get_permalink($rel_id)?>"><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></a></h3>
+              <h3><a href="<?=get_permalink($rel_id)?>"><?= ($ps[title] ? $ps[title] : $ps[product][0]->post_title); ?></a></h3>
               <p class="meta"><? the_field('council', $rel_id) ?></p>
               <p><?= $ps[text_snippet] ?></p>
             </div>
@@ -77,7 +77,7 @@ get_header();
           </div>
           <section id="example_projects" class="product-examples">
           <?endif;?>
-            <div <?if($i == 8){echo 'class="last"';}?>>
+            <div <?=($i == 8 ? 'class="last"' : '');?>>
               <?
                 $rel_id = $ps[product][0]->ID;
                 $rel_images = get_field('gallery', $rel_id);
@@ -86,7 +86,7 @@ get_header();
                   echo "<a class='thumb' href='".get_permalink($rel_id)."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
                 }
               ?>
-              <h3><a href="<?=get_permalink($rel_id)?>"><? if($ps[title]){ echo $ps[title]; }else{ echo $ps[product][0]->post_title; } ?></a></h3>
+              <h3><a href="<?=get_permalink($rel_id)?>"><?= ($ps[title] ? $ps[title] : $ps[product][0]->post_title); ?></a></h3>
               <p class="meta"><? the_field('council', $rel_id) ?></p>
               <p><?= $ps[text_snippet] ?></p>
             </div>
@@ -108,7 +108,7 @@ get_header();
           </div>
           <section class="product-intros">
           <? endif; ?>
-            <div <?if($i == 11){echo 'class="last"';}?>>
+            <div <?=($i == 11 ? 'class="last"' : '');?>>
               <h3><?= $ps[title] ?></h3>
               <p><?= $ps[text_snippet] ?></p>
             </div>

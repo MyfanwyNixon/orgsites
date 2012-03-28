@@ -91,15 +91,15 @@ register_field_group(array (
       0 => 
       array (
         'param' => 'page_template',
-        'operator' => '!==',
+        'operator' => '!=',
         'value' => 'products.php',
         'order_no' => '0'
       ),
       1 => 
       array (
-        'param' => 'post_type',
+        'param' => 'page_template',
         'operator' => '==',
-        'value' => 'page',
+        'value' => 'default',
         'order_no' => '1'
       ),
       2 => 
@@ -124,7 +124,7 @@ register_field_group(array (
         'order_no' => '4'
       )
     ),
-    'allorany' => 'all'
+    'allorany' => 'any'
   ),
   'options' => 
   array (

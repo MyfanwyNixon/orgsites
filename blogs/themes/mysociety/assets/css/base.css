@@ -691,6 +691,9 @@ body {
 .product-examples div h3 {
   margin-bottom: 0;
 }
+.product-examples div p {
+  background: none;
+}
 
 /* HELPERS */
 .full-width, #nav-wrapper .container header, #nav-wrapper .container ul, #nav-wrapper .container #site-search, .product-examples {

@@ -80,7 +80,7 @@ register_field_group(array (
       ),
       'row_limit' => '',
       'layout' => 'table',
-      'instructions' => 'For each type please provide a valid URL except for the Twitter type, where it is required that you just provide the username without the preceding "@".',
+      'instructions' => 'For each type please provide a valid URL except for the Twitter type, where it is required that you just provide the username without the preceding "@".<br><br>The title field is optional for GitHub, Code blog and Wiki + Docs. It is not displayed anywhere for Twitter. It is required for Example, Download and Link.',
       'required' => '0',
       'order_no' => '2'
     ),

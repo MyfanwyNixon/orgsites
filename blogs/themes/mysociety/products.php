@@ -30,8 +30,8 @@ get_header();
           <section class="product-intros">           
           <?endif;?>
             <div <?=($i == 2 ? 'class="last"' : '');?>>
-              <h3><?= $ps[title] ?></h3>
-              <p><?= $ps[text_snippet] ?></p>
+              <h3><?= $ps['title'] ?></h3>
+              <p><?= $ps['text_snippet'] ?></p>
             </div>
           <?if($i == 2):?>
           </section>
@@ -48,16 +48,16 @@ get_header();
           <?endif;?>
             <div <?=($i == 5 ? 'class="last"' : '');?>>
               <?
-                $rel_id = $ps[product][0]->ID;
+                $rel_id = $ps['product'][0]->ID;
                 $rel_images = get_field('gallery', $rel_id);
                 if($rel_images) {
-                  $sized = vt_resize( $rel_images[0][image], '', 288, 180, true );
-                  echo "<a class='thumb' href='".get_permalink($rel_id)."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
+                  $sized = vt_resize( $rel_images[0]['image'], '', 288, 180, true );
+                  echo "<a class='thumb' href='".get_permalink($rel_id)."'><img src='{$sized['url']}' width='{$sized['width']}' height='{$sized['height']}' alt='{$image['alt']}' /></a>";
                 }
               ?>
-              <h3><a href="<?=get_permalink($rel_id)?>"><?= ($ps[title] ? $ps[title] : $ps[product][0]->post_title); ?></a></h3>
+              <h3><a href="<?=get_permalink($rel_id)?>"><?= ($ps['title'] ? $ps['title'] : $ps['product'][0]->post_title); ?></a></h3>
               <p class="meta"><? the_field('council', $rel_id) ?></p>
-              <p><?= $ps[text_snippet] ?></p>
+              <p><?= $ps['text_snippet'] ?></p>
             </div>
           <?if($i == 5):?>
           </section>
@@ -79,16 +79,16 @@ get_header();
           <?endif;?>
             <div <?=($i == 8 ? 'class="last"' : '');?>>
               <?
-                $rel_id = $ps[product][0]->ID;
+                $rel_id = $ps['product'][0]->ID;
                 $rel_images = get_field('gallery', $rel_id);
                 if($rel_images) {
-                  $sized = vt_resize( $rel_images[0][image], '', 288, 180, true );
-                  echo "<a class='thumb' href='".get_permalink($rel_id)."'><img src='{$sized[url]}' width='{$sized[width]}' height='{$sized[height]}' alt='{$image['alt']}' /></a>";
+                  $sized = vt_resize( $rel_images[0]['image'], '', 288, 180, true );
+                  echo "<a class='thumb' href='".get_permalink($rel_id)."'><img src='{$sized['url']}' width='{$sized['width']}' height='{$sized['height']}' alt='{$image['alt']}' /></a>";
                 }
               ?>
-              <h3><a href="<?=get_permalink($rel_id)?>"><?= ($ps[title] ? $ps[title] : $ps[product][0]->post_title); ?></a></h3>
+              <h3><a href="<?=get_permalink($rel_id)?>"><?= ($ps['title'] ? $ps['title'] : $ps['product'][0]->post_title); ?></a></h3>
               <p class="meta"><? the_field('council', $rel_id) ?></p>
-              <p><?= $ps[text_snippet] ?></p>
+              <p><?= $ps['text_snippet'] ?></p>
             </div>
           <?if($i == 8):?>
           </section>
@@ -109,8 +109,8 @@ get_header();
           <section class="product-intros">
           <? endif; ?>
             <div <?=($i == 11 ? 'class="last"' : '');?>>
-              <h3><?= $ps[title] ?></h3>
-              <p><?= $ps[text_snippet] ?></p>
+              <h3><?= $ps['title'] ?></h3>
+              <p><?= $ps['text_snippet'] ?></p>
             </div>
           <?if($i == 11):?>
           </section>

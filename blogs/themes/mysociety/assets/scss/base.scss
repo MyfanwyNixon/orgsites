@@ -358,6 +358,34 @@ a.examples-link {
   }
 }
 
+
+/* ICONS */
+.pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .download, .link {
+  background:url(../images/icons_grey.png) 0 7px no-repeat;
+  padding-left:50px;
+}
+.pound    {background-position: 0 7px;}
+.build    {background-position: 0 7px;}////needs an icon
+.github   {background-position: 0 -164px;}
+.codeblog {background-position: 0 -252px;}
+.wikidocs {background-position: 0 -346px;}
+.bubble   {background-position: 0 -438px;}
+.twitter  {background-position: 0 -548px;}
+.example  {background-position: 0 7px;}////needs an icon
+.download {background-position: 0 7px;}////needs an icon
+.link     {background-position: 0 7px;}////needs an icon
+
+//here we give all the alternate coloured images
+.pink_icon   {background-image:url(../images/icons_pink.png);}
+.purple_icon {background-image:url(../images/icons_purple.png);}
+.yellow_icon {background-image:url(../images/icons_yellow.png);}
+.blue_icon   {background-image:url(../images/icons_blue.png);}
+.green_icon  {background-image:url(../images/icons_green.png);}
+.orange_icon {background-image:url(../images/icons_orange.png);}
+.red_icon    {background-image:url(../images/icons_red.png);}
+.grey_icon   {background-image:url(../images/icons_grey.png);}
+.white_icon  {background-image:url(../images/icons_white.png);}
+
 /*** LAYOUT and STYLE ***/
 
 body {
@@ -611,6 +639,35 @@ body {
     }
   }
 }
+
+/* COLOUR CLASSES */
+
+//backgrounds
+.pink_back   {background-color:$pink !important;}
+.purple_back {background-color:$purple !important;}
+.yellow_back {background-color:$yellow !important;}
+.blue_back   {background-color:$blue !important;}
+.green_back  {background-color:$green !important;}
+.orange_back {background-color:$orange !important;}
+.red_back    {background-color:$red !important;}
+.grey_back   {background-color:$grey !important;}
+.white_back  {background-color:$white !important;}
+
+//texts
+.pink_text   {color:$pink !important;}
+.purple_text {color:$purple !important;}
+.yellow_text {color:$yellow !important;}
+.blue_text   {color:$blue !important;}
+.green_text  {color:$green !important;}
+.orange_text {color:$orange !important;}
+.red_text    {color:$red !important;}
+.grey_text   {color:$grey !important;}
+.white_text  {color:$white !important;}
+
+//fallbacks for if no colour var comes in
+._back       {background-color:$grey;}
+._text       {color:$grey;}
+
 
 
 /* HELPERS */

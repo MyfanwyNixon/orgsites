@@ -840,6 +840,87 @@ body {
   background: none;
 }
 
+/* COLOUR CLASSES */
+.pink_back {
+  background-color: #ff38cc !important;
+}
+
+.purple_back {
+  background-color: #ab36f2 !important;
+}
+
+.yellow_back {
+  background-color: #ffdd4f !important;
+}
+
+.blue_back {
+  background-color: #4896cf !important;
+}
+
+.green_back {
+  background-color: #43c250 !important;
+}
+
+.orange_back {
+  background-color: #ff8c00 !important;
+}
+
+.red_back {
+  background-color: #ff5300 !important;
+}
+
+.grey_back {
+  background-color: #333333 !important;
+}
+
+.white_back {
+  background-color: white !important;
+}
+
+.pink_text {
+  color: #ff38cc !important;
+}
+
+.purple_text {
+  color: #ab36f2 !important;
+}
+
+.yellow_text {
+  color: #ffdd4f !important;
+}
+
+.blue_text {
+  color: #4896cf !important;
+}
+
+.green_text {
+  color: #43c250 !important;
+}
+
+.orange_text {
+  color: #ff8c00 !important;
+}
+
+.red_text {
+  color: #ff5300 !important;
+}
+
+.grey_text {
+  color: #333333 !important;
+}
+
+.white_text {
+  color: white !important;
+}
+
+._back {
+  background-color: #333333;
+}
+
+._text {
+  color: #333333;
+}
+
 /* HELPERS */
 .full-width, #nav-wrapper .container header, #nav-wrapper .container ul, #nav-wrapper .container #site-search, .product-examples {
   margin: 0 -1em;

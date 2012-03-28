@@ -144,9 +144,9 @@ p.entry-intro {
   padding: 0;
   font-size: 0.75em;
   background: none;
-  -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
-  box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 #nav-wrapper .container #site-search input {
   width: 70%;
@@ -212,6 +212,9 @@ p.entry-intro {
   margin: 0;
   border: 0.0625em solid #E6E7E8;
   padding: 1.5em;
+}
+.product-examples.closed {
+  padding: 0.9375em 1.5em;
 }
 .product-examples div {
   width: 18em;

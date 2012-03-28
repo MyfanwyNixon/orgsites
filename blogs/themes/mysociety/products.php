@@ -44,7 +44,7 @@ get_header();
         <? if($i >= 3 && $i <= 5): //SECOND set of three ?>
 
           <?if($i == 3):?>
-          <section class="product-examples">
+          <section id="example_products" class="product-examples">
           <?endif;?>
             <div <?if($i == 5){echo 'class="last"';}?>>
               <?
@@ -61,6 +61,7 @@ get_header();
             </div>
           <?if($i == 5):?>
           </section>
+          <a href="#example_products" class="examples-link">Examples</a>
           <?endif;?>
 
         <? endif; ?>
@@ -74,7 +75,7 @@ get_header();
             <h2>Bespoke projects and consultancy</h2>
             <p>With over ten years experience in transactional web applications, we can help you scope, build and support a system that meets your user needs perfectly. We also provide tecnology and usability consulting to make sure your approach is focused and cost effective.</p>
           </div>
-          <section class="product-examples">
+          <section id="example_projects" class="product-examples">
           <?endif;?>
             <div <?if($i == 8){echo 'class="last"';}?>>
               <?
@@ -91,6 +92,7 @@ get_header();
             </div>
           <?if($i == 8):?>
           </section>
+          <a href="#example_projects" class="examples-link">Examples</a>
           <?endif;?>
 
         <? endif; ?>

@@ -329,7 +329,32 @@ a.button {
   }
 }
 
-
+a.examples-link {
+  @include button-reset(#0cb80c, #6E6F71, #ffffff, 0 0 0.25em 0.25em);
+  float:right;
+  margin:0 0 2em 0;
+  padding:0.5em 2.25em 0.5em 1em;
+  background: #0cb80c url('../images/sprite.png') right -100px no-repeat;
+  @include box-shadow(none);
+  @include background(
+    image-url('../images/sprite.png') right -100px no-repeat,
+    linear-gradient(#13d745, #0cb80c)          
+  );
+  &:hover {
+    background-image:url(../images/sprite.png);
+    background-repeat:no-repeat;
+    background-position:right -100px;
+  }
+  &.inactive {
+    margin-top:-2em;
+    background: #0cb80c url('../images/sprite.png') right -60px no-repeat;
+    @include background(
+      image-url('../images/sprite.png') right -60px no-repeat,
+      linear-gradient(#13d745, #0cb80c)          
+    );
+    @include border-radius(0);
+  }
+}
 
 /*** LAYOUT and STYLE ***/
 
@@ -450,7 +475,7 @@ body {
         float:left;
         padding:0.45em 1.5em;
         @include border-radius(0 0.25em 0.25em 0);
-        @include box-shadow(rgba(0, 0, 0, 0) 0 0 0);
+        @include box-shadow(none);
       }
     }
   }

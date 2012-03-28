@@ -148,7 +148,7 @@ p.entry-intro {
       padding:0;
       font-size:0.75em;
       background:none;
-      @include box-shadow(rgba(0, 0, 0, 0) 0 0 0);
+      @include box-shadow(none);
       input {
         width:70%;
         height:2em;
@@ -227,6 +227,9 @@ p.entry-intro {
   margin:0;
   border:0.0625em solid #E6E7E8; //1px
   padding:1.5em;
+  &.closed {
+    padding: 0.9375em 1.5em; //15px 24px
+  }
   div {
     width:18em; //288px
     margin-right:1.4375em; //23px

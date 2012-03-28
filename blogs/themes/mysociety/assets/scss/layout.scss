@@ -1,0 +1,287 @@
+@import "_mixins";
+@import "compass";
+
+/*
+polyfill to get IE6/7 to accept the border-box model
+see here: http://html5please.com/#box-sizing
+and here: https://github.com/Schepp/box-sizing-polyfill
+path must be relative to the html page rendered
+*/
+.ie6 *,
+.ie7 * {
+  behavior: url(/wp-content/themes/mysociety/assets/boxsizing.htc);
+}
+
+
+/*** TYPOGRAPHY ***/
+h1 {
+  font-size: 3.125em; //50px
+  line-height: 1.1em; //55px
+  margin-top: 0.8em; //40px
+  margin-bottom: 0.32em; //16px
+}
+
+h2 {
+  font-size: 2.875em; //46px
+  line-height: 1.08695652173913em; //50px
+  margin-top: 0.34782608695652em; //16px
+  margin-bottom: 0.34782608695652em; //16px
+}
+
+p.entry-intro {
+  font-size:1.375em; //22px
+  line-height:1.27272727272727em; //28px
+  color:#333333;
+}
+
+/* MOVE MENU TO TOP */
+
+//set up for the menu being on top
+.wrapper {
+  display: table;
+  caption-side: top;
+  width: 100%;
+  //this keeps Opera happy by providing a table cell for the caption to sit on top of
+  .table-cell {
+    display:table-cell;
+  }
+  //make menu table-caption, which will but it on top of .wrapper
+  #nav-wrapper {
+    display: table-caption;
+  }
+}
+
+//IE6 and 7 don't support display:table; so push
+//#nav-wrapper up with position absolute
+.ie6, .ie7 {
+  .wrapper {
+    display:block;
+    padding-top:4em;
+    #nav-wrapper {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+    }
+  }
+}
+
+
+
+/*** LAYOUT and STYLE ***/
+
+//fix the width and take off the padding
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 60em;
+}
+
+/* HEADER */
+//stick it to the top of the page
+#site-header {
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  .container {
+    padding:1em 0;
+    #site-logo {
+      margin-top:2px;
+      //pull on top of #nav-wrapper so the link is clickable
+      position:relative;
+      z-index:3;
+    }
+  }
+}
+
+/* MENU */
+#nav-wrapper {
+  //pull over the top of #site-header
+  position: relative;
+  z-index: 2;
+  //force height so everything under it (.content etc) start at the right point
+  height:4em;
+  .container {
+    padding-left:130px; //pad left by the width of #site-logo plus a bit of safety
+    position:relative; //so we can place the #primary-menu and #site-search
+    ul {
+      @include list-reset;
+      li a {
+        padding:1em;
+        border:none;
+      }
+      &#secondary-menu li a {
+        background:none;
+        font-size:1.125em;
+        color:#999999;
+        padding:0;
+        margin:1em;
+        &:hover {
+          background:none;
+          color:#555555;
+        }
+      }
+      &#primary-menu {
+        position: absolute;
+        right:6em;
+        top:1.5em;
+        li a {
+          padding:0;
+          margin:0 1em;
+          background:none;
+          font-size:0.8125em;
+          text-transform:uppercase;
+          &:hover {
+            background:none;
+            color:#999999;
+          }
+        }
+      }
+    }
+    #site-search {
+      position: absolute;
+      right:0;
+      top:1.75em;
+      width:8em;
+      margin:0;
+      padding:0;
+      font-size:0.75em;
+      background:none;
+      @include box-shadow(none);
+      input {
+        width:70%;
+        height:2em;
+        padding:0.25em;
+      }
+      button {
+        width:30%;
+        height:2em;
+        padding:0.5em;
+      }
+    }
+  }
+}
+
+
+
+
+/* MAIN CONTENT */
+
+.content {
+  max-width:100%;
+  img {
+    max-width:100%;
+  }
+}
+
+// This should probably be using percentages...
+.content-with-sidebar {
+  max-width:40em;
+  overflow:hidden;
+  float:left;
+}
+#sidebar {
+  max-width:20em;
+  float:left;
+}
+
+
+
+/* GENERAL ELEMENTS */
+.block-list {
+  // reset rhs negative margin
+  margin:0;
+  li {
+    // now we are on desktop (probably) we can use the last class
+    // to get the right spacing for a 3 col layout
+    margin-right:3em;
+    height:18.75em; //300px
+    &.last {
+      margin-right:0;
+    }
+  }
+}
+
+
+/* PAGE SPECIFIC */
+
+.product-section-header {
+  h2 {// font base size is 46px
+    margin-left:0;
+    margin-right:0;
+    padding:0 0 0.17391304347826em 0; // 8px
+    border-bottom:0.06521739130435em solid #AAAAAA; //3px
+  }
+}
+.product-intros {
+  margin:0;
+  div {
+    margin-right:3em;
+    &.last {
+      margin:0;
+    }
+  }
+}
+.product-examples {
+  margin:0;
+  border:0.0625em solid #E6E7E8; //1px
+  padding:1.5em;
+  &.closed {
+    padding: 0.9375em 1.5em; //15px 24px
+  }
+  div {
+    width:18em; //288px
+    margin-right:1.4375em; //23px
+  //   h3 {
+  //   }
+  //   p {
+  //     &.meta {
+  //     }
+  //   }
+    &.last {
+      margin-right:0;
+    }
+  }
+}
+
+
+
+
+
+/* HELPERS */
+
+//reset .full-widths for desktop
+.full-width {
+  margin:0;
+}
+
+// show on desktop
+.desk-only {
+  display: block;
+  visibility: visible;
+}
+// hide stuff on mobile
+.mob-only {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 48em) and (max-width: 61em) {
+  .container {
+    width: 100%;
+    padding:0 1em;
+  }
+
+  /* GENERAL ELEMENTS */
+  .block-list {
+    // go back to previous method and sizing
+    margin:0 -1em 0 0;
+    li, li.last {
+      margin-right:1em;
+    }
+  }  
+}

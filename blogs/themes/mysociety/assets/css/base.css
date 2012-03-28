@@ -1,0 +1,716 @@
+/*
+GENERAL NOTES
+
+Image replacement:
+  This project used the teqniue employed by H5BP and the Compass framework
+  See http://nicolasgallagher.com/another-css-image-replacement-technique/
+  It will generally follow this pattern:
+  .selector {
+    font: 0/0 a;
+    color: transpranet;
+  }
+  .ie6 .selector {
+    text-indent:-999999px;
+  }
+
+  We then apply the more traditional text-indent method to IE6 as otherwise
+  you are left with a small line over the image.
+
+*/
+/*** TYPOGRAPHY ***/
+@font-face {
+  font-family: 'MuseoSans';
+  src: url("../fonts/MuseoSans_300-webfont.eot");
+  src: url("../fonts/MuseoSans_300-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans_300-webfont.woff") format("woff"), url("../fonts/MuseoSans_300-webfont.ttf") format("truetype"), url("../fonts/MuseoSans_300-webfont.svg#MuseoSans300") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url("../fonts/MuseoSans_300_Italic-webfont.eot");
+  src: url("../fonts/MuseoSans_300_Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans_300_Italic-webfont.woff") format("woff"), url("../fonts/MuseoSans_300_Italic-webfont.ttf") format("truetype"), url("../fonts/MuseoSans_300_Italic-webfont.svg#MuseoSans300Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url("../fonts/MuseoSans_500-webfont.eot");
+  src: url("../fonts/MuseoSans_500-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans_500-webfont.woff") format("woff"), url("../fonts/MuseoSans_500-webfont.ttf") format("truetype"), url("../fonts/MuseoSans_500-webfont.svg#MuseoSans500") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url("../fonts/MuseoSans_500_Italic-webfont.eot");
+  src: url("../fonts/MuseoSans_500_Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans_500_Italic-webfont.woff") format("woff"), url("../fonts/MuseoSans_500_Italic-webfont.ttf") format("truetype"), url("../fonts/MuseoSans_500_Italic-webfont.svg#MuseoSans500Italic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Museo300-display';
+  src: url("../fonts/Museo300-Regular-webfont.eot");
+  src: url("../fonts/Museo300-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Museo300-Regular-webfont.woff") format("woff"), url("../fonts/Museo300-Regular-webfont.ttf") format("truetype"), url("../fonts/Museo300-Regular-webfont.svg#Museo300") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Opera has a bug (from around 10.5 upwards to current 11.6) with showing the
+ * table caption *at all* if the header is set to a font-face :( */
+noindex:-o-prefocus, #site-header {
+  font-family: sans-serif;
+}
+
+body {
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #222222;
+}
+
+::-moz-selection {
+  background: #555555;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+::selection {
+  background: #555555;
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+p {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0 0 1em 0;
+}
+
+small {
+  font-family: 'helvetica', 'arial',sans-serif;
+  font-style: italic;
+  font-size: 0.8125em;
+  line-height: 1.23076923076923em;
+}
+
+h1 {
+  font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 2em;
+  line-height: 1.125em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  color: #555555;
+}
+
+h2 {
+  font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.875em;
+  line-height: 1.1em;
+  margin-top: 0.53333333333333em;
+  margin-bottom: 0.53333333333333em;
+  font-weight: normal;
+  color: #AAAAAA;
+}
+
+h3 {
+  font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.375em;
+  line-height: 1.18181818181818em;
+  margin-top: 0.72727272727273em;
+  margin-bottom: 0.72727272727273em;
+  font-weight: normal;
+  color: #555555;
+}
+
+h4 {
+  font-family: 'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  font-weight: normal;
+  color: #000000;
+}
+
+/* LISTS */
+ul, ol {
+  font-size: 1em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+ul li {
+  list-style: square;
+}
+
+ol li {
+  list-style: decimal;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+dl dt {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+dl dd {
+  font-weight: 1em;
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+}
+
+ul.plain-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul.plain-list li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+blockquote p:before {
+  content: '“';
+}
+blockquote p:after {
+  content: '”';
+}
+
+pre {
+  font-family: monospace;
+}
+
+/* MISC TEXT*/
+p.meta {
+  color: #555555;
+}
+
+/* LINKS */
+a,
+a:visited {
+  text-decoration: none;
+  color: #0BA7D1;
+}
+a:hover, a:active, a:focus,
+a:visited:hover,
+a:visited:active,
+a:visited:focus {
+  text-decoration: underline;
+  color: #0D7CCE;
+  outline: 0;
+}
+
+/* IMAGES */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* FORMS */
+::-webkit-input-placeholder {
+  color: #666666;
+  font-style: italic;
+  font-size: 0.9375em;
+}
+
+:-moz-placeholder {
+  color: #666666;
+  font-style: italic;
+  font-size: 0.9375em;
+}
+
+:-ms-placeholder {
+  color: #666666;
+  font-style: italic;
+  font-size: 0.9375em;
+}
+
+.placeholder {
+  color: #666666;
+  font-style: italic;
+  font-size: 0.9375em;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  font-size: 1em;
+  padding: 0.25em;
+  border: 0.125em solid #888888;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+}
+input:focus,
+textarea:focus {
+  border-color: #333333;
+}
+
+textarea {
+  font-family: 'helvetica', 'arial', sans-serif;
+  line-height: 1.5em;
+}
+
+input {
+  line-height: 1em;
+}
+
+label {
+  display: block;
+  margin-top: 1.25em;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+}
+label.inline {
+  display: inline;
+  padding: 0 2em 0 1em;
+  font-weight: normal;
+}
+
+/* BUTTONS */
+.button,
+button,
+input.button,
+a.button {
+  width: auto;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background: #333333;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  line-height: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+}
+.button,
+button,
+input.button,
+a.button {
+  *display: inline;
+}
+.button:hover, .button:focus, .button:active,
+button:hover,
+button:focus,
+button:active,
+input.button:hover,
+input.button:focus,
+input.button:active,
+a.button:hover,
+a.button:focus,
+a.button:active {
+  text-decoration: none;
+  color: white;
+  background: black;
+}
+
+.ie6 a.button, .ie7 a.button {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.6em 1.5em;
+}
+
+a.examples-link {
+  width: auto;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background: #0cb80c;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  line-height: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -webkit-border-radius: 0 0 0.25em 0.25em;
+  -moz-border-radius: 0 0 0.25em 0.25em;
+  -ms-border-radius: 0 0 0.25em 0.25em;
+  -o-border-radius: 0 0 0.25em 0.25em;
+  border-radius: 0 0 0.25em 0.25em;
+  float: right;
+  margin: 0 0 2em 0;
+  padding: 0.5em 2.25em 0.5em 1em;
+  background: #0cb80c url("../images/sprite.png") right -100px no-repeat;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: url('../images/../images/sprite.png?1332923665') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1332923665') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332923665') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332923665') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332923665') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332923665') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
+}
+a.examples-link {
+  *display: inline;
+}
+a.examples-link:hover, a.examples-link:focus, a.examples-link:active {
+  text-decoration: none;
+  color: white;
+  background: #6e6f71;
+}
+a.examples-link:hover {
+  background-image: url(../images/sprite.png);
+  background-repeat: no-repeat;
+  background-position: right -100px;
+}
+a.examples-link.inactive {
+  margin-top: -2em;
+  background: #0cb80c url("../images/sprite.png") right -60px no-repeat;
+  background: url('../images/../images/sprite.png?1332923665') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1332923665') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332923665') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332923665') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332923665') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332923665') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/*** LAYOUT and STYLE ***/
+body {
+  background: white url(../images/grid.gif) center repeat;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1em;
+}
+
+/* HEADER */
+#site-header {
+  background: #ffffff;
+  height: 4em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+}
+#site-header .container {
+  padding: 1em;
+  height: 4em;
+  position: relative;
+}
+#site-header .container #site-logo {
+  display: block;
+  background: url(../images/sprite.png) 0 0 no-repeat;
+  width: 122px;
+  height: 25px;
+  font: 0/0 a;
+  color: transparent;
+  margin-top: 4px;
+}
+#site-header .container #skip-to-nav {
+  width: auto;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background: #555555;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  line-height: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.8125em;
+  padding: 1em 2em;
+  position: absolute;
+  right: 1.2308em;
+  top: 1em;
+}
+#site-header .container #skip-to-nav {
+  *display: inline;
+}
+#site-header .container #skip-to-nav:hover, #site-header .container #skip-to-nav:focus, #site-header .container #skip-to-nav:active {
+  text-decoration: none;
+  color: white;
+  background: #333333;
+}
+
+.ie6 #site-logo {
+  text-indent: -999999px;
+}
+
+/* MENU */
+#nav-wrapper .container header {
+  background: #FFFFFF;
+  padding: 1em;
+  height: 4em;
+  position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+}
+#nav-wrapper .container header #skip-to-top {
+  width: auto;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background: #555555;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  line-height: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.8125em;
+  padding: 1em 2em;
+  position: absolute;
+  right: 1.2308em;
+  top: 1em;
+}
+#nav-wrapper .container header #skip-to-top {
+  *display: inline;
+}
+#nav-wrapper .container header #skip-to-top:hover, #nav-wrapper .container header #skip-to-top:focus, #nav-wrapper .container header #skip-to-top:active {
+  text-decoration: none;
+  color: white;
+  background: #333333;
+}
+#nav-wrapper .container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#nav-wrapper .container ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+#nav-wrapper .container ul li a {
+  display: block;
+  font-size: 1.375em;
+  padding: 0.7272em;
+  color: #555555;
+  border-bottom: 1px solid #ffffff;
+}
+#nav-wrapper .container ul li a:hover {
+  text-decoration: none;
+  background: #dddddd;
+}
+#nav-wrapper .container ul li:last-child a {
+  border-bottom: none;
+}
+#nav-wrapper .container ul#secondary-menu li a {
+  background: #eeeeee;
+}
+#nav-wrapper .container ul#secondary-menu li a:hover {
+  background: #dddddd;
+}
+#nav-wrapper .container ul#primary-menu li a {
+  background: #f6f6f6;
+  border-color: 1px solid #eeeeee;
+}
+#nav-wrapper .container ul#primary-menu li a:hover {
+  background: #dddddd;
+}
+#nav-wrapper .container #site-search {
+  background: #FFFFFF;
+  padding: 1em;
+  height: 4em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+}
+#nav-wrapper .container #site-search input {
+  width: 80%;
+  float: left;
+  color: #555555;
+  border-right: 0;
+  border-color: #333333;
+  -webkit-border-radius: 0.25em 0 0 0.25em;
+  -moz-border-radius: 0.25em 0 0 0.25em;
+  -ms-border-radius: 0.25em 0 0 0.25em;
+  -o-border-radius: 0.25em 0 0 0.25em;
+  border-radius: 0.25em 0 0 0.25em;
+}
+#nav-wrapper .container #site-search input:focus {
+  border-color: #000000;
+}
+#nav-wrapper .container #site-search button {
+  width: 20%;
+  float: left;
+  padding: 0.45em 1.5em;
+  -webkit-border-radius: 0 0.25em 0.25em 0;
+  -moz-border-radius: 0 0.25em 0.25em 0;
+  -ms-border-radius: 0 0.25em 0.25em 0;
+  -o-border-radius: 0 0.25em 0.25em 0;
+  border-radius: 0 0.25em 0.25em 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* MAIN CONTENT */
+/* GENERAL ELEMENTS */
+.block-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  margin: 0 -1em 0 0;
+}
+.block-list li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  float: left;
+}
+.block-list li a {
+  float: left;
+  display: block;
+}
+.block-list li {
+  width: 18em;
+  margin: 0 1em 1em 0;
+  height: 14em;
+}
+.block-list li h2, .block-list li p {
+  clear: both;
+}
+.block-list li .thumb {
+  margin-bottom: 0.5em;
+}
+
+/* PAGE SPECIFIC */
+.product-section-header {
+  clear: both;
+}
+.product-section-header h2 {
+  margin-left: -0.533em;
+  margin-right: -0.533em;
+  padding: 0.26666666666667em 0.53333333333333em;
+  border-bottom: 0.1em solid #AAAAAA;
+}
+.product-section-header p {
+  margin-top: 1em;
+}
+
+.product-intros {
+  clear: both;
+  margin: 0 -1em 0 0;
+}
+.product-intros div {
+  float: left;
+  width: 18em;
+  margin: 0 1em 1em 0;
+}
+
+.product-examples {
+  clear: both;
+  background: #F7F7F7;
+  overflow: hidden;
+  padding: 1em 0 1em 1em;
+}
+.product-examples div {
+  width: 18em;
+  float: left;
+  margin: 0 1em 0 0;
+}
+.product-examples div a.thumb img {
+  border: #FFFFFF solid 0.25em;
+  -webkit-box-shadow: 0px 0px 10px 0px #dddddd;
+  -moz-box-shadow: 0px 0px 10px 0px #dddddd;
+  box-shadow: 0px 0px 10px 0px #dddddd;
+}
+.product-examples div a:hover.thumb img {
+  -webkit-box-shadow: 0px 0px 10px 0px #aaaaaa;
+  -moz-box-shadow: 0px 0px 10px 0px #aaaaaa;
+  box-shadow: 0px 0px 10px 0px #aaaaaa;
+}
+.product-examples div h3 {
+  margin-bottom: 0;
+}
+
+/* HELPERS */
+.full-width, #nav-wrapper .container header, #nav-wrapper .container ul, #nav-wrapper .container #site-search, .product-examples {
+  margin: 0 -1em;
+}
+
+.desk-only,
+.js .hidden-js,
+.no-js .hidden-nojs {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

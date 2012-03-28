@@ -27,4 +27,10 @@
 /secure/web/down.html
 /secure/web/nonsecure
 
+/blogs/conf/general
+/blogs/conf/general.deployed
+/blogs/themes/mysociety/assets/.sass-cache
+/blogs/themes/mysociety/assets/compass_app_log.txt
+/blogs/themes/mysociety/sized
+
 .DS_Store

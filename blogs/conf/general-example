@@ -1,0 +1,44 @@
+<?php
+/*
+ * general-example:
+ * Example values for the "general" config file.
+ *
+ * Configuration parameters, in PHP syntax. Configuration parameters are set
+ * using the PHP define('OPTION_...', '...') function. Both perl and PHP code
+ * parse this properly, so you can use comments and conditionals and whatnot,
+ * but unless essential it's better to keep it simple....
+ *
+ * Copy this file to one called "general" in the same directory.  Or
+ * have multiple config files and use a symlink to change between them.
+ * 
+ * Copyright (c) 2005 UK Citizens Online Democracy. All rights reserved.
+ * Email: francis@mysociety.org; WWW: http://www.mysociety.org
+ *
+ * $Id: general-example,v 1.2 2010-01-28 00:47:37 francis Exp $
+ * 
+ */
+
+// What is our vhost name - needed for the multisite setup
+define('OPTION_VHOST_NAME', '!!(*= $vhost *)!!');
+
+// MySQL database for mySociety blogs WordPress
+define('OPTION_MS_DB_NAME', '');
+define('OPTION_MS_DB_USER', '');
+define('OPTION_MS_DB_PASS', '');
+define('OPTION_MS_DB_HOST', '');
+define('OPTION_STAGING', '0');
+
+// Secret keys - you can use this service to generate them: https://api.wordpress.org/secret-key/1.1/salt/
+// note you'll need to add the 'OPTION_WORDPRESS_' prefix to the generated code
+define('OPTION_WORDPRESS_AUTH_KEY',         'XXXX - put random string in here - XXXX');
+define('OPTION_WORDPRESS_SECURE_AUTH_KEY',  'XXXX - put random string in here - XXXX');
+define('OPTION_WORDPRESS_LOGGED_IN_KEY',    'XXXX - put random string in here - XXXX');
+define('OPTION_WORDPRESS_NONCE_KEY',        'XXXX - put random string in here - XXXX');
+define('OPTION_WORDPRESS_AUTH_SALT',        'XXXX - put random string in here - XXXX');
+define('OPTION_WORDPRESS_SECURE_AUTH_SALT', 'XXXX - put random string in here - XXXX');
+define('OPTION_WORDPRESS_LOGGED_IN_SALT',   'XXXX - put random string in here - XXXX');
+define('OPTION_WORDPRESS_NONCE_SALT',       'XXXX - put random string in here - XXXX');
+
+// Change the table prefix from the default of 'wp_' here 
+define('OPTION_WORDPRESS_TABLE_PREFIX', 'wp_');
+

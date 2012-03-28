@@ -1,0 +1,589 @@
+@import "_mixins";
+@import "compass";
+
+
+/*
+GENERAL NOTES
+
+Image replacement:
+  This project used the teqniue employed by H5BP and the Compass framework
+  See http://nicolasgallagher.com/another-css-image-replacement-technique/
+  It will generally follow this pattern:
+  .selector {
+    font: 0/0 a;
+    color: transpranet;
+  }
+  .ie6 .selector {
+    text-indent:-999999px;
+  }
+
+  We then apply the more traditional text-indent method to IE6 as otherwise
+  you are left with a small line over the image.
+
+*/
+
+
+/*** TYPOGRAPHY ***/
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_300-webfont.eot');
+  src: url('../fonts/MuseoSans_300-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_300-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_300-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_300-webfont.svg#MuseoSans300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_300_Italic-webfont.eot');
+  src: url('../fonts/MuseoSans_300_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_300_Italic-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_300_Italic-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_300_Italic-webfont.svg#MuseoSans300Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_500-webfont.eot');
+  src: url('../fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_500-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_500-webfont.svg#MuseoSans500') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_500_Italic-webfont.eot');
+  src: url('../fonts/MuseoSans_500_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_500_Italic-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_500_Italic-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_500_Italic-webfont.svg#MuseoSans500Italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Museo300-display';
+  src: url('../fonts/Museo300-Regular-webfont.eot');
+  src: url('../fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Museo300-Regular-webfont.woff') format('woff'),
+       url('../fonts/Museo300-Regular-webfont.ttf') format('truetype'),
+       url('../fonts/Museo300-Regular-webfont.svg#Museo300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Opera has a bug (from around 10.5 upwards to current 11.6) with showing the
+ * table caption *at all* if the header is set to a font-face :( */
+noindex:-o-prefocus, #site-header {
+  font-family: sans-serif;
+}
+
+
+body {
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  font-size:1em;
+  line-height:1.5em;
+  color:#222222;
+}
+
+::-moz-selection { background: #555555; color: #FFFFFF; text-shadow: none; }
+::selection { background: #555555; color: #FFFFFF; text-shadow: none; }
+
+p {
+  font-size: 1em;
+  font-weight: normal;
+  margin:0 0 1em 0;
+}
+
+//NOTE: each time the font-size is reset to another em value
+//the line-height/margin/padding must be set as an em value
+//derived from the new font-size
+
+small{
+  font-family: 'helvetica', 'arial',sans-serif;
+  font-style: italic;
+  font-size: 0.8125em; //13px
+  line-height: 1.23076923076923em; //16px
+}
+
+h1 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 2em; //32px
+  line-height: 1.125em; //36px
+  margin-top: 1.5em; //48px
+  margin-bottom: 0.5em; //16px
+  font-weight: normal;
+  color: #555555;
+}
+
+h2 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.875em; //30px
+  line-height: 1.1em; //33px
+  margin-top: 0.53333333333333em; //16px
+  margin-bottom: 0.53333333333333em; //16px
+  font-weight: normal;
+  color: #AAAAAA;
+}
+
+h3 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.375em; //22px
+  line-height: 1.18181818181818em; //26px
+  margin-top: 0.72727272727273em; //16px
+  margin-bottom: 0.72727272727273em; //16px
+  font-weight: normal;
+  color: #555555;
+}
+
+h4 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.25em; //20px
+  line-height: 1.2em; //24px
+  margin-top: 1.2em; //24px
+  margin-bottom: 0.8em; //16px
+  font-weight: normal;
+  color: #000000;
+}
+
+/* LISTS */
+ul, ol {
+  font-size: 1em;
+  margin-bottom: 2em;  
+  margin-left: 2em;
+  padding:0;
+}
+
+li{
+  margin-bottom: 0.5em;
+}
+
+ul li{
+  list-style: square;
+}
+
+ol li {
+  list-style:decimal;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+  dt {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: bold;
+  }
+  dd {
+    font-weight: 1em;
+    line-height: 1.5em;
+    margin:0 0 1em 0;
+  }
+}
+
+ul.plain-list {
+  @include list-reset-soft;
+}
+
+blockquote {
+  p:before {
+    content: '“';
+  }
+  p:after {
+    content: '”';
+  }
+}
+
+pre {
+  font-family: monospace;
+}
+
+
+/* MISC TEXT*/
+p.meta {
+  color: #555555;
+}
+
+/* LINKS */
+a,
+a:visited {
+  text-decoration:none;
+  color:#0BA7D1;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration:underline;
+    color:#0D7CCE;
+    outline: 0;
+  }
+}
+
+
+/* IMAGES */
+img {
+  height:auto;
+  max-width:100%;
+}
+
+
+/* FORMS */
+
+// Input placeholders: these need to be on separate lines as if the browser
+// can't understand a selector it will invalidate the whole line.
+::-webkit-input-placeholder {
+  color: #666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+:-moz-placeholder {
+  color:#666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+:-ms-placeholder {
+  color:#666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+//this only gets used when the browser doesn't support @placeholder and js adds it
+.placeholder {
+  color:#666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  font-size: 1em;
+  padding:0.25em;
+  border: 0.125em solid #888888;
+  @include border-radius(0.25em);
+  &:focus {
+    border-color:#333333;
+  }
+}
+
+textarea {
+  font-family: 'helvetica', 'arial', sans-serif;
+  line-height: 1.5em;
+}
+
+input {
+  line-height: 1em;
+}
+
+label{
+  display: block;
+  margin-top: 1.25em;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+  &.inline{
+    display: inline;
+    padding: 0 2em 0 1em;
+    font-weight: normal;
+  }
+}
+
+
+
+/* BUTTONS */
+
+.button,
+button,
+input.button,
+a.button {
+  @include button-reset;
+}
+//for some reason these properties need forcing
+.ie6, .ie7 {
+  a.button {
+    color:#ffffff;
+    text-decoration:none;
+    padding:0.6em 1.5em;//slight padding discrepency
+  }
+}
+
+a.examples-link {
+  @include button-reset(#0cb80c, #6E6F71, #ffffff, 0 0 0.25em 0.25em);
+  float:right;
+  margin:0 0 2em 0;
+  padding:0.5em 2.25em 0.5em 1em;
+  background: #0cb80c url('../images/sprite.png') right -100px no-repeat;
+  @include box-shadow(none);
+  @include background(
+    image-url('../images/sprite.png') right -100px no-repeat,
+    linear-gradient(#13d745, #0cb80c)          
+  );
+  &:hover {
+    background-image:url(../images/sprite.png);
+    background-repeat:no-repeat;
+    background-position:right -100px;
+  }
+  &.inactive {
+    margin-top:-2em;
+    background: #0cb80c url('../images/sprite.png') right -60px no-repeat;
+    @include background(
+      image-url('../images/sprite.png') right -60px no-repeat,
+      linear-gradient(#13d745, #0cb80c)          
+    );
+    @include border-radius(0);
+  }
+}
+
+/*** LAYOUT and STYLE ***/
+
+body {
+  background:#ffffff url(../images/grid.gif) center repeat;
+}
+
+// Padding creates page margins on mobile
+.container{
+  width:100%;
+  padding: 0 1em;
+}
+
+/* HEADER */
+#site-header {
+  background:#ffffff;
+  height:4em;
+  @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+  .container {
+    padding:1em;
+    height:4em;
+    position:relative;
+    #site-logo {
+      display:block;
+      background:url(../images/sprite.png) 0 0 no-repeat;
+      width:122px;
+      height:25px;
+      font:0/0 a;
+      color:transparent;
+      margin-top:4px;
+    }
+    #skip-to-nav {
+      @include button-reset(#555555, #333333);
+      text-transform:uppercase;
+      font-size:0.8125em; //13px
+      padding:1em 2em;
+      position:absolute;
+      right:1.2308em; //16px
+      top:1em;
+    }
+  }
+}
+.ie6 #site-logo {
+  text-indent:-999999px;
+}
+/* MENU */
+#nav-wrapper {
+  .container {
+    header {
+      @extend .full-width;
+      background:#FFFFFF;
+      padding:1em;
+      height:4em;
+      position:relative;
+      @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+      #skip-to-top {
+        @include button-reset(#555555, #333333);
+        text-transform:uppercase;
+        font-size:0.8125em; //13px
+        padding:1em 2em;
+        position:absolute;
+        right:1.2308em; //16px
+        top:1em;
+      }
+    }
+    ul {
+      @include list-reset-soft;
+      @extend .full-width;
+      li {
+        a {
+          display:block;
+          font-size:1.375em; //22px
+          padding:0.7272em; //16px
+          color:#555555;
+          border-bottom:1px solid #ffffff;
+          &:hover {
+            text-decoration:none;
+            background:#dddddd;
+          }
+        }
+        &:last-child a {
+          border-bottom:none;
+        }
+      }
+      &#secondary-menu li a {
+        background:#eeeeee;
+        &:hover {
+          background:#dddddd;
+        }
+      }
+      &#primary-menu li a {
+        background:#f6f6f6;
+        border-color:1px solid #eeeeee;
+        &:hover {
+          background:#dddddd;
+        }
+      }
+    }
+    #site-search {
+      @extend .full-width;
+      background:#FFFFFF;
+      padding:1em;
+      height:4em;
+      @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+      input {
+        width:80%;
+        float:left;
+        color:#555555;
+        border-right:0;
+        border-color:#333333;
+        @include border-radius(0.25em 0 0 0.25em);
+        &:focus {
+          border-color:#000000;
+        }
+      }
+      button {
+        width:20%;
+        float:left;
+        padding:0.45em 1.5em;
+        @include border-radius(0 0.25em 0.25em 0);
+        @include box-shadow(none);
+      }
+    }
+  }
+}
+
+/* MAIN CONTENT */
+.content {
+
+}
+
+
+/* GENERAL ELEMENTS */
+.block-list {
+  @include list-reset;
+  // make rhs stick to edge
+  margin:0 -1em 0 0;
+  li {
+    width: 18em; //288px - this is so the combined end size is 20em (320px)
+    // provide rhs margin here on each li,
+    // that way we will always rhs margin even when 2/3 col
+    margin:0 1em 1em 0;
+    // force the total height to items don't get stuck under each other
+    height:14em; //224px
+    h2, p {
+      clear:both;
+    }
+    .thumb {
+      margin-bottom:0.5em;
+    }
+  }
+}
+
+/* PAGE SPECIFIC */
+
+.product-section-header {
+  clear:both;
+  h2 {// font base size is 30px
+    //go full width
+    margin-left:-0.53333333333333em; //16px
+    margin-right:-0.53333333333333em; //16px
+    padding:0.26666666666667em 0.53333333333333em; // 8px 16px
+    border-bottom:0.1em solid #AAAAAA; //3px
+  }
+  p {
+    margin-top:1em;
+  }
+}
+.product-intros {
+  clear:both;
+  // make rhs stick to edge
+  margin:0 -1em 0 0;
+  div {
+    float:left;
+    width: 18em; //288px
+    margin:0 1em 1em 0;
+  }
+}
+.product-examples {
+  clear:both;
+  @extend .full-width;
+  background:#F7F7F7;
+  overflow:hidden;
+  padding:1em 0 1em 1em;
+  div {
+    width:18em; //288px
+    // prob need's a height?
+    float:left;
+    margin:0 1em 0 0;
+    a.thumb img {
+      border: #FFFFFF solid 0.25em;
+      @include box-shadow(0px 0px 10px 0px #dddddd);
+    }
+    a:hover.thumb img {
+      @include box-shadow(0px 0px 10px 0px #AAAAAA);
+    }
+    h3 {
+      margin-bottom:0;
+    }
+  }
+}
+
+
+/* HELPERS */
+
+// Use .full-width to reverse .container margins
+// It is at the end so it overrides properly when @extended
+.full-width {
+  margin:0 -1em;
+}
+
+// hide on mobile, show on desktop
+.desk-only,
+// hide anything with this class if js is working
+.js .hidden-js,
+// hide anything with this class if js is NOT working
+.no-js .hidden-nojs {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

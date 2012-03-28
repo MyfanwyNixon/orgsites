@@ -1,0 +1,68 @@
+// Button reset
+@mixin button-reset($background: #333333, $background2: #000000, $color: #ffffff, $radius: 0.25em){
+  width:auto; //reset from other inputs being width:100%;
+  @include inline-block;
+  cursor:pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background:$background;
+  color:$color;
+  border:none;
+  margin:0;
+  padding:0.5em 1.5em;
+  line-height:1em;
+  @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 5px);
+  @include border-radius($radius);
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration:none;
+    color:$color;
+    background:$background2;
+  }
+}
+
+
+
+// list resets
+@mixin list-reset-copy {
+  padding-left:30px;
+  margin-bottom:20px;
+  li {
+    font-size:14px;
+    line-height:20px;
+    list-style:disc;
+    margin-bottom:10px;
+    background:none;
+    padding:0;
+  }
+}
+
+@mixin list-reset-soft {
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+  li{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+}
+
+@mixin list-reset {
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  li{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    float:left;
+    a {
+      float:left;
+      display:block;
+    }
+  }
+}

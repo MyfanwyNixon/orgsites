@@ -61,9 +61,18 @@ $(function(){
 
 
   /*
-   * Goto top
+   * Skip to nav
    */
-  $('.goto-top a').on('click', function(e){
+  $('#skip-to-nav').on('click', function(e){
+    e.preventDefault();
+    var menuoffset = $('#nav-wrapper').offset().top;
+    $('html, body').animate({scrollTop:menuoffset}, 1000);
+  });
+
+  /*
+   * Skip to top
+   */
+  $('#skip-to-top').on('click', function(e){
     e.preventDefault();
     $('html, body').animate({scrollTop:0}, 1000);
   });

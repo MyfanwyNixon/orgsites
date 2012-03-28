@@ -412,6 +412,88 @@ a.examples-link.inactive {
   border-radius: 0;
 }
 
+/* ICONS */
+.pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .download, .link {
+  background: url(../images/icons_grey.png) 0 7px no-repeat;
+  padding-left: 50px;
+}
+
+.pound {
+  background-position: 0 7px;
+}
+
+.build {
+  background-position: 0 7px;
+}
+
+.github {
+  background-position: 0 -164px;
+}
+
+.codeblog {
+  background-position: 0 -252px;
+}
+
+.wikidocs {
+  background-position: 0 -346px;
+}
+
+.bubble {
+  background-position: 0 -438px;
+}
+
+.twitter {
+  background-position: 0 -548px;
+}
+
+.example {
+  background-position: 0 7px;
+}
+
+.download {
+  background-position: 0 7px;
+}
+
+.link {
+  background-position: 0 7px;
+}
+
+.pink_icon {
+  background-image: url(../images/icons_pink.png);
+}
+
+.purple_icon {
+  background-image: url(../images/icons_purple.png);
+}
+
+.yellow_icon {
+  background-image: url(../images/icons_yellow.png);
+}
+
+.blue_icon {
+  background-image: url(../images/icons_blue.png);
+}
+
+.green_icon {
+  background-image: url(../images/icons_green.png);
+}
+
+.orange_icon {
+  background-image: url(../images/icons_orange.png);
+}
+
+.red_icon {
+  background-image: url(../images/icons_red.png);
+}
+
+.grey_icon {
+  background-image: url(../images/icons_grey.png);
+}
+
+.white_icon {
+  background-image: url(../images/icons_white.png);
+}
+
 /*** LAYOUT and STYLE ***/
 body {
   background: white url(../images/grid_8.gif) center repeat fixed;
@@ -642,6 +724,46 @@ body {
   margin-bottom: 0.5em;
 }
 
+#featured-gallery {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#featured-gallery li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.resource-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.resource-list li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.resource-list li {
+  border-bottom: 0.125em solid #cccccc;
+}
+.resource-list li:last-child {
+  border-bottom: none;
+}
+.resource-list li a {
+  display: block;
+  font-size: 1.5em;
+  padding-top: 0.66666666666667em;
+  padding-bottom: 0.66666666666667em;
+  color: #555555;
+}
+.resource-list li a:hover {
+  text-decoration: none;
+}
+
 /* PAGE SPECIFIC */
 .product-section-header {
   clear: both;
@@ -692,6 +814,29 @@ body {
   margin-bottom: 0;
 }
 .product-examples div p {
+  background: none;
+}
+
+.project_product-section {
+  background: #333333;
+  padding: 1em;
+  margin: 1em 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+}
+.project_product-section h2 {
+  margin-top: 0;
+  color: #ffffff;
+}
+.project_product-section .project_product-section-inner {
+  background: white url(../images/grid_12.gif) center repeat;
+  padding: 1em;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 10px;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 10px;
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 10px;
+}
+.project_product-section .project_product-section-inner p {
   background: none;
 }
 

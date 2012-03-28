@@ -512,8 +512,33 @@ body {
   }
 }
 
+#featured-gallery {
+  @include list-reset-soft;
+}
+
+.resource-list {
+  @include list-reset-soft;
+  li {
+    border-bottom:0.125em solid #cccccc; //2px
+    &:last-child {
+      border-bottom:none;
+    }
+    a {
+      display:block;
+      font-size:1.5em; //24px
+      padding-top:0.66666666666667em; //16px
+      padding-bottom:0.66666666666667em; //16px
+      color:#555555;
+      &:hover {
+        text-decoration:none;
+      }
+    }
+  }
+}
+
 /* PAGE SPECIFIC */
 
+//just for /products (products.php)
 .product-section-header {
   clear:both;
   h2 {// font base size is 30px
@@ -560,6 +585,29 @@ body {
     }
     p {
       background:none;
+    }
+  }
+}
+
+//project/product entries
+.project_product-section {
+  background:$grey;
+  padding:1em;
+  margin:1em 0;
+  @include box-shadow(rgba(0, 0, 0, 0.5) 0 0 10px);
+  h2 {
+    margin-top:0;
+    color:#ffffff;
+  }
+  .project_product-section-inner {
+    background:#ffffff url(../images/grid_12.gif) center repeat;
+    padding:1em;
+    @include box-shadow(inset rgba(0, 0, 0, 0.5) 0 0 10px);
+    p {
+      background:none;
+    }
+    .resource-list {
+
     }
   }
 }

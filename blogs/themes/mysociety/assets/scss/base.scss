@@ -560,8 +560,7 @@ body {
 #featured-gallery {
   @include list-reset-soft;
   @extend .full-width;
-  padding-top:1em;
-  padding-bottom:1em;
+  padding:1em;
   background:#f6f6f6;
   text-align:center;
 }

@@ -1058,8 +1058,7 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
   background: #f6f6f6;
   text-align: center;
 }

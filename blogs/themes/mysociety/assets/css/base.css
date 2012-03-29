@@ -201,15 +201,11 @@ p.meta {
 }
 
 /* LINKS */
-a,
-a:visited {
+a {
   text-decoration: none;
   color: #0BA7D1;
 }
-a:hover, a:active, a:focus,
-a:visited:hover,
-a:visited:active,
-a:visited:focus {
+a:hover, a:active, a:focus {
   text-decoration: underline;
   color: #0D7CCE;
   outline: 0;
@@ -706,12 +702,12 @@ a.examples-link {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  background: url('../images/../images/sprite.png?1333008584') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333008584') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333008584') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333008584') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333008584') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333008584') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
 }
 a.examples-link {
   *display: inline;
@@ -729,12 +725,12 @@ a.examples-link:hover {
 a.examples-link.inactive {
   margin-top: -2em;
   background: #0cb80c url("../images/sprite.png") right -60px no-repeat;
-  background: url('../images/../images/sprite.png?1333008584') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333008584') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333008584') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333008584') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333008584') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333008584') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;

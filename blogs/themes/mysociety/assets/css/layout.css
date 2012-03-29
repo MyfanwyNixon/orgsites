@@ -161,20 +161,20 @@ p.entry-intro {
 
 /* MAIN CONTENT */
 .content {
-  max-width: 100%;
+  width: 100%;
 }
 .content img {
   max-width: 100%;
 }
 
 .content-with-sidebar {
-  max-width: 40em;
+  width: 40em;
   overflow: hidden;
   float: left;
 }
 
 #sidebar {
-  max-width: 20em;
+  width: 20em;
   float: left;
 }
 

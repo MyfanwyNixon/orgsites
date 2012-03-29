@@ -170,7 +170,7 @@ p.entry-intro {
 /* MAIN CONTENT */
 
 .content {
-  max-width:100%;
+  width:100%;
   img {
     max-width:100%;
   }
@@ -178,12 +178,12 @@ p.entry-intro {
 
 // This should probably be using percentages...
 .content-with-sidebar {
-  max-width:40em;
+  width:40em;
   overflow:hidden;
   float:left;
 }
 #sidebar {
-  max-width:20em;
+  width:20em;
   float:left;
 }
 

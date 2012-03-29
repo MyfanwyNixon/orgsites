@@ -1,3 +1,8 @@
+<?
+  //first things first, set the colour var
+  get_field('colour') ? $colour = get_field('colour') : $colour = '';
+?>
+
 <article id="post-<? the_ID() ?>" <? post_class() ?>>
   <header class="entry-header">
       <h1 class="entry-title"><? the_title() ?></h1>
@@ -11,20 +16,20 @@
       if($images):
     ?>
       <ul id="featured-gallery">
-      <? foreach($images as $image): ?>
-        <li>
+      <? $i = 0; foreach($images as $image): ?>
+        <li <?= ($i == 0 ? 'class="first"' : ''); ?>>
           <? $sized = vt_resize( $image['image'], '', 385, 219, true ); ?>
           <a href="<?=wp_get_attachment_url($image['image'])?>"><img src="<?= $sized['url']; ?>" width="<?= $sized['width']; ?>" height="<?= $sized['height']; ?>" alt="<?= $image['alt'] ?>" /></a>
         </li>
-      <? endforeach; ?>
+      <? $i++; endforeach; ?>
       </ul>
     <? endif; ?>
 
     <? if(get_field('commercial-options') && get_field('build-your-own')): ?>
-      <nav>
-        <ul>
-          <li><a href="#commercial-options"><? _e( 'Commercial Options', 'mysociety' ) ?></a></li>
-          <li><a href="#build-your-own"><? _e( 'Build Your Own', 'mysociety' ) ?></a></li>
+      <nav id="project_product-tab-nav" class="desk-only">
+        <ul id="tab-nav">
+          <li><a class="grey_button pound white_icon" href="#commercial-options"><? _e( 'Commercial Options', 'mysociety' ) ?></a></li>
+          <li><a class="<?= $colour; ?>_button build white_icon " href="#build-your-own"><? _e( 'Build Your Own', 'mysociety' ) ?></a></li>
         </ul>
       </nav>
     <? endif; ?>
@@ -55,10 +60,9 @@
           $i++;
         }
       }
-
-      //set colour
-      get_field('colour') ? $colour = get_field('colour') : $colour = '';
     ?>
+
+
 
     <? if(get_field('commercial-options')): ?>
       <section id="commercial-options" class="project_product-section">

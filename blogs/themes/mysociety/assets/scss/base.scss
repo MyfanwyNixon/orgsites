@@ -532,8 +532,62 @@ body {
 
 /* MAIN CONTENT */
 .content {
+  .entry-header {
+    overflow: hidden;
+    h2 {
+      font-family:'Museosans', 'Helvetica', 'Arial', sans-serif;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 0.25em;
+      display: table;
+      a {
+        color:#333333;
+      }
+    }
+    div.entry-date{
+      width: 55%;
+      float:left;
+      color:#888888;
+      font-size: 0.75em;
+      font-style: italic;
+      margin-bottom: 1.3333em
+    }    
+    div.entry-categories{
+      float:right;
+      width: 35%;
+      text-align: right;
+      color:#888888;
+      font-size: 0.75em;
+      margin-bottom: 1.3333em
+    }
+  }
   .entry-content {
-
+    .wp-caption-text {
+      font-size: 0.75em;
+      color:#888888;
+      margin-top: 0.5em;
+      margin-bottom: 1em
+    }
+  }
+  .entry-tags {
+    color:#888888;
+    font-size: 0.75em;
+    font-style: italic;
+    a{
+      background:#eeeeee;
+      padding:0.25em 0.5em;
+      color:#888888;
+      @include border-radius(0.25em);
+      margin-right: 0.5em;
+      &:hover {
+        text-decoration:none;
+        background:#aaaaaa;
+        color:#ffffff;
+      }
+    }
+    .sep {
+      display: none;
+    }
   }
 }
 
@@ -544,7 +598,7 @@ body {
   // make rhs stick to edge
   margin:0 -1em 0 0;
   li {
-    width: 18em; //288px - this is so the combined end size is 20em (320px)
+    width:18em; //288px - this is so the combined end size is 20em (320px)
     // provide rhs margin here on each li,
     // that way we will always rhs margin even when 2/3 col
     margin:0 1em 1em 0;
@@ -715,6 +769,8 @@ body {
     }
   }
 }
+
+
 
 /* COLOUR CLASSES */
 

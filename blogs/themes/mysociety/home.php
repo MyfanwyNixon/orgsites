@@ -1,5 +1,7 @@
 <? get_header(); ?>
   <div class="content content-with-sidebar" role="main">
+    <h1>blog</h1>
+
     <?
       if ( have_posts() ) :
         
@@ -13,7 +15,7 @@
 
       <article id="post-0" class="post no-results not-found">
         <header class="entry-header">
-          <h1 class="entry-title"><? _e( 'Nothing Found', 'mysociety' ); ?></h1>
+          <h2 class="entry-title"><? _e( 'Nothing Found', 'mysociety' ); ?></h2>
         </header>
 
         <div class="entry-content">

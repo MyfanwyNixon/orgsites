@@ -378,7 +378,9 @@ a.examples-link {
 
 /* ICONS */
 .pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .download, .link {
-  background:url(../images/icons_grey.png) 0 -3px no-repeat;
+  background-image:url(../images/icons_grey.png);
+  background-position:0 -3px;
+  background-repeat:no-repeat;
   padding-left:50px;
 }
 .pound    {background-position: 0 -3px;}
@@ -614,10 +616,15 @@ body {
 #featured-gallery {
   @include list-reset-soft;
   @extend .full-width;
-  padding-top:1em;
-  padding-bottom:1em;
+  padding:1em;
   background:#f6f6f6;
   text-align:center;
+  li {
+    display:none;
+    &.first {
+      display:block;
+    }
+  }
 }
 
 .resource-list {

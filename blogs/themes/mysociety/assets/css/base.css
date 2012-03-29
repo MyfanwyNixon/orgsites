@@ -304,7 +304,7 @@ a.button {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #333333;
+  background-color: #333333;
   color: white;
   border: none;
   margin: 0;
@@ -337,7 +337,7 @@ a.button:focus,
 a.button:active {
   text-decoration: none;
   color: white;
-  background: black;
+  background-color: black;
 }
 
 .ie6 a.button, .ie7 a.button {
@@ -355,7 +355,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #ff38cc;
+  background-color: #ff38cc;
   color: white;
   border: none;
   margin: 0;
@@ -376,7 +376,7 @@ a.button:active {
 .pink_button:hover, .pink_button:focus, .pink_button:active {
   text-decoration: none;
   color: white;
-  background: #e732b9;
+  background-color: #e732b9;
 }
 
 .purple_button {
@@ -388,7 +388,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #ab36f2;
+  background-color: #ab36f2;
   color: white;
   border: none;
   margin: 0;
@@ -409,7 +409,7 @@ a.button:active {
 .purple_button:hover, .purple_button:focus, .purple_button:active {
   text-decoration: none;
   color: white;
-  background: #9b31db;
+  background-color: #9b31db;
 }
 
 .yellow_button {
@@ -421,7 +421,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #ffdd4f;
+  background-color: #ffdd4f;
   color: #333333;
   border: none;
   margin: 0;
@@ -442,7 +442,7 @@ a.button:active {
 .yellow_button:hover, .yellow_button:focus, .yellow_button:active {
   text-decoration: none;
   color: #333333;
-  background: #f5d44b;
+  background-color: #f5d44b;
 }
 
 .blue_button {
@@ -454,7 +454,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #4896cf;
+  background-color: #4896cf;
   color: white;
   border: none;
   margin: 0;
@@ -475,7 +475,7 @@ a.button:active {
 .blue_button:hover, .blue_button:focus, .blue_button:active {
   text-decoration: none;
   color: white;
-  background: #4188bc;
+  background-color: #4188bc;
 }
 
 .green_button {
@@ -487,7 +487,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #43c250;
+  background-color: #43c250;
   color: white;
   border: none;
   margin: 0;
@@ -508,7 +508,7 @@ a.button:active {
 .green_button:hover, .green_button:focus, .green_button:active {
   text-decoration: none;
   color: white;
-  background: #40ba4c;
+  background-color: #40ba4c;
 }
 
 .orange_button {
@@ -520,7 +520,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #ff8c00;
+  background-color: #ff8c00;
   color: white;
   border: none;
   margin: 0;
@@ -541,7 +541,7 @@ a.button:active {
 .orange_button:hover, .orange_button:focus, .orange_button:active {
   text-decoration: none;
   color: white;
-  background: #f58600;
+  background-color: #f58600;
 }
 
 .red_button {
@@ -553,7 +553,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #ff5300;
+  background-color: #ff5300;
   color: white;
   border: none;
   margin: 0;
@@ -574,7 +574,7 @@ a.button:active {
 .red_button:hover, .red_button:focus, .red_button:active {
   text-decoration: none;
   color: white;
-  background: #d44500;
+  background-color: #d44500;
 }
 
 .grey_button {
@@ -586,7 +586,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #333333;
+  background-color: #333333;
   color: white;
   border: none;
   margin: 0;
@@ -607,7 +607,7 @@ a.button:active {
 .grey_button:hover, .grey_button:focus, .grey_button:active {
   text-decoration: none;
   color: white;
-  background: black;
+  background-color: black;
 }
 
 .white_button {
@@ -619,7 +619,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: white;
+  background-color: white;
   color: #333333;
   border: none;
   margin: 0;
@@ -640,7 +640,7 @@ a.button:active {
 .white_button:hover, .white_button:focus, .white_button:active {
   text-decoration: none;
   color: #333333;
-  background: #f7f7f7;
+  background-color: #f7f7f7;
 }
 
 ._button {
@@ -652,7 +652,7 @@ a.button:active {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #333333;
+  background-color: #333333;
   color: white;
   border: none;
   margin: 0;
@@ -673,7 +673,7 @@ a.button:active {
 ._button:hover, ._button:focus, ._button:active {
   text-decoration: none;
   color: white;
-  background: black;
+  background-color: black;
 }
 
 a.examples-link {
@@ -685,7 +685,7 @@ a.examples-link {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #0cb80c;
+  background-color: #0cb80c;
   color: white;
   border: none;
   margin: 0;
@@ -719,7 +719,7 @@ a.examples-link {
 a.examples-link:hover, a.examples-link:focus, a.examples-link:active {
   text-decoration: none;
   color: white;
-  background: #6e6f71;
+  background-color: #6e6f71;
 }
 a.examples-link:hover {
   background-image: url(../images/sprite.png);
@@ -744,7 +744,9 @@ a.examples-link.inactive {
 
 /* ICONS */
 .pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .download, .link {
-  background: url(../images/icons_grey.png) 0 -3px no-repeat;
+  background-image: url(../images/icons_grey.png);
+  background-position: 0 -3px;
+  background-repeat: no-repeat;
   padding-left: 50px;
 }
 
@@ -865,7 +867,7 @@ body {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #555555;
+  background-color: #555555;
   color: white;
   border: none;
   margin: 0;
@@ -892,7 +894,7 @@ body {
 #site-header .container #skip-to-nav:hover, #site-header .container #skip-to-nav:focus, #site-header .container #skip-to-nav:active {
   text-decoration: none;
   color: white;
-  background: #333333;
+  background-color: #333333;
 }
 
 .ie6 #site-logo {
@@ -918,7 +920,7 @@ body {
   *vertical-align: auto;
   cursor: pointer;
   font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
-  background: #555555;
+  background-color: #555555;
   color: white;
   border: none;
   margin: 0;
@@ -945,7 +947,7 @@ body {
 #nav-wrapper .container header #skip-to-top:hover, #nav-wrapper .container header #skip-to-top:focus, #nav-wrapper .container header #skip-to-top:active {
   text-decoration: none;
   color: white;
-  background: #333333;
+  background-color: #333333;
 }
 #nav-wrapper .container ul {
   list-style-type: none;
@@ -1118,8 +1120,7 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
   background: #f6f6f6;
   text-align: center;
 }
@@ -1128,6 +1129,12 @@ body {
   padding: 0;
   margin: 0;
   border: 0;
+}
+#featured-gallery li {
+  display: none;
+}
+#featured-gallery li.first {
+  display: block;
 }
 
 .resource-list {

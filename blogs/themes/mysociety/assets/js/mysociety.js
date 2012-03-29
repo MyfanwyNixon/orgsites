@@ -1,3 +1,30 @@
+function loader(type){
+  //then if .mobile load in helper.js etc
+  if (type === 'mobile') {
+    Modernizr.load([
+      {
+        //load h5bp helpers
+        load: '/wp-content/themes/mysociety/assets/js/helper.js',
+        complete: function(){
+          MBP.scaleFix();
+          MBP.hideUrlBar();
+        }
+      },
+      {
+        load: '/wp-content/themes/mysociety/assets/js/libs/swipe.min.js',
+        complete: function(){
+          
+        }
+      }
+    ]);
+  } else if (type === 'desktop') {
+    //desktop stuff
+  }else {
+    return;
+  }
+}
+
+
 //generic re-usable hide or show with class states
 function hideShow(elem, trig, height) {
   elem.toggleClass(function() {
@@ -30,10 +57,25 @@ $(function(){
   
   $('input, textarea').placeholder();
 
-  //add mobile class based on .mq()
-  //then if .mobile load in helper.js etc
+
+  //test for window size and load stuff
+  var type = '';
+  function mqtest(type){
+    //set type based on media query
+    if (Modernizr.mq('only screen and (max-width:47.9375em)')) { type = 'mobile';}
+    else { type = 'desktop'; }
+    //call loader function
+    loader(type);
+  }
+  mqtest(type);
+  //resize function
+  $(window).resize(function(){
+    mqtest(type);
+  });
 
 
+  
+//then if .mobile load in helper.js etc
 
 
   /*

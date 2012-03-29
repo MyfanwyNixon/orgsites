@@ -831,3 +831,8 @@ body {
   position: absolute;
   width: 1px;
 }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }

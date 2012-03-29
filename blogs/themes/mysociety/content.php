@@ -19,7 +19,7 @@
 
   <div class="entry-meta">
     <?
-      $tags_list = get_the_tag_list( '', __( ', ' ) );
+      $tags_list = get_the_tag_list( '', '<span class="sep">, </span>' );
       if ( $tags_list ):
     ?>
       <div class="entry-tags">

@@ -174,7 +174,6 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 
 .content-with-sidebar {
   width: 40em;
-  overflow: hidden;
   float: left;
 }
 

@@ -35,6 +35,13 @@ p.entry-intro {
   color:#333333;
 }
 
+/* ICONS */
+
+//fix h2 lineheight when it has an icon
+h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, h2.example, h2.download, h2.link {
+  line-height:0.78260869565217em; //36px
+}
+
 /* MOVE MENU TO TOP */
 
 //set up for the menu being on top
@@ -224,7 +231,6 @@ p.entry-intro {
   border-bottom:none;
   padding-left:3em; //32px
   >h2 {// font base size is 46px
-    line-height:0.78260869565217em; //36px - this is a fudge to get the icon to sit right
     margin-left:-1.17391304347826em; //54px
   }
   >a {

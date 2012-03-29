@@ -190,8 +190,14 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 #sidebar {
   width:20em;
+  padding-left: 5em;
   float:left;
 }
+.big-sidebar {
+  padding-left: 0 !important;
+}
+
+
 
 
 

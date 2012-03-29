@@ -603,6 +603,8 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     display: block;
+    @include box-shadow(0px 0px 0px 0px #ffffff);
+
   }
 }
 

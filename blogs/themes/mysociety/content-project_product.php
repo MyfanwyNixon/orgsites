@@ -97,7 +97,7 @@
       <div class="content-with-sidebar">
         <h2 class="bubble <?= $colour; ?>_icon"><? _e( 'News', 'mysociety' ) ?></h2>
       </div>
-      <aside id="sidebar">
+      <aside id="sidebar" class="big-sidebar">
         <? if($twitter_user): ?>
           <section class="twitter_box">
             <h2 class="twitter <?= $colour; ?>_icon"><? _e( 'Twitter', 'mysociety' ) ?></h2>

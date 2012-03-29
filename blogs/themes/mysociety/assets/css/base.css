@@ -1064,11 +1064,17 @@ body {
 
 .entry-meta {
   border-top: 1px solid #cccccc;
+  padding-top: 0.5em;
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 4em;
 }
 .entry-meta .entry-tags {
+  width: 70%;
   color: #888888;
   font-size: 0.75em;
   font-style: italic;
+  float: left;
 }
 .entry-meta .entry-tags a {
   background: #eeeeee;
@@ -1088,6 +1094,14 @@ body {
 }
 .entry-meta .entry-tags .sep {
   display: none;
+}
+.entry-meta .blue_button {
+  float: right;
+  padding: 0.25em 0.5em;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
 }
 
 /* GENERAL ELEMENTS */

@@ -570,10 +570,16 @@ body {
 }
 .entry-meta {
   border-top: 1px solid #cccccc;
+  padding-top: 0.5em;
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 4em;
   .entry-tags {
-    color:#888888;
+    width: 70%;
+    color: #888888;
     font-size: 0.75em;
     font-style: italic;
+    float: left;
     a{
       background:#eeeeee;
       padding:0.25em 0.5em;
@@ -589,6 +595,14 @@ body {
     .sep {
       display: none;
     }
+  }
+  .blue_button{
+    float: right;
+    padding: 0.25em 0.5em;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
   }
 }
 

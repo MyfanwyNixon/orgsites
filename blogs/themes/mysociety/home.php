@@ -1,6 +1,6 @@
 <? get_header(); ?>
   <div class="content content-with-sidebar" role="main">
-    <h1>blog</h1>
+    <h1><? _e( 'blog', 'mysociety' ); ?></h1>
 
     <?
       if ( have_posts() ) :

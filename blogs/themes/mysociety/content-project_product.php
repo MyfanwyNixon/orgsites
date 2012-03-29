@@ -5,12 +5,11 @@
 
 <article id="post-<? the_ID() ?>" <? post_class() ?>>
   <header class="entry-header">
-      <h1 class="entry-title"><? the_title() ?></h1>
+    <h1 class="entry-title"><? the_title() ?></h1>
+    <? if(get_field('intro')): ?><p class="entry-intro"><? the_field('intro') ?></p><? endif; ?>
   </header>
     
   <div class="entry-content">
-    <? if(get_field('intro')): ?><p class="entry-intro"><? the_field('intro') ?></p><? endif; ?>
-    
     <?
       $images = get_field('gallery');
       if($images):
@@ -66,7 +65,9 @@
 
     <? if(get_field('commercial-options')): ?>
       <section id="commercial-options" class="project_product-section">
-        <h2><? _e( 'Commercial Options', 'mysociety' ) ?></h2>
+        <h2 class="pound white_icon mob-only"><? _e( 'Commercial Options', 'mysociety' ) ?></h2>
+        <h2 class="pound <?= $colour; ?>_icon desk-only"><? _e( 'Commercial Options', 'mysociety' ) ?></h2>
+        
         <div class="project_product-section-inner">
           <?= the_field('commercial-options') ?>
         </div>
@@ -75,7 +76,9 @@
 
     <? if(get_field('build-your-own')) : ?>
       <section id="build-your-own" class="project_product-section <?= $colour; ?>_back">
-        <h2 class="build white_icon"><? _e( 'Build your own', 'mysociety' ) ?></h2>
+        <h2 class="build white_icon mob-only"><? _e( 'Build your own', 'mysociety' ) ?></h2>
+        <h2 class="build <?= $colour; ?>_icon desk-only"><? _e( 'Build your own', 'mysociety' ) ?></h2>
+        
         <div class="project_product-section-inner">
           <?= the_field('build-your-own') ?>
 

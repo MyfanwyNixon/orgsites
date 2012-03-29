@@ -282,26 +282,23 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 .ms_project .entry-header,
-.ms_project .entry-intro,
-.ms_product .entry-header,
-.ms_product .entry-intro {
-  float: left;
-  clear: left;
-  max-width: 50%;
-}
-.ms_project .entry-header,
 .ms_product .entry-header {
+  float: left;
+  max-width: 50%;
   margin-top: 4em;
+  margin-left: 3em;
+  padding-right: 1em;
 }
 .ms_project #featured-gallery,
 .ms_product #featured-gallery {
   float: right;
-  margin-top: -7em;
+  margin-top: 2em;
 }
 .ms_project #project_product-tab-nav,
 .ms_product #project_product-tab-nav {
   float: left;
   clear: left;
+  margin: 3em;
 }
 .ms_project #project_product-tab-nav #tab-nav,
 .ms_product #project_product-tab-nav #tab-nav {
@@ -324,6 +321,24 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 .ms_project .project_product-section,
 .ms_product .project_product-section {
   clear: both;
+  border-top: 0.375em solid #CFCFCF;
+  padding: 3em 0 1em 3em;
+  background: none !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.ms_project .project_product-section > h2,
+.ms_product .project_product-section > h2 {
+  color: #AAAAAA;
+  margin-left: -1.174em;
+}
+.ms_project .project_product-section .project_product-section-inner,
+.ms_product .project_product-section .project_product-section-inner {
+  padding: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 /* HELPERS */

@@ -52,8 +52,8 @@
     ?>
 
     <? if(get_field('commercial-options')): ?>
-      <section class="project_product-section">
-        <h2 class="build white_icon">Commercial Options</h2>
+      <section id="commercial-options" class="project_product-section">
+        <h2><? _e( 'Commercial Options', 'mysociety' ) ?></h2>
         <div class="project_product-section-inner">
           <?= the_field('commercial-options') ?>
         </div>
@@ -61,8 +61,8 @@
     <? endif; ?>
 
     <? if(get_field('build-your-own')) : ?>
-      <section class="project_product-section <?= $colour; ?>_back">
-        <h2>Build your own</h2>
+      <section id="build-your-own" class="project_product-section <?= $colour; ?>_back">
+        <h2 class="build white_icon"><? _e( 'Build your own', 'mysociety' ) ?></h2>
         <div class="project_product-section-inner">
           <?= the_field('build-your-own') ?>
 
@@ -81,14 +81,13 @@
       </section>
     <? endif; ?>
 
-
       <div class="content-with-sidebar">
-        <h2 class="bubble <?= $colour; ?>_icon">News</h2>
+        <h2 class="bubble <?= $colour; ?>_icon"><? _e( 'News', 'mysociety' ) ?></h2>
       </div>
       <aside id="sidebar">
         <? if($twitter_user): ?>
           <section class="twitter_box">
-            <h2 class="twitter <?= $colour; ?>_icon">Twitter</h2>
+            <h2 class="twitter <?= $colour; ?>_icon"><? _e( 'Twitter', 'mysociety' ) ?></h2>
             <a class="<?= $colour; ?>_button" href="http://twitter.com/<?= $twitter_user; ?>">@<?= $twitter_user; ?></a>
             <ul class="tweets">
               <li>

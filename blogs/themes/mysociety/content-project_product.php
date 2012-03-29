@@ -20,6 +20,15 @@
       </ul>
     <? endif; ?>
 
+    <? if(get_field('commercial-options') && get_field('build-your-own')): ?>
+      <nav>
+        <ul>
+          <li><a href="#commercial-options"><? _e( 'Commercial Options', 'mysociety' ) ?></a></li>
+          <li><a href="#build-your-own"><? _e( 'Build Your Own', 'mysociety' ) ?></a></li>
+        </ul>
+      </nav>
+    <? endif; ?>
+
 
 
     <?
@@ -110,7 +119,6 @@
           </section>
         <? endif; ?>
       </aside>
-    <!-- news -->
     <!-- pagination? -->
   </div>
 </article>

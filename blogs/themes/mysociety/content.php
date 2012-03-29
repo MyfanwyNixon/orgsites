@@ -29,7 +29,7 @@
 
     <?
       if ( comments_open() && ! post_password_required() ) : 
-        comments_popup_link(  __( 'Comment', 'mysociety' ), _x( '1 Comment', 'comments number' ), _x( '% Comments', 'comments number' ), 'comment-button' );
+        comments_popup_link(  __( 'Comment', 'mysociety' ), _x( '1 Comment', 'comments number' ), _x( '% Comments', 'comments number' ), 'blue_button' );
       endif;
     ?>
   </div>

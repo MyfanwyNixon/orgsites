@@ -531,44 +531,45 @@ body {
 }
 
 /* MAIN CONTENT */
-.content {
-  .entry-header {
-    overflow: hidden;
-    h2 {
-      font-family:'Museosans', 'Helvetica', 'Arial', sans-serif;
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-bottom: 0.25em;
-      display: table;
-      a {
-        color:#333333;
-      }
-    }
-    div.entry-date{
-      width: 55%;
-      float:left;
-      color:#888888;
-      font-size: 0.75em;
-      font-style: italic;
-      margin-bottom: 1.3333em
-    }    
-    div.entry-categories{
-      float:right;
-      width: 35%;
-      text-align: right;
-      color:#888888;
-      font-size: 0.75em;
-      margin-bottom: 1.3333em
+.entry-header {
+  overflow: hidden;
+  h2 {
+    font-family:'Museosans', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    display: table;
+    a {
+      color:#333333;
     }
   }
-  .entry-content {
-    .wp-caption-text {
-      font-size: 0.75em;
-      color:#888888;
-      margin-top: 0.5em;
-      margin-bottom: 1em
-    }
+  div.entry-date{
+    width: 55%;
+    float:left;
+    color:#888888;
+    font-size: 0.75em;
+    font-style: italic;
+    margin-bottom: 1.3333em
+  }    
+  div.entry-categories{
+    float:right;
+    width: 35%;
+    text-align: right;
+    color:#888888;
+    font-size: 0.75em;
+    margin-bottom: 1.3333em
   }
+}
+.entry-content {
+  .wp-caption-text {
+    font-size: 0.75em;
+    color:#888888;
+    margin-top: 0.5em;
+    margin-bottom: 1em
+  }
+}
+.entry-meta {
+  border-top: 1px solid #cccccc;
   .entry-tags {
     color:#888888;
     font-size: 0.75em;
@@ -590,7 +591,6 @@ body {
     }
   }
 }
-
 
 /* GENERAL ELEMENTS */
 .block-list {

@@ -1025,20 +1025,20 @@ body {
 }
 
 /* MAIN CONTENT */
-.content .entry-header {
+.entry-header {
   overflow: hidden;
 }
-.content .entry-header h2 {
+.entry-header h2 {
   font-family: 'Museosans', 'Helvetica', 'Arial', sans-serif;
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.25em;
   display: table;
 }
-.content .entry-header h2 a {
+.entry-header h2 a {
   color: #333333;
 }
-.content .entry-header div.entry-date {
+.entry-header div.entry-date {
   width: 55%;
   float: left;
   color: #888888;
@@ -1046,7 +1046,7 @@ body {
   font-style: italic;
   margin-bottom: 1.333em;
 }
-.content .entry-header div.entry-categories {
+.entry-header div.entry-categories {
   float: right;
   width: 35%;
   text-align: right;
@@ -1054,18 +1054,23 @@ body {
   font-size: 0.75em;
   margin-bottom: 1.333em;
 }
-.content .entry-content .wp-caption-text {
+
+.entry-content .wp-caption-text {
   font-size: 0.75em;
   color: #888888;
   margin-top: 0.5em;
   margin-bottom: 1em;
 }
-.content .entry-tags {
+
+.entry-meta {
+  border-top: 1px solid #cccccc;
+}
+.entry-meta .entry-tags {
   color: #888888;
   font-size: 0.75em;
   font-style: italic;
 }
-.content .entry-tags a {
+.entry-meta .entry-tags a {
   background: #eeeeee;
   padding: 0.25em 0.5em;
   color: #888888;
@@ -1076,12 +1081,12 @@ body {
   border-radius: 0.25em;
   margin-right: 0.5em;
 }
-.content .entry-tags a:hover {
+.entry-meta .entry-tags a:hover {
   text-decoration: none;
   background: #aaaaaa;
   color: #ffffff;
 }
-.content .entry-tags .sep {
+.entry-meta .entry-tags .sep {
   display: none;
 }
 

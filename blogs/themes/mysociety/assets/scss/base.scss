@@ -322,6 +322,7 @@ input.button,
 a.button {
   @include button-reset;
 }
+
 //for some reason these properties need forcing
 .ie6, .ie7 {
   a.button {
@@ -331,6 +332,22 @@ a.button {
   }
 }
 
+
+//coloured buttons
+.pink_button   {@include button-reset($pink, $pink/1.1);}
+.purple_button {@include button-reset($purple, $purple/1.1);}
+.yellow_button {@include button-reset($yellow, $yellow/1.04, #333333);}
+.blue_button   {@include button-reset($blue, $blue/1.1);}
+.green_button  {@include button-reset($green, $green/1.04);}
+.orange_button {@include button-reset($orange, $orange/1.04);}
+.red_button    {@include button-reset($red, $red/1.2);}
+.grey_button   {@include button-reset;}
+.white_button  {@include button-reset(#ffffff, #f7f7f7, #333333);}
+//fallback for if the colour var doesn't happen in the php script
+._button {@include button-reset;}
+
+
+//green one with arrow
 a.examples-link {
   @include button-reset(#0cb80c, #6E6F71, #ffffff, 0 0 0.25em 0.25em);
   float:right;
@@ -361,19 +378,19 @@ a.examples-link {
 
 /* ICONS */
 .pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .download, .link {
-  background:url(../images/icons_grey.png) 0 7px no-repeat;
+  background:url(../images/icons_grey.png) 0 -3px no-repeat;
   padding-left:50px;
 }
-.pound    {background-position: 0 7px;}
-.build    {background-position: 0 7px;}////needs an icon
-.github   {background-position: 0 -164px;}
-.codeblog {background-position: 0 -252px;}
-.wikidocs {background-position: 0 -346px;}
-.bubble   {background-position: 0 -438px;}
-.twitter  {background-position: 0 -548px;}
-.example  {background-position: 0 7px;}////needs an icon
-.download {background-position: 0 7px;}////needs an icon
-.link     {background-position: 0 7px;}////needs an icon
+.pound    {background-position: 0 -3px;}
+.build    {background-position: 0 -86px;}
+.github   {background-position: 0 -174px;}
+.codeblog {background-position: 0 -262px;}
+.wikidocs {background-position: 0 -356px;}
+.bubble   {background-position: 0 -448px;}
+.twitter  {background-position: 0 -558px;}
+.example  {background-position: 0 -3px;}////needs an icon
+.download {background-position: 0 -3px;}////needs an icon
+.link     {background-position: 0 -3px;}////needs an icon
 
 //here we give all the alternate coloured images
 .pink_icon   {background-image:url(../images/icons_pink.png);}
@@ -552,15 +569,62 @@ body {
       border-bottom:none;
     }
     a {
-      display:block;
       font-size:1.5em; //24px
-      padding-top:0.66666666666667em; //16px
-      padding-bottom:0.66666666666667em; //16px
+      display:block;
       color:#555555;
+      //fix the icon position
+      padding-top:0.33333333333333em; //8px
+      padding-bottom:0.33333333333333em; //8px
+      //make the rest of the spacing with margin so the icons don't go too high
+      margin:0.33333333333333em 0;
       &:hover {
         text-decoration:none;
       }
     }
+  }
+}
+
+.tweets {
+  @include list-reset-soft;
+  margin-bottom:1em;
+  li {
+    padding:0.5em 0;
+    //hide all but first li (mob only)
+    display:none;
+    &:first-child {
+      display:block;
+    }
+    span {
+      display:block;
+      font-size:0.8125em; //13px
+      text: {
+        transform:uppercase;
+        align:right;
+      }
+      color:#AAAAAA;
+    }
+    small {
+      display:block;
+      font-style:normal;
+      a {
+
+      }
+    }
+  }
+}
+
+.twitter_box {
+  border-bottom:0.25em solid #CFCFCF;
+  margin-bottom:1em;
+  >h2 {
+    float:left;
+  }
+  >a {
+    float:right;
+    margin-top:1em;
+  }
+  ul {
+    clear:both;
   }
 }
 
@@ -664,7 +728,7 @@ body {
 .grey_text   {color:$grey !important;}
 .white_text  {color:$white !important;}
 
-//fallbacks for if no colour var comes in
+//fallbacks for if no colour var happens in the php script
 ._back       {background-color:$grey;}
 ._text       {color:$grey;}
 

@@ -204,6 +204,35 @@ p.entry-intro {
   }
 }
 
+#featured-gallery {}
+
+.resource-list {}
+
+.tweets {
+  background:#ffffff url(../images/grid_12.gif) center repeat;
+  li {
+    //show all hidden li's
+    display:block;
+    border-bottom:0.0625em solid #EEEEEE; //1px
+    &:last-child {
+      border-bottom:none;
+    }
+  }
+}
+
+.twitter_box {
+  border-bottom:none;
+  padding-left:3em; //32px
+  >h2 {// font base size is 46px
+    line-height:0.78260869565217em; //36px - this is a fudge to get the icon to sit right
+    margin-left:-1.17391304347826em; //54px
+  }
+  >a {
+    float:left;
+    clear:left;
+  }
+}
+
 
 /* PAGE SPECIFIC */
 

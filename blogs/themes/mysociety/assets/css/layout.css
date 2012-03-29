@@ -190,6 +190,30 @@ p.entry-intro {
   margin-right: 0;
 }
 
+.tweets {
+  background: white url(../images/grid_12.gif) center repeat;
+}
+.tweets li {
+  display: block;
+  border-bottom: 0.0625em solid #EEEEEE;
+}
+.tweets li:last-child {
+  border-bottom: none;
+}
+
+.twitter_box {
+  border-bottom: none;
+  padding-left: 3em;
+}
+.twitter_box > h2 {
+  line-height: 0.78260869565217em;
+  margin-left: -1.174em;
+}
+.twitter_box > a {
+  float: left;
+  clear: left;
+}
+
 /* PAGE SPECIFIC */
 .product-section-header h2 {
   margin-left: 0;

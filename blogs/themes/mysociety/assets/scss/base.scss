@@ -629,7 +629,7 @@ body {
   padding:1em;
   background:#f6f6f6;
   text-align:center;
-  // @extend .full-width;
+  @extend .full-width;
   li {
     display:none;
     &.first {

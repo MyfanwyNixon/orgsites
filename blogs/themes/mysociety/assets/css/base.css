@@ -1389,7 +1389,7 @@ body {
 }
 
 /* HELPERS */
-.full-width, #nav-wrapper .container header, #nav-wrapper .container ul, #nav-wrapper .container #site-search, .product-examples {
+.full-width, #nav-wrapper .container header, #nav-wrapper .container ul, #nav-wrapper .container #site-search, .featured-gallery, .product-examples {
   margin: 0 -1em;
 }
 

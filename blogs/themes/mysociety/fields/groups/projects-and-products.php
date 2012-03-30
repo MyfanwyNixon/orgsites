@@ -83,43 +83,6 @@ register_field_group(array (
       'instructions' => 'For each type please provide a valid URL except for the Twitter type, where it is required that you just provide the username without the preceding "@".<br><br>The title field is optional for GitHub, Code blog and Wiki + Docs. It is not displayed anywhere for Twitter. It is required for Example, Download and Link.',
       'required' => '0',
       'order_no' => '2'
-    ),
-    3 => 
-    array (
-      'key' => 'field_4f6c899cb34a7',
-      'label' => 'Mailing List',
-      'name' => 'mailing-list',
-      'type' => 'text',
-      'default_value' => '',
-      'formatting' => 'none',
-      'instructions' => 'Please provide the Campaign ID (CHECK WHAT THIS IS) from MailChimp here.',
-      'required' => '0',
-      'order_no' => '3'
-    ),
-    4 => 
-    array (
-      'key' => 'field_4f71cc84c31b8',
-      'label' => 'Colour',
-      'name' => 'colour',
-      'type' => 'select',
-      'choices' => array(
-        'yellow' => 'Yellow',
-        'blue' => 'Blue'
-      ),
-      'default_value' => '',
-      'allow_null' => '0',
-      'multiple' => '0',
-      'order_no' => '4'
-    ),
-    5 => 
-    array (
-      'key' => 'field_4f71ced276f70',
-      'label' => 'Council',
-      'name' => 'council',
-      'type' => 'text',
-      'default_value' => '',
-      'formatting' => 'none',
-      'order_no' => '5'
     )
   ),
   'location' => 

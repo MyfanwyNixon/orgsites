@@ -35,6 +35,9 @@
           'name'                => __( 'Projects', 'mysociety' ),
           'singular_name'       => __( 'Project', 'mysociety' ),
           'add_new_item'        => __( 'Add New Project', 'mysociety' ),
+          'edit_item'           => __( 'Edit Project', 'mysociety'),
+          'new_item'            => __( 'New Project', 'mysociety' ),
+          'view_item'           => __( 'View Project', 'mysociety'),
           'search_items'        => __( 'Search Projects', 'mysociety' ),
           'not_found'           => __( 'No projects found', 'mysociety' ),
           'not_found_in_trash'  => __( 'No projects found in Trash', 'mysociety' )
@@ -53,6 +56,9 @@
           'name'                => __( 'Products', 'mysociety' ),
           'singular_name'       => __( 'Product', 'mysociety' ),
           'add_new_item'        => __( 'Add New Product', 'mysociety' ),
+          'edit_item'           => __( 'Edit Product', 'mysociety'),
+          'new_item'            => __( 'New Product', 'mysociety' ),
+          'view_item'           => __( 'View Product', 'mysociety'),
           'search_items'        => __( 'Search Products', 'mysociety' ),
           'not_found'           => __( 'No products found', 'mysociety' ),
           'not_found_in_trash'  => __( 'No products found in Trash', 'mysociety' )
@@ -75,13 +81,22 @@
   if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', "QJF7-L4IX-UCNP-RF2W");
 
   /**
+   * Register field types
+   */
+  if(function_exists("register_field"))
+  {
+    register_field('Categories_field', dirname(__File__) . '/fields/types/categories.php');
+  }
+
+  /**
    * Register field groups
    */
   if(function_exists("register_field_group"))
   {
-    include('fields/basic.php');
-    include('fields/projects-and-products.php');
-    include('fields/products-front.php');
+    include('fields/groups/basic.php');
+    include('fields/groups/products-front.php');
+    include('fields/groups/projects-and-products.php');
+    include('fields/groups/projects-and-products-meta.php');
   }
 
 

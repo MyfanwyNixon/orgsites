@@ -30,6 +30,11 @@ p.entry-intro {
   color: #333333;
 }
 
+/* ICONS */
+h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, h2.example, h2.download, h2.link {
+  line-height: 0.78260869565217em;
+}
+
 /* MOVE MENU TO TOP */
 .wrapper {
   display: table;
@@ -161,21 +166,25 @@ p.entry-intro {
 
 /* MAIN CONTENT */
 .content {
-  max-width: 100%;
+  width: 100%;
 }
 .content img {
   max-width: 100%;
 }
 
 .content-with-sidebar {
-  max-width: 40em;
-  overflow: hidden;
+  width: 40em;
   float: left;
 }
 
 #sidebar {
-  max-width: 20em;
+  width: 20em;
+  padding-left: 5em;
   float: left;
+}
+
+.big-sidebar {
+  padding-left: 0 !important;
 }
 
 /* GENERAL ELEMENTS */
@@ -188,6 +197,59 @@ p.entry-intro {
 }
 .block-list li.last {
   margin-right: 0;
+}
+
+.featured-gallery {
+  background: transparent url(../images/imac.png) center no-repeat;
+  width: 26.875em;
+  height: 21.25em;
+  padding: 1.1875em 0 0 0;
+}
+
+.resource-list li {
+  border-bottom: none;
+  margin-bottom: 1em !important;
+}
+
+.tweets {
+  background: white url(../images/grid_12.gif) center repeat;
+}
+.tweets li {
+  display: block;
+  border-bottom: 0.0625em solid #EEEEEE;
+}
+.tweets li:last-child {
+  border-bottom: none;
+}
+
+.twitter_box {
+  border-bottom: none;
+  padding-left: 3em;
+}
+.twitter_box > h2 {
+  margin-left: -1.174em;
+}
+.twitter_box > a {
+  float: left;
+  clear: left;
+}
+
+#tab-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#tab-nav li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  float: left;
+}
+#tab-nav li a {
+  float: left;
+  display: block;
 }
 
 /* PAGE SPECIFIC */
@@ -222,6 +284,124 @@ p.entry-intro {
 }
 .product-examples div.last {
   margin-right: 0;
+}
+
+.ms_project .entry-header,
+.ms_product .entry-header {
+  padding: 0 0 3em 3em;
+  border-bottom: 0.1875em solid #CFCFCF;
+}
+.ms_project .entry-header .entry-title,
+.ms_project .entry-header .entry-intro,
+.ms_product .entry-header .entry-title,
+.ms_product .entry-header .entry-intro {
+  float: left;
+  clear: left;
+  max-width: 50%;
+  padding-right: 1em;
+}
+.ms_project .entry-header .entry-title,
+.ms_product .entry-header .entry-title {
+  margin-top: 2em;
+}
+.ms_project .entry-header .featured-gallery,
+.ms_product .entry-header .featured-gallery {
+  float: right;
+  margin: -6em 0 0 0;
+}
+.ms_project .entry-header #project_product-tab-nav,
+.ms_product .entry-header #project_product-tab-nav {
+  float: left;
+  clear: left;
+  margin: 6em 0 0 0;
+}
+.ms_project .entry-header #project_product-tab-nav #tab-nav,
+.ms_product .entry-header #project_product-tab-nav #tab-nav {
+  overflow: visible;
+}
+.ms_project .entry-header #project_product-tab-nav #tab-nav li a,
+.ms_product .entry-header #project_product-tab-nav #tab-nav li a {
+  margin-right: 1em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+}
+.ms_project .entry-header #project_product-tab-nav #tab-nav li a.pound,
+.ms_product .entry-header #project_product-tab-nav #tab-nav li a.pound {
+  background-position: 0 -1px;
+}
+.ms_project .entry-header #project_product-tab-nav #tab-nav li a.build,
+.ms_product .entry-header #project_product-tab-nav #tab-nav li a.build {
+  background-position: 0 -84px;
+}
+.ms_project .project_product-section,
+.ms_product .project_product-section {
+  clear: both;
+  border-bottom: 0.1875em solid #CFCFCF;
+  padding: 2em 0 2em 3em;
+  background: none !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.ms_project .project_product-section > h2,
+.ms_product .project_product-section > h2 {
+  color: #AAAAAA;
+  margin-left: -1.174em;
+}
+.ms_project .project_product-section .pink_icon,
+.ms_product .project_product-section .pink_icon {
+  background-image: url(../images/icons_pink.png);
+}
+.ms_project .project_product-section .purple_icon,
+.ms_product .project_product-section .purple_icon {
+  background-image: url(../images/icons_purple.png);
+}
+.ms_project .project_product-section .yellow_icon,
+.ms_product .project_product-section .yellow_icon {
+  background-image: url(../images/icons_yellow.png);
+}
+.ms_project .project_product-section .blue_icon,
+.ms_product .project_product-section .blue_icon {
+  background-image: url(../images/icons_blue.png);
+}
+.ms_project .project_product-section .green_icon,
+.ms_product .project_product-section .green_icon {
+  background-image: url(../images/icons_green.png);
+}
+.ms_project .project_product-section .orange_icon,
+.ms_product .project_product-section .orange_icon {
+  background-image: url(../images/icons_orange.png);
+}
+.ms_project .project_product-section .red_icon,
+.ms_product .project_product-section .red_icon {
+  background-image: url(../images/icons_red.png);
+}
+.ms_project .project_product-section .grey_icon,
+.ms_product .project_product-section .grey_icon {
+  background-image: url(../images/icons_grey.png);
+}
+.ms_project .project_product-section .white_icon,
+.ms_product .project_product-section .white_icon {
+  background-image: url(../images/icons_white.png);
+}
+.ms_project .project_product-section .project_product-section-inner,
+.ms_product .project_product-section .project_product-section-inner {
+  padding: 0;
+  overflow: hidden;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.ms_project .project_product-section .project_product-section-inner > div,
+.ms_product .project_product-section .project_product-section-inner > div {
+  float: left;
+  max-width: 35em;
+}
+.ms_project .project_product-section .project_product-section-inner .resource-list,
+.ms_product .project_product-section .project_product-section-inner .resource-list {
+  width: 20em;
+  padding-left: 0.75em;
+  float: right;
 }
 
 /* HELPERS */

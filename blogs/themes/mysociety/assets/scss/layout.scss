@@ -35,6 +35,13 @@ p.entry-intro {
   color:#333333;
 }
 
+/* ICONS */
+
+//fix h2 lineheight when it has an icon
+h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, h2.example, h2.download, h2.link {
+  line-height:0.78260869565217em; //36px
+}
+
 /* MOVE MENU TO TOP */
 
 //set up for the menu being on top
@@ -170,7 +177,7 @@ p.entry-intro {
 /* MAIN CONTENT */
 
 .content {
-  max-width:100%;
+  width:100%;
   img {
     max-width:100%;
   }
@@ -178,14 +185,19 @@ p.entry-intro {
 
 // This should probably be using percentages...
 .content-with-sidebar {
-  max-width:40em;
-  overflow:hidden;
+  width:40em;
   float:left;
 }
 #sidebar {
-  max-width:20em;
+  width:20em;
+  padding-left: 5em;
   float:left;
 }
+.big-sidebar {
+  padding-left: 0 !important;
+}
+
+
 
 
 
@@ -204,9 +216,52 @@ p.entry-intro {
   }
 }
 
+.featured-gallery {
+  background:transparent url(../images/imac.png) center no-repeat;
+  width:26.875em; //430px
+  height:21.25em; //340px
+  padding:1.1875em 0 0 0; //19px
+}
+
+.resource-list {
+  li {
+    border-bottom:none;
+    margin-bottom:1em !important;
+  }
+}
+
+.tweets {
+  background:#ffffff url(../images/grid_12.gif) center repeat;
+  li {
+    //show all hidden li's
+    display:block;
+    border-bottom:0.0625em solid #EEEEEE; //1px
+    &:last-child {
+      border-bottom:none;
+    }
+  }
+}
+
+.twitter_box {
+  border-bottom:none;
+  padding-left:3em; //48px
+  >h2 {// font base size is 46px
+    margin-left:-1.17391304347826em; //54px
+  }
+  >a {
+    float:left;
+    clear:left;
+  }
+}
+
+#tab-nav {
+  @include list-reset;
+}
+
 
 /* PAGE SPECIFIC */
 
+//product list page
 .product-section-header {
   h2 {// font base size is 46px
     margin-left:0;
@@ -247,7 +302,72 @@ p.entry-intro {
 }
 
 
-
+//project/product entry layout
+.ms_project,
+.ms_product {
+  .entry-header {
+    padding:0 0 3em 3em; //48px
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    .entry-title,
+    .entry-intro {
+      float:left;
+      clear:left;
+      max-width:50%;
+      padding-right:1em;
+    }
+    .entry-title {
+      margin-top:2em;
+    }
+    .featured-gallery {
+      float:right;
+      margin:-6em 0 0 0;
+    }
+    #project_product-tab-nav {
+      float:left;
+      clear:left;
+      margin:6em 0 0 0; //48px
+      #tab-nav {
+        overflow:visible;//so we can see the drop shadows on the buttons
+        li {
+          a {
+            margin-right:1em;
+            padding-top:0.75em;
+            padding-bottom:0.75em;
+            //fix the icon heights
+            &.pound {background-position: 0 -1px;}
+            &.build {background-position: 0 -84px;}
+          }
+        }
+      }
+    }
+  }
+  .project_product-section {
+    clear:both;
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    padding:2em 0 2em 3em;
+    background:none !important;
+    @include box-shadow(none);
+    >h2 {// font base size is 46px
+      color:#AAAAAA;
+      margin-left:-1.17391304347826em; //54px
+    }
+    @include coloured_icons;
+    .project_product-section-inner {
+      padding:0;
+      overflow:hidden;
+      @include box-shadow(none);
+      >div {
+        float:left;
+        max-width:35em;
+      }
+      .resource-list {
+        width:20em;
+        padding-left:0.75em;
+        float:right;
+      }
+    }
+  }
+}
 
 
 /* HELPERS */

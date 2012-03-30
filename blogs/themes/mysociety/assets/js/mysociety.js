@@ -1,9 +1,9 @@
+//load in mobile/desktop assets
 function loader(type){
-  //then if .mobile load in helper.js etc
   if (type === 'mobile') {
     Modernizr.load([
       {
-        //load h5bp helpers
+        //h5bp helpers
         load: '/wp-content/themes/mysociety/assets/js/helper.js',
         complete: function(){
           MBP.scaleFix();
@@ -11,19 +11,37 @@ function loader(type){
         }
       },
       {
-        load: '/wp-content/themes/mysociety/assets/js/libs/swipe.min.js',
+        //mobile slider js
+        load: '/wp-content/themes/mysociety/assets/js/libs/swipe.js',
         complete: function(){
-          
+          mob_slider();
         }
       }
     ]);
   } else if (type === 'desktop') {
-    //desktop stuff
+    //do desktop stuff
   }else {
     return;
   }
 }
 
+function mob_slider(){
+  //iterate over all the sliders on the page
+  $('.featured-gallery').each(function(i){
+    //cache slider id
+    var slider_id = $(this).attr('id');
+    // make all the sliders
+    window.slider_id = new Swipe($(this)[0]);
+    //show the rest of the li's
+    $('li', $(this)).show();
+    //add next/prev buttons
+    $(this).after('<button id="slider_next_'+slider_id+'">next</button>');
+    $(this).after('<button id="slider_prev_'+slider_id+'">prev</button>');
+    //bind clicks
+    $('#slider_next_'+slider_id).on('click', function(){window.slider_id.next();});
+    $('#slider_prev_'+slider_id).on('click', function(){window.slider_id.prev();});
+  });
+}
 
 //generic re-usable hide or show with class states
 function hideShow(elem, trig, height) {
@@ -68,14 +86,12 @@ $(function(){
     loader(type);
   }
   mqtest(type);
-  //resize function
+  
+  //on window resize, run the mqtest again (which in turn will run the loader again)
   $(window).resize(function(){
     mqtest(type);
   });
 
-
-  
-//then if .mobile load in helper.js etc
 
 
   /*

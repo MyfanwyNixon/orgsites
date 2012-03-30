@@ -14,7 +14,7 @@
       $images = get_field('gallery');
       if($images):
     ?>
-      <ul id="featured-gallery">
+      <ul id="slider_<? the_ID() ?>" class="featured-gallery">
       <? $i = 0; foreach($images as $image): ?>
         <li <?= ($i == 0 ? 'class="first"' : ''); ?>>
           <? $sized = vt_resize( $image['image'], '', 385, 219, true ); ?>

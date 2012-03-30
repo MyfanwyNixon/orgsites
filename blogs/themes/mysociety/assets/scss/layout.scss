@@ -216,7 +216,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   }
 }
 
-#featured-gallery {
+.featured-gallery {
   background:transparent url(../images/imac.png) center no-repeat;
   width:26.875em; //430px
   height:21.25em; //340px
@@ -318,7 +318,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
     .entry-title {
       margin-top:2em;
     }
-    #featured-gallery {
+    .featured-gallery {
       float:right;
       margin:-6em 0 0 0;
     }

@@ -624,12 +624,12 @@ body {
   }
 }
 
-#featured-gallery {
+.featured-gallery {
   @include list-reset-soft;
-  @extend .full-width;
   padding:1em;
   background:#f6f6f6;
   text-align:center;
+  // @extend .full-width;
   li {
     display:none;
     &.first {
@@ -848,3 +848,16 @@ body {
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
+
+
+.swipe-active {
+  overflow:hidden;
+  position:relative;
+}
+.swipe-active > * {
+  display:block;
+  visibility:hidden;
+  position:absolute;
+  top:0;
+  left:0;
+}

@@ -7,7 +7,7 @@ function loader(type){
         load: '/wp-content/themes/mysociety/assets/js/helper.js',
         complete: function(){
           MBP.scaleFix();
-          MBP.hideUrlBar();
+          MBP.hideUrlBarOnLoad();
         }
       },
       {

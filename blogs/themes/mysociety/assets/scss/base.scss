@@ -525,7 +525,6 @@ body {
 
 /* MAIN CONTENT */
 .entry-header {
-  overflow: hidden;
   h2 {
     font-family:'Museosans', 'Helvetica', 'Arial', sans-serif;
     font-size: 1.5em;
@@ -552,6 +551,9 @@ body {
     font-size: 0.75em;
     margin-bottom: 1.3333em
   }
+}
+.post .entry-header {
+  overflow: hidden;
 }
 .entry-content {
   .wp-caption-text {

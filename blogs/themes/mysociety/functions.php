@@ -94,8 +94,9 @@
   if(function_exists("register_field_group"))
   {
     include('fields/groups/basic.php');
-    include('fields/groups/projects-and-products.php');
     include('fields/groups/products-front.php');
+    include('fields/groups/projects-and-products.php');
+    include('fields/groups/projects-and-products-meta.php');
   }
 
 

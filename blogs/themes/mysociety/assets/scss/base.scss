@@ -393,16 +393,10 @@ a.examples-link {
 .download {background-position: 0 -3px;}////needs an icon
 .link     {background-position: 0 -3px;}////needs an icon
 
-//here we give all the alternate coloured images
-.pink_icon   {background-image:url(../images/icons_pink.png);}
-.purple_icon {background-image:url(../images/icons_purple.png);}
-.yellow_icon {background-image:url(../images/icons_yellow.png);}
-.blue_icon   {background-image:url(../images/icons_blue.png);}
-.green_icon  {background-image:url(../images/icons_green.png);}
-.orange_icon {background-image:url(../images/icons_orange.png);}
-.red_icon    {background-image:url(../images/icons_red.png);}
-.grey_icon   {background-image:url(../images/icons_grey.png);}
-.white_icon  {background-image:url(../images/icons_white.png);}
+//here we include all the alternate coloured images
+@include coloured_icons;
+
+
 
 /*** LAYOUT and STYLE ***/
 
@@ -657,7 +651,7 @@ body {
       padding-top:0.33333333333333em; //8px
       padding-bottom:0.33333333333333em; //8px
       //make the rest of the spacing with margin so the icons don't go too high
-      margin:0.33333333333333em 0;
+      margin:0.33333333333333em 0; //8px
       &:hover {
         text-decoration:none;
       }
@@ -768,9 +762,10 @@ body {
   padding:1em;
   margin:1em 0;
   @include box-shadow(rgba(0, 0, 0, 0.5) 0 0 10px);
-  h2 {
+  >h2 {
     margin-top:0;
     color:#ffffff;
+    @extend .white_icon;
   }
   .project_product-section-inner {
     background:#ffffff url(../images/grid_12.gif) center repeat;

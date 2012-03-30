@@ -223,7 +223,12 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   padding:1.1875em 0 0 0; //19px
 }
 
-.resource-list {}
+.resource-list {
+  li {
+    border-bottom:none;
+    margin-bottom:1em !important;
+  }
+}
 
 .tweets {
   background:#ffffff url(../images/grid_12.gif) center repeat;
@@ -301,52 +306,68 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 .ms_project,
 .ms_product {
   .entry-header {
-    float:left;
-    // clear:left;
-    max-width:50%;
-    margin-top:4em;
-    margin-left:3em; //48px
-    padding-right:1em;
-  }
-  #featured-gallery {
-    float:right;
-    margin-top:2em;
-  }
-  #project_product-tab-nav {
-    float:left;
-    clear:left;
-    margin:3em; //48px
-    #tab-nav {
-      overflow:visible;//so we can see the drop shadows on the buttons
-      li {
-        a {
-          margin-right:1em;
-          padding-top:0.75em;
-          padding-bottom:0.75em;
-          //fix the icon heights
-          &.pound {background-position: 0 -1px;}
-          &.build {background-position: 0 -84px;}
+    padding:0 0 3em 3em; //48px
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    .entry-title,
+    .entry-intro {
+      float:left;
+      clear:left;
+      max-width:50%;
+      padding-right:1em;
+    }
+    .entry-title {
+      margin-top:2em;
+    }
+    #featured-gallery {
+      float:right;
+      margin:-6em 0 0 0;
+    }
+    #project_product-tab-nav {
+      float:left;
+      clear:left;
+      margin:6em 0 0 0; //48px
+      #tab-nav {
+        overflow:visible;//so we can see the drop shadows on the buttons
+        li {
+          a {
+            margin-right:1em;
+            padding-top:0.75em;
+            padding-bottom:0.75em;
+            //fix the icon heights
+            &.pound {background-position: 0 -1px;}
+            &.build {background-position: 0 -84px;}
+          }
         }
       }
     }
   }
   .project_product-section {
     clear:both;
-    border-top: 0.375em solid #CFCFCF; //6px
-    padding:3em 0 1em 3em;
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    padding:2em 0 2em 3em;
     background:none !important;
     @include box-shadow(none);
     >h2 {// font base size is 46px
       color:#AAAAAA;
       margin-left:-1.17391304347826em; //54px
     }
+    @include coloured_icons;
     .project_product-section-inner {
       padding:0;
+      overflow:hidden;
       @include box-shadow(none);
+      >div {
+        float:left;
+        max-width:35em;
+      }
+      .resource-list {
+        width:20em;
+        padding-left:0.75em;
+        float:right;
+      }
     }
   }
 }
-
 
 
 /* HELPERS */

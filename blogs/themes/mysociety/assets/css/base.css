@@ -818,7 +818,7 @@ a.examples-link.inactive {
   background-image: url(../images/icons_grey.png);
 }
 
-.white_icon {
+.white_icon, .project_product-section > h2 {
   background-image: url(../images/icons_white.png);
 }
 
@@ -1291,7 +1291,7 @@ body {
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
 }
-.project_product-section h2 {
+.project_product-section > h2 {
   margin-top: 0;
   color: #ffffff;
 }

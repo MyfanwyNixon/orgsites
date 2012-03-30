@@ -66,3 +66,21 @@
     }
   }
 }
+
+
+//this is a mixin because we want to be specific with
+//different icons on mobile/desk sometimes that differ from the default
+//so, although lots of extra lines of css, we can in a specific use-case
+//include this mixin to reset the colours again after they have previously been modified
+//see: .ms_project/.ms_product > .project_product-section > h2
+@mixin coloured_icons {
+  .pink_icon   {background-image:url(../images/icons_pink.png);}
+  .purple_icon {background-image:url(../images/icons_purple.png);}
+  .yellow_icon {background-image:url(../images/icons_yellow.png);}
+  .blue_icon   {background-image:url(../images/icons_blue.png);}
+  .green_icon  {background-image:url(../images/icons_green.png);}
+  .orange_icon {background-image:url(../images/icons_orange.png);}
+  .red_icon    {background-image:url(../images/icons_red.png);}
+  .grey_icon   {background-image:url(../images/icons_grey.png);}
+  .white_icon  {background-image:url(../images/icons_white.png);}
+}

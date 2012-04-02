@@ -41,16 +41,6 @@ register_field_group(array (
           'default_value' => '',
           'formatting' => 'none',
           'order_no' => '2'
-        ),
-        3 => 
-        array (
-          'key' => 'field_4f6c8702eec18',
-          'label' => 'URL',
-          'name' => 'url',
-          'type' => 'text',
-          'default_value' => '',
-          'formatting' => 'none',
-          'order_no' => '3'
         )
       ),
       'row_limit' => '',

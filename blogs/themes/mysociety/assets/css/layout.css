@@ -30,6 +30,21 @@ p.entry-intro {
   color: #333333;
 }
 
+/* BUTTONS */
+.slider_prev {
+  background-position: -106px -307px;
+}
+.slider_prev:hover {
+  background-position: -56px -307px;
+}
+
+.slider_next {
+  background-position: -106px -247px;
+}
+.slider_next:hover {
+  background-position: -56px -247px;
+}
+
 /* ICONS */
 h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, h2.example, h2.download, h2.link {
   line-height: 0.78260869565217em;
@@ -77,7 +92,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   padding: 1em 0;
 }
 #site-header .container #site-logo {
-  margin-top: 2px;
+  margin-top: 5px;
   position: relative;
   z-index: 3;
 }
@@ -113,12 +128,15 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   padding: 1em;
   border: none;
 }
+#nav-wrapper .container ul#secondary-menu {
+  margin-left: 1em;
+}
 #nav-wrapper .container ul#secondary-menu li a {
   background: none;
-  font-size: 1.125em;
+  font-size: 1em;
   color: #999999;
   padding: 0;
-  margin: 1em;
+  margin: 1.4em 1em;
 }
 #nav-wrapper .container ul#secondary-menu li a:hover {
   background: none;
@@ -127,7 +145,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 #nav-wrapper .container ul#primary-menu {
   position: absolute;
   right: 6em;
-  top: 1.5em;
+  top: 1.4em;
 }
 #nav-wrapper .container ul#primary-menu li a {
   padding: 0;
@@ -187,6 +205,12 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   padding-left: 0 !important;
 }
 
+/* SIDEBAR*/
+#sidebar {
+  margin-top: 7em;
+  margin-bottom: 0em;
+}
+
 /* GENERAL ELEMENTS */
 .block-list {
   margin: 0;
@@ -204,6 +228,25 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   width: 26.875em;
   height: 21.25em;
   padding: 1.1875em 0 0 0;
+}
+.featured-gallery ul {
+  width: 24.125em;
+  margin: 0 auto;
+}
+.featured-gallery nav {
+  overflow: visible;
+  width: 26.875em;
+  margin-top: -0.25em;
+}
+.featured-gallery nav .slider_prev {
+  position: absolute;
+  left: -32px;
+  top: 110px;
+}
+.featured-gallery nav .slider_next {
+  position: absolute;
+  right: -32px;
+  top: 110px;
 }
 
 .resource-list li {
@@ -297,7 +340,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 .ms_product .entry-header .entry-intro {
   float: left;
   clear: left;
-  max-width: 50%;
+  max-width: 45%;
   padding-right: 1em;
 }
 .ms_project .entry-header .entry-title,

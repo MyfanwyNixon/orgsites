@@ -1083,7 +1083,7 @@ body {
   margin-bottom: 1.333em;
 }
 
-.post .entry-header {
+article.post .entry-header {
   overflow: hidden;
 }
 
@@ -1309,6 +1309,21 @@ body {
 }
 
 /* PAGE SPECIFIC */
+article.ms_project .entry-header,
+article.ms_product .entry-header,
+article.page .entry-header {
+  margin-bottom: 2em;
+}
+
+article.homepage .entry-header .banner {
+  margin: 1em 0;
+}
+article.homepage .entry-header p.entry-intro {
+  font-size: 1.375em;
+  line-height: 1.27272727272727em;
+  color: #333333;
+}
+
 .product-section-header {
   clear: both;
 }
@@ -1382,6 +1397,21 @@ body {
 }
 .project_product-section .project_product-section-inner p {
   background: none;
+}
+
+#author-info {
+  overflow: hidden;
+  margin: 1em 0 2em 0;
+}
+#author-info #author-avatar {
+  float: left;
+  margin-right: 1em;
+}
+#author-info #author-description {
+  float: left;
+}
+#author-info #author-description h2 {
+  font-size: 1.5em;
 }
 
 /* COLOUR CLASSES */

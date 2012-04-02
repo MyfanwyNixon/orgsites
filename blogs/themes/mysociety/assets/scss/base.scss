@@ -582,7 +582,7 @@ body {
     margin-bottom: 1.3333em
   }
 }
-.post .entry-header {
+article.post .entry-header {
   overflow: hidden;
 }
 .entry-content {
@@ -773,6 +773,27 @@ body {
 }
 
 /* PAGE SPECIFIC */
+article.ms_project,
+article.ms_product,
+article.page {
+  .entry-header {
+    margin-bottom:2em;
+  }
+}
+
+//homepage
+article.homepage {
+  .entry-header {
+    .banner {
+      margin:1em 0;
+    }
+    p.entry-intro {
+      font-size:1.375em; //22px
+      line-height:1.27272727272727em; //28px
+      color:#333333;
+    }
+  }
+}
 
 //just for /products (products.php)
 .product-section-header {
@@ -849,6 +870,21 @@ body {
   }
 }
 
+//author pages
+#author-info {
+  overflow:hidden;
+  margin:1em 0 2em 0;
+  #author-avatar {
+    float:left;
+    margin-right:1em;
+  }
+  #author-description {
+    float:left;
+    h2 {
+      font-size:1.5em;
+    }
+  }
+}
 
 
 /* COLOUR CLASSES */
@@ -917,6 +953,7 @@ body {
 .clearfix { *zoom: 1; }
 
 
+//swipe.js required styles
 .swipe-active {
   overflow:hidden;
   position:relative;

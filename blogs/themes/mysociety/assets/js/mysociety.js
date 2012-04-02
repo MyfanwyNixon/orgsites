@@ -119,6 +119,10 @@ $(function(){
    * set the slider going
    */
   slider();
+  //force the height of the ul back to what it should be.
+  //this is so when swipe.js modifies the height, even if
+  //the images haven't fully loaded we still have the right size
+  $('.featured-gallery ul').height(219);
 
 
   /*

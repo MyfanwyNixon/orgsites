@@ -1,8 +1,16 @@
         <div class="clearfix"></div>
       </div><?//.container?>
 
-      <footer role="contentinfo">
 
+      <div id="banners" class="container">
+          <a href="/" class="hire-us-banner"><img src="<? bloginfo( 'template_url' ) ?>/assets/images/banner-hire-us.png" /></a>
+          <a href="/" class="donate-banner"><img src="<? bloginfo( 'template_url' ) ?>/assets/images/banner-donate.png" /></a>
+      </div>
+
+      <footer id="site-footer" role="contentinfo">
+        <div class="container">
+          <small>mySociety is a project of UK Citizens Online Democracy (UKCOD). UKCOD is a registered charity in England and Wales, no. 1076346.<br>Its company number is 03277032, and mySociety Ltd's is 05798215.</small>
+        </div>
       </footer>
     </div><?//.table-cell?>
     

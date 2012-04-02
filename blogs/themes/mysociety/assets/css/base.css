@@ -935,7 +935,33 @@ body {
 }
 
 /* FOOTER */
+#banners {
+  margin-top: 2em;
+  text-align: center;
+}
+#banners a.hire-us-banner,
+#banners a.donate-banner {
+  display: block;
+}
+#banners a.hire-us-banner img,
+#banners a.donate-banner img {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+}
+#banners a.hire-us-banner:hover img,
+#banners a.donate-banner:hover img {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.75) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.75) 0 0 10px;
+}
+#banners a.donate-banner {
+  margin-top: 2em;
+}
+
 #site-footer {
+  clear: both;
+  margin-top: 2em;
   background: #ffffff;
   padding: 1em 0;
 }

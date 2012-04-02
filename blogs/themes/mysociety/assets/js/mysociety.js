@@ -34,8 +34,10 @@ function slider(){
         bullets += '<em>&bull;</em>';
       }
       //add next/prev buttons and bullets to page
-      var $slider_nav = $('<nav><button id="slider_prev_'+slider_id+'">prev</button><span id="slider_bullets_'+slider_id+'">'+bullets+'</span><button id="slider_next_'+slider_id+'">next</button></nav>');
+      var $slider_nav = $('<nav><button id="slider_prev_'+slider_id+'" class="slider_prev">prev</button><span id="slider_bullets_'+slider_id+'">'+bullets+'</span><button id="slider_next_'+slider_id+'" class="slider_next">next</button></nav>');
+      $slider_nav.hide();
       $(this).after($slider_nav);
+      $slider_nav.fadeIn();
     }
 
     //show the rest of the li's

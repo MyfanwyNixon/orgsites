@@ -7,7 +7,7 @@ Image replacement:
   It will generally follow this pattern:
   .selector {
     font: 0/0 a;
-    color: transpranet;
+    color: transparent;
   }
   .ie6 .selector {
     text-indent:-999999px;
@@ -702,12 +702,12 @@ a.examples-link {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1332929168') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
 }
 a.examples-link {
   *display: inline;
@@ -725,17 +725,52 @@ a.examples-link:hover {
 a.examples-link.inactive {
   margin-top: -2em;
   background: #0cb80c url("../images/sprite.png") right -60px no-repeat;
-  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1332929168') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
+}
+
+.slider_prev,
+.slider_next {
+  display: block;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  font: 0/0 a;
+  color: transparent;
+  width: 28px;
+  height: 28px;
+  background: url(../images/sprite.png) 0 0 no-repeat;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.slider_prev {
+  background: url(../images/sprite.png) -56px -307px no-repeat;
+}
+.slider_prev:hover {
+  background: url(../images/sprite.png) -106px -307px no-repeat;
+}
+
+.slider_next {
+  background: url(../images/sprite.png) -56px -247px no-repeat;
+}
+.slider_next:hover {
+  background: url(../images/sprite.png) -106px -247px no-repeat;
+}
+
+.ie6 .slider_prev,
+.ie6 .slider_next {
+  text-indent: -999999em;
 }
 
 /* ICONS */
@@ -1139,23 +1174,41 @@ body {
   padding: 1em;
   background: #f6f6f6;
   text-align: center;
+  position: relative;
 }
-.featured-gallery > ul {
+.featured-gallery ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-.featured-gallery > ul li {
+.featured-gallery ul li {
   list-style-type: none;
   padding: 0;
   margin: 0;
   border: 0;
 }
-.featured-gallery > ul li {
+.featured-gallery ul li {
   display: none;
 }
-.featured-gallery > ul li.first {
+.featured-gallery ul li.first {
   display: block;
+}
+.featured-gallery nav {
+  margin: 1em 0 0 0;
+  overflow: hidden;
+}
+.featured-gallery nav .slider_prev {
+  float: left;
+}
+.featured-gallery nav .slider_next {
+  float: right;
+}
+.featured-gallery nav span em {
+  color: #b7b7b7;
+  margin: 0 0.125em;
+}
+.featured-gallery nav span em.on {
+  color: #333333;
 }
 
 .resource-list {

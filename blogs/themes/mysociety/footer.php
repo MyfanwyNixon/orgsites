@@ -1,8 +1,10 @@
         <div class="clearfix"></div>
       </div><?//.container?>
 
-      <footer role="contentinfo">
-
+      <footer id="site-footer" role="contentinfo">
+        <div class="container">
+          <small>mySociety is a project of UK Citizens Online Democracy (UKCOD). UKCOD is a registered charity in England and Wales, no. 1076346.<br>Its company number is 03277032, and mySociety Ltd's is 05798215.</small>
+        </div>
       </footer>
     </div><?//.table-cell?>
     

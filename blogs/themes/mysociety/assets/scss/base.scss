@@ -427,8 +427,9 @@ a.examples-link {
 @include coloured_icons;
 
 
-
+/************************/
 /*** LAYOUT and STYLE ***/
+/************************/
 
 body {
   background:#ffffff url(../images/grid_8.gif) center repeat fixed;
@@ -472,6 +473,16 @@ body {
 .ie6 #site-logo {
   text-indent:-999999px;
 }
+
+/* FOOTER */
+#site-footer {
+  background:#ffffff;
+  padding:1em 0;
+  small {
+    font-style:normal;
+  }
+}
+
 /* MENU */
 #nav-wrapper {
   .container {

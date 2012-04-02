@@ -74,7 +74,9 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   width: 100%;
 }
 
+/************************/
 /*** LAYOUT and STYLE ***/
+/************************/
 .container {
   margin: 0 auto;
   padding: 0;
@@ -95,6 +97,13 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   margin-top: 5px;
   position: relative;
   z-index: 3;
+}
+
+/* FOOTER */
+#site-footer {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
 }
 
 /* MENU */

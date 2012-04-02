@@ -857,7 +857,9 @@ a.examples-link.inactive {
   background-image: url(../images/icons_white.png);
 }
 
+/************************/
 /*** LAYOUT and STYLE ***/
+/************************/
 body {
   background: white url(../images/grid_8.gif) center repeat fixed;
 }
@@ -930,6 +932,15 @@ body {
 
 .ie6 #site-logo {
   text-indent: -999999px;
+}
+
+/* FOOTER */
+#site-footer {
+  background: #ffffff;
+  padding: 1em 0;
+}
+#site-footer small {
+  font-style: normal;
 }
 
 /* MENU */

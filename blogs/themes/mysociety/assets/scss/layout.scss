@@ -86,8 +86,9 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 
-
+/************************/
 /*** LAYOUT and STYLE ***/
+/************************/
 
 //fix the width and take off the padding
 .container {
@@ -112,6 +113,11 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
       z-index:3;
     }
   }
+}
+
+/* FOOTER */
+#site-footer {
+  @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
 }
 
 /* MENU */

@@ -106,7 +106,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   .container {
     padding:1em 0;
     #site-logo {
-      margin-top:2px;
+      margin-top:5px;
       //pull on top of #nav-wrapper so the link is clickable
       position:relative;
       z-index:3;
@@ -130,21 +130,24 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
         padding:1em;
         border:none;
       }
-      &#secondary-menu li a {
-        background:none;
-        font-size:1.125em;
-        color:#999999;
-        padding:0;
-        margin:1em;
-        &:hover {
+      &#secondary-menu {
+        margin-left: 1em;
+        li a {
           background:none;
-          color:#555555;
+          font-size:1em;
+          color:#999999;
+          padding:0;
+          margin:1.4em 1em;
+          &:hover {
+            background:none;
+            color:#555555;
+          }
         }
       }
       &#primary-menu {
         position: absolute;
         right:6em;
-        top:1.5em;
+        top:1.4em;
         li a {
           padding:0;
           margin:0 1em;
@@ -209,8 +212,12 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 
+/* SIDEBAR*/
 
-
+#sidebar {
+  margin-top:7em;
+  margin-bottom: 0em;
+}
 
 /* GENERAL ELEMENTS */
 .block-list {

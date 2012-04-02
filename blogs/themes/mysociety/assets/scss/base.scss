@@ -582,7 +582,7 @@ body {
     margin-bottom: 1.3333em
   }
 }
-.post .entry-header {
+article.post .entry-header {
   overflow: hidden;
 }
 .entry-content {
@@ -773,6 +773,27 @@ body {
 }
 
 /* PAGE SPECIFIC */
+article.ms_project,
+article.ms_product,
+article.page {
+  .entry-header {
+    margin-bottom:2em;
+  }
+}
+
+//homepage
+article.homepage {
+  .entry-header {
+    .banner {
+      margin:1em 0;
+    }
+    p.entry-intro {
+      font-size:1.375em; //22px
+      line-height:1.27272727272727em; //28px
+      color:#333333;
+    }
+  }
+}
 
 //just for /products (products.php)
 .product-section-header {

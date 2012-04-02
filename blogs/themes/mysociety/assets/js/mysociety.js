@@ -8,13 +8,6 @@ function loader(type){
         complete: function(){
           MBP.scaleFix();
         }
-      },
-      {
-        //mobile slider js
-        load: '/wp-content/themes/mysociety/assets/js/libs/swipe.js',
-        complete: function(){
-          mob_slider();
-        }
       }
     ]);
   } else if (type === 'desktop') {
@@ -24,21 +17,52 @@ function loader(type){
   }
 }
 
-function mob_slider(){
+
+// slider - has nice swipey business on mobile
+function slider(){
   //iterate over all the sliders on the page
-  $('.featured-gallery').each(function(i){
+  $('.featured-gallery > ul').each(function(i){
     //cache slider id
     var slider_id = $(this).attr('id');
-    // make all the sliders
-    window.slider_id = new Swipe($(this)[0]);
+
+    //make bullets and nav
+    var slider_size = $('li', $(this)).length,
+        bullets = '';
+    if(slider_size > 1){
+      //make bullets
+      for (var i = 0; i < slider_size; i++){
+        bullets += '<em>&bull;</em>';
+      }
+      //add next/prev buttons and bullets to page
+      var $slider_nav = $('<nav><button id="slider_prev_'+slider_id+'" class="slider_prev">prev</button><span id="slider_bullets_'+slider_id+'">'+bullets+'</span><button id="slider_next_'+slider_id+'" class="slider_next">next</button></nav>');
+      $slider_nav.hide();
+      $(this).after($slider_nav);
+      $slider_nav.fadeIn();
+    }
+
     //show the rest of the li's
     $('li', $(this)).show();
-    //add next/prev buttons
-    $(this).after('<button id="slider_next_'+slider_id+'">next</button>');
-    $(this).after('<button id="slider_prev_'+slider_id+'">prev</button>');
+
+    
     //bind clicks
     $('#slider_next_'+slider_id).on('click', function(){window.slider_id.next();});
     $('#slider_prev_'+slider_id).on('click', function(){window.slider_id.prev();});
+
+    var bullets_elems = $slider_nav.find('em');
+
+    //make all the sliders
+    window.slider_id = new Swipe($(this)[0], {
+      continuous: true,
+      //move the bullets
+      callback: function(pos, e) {
+        // this isn't working :S
+        // var i = bullets_elems.length;
+        // while (i--) {
+          // bullets_elems[i].removeClass('on');
+        // }
+        // bullets_elems[pos].addClass('on');
+      }
+    });
   });
 }
 
@@ -91,6 +115,10 @@ $(function(){
     mqtest(type);
   });
 
+  /*
+   * set the slider going
+   */
+  slider();
 
 
   /*

@@ -35,6 +35,17 @@ p.entry-intro {
   color:#333333;
 }
 
+
+/* BUTTONS */
+.slider_prev {
+  background-position: -106px -307px;
+  &:hover {background-position: -56px -307px;}
+}
+.slider_next {
+  background-position: -106px -247px;
+  &:hover {background-position: -56px -247px;}
+}
+
 /* ICONS */
 
 //fix h2 lineheight when it has an icon
@@ -228,6 +239,25 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   width:26.875em; //430px
   height:21.25em; //340px
   padding:1.1875em 0 0 0; //19px
+  ul {
+    width:24.125em; //386px
+    margin:0 auto;
+  }
+  nav {
+    overflow: visible;
+    width:26.875em;
+    margin-top:-0.25em;
+    .slider_prev {
+      position: absolute;
+      left:-32px;
+      top:110px;
+    }
+    .slider_next {
+      position: absolute;
+      right:-32px;
+      top:110px;
+    }
+  }
 }
 
 .resource-list {
@@ -319,7 +349,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
     .entry-intro {
       float:left;
       clear:left;
-      max-width:50%;
+      max-width:45%;
       padding-right:1em;
     }
     .entry-title {

@@ -772,6 +772,30 @@ article.post .entry-header {
   }
 }
 
+.news-list {
+  @include list-reset-soft;
+  li {
+    margin-bottom:0.5em;
+    padding-bottom:0.5em;
+    h3 {
+      margin:0;
+      a {
+        color:#333333;
+      }
+    }
+    .entry-date {
+      color:#888888;
+      font-style:normal;
+    }
+  }
+}
+
+.news_box {
+  border-bottom:0.25em solid #CFCFCF; //3px
+  margin-bottom:1em;
+  padding-bottom:1em;
+}
+
 /* PAGE SPECIFIC */
 article.ms_project,
 article.ms_product,
@@ -786,11 +810,44 @@ article.homepage {
   .entry-header {
     .banner {
       margin:1em 0;
+      text-align:center;
     }
     p.entry-intro {
       font-size:1.375em; //22px
       line-height:1.27272727272727em; //28px
       color:#333333;
+      text-align:center;
+    }
+  }
+  .twitter_box {
+    margin-bottom:2em;
+  }
+  .project_product-section {
+    .project_product-section-inner {
+      ul.block-list {
+        width:100%;
+        li {
+          width:100%;
+          display:block;
+          height:auto;
+          padding:0;
+          margin:0;
+          border-bottom:0.125em solid #cccccc; //2px
+          &:last-child {
+            border-bottom:none;
+          }
+          .thumb {
+            display:none;
+          }
+          h3 {
+            margin:0;
+            a {
+              width:100%;
+              padding:1em 0;
+            }
+          }
+        }
+      }
     }
   }
 }

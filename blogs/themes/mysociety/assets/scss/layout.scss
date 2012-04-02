@@ -343,6 +343,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 .ms_project,
 .ms_product {
   .entry-header {
+    overflow:hidden;
     padding:0 0 3em 3em; //48px
     border-bottom: 0.1875em solid #CFCFCF; //3px
     .entry-title,
@@ -357,7 +358,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
     }
     .featured-gallery {
       float:right;
-      margin:-6em 0 0 0;
+      margin:-6em 2em 0 0;
     }
     #project_product-tab-nav {
       float:left;
@@ -402,6 +403,26 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
         padding-left:0.75em;
         float:right;
       }
+    }
+  }
+}
+
+
+// general pages - similar to .ms_project and .ms_product
+.page {
+  .entry-header {
+    overflow:hidden;
+    margin-bottom:2em;
+    .entry-title,
+    .entry-intro {
+      float:left;
+      clear:left;
+      max-width:45%;
+      padding-right:1em;
+    }
+    .featured-gallery {
+      float:right;
+      margin:-4em 2em 0 0;
     }
   }
 }

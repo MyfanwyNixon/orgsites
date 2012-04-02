@@ -331,6 +331,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 
 .ms_project .entry-header,
 .ms_product .entry-header {
+  overflow: hidden;
   padding: 0 0 3em 3em;
   border-bottom: 0.1875em solid #CFCFCF;
 }
@@ -350,7 +351,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 .ms_project .entry-header .featured-gallery,
 .ms_product .entry-header .featured-gallery {
   float: right;
-  margin: -6em 0 0 0;
+  margin: -6em 2em 0 0;
 }
 .ms_project .entry-header #project_product-tab-nav,
 .ms_product .entry-header #project_product-tab-nav {
@@ -445,6 +446,22 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   width: 20em;
   padding-left: 0.75em;
   float: right;
+}
+
+.page .entry-header {
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+.page .entry-header .entry-title,
+.page .entry-header .entry-intro {
+  float: left;
+  clear: left;
+  max-width: 45%;
+  padding-right: 1em;
+}
+.page .entry-header .featured-gallery {
+  float: right;
+  margin: -4em 2em 0 0;
 }
 
 /* HELPERS */

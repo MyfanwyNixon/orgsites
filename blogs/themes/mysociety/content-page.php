@@ -1,6 +1,7 @@
 <article id="post-<? the_ID() ?>" <? post_class() ?>>
   <header class="entry-header">
-    <h1 class="entry-date"><? the_title() ?></h1>
+    <h1 class="entry-title"><? the_title() ?></h1>
+    <? if(get_field('intro')): ?><p class="entry-intro"><? the_field('intro') ?></p><? endif; ?>
     <?
       $images = get_field('gallery');
       if($images):
@@ -19,7 +20,6 @@
   </header>
 
   <div class="entry-content">
-    <? if(get_field('intro')): ?><p class="entry-intro"><? the_field('intro') ?></p><? endif; ?>
     <? if(get_field('body')): ?><div class="entry-body"><? the_field('body') ?></div><? endif; ?>
 	</div>
 </article>

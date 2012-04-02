@@ -1,6 +1,6 @@
 <article id="post-<? the_ID() ?>" <? post_class() ?>>
   <header class="entry-header">
-    <h2 class="entry-date"><a href="<? the_permalink() ?>"><? the_title() ?></a></h2>
+    <h2 class="entry-title"><a href="<? the_permalink() ?>"><? the_title() ?></a></h2>
     <div class="entry-date"><? mysociety_posted_on() ?></div>
     <? 
       $categories_list = get_the_category_list( __( ', ' ) );

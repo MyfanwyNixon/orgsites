@@ -77,7 +77,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   padding: 1em 0;
 }
 #site-header .container #site-logo {
-  margin-top: 2px;
+  margin-top: 5px;
   position: relative;
   z-index: 3;
 }
@@ -113,12 +113,15 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   padding: 1em;
   border: none;
 }
+#nav-wrapper .container ul#secondary-menu {
+  margin-left: 1em;
+}
 #nav-wrapper .container ul#secondary-menu li a {
   background: none;
-  font-size: 1.125em;
+  font-size: 1em;
   color: #999999;
   padding: 0;
-  margin: 1em;
+  margin: 1.4em 1em;
 }
 #nav-wrapper .container ul#secondary-menu li a:hover {
   background: none;
@@ -127,7 +130,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 #nav-wrapper .container ul#primary-menu {
   position: absolute;
   right: 6em;
-  top: 1.5em;
+  top: 1.4em;
 }
 #nav-wrapper .container ul#primary-menu li a {
   padding: 0;
@@ -185,6 +188,12 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 
 .big-sidebar {
   padding-left: 0 !important;
+}
+
+/* SIDEBAR*/
+#sidebar {
+  margin-top: 7em;
+  margin-bottom: 0em;
 }
 
 /* GENERAL ELEMENTS */

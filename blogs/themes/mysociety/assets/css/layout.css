@@ -334,6 +334,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   overflow: hidden;
   padding: 0 0 3em 3em;
   border-bottom: 0.1875em solid #CFCFCF;
+  margin-bottom: 0;
 }
 .ms_project .entry-header .entry-title,
 .ms_project .entry-header .entry-intro,
@@ -450,7 +451,6 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 
 .page .entry-header {
   overflow: hidden;
-  margin-bottom: 2em;
 }
 .page .entry-header .entry-title,
 .page .entry-header .entry-intro {

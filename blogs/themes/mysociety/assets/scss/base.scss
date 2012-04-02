@@ -773,6 +773,13 @@ body {
 }
 
 /* PAGE SPECIFIC */
+.ms_project,
+.ms_product,
+.page, {
+  .entry-header {
+    margin-bottom:2em;
+  }
+}
 
 //just for /products (products.php)
 .product-section-header {

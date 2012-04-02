@@ -346,6 +346,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
     overflow:hidden;
     padding:0 0 3em 3em; //48px
     border-bottom: 0.1875em solid #CFCFCF; //3px
+    margin-bottom:0;
     .entry-title,
     .entry-intro {
       float:left;
@@ -412,7 +413,6 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 .page {
   .entry-header {
     overflow:hidden;
-    margin-bottom:2em;
     .entry-title,
     .entry-intro {
       float:left;

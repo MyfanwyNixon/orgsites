@@ -1309,6 +1309,12 @@ body {
 }
 
 /* PAGE SPECIFIC */
+.ms_project .entry-header,
+.ms_product .entry-header,
+.page .entry-header {
+  margin-bottom: 2em;
+}
+
 .product-section-header {
   clear: both;
 }

@@ -340,8 +340,8 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 
 
 //project/product entry layout
-.ms_project,
-.ms_product {
+article.ms_project,
+article.ms_product {
   .entry-header {
     overflow:hidden;
     padding:0 0 3em 3em; //48px
@@ -410,7 +410,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 
 
 // general pages - similar to .ms_project and .ms_product
-.page {
+article.page {
   .entry-header {
     overflow:hidden;
     .entry-title,

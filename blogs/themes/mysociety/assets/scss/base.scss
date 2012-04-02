@@ -849,6 +849,21 @@ body {
   }
 }
 
+//author pages
+#author-info {
+  overflow:hidden;
+  margin:1em 0 2em 0;
+  #author-avatar {
+    float:left;
+    margin-right:1em;
+  }
+  #author-description {
+    float:left;
+    h2 {
+      font-size:1.5em;
+    }
+  }
+}
 
 
 /* COLOUR CLASSES */

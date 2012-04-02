@@ -1384,6 +1384,21 @@ body {
   background: none;
 }
 
+#author-info {
+  overflow: hidden;
+  margin: 1em 0 2em 0;
+}
+#author-info #author-avatar {
+  float: left;
+  margin-right: 1em;
+}
+#author-info #author-description {
+  float: left;
+}
+#author-info #author-description h2 {
+  font-size: 1.5em;
+}
+
 /* COLOUR CLASSES */
 .pink_back {
   background-color: #ff38cc !important;

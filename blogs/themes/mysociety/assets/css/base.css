@@ -1308,6 +1308,38 @@ article.post .entry-header {
   clear: both;
 }
 
+.news-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.news-list li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.news-list li {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+}
+.news-list li h3 {
+  margin: 0;
+}
+.news-list li h3 a {
+  color: #333333;
+}
+.news-list li .entry-date {
+  color: #888888;
+  font-style: normal;
+}
+
+.news_box {
+  border-bottom: 0.25em solid #CFCFCF;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
 /* PAGE SPECIFIC */
 article.ms_project .entry-header,
 article.ms_product .entry-header,
@@ -1317,11 +1349,40 @@ article.page .entry-header {
 
 article.homepage .entry-header .banner {
   margin: 1em 0;
+  text-align: center;
 }
 article.homepage .entry-header p.entry-intro {
   font-size: 1.375em;
   line-height: 1.27272727272727em;
   color: #333333;
+  text-align: center;
+}
+article.homepage .twitter_box {
+  margin-bottom: 2em;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list {
+  width: 100%;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list li {
+  width: 100%;
+  display: block;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border-bottom: 0.125em solid #cccccc;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list li:last-child {
+  border-bottom: none;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb {
+  display: none;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 {
+  margin: 0;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 a {
+  width: 100%;
+  padding: 1em 0;
 }
 
 .product-section-header {

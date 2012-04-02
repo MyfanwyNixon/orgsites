@@ -254,14 +254,14 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   margin-bottom: 1em !important;
 }
 
-.tweets {
+.tweets, .news-list {
   background: white url(../images/grid_12.gif) center repeat;
 }
-.tweets li {
+.tweets li, .news-list li {
   display: block;
   border-bottom: 0.0625em solid #EEEEEE;
 }
-.tweets li:last-child {
+.tweets li:last-child, .news-list li:last-child {
   border-bottom: none;
 }
 
@@ -275,6 +275,14 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 .twitter_box > a {
   float: left;
   clear: left;
+}
+
+.news_box {
+  border-bottom: none;
+  padding-left: 3em;
+}
+.news_box > h2 {
+  margin-left: -1.174em;
 }
 
 #tab-nav {
@@ -296,6 +304,18 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 /* PAGE SPECIFIC */
+article.homepage #news-and-twitter {
+  overflow: hidden;
+}
+article.homepage #news-and-twitter .news_box {
+  width: 40em;
+  float: left;
+}
+article.homepage #news-and-twitter .twitter_box {
+  width: 20em;
+  float: left;
+}
+
 .product-section-header h2 {
   margin-left: 0;
   margin-right: 0;

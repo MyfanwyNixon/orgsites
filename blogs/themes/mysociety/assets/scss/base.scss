@@ -603,6 +603,21 @@ body {
   }
 }
 
+/* SIDE BAR */
+#sidebar {
+  margin-top:3em;
+  margin-bottom: 3em;
+  h3 {
+    text-transform: lowercase;
+    font-size: 1.125em;
+    margin-bottom: 0;
+  }
+  ul.sidebar-list {
+    @include list-reset-soft;
+  }  
+
+}
+
 /* GENERAL ELEMENTS */
 .block-list {
   @include list-reset;

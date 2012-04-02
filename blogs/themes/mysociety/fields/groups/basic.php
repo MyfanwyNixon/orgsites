@@ -43,7 +43,7 @@ register_field_group(array (
           'order_no' => '2'
         )
       ),
-      'row_limit' => '',
+      'row_limit' => '5',
       'layout' => 'table',
       'instructions' => '',
       'required' => '0',

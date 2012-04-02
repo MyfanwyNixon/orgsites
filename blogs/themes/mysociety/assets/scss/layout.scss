@@ -221,6 +221,10 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   width:26.875em; //430px
   height:21.25em; //340px
   padding:1.1875em 0 0 0; //19px
+  > ul {
+    width:24.125em; //386px
+    margin:0 auto;
+  }
 }
 
 .resource-list {

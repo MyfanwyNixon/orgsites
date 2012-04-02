@@ -8,13 +8,6 @@ function loader(type){
         complete: function(){
           MBP.scaleFix();
         }
-      },
-      {
-        //mobile slider js
-        load: '/wp-content/themes/mysociety/assets/js/libs/swipe.js',
-        complete: function(){
-          mob_slider();
-        }
       }
     ]);
   } else if (type === 'desktop') {
@@ -25,10 +18,10 @@ function loader(type){
 }
 
 
-
-function mob_slider(){
+// slider - has nice swipey business on mobile
+function slider(){
   //iterate over all the sliders on the page
-  $('.featured-gallery').each(function(i){
+  $('.featured-gallery > ul').each(function(i){
     //cache slider id
     var slider_id = $(this).attr('id');
 
@@ -120,6 +113,10 @@ $(function(){
     mqtest(type);
   });
 
+  /*
+   * set the slider going
+   */
+  slider();
 
 
   /*

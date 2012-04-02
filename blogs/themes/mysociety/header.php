@@ -27,6 +27,7 @@
   <![endif]-->
 
   <script src="<? bloginfo( 'template_url' )?>/assets/js/libs/modernizr.custom.94478.js" charset="utf-8"></script>
+  <script src="<? bloginfo( 'template_url' )?>/assets/js/libs/swipe.js" charset="utf-8"></script>
 
   <? wp_head(); ?>
 </head>

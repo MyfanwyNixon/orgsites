@@ -215,7 +215,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   float: left;
 }
 
-#sidebar {
+.sidebar {
   width: 20em;
   padding-left: 5em;
   float: right;
@@ -226,9 +226,9 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 /* SIDEBAR*/
-#sidebar {
+.sidebar {
   margin-top: 7em;
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 
 /* GENERAL ELEMENTS */
@@ -286,16 +286,16 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 .twitter_box,
-#sidebar.twitter_box {
+.sidebar.twitter_box {
   border-bottom: none;
   padding-left: 3em;
 }
 .twitter_box > h2,
-#sidebar.twitter_box > h2 {
+.sidebar.twitter_box > h2 {
   margin-left: -1.174em;
 }
 .twitter_box > a,
-#sidebar.twitter_box > a {
+.sidebar.twitter_box > a {
   float: left;
   clear: left;
 }
@@ -330,7 +330,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 article.homepage #news-and-twitter {
   overflow: hidden;
 }
-article.homepage #news-and-twitter #sidebar {
+article.homepage #news-and-twitter .sidebar {
   margin-top: 0;
 }
 article.homepage #homepage-tab-nav {
@@ -568,16 +568,14 @@ article.ms_product .project_product-section .project_product-section-inner {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-article.ms_project .project_product-section .project_product-section-inner > div,
-article.ms_product .project_product-section .project_product-section-inner > div {
-  float: left;
-  max-width: 35em;
+article.ms_project .project_product-section .project_product-section-inner .content-with-sidebar,
+article.ms_product .project_product-section .project_product-section-inner .content-with-sidebar {
+  width: 35em;
 }
-article.ms_project .project_product-section .project_product-section-inner .resource-list,
-article.ms_product .project_product-section .project_product-section-inner .resource-list {
-  width: 20em;
-  padding-left: 0.75em;
-  float: right;
+article.ms_project .project_product-section .project_product-section-inner .sidebar,
+article.ms_product .project_product-section .project_product-section-inner .sidebar {
+  margin-top: 0;
+  padding-left: 0;
 }
 
 article.page .entry-header {
@@ -639,7 +637,17 @@ article.page .entry-header .featured-gallery {
     float: left;
   }
 
-  #sidebar {
+  .sidebar {
+    width: 33%;
+  }
+
+  article.ms_project .project_product-section .project_product-section-inner .content-with-sidebar,
+  article.ms_product .project_product-section .project_product-section-inner .content-with-sidebar {
+    width: 66%;
+    float: left;
+  }
+  article.ms_project .project_product-section .project_product-section-inner .sidebar,
+  article.ms_product .project_product-section .project_product-section-inner .sidebar {
     width: 33%;
   }
 
@@ -683,16 +691,26 @@ article.page .entry-header .featured-gallery {
 @media only screen and (max-width: 50em) {
   /* MAIN CONTENT */
   .content-with-sidebar,
-  #sidebar {
+  .sidebar {
     width: 100%;
     float: none;
+    clear: both;
+  }
+
+  article.ms_project .project_product-section .project_product-section-inner .content-with-sidebar,
+  article.ms_project .project_product-section .project_product-section-inner .sidebar,
+  article.ms_product .project_product-section .project_product-section-inner .content-with-sidebar,
+  article.ms_product .project_product-section .project_product-section-inner .sidebar {
+    width: 100%;
+    float: none;
+    clear: both;
   }
 
   .homepage .content-with-sidebar {
     width: 66%;
     float: left;
   }
-  .homepage #sidebar {
+  .homepage .sidebar {
     width: 33%;
     float: left;
   }

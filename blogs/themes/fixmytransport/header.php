@@ -22,7 +22,7 @@
 	<?php if (is_home() || is_front_page()) : ?>
 		<h1 id="logo"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
 	<?php else : ?>
-		<div id="logo"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></div>			
+		<h1 id="logo"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>			
 	<?php endif; ?>
 </header>
 

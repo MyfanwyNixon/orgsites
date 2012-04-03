@@ -74,7 +74,11 @@ Header
 	height: 160px;
 	background-color: #ccc;
 }
-
+.multiplebgs #banner{
+	background-image: url('images/header-front.png'), url('images/header-front-bg.png');
+	background-repeat: no-repeat, repeat-x;
+	background-position: center left, center left;
+}
 
 
 
@@ -116,12 +120,9 @@ Sidebar
 */
 
 #sidebar{
+	background-color: rgba(255,255,255,0.85);
 	max-width:100%;
-	background-color: rgba(255,255,255,0.75);
-	-webkit-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
-	   -moz-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
-	     -o-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
-	        box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+	
 }
 #sidebar section{
 	display: block;
@@ -205,6 +206,13 @@ Sidebar
 		position: absolute;
 		top:10px;
 		margin-left: 41.25em;
+		background: rgba(255,255,255,0.85) url('images/ticket.png') no-repeat scroll top center;
+		border-bottom:2px dotted #ccc;
+		padding-top:2em;
+		-webkit-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+		   -moz-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+		     -o-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+		        box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
 	}
 	body.logged-in #sidebar{
 		top: 38px;

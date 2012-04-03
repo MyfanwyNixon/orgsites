@@ -3,7 +3,7 @@
 	
 	<section id="report-problem">
 		<p>Had a bad journey?</p>
-		<p><a href="#">Report a problem</a></p>
+		<p><a href="http://www.fixmytransport.com/">Report a problem</a></p>
 	</section>
 	
 	<section id="about_journal">

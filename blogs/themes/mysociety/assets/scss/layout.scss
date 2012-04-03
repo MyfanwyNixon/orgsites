@@ -219,7 +219,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   width:40em;
   float:left;
 }
-#sidebar {
+.sidebar {
   width:20em;
   padding-left: 5em;
   float:right;
@@ -231,9 +231,9 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 
 /* SIDEBAR*/
 
-#sidebar {
+.sidebar {
   margin-top:7em;
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 
 /* GENERAL ELEMENTS */
@@ -297,7 +297,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 .twitter_box,
-#sidebar.twitter_box {
+.sidebar.twitter_box {
   border-bottom:none;
   padding-left:3em; //48px
   >h2 {// font base size is 46px
@@ -332,7 +332,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 article.homepage {
   #news-and-twitter {
     overflow:hidden;
-    #sidebar {
+    .sidebar {
       margin-top:0;
     }
   }
@@ -456,12 +456,6 @@ article.homepage {
   div {
     width:18em; //288px
     margin-right:1.4375em; //23px
-  //   h3 {
-  //   }
-  //   p {
-  //     &.meta {
-  //     }
-  //   }
     &.last {
       margin-right:0;
     }
@@ -525,14 +519,12 @@ article.ms_product {
       padding:0;
       overflow:hidden;
       @include box-shadow(none);
-      >div {
-        float:left;
-        max-width:35em;
+      .content-with-sidebar {
+        width:35em;
       }
-      .resource-list {
-        width:20em;
-        padding-left:0.75em;
-        float:right;
+      .sidebar {
+        margin-top:0;
+        padding-left:0;
       }
     }
   }
@@ -592,17 +584,31 @@ article.page {
   }
 
   /* HEADER */
-  #site-header .container {
-    padding:1em;
+  #site-header {
+    height:6em;
+    .container {
+      padding:1em;
+    }
   }
 
   /* MENU */
-  #nav-wrapper .container {
-    ul#primary-menu {
-      right:7em;
-    }
-    #site-search {
-      right:1em;
+  #nav-wrapper{
+    height:6em;
+    .container {
+      ul#secondary-menu {
+        position:absolute;
+        right:1em;
+        top:3.75em;
+        li a {
+          margin:0 0 0 1.5em;
+        }
+      }
+      ul#primary-menu {
+        right:7em;
+      }
+      #site-search {
+        right:1em;
+      }
     }
   }
 
@@ -611,8 +617,21 @@ article.page {
     width:66%;
     float:left;
   }
-  #sidebar {
+  .sidebar {
     width:33%;
+  }
+  //reiterate for sepcific cases
+  article.ms_project,
+  article.ms_product {
+    .project_product-section .project_product-section-inner {
+      .content-with-sidebar {
+        width:66%;
+        float:left;
+      }
+      .sidebar {
+        width:33%;
+      }
+    }
   }
 
 
@@ -658,17 +677,29 @@ article.page {
 @media only screen and (max-width: 50em) { //800px
   /* MAIN CONTENT */
   .content-with-sidebar,
-  #sidebar {
+  .sidebar {
     width:100%;
     float:none;
   }
-  //don't make #sidebar and .content fullwidth on homepage
+  //reiterate for sepcific cases
+  article.ms_project,
+  article.ms_product {
+    .project_product-section .project_product-section-inner {
+      .content-with-sidebar,
+      .sidebar {
+        width:100%;
+        float:none;
+        clear:both;
+      }
+    }
+  }
+  //don't make .sidebar and .content fullwidth on homepage
   .homepage {
     .content-with-sidebar {
       width:66%;
       float:left;
     }
-    #sidebar {
+    .sidebar {
       width:33%;
       float:left;
     }

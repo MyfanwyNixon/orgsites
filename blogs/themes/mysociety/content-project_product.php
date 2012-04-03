@@ -80,9 +80,13 @@
         <h2 class="build <?= $colour; ?>_icon"><? _e( 'Build your own', 'mysociety' ) ?></h2>
         
         <div class="project_product-section-inner">
-          <div><?= the_field('build-your-own') ?></div>
-
           <? if($resources): ?>
+          <div class="content-with-sidebar">
+          <? endif; ?>
+            <?= the_field('build-your-own') ?>
+          <? if($resources): ?>
+          </div>
+          <aside class="sidebar">
             <ul class="resource-list">
             <? foreach($resources as $resource): ?>
               <? if($resource['type'] !== 'twitter'): ?>
@@ -92,6 +96,7 @@
               <? endif; ?>
             <? endforeach; ?>
             </ul>
+          </aside>
           <? endif; ?>
         </div>
       </section>
@@ -111,7 +116,7 @@
           ?>
         <? endif; ?>
       </div>
-      <aside id="sidebar" class="big-sidebar">
+      <aside class="sidebar big-sidebar">
         <? if($twitter_user): ?>
           <section class="twitter_box">
             <h2 class="twitter <?= $colour; ?>_icon"><? _e( 'Twitter', 'mysociety' ) ?></h2>

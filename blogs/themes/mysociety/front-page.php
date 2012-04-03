@@ -29,7 +29,7 @@
             </ul>
           </section>
 
-          <aside id="sidebar" class="twitter_box">
+          <aside class="sidebar twitter_box">
             <h2 class="twitter green_icon"><? _e( 'Twitter', 'mysociety' ) ?></h2>
             <a class="green_button" href="http://twitter.com/mySociety">@mySociety</a>
             <ul class="tweets">

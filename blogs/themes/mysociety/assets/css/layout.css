@@ -619,11 +619,25 @@ article.page .entry-header .featured-gallery {
   }
 
   /* HEADER */
+  #site-header {
+    height: 6em;
+  }
   #site-header .container {
     padding: 1em;
   }
 
   /* MENU */
+  #nav-wrapper {
+    height: 6em;
+  }
+  #nav-wrapper .container ul#secondary-menu {
+    position: absolute;
+    right: 1em;
+    top: 3.75em;
+  }
+  #nav-wrapper .container ul#secondary-menu li a {
+    margin: 0 0 0 1.5em;
+  }
   #nav-wrapper .container ul#primary-menu {
     right: 7em;
   }

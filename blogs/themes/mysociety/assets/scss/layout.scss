@@ -584,17 +584,31 @@ article.page {
   }
 
   /* HEADER */
-  #site-header .container {
-    padding:1em;
+  #site-header {
+    height:6em;
+    .container {
+      padding:1em;
+    }
   }
 
   /* MENU */
-  #nav-wrapper .container {
-    ul#primary-menu {
-      right:7em;
-    }
-    #site-search {
-      right:1em;
+  #nav-wrapper{
+    height:6em;
+    .container {
+      ul#secondary-menu {
+        position:absolute;
+        right:1em;
+        top:3.75em;
+        li a {
+          margin:0 0 0 1.5em;
+        }
+      }
+      ul#primary-menu {
+        right:7em;
+      }
+      #site-search {
+        right:1em;
+      }
     }
   }
 

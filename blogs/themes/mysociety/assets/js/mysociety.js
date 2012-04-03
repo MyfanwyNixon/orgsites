@@ -181,6 +181,8 @@ $(function(){
   var $tabs = $('.tabs').children();
   //hide all but first tab
   $tabs.not(':first-child').hide();
+  //set the first tabnav a to be active
+  $('#tab-nav li:first-child a').addClass('active');
 
   //set up clicks
   $('#tab-nav').on('click', 'a', function(e){
@@ -189,7 +191,11 @@ $(function(){
       //trim
       start = href.indexOf('#'),
       targetid = href.slice(start, href.length);
+    //hide/show tabs
     $tabs.not($(targetid)).hide();
     $(targetid).show();
+    //modify the tabnav
+    $('#tab-nav a').removeClass('active');
+    $(this).addClass('active');
   });
 });

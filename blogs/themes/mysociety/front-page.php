@@ -54,7 +54,7 @@
       
       <div id="homepage-tabs" class="tabs">
         <section id="not-for-profit-projects" class="project_product-section grey_back">
-          <h2 class="pound mob-only"><? _e( 'Not-for-profit Projects', 'mysociety' ) ?></h2>
+          <h2 class="pound"><? _e( 'Not-for-profit Projects', 'mysociety' ) ?></h2>
           
           <div id="not_for_profit_projects_tabs" class="project_product-section-inner">
             <? $not_for_profit_posts = new WP_Query('post_type=ms_project&posts_per_page=6'); ?>
@@ -90,7 +90,7 @@
         </section>
 
         <section id="commercial-products" class="project_product-section blue_back">
-          <h2 class="pound mob-only"><? _e( 'Commercial Products', 'mysociety' ) ?></h2>
+          <h2 class="pound"><? _e( 'Commercial Products', 'mysociety' ) ?></h2>
           
           <div id="commercial_products_tabs" class="project_product-section-inner">
             <? $commercial_products = new WP_Query('post_type=ms_product&posts_per_page=6'); ?>

@@ -232,14 +232,14 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 /* GENERAL ELEMENTS */
-.block-list, article.homepage .project_product-section .project_product-section-inner ul.block-list {
+.block-list, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list {
   margin: 0;
 }
-.block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li {
+.block-list li, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li {
   margin-right: 3em;
   height: 18.75em;
 }
-.block-list li.last, article.homepage .project_product-section .project_product-section-inner ul.block-list li.last {
+.block-list li.last, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li.last {
   margin-right: 0;
 }
 
@@ -335,35 +335,98 @@ article.homepage #news-and-twitter .twitter_box {
   width: 20em;
   float: left;
 }
-article.homepage .project_product-section {
+article.homepage #homepage-tab-nav {
+  border-bottom: 0.1875em solid #CFCFCF;
+}
+article.homepage #homepage-tab-nav #tab-nav {
+  overflow: visible;
+  margin-left: 3em;
+  height: 48px;
+}
+article.homepage #homepage-tab-nav #tab-nav li {
+  margin-right: 0.5em;
+}
+article.homepage #homepage-tab-nav #tab-nav li a {
+  height: 51px;
+  font-size: 22px;
+  background: #CFCFCF;
+  padding: 11px;
+  color: #ffffff;
+  border: 3px solid #CFCFCF;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+article.homepage #homepage-tab-nav #tab-nav li a:hover {
+  text-decoration: none;
+  color: #333333;
+}
+article.homepage #homepage-tab-nav #tab-nav li a.active {
+  background: transparent;
+  color: #888888;
+  border-bottom: 3px solid #ffffff;
+}
+article.homepage #homepage-tabs {
+  border-bottom: 0.1875em solid #CFCFCF;
+}
+article.homepage #homepage-tabs .project_product-section {
+  position: relative;
   padding: 0;
   background: none !important;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-article.homepage .project_product-section > h2 {
+article.homepage #homepage-tabs .project_product-section > h2 {
   color: #AAAAAA;
   margin: 0;
   padding: 0;
   background: none !important;
 }
-article.homepage .project_product-section .project_product-section-inner {
+article.homepage #homepage-tabs .project_product-section .project_product-section-inner {
   padding: 0;
   overflow: hidden;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-article.homepage .project_product-section .project_product-section-inner ul.block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li {
+article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li {
   width: 18em;
   border-bottom: none;
 }
-article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb, article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb {
+article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li .thumb, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li .thumb {
   display: block;
 }
-article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 a, article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 a {
+article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li h3 a, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li h3 a {
   padding: 0;
+}
+article.homepage #homepage-tabs .project_product-section nav {
+  position: absolute;
+  top: -54px;
+  right: 0;
+  width: 84px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+}
+article.homepage #homepage-tabs .project_product-section nav .slider_next {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+article.homepage #homepage-tabs .project_product-section nav .slider_prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+article.homepage #homepage-tabs .project_product-section nav span em {
+  margin: 0 2px;
+}
+
+.js article.homepage #homepage-tabs .project_product-section > h2 {
+  display: none;
 }
 
 .product-section-header h2 {
@@ -557,10 +620,10 @@ article.page .entry-header .featured-gallery {
   }
 
   /* GENERAL ELEMENTS */
-  .block-list, article.homepage .project_product-section .project_product-section-inner ul.block-list {
+  .block-list, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list {
     margin: 0 -1em 0 0;
   }
-  .block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li, .block-list li.last, article.homepage .project_product-section .project_product-section-inner ul.block-list li.last {
+  .block-list li, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li, .block-list li.last, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li.last {
     margin-right: 1em;
   }
 }

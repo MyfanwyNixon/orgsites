@@ -1,8 +1,5 @@
 <div id="comments">
 
-  <div class="error">This is a very important notice
-  </div>
-
   <? if ( post_password_required() ) : ?>
     <p class="nopassword"><? _e( 'This post is password protected. Enter the password to view any comments.', 'mysociety' ); ?></p>
   </div><? //#comments ?>
@@ -16,8 +13,8 @@
   ?>
 
   <? if ( have_comments() ) : ?>
-    <h2 id="comments-title"><? printf( _n( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'mysociety' ),
-          number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?></h2>
+    <h2 id="comments-title"><? printf( _n( 'One comment', '%1$s comments', get_comments_number(), 'mysociety' ),
+          number_format_i18n( get_comments_number() ) ); ?></h2>
 
     <?
       // are there comments to loop through?
@@ -60,12 +57,14 @@
     <p class="nocomments"><? _e( 'Sorry, comments are closed.', 'mysociety' ); ?></p>
   <? endif; ?>
 
+
   <?
     $args = array(
       'title_reply' => __( 'Leave a comment', 'mysociety' ),
       'title_reply_to' => __( 'Leave a reply to %s', 'mysociety' ),
       'cancel_reply_link' => __( 'cancel reply', 'mysociety' ),
-      'label_submit' => __( 'Post Comment', 'mysociety' ),
+      'label_submit' => __( 'Post Comment', 'mysociety' ) ,
+      'id_submit' => 'comment_submit',
       'comment_notes_after' => '',
       'comment_field' => '<label for="comment">' . _x( 'Comment ', 'noun' ) . '<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="' . __( 'Please be nice :)', 'mysociety' ) . '"></textarea>',
       'fields' => array(

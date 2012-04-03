@@ -10,11 +10,43 @@ function loader(type){
         }
       }
     ]);
-  } else if (type === 'desktop') {
-    //do desktop stuff
 
+    //reset/remove stray stuff that might be left over from
+    //desktop (only really worth it from the window.resize())
+    $('article.homepage .project_product-section nav').remove();
+    $('article.homepage .project_product-section .project_product-section-inner > *').css({
+      position: 'static',
+      visibilty: 'visible'
+    });
+    $('.tabs').children().show();
+  } else if (type === 'desktop') {
     //homepage tab inners
     slider('article.homepage .project_product-section .project_product-section-inner');
+
+    /*
+     * Basic Tabs - only for desktop
+     * no hash (and therefore bookmarking) or history
+     */
+    var $tabs = $('.tabs').children();
+    //hide all but first tab
+    $tabs.not(':first-child').hide();
+    //set the first tabnav a to be active
+    $('#tab-nav li:first-child a').addClass('active');
+
+    //set up clicks
+    $('#tab-nav').on('click', 'a', function(e){
+      e.preventDefault();
+      var href = $(this).attr('href'),
+        //trim
+        start = href.indexOf('#'),
+        targetid = href.slice(start, href.length);
+      //hide/show tabs
+      $tabs.not($(targetid)).hide();
+      $(targetid).show();
+      //modify the tabnav
+      $('#tab-nav a').removeClass('active');
+      $(this).addClass('active');
+    });
   }else {
     return;
   }
@@ -116,10 +148,6 @@ $(function(){
   }
   mqtest(type);
   
-  //on window resize, run the mqtest again (which in turn will run the loader again)
-  $(window).resize(function(){
-    mqtest(type);
-  });
 
   /*
    * set the sliders going
@@ -176,27 +204,10 @@ $(function(){
 
 
   /*
-   * Basic Tabs
-   * no hash (and therefore bookmarking) or history
+   * On window resize, run some things again
    */
-  var $tabs = $('.tabs').children();
-  //hide all but first tab
-  $tabs.not(':first-child').hide();
-  //set the first tabnav a to be active
-  $('#tab-nav li:first-child a').addClass('active');
-
-  //set up clicks
-  $('#tab-nav').on('click', 'a', function(e){
-    e.preventDefault();
-    var href = $(this).attr('href'),
-      //trim
-      start = href.indexOf('#'),
-      targetid = href.slice(start, href.length);
-    //hide/show tabs
-    $tabs.not($(targetid)).hide();
-    $(targetid).show();
-    //modify the tabnav
-    $('#tab-nav a').removeClass('active');
-    $(this).addClass('active');
+  $(window).resize(function(){
+    // do the mqtest again (which in turn will run the loader again)
+    mqtest(type);
   });
 });

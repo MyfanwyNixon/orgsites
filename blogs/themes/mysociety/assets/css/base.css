@@ -702,12 +702,12 @@ a.examples-link {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
 }
 a.examples-link {
   *display: inline;
@@ -725,12 +725,12 @@ a.examples-link:hover {
 a.examples-link.inactive {
   margin-top: -2em;
   background: #0cb80c url("../images/sprite.png") right -60px no-repeat;
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1463,7 +1463,7 @@ article.homepage #our-clients h2 {
   -webkit-box-shadow: 0px 0px 0.5em 0px #cccccc;
   -moz-box-shadow: 0px 0px 0.5em 0px #cccccc;
   box-shadow: 0px 0px 0.5em 0px #cccccc;
-  padding: 0.5em 0em 0em 64px;
+  padding: 0.5em 0em 0em 48px;
   list-style: none;
   margin: 0 0 0.5em 0;
 }
@@ -1472,33 +1472,29 @@ article.homepage #our-clients h2 {
   margin-right: 0.75em;
 }
 #comments ol.commentlist li header .avatar {
+  width: 32px;
+  height: 32px;
   position: absolute;
-  margin-left: -56px;
+  margin-left: -40px;
   margin-top: 0px;
 }
 #comments ol.commentlist li header .comment-awaiting-moderation {
   background: #FFDD4F;
   padding: 0.25em 0.5em;
-  position: absolute;
-  margin-left: -78px;
-  margin-top: 2em;
   font-size: 0.7em;
   font-family: 'arial', sans-serif;
   text-transform: uppercase;
   line-height: 1.428em;
+  text-align: center;
 }
 #comments ol.commentlist li ul.children li {
   padding: 1em 0em 0em 48px;
-  margin-left: -8px;
+  margin-left: -38px;
 }
 #comments ol.commentlist li ul.children li .avatar {
   position: absolute;
   margin-left: -38px;
   margin-top: 0px;
-}
-#comments ol.commentlist li ul.children li .comment-awaiting-moderation {
-  margin-left: -76px;
-  margin-top: 0.5em;
 }
 #comments ol.commentlist div.reply {
   height: 2em;
@@ -1541,6 +1537,50 @@ article.homepage #our-clients h2 {
   *display: inline;
 }
 #comments ol.commentlist div.reply a.comment-reply-link:hover, #comments ol.commentlist div.reply a.comment-reply-link:focus, #comments ol.commentlist div.reply a.comment-reply-link:active {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+
+#commentform {
+  background: #f6f6f6;
+  border: 0.16em solid #ddd;
+  padding: 1em 1em 0 1em;
+  overflow: hidden;
+}
+#commentform p {
+  background: none;
+}
+#commentform #comment_submit {
+  width: auto;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background-color: #43c250;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  line-height: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  margin: 1em 0;
+  float: right;
+}
+#commentform #comment_submit {
+  *display: inline;
+}
+#commentform #comment_submit:hover, #commentform #comment_submit:focus, #commentform #comment_submit:active {
   text-decoration: none;
   color: white;
   background-color: black;

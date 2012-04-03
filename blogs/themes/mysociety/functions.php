@@ -191,7 +191,7 @@
             </div><!-- .comment-author .vcard -->
 
             <? if ( $comment->comment_approved == '0' ) : ?>
-              <div class="comment-awaiting-moderation"><? _e( 'Awaiting<br>approval', 'mysociety' ); ?></div>
+              <div class="comment-awaiting-moderation"><? _e( 'Awaiting approval', 'mysociety' ); ?></div>
   
             <? endif; ?>
           </header>

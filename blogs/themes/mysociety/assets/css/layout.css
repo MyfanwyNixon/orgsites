@@ -218,7 +218,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 #sidebar {
   width: 20em;
   padding-left: 5em;
-  float: left;
+  float: right;
 }
 
 .big-sidebar {
@@ -285,14 +285,17 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   border-bottom: none;
 }
 
-.twitter_box {
+.twitter_box,
+#sidebar.twitter_box {
   border-bottom: none;
   padding-left: 3em;
 }
-.twitter_box > h2 {
+.twitter_box > h2,
+#sidebar.twitter_box > h2 {
   margin-left: -1.174em;
 }
-.twitter_box > a {
+.twitter_box > a,
+#sidebar.twitter_box > a {
   float: left;
   clear: left;
 }
@@ -327,13 +330,8 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 article.homepage #news-and-twitter {
   overflow: hidden;
 }
-article.homepage #news-and-twitter .news_box {
-  width: 40em;
-  float: left;
-}
-article.homepage #news-and-twitter .twitter_box {
-  width: 20em;
-  float: left;
+article.homepage #news-and-twitter #sidebar {
+  margin-top: 0;
 }
 article.homepage #homepage-tab-nav {
   border-bottom: 0.1875em solid #CFCFCF;
@@ -612,11 +610,24 @@ article.page .entry-header .featured-gallery {
   visibility: hidden !important;
 }
 
-/* MEDIA QUERIES */
-@media only screen and (min-width: 48em) and (max-width: 61em) {
+/*********************/
+/*** MEDIA QUERIES ***/
+/*********************/
+/* middle sized screens (NOT landscape iPad) */
+@media only screen and (max-width: 61em) {
   .container {
     width: 100%;
     padding: 0 1em;
+  }
+
+  /* MAIN CONTENT */
+  .content-with-sidebar {
+    width: 66%;
+    float: left;
+  }
+
+  #sidebar {
+    width: 33%;
   }
 
   /* GENERAL ELEMENTS */
@@ -627,3 +638,4 @@ article.page .entry-header .featured-gallery {
     margin-right: 1em;
   }
 }
+/* small screens (for example small tablets or portrait iPad) */

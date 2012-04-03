@@ -107,7 +107,8 @@ $(function(){
   //test for window size and load stuff
   var type = '';
   function mqtest(type){
-    //set type based on media query
+    //set type based on media query (max-width: 767px)
+    //we use 767 as tablet (well ipad) starts at 768px
     if (Modernizr.mq('only screen and (max-width:47.9375em)')) { type = 'mobile';}
     else { type = 'desktop'; }
     //call loader function

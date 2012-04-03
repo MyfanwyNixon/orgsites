@@ -583,10 +583,9 @@ article.page {
 /*********************/
 /*** MEDIA QUERIES ***/
 /*********************/
-body {background:yellow;}
-/* middle sized screens (NOT landscape iPad) */
+
+/* middle sized screens (for example portrait but not landscape iPad) */
 @media only screen and (max-width: 61em) { //976px
-  body {background:red;}
   .container {
     width: 100%;
     padding:0 1em;
@@ -637,8 +636,5 @@ body {background:yellow;}
   #sidebar {
     width:100%;
     float:none;
-  }
-  #site-header .container {
-    background:blue;
   }
 }

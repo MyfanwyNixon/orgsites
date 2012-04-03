@@ -681,20 +681,10 @@ article.page {
     width:100%;
     float:none;
   }
-  //reiterate for sepcific cases
-  article.ms_project,
-  article.ms_product {
-    .project_product-section .project_product-section-inner {
-      .content-with-sidebar,
-      .sidebar {
-        width:100%;
-        float:none;
-        clear:both;
-      }
-    }
-  }
-  //don't make .sidebar and .content fullwidth on homepage
-  .homepage {
+  //don't make .sidebar and .content fullwidth on homepage or products
+  .homepage,
+  article.ms_project .project_product-section .project_product-section-inner,
+  article.ms_product .project_product-section .project_product-section-inner {
     .content-with-sidebar {
       width:66%;
       float:left;

@@ -710,20 +710,15 @@ article.page .entry-header .featured-gallery {
     float: none;
   }
 
+  .homepage .content-with-sidebar,
   article.ms_project .project_product-section .project_product-section-inner .content-with-sidebar,
-  article.ms_project .project_product-section .project_product-section-inner .sidebar,
-  article.ms_product .project_product-section .project_product-section-inner .content-with-sidebar,
-  article.ms_product .project_product-section .project_product-section-inner .sidebar {
-    width: 100%;
-    float: none;
-    clear: both;
-  }
-
-  .homepage .content-with-sidebar {
+  article.ms_product .project_product-section .project_product-section-inner .content-with-sidebar {
     width: 66%;
     float: left;
   }
-  .homepage .sidebar {
+  .homepage .sidebar,
+  article.ms_project .project_product-section .project_product-section-inner .sidebar,
+  article.ms_product .project_product-section .project_product-section-inner .sidebar {
     width: 33%;
     float: left;
   }

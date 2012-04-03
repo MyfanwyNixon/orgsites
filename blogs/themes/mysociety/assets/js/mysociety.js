@@ -43,11 +43,6 @@ function slider(elem){
     //show the rest of the children
     $(this).children().show();
 
-    
-    //bind clicks
-    $('#slider_next_'+slider_id).on('click', function(){window.slider_id.next();});
-    $('#slider_prev_'+slider_id).on('click', function(){window.slider_id.prev();});
-
     // var bullets_elems = $slider_nav.find('em');
 
     //make all the sliders
@@ -63,7 +58,12 @@ function slider(elem){
         // bullets_elems[pos].addClass('on');
       }
     });
+
+    //bind clicks
+    $('#slider_next_'+slider_id).on('click', function(){window.slider_id.next();});
+    $('#slider_prev_'+slider_id).on('click', function(){window.slider_id.prev();});
   });
+  //rinse and repeat
 }
 
 //generic re-usable hide or show with class states
@@ -127,7 +127,7 @@ $(function(){
 
   //homepage tab inners
   //can't do more than one on a page :/
-  slider('article.homepage .project_product-section > .project_product-section-inner');
+  slider('article.homepage .project_product-section .project_product-section-inner');
 
   /*
    * Examples hide show - bit of a fudge but it works

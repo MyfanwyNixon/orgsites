@@ -125,6 +125,11 @@
             </div>
           </section>
         </div>
+
+        <section id="our-clients">
+          <h2>Our Clients</h2>
+          <img src="<? bloginfo('template_url') ?>/assets/images/clients.png" />
+        </section>
       </div>
     </article>
   </div>

@@ -583,9 +583,10 @@ article.page {
 /*********************/
 /*** MEDIA QUERIES ***/
 /*********************/
-
+body {background:yellow;}
 /* middle sized screens (NOT landscape iPad) */
 @media only screen and (max-width: 61em) { //976px
+  body {background:red;}
   .container {
     width: 100%;
     padding:0 1em;
@@ -630,7 +631,8 @@ article.page {
 
 
 /* small screens (for example small tablets or portrait iPad) */
-@media only screen and (max-width: 49em) { //768px
+@media only screen and (max-width: 50em) { //800px
+  body {background:blue;}
   /* MAIN CONTENT */
   .content-with-sidebar,
   #sidebar {

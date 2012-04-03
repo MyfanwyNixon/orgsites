@@ -1457,7 +1457,7 @@ article.homepage .project_product-section .project_product-section-inner ul.bloc
   -webkit-box-shadow: 0px 0px 0.5em 0px #cccccc;
   -moz-box-shadow: 0px 0px 0.5em 0px #cccccc;
   box-shadow: 0px 0px 0.5em 0px #cccccc;
-  padding: 0.5em 0em 0em 64px;
+  padding: 0.5em 0em 0em 48px;
   list-style: none;
   margin: 0 0 0.5em 0;
 }
@@ -1466,33 +1466,29 @@ article.homepage .project_product-section .project_product-section-inner ul.bloc
   margin-right: 0.75em;
 }
 #comments ol.commentlist li header .avatar {
+  width: 32px;
+  height: 32px;
   position: absolute;
-  margin-left: -56px;
+  margin-left: -40px;
   margin-top: 0px;
 }
 #comments ol.commentlist li header .comment-awaiting-moderation {
   background: #FFDD4F;
   padding: 0.25em 0.5em;
-  position: absolute;
-  margin-left: -78px;
-  margin-top: 2em;
   font-size: 0.7em;
   font-family: 'arial', sans-serif;
   text-transform: uppercase;
   line-height: 1.428em;
+  text-align: center;
 }
 #comments ol.commentlist li ul.children li {
   padding: 1em 0em 0em 48px;
-  margin-left: -8px;
+  margin-left: -38px;
 }
 #comments ol.commentlist li ul.children li .avatar {
   position: absolute;
   margin-left: -38px;
   margin-top: 0px;
-}
-#comments ol.commentlist li ul.children li .comment-awaiting-moderation {
-  margin-left: -76px;
-  margin-top: 0.5em;
 }
 #comments ol.commentlist div.reply {
   height: 2em;

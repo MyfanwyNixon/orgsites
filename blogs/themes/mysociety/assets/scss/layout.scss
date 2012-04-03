@@ -372,6 +372,34 @@ article.homepage {
   }
 }
 
+// comments
+
+#comments {
+  ol.commentlist {
+    li{
+      padding: 0.5em 0em 0em 64px;
+      header {
+        .avatar {
+          height: auto;
+          width: auto;
+          margin-left: -56px;
+          margin-top: 0px;
+        }
+      }
+      ul.children li {
+        padding: 1em 0em 0em 48px;
+        margin-left: -8px;
+        .avatar {
+          position: absolute;
+          margin-left: -38px;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+
 //product list page
 .product-section-header {
   h2 {// font base size is 46px

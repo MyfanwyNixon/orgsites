@@ -215,10 +215,10 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   float: left;
 }
 
-#sidebar {
+.sidebar {
   width: 20em;
   padding-left: 5em;
-  float: left;
+  float: right;
 }
 
 .big-sidebar {
@@ -226,20 +226,20 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 /* SIDEBAR*/
-#sidebar {
+.sidebar {
   margin-top: 7em;
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 
 /* GENERAL ELEMENTS */
-.block-list, article.homepage .project_product-section .project_product-section-inner ul.block-list {
+.block-list, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list {
   margin: 0;
 }
-.block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li {
+.block-list li, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li {
   margin-right: 3em;
   height: 18.75em;
 }
-.block-list li.last, article.homepage .project_product-section .project_product-section-inner ul.block-list li.last {
+.block-list li.last, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li.last {
   margin-right: 0;
 }
 
@@ -285,14 +285,17 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   border-bottom: none;
 }
 
-.twitter_box {
+.twitter_box,
+.sidebar.twitter_box {
   border-bottom: none;
   padding-left: 3em;
 }
-.twitter_box > h2 {
+.twitter_box > h2,
+.sidebar.twitter_box > h2 {
   margin-left: -1.174em;
 }
-.twitter_box > a {
+.twitter_box > a,
+.sidebar.twitter_box > a {
   float: left;
   clear: left;
 }
@@ -327,43 +330,101 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 article.homepage #news-and-twitter {
   overflow: hidden;
 }
-article.homepage #news-and-twitter .news_box {
-  width: 40em;
-  float: left;
+article.homepage #news-and-twitter .sidebar {
+  margin-top: 0;
 }
-article.homepage #news-and-twitter .twitter_box {
-  width: 20em;
-  float: left;
+article.homepage #homepage-tab-nav {
+  border-bottom: 0.1875em solid #CFCFCF;
 }
-article.homepage .project_product-section {
+article.homepage #homepage-tab-nav #tab-nav {
+  overflow: visible;
+  margin-left: 3em;
+  height: 48px;
+}
+article.homepage #homepage-tab-nav #tab-nav li {
+  margin-right: 0.5em;
+}
+article.homepage #homepage-tab-nav #tab-nav li a {
+  height: 51px;
+  font-size: 22px;
+  background: #CFCFCF;
+  padding: 11px;
+  color: #ffffff;
+  border: 3px solid #CFCFCF;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+article.homepage #homepage-tab-nav #tab-nav li a:hover {
+  text-decoration: none;
+  color: #333333;
+}
+article.homepage #homepage-tab-nav #tab-nav li a.active {
+  background: transparent;
+  color: #888888;
+  border-bottom: 3px solid #ffffff;
+}
+article.homepage #homepage-tabs {
+  border-bottom: 0.1875em solid #CFCFCF;
+}
+article.homepage #homepage-tabs .project_product-section {
+  position: relative;
   padding: 0;
   background: none !important;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-article.homepage .project_product-section > h2 {
+article.homepage #homepage-tabs .project_product-section > h2 {
   color: #AAAAAA;
   margin: 0;
   padding: 0;
   background: none !important;
 }
-article.homepage .project_product-section .project_product-section-inner {
+article.homepage #homepage-tabs .project_product-section .project_product-section-inner {
   padding: 0;
   overflow: hidden;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-article.homepage .project_product-section .project_product-section-inner ul.block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li {
+article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li {
   width: 18em;
   border-bottom: none;
 }
-article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb, article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb {
+article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li .thumb, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li .thumb {
   display: block;
 }
-article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 a, article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 a {
+article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li h3 a, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li h3 a {
   padding: 0;
+}
+article.homepage #homepage-tabs .project_product-section nav {
+  position: absolute;
+  top: -54px;
+  right: 0;
+  width: 84px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+}
+article.homepage #homepage-tabs .project_product-section nav .slider_next {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+article.homepage #homepage-tabs .project_product-section nav .slider_prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+article.homepage #homepage-tabs .project_product-section nav span em {
+  margin: 0 2px;
+}
+
+.js article.homepage #homepage-tabs .project_product-section > h2 {
+  display: none;
 }
 
 #comments ol.commentlist li {
@@ -526,16 +587,14 @@ article.ms_product .project_product-section .project_product-section-inner {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-article.ms_project .project_product-section .project_product-section-inner > div,
-article.ms_product .project_product-section .project_product-section-inner > div {
-  float: left;
-  max-width: 35em;
+article.ms_project .project_product-section .project_product-section-inner .content-with-sidebar,
+article.ms_product .project_product-section .project_product-section-inner .content-with-sidebar {
+  width: 35em;
 }
-article.ms_project .project_product-section .project_product-section-inner .resource-list,
-article.ms_product .project_product-section .project_product-section-inner .resource-list {
-  width: 20em;
-  padding-left: 0.75em;
-  float: right;
+article.ms_project .project_product-section .project_product-section-inner .sidebar,
+article.ms_product .project_product-section .project_product-section-inner .sidebar {
+  margin-top: 0;
+  padding-left: 0;
 }
 
 article.page .entry-header {
@@ -568,18 +627,118 @@ article.page .entry-header .featured-gallery {
   visibility: hidden !important;
 }
 
-/* MEDIA QUERIES */
-@media only screen and (min-width: 48em) and (max-width: 61em) {
+/*********************/
+/*** MEDIA QUERIES ***/
+/*********************/
+/* middle sized screens (for example portrait but not landscape iPad) */
+@media only screen and (max-width: 61em) {
   .container {
     width: 100%;
     padding: 0 1em;
   }
 
-  /* GENERAL ELEMENTS */
-  .block-list, article.homepage .project_product-section .project_product-section-inner ul.block-list {
-    margin: 0 -1em 0 0;
+  /* HEADER */
+  #site-header {
+    height: 6em;
   }
-  .block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li, .block-list li.last, article.homepage .project_product-section .project_product-section-inner ul.block-list li.last {
-    margin-right: 1em;
+  #site-header .container {
+    padding: 1em;
+  }
+
+  /* MENU */
+  #nav-wrapper {
+    height: 6em;
+  }
+  #nav-wrapper .container ul#secondary-menu {
+    position: absolute;
+    right: 1em;
+    top: 3.75em;
+  }
+  #nav-wrapper .container ul#secondary-menu li a {
+    margin: 0 0 0 1.5em;
+  }
+  #nav-wrapper .container ul#primary-menu {
+    right: 7em;
+  }
+  #nav-wrapper .container #site-search {
+    right: 1em;
+  }
+
+  /* MAIN CONTENT */
+  .content-with-sidebar {
+    width: 66%;
+    float: left;
+  }
+
+  .sidebar {
+    width: 33%;
+  }
+
+  article.ms_project .project_product-section .project_product-section-inner .content-with-sidebar,
+  article.ms_product .project_product-section .project_product-section-inner .content-with-sidebar {
+    width: 66%;
+    float: left;
+  }
+  article.ms_project .project_product-section .project_product-section-inner .sidebar,
+  article.ms_product .project_product-section .project_product-section-inner .sidebar {
+    width: 33%;
+  }
+
+  /* GENERAL ELEMENTS */
+  .block-list li, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li {
+    max-width: 32%;
+    margin-right: 2%;
+  }
+  .block-list li.last, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li.last {
+    margin-right: 0;
+  }
+
+  /* PAGE SPECIFIC */
+  article.ms_project .entry-header,
+  article.ms_product .entry-header,
+  article.page .entry-header {
+    padding: 0 0 3em 3em;
+  }
+  article.ms_project .entry-header .entry-title,
+  article.ms_project .entry-header .entry-intro,
+  article.ms_product .entry-header .entry-title,
+  article.ms_product .entry-header .entry-intro,
+  article.page .entry-header .entry-title,
+  article.page .entry-header .entry-intro {
+    max-width: 100%;
+    padding: 0;
+    float: none;
+  }
+  article.ms_project .entry-header .featured-gallery,
+  article.ms_product .entry-header .featured-gallery,
+  article.page .entry-header .featured-gallery {
+    float: none;
+    margin: 3em auto 0 auto;
+  }
+
+  article.page .entry-header {
+    padding: 0;
+  }
+}
+/* small screens (for example small tablets or portrait iPad) */
+@media only screen and (max-width: 50em) {
+  /* MAIN CONTENT */
+  .content-with-sidebar,
+  .sidebar {
+    width: 100%;
+    float: none;
+  }
+
+  .homepage .content-with-sidebar,
+  article.ms_project .project_product-section .project_product-section-inner .content-with-sidebar,
+  article.ms_product .project_product-section .project_product-section-inner .content-with-sidebar {
+    width: 66%;
+    float: left;
+  }
+  .homepage .sidebar,
+  article.ms_project .project_product-section .project_product-section-inner .sidebar,
+  article.ms_product .project_product-section .project_product-section-inner .sidebar {
+    width: 33%;
+    float: left;
   }
 }

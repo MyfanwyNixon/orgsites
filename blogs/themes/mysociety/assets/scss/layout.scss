@@ -215,15 +215,14 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   }
 }
 
-// This should probably be using percentages...
 .content-with-sidebar {
   width:40em;
   float:left;
 }
-#sidebar {
+.sidebar {
   width:20em;
   padding-left: 5em;
-  float:left;
+  float:right;
 }
 .big-sidebar {
   padding-left: 0 !important;
@@ -232,9 +231,9 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 
 /* SIDEBAR*/
 
-#sidebar {
+.sidebar {
   margin-top:7em;
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 
 /* GENERAL ELEMENTS */
@@ -297,7 +296,8 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   }
 }
 
-.twitter_box {
+.twitter_box,
+.sidebar.twitter_box {
   border-bottom:none;
   padding-left:3em; //48px
   >h2 {// font base size is 46px
@@ -332,44 +332,100 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 article.homepage {
   #news-and-twitter {
     overflow:hidden;
-    .news_box {
-      width:40em;
-      float:left;
-    }
-    .twitter_box {
-      width:20em;
-      float:left;
+    .sidebar {
+      margin-top:0;
     }
   }
-  .project_product-section {
-    padding:0;
-    background:none !important;
-    @include box-shadow(none);
-    >h2 {// font base size is 46px
-      color:#AAAAAA;
-      margin:0;
-      padding:0;
-      background:none !important; //no icon needed
-    }
-    .project_product-section-inner {
-      padding:0;
-      overflow:hidden;
-      @include box-shadow(none);
-      ul.block-list {
-        @extend .block-list;
-        li {
-          width:18em; //288px - this is so the combined end size is 20em (320px)  
-          border-bottom:none;
-          .thumb {
-            display:block;
+  #homepage-tab-nav {
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    //we do the tab_nav with pixels cos we need
+    //it to all line up and the rounding errors
+    //make it not line up proper
+    #tab-nav {
+      overflow:visible;
+      margin-left:3em;
+      height:48px;
+      li {
+        margin-right:0.5em;
+        a {
+          height:51px;
+          font-size:22px;
+          background:#CFCFCF;
+          padding:11px;
+          color:#ffffff;
+          border:3px solid #CFCFCF;
+          @include border-radius(3px 3px 0 0);
+          &:hover {
+            text-decoration:none;
+            color:#333333;
           }
-          h3 a {
-            padding:0;
+          &.active {
+            background:transparent;
+            color:#888888;
+            border-bottom:3px solid #ffffff;
           }
         }
       }
     }
   }
+  #homepage-tabs {
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    .project_product-section {
+      position:relative;
+      padding:0;
+      background:none !important;
+      @include box-shadow(none);
+      >h2 {// font base size is 46px
+        color:#AAAAAA;
+        margin:0;
+        padding:0;
+        background:none !important; //no icon needed
+      }
+      .project_product-section-inner {
+        padding:0;
+        overflow:hidden;
+        @include box-shadow(none);
+        ul.block-list {
+          @extend .block-list;
+          li {
+            width:18em; //288px - this is so the combined end size is 20em (320px)  
+            border-bottom:none;
+            .thumb {
+              display:block;
+            }
+            h3 a {
+              padding:0;
+            }
+          }
+        }
+      }
+      nav {
+        position:absolute;
+        top:-54px;
+        right:0;
+        width:84px;
+        height:28px;
+        text-align:center;
+        line-height:28px;
+        .slider_next {
+          position:absolute;
+          right:0;
+          top:0;
+        }
+        .slider_prev {
+          position:absolute;
+          left:0;
+          top:0;
+        }
+        span em {
+          margin:0 2px;
+        }
+      }
+    }
+  }
+}
+.js article.homepage #homepage-tabs .project_product-section > h2 {
+  display:none;
 }
 
 // comments
@@ -428,12 +484,6 @@ article.homepage {
   div {
     width:18em; //288px
     margin-right:1.4375em; //23px
-  //   h3 {
-  //   }
-  //   p {
-  //     &.meta {
-  //     }
-  //   }
     &.last {
       margin-right:0;
     }
@@ -497,14 +547,12 @@ article.ms_product {
       padding:0;
       overflow:hidden;
       @include box-shadow(none);
-      >div {
-        float:left;
-        max-width:35em;
+      .content-with-sidebar {
+        width:35em;
       }
-      .resource-list {
-        width:20em;
-        padding-left:0.75em;
-        float:right;
+      .sidebar {
+        margin-top:0;
+        padding-left:0;
       }
     }
   }
@@ -550,19 +598,128 @@ article.page {
 
 
 
-/* MEDIA QUERIES */
-@media only screen and (min-width: 48em) and (max-width: 61em) {
+
+
+/*********************/
+/*** MEDIA QUERIES ***/
+/*********************/
+
+/* middle sized screens (for example portrait but not landscape iPad) */
+@media only screen and (max-width: 61em) { //976px
   .container {
     width: 100%;
     padding:0 1em;
   }
 
+  /* HEADER */
+  #site-header {
+    height:6em;
+    .container {
+      padding:1em;
+    }
+  }
+
+  /* MENU */
+  #nav-wrapper{
+    height:6em;
+    .container {
+      ul#secondary-menu {
+        position:absolute;
+        right:1em;
+        top:3.75em;
+        li a {
+          margin:0 0 0 1.5em;
+        }
+      }
+      ul#primary-menu {
+        right:7em;
+      }
+      #site-search {
+        right:1em;
+      }
+    }
+  }
+
+  /* MAIN CONTENT */
+  .content-with-sidebar {
+    width:66%;
+    float:left;
+  }
+  .sidebar {
+    width:33%;
+  }
+  //reiterate for sepcific cases
+  article.ms_project,
+  article.ms_product {
+    .project_product-section .project_product-section-inner {
+      .content-with-sidebar {
+        width:66%;
+        float:left;
+      }
+      .sidebar {
+        width:33%;
+      }
+    }
+  }
+
+
   /* GENERAL ELEMENTS */
   .block-list {
-    // go back to previous method and sizing
-    margin:0 -1em 0 0;
-    li, li.last {
-      margin-right:1em;
+    // margin:0 -1em 0 0;
+    li {
+      max-width:32%;
+      margin-right:2%;
+      &.last {
+        margin-right:0;
+      }
     }
-  }  
+  }
+
+  /* PAGE SPECIFIC */
+  article.ms_project,
+  article.ms_product,
+  article.page {
+    .entry-header {
+      padding:0 0 3em 3em; //48px
+      .entry-title,
+      .entry-intro {
+        max-width:100%;
+        padding:0;
+        float:none;
+      }
+      .featured-gallery {
+        float:none;
+        margin:3em auto 0 auto;
+      }
+    }
+  }
+  article.page .entry-header {
+    padding:0;
+  }
+}
+
+
+
+
+/* small screens (for example small tablets or portrait iPad) */
+@media only screen and (max-width: 50em) { //800px
+  /* MAIN CONTENT */
+  .content-with-sidebar,
+  .sidebar {
+    width:100%;
+    float:none;
+  }
+  //don't make .sidebar and .content fullwidth on homepage or products
+  .homepage,
+  article.ms_project .project_product-section .project_product-section-inner,
+  article.ms_product .project_product-section .project_product-section-inner {
+    .content-with-sidebar {
+      width:66%;
+      float:left;
+    }
+    .sidebar {
+      width:33%;
+      float:left;
+    }
+  }
 }

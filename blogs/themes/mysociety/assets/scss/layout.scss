@@ -341,6 +341,34 @@ article.homepage {
       float:left;
     }
   }
+  .project_product-section {
+    padding:0;
+    background:none !important;
+    @include box-shadow(none);
+    >h2 {// font base size is 46px
+      color:#AAAAAA;
+      margin:0;
+      padding:0;
+      background:none !important; //no icon needed
+    }
+    .project_product-section-inner {
+      padding:0;
+      overflow:hidden;
+      @include box-shadow(none);
+      ul.block-list {
+        @extend .block-list;
+        li {
+          width:18em; //288px - this is so the combined end size is 20em (320px)  
+          .thumb {
+            display:block;
+          }
+          h3 a {
+            padding:0;
+          }
+        }
+      }
+    }
+  }
 }
 
 //product list page

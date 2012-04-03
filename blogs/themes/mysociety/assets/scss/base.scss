@@ -1043,7 +1043,7 @@ article.homepage {
   overflow:hidden;
   position:relative;
 }
-.swipe-active > li {
+.swipe-active > * {
   display:block;
   visibility:hidden;
   position:absolute;

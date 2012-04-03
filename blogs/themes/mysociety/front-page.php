@@ -48,7 +48,7 @@
       <section id="not-for-profit-projects" class="project_product-section grey_back">
         <h2 class="pound"><? _e( 'Not-for-profit Projects', 'mysociety' ) ?></h2>
         
-        <div id="not-for-profit-projects-tabs" class="project_product-section-inner">
+        <div id="not_for_profit_projects_tabs" class="project_product-section-inner">
           <? $not_for_profit_posts = new WP_Query('post_type=ms_project&posts_per_page=6'); ?>
           <? $i = 0; while ($not_for_profit_posts->have_posts()) : $not_for_profit_posts->the_post(); $i++; ?>
             <? if ($i == 1 || $i == 4): ?>
@@ -84,7 +84,7 @@
       <section id="commercial-products" class="project_product-section blue_back">
         <h2 class="pound"><? _e( 'Commercial Products', 'mysociety' ) ?></h2>
         
-        <div id="commercial-products-tabs" class="project_product-section-inner">
+        <div id="commercial_products_tabs" class="project_product-section-inner">
           <? $commercial_products = new WP_Query('post_type=ms_product&posts_per_page=6'); ?>
           <? $i = 0; while ($commercial_products->have_posts()) : $commercial_products->the_post(); $i++; ?>
             <? if ($i == 1 || $i == 4): ?>

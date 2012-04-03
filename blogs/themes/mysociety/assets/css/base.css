@@ -1636,7 +1636,7 @@ article.homepage .project_product-section .project_product-section-inner ul.bloc
   position: relative;
 }
 
-.swipe-active > li {
+.swipe-active > * {
   display: block;
   visibility: hidden;
   position: absolute;

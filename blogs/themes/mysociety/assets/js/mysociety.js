@@ -21,7 +21,7 @@ function loader(type){
 // slider - has nice swipey business on mobile
 function slider(elem){
   //iterate over all the sliders on the page
-  $(elem).each(function(i){
+  $(elem).each(function(index){
     //cache slider id
     var slider_id = $(this).attr('id');
 
@@ -51,7 +51,7 @@ function slider(elem){
     // var bullets_elems = $slider_nav.find('em');
 
     //make all the sliders
-    window.slider_id = new Swipe($(this)[0], {
+    window.slider_id = new Swipe($(this)[index], {
       continuous: true,
       //move the bullets
       callback: function(pos, e) {
@@ -125,8 +125,6 @@ $(function(){
   //the images haven't fully loaded we still have the right size
   $('.featured-gallery > ul').height(219);
 
-  //homepage tab inners
-  slider('article.homepage .project_product-section > .project_product-section-inner');
 
   /*
    * Examples hide show - bit of a fudge but it works

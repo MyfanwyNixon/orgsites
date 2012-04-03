@@ -341,34 +341,96 @@ article.homepage {
       float:left;
     }
   }
-  .project_product-section {
-    padding:0;
-    background:none !important;
-    @include box-shadow(none);
-    >h2 {// font base size is 46px
-      color:#AAAAAA;
-      margin:0;
-      padding:0;
-      background:none !important; //no icon needed
-    }
-    .project_product-section-inner {
-      padding:0;
-      overflow:hidden;
-      @include box-shadow(none);
-      ul.block-list {
-        @extend .block-list;
-        li {
-          width:18em; //288px - this is so the combined end size is 20em (320px)  
-          .thumb {
-            display:block;
+  #homepage-tab-nav {
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    //we do the tab_nav with pixels cos we need
+    //it to all line up and the rounding errors
+    //make it not line up proper
+    #tab-nav {
+      overflow:visible;
+      margin-left:3em;
+      height:48px;
+      li {
+        margin-right:0.5em;
+        a {
+          height:51px;
+          font-size:22px;
+          background:#CFCFCF;
+          padding:11px;
+          color:#ffffff;
+          border:3px solid #CFCFCF;
+          @include border-radius(3px 3px 0 0);
+          &:hover {
+            text-decoration:none;
+            color:#333333;
           }
-          h3 a {
-            padding:0;
+          &.active {
+            background:transparent;
+            color:#888888;
+            border-bottom:3px solid #ffffff;
           }
         }
       }
     }
   }
+  #homepage-tabs {
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    .project_product-section {
+      position:relative;
+      padding:0;
+      background:none !important;
+      @include box-shadow(none);
+      >h2 {// font base size is 46px
+        color:#AAAAAA;
+        margin:0;
+        padding:0;
+        background:none !important; //no icon needed
+      }
+      .project_product-section-inner {
+        padding:0;
+        overflow:hidden;
+        @include box-shadow(none);
+        ul.block-list {
+          @extend .block-list;
+          li {
+            width:18em; //288px - this is so the combined end size is 20em (320px)  
+            border-bottom:none;
+            .thumb {
+              display:block;
+            }
+            h3 a {
+              padding:0;
+            }
+          }
+        }
+      }
+      nav {
+        position:absolute;
+        top:-54px;
+        right:0;
+        width:84px;
+        height:28px;
+        text-align:center;
+        line-height:28px;
+        .slider_next {
+          position:absolute;
+          right:0;
+          top:0;
+        }
+        .slider_prev {
+          position:absolute;
+          left:0;
+          top:0;
+        }
+        span em {
+          margin:0 2px;
+        }
+      }
+    }
+  }
+}
+.js article.homepage #homepage-tabs .project_product-section > h2 {
+  display:none;
 }
 
 //product list page

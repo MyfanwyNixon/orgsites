@@ -1,4 +1,8 @@
 <div id="comments">
+
+  <div class="error">This is a very important notice
+  </div>
+
   <? if ( post_password_required() ) : ?>
     <p class="nopassword"><? _e( 'This post is password protected. Enter the password to view any comments.', 'mysociety' ); ?></p>
   </div><? //#comments ?>

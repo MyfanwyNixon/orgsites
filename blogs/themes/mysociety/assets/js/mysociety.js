@@ -12,6 +12,9 @@ function loader(type){
     ]);
   } else if (type === 'desktop') {
     //do desktop stuff
+
+    //homepage tab inners
+    slider('article.homepage .project_product-section .project_product-section-inner');
   }else {
     return;
   }
@@ -19,6 +22,7 @@ function loader(type){
 
 
 // slider - has nice swipey business on mobile
+// BUG: can't do more than one on a page :/ XXXXXXXXXXXXXXXXX
 function slider(elem){
   //iterate over all the sliders on the page
   $(elem).each(function(index){
@@ -43,11 +47,6 @@ function slider(elem){
     //show the rest of the children
     $(this).children().show();
 
-    
-    //bind clicks
-    $('#slider_next_'+slider_id).on('click', function(){window.slider_id.next();});
-    $('#slider_prev_'+slider_id).on('click', function(){window.slider_id.prev();});
-
     // var bullets_elems = $slider_nav.find('em');
 
     //make all the sliders
@@ -63,7 +62,12 @@ function slider(elem){
         // bullets_elems[pos].addClass('on');
       }
     });
+
+    //bind clicks
+    $('#slider_next_'+slider_id).on('click', function(){window.slider_id.next();});
+    $('#slider_prev_'+slider_id).on('click', function(){window.slider_id.prev();});
   });
+  //rinse and repeat
 }
 
 //generic re-usable hide or show with class states
@@ -90,6 +94,7 @@ function hideShow(elem, trig, height) {
     }
   });
 }
+
 
 $(function(){
   var $html = $('html');
@@ -124,10 +129,6 @@ $(function(){
   //this is so when swipe.js modifies the height, even if
   //the images haven't fully loaded we still have the right size
   $('.featured-gallery > ul').height(219);
-
-  //homepage tab inners
-  //can't do more than one on a page :/
-  slider('article.homepage .project_product-section > .project_product-section-inner');
 
   /*
    * Examples hide show - bit of a fudge but it works
@@ -170,5 +171,31 @@ $(function(){
   $('#skip-to-top').on('click', function(e){
     e.preventDefault();
     $('html, body').animate({scrollTop:0}, 1000);
+  });
+
+
+  /*
+   * Basic Tabs
+   * no hash (and therefore bookmarking) or history
+   */
+  var $tabs = $('.tabs').children();
+  //hide all but first tab
+  $tabs.not(':first-child').hide();
+  //set the first tabnav a to be active
+  $('#tab-nav li:first-child a').addClass('active');
+
+  //set up clicks
+  $('#tab-nav').on('click', 'a', function(e){
+    e.preventDefault();
+    var href = $(this).attr('href'),
+      //trim
+      start = href.indexOf('#'),
+      targetid = href.slice(start, href.length);
+    //hide/show tabs
+    $tabs.not($(targetid)).hide();
+    $(targetid).show();
+    //modify the tabnav
+    $('#tab-nav a').removeClass('active');
+    $(this).addClass('active');
   });
 });

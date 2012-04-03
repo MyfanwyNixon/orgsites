@@ -738,6 +738,24 @@ a.examples-link.inactive {
   border-radius: 0;
 }
 
+.alert {
+  padding: 0.75em 0.75em 0.75em 3em;
+  background: #ffdd4f url(../images/notice-alert.png) 10px center no-repeat;
+}
+
+.error {
+  padding: 0.75em 0.75em 0.75em 3em;
+  background: #ff5300 url(../images/notice-error.png) 10px center no-repeat;
+  color: #fff;
+}
+
+.confirm {
+  padding: 0.75em 0.75em 0.75em 3em;
+  margin: 0.25em 0;
+  background: #43c250 url(../images/notice-confirm.png) 0.9em center no-repeat;
+  color: #fff;
+}
+
 .slider_prev,
 .slider_next {
   display: block;
@@ -1408,9 +1426,6 @@ article.homepage .project_product-section .project_product-section-inner ul.bloc
   margin: 0;
   border-bottom: 0.125em solid #cccccc;
 }
-article.homepage .project_product-section .project_product-section-inner ul.block-list li:last-child {
-  border-bottom: none;
-}
 article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb {
   display: none;
 }
@@ -1420,6 +1435,115 @@ article.homepage .project_product-section .project_product-section-inner ul.bloc
 article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 a {
   width: 100%;
   padding: 1em 0;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list:last-child li:last-child {
+  border-bottom: none;
+}
+article.homepage #our-clients {
+  text-align: center;
+}
+article.homepage #our-clients h2 {
+  text-align: left;
+}
+
+#comments ol.commentlist {
+  padding: 0;
+  margin: 0;
+}
+#comments ol.commentlist p {
+  background: none;
+  font-size: 0.8125em;
+  padding-right: 0.5em;
+}
+#comments ol.commentlist ul.children {
+  margin: 0;
+}
+#comments ol.commentlist li {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 0.5em 0px #cccccc;
+  -moz-box-shadow: 0px 0px 0.5em 0px #cccccc;
+  box-shadow: 0px 0px 0.5em 0px #cccccc;
+  padding: 0.5em 0em 0em 64px;
+  list-style: none;
+  margin: 0 0 0.5em 0;
+}
+#comments ol.commentlist li header {
+  border-bottom: 1px solid #ddd;
+  margin-right: 0.75em;
+}
+#comments ol.commentlist li header .avatar {
+  position: absolute;
+  margin-left: -56px;
+  margin-top: 0px;
+}
+#comments ol.commentlist li header .comment-awaiting-moderation {
+  background: #FFDD4F;
+  padding: 0.25em 0.5em;
+  position: absolute;
+  margin-left: -78px;
+  margin-top: 2em;
+  font-size: 0.7em;
+  font-family: 'arial', sans-serif;
+  text-transform: uppercase;
+  line-height: 1.428em;
+}
+#comments ol.commentlist li ul.children li {
+  padding: 1em 0em 0em 48px;
+  margin-left: -8px;
+}
+#comments ol.commentlist li ul.children li .avatar {
+  position: absolute;
+  margin-left: -38px;
+  margin-top: 0px;
+}
+#comments ol.commentlist li ul.children li .comment-awaiting-moderation {
+  margin-left: -76px;
+  margin-top: 0.5em;
+}
+#comments ol.commentlist div.reply {
+  height: 2em;
+}
+#comments ol.commentlist div.reply a.comment-reply-link {
+  width: auto;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background-color: #aaaaaa;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  line-height: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0px 0px;
+  -moz-box-shadow: 0px 0px;
+  box-shadow: 0px 0px;
+  font-size: 0.7em;
+  float: right;
+  text-transform: uppercase;
+  font-family: 'arial', sans-serif;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  margin-right: 1em;
+}
+#comments ol.commentlist div.reply a.comment-reply-link {
+  *display: inline;
+}
+#comments ol.commentlist div.reply a.comment-reply-link:hover, #comments ol.commentlist div.reply a.comment-reply-link:focus, #comments ol.commentlist div.reply a.comment-reply-link:active {
+  text-decoration: none;
+  color: white;
+  background-color: black;
 }
 
 .product-section-header {

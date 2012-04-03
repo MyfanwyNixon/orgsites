@@ -160,7 +160,6 @@
       ?>
       <li class="post pingback">
         <p><? _e( 'Pingback:', 'mysociety' ); ?> <? comment_author_link(); ?><? edit_comment_link( __( 'Edit', 'mysociety' ), '<span class="edit-link">', '</span>' ); ?></p>
-      </li>
       <?
           break;
         default :
@@ -170,14 +169,14 @@
           <header class="comment-meta">
             <div class="comment-author vcard">
               <?
-                $avatar_size = 68;
+                $avatar_size = 48;
                 if ( '0' != $comment->comment_parent )
-                  $avatar_size = 39;
+                  $avatar_size = 32;
 
                 echo get_avatar( $comment, $avatar_size );
 
                 /* translators: 1: comment author, 2: date and time */
-                printf( __( '%1$s on %2$s <span class="says">said:</span>', 'mysociety' ),
+                printf( __( '%1$s %2$s', 'mysociety' ),
                   sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
                   sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
                     esc_url( get_comment_link( $comment->comment_ID ) ),
@@ -192,18 +191,17 @@
             </div><!-- .comment-author .vcard -->
 
             <? if ( $comment->comment_approved == '0' ) : ?>
-              <em class="comment-awaiting-moderation"><? _e( 'Your comment is awaiting moderation.', 'mysociety' ); ?></em>
-              <br />
+              <div class="comment-awaiting-moderation"><? _e( 'Awaiting<br>approval', 'mysociety' ); ?></div>
+  
             <? endif; ?>
           </header>
 
           <div class="comment-content"><?php comment_text(); ?></div>
 
           <div class="reply">
-            <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'mysociety' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+            <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'mysociety' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
           </div><!-- .reply -->
         </article><!-- #comment-## -->
-      </li>
       <?
           break;
       endswitch;

@@ -57,13 +57,14 @@
     <p class="nocomments"><? _e( 'Sorry, comments are closed.', 'mysociety' ); ?></p>
   <? endif; ?>
 
-  
+
   <?
     $args = array(
       'title_reply' => __( 'Leave a comment', 'mysociety' ),
       'title_reply_to' => __( 'Leave a reply to %s', 'mysociety' ),
       'cancel_reply_link' => __( 'cancel reply', 'mysociety' ),
-      'label_submit' => __( 'Post Comment', 'mysociety' ),
+      'label_submit' => __( 'Post Comment', 'mysociety' ) ,
+      'id_submit' => 'comment_submit',
       'comment_notes_after' => '',
       'comment_field' => '<label for="comment">' . _x( 'Comment ', 'noun' ) . '<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="' . __( 'Please be nice :)', 'mysociety' ) . '"></textarea>',
       'fields' => array(

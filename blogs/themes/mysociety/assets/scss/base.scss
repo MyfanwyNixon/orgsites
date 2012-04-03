@@ -977,6 +977,21 @@ article.homepage {
   }
 }
 
+#commentform {
+  background: #f6f6f6;
+  border: 0.16em solid #ddd;
+  padding: 1em 1em 0 1em;
+  overflow: hidden;
+  p {
+    background: none;
+  }
+  #comment_submit {
+    @include button-reset ($green);
+    margin: 1em 0;
+    float: right;
+  }
+}
+
 
 //just for /products (products.php)
 .product-section-header {

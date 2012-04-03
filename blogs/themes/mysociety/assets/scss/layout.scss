@@ -215,7 +215,6 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   }
 }
 
-// This should probably be using percentages...
 .content-with-sidebar {
   width:40em;
   float:left;
@@ -223,7 +222,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 #sidebar {
   width:20em;
   padding-left: 5em;
-  float:left;
+  float:right;
 }
 .big-sidebar {
   padding-left: 0 !important;
@@ -297,7 +296,8 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   }
 }
 
-.twitter_box {
+.twitter_box,
+#sidebar.twitter_box {
   border-bottom:none;
   padding-left:3em; //48px
   >h2 {// font base size is 46px
@@ -332,13 +332,8 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 article.homepage {
   #news-and-twitter {
     overflow:hidden;
-    .news_box {
-      width:40em;
-      float:left;
-    }
-    .twitter_box {
-      width:20em;
-      float:left;
+    #sidebar {
+      margin-top:0;
     }
   }
   #homepage-tab-nav {
@@ -583,12 +578,28 @@ article.page {
 
 
 
-/* MEDIA QUERIES */
-@media only screen and (min-width: 48em) and (max-width: 61em) {
+
+
+/*********************/
+/*** MEDIA QUERIES ***/
+/*********************/
+
+/* middle sized screens (NOT landscape iPad) */
+@media only screen and (max-width: 61em) { //976px
   .container {
     width: 100%;
     padding:0 1em;
   }
+
+  /* MAIN CONTENT */
+  .content-with-sidebar {
+    width:66%;
+    float:left;
+  }
+  #sidebar {
+    width:33%;
+  }
+
 
   /* GENERAL ELEMENTS */
   .block-list {
@@ -598,4 +609,19 @@ article.page {
       margin-right:1em;
     }
   }  
+}
+
+
+
+
+/* small screens (for example small tablets or portrait iPad) */
+@media only screen and (max-width: 48em) { //768px
+  // body {
+  //   /* MAIN CONTENT */
+  //   .content-with-sidebar,
+  //   #sidebar {
+  //     width:100%;
+  //     float:none;
+  //   }
+  // }
 }

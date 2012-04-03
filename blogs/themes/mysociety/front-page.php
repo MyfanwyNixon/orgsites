@@ -12,7 +12,7 @@
 
       <div class="entry-content">
         <div id="news-and-twitter">
-          <section class="news_box">
+          <section class="news_box content-with-sidebar">
             <h2 class="bubble orange_icon">News</h2>
             <ul class="news-list">
               <?
@@ -29,7 +29,7 @@
             </ul>
           </section>
 
-          <section class="twitter_box">
+          <aside id="sidebar" class="twitter_box">
             <h2 class="twitter green_icon"><? _e( 'Twitter', 'mysociety' ) ?></h2>
             <a class="green_button" href="http://twitter.com/mySociety">@mySociety</a>
             <ul class="tweets">
@@ -42,7 +42,7 @@
                 <small>FixMyStreet is available for council websites: <a href="http://ow.ly/9CvUF">http://ow.ly/9CvUF</a> - slashes costs and makes reporting easy for users.</small>
               </li>
             </ul>
-          </section>
+          </aside>
         </div>
 
         <nav id="homepage-tab-nav" class="desk-only">

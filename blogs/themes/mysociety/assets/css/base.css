@@ -1408,9 +1408,6 @@ article.homepage .project_product-section .project_product-section-inner ul.bloc
   margin: 0;
   border-bottom: 0.125em solid #cccccc;
 }
-article.homepage .project_product-section .project_product-section-inner ul.block-list li:last-child {
-  border-bottom: none;
-}
 article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb {
   display: none;
 }
@@ -1420,6 +1417,9 @@ article.homepage .project_product-section .project_product-section-inner ul.bloc
 article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 a {
   width: 100%;
   padding: 1em 0;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list:last-child li:last-child {
+  border-bottom: none;
 }
 
 .product-section-header {

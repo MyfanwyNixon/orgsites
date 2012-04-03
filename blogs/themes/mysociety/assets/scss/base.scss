@@ -861,9 +861,6 @@ article.homepage {
           padding:0;
           margin:0;
           border-bottom:0.125em solid #cccccc; //2px
-          &:last-child {
-            border-bottom:none;
-          }
           .thumb {
             display:none;
           }
@@ -874,6 +871,9 @@ article.homepage {
               padding:1em 0;
             }
           }
+        }
+        &:last-child li:last-child {
+          border-bottom:none;
         }
       }
     }

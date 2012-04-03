@@ -359,6 +359,7 @@ article.homepage {
         @extend .block-list;
         li {
           width:18em; //288px - this is so the combined end size is 20em (320px)  
+          border-bottom:none;
           .thumb {
             display:block;
           }

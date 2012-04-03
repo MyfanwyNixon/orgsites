@@ -12,6 +12,9 @@ function loader(type){
     ]);
   } else if (type === 'desktop') {
     //do desktop stuff
+
+    //homepage tab inners
+    slider('article.homepage .project_product-section .project_product-section-inner');
   }else {
     return;
   }
@@ -19,6 +22,7 @@ function loader(type){
 
 
 // slider - has nice swipey business on mobile
+// BUG: can't do more than one on a page :/ XXXXXXXXXXXXXXXXX
 function slider(elem){
   //iterate over all the sliders on the page
   $(elem).each(function(index){
@@ -91,6 +95,7 @@ function hideShow(elem, trig, height) {
   });
 }
 
+
 $(function(){
   var $html = $('html');
 
@@ -124,10 +129,6 @@ $(function(){
   //this is so when swipe.js modifies the height, even if
   //the images haven't fully loaded we still have the right size
   $('.featured-gallery > ul').height(219);
-
-  //homepage tab inners
-  //can't do more than one on a page :/
-  slider('article.homepage .project_product-section .project_product-section-inner');
 
   /*
    * Examples hide show - bit of a fudge but it works
@@ -170,5 +171,25 @@ $(function(){
   $('#skip-to-top').on('click', function(e){
     e.preventDefault();
     $('html, body').animate({scrollTop:0}, 1000);
+  });
+
+
+  /*
+   * Basic Tabs
+   * no hash (and therefore bookmarking) or history
+   */
+  var $tabs = $('.tabs').children();
+  //hide all but first tab
+  $tabs.not(':first-child').hide();
+
+  //set up clicks
+  $('#tab-nav').on('click', 'a', function(e){
+    e.preventDefault();
+    var href = $(this).attr('href'),
+      //trim
+      start = href.indexOf('#'),
+      targetid = href.slice(start, href.length);
+    $tabs.not($(targetid)).hide();
+    $(targetid).show();
   });
 });

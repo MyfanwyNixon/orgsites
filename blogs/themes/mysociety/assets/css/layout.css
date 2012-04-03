@@ -357,6 +357,7 @@ article.homepage .project_product-section .project_product-section-inner {
 }
 article.homepage .project_product-section .project_product-section-inner ul.block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li {
   width: 18em;
+  border-bottom: none;
 }
 article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb, article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb {
   display: block;

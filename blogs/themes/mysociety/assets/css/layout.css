@@ -232,14 +232,14 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 /* GENERAL ELEMENTS */
-.block-list {
+.block-list, article.homepage .project_product-section .project_product-section-inner ul.block-list {
   margin: 0;
 }
-.block-list li {
+.block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li {
   margin-right: 3em;
   height: 18.75em;
 }
-.block-list li.last {
+.block-list li.last, article.homepage .project_product-section .project_product-section-inner ul.block-list li.last {
   margin-right: 0;
 }
 
@@ -334,6 +334,35 @@ article.homepage #news-and-twitter .news_box {
 article.homepage #news-and-twitter .twitter_box {
   width: 20em;
   float: left;
+}
+article.homepage .project_product-section {
+  padding: 0;
+  background: none !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+article.homepage .project_product-section > h2 {
+  color: #AAAAAA;
+  margin: 0;
+  padding: 0;
+  background: none !important;
+}
+article.homepage .project_product-section .project_product-section-inner {
+  padding: 0;
+  overflow: hidden;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li {
+  width: 18em;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb, article.homepage .project_product-section .project_product-section-inner ul.block-list li .thumb {
+  display: block;
+}
+article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 a, article.homepage .project_product-section .project_product-section-inner ul.block-list li h3 a {
+  padding: 0;
 }
 
 .product-section-header h2 {
@@ -527,10 +556,10 @@ article.page .entry-header .featured-gallery {
   }
 
   /* GENERAL ELEMENTS */
-  .block-list {
+  .block-list, article.homepage .project_product-section .project_product-section-inner ul.block-list {
     margin: 0 -1em 0 0;
   }
-  .block-list li, .block-list li.last {
+  .block-list li, article.homepage .project_product-section .project_product-section-inner ul.block-list li, .block-list li.last, article.homepage .project_product-section .project_product-section-inner ul.block-list li.last {
     margin-right: 1em;
   }
 }

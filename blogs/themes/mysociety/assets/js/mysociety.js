@@ -19,14 +19,14 @@ function loader(type){
 
 
 // slider - has nice swipey business on mobile
-function slider(){
+function slider(elem){
   //iterate over all the sliders on the page
-  $('.featured-gallery > ul').each(function(i){
+  $(elem).each(function(i){
     //cache slider id
     var slider_id = $(this).attr('id');
 
     //make bullets and nav
-    var slider_size = $('li', $(this)).length,
+    var slider_size = $(this).children().length,
         bullets = '';
     if(slider_size > 1){
       //make bullets
@@ -40,15 +40,15 @@ function slider(){
       $slider_nav.fadeIn();
     }
 
-    //show the rest of the li's
-    $('li', $(this)).show();
+    //show the rest of the children
+    $(this).children().show();
 
     
     //bind clicks
     $('#slider_next_'+slider_id).on('click', function(){window.slider_id.next();});
     $('#slider_prev_'+slider_id).on('click', function(){window.slider_id.prev();});
 
-    var bullets_elems = $slider_nav.find('em');
+    // var bullets_elems = $slider_nav.find('em');
 
     //make all the sliders
     window.slider_id = new Swipe($(this)[0], {
@@ -116,14 +116,17 @@ $(function(){
   });
 
   /*
-   * set the slider going
+   * set the sliders going
    */
-  slider();
+  //featured gallery
+  slider('.featured-gallery > ul');
   //force the height of the ul back to what it should be.
   //this is so when swipe.js modifies the height, even if
   //the images haven't fully loaded we still have the right size
-  $('.featured-gallery ul').height(219);
+  $('.featured-gallery > ul').height(219);
 
+  //homepage tab inners
+  slider('article.homepage .project_product-section > .project_product-section-inner');
 
   /*
    * Examples hide show - bit of a fudge but it works

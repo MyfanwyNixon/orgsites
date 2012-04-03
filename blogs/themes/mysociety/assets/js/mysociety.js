@@ -125,9 +125,6 @@ $(function(){
   //the images haven't fully loaded we still have the right size
   $('.featured-gallery > ul').height(219);
 
-  //homepage tab inners
-  //can't do more than one on a page :/
-  slider('article.homepage .project_product-section > .project_product-section-inner');
 
   /*
    * Examples hide show - bit of a fudge but it works

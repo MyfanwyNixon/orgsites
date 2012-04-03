@@ -13,8 +13,8 @@
   ?>
 
   <? if ( have_comments() ) : ?>
-    <h2 id="comments-title"><? printf( _n( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'mysociety' ),
-          number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?></h2>
+    <h2 id="comments-title"><? printf( _n( 'One comment', '%1$s comments', get_comments_number(), 'mysociety' ),
+          number_format_i18n( get_comments_number() ) ); ?></h2>
 
     <?
       // are there comments to loop through?
@@ -57,6 +57,7 @@
     <p class="nocomments"><? _e( 'Sorry, comments are closed.', 'mysociety' ); ?></p>
   <? endif; ?>
 
+  
   <?
     $args = array(
       'title_reply' => __( 'Leave a comment', 'mysociety' ),

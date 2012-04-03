@@ -618,12 +618,37 @@ article.page {
 
   /* GENERAL ELEMENTS */
   .block-list {
-    // go back to previous method and sizing
-    margin:0 -1em 0 0;
-    li, li.last {
-      margin-right:1em;
+    // margin:0 -1em 0 0;
+    li {
+      max-width:32%;
+      margin-right:2%;
+      &.last {
+        margin-right:0;
+      }
     }
-  }  
+  }
+
+  /* PAGE SPECIFIC */
+  article.ms_project,
+  article.ms_product,
+  article.page {
+    .entry-header {
+      padding:0 0 3em 3em; //48px
+      .entry-title,
+      .entry-intro {
+        max-width:100%;
+        padding:0;
+        float:none;
+      }
+      .featured-gallery {
+        float:none;
+        margin:3em auto 0 auto;
+      }
+    }
+  }
+  article.page .entry-header {
+    padding:0;
+  }
 }
 
 
@@ -636,5 +661,16 @@ article.page {
   #sidebar {
     width:100%;
     float:none;
+  }
+  //don't make #sidebar and .content fullwidth on homepage
+  .homepage {
+    .content-with-sidebar {
+      width:66%;
+      float:left;
+    }
+    #sidebar {
+      width:33%;
+      float:left;
+    }
   }
 }

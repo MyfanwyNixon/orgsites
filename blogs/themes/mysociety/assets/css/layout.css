@@ -644,11 +644,39 @@ article.page .entry-header .featured-gallery {
   }
 
   /* GENERAL ELEMENTS */
-  .block-list, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list {
-    margin: 0 -1em 0 0;
+  .block-list li, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li {
+    max-width: 32%;
+    margin-right: 2%;
   }
-  .block-list li, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li, .block-list li.last, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li.last {
-    margin-right: 1em;
+  .block-list li.last, article.homepage #homepage-tabs .project_product-section .project_product-section-inner ul.block-list li.last {
+    margin-right: 0;
+  }
+
+  /* PAGE SPECIFIC */
+  article.ms_project .entry-header,
+  article.ms_product .entry-header,
+  article.page .entry-header {
+    padding: 0 0 3em 3em;
+  }
+  article.ms_project .entry-header .entry-title,
+  article.ms_project .entry-header .entry-intro,
+  article.ms_product .entry-header .entry-title,
+  article.ms_product .entry-header .entry-intro,
+  article.page .entry-header .entry-title,
+  article.page .entry-header .entry-intro {
+    max-width: 100%;
+    padding: 0;
+    float: none;
+  }
+  article.ms_project .entry-header .featured-gallery,
+  article.ms_product .entry-header .featured-gallery,
+  article.page .entry-header .featured-gallery {
+    float: none;
+    margin: 3em auto 0 auto;
+  }
+
+  article.page .entry-header {
+    padding: 0;
   }
 }
 /* small screens (for example small tablets or portrait iPad) */
@@ -658,5 +686,14 @@ article.page .entry-header .featured-gallery {
   #sidebar {
     width: 100%;
     float: none;
+  }
+
+  .homepage .content-with-sidebar {
+    width: 66%;
+    float: left;
+  }
+  .homepage #sidebar {
+    width: 33%;
+    float: left;
   }
 }

@@ -29,6 +29,7 @@
   add_action( 'init', 'create_post_type' );
   function create_post_type() {
     
+    //projects
     register_post_type(
       'ms_project',
       array(
@@ -50,6 +51,7 @@
       )
     );
 
+    //products
     register_post_type(
       'ms_product',
       array(
@@ -68,6 +70,28 @@
        'has_archive'    => false,
        'menu_position'  => 5,
        'rewrite'        => array('slug' => 'products')
+      )
+    );
+
+    //faqs
+    register_post_type(
+      'ms_faq',
+      array(
+        'labels' => array(
+          'name'                => __( 'FAQs', 'mysociety' ),
+          'singular_name'       => __( 'FAQ', 'mysociety' ),
+          'add_new_item'        => __( 'Add New FAQ', 'mysociety' ),
+          'edit_item'           => __( 'Edit FAQ', 'mysociety'),
+          'new_item'            => __( 'New FAQ', 'mysociety' ),
+          'view_item'           => __( 'View FAQ', 'mysociety'),
+          'search_items'        => __( 'Search FAQs', 'mysociety' ),
+          'not_found'           => __( 'No FAQs found', 'mysociety' ),
+          'not_found_in_trash'  => __( 'No FAQs found in Trash', 'mysociety' )
+        ),
+       'public'         => true,
+       'has_archive'    => true,
+       'menu_position'  => 5,
+       'rewrite'        => array('slug' => 'faq')
       )
     );
 
@@ -100,6 +124,7 @@
     include('fields/groups/commercial-options.php');
     include('fields/groups/build-your-own.php');
     include('fields/groups/projects-and-products-meta.php');
+    include('fields/groups/meta-tags.php');
   }
 
 

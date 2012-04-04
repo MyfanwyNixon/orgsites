@@ -702,12 +702,12 @@ a.examples-link {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333365793') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
 }
 a.examples-link {
   *display: inline;
@@ -725,12 +725,12 @@ a.examples-link:hover {
 a.examples-link.inactive {
   margin-top: -2em;
   background: #0cb80c url("../images/sprite.png") right -60px no-repeat;
-  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333365793') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -792,7 +792,7 @@ a.examples-link.inactive {
 }
 
 /* ICONS */
-.pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .download, .link {
+.pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .link, .download, .clients {
   background-image: url(../images/icons_grey.png);
   background-position: 0 -3px;
   background-repeat: no-repeat;
@@ -828,15 +828,19 @@ a.examples-link.inactive {
 }
 
 .example {
-  background-position: 0 -3px;
-}
-
-.download {
-  background-position: 0 -3px;
+  background-position: 0 -672px;
 }
 
 .link {
-  background-position: 0 -3px;
+  background-position: 0 -784px;
+}
+
+.download {
+  background-position: 0 -900px;
+}
+
+.clients {
+  background-position: 0 -1028px;
 }
 
 .pink_icon {
@@ -1116,7 +1120,6 @@ body {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.25em;
-  display: table;
 }
 .entry-header h2 a {
   color: #333333;
@@ -1395,6 +1398,15 @@ article.post .entry-header {
   padding-bottom: 1em;
 }
 
+#searchform #searchform-search {
+  width: 75%;
+  float: left;
+}
+#searchform button {
+  width: 20%;
+  float: right;
+}
+
 /* PAGE SPECIFIC */
 article.ms_project .entry-header,
 article.ms_product .entry-header,
@@ -1446,6 +1458,13 @@ article.homepage #our-clients h2 {
   text-align: left;
 }
 
+#comments h2#comments-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Museosans', 'Helvetica', 'Arial', sans-serif;
+  margin-bottom: 0.25em;
+  color: #333333;
+}
 #comments ol.commentlist {
   padding: 0;
   margin: 0;
@@ -1499,7 +1518,8 @@ article.homepage #our-clients h2 {
 #comments ol.commentlist div.reply {
   height: 2em;
 }
-#comments ol.commentlist div.reply a.comment-reply-link {
+#comments ol.commentlist div.reply a.comment-reply-link,
+#comments ol.commentlist div.reply a.comment-permalink {
   width: auto;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -1533,10 +1553,14 @@ article.homepage #our-clients h2 {
   padding: 0.25em 0.5em;
   margin-right: 1em;
 }
-#comments ol.commentlist div.reply a.comment-reply-link {
+#comments ol.commentlist div.reply a.comment-reply-link,
+#comments ol.commentlist div.reply a.comment-permalink {
   *display: inline;
 }
-#comments ol.commentlist div.reply a.comment-reply-link:hover, #comments ol.commentlist div.reply a.comment-reply-link:focus, #comments ol.commentlist div.reply a.comment-reply-link:active {
+#comments ol.commentlist div.reply a.comment-reply-link:hover, #comments ol.commentlist div.reply a.comment-reply-link:focus, #comments ol.commentlist div.reply a.comment-reply-link:active,
+#comments ol.commentlist div.reply a.comment-permalink:hover,
+#comments ol.commentlist div.reply a.comment-permalink:focus,
+#comments ol.commentlist div.reply a.comment-permalink:active {
   text-decoration: none;
   color: white;
   background-color: black;

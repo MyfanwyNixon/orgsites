@@ -32,10 +32,10 @@
             'menu_id'        => 'primary-menu'
           ));
         ?>
-        <form id="site-search" role="search" action="/" type="get">
-          <label for="search" class="visuallyhidden">Search</label>
-          <input id="search" name="s" type="text" placeholder="Keywords...">
-          <button type="submit" class="">Go</button>
+        <form id="site-search" role="search" action="<?= esc_url( home_url( '/' ) ); ?>" type="get">
+          <label for="search" class="visuallyhidden"><? _e( 'Search', 'mysociety' ); ?></label>
+          <input id="search" name="s" type="text" placeholder="<? esc_attr_e( 'Keywords...', 'mysociety' ); ?>">
+          <button type="submit" name="submit"><? esc_attr_e( 'Go', 'mysociety' ); ?></button>
         </form>
       </div>
     </div>

@@ -427,7 +427,7 @@ a.examples-link {
 
 
 /* ICONS */
-.pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .download, .link {
+.pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .link, .download, .clients {
   background-image:url(../images/icons_grey.png);
   background-position:0 -3px;
   background-repeat:no-repeat;
@@ -440,10 +440,10 @@ a.examples-link {
 .wikidocs {background-position: 0 -356px;}
 .bubble   {background-position: 0 -448px;}
 .twitter  {background-position: 0 -558px;}
-.example  {background-position: 0 -3px;}////needs an icon
-.download {background-position: 0 -3px;}////needs an icon
-.link     {background-position: 0 -3px;}////needs an icon
-
+.example  {background-position: 0 -672px;}
+.link     {background-position: 0 -784px;}
+.download {background-position: 0 -900px;}
+.clients {background-position: 0 -1028px;}
 //here we include all the alternate coloured images
 @include coloured_icons;
 
@@ -609,7 +609,6 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 0.25em;
-    display: table;
     a {
       color:#333333;
     }
@@ -845,6 +844,18 @@ article.post .entry-header {
   padding-bottom:1em;
 }
 
+#searchform {
+  #searchform-search {
+    width:75%;
+    float:left;
+  }
+  button {
+    width:20%;
+    float:right;
+  }
+}
+
+
 /* PAGE SPECIFIC */
 article.ms_project,
 article.ms_product,
@@ -913,6 +924,15 @@ article.homepage {
 // comments
 
 #comments {
+  h2#comments-title {
+    font: {
+      size: 1.5em;
+      weight: bold;
+      family:'Museosans', 'Helvetica', 'Arial', sans-serif;
+    }
+    margin-bottom: 0.25em;
+    color:#333333;
+  }
   ol.commentlist {
     padding: 0;
     margin: 0;
@@ -962,7 +982,8 @@ article.homepage {
     }
     div.reply {
       height: 2em;
-      a.comment-reply-link {
+      a.comment-reply-link,
+      a.comment-permalink {
         @include button-reset($background: #aaaaaa, $background2: #000000);
         @include box-shadow(0px 0px);
         font-size: 0.7em;

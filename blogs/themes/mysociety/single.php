@@ -1,7 +1,7 @@
 <? get_header(); ?>
-  <div class="content" role="main">
+  <div class="content-with-sidebar" role="main">
     <? while ( have_posts() ) : the_post();
-      get_template_part( 'content' );
+      get_template_part( 'content', 'single_post' );
       comments_template( '', true );
     ?>
       <nav id="pagination" class="nav-single">
@@ -12,4 +12,7 @@
       endwhile;
     ?>
   </div>
+
+<? get_sidebar(); ?>
+
 <? get_footer(); ?>

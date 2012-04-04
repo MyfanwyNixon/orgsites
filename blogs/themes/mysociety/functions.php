@@ -136,11 +136,11 @@
       global $wp_query;
 
       if ( $wp_query->max_num_pages > 1 ) : ?>
-        <nav id="pagination" class="<?php echo $nav_class; ?>">
-          <div class="nav-previous"><?php next_posts_link( __( 'Previous', 'mysociety' ) ); ?></div>
-          <div class="nav-next"><?php previous_posts_link( __( 'Next', 'mysociety' ) ); ?></div>
+        <nav id="pagination" class="<?= $nav_class; ?>">
+          <div class="nav-previous"><? next_posts_link( __( 'Previous', 'mysociety' ) ); ?></div>
+          <div class="nav-next"><? previous_posts_link( __( 'Next', 'mysociety' ) ); ?></div>
         </nav>
-      <?php endif;
+      <? endif;
     }
   }
 

@@ -127,7 +127,7 @@
         </div>
 
         <section id="our-clients">
-          <h2>Our Clients</h2>
+          <h2 class="clients blue_icon">Our Clients</h2>
           <img src="<? bloginfo('template_url') ?>/assets/images/clients.png" />
         </section>
       </div>

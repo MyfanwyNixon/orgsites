@@ -9,7 +9,7 @@
 	<section id="about_journal">
 		<h3>About this journal:</h3>
 
-		<p>This is a journal from the volunteers behind FixMyTransport, a free and independent website that helps people report and resolve issues with public transport in the open.</p>
+		<p>This is a journal from the volunteers behind <a href="http://www.fixmytransport.com/" title="FixMyTransport: Report, view and resolve public transport problems">FixMyTransport</a>, a free and independent website that helps people report and resolve issues with public transport in the open.</p>
 
 		<nav id="main-nav" role="navigation"><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?></nav>
 	</section>

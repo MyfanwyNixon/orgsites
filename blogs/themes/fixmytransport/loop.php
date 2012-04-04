@@ -9,7 +9,7 @@
 		<?php the_content(''); ?>
 		
 		<footer>
-			<?php if ( comments_open() ) : ?><a class="comment" href="<?php the_permalink(); ?>#comments"><?php comments_number('0 Comments', '1 Comment', '% Comments'); ?></a><?php endif; ?>
+			<?php if ( comments_open() ) : ?><a class="comment" href="<?php the_permalink(); ?>#comments"><img src="<?php bloginfo('template_url'); ?>/images/comment.png" width="19" height="18" alt=""> <?php comments_number('0 Comments', '1 Comment', '% Comments'); ?></a><?php endif; ?>
 			<?php the_tags('<span class="tags">Tagged as ', ', ', '</span>'); ?>
 		</footer>
 	</article>

@@ -1,4 +1,4 @@
-<aside class="sidebar">
+<aside id="blog-sidebar" class="sidebar">
   <section class="sidebar-archive">
     <h3>Archive</h3>
     <ul class="sidebar-list">

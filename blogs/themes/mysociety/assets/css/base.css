@@ -1399,6 +1399,15 @@ article.post .entry-header {
   padding-bottom: 1em;
 }
 
+#searchform #searchform-search {
+  width: 75%;
+  float: left;
+}
+#searchform button {
+  width: 20%;
+  float: right;
+}
+
 /* PAGE SPECIFIC */
 article.ms_project .entry-header,
 article.ms_product .entry-header,

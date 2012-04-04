@@ -736,10 +736,14 @@ article.post .entry-header {
     margin:1em 0 0 0;
     overflow:hidden;
     .slider_prev {
-      float:left;
+      position: absolute;
+      left:16px;
+      bottom:16px;
     }
     .slider_next {
-      float:right;
+      position: absolute;
+      right:16px;
+      bottom:16px;
     }
     span {
       em {
@@ -925,13 +929,6 @@ article.post .entry-header {
 }
 
 /* PAGE SPECIFIC */
-article.ms_project,
-article.ms_product,
-article.page {
-  .entry-header {
-    margin-bottom:2em;
-  }
-}
 
 //homepage
 article.homepage {

@@ -57,8 +57,8 @@ register_field_group(array (
       0 => 
       array (
         'param' => 'page_template',
-        'operator' => '!=',
-        'value' => 'products.php',
+        'operator' => '==',
+        'value' => 'about.php',
         'order_no' => '0'
       ),
       1 => 

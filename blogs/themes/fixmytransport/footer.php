@@ -4,6 +4,7 @@
 		<nav>
 			<ul>
 				<li>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></li>
+				<li>Header Illustrations &copy; <a href="https://twitter.com/#!/mockduck">Myf Nixon</a></li>
 			</ul>
 		</nav>
 	</footer>		

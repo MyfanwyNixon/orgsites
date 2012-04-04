@@ -9,7 +9,8 @@
     register_nav_menus(
       array(
         'primary' => 'Primary Menu',
-        'secondary' => 'Secondary Menu'
+        'secondary' => 'Secondary Menu',
+        'sidebar' => 'Sidebar Menu'
       )
     );
   }

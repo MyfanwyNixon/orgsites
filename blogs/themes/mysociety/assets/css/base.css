@@ -1120,7 +1120,6 @@ body {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.25em;
-  display: table;
 }
 .entry-header h2 a {
   color: #333333;
@@ -1459,6 +1458,13 @@ article.homepage #our-clients h2 {
   text-align: left;
 }
 
+#comments h2#comments-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Museosans', 'Helvetica', 'Arial', sans-serif;
+  margin-bottom: 0.25em;
+  color: #333333;
+}
 #comments ol.commentlist {
   padding: 0;
   margin: 0;
@@ -1512,7 +1518,8 @@ article.homepage #our-clients h2 {
 #comments ol.commentlist div.reply {
   height: 2em;
 }
-#comments ol.commentlist div.reply a.comment-reply-link {
+#comments ol.commentlist div.reply a.comment-reply-link,
+#comments ol.commentlist div.reply a.comment-permalink {
   width: auto;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -1546,10 +1553,14 @@ article.homepage #our-clients h2 {
   padding: 0.25em 0.5em;
   margin-right: 1em;
 }
-#comments ol.commentlist div.reply a.comment-reply-link {
+#comments ol.commentlist div.reply a.comment-reply-link,
+#comments ol.commentlist div.reply a.comment-permalink {
   *display: inline;
 }
-#comments ol.commentlist div.reply a.comment-reply-link:hover, #comments ol.commentlist div.reply a.comment-reply-link:focus, #comments ol.commentlist div.reply a.comment-reply-link:active {
+#comments ol.commentlist div.reply a.comment-reply-link:hover, #comments ol.commentlist div.reply a.comment-reply-link:focus, #comments ol.commentlist div.reply a.comment-reply-link:active,
+#comments ol.commentlist div.reply a.comment-permalink:hover,
+#comments ol.commentlist div.reply a.comment-permalink:focus,
+#comments ol.commentlist div.reply a.comment-permalink:active {
   text-decoration: none;
   color: white;
   background-color: black;

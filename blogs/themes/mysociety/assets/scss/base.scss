@@ -1158,8 +1158,10 @@ article.homepage {
 
 //author pages
 #author-info {
+  background:#CFCFCF;
   overflow:hidden;
   margin:1em 0 2em 0;
+  padding:1em;
   #author-avatar {
     float:left;
     margin-right:1em;
@@ -1168,6 +1170,8 @@ article.homepage {
     float:left;
     h2 {
       font-size:1.5em;
+      color:#333333;
+      margin-top:0;
     }
   }
 }

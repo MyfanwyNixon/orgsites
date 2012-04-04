@@ -1783,8 +1783,10 @@ article.homepage #our-clients h2 {
 }
 
 #author-info {
+  background: #CFCFCF;
   overflow: hidden;
   margin: 1em 0 2em 0;
+  padding: 1em;
 }
 #author-info #author-avatar {
   float: left;
@@ -1795,6 +1797,8 @@ article.homepage #our-clients h2 {
 }
 #author-info #author-description h2 {
   font-size: 1.5em;
+  color: #333333;
+  margin-top: 0;
 }
 
 /* COLOUR CLASSES */

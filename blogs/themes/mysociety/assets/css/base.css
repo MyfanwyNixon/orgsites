@@ -702,12 +702,12 @@ a.examples-link {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  background: url('../images/../images/sprite.png?1333533874') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333533874') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333533874') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333533874') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333533874') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333533874') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
 }
 a.examples-link {
   *display: inline;
@@ -725,12 +725,12 @@ a.examples-link:hover {
 a.examples-link.inactive {
   margin-top: -2em;
   background: #0cb80c url("../images/sprite.png") right -60px no-repeat;
-  background: url('../images/../images/sprite.png?1333533874') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333533874') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333533874') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333533874') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333533874') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333533874') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1462,6 +1462,22 @@ article.post .entry-header {
   background-image: url(../images/sprite.png);
   background-position: right -372px;
   padding-right: 2.5em;
+}
+
+#blog-sidebar {
+  overflow: hidden;
+}
+#blog-sidebar section {
+  width: 45%;
+  float: left;
+  margin-right: 5%;
+}
+#blog-sidebar section:nth-child(even) {
+  margin-right: 0;
+  margin-left: 5%;
+}
+#blog-sidebar section:nth-child(odd) {
+  clear: left;
 }
 
 /* PAGE SPECIFIC */

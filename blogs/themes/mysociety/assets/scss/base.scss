@@ -883,6 +883,23 @@ article.post .entry-header {
   }
 }
 
+//2 col
+#blog-sidebar {
+  overflow:hidden;
+  section {
+    width:45%;
+    float:left;
+    margin-right:5%;
+    &:nth-child(even) {
+      margin-right:0;
+      margin-left:5%;
+    }
+    &:nth-child(odd) {
+      clear:left;
+    }
+  }
+}
+
 /* PAGE SPECIFIC */
 article.ms_project,
 article.ms_product,
@@ -948,8 +965,7 @@ article.homepage {
   }
 }
 
-// comments
-
+//comments
 #comments {
   h2#comments-title {
     font: {

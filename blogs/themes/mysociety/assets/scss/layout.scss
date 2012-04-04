@@ -337,7 +337,18 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   }
 }
 
-
+//take off all the cols amd stack
+#blog-sidebar {
+  section {
+    width:100%;
+    float:none;
+    clear:both;
+    margin-right:0;
+    &:nth-child(even) {
+      margin-left:0;
+    }
+  }
+}
 
 /* PAGE SPECIFIC */
 
@@ -441,8 +452,7 @@ article.homepage {
   display:none;
 }
 
-// comments
-
+//comments
 #comments {
   ol.commentlist {
     li{
@@ -733,6 +743,32 @@ article.page {
     .sidebar {
       width:33%;
       float:left;
+    }
+  }
+
+
+  /* PAGE SPECIFIC */
+  //go 3 col
+  #blog-sidebar {
+    padding-left:0;
+    section {
+      width:30%;
+      float:left;
+      clear:none;
+      margin-right:5%;
+      &:nth-child(even) {
+        margin-left:0;
+        margin-right:5%;
+      }
+      &:nth-child(odd) {
+        clear:none;
+      }
+      &:nth-child(3n+3) {
+        margin-right:0;
+      }
+      &:nth-child(3n+4) {
+        clear:left;
+      }
     }
   }
 }

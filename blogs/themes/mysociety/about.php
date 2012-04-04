@@ -9,7 +9,6 @@ get_header();
       </header>
         
       <div class="entry-content">
-
         <?
           $images = get_field('gallery');
           if($images):

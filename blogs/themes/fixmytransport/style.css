@@ -114,6 +114,14 @@ Main
 	color: #777;
 }
 
+.archive-title{
+	background: transparent url('images/archive.png') no-repeat scroll center left;
+	padding-left: 25px;
+}
+.archive-cat-title, .archive-tag-title{
+	background: transparent url('images/tag.png') no-repeat scroll center left;
+	padding-left: 25px;
+}
 
 /*
 Comments

@@ -47,7 +47,7 @@ function loader(type){
       $('#tab-nav a').removeClass('active');
       $(this).addClass('active');
     });
-  }else {
+  } else {
     return;
   }
 }

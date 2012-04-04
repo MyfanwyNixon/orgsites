@@ -1,7 +1,7 @@
 <?php
 
 register_field_group(array (
-  'title' => 'Basic',
+  'title' => 'Basic info',
   'fields' => 
   array (
     0 => 

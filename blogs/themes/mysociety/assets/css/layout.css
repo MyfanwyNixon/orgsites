@@ -219,16 +219,12 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   width: 20em;
   padding-left: 5em;
   float: right;
+  margin-top: 7em;
+  margin-bottom: 0;
 }
 
 .big-sidebar {
   padding-left: 0 !important;
-}
-
-/* SIDEBAR*/
-.sidebar {
-  margin-top: 7em;
-  margin-bottom: 0;
 }
 
 /* GENERAL ELEMENTS */
@@ -255,16 +251,14 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 .featured-gallery nav {
   overflow: visible;
-  width: 26.875em;
+  width: 100%;
   margin-top: -0.25em;
 }
 .featured-gallery nav .slider_prev {
-  position: absolute;
   left: -32px;
   top: 110px;
 }
 .featured-gallery nav .slider_next {
-  position: absolute;
   right: -32px;
   top: 110px;
 }
@@ -624,19 +618,23 @@ article.ms_product .project_product-section .project_product-section-inner .side
   padding-left: 0;
 }
 
-article.page .entry-header {
-  overflow: hidden;
+article.page .featured-gallery {
+  background: #f6f6f6;
+  width: auto;
+  height: auto;
+  margin: 0 28px 2em 28px;
 }
-article.page .entry-header .entry-title,
-article.page .entry-header .entry-intro {
-  float: left;
-  clear: left;
-  max-width: 45%;
-  padding-right: 1em;
+article.page .featured-gallery ul {
+  width: auto;
+  margin: 0 28px;
+  height: 260px;
 }
-article.page .entry-header .featured-gallery {
-  float: right;
-  margin: -4em 2em 0 0;
+article.page .featured-gallery ul li {
+  height: auto;
+}
+
+#page-sidebar {
+  padding-left: 3em;
 }
 
 /* HELPERS */

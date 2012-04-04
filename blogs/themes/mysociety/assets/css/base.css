@@ -1278,10 +1278,14 @@ article.post .entry-header {
   overflow: hidden;
 }
 .featured-gallery nav .slider_prev {
-  float: left;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
 }
 .featured-gallery nav .slider_next {
-  float: right;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
 }
 .featured-gallery nav span em {
   color: #b7b7b7;
@@ -1505,12 +1509,6 @@ article.post .entry-header {
 }
 
 /* PAGE SPECIFIC */
-article.ms_project .entry-header,
-article.ms_product .entry-header,
-article.page .entry-header {
-  margin-bottom: 2em;
-}
-
 article.homepage .entry-header .banner {
   margin: 1em 0;
   text-align: center;

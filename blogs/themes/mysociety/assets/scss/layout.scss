@@ -326,6 +326,30 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 
+#pagination {
+  .nav-previous a {
+    background-position:0 -496px;
+    padding:0.25em 0.5em 0.25em 1.5em;
+  }
+  .nav-next a {
+    background-position:right -456px;
+    padding:0.25em 1.5em 0.25em 0.5em;
+  }
+}
+
+//take off all the cols amd stack
+#blog-sidebar {
+  section {
+    width:100%;
+    float:none;
+    clear:both;
+    margin-right:0;
+    &:nth-child(even) {
+      margin-left:0;
+    }
+  }
+}
+
 /* PAGE SPECIFIC */
 
 //homepage
@@ -428,8 +452,7 @@ article.homepage {
   display:none;
 }
 
-// comments
-
+//comments
 #comments {
   ol.commentlist {
     li{
@@ -513,7 +536,7 @@ article.ms_product {
       float:right;
       margin:-6em 2em 0 0;
     }
-    #project_product-tab-nav {
+    #project-tab-nav {
       float:left;
       clear:left;
       margin:6em 0 0 0; //48px
@@ -527,6 +550,10 @@ article.ms_product {
             //fix the icon heights
             &.pound {background-position: 0 -1px;}
             &.build {background-position: 0 -84px;}
+            &.active {
+              background-color:#333333;
+              &:hover {background-color:#000000;}
+            }
           }
         }
       }
@@ -557,7 +584,6 @@ article.ms_product {
     }
   }
 }
-
 
 // general pages - similar to .ms_project and .ms_product
 article.page {
@@ -720,6 +746,32 @@ article.page {
     .sidebar {
       width:33%;
       float:left;
+    }
+  }
+
+
+  /* PAGE SPECIFIC */
+  //go 3 col
+  #blog-sidebar {
+    padding-left:0;
+    section {
+      width:30%;
+      float:left;
+      clear:none;
+      margin-right:5%;
+      &:nth-child(even) {
+        margin-left:0;
+        margin-right:5%;
+      }
+      &:nth-child(odd) {
+        clear:none;
+      }
+      &:nth-child(3n+3) {
+        margin-right:0;
+      }
+      &:nth-child(3n+4) {
+        clear:left;
+      }
     }
   }
 }

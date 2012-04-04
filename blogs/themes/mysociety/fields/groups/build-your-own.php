@@ -1,22 +1,10 @@
 <?php
 
 register_field_group(array (
-  'title' => 'Projects and Products',
+  'title' => 'Build your own',
   'fields' => 
   array (
     0 => 
-    array (
-      'key' => 'field_4f6c891eb9aa4',
-      'label' => 'Commercial Options',
-      'name' => 'commercial-options',
-      'type' => 'wysiwyg',
-      'toolbar' => 'full',
-      'media_upload' => 'yes',
-      'instructions' => '',
-      'required' => '0',
-      'order_no' => '0'
-    ),
-    1 => 
     array (
       'key' => 'field_4f6c8548bc2f8',
       'label' => 'Build your own',
@@ -26,9 +14,9 @@ register_field_group(array (
       'media_upload' => 'yes',
       'instructions' => '',
       'required' => '0',
-      'order_no' => '1'
+      'order_no' => '0'
     ),
-    2 => 
+    1 => 
     array (
       'key' => 'field_4f6c891ec346c',
       'label' => 'Resources',
@@ -82,7 +70,7 @@ register_field_group(array (
       'layout' => 'table',
       'instructions' => 'For each type please provide a valid URL except for the Twitter type, where it is required that you just provide the username without the preceding "@".<br><br>The title field is optional for GitHub, Code blog and Wiki + Docs. It is not displayed anywhere for Twitter. It is required for Example, Download and Link.',
       'required' => '0',
-      'order_no' => '2'
+      'order_no' => '1'
     )
   ),
   'location' => 
@@ -95,13 +83,6 @@ register_field_group(array (
         'operator' => '==',
         'value' => 'ms_project',
         'order_no' => '0'
-      ),
-      1 => 
-      array (
-        'param' => 'post_type',
-        'operator' => '==',
-        'value' => 'ms_product',
-        'order_no' => '1'
       )
     ),
     'allorany' => 'any'

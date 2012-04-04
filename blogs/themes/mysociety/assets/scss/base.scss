@@ -855,6 +855,74 @@ article.post .entry-header {
   }
 }
 
+#pagination {
+  width:100%;
+  overflow:hidden;
+  margin:1em 0 0 0;
+  a {
+    @include button-reset;
+    text-transform:uppercase;
+    background-repeat:no-repeat;
+    font-size:0.875em; //14px
+  }
+  .nav-previous {
+    float:left;
+    a {
+      background-image:url(../images/sprite.png);
+      background-position:0 -412px;
+      padding-left:2.5em;
+    }
+  }
+  .nav-next {
+    float:right;
+    a {
+      background-image:url(../images/sprite.png);
+      background-position:right -372px;
+      padding-right:2.5em;
+    }
+  }
+}
+
+//2 col
+#blog-sidebar {
+  overflow:hidden;
+  section {
+    width:45%;
+    float:left;
+    margin-right:5%;
+    &:nth-child(even) {
+      margin-right:0;
+      margin-left:5%;
+    }
+    &:nth-child(odd) {
+      clear:left;
+    }
+    &.sidebar-mailing-list {
+      clear:both;
+      margin:2em 0 0 0;
+      width:100%;
+    }
+  }
+}
+
+#mc-embedded-subscribe-form {
+  background:#CFCFCF;
+  padding:1em;
+  overflow:hidden;
+  h3 {
+    margin:0 0 0.5em 0;
+    text-transform:none;
+  }
+  input {
+    width:75%;
+    float:left;
+  }
+  button {
+    width:23%;
+    float:right;
+    padding:0.5em;
+  }
+}
 
 /* PAGE SPECIFIC */
 article.ms_project,
@@ -921,8 +989,7 @@ article.homepage {
   }
 }
 
-// comments
-
+//comments
 #comments {
   h2#comments-title {
     font: {
@@ -1091,8 +1158,10 @@ article.homepage {
 
 //author pages
 #author-info {
+  background:#CFCFCF;
   overflow:hidden;
   margin:1em 0 2em 0;
+  padding:1em;
   #author-avatar {
     float:left;
     margin-right:1em;
@@ -1101,6 +1170,8 @@ article.homepage {
     float:left;
     h2 {
       font-size:1.5em;
+      color:#333333;
+      margin-top:0;
     }
   }
 }

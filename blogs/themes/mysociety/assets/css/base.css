@@ -702,12 +702,12 @@ a.examples-link {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -100px no-repeat, linear-gradient(#13d745, #0cb80c);
 }
 a.examples-link {
   *display: inline;
@@ -725,12 +725,12 @@ a.examples-link:hover {
 a.examples-link.inactive {
   margin-top: -2em;
   background: #0cb80c url("../images/sprite.png") right -60px no-repeat;
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
-  background: url('../images/../images/sprite.png?1333364429') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #13d745), color-stop(100%, #0cb80c));
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -webkit-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -moz-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -o-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, -ms-linear-gradient(#13d745, #0cb80c);
+  background: url('../images/../images/sprite.png?1333535128') right -60px no-repeat, linear-gradient(#13d745, #0cb80c);
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1407,6 +1407,103 @@ article.post .entry-header {
   float: right;
 }
 
+#pagination {
+  width: 100%;
+  overflow: hidden;
+  margin: 1em 0 0 0;
+}
+#pagination a {
+  width: auto;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background-color: #333333;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  line-height: 1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 5px;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  font-size: 0.875em;
+}
+#pagination a {
+  *display: inline;
+}
+#pagination a:hover, #pagination a:focus, #pagination a:active {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+}
+#pagination .nav-previous {
+  float: left;
+}
+#pagination .nav-previous a {
+  background-image: url(../images/sprite.png);
+  background-position: 0 -412px;
+  padding-left: 2.5em;
+}
+#pagination .nav-next {
+  float: right;
+}
+#pagination .nav-next a {
+  background-image: url(../images/sprite.png);
+  background-position: right -372px;
+  padding-right: 2.5em;
+}
+
+#blog-sidebar {
+  overflow: hidden;
+}
+#blog-sidebar section {
+  width: 45%;
+  float: left;
+  margin-right: 5%;
+}
+#blog-sidebar section:nth-child(even) {
+  margin-right: 0;
+  margin-left: 5%;
+}
+#blog-sidebar section:nth-child(odd) {
+  clear: left;
+}
+#blog-sidebar section.sidebar-mailing-list {
+  clear: both;
+  margin: 2em 0 0 0;
+  width: 100%;
+}
+
+#mc-embedded-subscribe-form {
+  background: #CFCFCF;
+  padding: 1em;
+  overflow: hidden;
+}
+#mc-embedded-subscribe-form h3 {
+  margin: 0 0 0.5em 0;
+  text-transform: none;
+}
+#mc-embedded-subscribe-form input {
+  width: 75%;
+  float: left;
+}
+#mc-embedded-subscribe-form button {
+  width: 23%;
+  float: right;
+  padding: 0.5em;
+}
+
 /* PAGE SPECIFIC */
 article.ms_project .entry-header,
 article.ms_product .entry-header,
@@ -1686,8 +1783,10 @@ article.homepage #our-clients h2 {
 }
 
 #author-info {
+  background: #CFCFCF;
   overflow: hidden;
   margin: 1em 0 2em 0;
+  padding: 1em;
 }
 #author-info #author-avatar {
   float: left;
@@ -1698,6 +1797,8 @@ article.homepage #our-clients h2 {
 }
 #author-info #author-description h2 {
   font-size: 1.5em;
+  color: #333333;
+  margin-top: 0;
 }
 
 /* COLOUR CLASSES */

@@ -326,6 +326,25 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   display: block;
 }
 
+#pagination .nav-previous a {
+  background-position: 0 -496px;
+  padding: 0.25em 0.5em 0.25em 1.5em;
+}
+#pagination .nav-next a {
+  background-position: right -456px;
+  padding: 0.25em 1.5em 0.25em 0.5em;
+}
+
+#blog-sidebar section {
+  width: 100%;
+  float: none;
+  clear: both;
+  margin-right: 0;
+}
+#blog-sidebar section:nth-child(even) {
+  margin-left: 0;
+}
+
 /* PAGE SPECIFIC */
 article.homepage #news-and-twitter {
   overflow: hidden;
@@ -504,29 +523,37 @@ article.ms_product .entry-header .featured-gallery {
   float: right;
   margin: -6em 2em 0 0;
 }
-article.ms_project .entry-header #project_product-tab-nav,
-article.ms_product .entry-header #project_product-tab-nav {
+article.ms_project .entry-header #project-tab-nav,
+article.ms_product .entry-header #project-tab-nav {
   float: left;
   clear: left;
   margin: 6em 0 0 0;
 }
-article.ms_project .entry-header #project_product-tab-nav #tab-nav,
-article.ms_product .entry-header #project_product-tab-nav #tab-nav {
+article.ms_project .entry-header #project-tab-nav #tab-nav,
+article.ms_product .entry-header #project-tab-nav #tab-nav {
   overflow: visible;
 }
-article.ms_project .entry-header #project_product-tab-nav #tab-nav li a,
-article.ms_product .entry-header #project_product-tab-nav #tab-nav li a {
+article.ms_project .entry-header #project-tab-nav #tab-nav li a,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a {
   margin-right: 1em;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
 }
-article.ms_project .entry-header #project_product-tab-nav #tab-nav li a.pound,
-article.ms_product .entry-header #project_product-tab-nav #tab-nav li a.pound {
+article.ms_project .entry-header #project-tab-nav #tab-nav li a.pound,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a.pound {
   background-position: 0 -1px;
 }
-article.ms_project .entry-header #project_product-tab-nav #tab-nav li a.build,
-article.ms_product .entry-header #project_product-tab-nav #tab-nav li a.build {
+article.ms_project .entry-header #project-tab-nav #tab-nav li a.build,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a.build {
   background-position: 0 -84px;
+}
+article.ms_project .entry-header #project-tab-nav #tab-nav li a.active,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a.active {
+  background-color: #333333;
+}
+article.ms_project .entry-header #project-tab-nav #tab-nav li a.active:hover,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a.active:hover {
+  background-color: #000000;
 }
 article.ms_project .project_product-section,
 article.ms_product .project_product-section {
@@ -740,5 +767,29 @@ article.page .entry-header .featured-gallery {
   article.ms_product .project_product-section .project_product-section-inner .sidebar {
     width: 33%;
     float: left;
+  }
+
+  /* PAGE SPECIFIC */
+  #blog-sidebar {
+    padding-left: 0;
+  }
+  #blog-sidebar section {
+    width: 30%;
+    float: left;
+    clear: none;
+    margin-right: 5%;
+  }
+  #blog-sidebar section:nth-child(even) {
+    margin-left: 0;
+    margin-right: 5%;
+  }
+  #blog-sidebar section:nth-child(odd) {
+    clear: none;
+  }
+  #blog-sidebar section:nth-child(3n+3) {
+    margin-right: 0;
+  }
+  #blog-sidebar section:nth-child(3n+4) {
+    clear: left;
   }
 }

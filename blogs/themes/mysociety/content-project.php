@@ -66,7 +66,7 @@
       }
     ?>
 
-      <?= ($settabs === TRUE ? '<div id="project-tabs" class="tabs">' : '');?>
+      <?= ($settabs === TRUE ? '<div class="tabs">' : '');?>
       <? if(get_field('commercial-options')): ?>
         <section id="commercial-options" class="project_product-section <?= ($settabs === TRUE ? 'tab' : '');?>">
           <h2 class="pound <?= $colour; ?>_icon"><? _e( 'Commercial Options', 'mysociety' ) ?></h2>

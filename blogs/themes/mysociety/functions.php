@@ -44,6 +44,7 @@
           'not_found'           => __( 'No projects found', 'mysociety' ),
           'not_found_in_trash'  => __( 'No projects found in Trash', 'mysociety' )
         ),
+       'taxonomies'     => array('category'),
        'public'         => true,
        'has_archive'    => true,
        'menu_position'  => 5,
@@ -66,6 +67,7 @@
           'not_found'           => __( 'No products found', 'mysociety' ),
           'not_found_in_trash'  => __( 'No products found in Trash', 'mysociety' )
         ),
+       'taxonomies'     => array('category'),
        'public'         => true,
        'has_archive'    => false,
        'menu_position'  => 5,
@@ -88,6 +90,7 @@
           'not_found'           => __( 'No FAQs found', 'mysociety' ),
           'not_found_in_trash'  => __( 'No FAQs found in Trash', 'mysociety' )
         ),
+       'taxonomies'     => array('post_tag'),
        'public'         => true,
        'has_archive'    => true,
        'menu_position'  => 5,

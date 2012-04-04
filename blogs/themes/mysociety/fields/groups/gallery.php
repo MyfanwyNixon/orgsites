@@ -1,32 +1,53 @@
 <?php
 
 register_field_group(array (
-  'title' => 'Basic',
+  'title' => 'Image Gallery',
   'fields' => 
   array (
     0 => 
     array (
-      'key' => 'field_4f6c7fae9eaa8',
-      'label' => 'Introduction',
-      'name' => 'intro',
-      'type' => 'textarea',
-      'default_value' => '',
-      'formatting' => 'none',
+      'key' => 'field_4f6c7faec06f5',
+      'label' => 'Gallery',
+      'name' => 'gallery',
+      'type' => 'repeater',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'key' => 'field_4f6c859b62cf8',
+          'label' => 'Image',
+          'name' => 'image',
+          'type' => 'image',
+          'save_format' => 'id',
+          'preview_size' => 'thumbnail',
+          'order_no' => '0'
+        ),
+        1 => 
+        array (
+          'key' => 'field_4f6c8702eebff',
+          'label' => 'Alt text',
+          'name' => 'alt',
+          'type' => 'text',
+          'default_value' => '',
+          'formatting' => 'none',
+          'order_no' => '1'
+        ),
+        2 => 
+        array (
+          'key' => 'field_4f6c8702eec0f',
+          'label' => 'Caption',
+          'name' => 'caption',
+          'type' => 'text',
+          'default_value' => '',
+          'formatting' => 'none',
+          'order_no' => '2'
+        )
+      ),
+      'row_limit' => '5',
+      'layout' => 'table',
       'instructions' => '',
       'required' => '0',
       'order_no' => '0'
-    ),
-    1 => 
-    array (
-      'key' => 'field_4f6c7faeae066',
-      'label' => 'Body',
-      'name' => 'body',
-      'type' => 'wysiwyg',
-      'toolbar' => 'full',
-      'media_upload' => 'yes',
-      'instructions' => '',
-      'required' => '0',
-      'order_no' => '1'
     )
   ),
   'location' => 

@@ -536,7 +536,7 @@ article.ms_product {
       float:right;
       margin:-6em 2em 0 0;
     }
-    #project_product-tab-nav {
+    #project-tab-nav {
       float:left;
       clear:left;
       margin:6em 0 0 0; //48px
@@ -550,6 +550,10 @@ article.ms_product {
             //fix the icon heights
             &.pound {background-position: 0 -1px;}
             &.build {background-position: 0 -84px;}
+            &.active {
+              background-color:#333333;
+              &:hover {background-color:#000000;}
+            }
           }
         }
       }
@@ -581,6 +585,10 @@ article.ms_product {
   }
 }
 
+
+#project-tabs {
+
+}
 
 // general pages - similar to .ms_project and .ms_product
 article.page {

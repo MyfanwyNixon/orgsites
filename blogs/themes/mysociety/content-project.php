@@ -26,10 +26,13 @@
       </div>
     <? endif; ?>
 
-    <? if(get_field('commercial-options') && get_field('build-your-own')): ?>
-      <nav id="project_product-tab-nav" class="desk-only">
+    <?
+      if(get_field('commercial-options') && get_field('build-your-own')):
+        $settabs = TRUE;
+    ?>
+      <nav id="project-tab-nav" class="desk-only">
         <ul id="tab-nav">
-          <li><a class="grey_button pound white_icon" href="#commercial-options"><? _e( 'Commercial Options', 'mysociety' ) ?></a></li>
+          <li><a class="<?= $colour; ?>_button pound white_icon" href="#commercial-options"><? _e( 'Commercial Options', 'mysociety' ) ?></a></li>
           <li><a class="<?= $colour; ?>_button build white_icon " href="#build-your-own"><? _e( 'Build Your Own', 'mysociety' ) ?></a></li>
         </ul>
       </nav>
@@ -63,44 +66,44 @@
       }
     ?>
 
-
-
-    <? if(get_field('commercial-options')): ?>
-      <section id="commercial-options" class="project_product-section">
-        <h2 class="pound <?= $colour; ?>_icon"><? _e( 'Commercial Options', 'mysociety' ) ?></h2>
-        
-        <div class="project_product-section-inner">
-          <?= the_field('commercial-options') ?>
-        </div>
-      </section>
-    <? endif; ?>
-
-    <? if(get_field('build-your-own')) : ?>
-      <section id="build-your-own" class="project_product-section <?= $colour; ?>_back">
-        <h2 class="build <?= $colour; ?>_icon"><? _e( 'Build your own', 'mysociety' ) ?></h2>
-        
-        <div class="project_product-section-inner">
-          <? if($resources): ?>
-          <div class="content-with-sidebar">
-          <? endif; ?>
-            <?= the_field('build-your-own') ?>
-          <? if($resources): ?>
+      <?= ($settabs === TRUE ? '<div id="project-tabs" class="tabs">' : '');?>
+      <? if(get_field('commercial-options')): ?>
+        <section id="commercial-options" class="project_product-section <?= ($settabs === TRUE ? 'tab' : '');?>">
+          <h2 class="pound <?= $colour; ?>_icon"><? _e( 'Commercial Options', 'mysociety' ) ?></h2>
+          
+          <div class="project_product-section-inner">
+            <?= the_field('commercial-options') ?>
           </div>
-          <aside class="sidebar">
-            <ul class="resource-list">
-            <? foreach($resources as $resource): ?>
-              <? if($resource['type'] !== 'twitter'): ?>
-              <li>
-                <a class="<?= $resource['type']; ?> <?= $colour; ?>_icon" href="<?= $resource['url']; ?>"><?= ($resource['title'] ? $resource['title'] : $resource['mod_type']); ?></a>
-              </li>
-              <? endif; ?>
-            <? endforeach; ?>
-            </ul>
-          </aside>
-          <? endif; ?>
-        </div>
-      </section>
-    <? endif; ?>
+        </section>
+      <? endif; ?>
+
+      <? if(get_field('build-your-own')) : ?>
+        <section id="build-your-own" class="project_product-section <?= $colour; ?>_back  <?= ($settabs === TRUE ? 'tab' : '');?>">
+          <h2 class="build <?= $colour; ?>_icon"><? _e( 'Build your own', 'mysociety' ) ?></h2>
+          
+          <div class="project_product-section-inner">
+            <? if($resources): ?>
+            <div class="content-with-sidebar">
+            <? endif; ?>
+              <?= the_field('build-your-own') ?>
+            <? if($resources): ?>
+            </div>
+            <aside class="sidebar">
+              <ul class="resource-list">
+              <? foreach($resources as $resource): ?>
+                <? if($resource['type'] !== 'twitter'): ?>
+                <li>
+                  <a class="<?= $resource['type']; ?> <?= $colour; ?>_icon" href="<?= $resource['url']; ?>"><?= ($resource['title'] ? $resource['title'] : $resource['mod_type']); ?></a>
+                </li>
+                <? endif; ?>
+              <? endforeach; ?>
+              </ul>
+            </aside>
+            <? endif; ?>
+          </div>
+        </section>
+      <? endif; ?>
+      <?= ($settabs === TRUE ? '</div>' : '');?>
 
       <div class="content-with-sidebar">
         <? if($cat_id): ?>

@@ -523,29 +523,37 @@ article.ms_product .entry-header .featured-gallery {
   float: right;
   margin: -6em 2em 0 0;
 }
-article.ms_project .entry-header #project_product-tab-nav,
-article.ms_product .entry-header #project_product-tab-nav {
+article.ms_project .entry-header #project-tab-nav,
+article.ms_product .entry-header #project-tab-nav {
   float: left;
   clear: left;
   margin: 6em 0 0 0;
 }
-article.ms_project .entry-header #project_product-tab-nav #tab-nav,
-article.ms_product .entry-header #project_product-tab-nav #tab-nav {
+article.ms_project .entry-header #project-tab-nav #tab-nav,
+article.ms_product .entry-header #project-tab-nav #tab-nav {
   overflow: visible;
 }
-article.ms_project .entry-header #project_product-tab-nav #tab-nav li a,
-article.ms_product .entry-header #project_product-tab-nav #tab-nav li a {
+article.ms_project .entry-header #project-tab-nav #tab-nav li a,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a {
   margin-right: 1em;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
 }
-article.ms_project .entry-header #project_product-tab-nav #tab-nav li a.pound,
-article.ms_product .entry-header #project_product-tab-nav #tab-nav li a.pound {
+article.ms_project .entry-header #project-tab-nav #tab-nav li a.pound,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a.pound {
   background-position: 0 -1px;
 }
-article.ms_project .entry-header #project_product-tab-nav #tab-nav li a.build,
-article.ms_product .entry-header #project_product-tab-nav #tab-nav li a.build {
+article.ms_project .entry-header #project-tab-nav #tab-nav li a.build,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a.build {
   background-position: 0 -84px;
+}
+article.ms_project .entry-header #project-tab-nav #tab-nav li a.active,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a.active {
+  background-color: #333333;
+}
+article.ms_project .entry-header #project-tab-nav #tab-nav li a.active:hover,
+article.ms_product .entry-header #project-tab-nav #tab-nav li a.active:hover {
+  background-color: #000000;
 }
 article.ms_project .project_product-section,
 article.ms_product .project_product-section {

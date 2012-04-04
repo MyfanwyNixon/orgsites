@@ -5,11 +5,10 @@
 	<?php return; endif; ?>
 
 	<?php if ( have_comments() ) : ?>
-	
 		<h3 id="comments-title"><?php
-			printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number() ),
+			printf( _n( 'One Comment', '%1$s Comments', get_comments_number() ),
 			number_format_i18n( get_comments_number() ), get_the_title() );
-		?></h3>
+		?> <img src="<?php bloginfo('template_url'); ?>/images/comment.png" width="19" height="18" alt=""></h3>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 			<div class="navigation">

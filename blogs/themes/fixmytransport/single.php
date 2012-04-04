@@ -13,7 +13,6 @@
 		<?php the_content(''); ?>
 		
 		<footer>
-			<span class="category"><?php if ( comments_open() ) : ?><a class="comment" href="<?php the_permalink(); ?>#comments"><?php comments_number('0 Comments', '1 Comment', '% Comments'); ?></a><?php endif; ?>
 			<?php the_tags('<span class="tags">Tagged as ', ', ', '</span>'); ?>
 		</footer>
 	</article>

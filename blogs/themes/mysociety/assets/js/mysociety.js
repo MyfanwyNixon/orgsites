@@ -74,6 +74,9 @@ function slider(elem){
       $slider_nav.hide();
       $(this).after($slider_nav);
       $slider_nav.fadeIn();
+    }else{
+      //if no more than 1 slider, exit
+      return;
     }
 
     //show the rest of the children

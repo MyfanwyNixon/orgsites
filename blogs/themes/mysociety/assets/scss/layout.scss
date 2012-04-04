@@ -326,6 +326,19 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 
+#pagination {
+  .nav-previous a {
+    background-position:0 -496px;
+    padding:0.25em 0.5em 0.25em 1.5em;
+  }
+  .nav-next a {
+    background-position:right -456px;
+    padding:0.25em 1.5em 0.25em 0.5em;
+  }
+}
+
+
+
 /* PAGE SPECIFIC */
 
 //homepage

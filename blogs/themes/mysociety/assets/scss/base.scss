@@ -855,6 +855,33 @@ article.post .entry-header {
   }
 }
 
+#pagination {
+  width:100%;
+  overflow:hidden;
+  margin:1em 0 0 0;
+  a {
+    @include button-reset;
+    text-transform:uppercase;
+    background-repeat:no-repeat;
+    font-size:0.875em; //14px
+  }
+  .nav-previous {
+    float:left;
+    a {
+      background-image:url(../images/sprite.png);
+      background-position:0 -412px;
+      padding-left:2.5em;
+    }
+  }
+  .nav-next {
+    float:right;
+    a {
+      background-image:url(../images/sprite.png);
+      background-position:right -372px;
+      padding-right:2.5em;
+    }
+  }
+}
 
 /* PAGE SPECIFIC */
 article.ms_project,

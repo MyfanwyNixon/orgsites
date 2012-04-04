@@ -1479,6 +1479,11 @@ article.post .entry-header {
 #blog-sidebar section:nth-child(odd) {
   clear: left;
 }
+#blog-sidebar section.sidebar-mailing-list {
+  clear: both;
+  margin: 2em 0 0 0;
+  width: 100%;
+}
 
 #mc-embedded-subscribe-form {
   background: #CFCFCF;

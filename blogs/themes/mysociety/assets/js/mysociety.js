@@ -160,7 +160,7 @@ $(function(){
   //force the height of the ul back to what it should be.
   //this is so when swipe.js modifies the height, even if
   //the images haven't fully loaded we still have the right size
-  $('.featured-gallery > ul').height(219);
+  $('.featured-gallery > ul').height($('.featured-gallery > ul > li > a > img').height());
 
   /*
    * Examples hide show - bit of a fudge but it works

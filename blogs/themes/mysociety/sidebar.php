@@ -33,4 +33,8 @@
       ?>
     </ul>
   </section>
+
+  <section>
+    <? get_template_part( 'mailchimp', 'mysociety' ); ?>
+  </section>
 </aside>

@@ -1480,6 +1480,25 @@ article.post .entry-header {
   clear: left;
 }
 
+#mc-embedded-subscribe-form {
+  background: #CFCFCF;
+  padding: 1em;
+  overflow: hidden;
+}
+#mc-embedded-subscribe-form h3 {
+  margin: 0 0 0.5em 0;
+  text-transform: none;
+}
+#mc-embedded-subscribe-form input {
+  width: 75%;
+  float: left;
+}
+#mc-embedded-subscribe-form button {
+  width: 23%;
+  float: right;
+  padding: 0.5em;
+}
+
 /* PAGE SPECIFIC */
 article.ms_project .entry-header,
 article.ms_product .entry-header,

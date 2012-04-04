@@ -111,7 +111,7 @@
             while ($news_query->have_posts()) : $news_query->the_post();
               get_template_part( 'content' );
             endwhile;
-
+            wp_reset_query();
             //instead of showing pagination why don't we just show a link to the blog category page?
           ?>
         <? endif; ?>
@@ -141,6 +141,8 @@
             </ul>
           </section>
         <? endif; ?>
+
+        <? get_template_part( 'mailchimp' ); ?>
       </aside>
     <!-- pagination? -->
   </div>

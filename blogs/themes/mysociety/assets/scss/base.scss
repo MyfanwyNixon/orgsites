@@ -900,6 +900,25 @@ article.post .entry-header {
   }
 }
 
+#mc-embedded-subscribe-form {
+  background:#CFCFCF;
+  padding:1em;
+  overflow:hidden;
+  h3 {
+    margin:0 0 0.5em 0;
+    text-transform:none;
+  }
+  input {
+    width:75%;
+    float:left;
+  }
+  button {
+    width:23%;
+    float:right;
+    padding:0.5em;
+  }
+}
+
 /* PAGE SPECIFIC */
 article.ms_project,
 article.ms_product,

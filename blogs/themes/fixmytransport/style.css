@@ -298,6 +298,9 @@ Sidebar
 	     -o-box-shadow: 0px 2px 0px rgba(0,0,0,0.2);
 	        box-shadow: 0px 2px 0px rgba(0,0,0,0.2);
 }
+.lt-ie8 #report-problem a{
+	margin-top: 0 !important;
+}
 #report-problem a:hover{
 	text-decoration:none;
 	background: #8cc63f; /* Old browsers */

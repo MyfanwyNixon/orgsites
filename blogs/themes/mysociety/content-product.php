@@ -1,8 +1,6 @@
 <?
   //first things first, set the colour var
   get_field('colour') ? $colour = get_field('colour') : $colour = '';
-  //and get the related category
-  $cat_id = get_field('related_category');
 ?>
 
 <article id="post-<? the_ID() ?>" <? post_class() ?>>
@@ -67,10 +65,14 @@
     <? endif; ?>
 
       <div class="content-with-sidebar">
-        <? if($cat_id): ?>
+        <? //get the latest post that matches the category(s) of this entry
+          $post_id = get_the_id();
+          $cat_array = wp_get_post_categories($post_id);
+        ?>
+        <? if($cat_array): ?>
           <h2 class="bubble <?= $colour; ?>_icon"><? _e( 'News', 'mysociety' ) ?></h2>
           <?
-            $news_query = new WP_Query("cat={$cat_id}&posts_per_page=1");
+            $news_query = new WP_Query( array( 'category__in' => $cat_array, 'posts_per_page' => '1' ) );
 
             while ($news_query->have_posts()) : $news_query->the_post();
               get_template_part( 'content' );

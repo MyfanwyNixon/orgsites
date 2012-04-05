@@ -47,6 +47,33 @@ function loader(type){
       $('#tab-nav a').removeClass('active');
       $(this).addClass('active');
     });
+
+    /*
+     * Site search - open on click
+     */
+    $sitesearch = $('#site-search');
+
+    $('button', $sitesearch).addClass('closed');
+
+    $('button', $sitesearch).on('click', function(e){
+      if($(this).hasClass('closed')){
+        $('input', $sitesearch).show().addClass('open').removeClass('closed');
+        $(this).addClass('open').removeClass('closed');
+        $sitesearch.append('<a href="#" id="close-site-search">x</a>');
+
+        $('#close-site-search', $sitesearch).on('click', function(e){
+          e.preventDefault();
+          $('input', $sitesearch).addClass('closed').removeClass('open').hide();
+          $('button', $sitesearch).addClass('closed').removeClass('open');
+          $(this).remove();
+        });
+        return false;
+      }
+
+      if($(this).hasClass('open')){
+        return true;
+      }
+    });
   } else {
     return;
   }

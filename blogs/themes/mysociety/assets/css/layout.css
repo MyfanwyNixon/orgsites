@@ -164,7 +164,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 #nav-wrapper .container ul#primary-menu {
   position: absolute;
-  right: 6em;
+  right: 2em;
   top: 1.4em;
 }
 #nav-wrapper .container ul#primary-menu li a {
@@ -181,8 +181,9 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 #nav-wrapper .container #site-search {
   position: absolute;
   right: 0;
-  top: 1.75em;
+  top: 0.75em;
   width: 8em;
+  height: 4em;
   margin: 0;
   padding: 0;
   font-size: 0.75em;
@@ -192,14 +193,48 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   box-shadow: none;
 }
 #nav-wrapper .container #site-search input {
-  width: 70%;
+  position: absolute;
+  left: 0;
+  top: 1em;
+  width: 71%;
+  height: 2em;
+  padding: 0.25em;
+  display: none;
+}
+#nav-wrapper .container #site-search button {
+  position: absolute;
+  right: 0;
+  top: 1em;
+  width: 30%;
   height: 2em;
   padding: 0.25em;
 }
-#nav-wrapper .container #site-search button {
-  width: 30%;
-  height: 2em;
-  padding: 0.5em;
+#nav-wrapper .container #site-search button.closed {
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+}
+#nav-wrapper .container #site-search input.open,
+#nav-wrapper .container #site-search button.open {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+}
+#nav-wrapper .container #site-search a#close-site-search {
+  display: block;
+  line-height: 1;
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+  color: #333333;
+}
+#nav-wrapper .container #site-search a#close-site-search:hover {
+  color: #000000;
+  text-decoration: none;
 }
 
 /* MAIN CONTENT */

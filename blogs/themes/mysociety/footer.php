@@ -35,7 +35,7 @@
         <form id="site-search" role="search" action="<?= esc_url( home_url( '/' ) ); ?>" type="get">
           <label for="search" class="visuallyhidden"><? _e( 'Search', 'mysociety' ); ?></label>
           <input id="search" name="s" type="text" placeholder="<? esc_attr_e( 'Keywords...', 'mysociety' ); ?>">
-          <button type="submit" name="submit"><? esc_attr_e( 'Go', 'mysociety' ); ?></button>
+          <button type="submit" name="submit" class="search_icon"><? esc_attr_e( 'Go', 'mysociety' ); ?></button>
         </form>
       </div>
     </div>

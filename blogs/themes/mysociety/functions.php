@@ -109,14 +109,6 @@
   if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', "QJF7-L4IX-UCNP-RF2W");
 
   /**
-   * Register field types
-   */
-  if(function_exists("register_field"))
-  {
-    register_field('Categories_field', dirname(__File__) . '/fields/types/categories.php');
-  }
-
-  /**
    * Register field groups
    */
   if(function_exists("register_field_group"))
@@ -127,7 +119,6 @@
     include('fields/groups/commercial-options.php');
     include('fields/groups/build-your-own.php');
     include('fields/groups/projects-and-products-meta.php');
-    include('fields/groups/meta-tags.php');
   }
 
 

@@ -20,7 +20,6 @@
 
         <div class="entry-meta">
           <?
-            the_field('related_tag');
             $tags_list = get_the_tag_list( '', '<span class="sep">, </span>' );
             if ( $tags_list ):
           ?>

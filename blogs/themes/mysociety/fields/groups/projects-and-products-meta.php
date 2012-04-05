@@ -52,28 +52,6 @@ register_field_group(array (
       'default_value' => '',
       'formatting' => 'none',
       'order_no' => '3'
-    ),
-    4 => 
-    array (
-      'label' => 'Category',
-      'name' => 'related_category',
-      'type' => 'categories',
-      'post_type' => 'post',
-      'child_of' => '',
-      'parent' => '',
-      'orderby' => 'name',
-      'order' => 'ASC',
-      'hide_empty' => '1',
-      'hierarchical' => '1',
-      'taxonomy' => 'category',
-      'include' => '',
-      'exclude' => '',
-      'display_type' => 'drop_down',
-      'ret_val' => '0',
-      'instructions' => 'Select the category that matches this project or product. This enables such joyous things as the news feed from that category.',
-      'required' => '1',
-      'key' => 'field_4f759525ed61f',
-      'order_no' => '4'
     )
   ),
   'location' => 

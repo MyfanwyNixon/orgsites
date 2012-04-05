@@ -113,12 +113,12 @@
    */
   if(function_exists("register_field_group"))
   {
-    include('fields/groups/gallery.php');
-    include('fields/groups/basic.php');
-    include('fields/groups/products-frontpage.php');
-    include('fields/groups/commercial-options.php');
-    include('fields/groups/build-your-own.php');
-    include('fields/groups/projects-and-products-meta.php');
+    include('field_groups/gallery.php');
+    include('field_groups/basic.php');
+    include('field_groups/products-frontpage.php');
+    include('field_groups/commercial-options.php');
+    include('field_groups/build-your-own.php');
+    include('field_groups/projects-and-products-meta.php');
   }
 
 

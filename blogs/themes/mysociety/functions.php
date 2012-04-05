@@ -25,6 +25,41 @@
     );
   }
 
+  //register custom taxonomies
+  add_action( 'init', 'create_faq_taxonomies', 0 );
+  
+  //create one taxonomy, faq_tags for the post type "ms_faq"
+  function create_faq_taxonomies() 
+  {
+    // Add new taxonomy, NOT hierarchical (like tags)
+    $labels = array(
+      'name' => _x( 'FAQ Tags', 'taxonomy general name' ),
+      'singular_name' => _x( 'FAQ Tag', 'taxonomy singular name' ),
+      'search_items' =>  __( 'Search FAQ Tags' ),
+      'popular_items' => __( 'Popular FAQ Tags' ),
+      'all_items' => __( 'All FAQ Tags' ),
+      'parent_item' => null,
+      'parent_item_colon' => null,
+      'edit_item' => __( 'Edit FAQ Tag' ), 
+      'update_item' => __( 'Update FAQ Tag' ),
+      'add_new_item' => __( 'Add New FAQ Tag' ),
+      'new_item_name' => __( 'New FAQ Tag Name' ),
+      'separate_items_with_commas' => __( 'Separate FAQ tags with commas' ),
+      'add_or_remove_items' => __( 'Add or remove FAQ tags' ),
+      'choose_from_most_used' => __( 'Choose from the most used FAQ tags' ),
+      'menu_name' => __( 'FAQ Tags' ),
+    ); 
+
+    register_taxonomy('ms_faq_tag', 'post', array(
+      'hierarchical' => false,
+      'labels' => $labels,
+      'show_ui' => true,
+      'update_count_callback' => '_update_post_term_count',
+      'query_var' => true,
+      'rewrite' => array( 'slug' => 'faq-tag' ),
+    ));
+  }
+
   //register custom post types
   add_action( 'init', 'create_post_type' );
   function create_post_type() {
@@ -90,7 +125,7 @@
           'not_found'           => __( 'No FAQs found', 'mysociety' ),
           'not_found_in_trash'  => __( 'No FAQs found in Trash', 'mysociety' )
         ),
-       'taxonomies'     => array('post_tag'),
+       'taxonomies'     => array('ms_faq_tag'),
        'public'         => true,
        'has_archive'    => true,
        'menu_position'  => 5,

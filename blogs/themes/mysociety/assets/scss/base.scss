@@ -630,7 +630,8 @@ body {
     margin-bottom: 1.3333em
   }
 }
-article.post .entry-header {
+article.post .entry-header,
+article.ms_faq .entry-header {
   overflow: hidden;
 }
 .entry-content {

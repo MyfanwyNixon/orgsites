@@ -19,14 +19,19 @@
         </div>
 
         <div class="entry-meta">
-          <?
-            $tags_list = get_the_tag_list( '', '<span class="sep">, </span>' );
-            if ( $tags_list ):
-          ?>
-            <div class="entry-tags">
-              <? printf( __( '<span>Tagged:</span> %1$s', 'mysociety' ), $tags_list ); ?>
-            </div>
-          <? endif; ?>
+          
+          
+          
+          <div class="entry-tags">
+            <?
+              $faqtags = the_terms( $post->ID, 'ms_faq_tag', '<span>Tagged:</span> ', '<span class="sep">, </span>', '' );
+
+              foreach ($faqtags as $tag) {
+                echo "<a href='/tag/{$tag->slug}'>{$tag->name}</a>";
+              }
+            ?>
+          </div>
+          
         </div>
       </article>
     <? endwhile; ?>
@@ -38,7 +43,19 @@
   </div>
 
   <aside id="page-sidebar" class="sidebar">
-    tags for faq's
+      <section class="sidebar-tags">
+      <h3>Tags</h3>
+      <ul class="sidebar-list">
+        <? //display tags that have been used on faq posts ONLY
+          // $faqtags = the_terms( $post->ID, 'faq-tag', '', ', ', '' );
+          // if ( $faqtags ) {
+          //   foreach ($faqtags as $tag) {
+          //     echo "<li><a href='/tag/{$tag->slug}'>{$tag->name}</a></li>";
+          //   }
+          // }
+        ?>
+      </ul>
+    </section>
 
     <section class="sidebar-mailing-list">
       <? get_template_part( 'mailchimp', 'mysociety' ); ?>

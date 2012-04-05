@@ -110,7 +110,7 @@ Animated Banner
 #banner.animated .anim-people
 {
 	position:relative;
-	width:200%;
+	width:2000px;
 	height:100%;
 	background-color:transparent;
 	background-position: center left;
@@ -158,7 +158,7 @@ Animated Banner
 .anim-bg.countryside{ background-image: url(images/animation/countryside-bg.png); }
 .anim-bg2.train{ background-image: url(images/animation/train-post.png); }
 .anim-frame.train{ background-image: url(images/animation/train-frame.png); }
-.anim-people.people1{ background-image: url(images/animation/train-people1.png); }
+.anim-people.people1{ background-image: url(images/animation/train-people2.png); }
 
 
 

@@ -381,7 +381,7 @@ People not on tiny phones
 	#sidebar section.widget_archive,
 	#sidebar section.widget_recent_comments
 	{
-		width:100%;display:block;float:none;
+		width:inherit;display:block;float:none;
 	}
 	body.logged-in #sidebar{
 		top: 38px;

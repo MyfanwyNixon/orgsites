@@ -104,9 +104,9 @@ foreach ( $filters as $filter ) {
 ################################################################################
 function remove_theme_edit_permissions() {
  
-$role = get_role( 'admin' ); // gets the admin role
+// $role = get_role( 'admin' ); // gets the admin role
  
-$role->remove_cap( 'edit_themes' ); // remove the ability to edit themes
+// $role->remove_cap( 'edit_themes' ); // remove the ability to edit themes
 }
  
 add_action( 'admin_init', 'remove_theme_edit_permissions');

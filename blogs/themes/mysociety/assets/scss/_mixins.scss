@@ -1,0 +1,86 @@
+// Button reset
+@mixin button-reset($background: #333333, $background2: #000000, $color: #ffffff, $radius: 0.25em){
+  width:auto; //reset from other inputs being width:100%;
+  @include inline-block;
+  cursor:pointer;
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  background-color:$background;
+  color:$color;
+  border:none;
+  margin:0;
+  padding:0.5em 1.5em;
+  line-height:1em;
+  @include box-shadow(rgba(0, 0, 0, 0.4) 0 0 5px);
+  @include border-radius($radius);
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration:none;
+    color:$color;
+    background-color:$background2;
+  }
+}
+
+
+
+// list resets
+@mixin list-reset-copy {
+  padding-left:30px;
+  margin-bottom:20px;
+  li {
+    font-size:14px;
+    line-height:20px;
+    list-style:disc;
+    margin-bottom:10px;
+    background:none;
+    padding:0;
+  }
+}
+
+@mixin list-reset-soft {
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+  li{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+}
+
+@mixin list-reset {
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  li{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    float:left;
+    a {
+      float:left;
+      display:block;
+    }
+  }
+}
+
+
+//this is a mixin because we want to be specific with
+//different icons on mobile/desk sometimes that differ from the default
+//so, although lots of extra lines of css, we can in a specific use-case
+//include this mixin to reset the colours again after they have previously been modified
+//see: .ms_project/.ms_product > .project_product-section > h2
+@mixin coloured_icons {
+  .pink_icon   {background-image:url(../images/icons_pink.png);}
+  .purple_icon {background-image:url(../images/icons_purple.png);}
+  .yellow_icon {background-image:url(../images/icons_yellow.png);}
+  .blue_icon   {background-image:url(../images/icons_blue.png);}
+  .green_icon  {background-image:url(../images/icons_green.png);}
+  .orange_icon {background-image:url(../images/icons_orange.png);}
+  .red_icon    {background-image:url(../images/icons_red.png);}
+  .grey_icon   {background-image:url(../images/icons_grey.png);}
+  .white_icon  {background-image:url(../images/icons_white.png);}
+}

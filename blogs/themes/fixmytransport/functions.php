@@ -99,3 +99,14 @@ $filters = array('pre_term_description', 'pre_link_description', 'pre_link_notes
 foreach ( $filters as $filter ) {
 	remove_filter($filter, 'wp_filter_kses');
 }
+################################################################################
+// Permissions
+################################################################################
+function remove_theme_edit_permissions() {
+ 
+$role = get_role( 'admin' ); // gets the admin role
+ 
+$role->remove_cap( 'edit_themes' ); // remove the ability to edit themes
+}
+ 
+add_action( 'admin_init', 'remove_theme_edit_permissions');

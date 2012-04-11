@@ -110,7 +110,7 @@ Animated Banner
 #banner.animated .anim-people
 {
 	position:relative;
-	width:2000px;
+	width:200%;
 	height:100%;
 	background-color:transparent;
 	background-position: center left;
@@ -118,6 +118,7 @@ Animated Banner
 }
 #banner.animated .anim-bg{
 	top:0;
+	min-width:2000px;
 	-moz-animation: bgmove 20s linear 0 infinite;
 	-moz-animation-play-state: paused;
 	-webkit-animation: bgmove 20s linear 0 infinite;
@@ -131,6 +132,7 @@ Animated Banner
 }
 #banner.animated .anim-bg2{
 	top:-100%;
+	min-width:2000px;
 	-moz-animation: bgmove 3s linear 0 infinite;
 	-moz-animation-play-state: paused;
 	-webkit-animation: bgmove 3s linear 0 infinite;

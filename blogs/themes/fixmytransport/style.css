@@ -4,8 +4,8 @@
 
 @font-face {
 font-family: 'MuseoSansRounded-500';
-src: url('./fonts/MuseoSansRounded500.eot');
-src: url('./fonts/MuseoSansRounded500.eot?#iefix') format('embedded-opentype'),url('./fonts/MuseoSansRounded500.woff') format('woff'),url('./fonts/MuseoSansRounded500.ttf') format('truetype'),url('./fonts/MuseoSansRounded500.svg#MuseoSansRounded-500') format('svg')
+src: url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.eot');
+src: url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.eot?#iefix') format('embedded-opentype'),url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.woff') format('woff'),url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.ttf') format('truetype'),url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.svg#MuseoSansRounded-500') format('svg')
 }
 
 
@@ -62,7 +62,8 @@ Header
 	margin:auto;
 }
 .svg #logo a{ background: #fff url('images/logo.svg') no-repeat scroll center left; }
-.no-svg #logo a, .no-js #logo a{ background: #fff url('images/logo.png') no-repeat scroll center left; }
+/* For IE8 Lying about supporting SVG */
+.no-svg #logo a, .no-js #logo a, .lt-ie9 #logo a{ background: #fff url('images/logo.png') no-repeat scroll center left; }
 
 #banner{
 	width: 100%;
@@ -451,6 +452,7 @@ People not on tiny phones
 		position: absolute;
 		top:10px;
 		margin-left: 41.25em;
+		background: #fff url('images/ticket.png') no-repeat scroll top center;
 		background: rgba(255,255,255,0.85) url('images/ticket.png') no-repeat scroll top center;
 		border-bottom:2px dotted #ccc;
 		padding-top:2em;

@@ -14,6 +14,7 @@
 <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/apple-touch-icon.png">
 <?php endif; ?><link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 <?php wp_head(); ?>
+<!--[if IE 8]>    <script src="<?php bloginfo('template_url'); ?>/js/respond.min.js"></script> <![endif]-->
 </head><?php $body_classes = join( ' ', get_body_class() ); ?>
 <body class="<?php echo $body_classes; ?>">
 

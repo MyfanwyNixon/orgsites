@@ -72,7 +72,7 @@ function wp_fmtblog_admin() {
 
 	global $fmtblog_options;
 
-	if (array_key_exists('save_fmtblog_options', $_POST) && $_POST['save_fmtblog_options']) {
+	if ($_POST['save_fmtblog_options']) {
 	
 		foreach($fmtblog_options as $section) {
 			foreach($section[1] as $option) {

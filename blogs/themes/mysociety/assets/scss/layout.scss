@@ -1,0 +1,801 @@
+@import "_colours";
+@import "_mixins";
+@import "compass";
+
+/*
+polyfill to get IE6/7 to accept the border-box model
+see here: http://html5please.com/#box-sizing
+and here: https://github.com/Schepp/box-sizing-polyfill
+path must be relative to the html page rendered
+*/
+.ie6 *,
+.ie7 * {
+  behavior: url(/wp-content/themes/mysociety/assets/boxsizing.htc);
+}
+
+
+/*** TYPOGRAPHY ***/
+h1 {
+  font-size: 3.125em; //50px
+  line-height: 1.1em; //55px
+  margin-top: 0.8em; //40px
+  margin-bottom: 0.32em; //16px
+}
+
+h2 {
+  font-size: 2.875em; //46px
+  line-height: 1.08695652173913em; //50px
+  margin-top: 0.34782608695652em; //16px
+  margin-bottom: 0.34782608695652em; //16px
+}
+
+p.entry-intro {
+  font-size:1.375em; //22px
+  line-height:1.27272727272727em; //28px
+  color:#333333;
+}
+
+
+/* BUTTONS */
+.slider_prev {
+  background-position: -106px -307px;
+  &:hover {background-position: -56px -307px;}
+}
+.slider_next {
+  background-position: -106px -247px;
+  &:hover {background-position: -56px -247px;}
+}
+
+/* ICONS */
+
+//fix h2 lineheight when it has an icon
+h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, h2.example, h2.link, h2.download, h2.clients {
+  line-height:0.78260869565217em; //36px
+}
+
+/* MOVE MENU TO TOP */
+
+//set up for the menu being on top
+.wrapper {
+  display: table;
+  caption-side: top;
+  width: 100%;
+  //this keeps Opera happy by providing a table cell for the caption to sit on top of
+  .table-cell {
+    display:table-cell;
+  }
+  //make menu table-caption, which will but it on top of .wrapper
+  #nav-wrapper {
+    display: table-caption;
+  }
+}
+
+//IE6 and 7 don't support display:table; so push
+//#nav-wrapper up with position absolute
+.ie6, .ie7 {
+  .wrapper {
+    display:block;
+    padding-top:4em;
+    #nav-wrapper {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+    }
+  }
+}
+
+
+/************************/
+/*** LAYOUT and STYLE ***/
+/************************/
+
+//fix the width and take off the padding
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 60em;
+}
+
+/* HEADER */
+//stick it to the top of the page
+#site-header {
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  .container {
+    padding:1em 0;
+    #site-logo {
+      margin-top:5px;
+      //pull on top of #nav-wrapper so the link is clickable
+      position:relative;
+      z-index:3;
+    }
+  }
+}
+
+/* FOOTER */
+#banners {
+  a.hire-us-banner,
+  a.donate-banner {
+    display:block;
+    float:left;
+    margin-bottom:2em;
+  }
+  a.donate-banner {
+    float:right;
+    margin-top:0;
+  }
+}
+#site-footer {
+  @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+}
+
+/* MENU */
+#nav-wrapper {
+  //pull over the top of #site-header
+  position: relative;
+  z-index: 2;
+  //force height so everything under it (.content etc) start at the right point
+  height:4em;
+  .container {
+    padding-left:130px; //pad left by the width of #site-logo plus a bit of safety
+    position:relative; //so we can place the #primary-menu and #site-search
+    ul {
+      @include list-reset;
+      li a {
+        padding:1em;
+        border:none;
+      }
+      &#secondary-menu {
+        margin-left: 1em;
+        li a {
+          background:none;
+          font-size:1em;
+          color:#999999;
+          padding:0;
+          margin:1.4em 1em;
+          &:hover {
+            background:none;
+            color:#555555;
+          }
+        }
+      }
+      &#primary-menu {
+        position: absolute;
+        right:2em;
+        top:1.4em;
+        li a {
+          padding:0;
+          margin:0 1em;
+          background:none;
+          font-size:0.8125em;
+          text-transform:uppercase;
+          &:hover {
+            background:none;
+            color:#999999;
+          }
+        }
+      }
+    }
+    #site-search {
+      position: absolute;
+      right:0;
+      top:0.75em;
+      width:8em;
+      height:4em;
+      margin:0;
+      padding:0;
+      font-size:0.75em; //12px
+      background:none;
+      @include box-shadow(none);
+      input {
+        position:absolute;
+        left:0;
+        top:1em;
+        width:71%;
+        height:2em;
+        padding:0.25em;
+        display:none;
+      }
+      button {
+        position:absolute;
+        right:0;
+        top:1em;
+        width:30%;
+        height:2em;
+        padding:0.25em;
+        &.closed {
+          @include border-radius(0.25em);
+        }
+      }
+      input.open,
+      button.open {
+        @include box-shadow(rgba(0, 0, 0, 0.5) 0 0 10px);
+      }
+      a#close-site-search {
+        display:block;
+        line-height:1;
+        font-size:1em;
+        position:absolute;
+        top:0;
+        right:0;
+        text-transform:uppercase;
+        color:#333333;
+        &:hover {
+          color:#000000;
+          text-decoration:none;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/* MAIN CONTENT */
+
+.content {
+  width:100%;
+  img {
+    max-width:100%;
+  }
+}
+
+.content-with-sidebar {
+  width:40em;
+  float:left;
+}
+.sidebar {
+  width:20em;
+  padding-left: 5em;
+  float:right;
+  margin-top:7em;
+  margin-bottom: 0;
+}
+.big-sidebar {
+  padding-left: 0 !important;
+}
+
+/* GENERAL ELEMENTS */
+.block-list {
+  // reset rhs negative margin
+  margin:0;
+  li {
+    // now we are on desktop (probably) we can use the last class
+    // to get the right spacing for a 3 col layout
+    margin-right:3em;
+    height:18.75em; //300px
+    &.last {
+      margin-right:0;
+    }
+  }
+}
+
+.featured-gallery {
+  background:transparent url(../images/imac.png) center no-repeat;
+  width:26.875em; //430px
+  height:21.25em; //340px
+  padding:1.1875em 0 0 0; //19px
+  ul {
+    width:24.125em; //386px
+    margin:0 auto;
+  }
+  nav {
+    overflow: visible;
+    width:100%;
+    margin-top:-0.25em;
+    .slider_prev {
+      left:-32px;
+      top:110px;
+    }
+    .slider_next {
+      right:-32px;
+      top:110px;
+    }
+  }
+}
+
+.resource-list {
+  li {
+    border-bottom:none;
+    margin-bottom:1em !important;
+  }
+}
+
+.tweets {
+  background:#ffffff url(../images/grid_12.gif) center repeat;
+  li {
+    //show all hidden li's
+    display:block;
+    border-bottom:0.0625em solid #EEEEEE; //1px
+    &:last-child {
+      border-bottom:none;
+    }
+  }
+}
+
+.twitter_box,
+.sidebar.twitter_box {
+  border-bottom:none;
+  padding-left:3em; //48px
+  >h2 {// font base size is 46px
+    margin-left:-1.17391304347826em; //54px
+  }
+  >a {
+    float:left;
+    clear:left;
+  }
+}
+
+.news-list {
+  @extend .tweets;
+}
+
+.news_box {
+  border-bottom:none;
+  padding-left:3em; //48px
+  >h2 {// font base size is 46px
+    margin-left:-1.17391304347826em; //54px
+  }
+}
+
+#tab-nav {
+  @include list-reset;
+}
+
+
+#pagination {
+  .nav-previous a {
+    background-position:0 -496px;
+    padding:0.25em 0.5em 0.25em 1.5em;
+  }
+  .nav-next a {
+    background-position:right -456px;
+    padding:0.25em 1.5em 0.25em 0.5em;
+  }
+}
+
+//take off all the cols amd stack
+#blog-sidebar {
+  section {
+    width:100%;
+    float:none;
+    clear:both;
+    margin-right:0;
+    &:nth-child(even) {
+      margin-left:0;
+    }
+  }
+}
+
+/* PAGE SPECIFIC */
+
+//homepage
+article.homepage {
+  #news-and-twitter {
+    overflow:hidden;
+    .sidebar {
+      margin-top:0;
+    }
+  }
+  #homepage-tab-nav {
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    //we do the tab_nav with pixels cos we need
+    //it to all line up and the rounding errors
+    //make it not line up proper
+    #tab-nav {
+      overflow:visible;
+      margin-left:3em;
+      height:48px;
+      li {
+        margin-right:0.5em;
+        a {
+          height:51px;
+          font-size:22px;
+          background:#CFCFCF;
+          padding:11px;
+          color:#ffffff;
+          border:3px solid #CFCFCF;
+          @include border-radius(3px 3px 0 0);
+          &:hover {
+            text-decoration:none;
+            color:#333333;
+          }
+          &.active {
+            background:transparent;
+            color:#888888;
+            border-bottom:3px solid #ffffff;
+          }
+        }
+      }
+    }
+  }
+  #homepage-tabs {
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    .project_product-section {
+      position:relative;
+      padding:0;
+      background:none !important;
+      @include box-shadow(none);
+      >h2 {// font base size is 46px
+        color:#AAAAAA;
+        margin:0;
+        padding:0;
+        background:none !important; //no icon needed
+      }
+      .project_product-section-inner {
+        padding:0;
+        overflow:hidden;
+        @include box-shadow(none);
+        ul.block-list {
+          @extend .block-list;
+          li {
+            width:18em; //288px - this is so the combined end size is 20em (320px)  
+            border-bottom:none;
+            .thumb {
+              display:block;
+            }
+            h3 a {
+              padding:0;
+            }
+          }
+        }
+      }
+      nav {
+        position:absolute;
+        top:-54px;
+        right:0;
+        width:84px;
+        height:28px;
+        text-align:center;
+        line-height:28px;
+        .slider_next {
+          position:absolute;
+          right:0;
+          top:0;
+        }
+        .slider_prev {
+          position:absolute;
+          left:0;
+          top:0;
+        }
+        span em {
+          margin:0 2px;
+        }
+      }
+    }
+  }
+}
+.js article.homepage #homepage-tabs .project_product-section > h2 {
+  display:none;
+}
+
+//comments
+#comments {
+  ol.commentlist {
+    li{
+      padding: 0.5em 0em 0em 64px;
+      header {
+        .avatar {
+          height: auto;
+          width: auto;
+          margin-left: -56px;
+          margin-top: 0px;
+        }
+      }
+      ul.children li {
+        padding: 1em 0em 0em 48px;
+        margin-left: -8px;
+        .avatar {
+          position: absolute;
+          margin-left: -38px;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+
+//product list page
+.product-section-header {
+  h2 {// font base size is 46px
+    margin-left:0;
+    margin-right:0;
+    padding:0 0 0.17391304347826em 0; // 8px
+    border-bottom:0.06521739130435em solid #AAAAAA; //3px
+  }
+}
+.product-intros {
+  margin:0;
+  div {
+    margin-right:3em;
+    &.last {
+      margin:0;
+    }
+  }
+}
+.product-examples {
+  margin:0;
+  border:0.0625em solid #E6E7E8; //1px
+  padding:1.5em;
+  &.closed {
+    padding: 0.9375em 1.5em; //15px 24px
+  }
+  div {
+    width:18em; //288px
+    margin-right:1.4375em; //23px
+    &.last {
+      margin-right:0;
+    }
+  }
+}
+
+
+//project/product entry layout
+article.ms_project,
+article.ms_product {
+  .entry-header {
+    overflow:hidden;
+    padding:0 0 3em 3em; //48px
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    margin-bottom:0;
+    .entry-title,
+    .entry-intro {
+      float:left;
+      clear:left;
+      max-width:45%;
+      padding-right:1em;
+    }
+    .entry-title {
+      margin-top:2em;
+    }
+    .featured-gallery {
+      float:right;
+      margin:-6em 2em 0 0;
+    }
+    #project-tab-nav {
+      float:left;
+      clear:left;
+      margin:6em 0 0 0; //48px
+      #tab-nav {
+        overflow:visible;//so we can see the drop shadows on the buttons
+        li {
+          a {
+            margin-right:1em;
+            padding-top:0.75em;
+            padding-bottom:0.75em;
+            //fix the icon heights
+            &.pound {background-position: 0 -1px;}
+            &.build {background-position: 0 -84px;}
+            &.active {
+              background-color:#333333;
+              &:hover {background-color:#000000;}
+            }
+          }
+        }
+      }
+    }
+  }
+  .project_product-section {
+    clear:both;
+    border-bottom: 0.1875em solid #CFCFCF; //3px
+    padding:2em 0 2em 3em;
+    background:none !important;
+    @include box-shadow(none);
+    >h2 {// font base size is 46px
+      color:#AAAAAA;
+      margin-left:-1.17391304347826em; //54px
+    }
+    @include coloured_icons;
+    .project_product-section-inner {
+      padding:0;
+      overflow:hidden;
+      @include box-shadow(none);
+      .content-with-sidebar {
+        width:35em;
+      }
+      .sidebar {
+        margin-top:0;
+        padding-left:0;
+      }
+    }
+  }
+}
+
+// general pages
+article.page {
+  .featured-gallery {
+    background:#f6f6f6;
+    width:auto;
+    height:auto;
+    margin:0 28px 2em 28px;
+    ul {
+      width:auto;
+      margin:0 28px;
+      height:260px;
+      li {
+        height:auto;
+      }
+    }
+  }
+}
+#page-sidebar {
+  padding-left:3em;
+}
+
+
+/* HELPERS */
+
+//reset .full-widths for desktop
+.full-width {
+  margin:0;
+}
+
+// show on desktop
+.desk-only {
+  display: block;
+  visibility: visible;
+}
+// hide stuff on mobile
+.mob-only {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+
+
+
+/*********************/
+/*** MEDIA QUERIES ***/
+/*********************/
+
+/* middle sized screens (for example portrait but not landscape iPad) */
+@media only screen and (max-width: 61em) { //976px
+  .container {
+    width: 100%;
+    padding:0 1em;
+  }
+
+  /* HEADER */
+  #site-header {
+    height:6em;
+    .container {
+      padding:1em;
+    }
+  }
+
+  /* MENU */
+  #nav-wrapper{
+    height:6em;
+    .container {
+      ul#secondary-menu {
+        position:absolute;
+        right:1em;
+        top:3.75em;
+        li a {
+          margin:0 0 0 1.5em;
+        }
+      }
+      ul#primary-menu {
+        right:7em;
+      }
+      #site-search {
+        right:1em;
+      }
+    }
+  }
+
+  /* MAIN CONTENT */
+  .content-with-sidebar {
+    width:66%;
+    float:left;
+  }
+  .sidebar {
+    width:33%;
+  }
+  //reiterate for sepcific cases
+  article.ms_project,
+  article.ms_product {
+    .project_product-section .project_product-section-inner {
+      .content-with-sidebar {
+        width:66%;
+        float:left;
+      }
+      .sidebar {
+        width:33%;
+      }
+    }
+  }
+
+
+  /* GENERAL ELEMENTS */
+  .block-list {
+    // margin:0 -1em 0 0;
+    li {
+      max-width:32%;
+      margin-right:2%;
+      &.last {
+        margin-right:0;
+      }
+    }
+  }
+
+  /* PAGE SPECIFIC */
+  article.ms_project,
+  article.ms_product,
+  article.page {
+    .entry-header {
+      padding:0 0 3em 3em; //48px
+      .entry-title,
+      .entry-intro {
+        max-width:100%;
+        padding:0;
+        float:none;
+      }
+      .featured-gallery {
+        float:none;
+        margin:3em auto 0 auto;
+      }
+    }
+  }
+  article.page .entry-header {
+    padding:0;
+  }
+}
+
+
+
+
+/* small screens (for example small tablets or portrait iPad) */
+@media only screen and (max-width: 50em) { //800px
+  /* MAIN CONTENT */
+  .content-with-sidebar,
+  .sidebar {
+    width:100%;
+    float:none;
+  }
+  //don't make .sidebar and .content fullwidth on homepage or products
+  .homepage,
+  article.ms_project .project_product-section .project_product-section-inner,
+  article.ms_product .project_product-section .project_product-section-inner {
+    .content-with-sidebar {
+      width:66%;
+      float:left;
+    }
+    .sidebar {
+      width:33%;
+      float:left;
+    }
+  }
+
+
+  /* PAGE SPECIFIC */
+  //go 3 col
+  #blog-sidebar {
+    padding-left:0;
+    section {
+      width:30%;
+      float:left;
+      clear:none;
+      margin-right:5%;
+      &:nth-child(even) {
+        margin-left:0;
+        margin-right:5%;
+      }
+      &:nth-child(odd) {
+        clear:none;
+      }
+      &:nth-child(3n+3) {
+        margin-right:0;
+      }
+      &:nth-child(3n+4) {
+        clear:left;
+      }
+    }
+  }
+}

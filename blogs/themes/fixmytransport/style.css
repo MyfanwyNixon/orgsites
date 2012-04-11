@@ -4,8 +4,8 @@
 
 @font-face {
 font-family: 'MuseoSansRounded-500';
-src: url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.eot');
-src: url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.eot?#iefix') format('embedded-opentype'),url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.woff') format('woff'),url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.ttf') format('truetype'),url('http://www.fixmytransport.com/fonts/MuseoSansRounded500.svg#MuseoSansRounded-500') format('svg')
+src: url('./fonts/MuseoSansRounded500.eot');
+src: url('./fonts/MuseoSansRounded500.eot?#iefix') format('embedded-opentype'),url('./fonts/MuseoSansRounded500.woff') format('woff'),url('./fonts/MuseoSansRounded500.ttf') format('truetype'),url('./fonts/MuseoSansRounded500.svg#MuseoSansRounded-500') format('svg')
 }
 
 

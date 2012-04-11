@@ -70,13 +70,9 @@ Header
 	display:none;
 	height: 160px;
 	background-color: #ccc;
-	
 	background-image: url('images/header-front-bg.png');
 	background-repeat: repeat-x;
 	background-position: center left;
-	background-image: url('images/header-front.png'), url('images/header-front-bg.png');
-	background-repeat: no-repeat, repeat-x;
-	background-position: center left, center left;
 }
 .multiplebgs #banner{
 	background-image: url('images/header-front.png'), url('images/header-front-bg.png');
@@ -460,6 +456,10 @@ People not on tiny phones
 		   -moz-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
 		     -o-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
 		        box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+	}
+	.lt-ie9 #sidebar{
+		 border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
 	}
 	#report-problem p{
 		float:none;

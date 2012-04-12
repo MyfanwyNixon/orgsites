@@ -62,20 +62,17 @@ Header
 	margin:auto;
 }
 .svg #logo a{ background: #fff url('images/logo.svg') no-repeat scroll center left; }
-.no-svg #logo a, .no-js #logo a{ background: #fff url('images/logo.png') no-repeat scroll center left; }
+/* For IE8 Lying about supporting SVG */
+.no-svg #logo a, .no-js #logo a, .lt-ie9 #logo a{ background: #fff url('images/logo.png') no-repeat scroll center left; }
 
 #banner{
 	width: 100%;
 	display:none;
 	height: 160px;
 	background-color: #ccc;
-	
 	background-image: url('images/header-front-bg.png');
 	background-repeat: repeat-x;
 	background-position: center left;
-	background-image: url('images/header-front.png'), url('images/header-front-bg.png');
-	background-repeat: no-repeat, repeat-x;
-	background-position: center left, center left;
 }
 .multiplebgs #banner{
 	background-image: url('images/header-front.png'), url('images/header-front-bg.png');
@@ -89,13 +86,23 @@ Header
 Animated Banner
 */
 @-moz-keyframes bgmove {  
-	0% { -moz-transform: translate3d(0%, 0, 0); }  
-	100% { -moz-transform: translate3d(-1000px, 0, 0); }  
+	0% { -moz-transform: translate(0%, 0); }  
+	100% { -moz-transform: translate(-1000px, 0); }  
 }
 @-webkit-keyframes bgmove {  
+	0% { -webkit-transform: translate(0%, 0, 0); }  
+	100% { -webkit-transform: translate(-1000px, 0, 0); }
+}
+
+@-moz-keyframes bgmove3d {  
+	0% { -moz-transform: translate3d(0%, 0); }  
+	100% { -moz-transform: translate3d(-1000px, 0); }  
+}
+@-webkit-keyframes bgmove3d {  
 	0% { -webkit-transform: translate3d(0%, 0, 0); }  
 	100% { -webkit-transform: translate3d(-1000px, 0, 0); }
 }
+
 
 #banner.animated{
 	background-image:none;
@@ -110,7 +117,7 @@ Animated Banner
 #banner.animated .anim-people
 {
 	position:relative;
-	width:2000px;
+	width:200%;
 	height:100%;
 	background-color:transparent;
 	background-position: center left;
@@ -118,11 +125,23 @@ Animated Banner
 }
 #banner.animated .anim-bg{
 	top:0;
+	min-width:2000px;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
 	-moz-animation: bgmove 20s linear 0 infinite;
 	-moz-animation-play-state: paused;
 	-webkit-animation: bgmove 20s linear 0 infinite;
 	-webkit-animation-play-state: paused;
 }
+
+.cssanimations3d #banner.animated .anim-bg
+{
+	-webkit-animation: bgmove3d 20s linear 0 infinite;
+	-webkit-animation-play-state: paused;
+	-moz-animation: bgmove3d 20s linear 0 infinite;
+	-moz-animation-play-state: paused;
+}
+
 #banner.animated:hover .anim-bg,
 #banner.animated.tapplay .anim-bg
 {
@@ -131,6 +150,7 @@ Animated Banner
 }
 #banner.animated .anim-bg2{
 	top:-100%;
+	min-width:2000px;
 	-moz-animation: bgmove 3s linear 0 infinite;
 	-moz-animation-play-state: paused;
 	-webkit-animation: bgmove 3s linear 0 infinite;
@@ -209,6 +229,27 @@ Main
 	background: transparent url('images/tag.png') no-repeat scroll center left;
 	padding-left: 25px;
 }
+#team-members, #team-members li{
+	/* Reset List */
+	display:block; list-style:none; padding:0; margin:0; text-indent:0;
+}
+#team-members li{
+	border: 1px solid #B3B3B3;
+	padding: 0.625em;
+	float: left;
+	width:17.5em;
+	margin:0.3125em;
+	-webkit-border-radius: 0.3125em;
+	   -moz-border-radius: 0.3125em;
+	        border-radius: 0.3125em;
+}
+#team-members img{
+	float:left;
+	margin-right:0.625em;
+}
+#team-members br{ display:none; }
+#team-members h3{ margin: 0; }
+#team-members p { margin: 0;font-size: 0.8em; }
 
 /*
 Comments
@@ -379,6 +420,7 @@ Sidebar
 	font-weight: bold;
 	-webkit-border-radius: 1em;
 	   -moz-border-radius: 1em;
+	    -ms-border-radius: 1em;
 	        border-radius: 1em;
 	-webkit-box-shadow: 0px 2px 0px rgba(0,0,0,0.2);
 	   -moz-box-shadow: 0px 2px 0px rgba(0,0,0,0.2);
@@ -449,6 +491,7 @@ People not on tiny phones
 		position: absolute;
 		top:10px;
 		margin-left: 41.25em;
+		background: #fff url('images/ticket.png') no-repeat scroll top center;
 		background: rgba(255,255,255,0.85) url('images/ticket.png') no-repeat scroll top center;
 		border-bottom:2px dotted #ccc;
 		padding-top:2em;
@@ -456,6 +499,12 @@ People not on tiny phones
 		   -moz-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
 		     -o-box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
 		        box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+	}
+	.no-boxshadow #sidebar,
+	.lt-ie9 #sidebar
+	{
+		 border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
 	}
 	#report-problem p{
 		float:none;

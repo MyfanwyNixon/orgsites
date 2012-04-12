@@ -67,7 +67,7 @@
                       $images = get_field('gallery');
                       if($images) {
                         $sized = vt_resize( $images[0]['image'], '', 288, 180, true );
-                        echo "<a class='thumb' href='".get_permalink()."'><img src='{$sized['url']}' width='{$sized['width']}' height='{$sized['height']}' alt='{$image['alt']}' /></a>";
+                        echo "<a class='thumb' href='".get_permalink()."'><img src='{$sized['url']}' width='{$sized['width']}' height='{$sized['height']}' alt='{$sized['alt']}' /></a>";
                       }
                     ?>
 

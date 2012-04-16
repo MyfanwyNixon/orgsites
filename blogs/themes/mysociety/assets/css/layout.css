@@ -698,6 +698,7 @@ article.page .featured-gallery ul li {
   /* HEADER */
   #site-header {
     height: 6em;
+    margin-top: -6em;
   }
   #site-header .container {
     padding: 1em;

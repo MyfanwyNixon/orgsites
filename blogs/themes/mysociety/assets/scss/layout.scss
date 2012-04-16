@@ -98,12 +98,10 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 }
 
 /* HEADER */
-//stick it to the top of the page
 #site-header {
   width:100%;
-  position: absolute;
-  top:0;
-  left:0;
+  //suck it up to the top of the page
+  margin-top:-4em;
   .container {
     padding:1em 0;
     #site-logo {
@@ -682,7 +680,7 @@ article.page {
         }
       }
       ul#primary-menu {
-        right:7em;
+        right:2.25em;
       }
       #site-search {
         right:1em;

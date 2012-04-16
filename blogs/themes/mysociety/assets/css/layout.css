@@ -86,9 +86,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
 /* HEADER */
 #site-header {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin-top: -4em;
 }
 #site-header .container {
   padding: 1em 0;
@@ -718,7 +716,7 @@ article.page .featured-gallery ul li {
     margin: 0 0 0 1.5em;
   }
   #nav-wrapper .container ul#primary-menu {
-    right: 7em;
+    right: 2.25em;
   }
   #nav-wrapper .container #site-search {
     right: 1em;

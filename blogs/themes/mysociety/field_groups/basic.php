@@ -1,6 +1,7 @@
 <?php
 
 register_field_group(array (
+  'id' => '4f8be177cae42',
   'title' => 'Basic info',
   'fields' => 
   array (

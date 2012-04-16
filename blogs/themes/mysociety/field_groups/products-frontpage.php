@@ -1,6 +1,7 @@
 <?php
 
 register_field_group(array (
+  'id' => '4f8be25568afa',
   'title' => 'Products Front',
   'fields' => 
   array (

@@ -1,6 +1,7 @@
 <?php
 
 register_field_group(array (
+  'id' => '4f8be25a694aa',
   'title' => 'Project / Product Meta',
   'fields' => 
   array (

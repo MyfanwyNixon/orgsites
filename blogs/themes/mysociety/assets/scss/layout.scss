@@ -143,8 +143,18 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
     ul {
       @include list-reset;
       li a {
-        padding:1em;
+        //this is what the menu will fallback to
+        //if incorrectly configured in wp-admin
+        font-size:0.8125em;
+        text-transform:uppercase;
+        padding:0;
+        margin:0 1em;
         border:none;
+        background:none;
+        &:hover {
+          background:none;
+          color:#999999;
+        }
       }
       &#secondary-menu {
         margin-left: 1em;
@@ -152,8 +162,8 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
           background:none;
           font-size:1em;
           color:#999999;
-          padding:0;
           margin:1.4em 1em;
+          text-transform:none;
           &:hover {
             background:none;
             color:#555555;
@@ -165,11 +175,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
         right:2em;
         top:1.4em;
         li a {
-          padding:0;
-          margin:0 1em;
           background:none;
-          font-size:0.8125em;
-          text-transform:uppercase;
           &:hover {
             background:none;
             color:#999999;

@@ -143,8 +143,16 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   display: block;
 }
 #nav-wrapper .container ul li a {
-  padding: 1em;
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 1em;
   border: none;
+  background: none;
+}
+#nav-wrapper .container ul li a:hover {
+  background: none;
+  color: #999999;
 }
 #nav-wrapper .container ul#secondary-menu {
   margin-left: 1em;
@@ -153,8 +161,8 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   background: none;
   font-size: 1em;
   color: #999999;
-  padding: 0;
   margin: 1.4em 1em;
+  text-transform: none;
 }
 #nav-wrapper .container ul#secondary-menu li a:hover {
   background: none;
@@ -166,11 +174,7 @@ h2.pound, h2.build, h2.github, h2.codeblog, h2.wikidocs, h2.bubble, h2.twitter, 
   top: 1.4em;
 }
 #nav-wrapper .container ul#primary-menu li a {
-  padding: 0;
-  margin: 0 1em;
   background: none;
-  font-size: 0.8125em;
-  text-transform: uppercase;
 }
 #nav-wrapper .container ul#primary-menu li a:hover {
   background: none;

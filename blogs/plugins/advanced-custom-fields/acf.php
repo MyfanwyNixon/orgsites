@@ -42,7 +42,7 @@ class Acf
 		
 		// set class variables
 		$this->path = dirname(__FILE__).'';
-		$this->dir = plugins_url('').'/advanced-custom-fields';
+		$this->dir = plugins_url('') . '/' . basename(dirname(__FILE__));
 		$this->siteurl = get_bloginfo('url');
 		$this->wpadminurl = admin_url();
 		$this->version = '3.1.7';

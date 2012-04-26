@@ -59,6 +59,7 @@
 
 
   <?
+    $aria_req = ( get_option( 'require_name_email' ) ? " aria-required='true'" : '' );
     $args = array(
       'title_reply' => __( 'Leave a comment', 'mysociety' ),
       'title_reply_to' => __( 'Leave a reply to %s', 'mysociety' ),

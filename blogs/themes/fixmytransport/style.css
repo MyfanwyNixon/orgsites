@@ -229,11 +229,11 @@ Main
 	background: transparent url('images/tag.png') no-repeat scroll center left;
 	padding-left: 25px;
 }
-#team-members, #team-members li{
+.team-members, .team-members li{
 	/* Reset List */
 	display:block; list-style:none; padding:0; margin:0; text-indent:0;
 }
-#team-members li{
+.team-members li{
 	border: 1px solid #B3B3B3;
 	padding: 0.625em;
 	float: left;
@@ -243,13 +243,13 @@ Main
 	   -moz-border-radius: 0.3125em;
 	        border-radius: 0.3125em;
 }
-#team-members img{
+.team-members img{
 	float:left;
 	margin-right:0.625em;
 }
-#team-members br{ display:none; }
-#team-members h3{ margin: 0; }
-#team-members p { margin: 0;font-size: 0.8em; }
+.team-members br{ display:none; }
+.team-members h3{ margin: 0; }
+.team-members p { margin: 0;font-size: 0.8em; }
 
 /*
 Comments

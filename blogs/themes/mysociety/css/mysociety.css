@@ -440,6 +440,8 @@ h2, h3 {
 a {
   color: #0071BC;
   text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
 
 #header {
   max-width: 100%;
@@ -539,7 +541,8 @@ a {
       #content #products .product-filters.filtered li a strong {
         color: rgba(77, 77, 77, 0.3); }
     #content #products .product-filters:hover li a:hover {
-      color: gray; }
+      color: gray;
+      text-decoration: none; }
       #content #products .product-filters:hover li a:hover strong {
         color: #4d4d4d; }
     #content #products .product-filters.filtered li a.selected {
@@ -555,13 +558,23 @@ a {
     color: #808080; }
     #content #products .product-list a {
       color: #4D4D4D; }
+      #content #products .product-list a:hover {
+        text-decoration: none; }
+      #content #products .product-list a.for_orgs:hover {
+        color: #29ABE2; }
+      #content #products .product-list a.for_public:hover {
+        color: #ED1C24; }
+      #content #products .product-list a.for_volunteers:hover {
+        color: #F7931E; }
+      #content #products .product-list a.for_international:hover {
+        color: #dec600; }
     #content #products .product-list li {
       display: block;
       padding: 0.625em 0.625em 0.625em 5.625em;
       width: 20em;
       float: left;
       margin: 0;
-      height: 7.5em;
+      min-height: 7.5em;
       background: transparent url(../img/blankcircle.png) no-repeat scroll top left; }
       #content #products .product-list li h3 {
         margin: 0;
@@ -570,8 +583,10 @@ a {
         margin: 0;
         font-size: 0.75em;
         line-height: 2; }
-    #content #products .product-list li.blur {
+    #content #products .product-list li.blur, #content #products .product-list.for_orgs li {
       opacity: 0.3; }
+    #content #products .product-list.for_orgs li.for_orgs, #content #products .product-list.for_public li.for_public, #content #products .product-list.for_volunteers li.for_volunteers, #content #products .product-list.for_international li.for_international {
+      opacity: 1; }
     #content #products .product-list li.fms {
       background-image: url(../img/fms.png); }
     #content #products .product-list li.fmt {
@@ -589,11 +604,21 @@ a {
 .svg #header .logo a {
   background: transparent url(../img/logo.svg) no-repeat scroll center center; }
 
-.js .sections {
+.no-js .sections {
+  display: block;
+  padding-bottom: 2em;
+  color: #ddd; }
+.no-js .product-list > li {
+  height: 10em; }
+.no-js .product-filters {
   display: none; }
 
+.js .sections {
+  display: none; }
 .js .product-list > li {
   cursor: pointer; }
+.js .product-list a:hover {
+  text-decoration: none; }
 
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/

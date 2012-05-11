@@ -1,0 +1,17 @@
+body{
+	line-height: 1.5em;
+}
+h1{
+	line-height: 2;
+}
+h2, h3{
+	line-height: 1.5em;
+}
+a{
+	color: #0071BC;
+	text-decoration:none;
+	
+	&:hover{
+		text-decoration:underline;
+	}
+}

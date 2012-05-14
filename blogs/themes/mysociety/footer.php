@@ -1,0 +1,1 @@
+<!-- the global footer, which we will need -->

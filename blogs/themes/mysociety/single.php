@@ -1,0 +1,1 @@
+<!-- a single blog post view -->

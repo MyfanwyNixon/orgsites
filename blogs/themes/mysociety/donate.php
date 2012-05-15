@@ -3,4 +3,4 @@
 Template Name: Donate
 */
 ?>
-<? get_footer(); ?> 
+<? get_footer(); ?>

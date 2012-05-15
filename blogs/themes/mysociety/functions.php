@@ -75,18 +75,18 @@
 			)
 		);
 		
-		//for volunteers
+		//for the public
 		register_post_type(
-			'ms_volunteer',
+			'ms_public',
 			array(
 				'labels' => array(
-					'name'				=> __( 'For Volunteers', 'mysociety' ),
-					'singular_name'		=> __( 'Volunteer Project', 'mysociety' ),
-					'add_new_item'		=> __( 'Add New Volunteer Project', 'mysociety' ),
-					'edit_item'			=> __( 'Edit Volunteer Project', 'mysociety'),
-					'new_item'			=> __( 'New Volunteer Project', 'mysociety' ),
-					'view_item'			=> __( 'View Volunteer Project', 'mysociety'),
-					'search_items'		=> __( 'Search Volunteer Projects', 'mysociety' ),
+					'name'				=> __( 'For The Public', 'mysociety' ),
+					'singular_name'		=> __( 'Public Project', 'mysociety' ),
+					'add_new_item'		=> __( 'Add New Public Project', 'mysociety' ),
+					'edit_item'			=> __( 'Edit Public Project', 'mysociety'),
+					'new_item'			=> __( 'New Public Project', 'mysociety' ),
+					'view_item'			=> __( 'View Public Project', 'mysociety'),
+					'search_items'		=> __( 'Search Public Projects', 'mysociety' ),
 					'not_found'			=> __( 'No projects found', 'mysociety' ),
 					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety' 
 				)

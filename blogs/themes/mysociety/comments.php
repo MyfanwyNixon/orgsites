@@ -1,1 +1,1 @@
-<!-- A comments page -->
+<!-- a page for viewing comments -->

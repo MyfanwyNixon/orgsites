@@ -13,8 +13,8 @@
 	
 	<title>Welcome to mySociety</title>
 	
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/mysociety.css" type="text/css" media="screen, print" charset="utf-8">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/print.css" type="text/css" media="print" charset="utf-8">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/print.css" type="text/css" media="print" charset="utf-8">
 	  
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	

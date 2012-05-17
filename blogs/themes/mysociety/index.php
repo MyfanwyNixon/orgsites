@@ -1,4 +1,4 @@
-<!-- the main blog page -->
+<h1>Index.php</h1>
 <?php
 get_header();
 if (have_posts()) :

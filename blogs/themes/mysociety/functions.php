@@ -47,13 +47,13 @@
 			'public'			=> true,
 			'has_archive'	=> true,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'projects/for-orgs')
+			'rewrite'		=> array('slug' => 'for-orgs')
 			)
 		);
 		
 		//for councils
 		register_post_type(
-			'ms_councils',
+			'ms_council',
 			array(
 				'labels' => array(
 					'name'				=> __( 'For Councils', 'mysociety' ),
@@ -71,7 +71,7 @@
 			'public'			=> true,
 			'has_archive'	=> true,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'projects/for-the-public')
+			'rewrite'		=> array('slug' => 'for-councils')
 			)
 		);
 		
@@ -95,7 +95,7 @@
 			'public'			=> true,
 			'has_archive'	=> true,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'projects/for-volunteers')
+			'rewrite'		=> array('slug' => 'for-the-public')
 			)
 		);
 		
@@ -119,14 +119,14 @@
 			'public'			=> true,
 			'has_archive'	=> true,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'projects/for-volunteers')
+			'rewrite'		=> array('slug' => 'for-volunteers')
 			)
 		);
 	}
 
 	// register field groups
 	if(function_exists("register_field_group")) {
-		// include('field_groups/basic.php'); //basic fields 
-		// include('field_groups/person.php'); //person fields
+		include('field_groups/basic.php');
+		// include('field_groups/project.php');
 	}
 ?>

@@ -107,7 +107,7 @@
 	
 	<?php get_footer(); ?>
 	
-	<script src="../js/homepage.js" type="text/javascript"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/homepage.js" type="text/javascript"></script>
 	
 </body>
 </html>

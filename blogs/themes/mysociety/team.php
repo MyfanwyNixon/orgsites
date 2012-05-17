@@ -3,7 +3,7 @@
 Template Name: Team
 */
 ?>
-<h1>Team</h1>
+<h1><?php the_title();?></h1>
 <?php $values = get_field('people'); ?>
 <?php if($values) : ?>
 	<div class='person'>

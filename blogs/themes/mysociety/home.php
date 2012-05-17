@@ -1,19 +1,19 @@
 <h1>MySociety</h1>
-<?
-get_header();
-?>
+
+<?get_header();?>
+
 <h2>Projects</h2>
-<?
-
-// loop through each of the projects, with their one liners
-$args = array( 'post_type' => 'ms_project', 'posts_per_page' => 10 );
-$loop = new WP_Query( $args );
-while ( $loop->have_posts() ) : $loop->the_post();
-	echo '<div class="entry-content">';
-		the_title(); 
-		echo ': '.get_field('one_liner');
-	echo '</div>';
-endwhile;
-
-get_footer(); 
+<?php
+	$args = array( 'post_type' => 'ms_project', 'posts_per_page' => 10 );
+	$loop = new WP_Query( $args );
 ?>
+
+<?php while ( $loop->have_posts() ) : ?>
+	<?php $loop -> the_post(); ?>
+	<div class="entry-content">
+		<h3><a href='/<?php the_permalink();?>/'><?php the_title(); ?></a></h3>
+		<p><?php echo get_field('one_liner'); ?></p>
+	</div>
+<?php endwhile; ?>
+
+<?php get_footer(); ?>

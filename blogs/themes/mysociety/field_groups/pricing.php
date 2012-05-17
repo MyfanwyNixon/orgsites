@@ -8,7 +8,7 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb4af12ee460',
+  'id' => '4fb4f017aabb1',
   'title' => 'Pricing',
   'fields' => 
   array (
@@ -34,15 +34,25 @@ register_field_group(array (
         ),
         1 => 
         array (
+          'key' => 'field_4fb25835ae7a3',
+          'label' => 'Image',
+          'name' => 'image',
+          'type' => 'image',
+          'save_format' => 'url',
+          'preview_size' => 'thumbnail',
+          'order_no' => '1',
+        ),
+        2 => 
+        array (
           'key' => 'field_4fb25835ae78a',
           'label' => 'Price from',
           'name' => 'from',
           'type' => 'text',
           'default_value' => '1000',
           'formatting' => 'none',
-          'order_no' => '1',
+          'order_no' => '2',
         ),
-        2 => 
+        3 => 
         array (
           'key' => 'field_4fb25835ae795',
           'label' => 'Details',
@@ -50,16 +60,6 @@ register_field_group(array (
           'type' => 'wysiwyg',
           'toolbar' => 'basic',
           'media_upload' => 'no',
-          'order_no' => '2',
-        ),
-        3 => 
-        array (
-          'key' => 'field_4fb25835ae7a3',
-          'label' => 'Image',
-          'name' => 'image',
-          'type' => 'image',
-          'save_format' => 'url',
-          'preview_size' => 'thumbnail',
           'order_no' => '3',
         ),
       ),

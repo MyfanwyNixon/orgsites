@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Register field groups
  * The register_field_group function accepts 1 array which holds the relevant data to register a field group
@@ -8,27 +8,30 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb27f44aa8eb',
-  'title' => 'Parent Project',
+  'id' => '4fb4af2ec9009',
+  'title' => 'Project Facet',
   'fields' => 
   array (
     0 => 
     array (
       'key' => 'field_4fb27366b6e02',
-      'label' => 'Parent',
-      'name' => 'parent',
+      'label' => 'Facet',
+      'name' => 'facet',
       'type' => 'relationship',
-      'instructions' => 'Add the parent project',
+      'instructions' => 'A facet of a project ie. Fix My Street for Organisations, Fix My Street for Councils etc.',
       'required' => '1',
       'post_type' => 
       array (
-        0 => 'ms_project',
+        0 => 'ms_org',
+        1 => 'ms_council',
+        2 => 'ms_public',
+        3 => 'ms_volunteer',
       ),
       'taxonomy' => 
       array (
         0 => 'all',
       ),
-      'max' => '1',
+      'max' => '-1',
       'order_no' => '0',
     ),
   ),
@@ -36,33 +39,19 @@ register_field_group(array (
   array (
     'rules' => 
     array (
-      0 => 
+      3 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
-        'value' => 'ms_org',
-        'order_no' => '0',
-      ),
-      1 => 
-      array (
-        'param' => 'post_type',
-        'operator' => '==',
-        'value' => 'ms_councils',
-        'order_no' => '1',
-      ),
-      2 => 
-      array (
-        'param' => 'post_type',
-        'operator' => '==',
-        'value' => 'ms_volunteer',
-        'order_no' => '2',
+        'value' => 'ms_project',
+        'order_no' => '3',
       ),
     ),
     'allorany' => 'any',
   ),
   'options' => 
   array (
-    'position' => 'normal',
+    'position' => 'side',
     'layout' => 'default',
     'show_on_page' => 
     array (

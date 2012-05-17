@@ -8,64 +8,54 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb4f017aabb1',
-  'title' => 'Pricing',
+  'id' => '4fb4edd8dd670',
+  'title' => 'Partners',
   'fields' => 
   array (
     0 => 
     array (
-      'key' => 'field_4fb25835ae761',
-      'label' => 'Offer',
-      'name' => 'offer',
+      'label' => 'Partner',
+      'name' => 'partner',
       'type' => 'repeater',
-      'instructions' => 'A price point',
+      'instructions' => 'Add a partner\'s details',
       'required' => '0',
       'sub_fields' => 
       array (
         0 => 
         array (
-          'key' => 'field_4fb25835ae77c',
-          'label' => 'Overview',
-          'name' => 'overview',
+          'label' => 'Name',
+          'name' => 'name',
           'type' => 'text',
-          'default_value' => 'Brief description of the offer',
-          'formatting' => 'html',
+          'default_value' => '',
+          'formatting' => 'none',
+          'key' => 'field_4fb4edd1496fb',
           'order_no' => '0',
         ),
         1 => 
         array (
-          'key' => 'field_4fb25835ae7a3',
-          'label' => 'Image',
-          'name' => 'image',
+          'label' => 'Icon',
+          'name' => 'icon',
           'type' => 'image',
           'save_format' => 'url',
           'preview_size' => 'thumbnail',
+          'key' => 'field_4fb4edd14970a',
           'order_no' => '1',
         ),
         2 => 
         array (
-          'key' => 'field_4fb25835ae78a',
-          'label' => 'Price from',
-          'name' => 'from',
-          'type' => 'text',
-          'default_value' => '1000',
-          'formatting' => 'none',
-          'order_no' => '2',
-        ),
-        3 => 
-        array (
-          'key' => 'field_4fb25835ae795',
-          'label' => 'Details',
-          'name' => 'details',
+          'label' => 'Detail',
+          'name' => 'detail',
           'type' => 'wysiwyg',
           'toolbar' => 'basic',
           'media_upload' => 'no',
-          'order_no' => '3',
+          'key' => 'field_4fb4edd149716',
+          'order_no' => '2',
         ),
       ),
       'row_limit' => '',
       'layout' => 'row',
-      'button_label' => '+ Add Price Point',
+      'button_label' => '+ Add Parnter',
+      'key' => 'field_4fb4edd1496d8',
       'order_no' => '0',
     ),
   ),
@@ -75,9 +65,9 @@ register_field_group(array (
     array (
       0 => 
       array (
-        'param' => 'post_type',
+        'param' => 'page_template',
         'operator' => '==',
-        'value' => 'ms_org',
+        'value' => 'partners.php',
         'order_no' => '0',
       ),
     ),
@@ -91,7 +81,10 @@ register_field_group(array (
     array (
       0 => 'the_content',
       1 => 'custom_fields',
-      2 => 'slug',
+      2 => 'discussion',
+      3 => 'comments',
+      4 => 'slug',
+      5 => 'author',
     ),
   ),
   'menu_order' => 0,

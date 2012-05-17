@@ -8,7 +8,7 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb4b3840a613',
+  'id' => '4fb4f5382010d',
   'title' => 'Resources',
   'fields' => 
   array (
@@ -30,13 +30,13 @@ register_field_group(array (
           'type' => 'select',
           'choices' => 
           array (
-            'github' => 'GitHub',
+            'github: GitHub' => 'github: GitHub',
             'wiki' => 'Wiki',
-            'group' => 'Google Group',
-            'irc' => 'IRC Channel',
-            'twitter' => 'Twitter name',
-            'blog' => 'Blog',
-            'faq' => 'FAQ',
+            'group: Google Group' => 'group: Google Group',
+            'IRC: IRC Channel' => 'IRC: IRC Channel',
+            'Twitter: twitter name' => 'Twitter: twitter name',
+            'Blog: Blog' => 'Blog: Blog',
+            'faq: FAQ' => 'faq: FAQ',
             'leaflet' => 'Downloadable Leaflet',
           ),
           'default_value' => '',
@@ -66,7 +66,7 @@ register_field_group(array (
         ),
       ),
       'row_limit' => '',
-      'layout' => 'row',
+      'layout' => 'table',
       'button_label' => '+ Add Resource',
       'order_no' => '0',
     ),
@@ -88,6 +88,20 @@ register_field_group(array (
         'operator' => '==',
         'value' => 'ms_public',
         'order_no' => '1',
+      ),
+      2 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ms_org',
+        'order_no' => '2',
+      ),
+      3 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ms_public',
+        'order_no' => '3',
       ),
     ),
     'allorany' => 'any',

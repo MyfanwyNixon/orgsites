@@ -13,11 +13,11 @@
 	
 	<title>Welcome to mySociety</title>
 	
-	<link rel="stylesheet" href="../css/mysociety.css" type="text/css" media="screen, print" charset="utf-8">
-	<link rel="stylesheet" href="../css/print.css" type="text/css" media="print" charset="utf-8">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/mysociety.css" type="text/css" media="screen, print" charset="utf-8">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/print.css" type="text/css" media="print" charset="utf-8">
 	  
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
-	<script src="../js/libs/modernizr-2.5.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-2.5.3.js" type="text/javascript" charset="utf-8"></script>
 	
 </head>

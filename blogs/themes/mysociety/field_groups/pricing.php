@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Register field groups
  * The register_field_group function accepts 1 array which holds the relevant data to register a field group
@@ -8,7 +8,7 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb27ef696d65',
+  'id' => '4fb4af12ee460',
   'title' => 'Pricing',
   'fields' => 
   array (

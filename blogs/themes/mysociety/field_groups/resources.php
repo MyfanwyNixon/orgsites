@@ -8,7 +8,7 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb4b00413b7f',
+  'id' => '4fb4b3840a613',
   'title' => 'Resources',
   'fields' => 
   array (
@@ -32,8 +32,11 @@ register_field_group(array (
           array (
             'github: GitHub' => 'github: GitHub',
             'wiki' => 'Wiki',
+            'group: Google Group' => 'group: Google Group',
+            'IRC: IRC Channel' => 'IRC: IRC Channel',
+            'Twitter: twitter name' => 'Twitter: twitter name',
+            'Blog: Blog' => 'Blog: Blog',
             'faq: FAQ' => 'faq: FAQ',
-            'support' => 'Support',
             'leaflet' => 'Downloadable Leaflet',
           ),
           'default_value' => '',

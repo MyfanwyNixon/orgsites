@@ -1,34 +1,46 @@
 <?php
 
 register_field_group(array (
-  'id' => '4f8be177cae42',
-  'title' => 'Basic info',
+  'id' => '4fb3a087597f3',
+  'title' => 'Project Info',
   'fields' => 
   array (
-	0 => 
-	array (
-	  'key' => 'field_4f6c7fae9eaa8',
-	  'label' => 'Introduction',
-	  'name' => 'intro',
-	  'type' => 'textarea',
-	  'default_value' => '',
-	  'formatting' => 'none',
-	  'instructions' => '',
-	  'required' => '0',
-	  'order_no' => '0'
-	),
-	1 => 
-	array (
-	  'key' => 'field_4f6c7faeae066',
-	  'label' => 'Main Body',
-	  'name' => 'body',
-	  'type' => 'wysiwyg',
-	  'toolbar' => 'full',
-	  'media_upload' => 'yes',
-	  'instructions' => '',
-	  'required' => '0',
-	  'order_no' => '1'
-	)
+    0 => 
+    array (
+      'key' => 'field_4fb258b51eb4b',
+      'label' => 'Strapline',
+      'name' => 'strapline',
+      'type' => 'text',
+      'instructions' => 'The strapline appears under the project title',
+      'required' => '0',
+      'default_value' => 'A witty strapline',
+      'formatting' => 'none',
+      'order_no' => '0',
+    ),
+    1 => 
+    array (
+      'key' => 'field_4fb258b51f1f8',
+      'label' => 'Overview',
+      'name' => 'overview',
+      'type' => 'wysiwyg',
+      'instructions' => 'Th overview',
+      'required' => '0',
+      'toolbar' => 'basic',
+      'media_upload' => 'no',
+      'order_no' => '1',
+    ),
+    2 => 
+    array (
+      'key' => 'field_4fb397cf752d6',
+      'label' => 'Image',
+      'name' => 'image',
+      'type' => 'image',
+      'instructions' => 'The headline image to appear aside the title on the project page',
+      'required' => '0',
+      'save_format' => 'url',
+      'preview_size' => 'thumbnail',
+      'order_no' => '2',
+    ),
   ),
   'location' => 
   array (
@@ -36,45 +48,38 @@ register_field_group(array (
 	array (
 	  0 => 
 	  array (
-		'param' => 'page_template',
-		'operator' => '!=',
-		'value' => 'products.php',
-		'order_no' => '0'
-	  ),
-	  1 => 
-	  array (
-		'param' => 'page_template',
-		'operator' => '==',
-		'value' => 'default',
-		'order_no' => '1'
-	  ),
-	  2 => 
-	  array (
-		'param' => 'post_type',
-		'operator' => '==',
-		'value' => 'ms_faq',
-		'order_no' => '2'
-	  ),
-	  3 => 
-	  array (
 		'param' => 'post_type',
 		'operator' => '==',
 		'value' => 'ms_project',
-		'order_no' => '3'
+		'order_no' => '0'
 	  ),
+      1 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ms_org',
+        'order_no' => '1',
+      ),
+      2 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ms_public',
+        'order_no' => '2',
+      ),
+      3 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ms_volunteer',
+        'order_no' => '3',
+      ),	
 	  4 => 
-	  array (
-		'param' => 'post_type',
-		'operator' => '==',
-		'value' => 'ms_product',
-		'order_no' => '4'
-	  ),
-	  5 => 
-	  array (
-		'param' => 'post_type',
-		'operator' => '==',
-		'value' => 'post',
-		'order_no' => '5'
+	    array (
+	      'param' => 'post_type',
+	      'operator' => '==',
+	      'value' => 'ms_council',
+	      'order_no' => '1',
 	  )
 	),
 	'allorany' => 'any'

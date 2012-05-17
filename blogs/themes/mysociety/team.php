@@ -1,22 +1,20 @@
-<h1>Team.php</h1>
 <?php
 /*
 Template Name: Team
 */
 ?>
-<?php
-	$values = get_field('people');
-	if($values){
-		echo '<ul>';
-			foreach($values as $value){
-				foreach($value as $v){
-					echo '<li>' . $v . '</li>';
-				}
-			}
-		echo '</ul>';
-	}
+<h1>Team</h1>
+<?php $values = get_field('people'); ?>
+<?php if($values) : ?>
+	<div class='person'>
+		<?php foreach($values as $value) : ?>
+			<h3> <?php echo $value['name']; ?> </h3>
+			<?php if($value['mug']) : ?>
+				<img src= '<?php echo $value['mug']; ?>' alt='<?php echo 'mugshot of '.$value['name']; ?>'>
+			<?php endif ?>
+			<p><?php echo $value['about']; ?></p>
+		<?php endforeach ?>
+	</div>
+<?php endif ?>
 
-	// always good to see exactly what you are working with
-	var_dump($values);
-?>
 <? get_footer(); ?>

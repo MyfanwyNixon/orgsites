@@ -21,7 +21,7 @@
 			),
 			'taxonomies'		=> array('category'),
 			'public'			=> true,
-			'has_archive'	=> true,
+			'has_archive'	=> false,
 			'menu_position'	=> 5,
 			'rewrite'		=> array('slug' => 'projects')
 			)
@@ -45,7 +45,7 @@
 			),
 			'taxonomies'		=> array('category'),
 			'public'			=> true,
-			'has_archive'	=> true,
+			'has_archive'	=> false,
 			'menu_position'	=> 5,
 			'rewrite'		=> array('slug' => 'for-orgs')
 			)
@@ -69,7 +69,7 @@
 			),
 			'taxonomies'		=> array('category'),
 			'public'			=> true,
-			'has_archive'	=> true,
+			'has_archive'	=> false,
 			'menu_position'	=> 5,
 			'rewrite'		=> array('slug' => 'for-councils')
 			)
@@ -93,7 +93,7 @@
 			),
 			'taxonomies'		=> array('category'),
 			'public'			=> true,
-			'has_archive'	=> true,
+			'has_archive'	=> false,
 			'menu_position'	=> 5,
 			'rewrite'		=> array('slug' => 'for-the-public')
 			)
@@ -117,7 +117,7 @@
 			),
 			'taxonomies'		=> array('category'),
 			'public'			=> true,
-			'has_archive'	=> true,
+			'has_archive'	=> false,
 			'menu_position'	=> 5,
 			'rewrite'		=> array('slug' => 'for-volunteers')
 			)
@@ -127,6 +127,13 @@
 	// register field groups
 	if(function_exists("register_field_group")) {
 		include('field_groups/basic.php');
-		// include('field_groups/project.php');
+		include('field_groups/project.php');
+		include('field_groups/case_studies.php');
+		include('field_groups/facet.php');
+		include('field_groups/features.php');
+		include('field_groups/homepage_filter.php');
+		include('field_groups/pricing.php');
+		include('field_groups/resources.php');
+		include('field_groups/team_member.php');
 	}
 ?>

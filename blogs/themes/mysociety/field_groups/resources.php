@@ -8,15 +8,15 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb4f5382010d',
+  'id' => '4fb5193e54a37',
   'title' => 'Resources',
   'fields' => 
   array (
     0 => 
     array (
       'key' => 'field_4fb277b04dfd6',
-      'label' => 'Links',
-      'name' => 'links',
+      'label' => 'Resources',
+      'name' => 'resources',
       'type' => 'repeater',
       'instructions' => 'Links to project resources',
       'required' => '0',
@@ -25,19 +25,19 @@ register_field_group(array (
         0 => 
         array (
           'key' => 'field_4fb277b04dfed',
-          'label' => 'Destination',
-          'name' => 'destination',
+          'label' => 'Type',
+          'name' => 'type',
           'type' => 'select',
           'choices' => 
           array (
-            'github: GitHub' => 'github: GitHub',
-            'wiki' => 'Wiki',
-            'group: Google Group' => 'group: Google Group',
-            'IRC: IRC Channel' => 'IRC: IRC Channel',
-            'Twitter: twitter name' => 'Twitter: twitter name',
-            'Blog: Blog' => 'Blog: Blog',
-            'faq: FAQ' => 'faq: FAQ',
-            'leaflet' => 'Downloadable Leaflet',
+            'github' => 'github',
+            'wiki' => 'wiki',
+            'group' => 'group',
+            'irc' => 'irc',
+            'twitter' => 'twitter',
+            'blog' => 'blog',
+            'faq' => 'faq',
+            'leaflet' => 'leaflet',
           ),
           'default_value' => '',
           'allow_null' => '0',
@@ -102,6 +102,13 @@ register_field_group(array (
         'operator' => '==',
         'value' => 'ms_public',
         'order_no' => '3',
+      ),
+      4 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ms_council',
+        'order_no' => '4',
       ),
     ),
     'allorany' => 'any',

@@ -8,7 +8,7 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb4f017aabb1',
+  'id' => '4fb518d582f7e',
   'title' => 'Pricing',
   'fields' => 
   array (
@@ -80,8 +80,15 @@ register_field_group(array (
         'value' => 'ms_org',
         'order_no' => '0',
       ),
+      1 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ms_council',
+        'order_no' => '1',
+      ),
     ),
-    'allorany' => 'all',
+    'allorany' => 'any',
   ),
   'options' => 
   array (

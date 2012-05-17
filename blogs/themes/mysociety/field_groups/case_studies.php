@@ -8,12 +8,13 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb27ed100f3d',
+  'id' => '4fb518eae3c70',
   'title' => 'Case Studies',
   'fields' => 
   array (
     0 => 
     array (
+      'key' => 'field_4fb27b94ed718',
       'label' => 'Case Study',
       'name' => 'case_study',
       'type' => 'repeater',
@@ -23,39 +24,38 @@ register_field_group(array (
       array (
         0 => 
         array (
+          'key' => 'field_4fb27b94ed74f',
           'label' => 'Client',
           'name' => 'client',
           'type' => 'text',
           'default_value' => '',
           'formatting' => 'none',
-          'key' => 'field_4fb27b94ed74f',
           'order_no' => '0',
         ),
         1 => 
         array (
+          'key' => 'field_4fb27b94ed76a',
           'label' => 'Image',
           'name' => 'image',
-          'type' => 'text',
-          'default_value' => '',
-          'formatting' => 'none',
-          'key' => 'field_4fb27b94ed76a',
+          'type' => 'image',
+          'save_format' => 'url',
+          'preview_size' => 'thumbnail',
           'order_no' => '1',
         ),
         2 => 
         array (
+          'key' => 'field_4fb27b94ed783',
           'label' => 'Blurb',
           'name' => 'blurb',
           'type' => 'textarea',
           'default_value' => '',
           'formatting' => 'br',
-          'key' => 'field_4fb27b94ed783',
           'order_no' => '2',
         ),
       ),
       'row_limit' => '',
       'layout' => 'row',
       'button_label' => '+ Add Case Study',
-      'key' => 'field_4fb27b94ed718',
       'order_no' => '0',
     ),
   ),
@@ -70,8 +70,15 @@ register_field_group(array (
         'value' => 'ms_org',
         'order_no' => '0',
       ),
+      1 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ms_council',
+        'order_no' => '1',
+      ),
     ),
-    'allorany' => 'all',
+    'allorany' => 'any',
   ),
   'options' => 
   array (

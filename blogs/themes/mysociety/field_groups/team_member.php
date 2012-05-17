@@ -8,12 +8,13 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb27e8eb24a6',
+  'id' => '4fb51908266be',
   'title' => 'Team Members',
   'fields' => 
   array (
     0 => 
     array (
+      'key' => 'field_4fb25ace1cdc2',
       'label' => 'People',
       'name' => 'people',
       'type' => 'repeater',
@@ -23,39 +24,48 @@ register_field_group(array (
       array (
         0 => 
         array (
+          'key' => 'field_4fb25ace1cdd9',
           'label' => 'Name',
           'name' => 'name',
           'type' => 'text',
           'default_value' => '',
           'formatting' => 'none',
-          'key' => 'field_4fb25ace1cdd9',
           'order_no' => '0',
         ),
         1 => 
         array (
+          'label' => 'Position',
+          'name' => 'position',
+          'type' => 'text',
+          'default_value' => '',
+          'formatting' => 'none',
+          'key' => 'field_4fb4e82cb8a8f',
+          'order_no' => '1',
+        ),
+        2 => 
+        array (
+          'key' => 'field_4fb25ace1cde7',
           'label' => 'Mugshot',
           'name' => 'mug',
           'type' => 'image',
           'save_format' => 'url',
           'preview_size' => 'thumbnail',
-          'key' => 'field_4fb25ace1cde7',
-          'order_no' => '1',
+          'order_no' => '2',
         ),
-        2 => 
+        3 => 
         array (
+          'key' => 'field_4fb25ace1cdf2',
           'label' => 'About',
           'name' => 'about',
           'type' => 'wysiwyg',
           'toolbar' => 'basic',
           'media_upload' => 'no',
-          'key' => 'field_4fb25ace1cdf2',
-          'order_no' => '2',
+          'order_no' => '3',
         ),
       ),
       'row_limit' => '',
       'layout' => 'row',
       'button_label' => '+ Add Team Member',
-      'key' => 'field_4fb25ace1cdc2',
       'order_no' => '0',
     ),
   ),

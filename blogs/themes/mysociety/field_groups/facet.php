@@ -8,7 +8,7 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb4af2ec9009',
+  'id' => '4fb519297161b',
   'title' => 'Project Facet',
   'fields' => 
   array (

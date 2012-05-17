@@ -135,5 +135,6 @@
 		include('field_groups/pricing.php');
 		include('field_groups/resources.php');
 		include('field_groups/team_member.php');
+		include('field_groups/partners.php');
 	}
 ?>

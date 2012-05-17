@@ -8,7 +8,7 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb4ae6f4186a',
+  'id' => '4fb5195ee300d',
   'title' => 'Features',
   'fields' => 
   array (
@@ -64,7 +64,7 @@ register_field_group(array (
       array (
         'param' => 'post_type',
         'operator' => '==',
-        'value' => 'ms_councils',
+        'value' => 'ms_council',
         'order_no' => '1',
       ),
     ),
@@ -76,12 +76,6 @@ register_field_group(array (
     'layout' => 'default',
     'show_on_page' => 
     array (
-      0 => 'the_content',
-      1 => 'custom_fields',
-      2 => 'discussion',
-      3 => 'comments',
-      4 => 'slug',
-      5 => 'author',
     ),
   ),
   'menu_order' => 0,

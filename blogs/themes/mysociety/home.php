@@ -81,23 +81,23 @@
 							<h3><a href="/<?php the_permalink(); ?>/"><?php the_title(); ?></a></h3>
 						<?php else : ?>
 							<?php //TODO: link straight through to the permalink of the single project page if possible?>
-							<h3><a href="/<?php the_permalink();?>/"><?php the_title(); ?></a></h3>
+							<h3><a href="/<?php the_permalink(); ?>/"><?php the_title(); ?></a></h3>
 						<?php endif ?>
 						<p><?php echo get_field('one_liner'); ?></p>
 						<p class="sections">
 							<?php 
 								if(get_field('facet')){
-									$sections = array(); // an array of tags
+									$sections = array(); // an array of sections under each project title
 									foreach(get_field('facet') as $ms_post){
 										switch ($ms_post->post_type){
 										    case 'ms_org':
-												array_push($sections,'<a class="for_orgs" href="'.$ms_post->guid.'">for Organisations</a>'); 
+												array_push($sections,'<a class="for_orgs" href="'.$ms_post->guid.'">for&nbsp;Organisations</a>'); 
 										        break;
 										    case 'ms_public':
-												array_push($sections, '<a class="for_public" href="'.$ms_post->guid.'">for the Public</a>'); 
+												array_push($sections, '<a class="for_public" href="'.$ms_post->guid.'">for&nbsp;the&nbsp;Public</a>'); 
 										        break;
 										    case 'ms_volunteer':
-												array_push($sections, '<a class="for_volunteers" href="'.$ms_post->guid.'">for Volunteers</a>'); 
+												array_push($sections, '<a class="for_volunteers" href="'.$ms_post->guid.'">for&nbsp;Volunteers</a>'); 
 										        break;
 										    case 'ms_international':
 												array_push($sections, '<a class="for_international" href="'.$ms_post->guid.'">International</a>'); 

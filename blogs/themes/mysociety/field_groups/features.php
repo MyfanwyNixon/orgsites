@@ -8,7 +8,7 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fb5195ee300d',
+  'id' => '4fb67a490fe40',
   'title' => 'Features',
   'fields' => 
   array (
@@ -34,13 +34,23 @@ register_field_group(array (
         ),
         1 => 
         array (
+          'label' => 'image',
+          'name' => 'iamge',
+          'type' => 'image',
+          'save_format' => 'url',
+          'preview_size' => 'thumbnail',
+          'key' => 'field_4fb679dd7e76a',
+          'order_no' => '1',
+        ),
+        2 => 
+        array (
           'key' => 'field_4fb3a617a41f5',
           'label' => 'Detail',
           'name' => 'detail',
           'type' => 'wysiwyg',
           'toolbar' => 'basic',
           'media_upload' => 'no',
-          'order_no' => '1',
+          'order_no' => '2',
         ),
       ),
       'row_limit' => '',

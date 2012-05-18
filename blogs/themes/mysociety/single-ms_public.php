@@ -18,30 +18,23 @@
 	<ul>
 	<?php foreach(get_field('resources') as $resource): ?>
 	    <li>
-			<a href='<?php echo $resource['url']; ?>'><?php echo $resource['text']; ?></>
+			<a href='<?php echo $resource['url']; ?>'><?php echo $resource['text']; ?></a>
 		</li>
 	<?php endforeach; ?>
 	</ul>
 <?php endif ?>
 
+<!-- TODO get some posts to display -->
 <?php
-	$args = array( 'post_type' => 'post', 'posts_per_page' => 5, 'post_status' => 'publish');
+	$args = array( 'post_type' => 'post', 'posts_per_page' => 5 );
 	$loop = new WP_Query( $args );
 ?>
-
+<h3>Blog</h3>
 <?php while ( $loop->have_posts() ) : ?>
 	<?php $loop -> the_post(); ?>
-	<li id="product-<?php /* TODO: Add an ID for each project eg: product-fms. Could be url encoded title */ ?>" class="<?php /* TODO: Add the following classes where appropiate: for_orgs for_public for_volunteers for_international */ ?>">
-		<h3><a href="/<?php the_permalink();?>/"><?php the_title(); ?></a></h3>
-		<p><?php echo get_field('one_liner'); ?></p>
-		<p class="sections">
-			<?php /* TODO: Output the appropiate links for the facets */ ?>
-			<a class="for_orgs" href="/<?php the_permalink();?>/">for Organisations</a> | 
-			<a class="for_public" href="/<?php the_permalink();?>/">for the Public</a> | 
-			<a class="for_volunteers" href="/<?php the_permalink();?>/">for Volunteers</a> | 
-			<a class="for_international" href="/<?php the_permalink();?>/">International</a>
-		</p>
-	</li>
+	<h4><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h4>
+	<p><?php the_content(); ?></p>
+	<p><small><?php the_category(', ');?></small></p>
 <?php endwhile; ?>
 
 <?php get_footer();?>

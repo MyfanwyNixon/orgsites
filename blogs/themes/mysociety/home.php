@@ -12,29 +12,25 @@
 			<h2>Products</h2>
 			
 			<!-- Insert with JS as it makes more sense to just have a list if the filters aren't going to work anyway -->
-			<ul class="product-filters">
-				
+			<ul class="product-filters">	
 				<li>
 					<a class="for_orgs" href="#">
 						<strong>For Organisations</strong>
 						Software products, services and consulting. For Government, Councils and Corporates.
 					</a>
 				</li>
-				
 				<li>
 					<a class="for_public" href="#">
 						<strong>For the Public</strong>
 						Our core charitable UK sites like TheyWorkForYou, FixMyStreet and FixMyTransport
 					</a>
 				</li>
-				
 				<li>
 					<a class="for_volunteers" href="#">
 						<strong>For Volunteers</strong>
 						Most of our sites are Open Source and we welcome contributors
 					</a>
 				</li>
-				
 				<li>
 					<a class="for_international" href="#">
 						<strong>International</strong>
@@ -50,16 +46,67 @@
 				?>
 
 				<?php while ( $loop->have_posts() ) : ?>
-					<?php $loop -> the_post(); ?>
-					<li id="product-<?php /* TODO: Add an ID for each project eg: product-fms. Could be url encoded title */ ?>" class="<?php /* TODO: Add the following classes where appropiate: for_orgs for_public for_volunteers for_international */ ?>">
-						<h3><a href="/<?php the_permalink();?>/"><?php the_title(); ?></a></h3>
+					<?php 
+						// loop over the posts facets and assign the correct tags
+						$loop -> the_post();
+						if(get_field('facet')){
+							$tags = array(); // an array of tags
+							foreach(get_field('facet') as $ms_post){
+								switch ($ms_post->post_type){
+								    case 'ms_public':
+										$key = 'for_public';
+								        array_push($tags, $key);
+								        break;
+								    case 'ms_org':
+										$key = 'for_orgs';
+								        array_push($tags,$key);
+								        break;
+								    case 'ms_volunteer':
+										$key = 'for_volunteers';
+								        array_push($tags,$key);
+								        break;
+								    case 'ms_international':
+								        $key = 'for_international';
+								        array_push($tags,$key);
+								        break;
+									default:
+										$key = $ms_post->post_type;
+								        array_push($tags,$key);
+								}
+							}
+						}
+					?>
+					<li class="<?php echo implode($tags, ' '); ?>">
+						<?php if( count($tags) > 1 ) : ?>
+							<h3><a href="/<?php the_permalink(); ?>/"><?php the_title(); ?></a></h3>
+						<?php else : ?>
+							<?php //TODO: link straight through to the permalink of the single project page if possible?>
+							<h3><a href="/<?php the_permalink();?>/"><?php the_title(); ?></a></h3>
+						<?php endif ?>
 						<p><?php echo get_field('one_liner'); ?></p>
 						<p class="sections">
-							<?php /* TODO: Output the appropiate links for the facets */ ?>
-							<a class="for_orgs" href="/<?php the_permalink();?>/">for Organisations</a> | 
-							<a class="for_public" href="/<?php the_permalink();?>/">for the Public</a> | 
-							<a class="for_volunteers" href="/<?php the_permalink();?>/">for Volunteers</a> | 
-							<a class="for_international" href="/<?php the_permalink();?>/">International</a>
+							<?php 
+								if(get_field('facet')){
+									$sections = array(); // an array of tags
+									foreach(get_field('facet') as $ms_post){
+										switch ($ms_post->post_type){
+										    case 'ms_org':
+												array_push($sections,'<a class="for_orgs" href="'.$ms_post->guid.'">for Organisations</a>'); 
+										        break;
+										    case 'ms_public':
+												array_push($sections, '<a class="for_public" href="'.$ms_post->guid.'">for the Public</a>'); 
+										        break;
+										    case 'ms_volunteer':
+												array_push($sections, '<a class="for_volunteers" href="'.$ms_post->guid.'">for Volunteers</a>'); 
+										        break;
+										    case 'ms_international':
+												array_push($sections, '<a class="for_international" href="'.$ms_post->guid.'">International</a>'); 
+										        break;
+										}
+									}
+									echo implode($sections, ' | ');
+								}
+							?>
 						</p>
 					</li>
 				<?php endwhile; ?>

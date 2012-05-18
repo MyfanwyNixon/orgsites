@@ -5,7 +5,7 @@
 	margin: 0;
 	text-align: left;
 	padding: 1em;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #ddd;
 	
 	.logo{
 		display:inline;
@@ -32,13 +32,14 @@
 		border-bottom: #ddd 1px solid;
 	}
 }
-.homepage #header{
+body.homepage #header{
 	
 	max-width:100%;
 	width: 60em;
 	margin: 2em auto 3em auto;
 	text-align: center;
 	padding: 2em 0 0 0;
+	border:none;
 	
 	.logo{
 		display:inline;
@@ -47,7 +48,7 @@
 			height: 1.875em;
 			background: transparent url(img/logo.png) no-repeat scroll center center;
 			background-size: auto 100%;
-			
+			width:100%;
 			// Text IR
 			text-indent: 100%;
 			white-space: nowrap;  
@@ -271,10 +272,16 @@
 			padding: 2em 0;
 			
 			.screenshots{
-				display:block;
+				display: block;
 				width: 28.75em;
-				float:left;
+				float: left;
+				list-style: none;
+				margin: 0;
+				padding: 0;
 				
+				img{
+					max-width: 100%;
+				}
 			}
 			p,
 			hgroup
@@ -333,43 +340,82 @@
 			
 		}
 		
-		.product-options>ul,
-		.product-options-pricing>ul,
-		.product-options-features>ul
+		.product-options,
+		.product-options-pricing,
+		.product-options-features
 		{
-			display:block;
-			list-style:none;
-			padding:0;
-			max-width:100%;
-			width: 60em;
-			margin: 0 auto;
-			padding-bottom: 5em;
-			vertical-align: top;
+			h3{
+				em{
+					font-size: 0.65em;
+					color: #999;
+					font-style: normal;
+					font-weight: normal;
+					padding-left: 0.5em;
+				}
+			}
 			
+			&>ul{
+				display:block;
+				list-style:none;
+				padding:0;
+				max-width:100%;
+				width: 60em;
+				margin: 0 auto;
+				vertical-align: top;
+			}
 			
-			&>li{
+			&>ul>li{
 				display: inline-block;
 				vertical-align: top;
 				width: 20em;
 				padding: 0.625em;
+				
+				img{
+					max-width:100%;
+				}
 			}
 		}
-		.product-options-features ul{
-			&>li{
+		.product-options{
+			&>ul>li{
 				vertical-align:bottom;
 			}
 		}
-		.product-options-features ul{
-			&>li{
+		.product-options-features{
+			&>ul>li{
 				//width: 15em;
 				width:30em;
 			}
 		}
 		
+		
 	}
 }
 #footer{
 	clear:both;
+	background-color: #444;
+	width: 100%;
+	float:left;
+	padding: 2em 0;
+	
+	section{
+		max-width:100%;
+		width: 60em;
+		margin: 0 auto;
+		padding-bottom: 2em;
+	}
+	
+	#footer_links{
+		width: 15em;
+		float:left;
+	}
+	
+	#footer_blurb{
+		display: block;
+		width: 40em;
+		margin-right: 5em;
+		padding: 0.625em;
+		float: right;
+	}
 }
 
 

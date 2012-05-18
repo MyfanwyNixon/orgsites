@@ -1,6 +1,40 @@
 #header{
 	
 	max-width:100%;
+	width: 100%;
+	margin: 0;
+	text-align: left;
+	padding: 1em;
+	border-bottom: 1px solid #ccc;
+	
+	.logo{
+		display:inline;
+		a{
+			display:block;
+			height: 1em;
+			width:8em;
+			background: transparent url(../img/logo.png) no-repeat scroll center left;
+			background-size: auto 1em;
+			
+			// Text IR
+			text-indent: 100%;
+			white-space: nowrap;  
+			overflow: hidden;
+		}
+	}
+	
+	.oneliner{
+		color: rgba(0,0,0,0.6);
+		font-family: 'Myriad Pro Semibold', 'MyriadPro-Semibold', sans-serif;
+		padding: 1.5em 0;
+		margin-top: 2em;
+		border-top: #ddd 1px solid;
+		border-bottom: #ddd 1px solid;
+	}
+}
+.homepage #header{
+	
+	max-width:100%;
 	width: 60em;
 	margin: 2em auto 3em auto;
 	text-align: center;
@@ -31,6 +65,8 @@
 	}
 }
 
+
+
 #content{
 	
 	section{
@@ -50,10 +86,6 @@
 			padding: 0 0.625em;
 			color: #808080;
 			
-//			a{
-//				color: #333333;
-//			}
-			
 			ul{
 				padding: 0;
 				margin-top: 0;
@@ -66,6 +98,7 @@
 			color: #4D4D4D;
 			padding: 0 0.2778em;
 		}
+		
 		h3{
 			font-size: 2.25em;
 			font-weight: normal;
@@ -78,6 +111,7 @@
 			color: #808080;
 			padding: 0 0.625em;
 		}
+		
 	}
 	
 	#products{
@@ -220,6 +254,88 @@
 			li.twfy{ background-image: url(../img/twfy.png); }
 			li.afoi{ background-image: url(../img/afoi.png); }
 			li.mapumental{ background-image: url(../img/mapumental.png); }
+		}
+	}
+	.product{
+		
+		header,
+		section{
+			max-width:100%;
+			width: 60em;
+			margin: 0 auto;
+			padding-bottom: 5em;
+		}
+		
+		header{
+			
+			padding: 2em 0;
+			
+			.screenshots{
+				display:block;
+				width: 28.75em;
+				float:left;
+				
+			}
+			p,
+			hgroup
+			{
+				width: 28.75em;
+				float:right;
+				clear:right;
+			}
+			hgroup{
+
+				
+				h2{
+					font-size: 2.25em;
+					margin: 0;
+					padding:0;
+					color: #4D4D4D;
+
+					strong{
+						font-size: 1.3333em;
+					}
+				}
+				h3{
+					font-size: 1.5em;
+					font-weight: normal;
+					color: #B3B3B3;
+					margin: 0;
+					padding:0;
+					line-height: 1;
+				}
+			}
+		}
+		
+		.action{
+			width: 100%;
+			clear: both;
+			font-size: 1.25em;
+			text-align: center;
+			padding: 0.75em 0;
+			background-color:#ddd;
+			margin: 1em 0;
+			
+			a{
+				color: #666;
+			}
+			
+			a:hover{
+				text-decoration: none;
+			}
+			
+			strong{
+				text-decoration: underline;
+				color: #444;
+			}
+			
+			
+		}
+		
+		.product-options{
+			padding:0;
+			display:block;
+			list-style:none;
 		}
 	}
 }

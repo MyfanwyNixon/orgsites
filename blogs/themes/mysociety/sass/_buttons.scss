@@ -1,0 +1,17 @@
+.btn{
+	display: block;
+	display: inline-block;
+	color:#fff;
+	background-color: #666666;
+	padding: 0.625em 1.25em;
+	-webkit-border-radius: 0.625em;
+	   -moz-border-radius: 0.625em;
+	        border-radius: 0.625em;
+	width: 18.75em;
+	max-width: 100%;
+	text-align: center;
+	&:hover{
+		text-decoration:none;
+		background-color: #777;
+	}
+}

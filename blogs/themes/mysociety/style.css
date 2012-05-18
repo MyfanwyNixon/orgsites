@@ -6,9 +6,13 @@ Author URI: http://mysociety.org
 Description: A theme to rule all themes
 Version: 0.0
 */
-
 /* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
-/* Corrects block display not defined in IE6/7/8/9 & FF3 */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
 article,
 aside,
 details,
@@ -432,7 +436,10 @@ table {
   box-sizing: border-box; }
 
 body {
-  line-height: 1.5em; }
+  color: #666666; }
+
+body {
+  line-height: 1.875em; }
 
 h1 {
   line-height: 2; }
@@ -446,23 +453,65 @@ a {
   a:hover {
     text-decoration: underline; }
 
+.btn {
+  display: block;
+  display: inline-block;
+  color: #fff;
+  background-color: #666666;
+  padding: 0.625em 1.25em;
+  -webkit-border-radius: 0.625em;
+  -moz-border-radius: 0.625em;
+  border-radius: 0.625em;
+  width: 18.75em;
+  max-width: 100%;
+  text-align: center; }
+  .btn:hover {
+    text-decoration: none;
+    background-color: #777; }
+
 #header {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+  padding: 1em;
+  border-bottom: 1px solid #ccc; }
+  #header .logo {
+    display: inline; }
+    #header .logo a {
+      display: block;
+      height: 1em;
+      width: 8em;
+      background: transparent url(../img/logo.png) no-repeat scroll center left;
+      background-size: auto 1em;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden; }
+  #header .oneliner {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Myriad Pro Semibold', 'MyriadPro-Semibold', sans-serif;
+    padding: 1.5em 0;
+    margin-top: 2em;
+    border-top: #ddd 1px solid;
+    border-bottom: #ddd 1px solid; }
+
+.homepage #header {
   max-width: 100%;
   width: 60em;
   margin: 2em auto 3em auto;
   text-align: center;
   padding: 2em 0 0 0; }
-  #header .logo {
+  .homepage #header .logo {
     display: inline; }
-    #header .logo a {
+    .homepage #header .logo a {
       display: block;
       height: 1.875em;
-      background: transparent url(img/logo.png) no-repeat scroll center center;
+      background: transparent url(../img/logo.png) no-repeat scroll center center;
       background-size: auto 100%;
       text-indent: 100%;
       white-space: nowrap;
       overflow: hidden; }
-  #header .oneliner {
+  .homepage #header .oneliner {
     color: rgba(0, 0, 0, 0.6);
     font-family: 'Myriad Pro Semibold', 'MyriadPro-Semibold', sans-serif;
     padding: 1.5em 0;
@@ -578,7 +627,7 @@ a {
       float: left;
       margin: 0;
       min-height: 7.5em;
-      background: transparent url(./img/blankcircle.png) no-repeat scroll top left; }
+      background: transparent url(../img/blankcircle.png) no-repeat scroll top left; }
       #content #products .product-list li h3 {
         margin: 0;
         font-weight: normal; }
@@ -591,21 +640,71 @@ a {
     #content #products .product-list.for_orgs li.for_orgs, #content #products .product-list.for_public li.for_public, #content #products .product-list.for_volunteers li.for_volunteers, #content #products .product-list.for_international li.for_international {
       opacity: 1; }
     #content #products .product-list li.fms {
-      background-image: url(./img/fms.png); }
+      background-image: url(../img/fms.png); }
     #content #products .product-list li.fmt {
-      background-image: url(./img/fmt.png); }
+      background-image: url(../img/fmt.png); }
     #content #products .product-list li.twfy {
-      background-image: url(./img/twfy.png); }
+      background-image: url(../img/twfy.png); }
     #content #products .product-list li.afoi {
-      background-image: url(./img/afoi.png); }
+      background-image: url(../img/afoi.png); }
     #content #products .product-list li.mapumental {
-      background-image: url(./img/mapumental.png); }
+      background-image: url(../img/mapumental.png); }
+#content .product header,
+#content .product section {
+  max-width: 100%;
+  width: 60em;
+  margin: 0 auto;
+  padding-bottom: 5em; }
+#content .product header {
+  padding: 2em 0; }
+  #content .product header .screenshots {
+    display: block;
+    width: 28.75em;
+    float: left; }
+  #content .product header p,
+  #content .product header hgroup {
+    width: 28.75em;
+    float: right;
+    clear: right; }
+  #content .product header hgroup h2 {
+    font-size: 2.25em;
+    margin: 0;
+    padding: 0;
+    color: #4D4D4D; }
+    #content .product header hgroup h2 strong {
+      font-size: 1.3333em; }
+  #content .product header hgroup h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #B3B3B3;
+    margin: 0;
+    padding: 0;
+    line-height: 1; }
+#content .product .action {
+  width: 100%;
+  clear: both;
+  font-size: 1.25em;
+  text-align: center;
+  padding: 0.75em 0;
+  background-color: #ddd;
+  margin: 1em 0; }
+  #content .product .action a {
+    color: #666; }
+  #content .product .action a:hover {
+    text-decoration: none; }
+  #content .product .action strong {
+    text-decoration: underline;
+    color: #444; }
+#content .product .product-options {
+  padding: 0;
+  display: block;
+  list-style: none; }
 
 #footer {
   clear: both; }
 
 .svg #header .logo a {
-  background: transparent url(./img/logo.svg) no-repeat scroll center center; }
+  background-image: url(../img/logo.svg); }
 
 .no-js .sections {
   display: block;

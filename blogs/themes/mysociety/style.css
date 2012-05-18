@@ -482,7 +482,7 @@ a {
       display: block;
       height: 1em;
       width: 8em;
-      background: transparent url(../img/logo.png) no-repeat scroll center left;
+      background: transparent url(img/logo.png) no-repeat scroll center left;
       background-size: auto 1em;
       text-indent: 100%;
       white-space: nowrap;
@@ -506,7 +506,7 @@ a {
     .homepage #header .logo a {
       display: block;
       height: 1.875em;
-      background: transparent url(../img/logo.png) no-repeat scroll center center;
+      background: transparent url(img/logo.png) no-repeat scroll center center;
       background-size: auto 100%;
       text-indent: 100%;
       white-space: nowrap;
@@ -627,7 +627,7 @@ a {
       float: left;
       margin: 0;
       min-height: 7.5em;
-      background: transparent url(../img/blankcircle.png) no-repeat scroll top left; }
+      background: transparent url(img/blankcircle.png) no-repeat scroll top left; }
       #content #products .product-list li h3 {
         margin: 0;
         font-weight: normal; }
@@ -640,15 +640,15 @@ a {
     #content #products .product-list.for_orgs li.for_orgs, #content #products .product-list.for_public li.for_public, #content #products .product-list.for_volunteers li.for_volunteers, #content #products .product-list.for_international li.for_international {
       opacity: 1; }
     #content #products .product-list li.fms {
-      background-image: url(../img/fms.png); }
+      background-image: url(img/fms.png); }
     #content #products .product-list li.fmt {
-      background-image: url(../img/fmt.png); }
+      background-image: url(img/fmt.png); }
     #content #products .product-list li.twfy {
-      background-image: url(../img/twfy.png); }
+      background-image: url(img/twfy.png); }
     #content #products .product-list li.afoi {
-      background-image: url(../img/afoi.png); }
+      background-image: url(img/afoi.png); }
     #content #products .product-list li.mapumental {
-      background-image: url(../img/mapumental.png); }
+      background-image: url(img/mapumental.png); }
 #content .product header,
 #content .product section {
   max-width: 100%;
@@ -666,6 +666,8 @@ a {
     width: 28.75em;
     float: right;
     clear: right; }
+  #content .product header p {
+    padding-bottom: 4em; }
   #content .product header hgroup h2 {
     font-size: 2.25em;
     margin: 0;
@@ -704,7 +706,7 @@ a {
   clear: both; }
 
 .svg #header .logo a {
-  background-image: url(../img/logo.svg); }
+  background-image: url(img/logo.svg); }
 
 .no-js .sections {
   display: block;

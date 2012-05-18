@@ -380,7 +380,31 @@ body.homepage #header{
 				vertical-align:bottom;
 			}
 		}
+		.product-options-pricing{
+			&>ul.product-options-pricing-extras{
+				li{
+					display: block;
+					width: 100%;
+					padding: 0.625em;
+					
+					h4{
+						display:inline;
+					}
+					p{
+						display:inline;
+						padding-left:2em;
+					}
+				}
+			}
+		}
+		
 		.product-options-features{
+			img{
+				max-width:100%;
+				float:left;
+				padding-bottom: 0.625em;
+				padding-right: 1.25em;
+			}
 			&>ul>li{
 				//width: 15em;
 				width:30em;

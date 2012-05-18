@@ -1,6 +1,5 @@
 <footer id="footer">
-	<section>
-		
+	<section>		
 		<nav id="footer_links">
 			<ul>
 				<li><a class="logo" href="#">mySociety</a></li>

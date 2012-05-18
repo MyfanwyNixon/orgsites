@@ -2,8 +2,8 @@
 	<section>		
 		<nav id="footer_links">
 			<ul>
-				<li><a class="logo" href="#">mySociety</a></li>
-				<li><a href="#">about</a></li>
+				<li><a class="logo" href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></li>
+				<li><a href="/about">about</a></li>
 				<li><a href="#">blog</a></li>
 				<li><a href="#">contact</a></li>
 				<li><a href="#">jobs</a></li>

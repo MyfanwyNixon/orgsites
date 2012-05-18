@@ -735,6 +735,20 @@ body.homepage #header {
     max-width: 100%; }
 #content .product .product-options > ul > li {
   vertical-align: bottom; }
+#content .product .product-options-pricing > ul.product-options-pricing-extras li {
+  display: block;
+  width: 100%;
+  padding: 0.625em; }
+  #content .product .product-options-pricing > ul.product-options-pricing-extras li h4 {
+    display: inline; }
+  #content .product .product-options-pricing > ul.product-options-pricing-extras li p {
+    display: inline;
+    padding-left: 2em; }
+#content .product .product-options-features img {
+  max-width: 100%;
+  float: left;
+  padding-bottom: 0.625em;
+  padding-right: 1.25em; }
 #content .product .product-options-features > ul > li {
   width: 30em; }
 

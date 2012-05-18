@@ -263,7 +263,7 @@
 			max-width:100%;
 			width: 60em;
 			margin: 0 auto;
-			padding-bottom: 5em;
+			padding-bottom: 2em;
 		}
 		
 		header{
@@ -333,11 +333,39 @@
 			
 		}
 		
-		.product-options{
-			padding:0;
+		.product-options>ul,
+		.product-options-pricing>ul,
+		.product-options-features>ul
+		{
 			display:block;
 			list-style:none;
+			padding:0;
+			max-width:100%;
+			width: 60em;
+			margin: 0 auto;
+			padding-bottom: 5em;
+			vertical-align: top;
+			
+			
+			&>li{
+				display: inline-block;
+				vertical-align: top;
+				width: 20em;
+				padding: 0.625em;
+			}
 		}
+		.product-options-features ul{
+			&>li{
+				vertical-align:bottom;
+			}
+		}
+		.product-options-features ul{
+			&>li{
+				//width: 15em;
+				width:30em;
+			}
+		}
+		
 	}
 }
 #footer{

@@ -431,6 +431,28 @@ body.homepage #header{
 	#footer_links{
 		width: 15em;
 		float:left;
+		
+		a{
+			color: #eee;
+			&:hover{
+				color: #fff;
+			}
+			
+			&.logo{
+				display:block;
+				height: 3em;
+				width: 150px;
+				max-width:100%;
+				background: transparent url(img/logo-inverse.png) no-repeat scroll center left;
+				background-size: 100% auto;
+				margin-left: -15%;
+				
+				// Text IR
+				text-indent: 100%;
+				white-space: nowrap;  
+				overflow: hidden;
+			}
+		}	
 	}
 	
 	#footer_blurb{
@@ -439,6 +461,11 @@ body.homepage #header{
 		margin-right: 5em;
 		padding: 0.625em;
 		float: right;
+		color: #aaa;
+		
+		p{
+			font-size: 0.8em;
+		}
 	}
 }
 

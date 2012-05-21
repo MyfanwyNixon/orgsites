@@ -766,12 +766,30 @@ body.homepage #header {
   #footer #footer_links {
     width: 15em;
     float: left; }
+    #footer #footer_links a {
+      color: #eee; }
+      #footer #footer_links a:hover {
+        color: #fff; }
+      #footer #footer_links a.logo {
+        display: block;
+        height: 3em;
+        width: 150px;
+        max-width: 100%;
+        background: transparent url(img/logo-inverse.png) no-repeat scroll center left;
+        background-size: 80% auto;
+        margin-left: -10%;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden; }
   #footer #footer_blurb {
     display: block;
     width: 40em;
     margin-right: 5em;
     padding: 0.625em;
-    float: right; }
+    float: right;
+    color: #aaa; }
+    #footer #footer_blurb p {
+      font-size: 0.8em; }
 
 .svg #header .logo a {
   background-image: url(img/logo.svg); }

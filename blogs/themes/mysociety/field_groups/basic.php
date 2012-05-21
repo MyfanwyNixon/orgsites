@@ -58,28 +58,28 @@ register_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_org',
-        'order_no' => '1',
+        'order_no' => '0',
       ),
       2 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_public',
-        'order_no' => '2',
+        'order_no' => '0',
       ),
       3 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_volunteer',
-        'order_no' => '3',
+        'order_no' => '0',
       ),	
 	  4 => 
 	    array (
 	      'param' => 'post_type',
 	      'operator' => '==',
 	      'value' => 'ms_council',
-	      'order_no' => '1',
+	      'order_no' => '0',
 	  )
 	),
 	'allorany' => 'any'

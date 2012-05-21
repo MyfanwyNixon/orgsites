@@ -39,6 +39,9 @@ define('OPTION_WORDPRESS_SECURE_AUTH_SALT', 'XXXX - put random string in here - 
 define('OPTION_WORDPRESS_LOGGED_IN_SALT',   'XXXX - put random string in here - XXXX');
 define('OPTION_WORDPRESS_NONCE_SALT',       'XXXX - put random string in here - XXXX');
 
+//any additional keys for wordpress purchases etc. 
+define('OPTION_WORDPRESS_FIELD_NAME',       'XXXX - put random string in here - XXXX');
+
 // Change the table prefix from the default of 'wp_' here 
 define('OPTION_WORDPRESS_TABLE_PREFIX', 'wp_');
 

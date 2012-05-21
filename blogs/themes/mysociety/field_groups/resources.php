@@ -6,7 +6,7 @@
  * Use the commented out code to update the database with your activation code. 
  * You may place this code inside an IF statement that only runs on theme activation.
  */ 
-// if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', "xxxx-xxxx-xxxx-xxxx");
+if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', OPTION_WORDPRESS_ACF_REPEATER);
 // if(!get_option('acf_options_ac')) update_option('acf_options_ac', "xxxx-xxxx-xxxx-xxxx");
 // if(!get_option('acf_flexible_content_ac')) update_option('acf_flexible_content_ac', "xxxx-xxxx-xxxx-xxxx");
 
@@ -92,7 +92,7 @@ register_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_volunteer',
-        'order_no' => '0',
+        'order_no' => '1',
       ),
       1 => 
       array (
@@ -106,14 +106,14 @@ register_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_org',
-        'order_no' => '2',
+        'order_no' => '4',
       ),
       3 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_public',
-        'order_no' => '3',
+        'order_no' => '2',
       ),
       4 => 
       array (

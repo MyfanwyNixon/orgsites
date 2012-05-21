@@ -20,3 +20,6 @@
 <script src="<?php bloginfo('template_url'); ?>/js/libs/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/libs/jquery.hoverintent.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/libs/jquery.isotope.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/FancyZoom.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/FancyZoomHTML.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">setupZoom();</script>

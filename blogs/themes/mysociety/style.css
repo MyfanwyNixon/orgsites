@@ -776,8 +776,8 @@ body.homepage #header {
         width: 150px;
         max-width: 100%;
         background: transparent url(img/logo-inverse.png) no-repeat scroll center left;
-        background-size: 100% auto;
-        margin-left: -15%;
+        background-size: 80% auto;
+        margin-left: -10%;
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden; }

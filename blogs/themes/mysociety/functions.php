@@ -126,15 +126,14 @@
 
 	// register field groups
 	if(function_exists("register_field_group")) {
-		include('field_groups/basic.php');
-		include('field_groups/project.php');
-		include('field_groups/case_studies.php');
-		include('field_groups/facet.php');
-		include('field_groups/features.php');
-		include('field_groups/homepage_filter.php');
-		include('field_groups/pricing.php');
-		include('field_groups/resources.php');
-		include('field_groups/team_member.php');
-		include('field_groups/partners.php');
+		include 'field_groups/basic.php';
+		include 'field_groups/case_studies.php';
+		include 'field_groups/facet.php';
+		include 'field_groups/features.php';
+		include 'field_groups/homepage_filter.php';
+		include 'field_groups/partners.php';
+		include 'field_groups/pricing.php';
+		include 'field_groups/resources.php';
+		include 'field_groups/team_member.php';
 	}
 ?>

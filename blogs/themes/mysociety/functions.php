@@ -1,13 +1,8 @@
 <?
   //register custom menu types
-  if ( function_exists( 'register_nav_menus' ) ) {
-    register_nav_menus(
-      array(
-        'footer' => 'Footer Menu',
-        'secondary' => 'Secondary Menu',
-        'sidebar' => 'Sidebar Menu'
-      )
-    );
+  add_action('init', 'register_custom_menu');
+  function register_custom_menu() {
+	register_nav_menu('footer_menu', __('Footer Menu'));
   }
   
   //register the urchase of custom fields once and only once

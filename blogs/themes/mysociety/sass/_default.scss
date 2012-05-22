@@ -348,7 +348,8 @@ body.homepage #header{
 		
 		.product-options,
 		.product-options-pricing,
-		.product-options-features
+		.product-options-features,
+		section
 		{
 			h3{
 				
@@ -389,6 +390,14 @@ body.homepage #header{
 			}
 		}
 		.product-options-features{
+			width: 100%;
+			background-color: #fff;
+			h3{
+				width: 30em;
+				max-width: 100%;
+				margin: auto;
+				padding-top: 2em;
+			}
 			h4{
 				font-size: 1.5em;
 				margin-bottom:0;
@@ -400,16 +409,21 @@ body.homepage #header{
 			}
 		}
 		.product-options-pricing{
+			.footnote{ color: #999; }
+			
 			h4{
 				font-size: 1em;
+				color: #555;
 			}
 			ul{
 				li{
+					color: #aaa;
 					background-color: #fff;
 					-webkit-border-radius: 0.625em;
 					   -moz-border-radius: 0.625em;
 					        border-radius: 0.625em;
 					border: 1px solid #ccc;
+					border-bottom-color: #bbb;
 //					-webkit-box-shadow: 0 0 1em #000;
 //					   -moz-box-shadow: 0 0 1em #000;
 //					     -o-box-shadow: 0 0 1em #000;
@@ -419,6 +433,7 @@ body.homepage #header{
 					padding:0;
 					
 					p{
+						color: #666666;
 						padding: 0 0.625em;
 					}
 					
@@ -447,12 +462,17 @@ body.homepage #header{
 					-webkit-border-radius: 0.625em;
 					   -moz-border-radius: 0.625em;
 					        border-radius: 0.625em;
+					margin-bottom: 1.25em;
 					
 					h4{
 						display:inline;
 //						background-color: transparent;
 						padding: 0.625em;
-						border: 1px solid #ccc;
+						border: 1px solid #bbb;
+						-webkit-border-radius: 3px;
+						   -moz-border-radius: 3px;
+						        border-radius: 3px;
+						em{ display: inline; }
 					}
 					p{
 						display:inline;
@@ -464,6 +484,19 @@ body.homepage #header{
 		}
 		
 		.product-options-features{
+			img{
+				max-width:100%;
+				float:right;
+				padding-bottom: 0.625em;
+				padding-right: 1.25em;
+			}
+			&>ul>li{
+				//width: 15em;
+				width:30em;
+			}
+		}
+		
+		.product-options-casestudy{
 			img{
 				max-width:100%;
 				float:right;

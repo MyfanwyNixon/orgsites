@@ -261,7 +261,9 @@ body.homepage #header{
 			li.mapumental{ background-image: url(img/mapumental.png); }
 		}
 	}
-	.product{
+	
+	.product,
+	.products{
 		
 		header,
 		section{
@@ -293,10 +295,10 @@ body.homepage #header{
 				width: 28.75em;
 				float:right;
 				clear:right;
+				
 			}
 			p{padding-bottom: 4em;}
 			hgroup{
-
 				
 				h2{
 					font-size: 2.25em;
@@ -346,6 +348,9 @@ body.homepage #header{
 			
 		}
 		
+		
+		
+		.product-facets,
 		.product-options,
 		.product-options-pricing,
 		.product-options-features,
@@ -495,7 +500,11 @@ body.homepage #header{
 				width:30em;
 			}
 		}
-		
+		.product-facets{
+			h3{
+				font-size:1.5em;
+			}
+		}
 		.product-options-casestudy{
 			img{
 				max-width:100%;
@@ -511,6 +520,18 @@ body.homepage #header{
 		
 		
 	}
+	.products{
+		header{
+			
+			hgroup{
+				margin-top: 4em;
+			}
+			p{
+				padding-bottom:0;
+			}
+		}
+	}
+
 }
 
 

@@ -661,44 +661,56 @@ body.homepage #header {
     #content #products .product-list li.mapumental {
       background-image: url(img/mapumental.png); }
 #content .product header,
-#content .product section {
+#content .product section,
+#content .products header,
+#content .products section {
   max-width: 100%;
   width: 60em;
   margin: 0 auto;
   padding-bottom: 2em; }
-#content .product header {
+#content .product header,
+#content .products header {
   padding: 2em 0; }
-  #content .product header .screenshots {
+  #content .product header .screenshots,
+  #content .products header .screenshots {
     display: block;
     width: 28.75em;
     float: left;
     list-style: none;
     margin: 0;
     padding: 0; }
-    #content .product header .screenshots img {
+    #content .product header .screenshots img,
+    #content .products header .screenshots img {
       max-width: 100%; }
   #content .product header p,
-  #content .product header hgroup {
+  #content .product header hgroup,
+  #content .products header p,
+  #content .products header hgroup {
     width: 28.75em;
     float: right;
     clear: right; }
-  #content .product header p {
+  #content .product header p,
+  #content .products header p {
     padding-bottom: 4em; }
-  #content .product header hgroup h2 {
+  #content .product header hgroup h2,
+  #content .products header hgroup h2 {
     font-size: 2.25em;
     margin: 0;
     padding: 0;
     color: #4D4D4D; }
-    #content .product header hgroup h2 strong {
+    #content .product header hgroup h2 strong,
+    #content .products header hgroup h2 strong {
       font-size: 1.3333em; }
-  #content .product header hgroup h3 {
+  #content .product header hgroup h3,
+  #content .products header hgroup h3 {
     font-size: 1.5em;
     font-weight: normal;
     color: #B3B3B3;
     margin: 0;
     padding: 0;
     line-height: 1; }
-#content .product .action {
+#content .product .action,
+#content .products .action {
   width: 100%;
   clear: both;
   font-size: 1.25em;
@@ -708,38 +720,65 @@ body.homepage #header {
   margin: 1em 0;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ccc; }
-  #content .product .action a {
+  #content .product .action a,
+  #content .products .action a {
     color: #666; }
-  #content .product .action a:hover {
+  #content .product .action a:hover,
+  #content .products .action a:hover {
     text-decoration: none; }
-  #content .product .action strong {
+  #content .product .action strong,
+  #content .products .action strong {
     text-decoration: underline;
     color: #444; }
+#content .product .product-facets h3,
 #content .product .product-options h3,
 #content .product .product-options-pricing h3,
 #content .product .product-options-features h3,
-#content .product section h3 {
+#content .product section h3,
+#content .products .product-facets h3,
+#content .products .product-options h3,
+#content .products .product-options-pricing h3,
+#content .products .product-options-features h3,
+#content .products section h3 {
   font-size: 2em;
   margin-bottom: 0; }
+  #content .product .product-facets h3 em,
   #content .product .product-options h3 em,
   #content .product .product-options-pricing h3 em,
   #content .product .product-options-features h3 em,
-  #content .product section h3 em {
+  #content .product section h3 em,
+  #content .products .product-facets h3 em,
+  #content .products .product-options h3 em,
+  #content .products .product-options-pricing h3 em,
+  #content .products .product-options-features h3 em,
+  #content .products section h3 em {
     font-size: 0.65em;
     color: #999;
     font-style: normal;
     font-weight: normal;
     padding-left: 0.5em; }
+#content .product .product-facets h4,
 #content .product .product-options h4,
 #content .product .product-options-pricing h4,
 #content .product .product-options-features h4,
-#content .product section h4 {
+#content .product section h4,
+#content .products .product-facets h4,
+#content .products .product-options h4,
+#content .products .product-options-pricing h4,
+#content .products .product-options-features h4,
+#content .products section h4 {
   font-size: 1.5em;
   margin-bottom: 0; }
+#content .product .product-facets > ul,
 #content .product .product-options > ul,
 #content .product .product-options-pricing > ul,
 #content .product .product-options-features > ul,
-#content .product section > ul {
+#content .product section > ul,
+#content .products .product-facets > ul,
+#content .products .product-options > ul,
+#content .products .product-options-pricing > ul,
+#content .products .product-options-features > ul,
+#content .products section > ul {
   display: block;
   list-style: none;
   padding: 0;
@@ -747,38 +786,57 @@ body.homepage #header {
   width: 60em;
   margin: 0 auto;
   vertical-align: top; }
+#content .product .product-facets > ul > li,
 #content .product .product-options > ul > li,
 #content .product .product-options-pricing > ul > li,
 #content .product .product-options-features > ul > li,
-#content .product section > ul > li {
+#content .product section > ul > li,
+#content .products .product-facets > ul > li,
+#content .products .product-options > ul > li,
+#content .products .product-options-pricing > ul > li,
+#content .products .product-options-features > ul > li,
+#content .products section > ul > li {
   display: inline-block;
   vertical-align: top;
   width: 20em;
   padding: 0.625em; }
+  #content .product .product-facets > ul > li img,
   #content .product .product-options > ul > li img,
   #content .product .product-options-pricing > ul > li img,
   #content .product .product-options-features > ul > li img,
-  #content .product section > ul > li img {
+  #content .product section > ul > li img,
+  #content .products .product-facets > ul > li img,
+  #content .products .product-options > ul > li img,
+  #content .products .product-options-pricing > ul > li img,
+  #content .products .product-options-features > ul > li img,
+  #content .products section > ul > li img {
     max-width: 100%; }
-#content .product .product-options-features {
+#content .product .product-options-features,
+#content .products .product-options-features {
   width: 100%;
   background-color: #fff; }
-  #content .product .product-options-features h3 {
+  #content .product .product-options-features h3,
+  #content .products .product-options-features h3 {
     width: 30em;
     max-width: 100%;
     margin: auto;
     padding-top: 2em; }
-  #content .product .product-options-features h4 {
+  #content .product .product-options-features h4,
+  #content .products .product-options-features h4 {
     font-size: 1.5em;
     margin-bottom: 0; }
-#content .product .product-options > ul > li {
+#content .product .product-options > ul > li,
+#content .products .product-options > ul > li {
   vertical-align: bottom; }
-#content .product .product-options-pricing .footnote {
+#content .product .product-options-pricing .footnote,
+#content .products .product-options-pricing .footnote {
   color: #999; }
-#content .product .product-options-pricing h4 {
+#content .product .product-options-pricing h4,
+#content .products .product-options-pricing h4 {
   font-size: 1em;
   color: #555; }
-#content .product .product-options-pricing ul li {
+#content .product .product-options-pricing ul li,
+#content .products .product-options-pricing ul li {
   color: #aaa;
   background-color: #fff;
   -webkit-border-radius: 0.625em;
@@ -789,19 +847,23 @@ body.homepage #header {
   margin: 0.625em;
   width: 18.25em;
   padding: 0; }
-  #content .product .product-options-pricing ul li p {
+  #content .product .product-options-pricing ul li p,
+  #content .products .product-options-pricing ul li p {
     color: #666666;
     padding: 0 0.625em; }
-  #content .product .product-options-pricing ul li h4 {
+  #content .product .product-options-pricing ul li h4,
+  #content .products .product-options-pricing ul li h4 {
     padding: 0.625em;
     margin-top: 0.5em;
     background-color: #ffd000;
     background-color: #ddd; }
-    #content .product .product-options-pricing ul li h4 em {
+    #content .product .product-options-pricing ul li h4 em,
+    #content .products .product-options-pricing ul li h4 em {
       display: block;
       font-weight: normal;
       line-height: 1; }
-#content .product .product-options-pricing > ul.product-options-pricing-extras li {
+#content .product .product-options-pricing > ul.product-options-pricing-extras li,
+#content .products .product-options-pricing > ul.product-options-pricing-extras li {
   display: block;
   width: 100%;
   padding: 0 0.625em;
@@ -811,32 +873,46 @@ body.homepage #header {
   -moz-border-radius: 0.625em;
   border-radius: 0.625em;
   margin-bottom: 1.25em; }
-  #content .product .product-options-pricing > ul.product-options-pricing-extras li h4 {
+  #content .product .product-options-pricing > ul.product-options-pricing-extras li h4,
+  #content .products .product-options-pricing > ul.product-options-pricing-extras li h4 {
     display: inline;
     padding: 0.625em;
     border: 1px solid #bbb;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px; }
-    #content .product .product-options-pricing > ul.product-options-pricing-extras li h4 em {
+    #content .product .product-options-pricing > ul.product-options-pricing-extras li h4 em,
+    #content .products .product-options-pricing > ul.product-options-pricing-extras li h4 em {
       display: inline; }
-  #content .product .product-options-pricing > ul.product-options-pricing-extras li p {
+  #content .product .product-options-pricing > ul.product-options-pricing-extras li p,
+  #content .products .product-options-pricing > ul.product-options-pricing-extras li p {
     display: inline;
     padding: 0.625em; }
-#content .product .product-options-features img {
+#content .product .product-options-features img,
+#content .products .product-options-features img {
   max-width: 100%;
   float: right;
   padding-bottom: 0.625em;
   padding-right: 1.25em; }
-#content .product .product-options-features > ul > li {
+#content .product .product-options-features > ul > li,
+#content .products .product-options-features > ul > li {
   width: 30em; }
-#content .product .product-options-casestudy img {
+#content .product .product-facets h3,
+#content .products .product-facets h3 {
+  font-size: 1.5em; }
+#content .product .product-options-casestudy img,
+#content .products .product-options-casestudy img {
   max-width: 100%;
   float: right;
   padding-bottom: 0.625em;
   padding-right: 1.25em; }
-#content .product .product-options-casestudy > ul > li {
+#content .product .product-options-casestudy > ul > li,
+#content .products .product-options-casestudy > ul > li {
   width: 30em; }
+#content .products header hgroup {
+  margin-top: 4em; }
+#content .products header p {
+  padding-bottom: 0; }
 
 #footer {
   clear: both;

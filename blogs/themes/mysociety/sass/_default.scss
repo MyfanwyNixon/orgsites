@@ -1,5 +1,9 @@
+body{
+	background-color:#f2f2f2;
+	&.homepage{ background-color:#ffffff; }
+}
 #header{
-	
+	background-color:#ffffff;
 	max-width:100%;
 	width: 100%;
 	margin: 0;
@@ -321,8 +325,10 @@ body.homepage #header{
 			font-size: 1.25em;
 			text-align: center;
 			padding: 0.75em 0;
-			background-color:#ddd;
+			background-color:#fff;
 			margin: 1em 0;
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ccc;
 			
 			a{
 				color: #666;
@@ -345,6 +351,10 @@ body.homepage #header{
 		.product-options-features
 		{
 			h3{
+				
+				font-size:2em;
+				margin-bottom:0;
+				
 				em{
 					font-size: 0.65em;
 					color: #999;
@@ -353,7 +363,10 @@ body.homepage #header{
 					padding-left: 0.5em;
 				}
 			}
-			
+			h4{
+				font-size: 1.5em;
+				margin-bottom:0;
+			}
 			&>ul{
 				display:block;
 				list-style:none;
@@ -375,17 +388,32 @@ body.homepage #header{
 				}
 			}
 		}
+		.product-options-features{
+			h4{
+				font-size: 1.5em;
+				margin-bottom:0;
+			}
+		}
 		.product-options{
 			&>ul>li{
 				vertical-align:bottom;
 			}
 		}
 		.product-options-pricing{
+			h4{
+				font-size: 1em;
+			}
 			&>ul.product-options-pricing-extras{
 				li{
 					display: block;
 					width: 100%;
 					padding: 0.625em;
+					padding-left: 1.5em;
+					background-color: #fff;
+					margin-bottom: 0.5em;
+					-webkit-border-radius: 0.625em;
+					   -moz-border-radius: 0.625em;
+					        border-radius: 0.625em;
 					
 					h4{
 						display:inline;
@@ -401,7 +429,7 @@ body.homepage #header{
 		.product-options-features{
 			img{
 				max-width:100%;
-				float:left;
+				float:right;
 				padding-bottom: 0.625em;
 				padding-right: 1.25em;
 			}
@@ -414,6 +442,8 @@ body.homepage #header{
 		
 	}
 }
+
+
 #footer{
 	clear:both;
 	background-color: #444;
@@ -431,9 +461,10 @@ body.homepage #header{
 	#footer_links{
 		width: 15em;
 		float:left;
+		padding: 0.625em;
 		
 		a{
-			color: #eee;
+			color: #bbb;
 			&:hover{
 				color: #fff;
 			}
@@ -460,6 +491,7 @@ body.homepage #header{
 		width: 40em;
 		margin-right: 5em;
 		padding: 0.625em;
+		padding-top: 2.125em;
 		float: right;
 		color: #aaa;
 		
@@ -469,6 +501,10 @@ body.homepage #header{
 	}
 }
 
+#screenShade{
+	background-color: rgba(255,255,255,0.5);
+	//background: rgba(255,255,255,0.5) url('img/screen.png') repeat scroll top left;
+}
 
 
 

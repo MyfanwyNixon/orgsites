@@ -15,3 +15,10 @@
 		background-color: #777;
 	}
 }
+
+body.fms .btn{
+	&:hover{
+		background-color: #ffd000;
+		color: #444;
+	}
+}

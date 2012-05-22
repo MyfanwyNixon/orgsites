@@ -232,7 +232,7 @@ function zoomIn(from, shift) {
 			document.getElementById("ZoomImage").style.webkitBoxShadow = shadowSettings + '0.0)';			
 		}
 		
-		document.getElementById("ZoomClose").style.visibility = "hidden";     
+		document.getElementById("ZoomClose").style.visibility = "hidden";    
 
 		// Setup the CAPTION, if existing. Hide it first, set the text.
 
@@ -259,7 +259,7 @@ function zoomIn(from, shift) {
 		zoomimg.style.height = startH + 'px';
 		zoomdiv.style.left = hostX + 'px';
 		zoomdiv.style.top = hostY + 'px';
-		zoomdiv.style.backgroundColor = '#555';
+		zoomdiv.style.backgroundColor = 'rgba(40,40,40,0.65)';
 		
 		// Show the zooming image container, make it invisible
 
@@ -349,7 +349,7 @@ function zoomOut(from, evt) {
 		// ..and the close box...
 
 		document.getElementById("ZoomClose").style.visibility = "hidden";
-
+		
 		// ...and the caption if necessary!
 
 		if (includeCaption && document.getElementById(zoomCaption).innerHTML != "") {
@@ -415,6 +415,7 @@ function zoomDoneIn(zoomdiv, theID) {
 		shadowdiv.style.top = shadowTop + 'px';
 
 		document.getElementById("ShadowBox").style.visibility = "visible";
+		
 		fadeElementSetup("ShadowBox", 0, 100, 5);
 		
 	} else if (! browserIsIE) {
@@ -436,8 +437,11 @@ function zoomDoneIn(zoomdiv, theID) {
 	// Display Close Box (fade it if it's not IE)
 
 	if (!browserIsIE) setOpacity(0, "ZoomClose");
+	if (!browserIsIE) setOpacity(0, "screenShade");
 	document.getElementById("ZoomClose").style.visibility = "visible";
+	document.getElementById("screenShade").style.visibility = "visible";
 	if (!browserIsIE) fadeElementSetup("ZoomClose", 0, 100, 5);
+	if (!browserIsIE) fadeElementSetup("screenShade", 0, 100, 5);
 
 	// Get keypresses
 	document.onkeyup = getKey;
@@ -457,6 +461,7 @@ function zoomDone(zoomdiv, theID) {
 	zoomOrigH[theID] = "";
 	zoomOrigW[theID] = "";
 	document.getElementById(zoomdiv).style.visibility = "hidden";
+	document.getElementById("screenShade").style.visibility = "hidden";
 	zoomActive[theID] == false;
 
 	// Stop getting keypresses

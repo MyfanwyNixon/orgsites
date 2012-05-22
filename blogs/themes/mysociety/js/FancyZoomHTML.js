@@ -269,8 +269,21 @@ function insertZoomHTML() {
 		inCapDiv.style.marginLeft = 'auto';
 		inCapDiv.style.marginRight = 'auto';
 		inCapDiv.style.zIndex = '501';
-
+		
 		inBody.insertBefore(inCapDiv, inZoombox.nextSibling);
+		
+		var screenShade = document.createElement("div");
+		screenShade.setAttribute('id', 'screenShade');
+		screenShade.style.position = 'fixed';
+		screenShade.style.top = 0;
+		screenShade.style.bottom = 0;
+		screenShade.style.left = 0;
+		screenShade.style.right = 0;
+		screenShade.style.visibility = 'hidden';
+		screenShade.style.zIndex = '498';
+		screenShade.onclick = function (event) { zoomOut(this, event); return false; };
+
+		inBody.insertBefore(screenShade, inZoombox.nextSibling);
 		
 		var inCapTable = document.createElement("table");
 		inCapTable.setAttribute('border', '0');

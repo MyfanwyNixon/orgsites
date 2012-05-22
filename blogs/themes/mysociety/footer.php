@@ -3,10 +3,7 @@
 		<nav id="footer_links">
 			<ul>
 				<li><a class="logo" href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></li>
-				<li><a href="/about">about</a></li>
-				<li><a href="#">blog</a></li>
-				<li><a href="#">contact</a></li>
-				<li><a href="#">jobs</a></li>
+				<?php wp_nav_menu(array('menu' => 'footer_menu')); ?>
 			</ul>
 		</nav>
 		

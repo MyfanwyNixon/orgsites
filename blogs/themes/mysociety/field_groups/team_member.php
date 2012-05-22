@@ -1,6 +1,4 @@
 <?
-if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', OPTION_WORDPRESS_ACF_REPEATER);
-
 /**
  * Register field groups
  * The register_field_group function accepts 1 array which holds the relevant data to register a field group

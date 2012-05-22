@@ -403,9 +403,36 @@ body.homepage #header{
 			h4{
 				font-size: 1em;
 			}
+			ul{
+				li{
+					background-color: #fff;
+					-webkit-border-radius: 0.625em;
+					   -moz-border-radius: 0.625em;
+					        border-radius: 0.625em;
+					margin: 0.625em;
+					width: 18.25em;
+					padding:0;
+					
+					p{
+						padding: 0 0.625em;
+					}
+					
+					h4{
+						padding: 0.625em;
+						margin-top: 0.5em;
+						background-color: #ddd;
+						
+						em{
+							display:block;
+							font-weight:normal;
+						}
+					}
+				}
+			}
 			&>ul.product-options-pricing-extras{
 				li{
 					display: block;
+					border:none;
 					width: 100%;
 					padding: 0.625em;
 					padding-left: 1.5em;
@@ -417,6 +444,7 @@ body.homepage #header{
 					
 					h4{
 						display:inline;
+						background-color: transparent;
 					}
 					p{
 						display:inline;

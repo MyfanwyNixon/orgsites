@@ -762,8 +762,26 @@ body.homepage #header {
   vertical-align: bottom; }
 #content .product .product-options-pricing h4 {
   font-size: 1em; }
+#content .product .product-options-pricing ul li {
+  background-color: #fff;
+  -webkit-border-radius: 0.625em;
+  -moz-border-radius: 0.625em;
+  border-radius: 0.625em;
+  margin: 0.625em;
+  width: 18.25em;
+  padding: 0; }
+  #content .product .product-options-pricing ul li p {
+    padding: 0 0.625em; }
+  #content .product .product-options-pricing ul li h4 {
+    padding: 0.625em;
+    margin-top: 0.5em;
+    background-color: #ddd; }
+    #content .product .product-options-pricing ul li h4 em {
+      display: block;
+      font-weight: normal; }
 #content .product .product-options-pricing > ul.product-options-pricing-extras li {
   display: block;
+  border: none;
   width: 100%;
   padding: 0.625em;
   padding-left: 1.5em;
@@ -773,7 +791,8 @@ body.homepage #header {
   -moz-border-radius: 0.625em;
   border-radius: 0.625em; }
   #content .product .product-options-pricing > ul.product-options-pricing-extras li h4 {
-    display: inline; }
+    display: inline;
+    background-color: transparent; }
   #content .product .product-options-pricing > ul.product-options-pricing-extras li p {
     display: inline;
     padding-left: 2em; }

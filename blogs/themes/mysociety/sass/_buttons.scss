@@ -17,8 +17,14 @@
 }
 
 body.fms .btn{
+	
+//	background-color: #ffd000;
+//	color: #444;
+	
 	&:hover{
-		background-color: #ffd000;
-		color: #444;
+		//color: #222;
+		//background-color: #ffd000;
+		//color: #444;
+		background-color: #444;
 	}
 }

@@ -470,8 +470,7 @@ a {
     background-color: #777; }
 
 body.fms .btn:hover {
-  background-color: #ffd000;
-  color: #444; }
+  background-color: #444; }
 
 body {
   background-color: #f2f2f2; }
@@ -767,6 +766,7 @@ body.homepage #header {
   -webkit-border-radius: 0.625em;
   -moz-border-radius: 0.625em;
   border-radius: 0.625em;
+  border: 1px solid #ccc;
   margin: 0.625em;
   width: 18.25em;
   padding: 0; }
@@ -775,16 +775,16 @@ body.homepage #header {
   #content .product .product-options-pricing ul li h4 {
     padding: 0.625em;
     margin-top: 0.5em;
+    background-color: #ffd000;
     background-color: #ddd; }
     #content .product .product-options-pricing ul li h4 em {
       display: block;
-      font-weight: normal; }
+      font-weight: normal;
+      line-height: 1; }
 #content .product .product-options-pricing > ul.product-options-pricing-extras li {
   display: block;
-  border: none;
   width: 100%;
-  padding: 0.625em;
-  padding-left: 1.5em;
+  padding: 0 0.625em;
   background-color: #fff;
   margin-bottom: 0.5em;
   -webkit-border-radius: 0.625em;
@@ -792,10 +792,11 @@ body.homepage #header {
   border-radius: 0.625em; }
   #content .product .product-options-pricing > ul.product-options-pricing-extras li h4 {
     display: inline;
-    background-color: transparent; }
+    padding: 0.625em;
+    border: 1px solid #ccc; }
   #content .product .product-options-pricing > ul.product-options-pricing-extras li p {
     display: inline;
-    padding-left: 2em; }
+    padding: 0.625em; }
 #content .product .product-options-features img {
   max-width: 100%;
   float: right;

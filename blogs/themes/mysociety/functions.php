@@ -1,6 +1,19 @@
 <?
-	//register custom post types
-	//register custom post types
+  //register custom menu types
+  if ( function_exists( 'register_nav_menus' ) ) {
+    register_nav_menus(
+      array(
+        'footer' => 'Footer Menu',
+        'secondary' => 'Secondary Menu',
+        'sidebar' => 'Sidebar Menu'
+      )
+    );
+  }
+  
+  //register the urchase of custom fields once and only once
+  if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', OPTION_WORDPRESS_ACF_REPEATER);
+
+  //register custom post types
   add_action( 'init', 'create_post_type' );
   function create_post_type() {
 		//generic projects

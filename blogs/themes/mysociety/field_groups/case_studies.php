@@ -52,6 +52,16 @@ register_field_group(array (
           'formatting' => 'br',
           'order_no' => '2',
         ),
+		3 => 
+        array (
+          'key' => 'field_4fb27b94ed733',
+          'label' => 'URL',
+          'name' => 'url',
+          'type' => 'text',
+          'default_value' => 'http//example.com',
+          'formatting' => 'none',
+		  'order_no' => '3',
+        ),
       ),
       'row_limit' => '',
       'layout' => 'row',

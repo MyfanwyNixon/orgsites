@@ -52,7 +52,17 @@ register_field_group(array (
           'formatting' => 'none',
           'order_no' => '2',
         ),
-        3 => 
+		3 => 
+        array (
+          'key' => 'field_4f425835ae78a',
+          'label' => 'Price ongoing',
+          'name' => 'ongoing',
+          'type' => 'text',
+          'default_value' => '1000',
+          'formatting' => 'none',
+          'order_no' => '3',
+        ),
+        4 => 
         array (
           'key' => 'field_4fb25835ae795',
           'label' => 'Details',
@@ -60,7 +70,7 @@ register_field_group(array (
           'type' => 'wysiwyg',
           'toolbar' => 'basic',
           'media_upload' => 'no',
-          'order_no' => '3',
+          'order_no' => '4',
         ),
       ),
       'row_limit' => '',

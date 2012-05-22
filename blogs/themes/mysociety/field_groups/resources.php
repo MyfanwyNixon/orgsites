@@ -38,6 +38,7 @@ register_field_group(array (
             'blog' => 'blog',
             'faq' => 'faq',
             'leaflet' => 'leaflet',
+			'email' => 'support email'
           ),
           'default_value' => '',
           'allow_null' => '0',

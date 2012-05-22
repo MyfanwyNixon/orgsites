@@ -1,17 +1,15 @@
-<!-- a page for organisations -->
 <? get_header(); ?>
 
 <body id="mysociety-org" class="productpage for_orgs fms">
 	
 	<header id="header">
-		<h1 class="logo"><a href="homepage.html">mySociety</a></h1>
+		<h1 class="logo"><a href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></h1>
 	</header>
 	
 	<div id="content">
-
 		<p><?php echo get_field('overview')?> </p>
 		<article class="product">
-			
+
 			<header>
 				
 				<ul class="screenshots">
@@ -19,7 +17,7 @@
 				</ul>
 				
 				<hgroup>
-					<h2><strong><?php the_title();?></strong> for Councils</h2>
+					<h2><strong><?php the_title();?></strong> <?php echo entitle($post);?></h2>
 					<h3><?php echo get_field('strapline')?></h3>
 				</hgroup>
 				

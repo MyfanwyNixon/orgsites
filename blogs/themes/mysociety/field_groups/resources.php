@@ -36,9 +36,11 @@ register_field_group(array (
             'irc' => 'irc',
             'twitter' => 'twitter',
             'blog' => 'blog',
+			'facebook' => 'facebook',
             'faq' => 'faq',
-            'leaflet' => 'leaflet',
+            'document' => 'document',
 			'email' => 'support email'
+			'press' => 'press email'
           ),
           'default_value' => '',
           'allow_null' => '0',

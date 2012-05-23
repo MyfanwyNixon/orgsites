@@ -39,7 +39,7 @@ register_field_group(array (
 			'facebook' => 'facebook',
             'faq' => 'faq',
             'document' => 'document',
-			'email' => 'support email'
+			'email' => 'support email',
 			'press' => 'press email'
           ),
           'default_value' => '',

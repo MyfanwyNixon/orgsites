@@ -40,7 +40,7 @@ register_field_group(array (
             'faq' => 'faq',
             'document' => 'document',
 			'email' => 'support email',
-			'press' => 'press email'
+			'press' => 'press email',
 			'sales' => 'sales email'
           ),
           'default_value' => '',

@@ -41,6 +41,7 @@ register_field_group(array (
             'document' => 'document',
 			'email' => 'support email',
 			'press' => 'press email'
+			'sales' => 'sales email'
           ),
           'default_value' => '',
           'allow_null' => '0',

@@ -8,17 +8,29 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fba210f23041',
+  'id' => '4fbbbb7e62751',
   'title' => 'Features',
   'fields' => 
   array (
     0 => 
     array (
+      'label' => 'Feature text',
+      'name' => 'feature_text',
+      'type' => 'text',
+      'instructions' => 'The text that appears next to the heading \'features\' on the product page',
+      'required' => '1',
+      'default_value' => '',
+      'formatting' => 'none',
+      'key' => 'field_4fbbbb7798331',
+      'order_no' => '0',
+    ),
+    1 => 
+    array (
       'key' => 'field_4fb3a617a41d0',
-      'label' => 'Feature',
-      'name' => 'feature',
+      'label' => 'Features',
+      'name' => 'features',
       'type' => 'repeater',
-      'instructions' => 'A feature',
+      'instructions' => 'A feature of the product',
       'required' => '0',
       'sub_fields' => 
       array (
@@ -34,12 +46,12 @@ register_field_group(array (
         ),
         1 => 
         array (
+          'key' => 'field_4fb679dd7e76a',
           'label' => 'image',
-          'name' => 'iamge',
+          'name' => 'image',
           'type' => 'image',
           'save_format' => 'url',
           'preview_size' => 'thumbnail',
-          'key' => 'field_4fb679dd7e76a',
           'order_no' => '1',
         ),
         2 => 
@@ -56,7 +68,7 @@ register_field_group(array (
       'row_limit' => '',
       'layout' => 'row',
       'button_label' => '+ Add Feature',
-      'order_no' => '0',
+      'order_no' => '1',
     ),
   ),
   'location' => 
@@ -68,7 +80,7 @@ register_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_org',
-        'order_no' => '1',
+        'order_no' => '0',
       ),
       1 => 
       array (
@@ -88,7 +100,7 @@ register_field_group(array (
     array (
     ),
   ),
-  'menu_order' => 0,
+  'menu_order' => 1,
 ));
 }
 ?>

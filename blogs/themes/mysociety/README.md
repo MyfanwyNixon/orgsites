@@ -3,7 +3,8 @@ One theme to rule them all
 
 ##Dependencies
 * Wordpress 3.x.x
-* Advanced custom fields 3.1.8 (< 3.1.8 is broken on MU installs)
+* Advanced custom fields 3.1.8 (< 3.1.7 is broken on MU installs)
+* ACF repeater custom field (purchased, requires a key in config)
 * Three broadcast 1.1.1
 
 ##Installation

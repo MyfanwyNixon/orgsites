@@ -1,12 +1,4 @@
 <?
-  //register custom menu types
-  add_action('init', 'register_custom_menu');
-  function register_custom_menu() {
-	register_nav_menu('footer_menu', __('Footer Menu'));
-  }
-  
-  //register the urchase of custom fields once and only once
-  if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', OPTION_WORDPRESS_ACF_REPEATER);
 
   //register custom post types
   add_action( 'init', 'create_post_type' );
@@ -132,7 +124,17 @@
 		);
 	}
 
-	// register field groups
+	//register custom menu types
+	add_action('init', 'register_custom_menu');
+
+	function register_custom_menu() {
+		register_nav_menu('footer_menu', __('Footer Menu'));
+	}
+
+	//register the purchase of custom fields once and only once
+	if(!get_option('acf_repeater_ac')) update_option('acf_repeater_ac', OPTION_WORDPRESS_ACF_REPEATER);
+
+	// register ACF field groups
 	if(function_exists("register_field_group")) {
 		include 'field_groups/basic.php';
 		include 'field_groups/case_studies.php';
@@ -144,4 +146,7 @@
 		include 'field_groups/resources.php';
 		include 'field_groups/team_member.php';
 	}
+	
+	//include some custom scripts for helping in page templates
+	include('custom_scripts/entitle.php');
 ?>

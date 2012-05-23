@@ -22,12 +22,13 @@ register_field_group(array (
       'key' => 'field_4fb258b51f1f8',
       'label' => 'Overview',
       'name' => 'overview',
-      'type' => 'wysiwyg',
-      'instructions' => 'Th overview',
+      'type' => 'textarea',
+      'instructions' => 'The overview',
       'required' => '0',
       'toolbar' => 'basic',
       'media_upload' => 'no',
       'order_no' => '1',
+	  'formatting' => 'html',
     ),
     2 => 
     array (

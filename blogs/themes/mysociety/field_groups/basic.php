@@ -81,7 +81,14 @@ register_field_group(array (
 	      'operator' => '==',
 	      'value' => 'ms_council',
 	      'order_no' => '0',
-	  )
+	  ),
+  	  4 => 
+	    array (
+	      'param' => 'post_type',
+	      'operator' => '==',
+	      'value' => 'ms_international',
+	      'order_no' => '0',
+	   ),
 	),
 	'allorany' => 'any'
   ),

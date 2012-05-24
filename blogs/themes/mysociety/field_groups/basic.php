@@ -88,7 +88,7 @@ register_field_group(array (
 	      'operator' => '==',
 	      'value' => 'ms_international',
 	      'order_no' => '0',
-	   )
+	   ),
 	),
 	'allorany' => 'any'
   ),

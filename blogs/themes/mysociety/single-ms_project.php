@@ -26,19 +26,6 @@
 				
 				<p><?php echo get_field('overview')?></p>
 				
-				<?php
-				 	$resources = get_field('resources');
-					if($resources && count($resources) > 0 ){
-						foreach($resources as $resource){
-							if($resource['type'] == 'public');
-							$service = $resource;
-						}
-					}
-				?>
-				<?php if($service): ?>
-					<p><a class="btn" href="<?php echo $service['url'];?>"><?php echo $service['text'];?></a></p>
-				<?php endif?>
-				
 			</header>
 			
 			<section class="product-facets">

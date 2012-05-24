@@ -26,6 +26,7 @@ register_field_group(array (
         1 => 'ms_council',
         2 => 'ms_public',
         3 => 'ms_volunteer',
+		4 => 'ms_international',
       ),
       'taxonomy' => 
       array (

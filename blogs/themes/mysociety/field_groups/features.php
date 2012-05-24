@@ -63,7 +63,7 @@ register_field_group(array (
           'toolbar' => 'basic',
           'media_upload' => 'no',
           'order_no' => '2',
-        ),
+        )
       ),
       'row_limit' => '',
       'layout' => 'row',
@@ -89,6 +89,13 @@ register_field_group(array (
         'value' => 'ms_council',
         'order_no' => '1',
       ),
+		3 => 
+		    array (
+		      'param' => 'post_type',
+		      'operator' => '==',
+		      'value' => 'ms_international',
+		      'order_no' => '0',
+		   )
     ),
     'allorany' => 'any',
   ),

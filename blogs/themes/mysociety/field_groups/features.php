@@ -18,7 +18,7 @@ register_field_group(array (
       'name' => 'feature_text',
       'type' => 'text',
       'instructions' => 'The text that appears next to the heading \'features\' on the product page',
-      'required' => '1',
+      'required' => '0',
       'default_value' => '',
       'formatting' => 'none',
       'key' => 'field_4fbbbb7798331',

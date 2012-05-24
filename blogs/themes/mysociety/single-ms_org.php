@@ -13,9 +13,9 @@
 				
 				<ul class="screenshots">
 					<?php if(get_field('image')):?>
-						<li><a href="../img/barnet-report.png"><img src="../img/barnet-report.png" alt=""></a></li>
+						<li><a href="#"><img src="<?php echo get_field('image'); ?>" alt="<?php the_title().' Feature Image';?>"></a></li>
 					<?php else :?>
-						<li><a href="#"><img src="http://placehold.it/460x370" alt=""></a></li>
+						<li><a href="#"><img src="http://placehold.it/460x370" alt="Default image"></a></li>
 					<?php endif ?>
 				</ul>
 				

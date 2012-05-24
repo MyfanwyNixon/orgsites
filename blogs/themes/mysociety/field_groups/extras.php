@@ -8,66 +8,66 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fbbbb7e62751',
-  'title' => 'Features',
+  'id' => '4fbdf218c2696',
+  'title' => 'Extras',
   'fields' => 
   array (
     0 => 
     array (
-      'label' => 'Feature text',
-      'name' => 'feature_text',
+      'label' => 'Extras label',
+      'name' => 'extras_label',
       'type' => 'text',
-      'instructions' => 'The text that appears next to the heading \'features\' on the product page',
+      'instructions' => 'The text that appears alongside the heading \'extras\'',
       'required' => '0',
-      'default_value' => '',
+      'default_value' => 'Integration Options',
       'formatting' => 'none',
-      'key' => 'field_4fbbbb7798331',
+      'key' => 'field_4fbdf208708d9',
       'order_no' => '0',
     ),
     1 => 
     array (
-      'key' => 'field_4fb3a617a41d0',
-      'label' => 'Features',
-      'name' => 'features',
+      'label' => 'Extras',
+      'name' => 'extras',
       'type' => 'repeater',
-      'instructions' => 'A feature of the product',
+      'instructions' => 'The extra features that can be added',
       'required' => '0',
       'sub_fields' => 
       array (
         0 => 
         array (
-          'key' => 'field_4fb3a617a41e7',
-          'label' => 'Heading',
-          'name' => 'heading',
+          'label' => 'name',
+          'name' => 'name',
           'type' => 'text',
-          'default_value' => '',
+          'default_value' => 'the name of the extra',
           'formatting' => 'none',
+          'key' => 'field_4fbdf208711fc',
           'order_no' => '0',
         ),
         1 => 
         array (
-          'key' => 'field_4fb679dd7e76a',
-          'label' => 'image',
-          'name' => 'image',
-          'type' => 'image',
-          'save_format' => 'url',
-          'preview_size' => 'thumbnail',
+          'label' => 'Price from',
+          'name' => 'from',
+          'type' => 'text',
+          'default_value' => '',
+          'formatting' => 'none',
+          'key' => 'field_4fbdf20871210',
           'order_no' => '1',
         ),
         2 => 
         array (
-          'key' => 'field_4fb3a617a41f5',
-          'label' => 'Detail',
-          'name' => 'detail',
-          'type' => 'wysiwyg',
-          'toolbar' => 'basic',
-          'media_upload' => 'no',
+          'label' => 'Price Ongoing',
+          'name' => 'ongoing',
+          'type' => 'text',
+          'default_value' => '',
+          'formatting' => 'none',
+          'key' => 'field_4fbdf20871222',
           'order_no' => '2',
         ),
       ),
       'row_limit' => '',
-      'layout' => 'row',
-      'button_label' => '+ Add Feature',
+      'layout' => 'table',
+      'button_label' => '+ Add Row',
+      'key' => 'field_4fbdf208711db',
       'order_no' => '1',
     ),
   ),
@@ -100,7 +100,7 @@ register_field_group(array (
     array (
     ),
   ),
-  'menu_order' => 1,
+  'menu_order' => 0,
 ));
 }
 ?>

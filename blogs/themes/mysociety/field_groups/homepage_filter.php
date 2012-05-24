@@ -9,7 +9,7 @@ if(function_exists("register_field_group"))
 {
 register_field_group(array (
   'id' => '4fb4af835fea3',
-  'title' => 'Project Homepage Filter',
+  'title' => 'Homepage Text',
   'fields' => 
   array (
     0 => 

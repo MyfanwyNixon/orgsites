@@ -41,7 +41,7 @@
 			
 			<ul class="product-list">
 				<?php
-					$args = array( 'post_type' => 'ms_project', 'posts_per_page' => 10 );
+					$args = array( 'post_type' => 'ms_project', 'posts_per_page' => 20 );
 					$loop = new WP_Query( $args );
 				?>
 

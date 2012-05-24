@@ -122,6 +122,30 @@
 			'rewrite'		=> array('slug' => 'for-volunteers')
 			)
 		);
+		
+		//International
+		register_post_type(
+			'ms_international',
+			array(
+				'labels' => array(
+					'name'				=> __( 'International', 'mysociety' ),
+					'singular_name'		=> __( 'International Project', 'mysociety' ),
+					'add_new_item'		=> __( 'Add New International Project', 'mysociety' ),
+					'edit_item'			=> __( 'Edit International Project', 'mysociety'),
+					'new_item'			=> __( 'New International Project', 'mysociety' ),
+					'view_item'			=> __( 'View International Project', 'mysociety'),
+					'search_items'		=> __( 'Search International Projects', 'mysociety' ),
+					'not_found'			=> __( 'No projects found', 'mysociety' ),
+					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety' 
+				)
+			),
+			'taxonomies'		=> array('category'),
+			'public'			=> true,
+			'has_archive'	=> false,
+			'menu_position'	=> 5,
+			'rewrite'		=> array('slug' => 'international')
+			)
+		);
 	}
 
 	//register custom menu types
@@ -141,6 +165,7 @@
 		include 'field_groups/facet.php';
 		include 'field_groups/features.php';
 		include 'field_groups/homepage_filter.php';
+		include 'field_groups/project_text.php';
 		include 'field_groups/partners.php';
 		include 'field_groups/pricing.php';
 		include 'field_groups/extras.php';

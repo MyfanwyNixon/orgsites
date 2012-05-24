@@ -30,7 +30,7 @@ register_field_group(array (
       'name' => 'extras',
       'type' => 'repeater',
       'instructions' => 'The extra features that can be added',
-      'required' => '1',
+      'required' => '0',
       'sub_fields' => 
       array (
         0 => 

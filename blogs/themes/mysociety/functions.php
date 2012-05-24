@@ -143,6 +143,7 @@
 		include 'field_groups/homepage_filter.php';
 		include 'field_groups/partners.php';
 		include 'field_groups/pricing.php';
+		include 'field_groups/extras.php';
 		include 'field_groups/resources.php';
 		include 'field_groups/team_member.php';
 	}

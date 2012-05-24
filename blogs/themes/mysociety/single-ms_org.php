@@ -7,13 +7,16 @@
 	</header>
 	
 	<div id="content">
-		<p><?php echo get_field('overview')?> </p>
 		<article class="product">
 
 			<header>
 				
 				<ul class="screenshots">
-					<li><a href="../img/barnet-report.png"><img src="../img/barnet-report.png" alt=""></a></li>
+					<?php if(get_field('image')):?>
+						<li><a href="../img/barnet-report.png"><img src="../img/barnet-report.png" alt=""></a></li>
+					<?php else :?>
+						<li><a href="#"><img src="http://placehold.it/460x370" alt=""></a></li>
+					<?php endif ?>
 				</ul>
 				
 				<hgroup>
@@ -26,11 +29,11 @@
 			</header>
 			
 			<?php 
-				// check that we have the email support resource
+				// check that we have an email support or sales resource
 				$resources = get_field('resources');
 				if(count($resources) > 0) {
 				  foreach($resources as $resource){
-					if($resource['type'] == 'email'){
+					if($resource['type'] == 'email' || $resource['type'] == 'sales'){
 						$support = $resource; 
 					}
 				  }
@@ -74,7 +77,7 @@
 					<?php foreach($features as $feature):?><li>
 							<h4><?php echo $feature['heading'];?></h4>
 							<!-- TODO RESIZE TO 160 wide-->
-							<?php if($feature[image]): ?>
+							<?php if($feature['image']): ?>
 								<a href="#"><img src="<?php echo $feature['image'];?>" alt="<?php echo $feature['heading'].' Feature Image';?>"></a>
 							<?php endif ?>
 							<p><?php echo $feature['detail'];?></p>
@@ -93,23 +96,19 @@
 							<p><?php echo $price['details'] ?></p>
 						</li><?php endforeach ?>
 					</ul>
-					<p><em><em class="footnote">*</em> Prices assume integration of standard complexity; very complex or non-standard integrations may cost more.</em></p>
-				</section>
 				
-				<!-- TODO Extras -->
-				<h3>Extras:￼ <em>Integration Options</em></h3>
-				<ul class="product-options-pricing-extras">
-					<li>
-						+ <h4>Integration with Microsoft, Oracle, Lagan CRM systems<em class="footnote">*</em></h4>
-						<p><strong>First year: &pound;5,500</strong> then &pound;2,000 p.a.</p>
-					</li>
-
-					<li>
-						+ <h4>Integration with other CRMs and fault management systems</h4>
-						<p><strong>First year: &pound;6,500</strong> then &pound;2,500 p.a.</p>
-					</li>
-
-				</ul>
+					<?php if(count(get_field('extras')) > 0):?>
+						<h3>Extras:￼ <em><?php echo get_field('extras_label'); ?></em></h3>
+						<ul class="product-options-pricing-extras">
+						<?php foreach(get_field('extras') as $extra): ?>
+							<li>
+								+ <h4><?php echo $extra['name']?></h4>
+								<p><strong>First year from: &pound;<?php echo $extra['from']?></strong> then &pound;<?php echo $extra['ongoing']?> p.a.</p>
+							</li>
+						<?php endforeach ?>
+						</ul>
+					<?php endif ?>
+				</section>
 			<?php endif?>
 			
 			<!-- TODO general bespoke development link -->
@@ -155,57 +154,3 @@
 	
 </body>
 </html>
-
-
-
-
-
-<?php if(get_field('feature')) : ?>
-	<h3>Features</h3>
-	<?php foreach(get_field('feature') as $feature): ?>
-	    <div>
-			<h4><?php echo $feature['heading']; ?></h4>
-			<p><?php echo $feature['detail']; ?></p>
-		</div>
-	<?php endforeach; ?>
-<?php endif ?>
-
-<?php if(get_field('case_study')) : ?>
-	<h3>Case Studies</h3>
-	<?php foreach(get_field('case_study') as $case): ?>
-	    <div>
-			<?php if($case['image']):?>
-				<img src='<?php echo $case['image']; ?>' alt='<?php echo $case['client'].'logo'?>'>
-			<?php endif ?>
-			<h4><?php echo $case['client']; ?></h4>
-			<p><?php echo $case['blurb']; ?></p>
-		</div>
-	<?php endforeach; ?>
-<?php endif ?>
-
-<?php if(get_field('offer')) : ?>
-	<h3>Pricing</h3>
-	<?php foreach(get_field('offer') as $price_point): ?>
-	    <div>
-			<?php if($price_point['image']):?>
-				<img src='<?php echo $price_point['image']; ?>' alt='Price point image'>
-			<?php endif ?>
-			<h4><?php echo $price_point['overview']; ?></h4>
-			<h5><?php echo 'from '.$price_point['from']; ?></h5>
-			<p><?php echo $price_point['details']; ?></p>
-		</div>
-	<?php endforeach; ?>
-<?php endif ?>
-
-<?php if(get_field('resources')) : ?>
-	<h3>Resources</h3>
-	<ul>
-	<?php foreach(get_field('resources') as $resource): ?>
-	    <li>
-			<a href='<?php echo $resource['url']; ?>'><?php echo $resource['text']; ?></>
-		</li>
-	<?php endforeach; ?>
-	</ul>
-<?php endif ?>
-
-<? get_footer(); ?>

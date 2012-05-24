@@ -45,7 +45,7 @@ register_field_group(array (
       'instructions' => 'the text to present for click through ie \'click here to find out more\'',
       'required' => '1',
       'default_value' => 'click here to find out more',
-      'formatting' => 'none',
+      'formatting' => 'html',
       'order_no' => '2',
     ),
   ),

@@ -89,7 +89,7 @@ register_field_group(array (
         'order_no' => '4',
       ),
     ),
-    'allorany' => 'all',
+    'allorany' => 'any',
   ),
   'options' => 
   array (

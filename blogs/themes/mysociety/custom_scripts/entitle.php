@@ -14,6 +14,9 @@
 			case 'ms_volunteer':
 		        return "for&nbspVolunteers";	
 				break;
+			case 'ms_international':
+		        return "International";	
+				break;
 			default :
 				return null;
 		}		

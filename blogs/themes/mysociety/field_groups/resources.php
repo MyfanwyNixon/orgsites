@@ -52,11 +52,11 @@ register_field_group(array (
         1 => 
         array (
           'key' => 'field_4fb277b04e03c',
-          'label' => 'Link Text',
+          'label' => 'Link Text*',
           'name' => 'text',
           'type' => 'text',
           'default_value' => 'Link text',
-          'formatting' => 'none',
+          'formatting' => 'html',
           'order_no' => '1',
         ),
         2 => 
@@ -113,6 +113,13 @@ register_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_council',
+        'order_no' => '4',
+      ),
+	  5 => 
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'ms_international',
         'order_no' => '4',
       ),
     ),

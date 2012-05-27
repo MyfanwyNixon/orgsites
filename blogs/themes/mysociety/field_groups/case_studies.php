@@ -45,11 +45,11 @@ register_field_group(array (
         2 => 
         array (
           'key' => 'field_4fb27b94ed783',
-          'label' => 'Blurb',
+          'label' => 'Blurb*',
           'name' => 'blurb',
           'type' => 'textarea',
           'default_value' => '',
-          'formatting' => 'br',
+          'formatting' => 'html',
           'order_no' => '2',
         ),
       ),

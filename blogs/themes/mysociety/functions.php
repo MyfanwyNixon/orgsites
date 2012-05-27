@@ -146,6 +146,9 @@
 			'rewrite'		=> array('slug' => 'international')
 			)
 		);
+		
+		// NOTE: if you add another custom post type uncomment this line below
+		// flush_rewrite_rules();
 	}
 
 	//register custom menu types

@@ -8,11 +8,23 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fba2156abe23',
+  'id' => '4fc200d494f8f',
   'title' => 'Pricing',
   'fields' => 
   array (
     0 => 
+    array (
+      'label' => 'Pricing subtitle',
+      'name' => 'pricing',
+      'type' => 'text',
+      'instructions' => 'The subtitle that appears above the pricing section',
+      'required' => '1',
+      'default_value' => 'Our charges are all-inclusive, with no hidden extras',
+      'formatting' => 'none',
+      'key' => 'field_4fc1fed74d3ae',
+      'order_no' => '0',
+    ),
+    1 => 
     array (
       'key' => 'field_4fb25835ae761',
       'label' => 'Offer',
@@ -52,7 +64,7 @@ register_field_group(array (
           'formatting' => 'none',
           'order_no' => '2',
         ),
-		3 => 
+        3 => 
         array (
           'key' => 'field_4f425835ae78a',
           'label' => 'Price ongoing',
@@ -70,13 +82,13 @@ register_field_group(array (
           'type' => 'wysiwyg',
           'toolbar' => 'basic',
           'media_upload' => 'no',
-          'order_no' => '4',
+          'order_no' => '3',
         ),
       ),
       'row_limit' => '',
       'layout' => 'row',
       'button_label' => '+ Add Price Point',
-      'order_no' => '0',
+      'order_no' => '1',
     ),
   ),
   'location' => 
@@ -88,14 +100,14 @@ register_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_org',
-        'order_no' => '3',
+        'order_no' => '0',
       ),
       1 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_council',
-        'order_no' => '3',
+        'order_no' => '1',
       ),
     ),
     'allorany' => 'any',
@@ -111,7 +123,7 @@ register_field_group(array (
       2 => 'slug',
     ),
   ),
-  'menu_order' => 0,
+  'menu_order' => 3,
 ));
 }
 ?>

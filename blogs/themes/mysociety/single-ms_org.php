@@ -60,7 +60,7 @@
 						<p><a class="btn fms" href="#key-features">Read <strong>Key Features</strong></a></p>
 					</li><li>
 						<h3>Pricing Options</h3>
-						<p>Prices range from <strong>£?????</strong> for a branded version of FixMyStreet; to <strong>£??????</strong> for a fully CRM integrated site and mobile apps.<br/>&nbsp;</p>
+						<p>Check out our core product pricing below but feel free to get in touch if you'd like us to cook you up something special.<br/>&nbsp;</p>
 						<p><a class="btn fms" href="#pricing-options">View <strong>Pricing Options</strong></a></p>
 					</li><li>
 						<h3>Case Studies</h3>
@@ -87,12 +87,12 @@
 			<?php endif?>
 			
 			<?php if(count($prices) > 0):?>
-				<section class="product-options-pricing">
-					<h3>Pricing: <em>Our charges are all-inclusive, with no hidden extras</em></h3>
+				<section id='#pricing-options' class="product-options-pricing">
+					<h3>Pricing: <em><?php echo get_field('pricing'); ?></em></h3>
 					<ul>
 						<?php foreach($prices as $price): ?><li>
 							<h4><?php echo $price['overview'] ?></h4>
-							<p>From: <strong>&pound;<?php echo $price['from'] ?></strong> then &pound;<?php echo $price['ongoing'] ?> p.a.</p>
+							<p>From: <strong>&pound;<?php echo $price['from'] ?></strong> then &pound;<?php echo $price['ongoing']; ?> p.a.</p>
 							<p><?php echo $price['details'] ?></p>
 						</li><?php endforeach ?>
 					</ul>
@@ -118,7 +118,7 @@
 			
 			<?php if(count($studies) > 0): ?>
 			<section class="product-options-casestudy">
-				<h3>Case Studies: <em>Our charges are all-inclusive, with no hidden extras</em></h3>
+				<h3>Case Studies: <em><?php echo get_field('case_subtitle')?></em></h3>
 				<ul>
 				<?php foreach($studies as $study): ?><li>
 						<h4>Case Study: <?php echo $study['client']; ?></h4>

@@ -8,7 +8,7 @@
 if(function_exists("register_field_group"))
 {
 register_field_group(array (
-  'id' => '4fba2193f1443',
+  'id' => '4fc200773f449',
   'title' => 'Case Studies',
   'fields' => 
   array (
@@ -52,21 +52,23 @@ register_field_group(array (
           'formatting' => 'br',
           'order_no' => '2',
         ),
-		3 => 
-        array (
-          'key' => 'field_4fb27b94ed733',
-          'label' => 'URL',
-          'name' => 'url',
-          'type' => 'text',
-          'default_value' => 'http//example.com',
-          'formatting' => 'none',
-		  'order_no' => '3',
-        ),
       ),
       'row_limit' => '',
       'layout' => 'row',
       'button_label' => '+ Add Case Study',
       'order_no' => '0',
+    ),
+    1 => 
+    array (
+      'label' => 'Case study subtitle',
+      'name' => 'case_subtitle',
+      'type' => 'text',
+      'instructions' => 'The subtitle that apears alongside \'Case Studies\'',
+      'required' => '1',
+      'default_value' => 'See what our customers had to say',
+      'formatting' => 'none',
+      'key' => 'field_4fc2006a8048a',
+      'order_no' => '1',
     ),
   ),
   'location' => 
@@ -78,14 +80,14 @@ register_field_group(array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_org',
-        'order_no' => '2',
+        'order_no' => '0',
       ),
       1 => 
       array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_council',
-        'order_no' => '2',
+        'order_no' => '1',
       ),
     ),
     'allorany' => 'any',
@@ -101,7 +103,7 @@ register_field_group(array (
       2 => 'slug',
     ),
   ),
-  'menu_order' => 0,
+  'menu_order' => 2,
 ));
 }
 ?>

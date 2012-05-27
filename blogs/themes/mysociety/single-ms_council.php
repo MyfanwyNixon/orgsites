@@ -88,7 +88,7 @@
 			
 			<?php if(count($prices) > 0):?>
 				<section class="product-options-pricing">
-					<h3>Pricing: <em>Our charges are all-inclusive, with no hidden extras</em></h3>
+					<h3>Pricing: <em><?php echo get_field('pricing'); ?></em></h3>
 					<ul>
 						<?php foreach($prices as $price): ?><li>
 							<h4><?php echo $price['overview'] ?></h4>
@@ -118,7 +118,7 @@
 			
 			<?php if(count($studies) > 0): ?>
 			<section class="product-options-casestudy">
-				<h3>Case Studies: <em>Our charges are all-inclusive, with no hidden extras</em></h3>
+				<h3>Case Studies: <em><?php echo get_field('case_subtitle')?></em></h3>
 				<ul>
 				<?php foreach($studies as $study): ?><li>
 						<h4>Case Study: <?php echo $study['client']; ?></h4>

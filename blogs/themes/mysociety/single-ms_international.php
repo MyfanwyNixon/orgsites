@@ -49,18 +49,6 @@
 	
 	<?php get_footer();?>
 	
-	
-	<script src="../js/libs/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/libs/jquery.hoverintent.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/libs/jquery.isotope.min.js" type="text/javascript" charset="utf-8"></script>
-	
-	<script src="../js/FancyZoom.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/FancyZoomHTML.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">$(document).ready(function() {
-		setupZoom();
-	});
-	</script>
-	
 </body>
 </html>
 

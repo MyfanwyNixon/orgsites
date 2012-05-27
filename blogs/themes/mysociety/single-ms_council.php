@@ -40,7 +40,7 @@
 				}
 			?>
 			
-			<?php if($support):?>
+			<?php if(isset($support)):?>
 				<div class="action">
 					<p><a href="mailto:<?php echo $support['url'] ?>"><?php echo $support['text'] ?></a></p>
 				</div>
@@ -60,7 +60,7 @@
 						<p><a class="btn fms" href="#key-features">Read <strong>Key Features</strong></a></p>
 					</li><li>
 						<h3>Pricing Options</h3>
-						<p>Prices range from <strong>£?????</strong> for a branded version of FixMyStreet; to <strong>£??????</strong> for a fully CRM integrated site and mobile apps.<br/>&nbsp;</p>
+						<p>Check out our core product pricing below but feel free to get in touch if you'd like us to cook you up something special.<br/>&nbsp;</p>
 						<p><a class="btn fms" href="#pricing-options">View <strong>Pricing Options</strong></a></p>
 					</li><li>
 						<h3>Case Studies</h3>

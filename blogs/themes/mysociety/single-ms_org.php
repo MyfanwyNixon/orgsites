@@ -40,7 +40,7 @@
 				}
 			?>
 			
-			<?php if($support):?>
+			<?php if(isset($support)):?>
 				<div class="action">
 					<p><a href="mailto:<?php echo $support['url'] ?>"><?php echo $support['text'] ?></a></p>
 				</div>

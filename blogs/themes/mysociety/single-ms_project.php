@@ -31,9 +31,21 @@
 			<section class="product-facets">
 				<ul>
 					<?php foreach(get_field('facet') as $post_object): ?><li>
-				    	<h3><?php echo get_field('headline', $post_object->ID)?></h3>
-						<p><?php echo get_field('one_liner', $post_object->ID)?></p>
-						<p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_field('link_text', $post_object->ID)?></a></p>
+						<?php if(get_field('headline', $post_object->ID)): ?>
+					    	<h3><?php echo get_field('headline', $post_object->ID); ?></h3>
+						<?php else :?>
+							<h3><?php echo get_the_title($post_object->ID); ?></h3>
+						<?php endif; ?>
+						<?php if(get_field('one_liner', $post_object->ID)): ?>
+							<p><?php echo get_field('one_liner', $post_object->ID)?></p>
+						<?php else : ?>
+							<p><?php echo get_field('strapline', $post_object->ID)?></p>
+						<?php endif?>
+						<?php if(get_field('link_text', $post_object->ID)): ?>
+							<p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_field('link_text', $post_object->ID)?></a></p>
+						<?php else :?>
+							<p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>">Find out more</a></p>
+						<?php endif ?>
 					</li><?php endforeach; ?>
 				</ul>				
 			</section>

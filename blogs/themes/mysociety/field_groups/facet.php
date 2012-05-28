@@ -19,7 +19,7 @@ register_field_group(array (
       'name' => 'facet',
       'type' => 'relationship',
       'instructions' => 'A facet of a project ie. Fix My Street for Organisations, Fix My Street for Councils etc.',
-      'required' => '1',
+      'required' => '0',
       'post_type' => 
       array (
         0 => 'ms_org',

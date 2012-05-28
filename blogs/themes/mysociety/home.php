@@ -4,7 +4,7 @@
 	
 	<header id="header">
 		<h1 class="logo"><a href="homepage.html">mySociety</a></h1>
-		<p class="oneliner">A social enterprise that  makes people powerful <a href="#about-mysociety">learn more…</a></p>
+		<p class="oneliner">Usability with purpose. <a href="#about-mysociety">Learn more…</a></p>
 	</header>
 	
 	<div id="content">

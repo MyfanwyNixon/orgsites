@@ -82,7 +82,7 @@ register_field_group(array (
 	      'value' => 'ms_council',
 	      'order_no' => '0',
 	  ),
-  	  4 => 
+  	  5 => 
 	    array (
 	      'param' => 'post_type',
 	      'operator' => '==',

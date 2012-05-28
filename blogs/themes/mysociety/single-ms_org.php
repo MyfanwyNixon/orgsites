@@ -49,7 +49,7 @@
 			
 			<?php 
 				// do some checks and present the correct links
-				$features = get_field('feature');
+				$features = get_field('features');
 				$prices = get_field('offer');
 				$studies = get_field('case_study'); 
 			?>	
@@ -70,8 +70,7 @@
 			</section>
 			
 			
-			<?php if(isset($features) && count($features) > 0):?>
-				<?php var_dump($features) ?>
+			<?php if(is_array($features) && count($features) > 0):?>
 			<section id='key-features' class="product-options-features">
 				<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
 				<ul>

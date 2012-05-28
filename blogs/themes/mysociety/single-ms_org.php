@@ -54,19 +54,19 @@
 				$studies = get_field('case_study'); 
 			?>	
 			<section class="product-options">
-				<ul><li>
+				<ul><?php if(is_array($features) && count($features) > 0):?><li>
 						<h3>Key Features</h3>
 						<p>You’ll have technical support from our talented team of developers and a real person you can pick up a phone and call instead of fighting with a faceless call centre.</p>
 						<p><a class="btn fms" href="#key-features">Read <strong>Key Features</strong></a></p>
-					</li><li>
+					</li><?php endif ?><?php if(is_array($prices) && count($prices) > 0):?><li>
 						<h3>Pricing Options</h3>
 						<p>Check out our core product pricing below but feel free to get in touch if you'd like us to cook you up something special.<br/>&nbsp;</p>
 						<p><a class="btn fms" href="#pricing-options">View <strong>Pricing Options</strong></a></p>
-					</li><li>
+					</li><?php endif ?><?php if(is_array($features) && count($studies) > 0):?><li>
 						<h3>Case Studies</h3>
 						<p> An A4 PDF with a breakdown of all the facts, prices and contact information you'll need to make a decision.<br/>&nbsp;</p>
 						<p><a class="btn fms" href="#download-datasheet"><strong>Download the Datasheet</strong> (PDF)</a></p>
-					</li></ul>
+					</li><?php endif?></ul>
 			</section>
 			
 			
@@ -86,7 +86,7 @@
 			</section>
 			<?php endif?>
 			
-			<?php if(isset($prices)):?>
+			<?php if(is_array($prices) && count($prices) > 0):?>
 				<section id='#pricing-options' class="product-options-pricing">
 					<h3>Pricing: <em><?php echo get_field('pricing'); ?></em></h3>
 					<ul>
@@ -97,7 +97,7 @@
 						</li><?php endforeach ?>
 					</ul>
 				
-					<?php if(get_field('extras') && count(get_field('extras')) > 0):?>
+					<?php if(is_array(get_field('extras')) && count(get_field('extras')) > 0):?>
 						<h3>Extras:￼ <em><?php echo get_field('extras_label'); ?></em></h3>
 						<ul class="product-options-pricing-extras">
 						<?php foreach(get_field('extras') as $extra): ?>
@@ -116,7 +116,7 @@
 				<p><a href="#">If you would like our developers to cook you up something bespoke <strong>get in-touch</strong>.</a></p>
 			</div>
 			
-			<?php if(isset($studies)): ?>
+			<?php if(is_array($studies) && count($studies) > 0): ?>
 			<section class="product-options-casestudy">
 				<h3>Case Studies: <em><?php echo get_field('case_subtitle')?></em></h3>
 				<ul>

@@ -70,7 +70,8 @@
 			</section>
 			
 			
-			<?php if(isset($features)):?>
+			<?php if(isset($features) && count($features) > 0):?>
+				<?php var_dump($features) ?>
 			<section id='key-features' class="product-options-features">
 				<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
 				<ul>

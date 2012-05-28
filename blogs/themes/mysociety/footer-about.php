@@ -45,7 +45,7 @@
 
 		<strong>Get in-touch:</strong>
 		<?php
-			$args = array('post_type' => 'page', 'meta_query' => array( 'relation' => 'OR', array('key' => '_wp_page_template', 'value' => 'contact.php'), array('key' => '_wp_page_template', 'value' => 'support.php'), array('key' => '_wp_page_template', 'value' => 'hireus.php')));
+			$args = array('post_type' => 'page', 'meta_query' => array( 'relation' => 'OR', array('key' => '_wp_page_template', 'value' => 'contact.php'), array('key' => '_wp_page_template', 'value' => 'support.php'), array('key' => '_wp_page_template', 'value' => 'hireus.php'), array('key' => '_wp_page_template', 'value' => 'press.php')));
 			$loop = new WP_Query( $args );
 		?>
 		<ul>

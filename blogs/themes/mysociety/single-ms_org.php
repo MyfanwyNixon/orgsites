@@ -46,13 +46,14 @@
 				</div>
 			<?php endif ?>
 			
-			
 			<?php 
 				// do some checks and present the correct links
 				$features = get_field('features');
 				$prices = get_field('offer');
 				$studies = get_field('case_study'); 
 			?>	
+			
+			<?php //TODO Decide whether these signposts are aa little smaller ?>
 			<section class="product-options">
 				<ul><?php if(is_array($features) && count($features) > 0):?><li>
 						<h3>Key Features</h3>
@@ -68,8 +69,7 @@
 						<p><a class="btn fms" href="#download-datasheet"><strong>Download the Datasheet</strong> (PDF)</a></p>
 					</li><?php endif?></ul>
 			</section>
-			
-			
+						
 			<?php if(is_array($features) && count($features) > 0):?>
 			<section id='key-features' class="product-options-features">
 				<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
@@ -110,11 +110,6 @@
 					<?php endif ?>
 				</section>
 			<?php endif?>
-			
-			<!-- TODO general bespoke development link -->
-			<div class="action">
-				<p><a href="#">If you would like our developers to cook you up something bespoke <strong>get in-touch</strong>.</a></p>
-			</div>
 			
 			<?php if(is_array($studies) && count($studies) > 0): ?>
 			<section class="product-options-casestudy">

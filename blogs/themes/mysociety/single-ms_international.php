@@ -21,7 +21,7 @@
 				</ul>
 				
 				<hgroup>
-					<h2><strong><?php the_title();?></strong> <?php echo entitle($post);?></h2>
+					<h2><?php the_title();?></h2>
 					<h3><?php echo get_field('strapline')?></h3>
 				</hgroup>
 				

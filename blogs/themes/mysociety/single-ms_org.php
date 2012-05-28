@@ -70,7 +70,7 @@
 			</section>
 			
 			
-			<?php if(count($features) > 0):?>
+			<?php if(isset($features)):?>
 			<section id='key-features' class="product-options-features">
 				<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
 				<ul>
@@ -86,7 +86,7 @@
 			</section>
 			<?php endif?>
 			
-			<?php if(count($prices) > 0):?>
+			<?php if(isset($prices)):?>
 				<section id='#pricing-options' class="product-options-pricing">
 					<h3>Pricing: <em><?php echo get_field('pricing'); ?></em></h3>
 					<ul>
@@ -116,7 +116,7 @@
 				<p><a href="#">If you would like our developers to cook you up something bespoke <strong>get in-touch</strong>.</a></p>
 			</div>
 			
-			<?php if(count($studies) > 0): ?>
+			<?php if(isset($studies)): ?>
 			<section class="product-options-casestudy">
 				<h3>Case Studies: <em><?php echo get_field('case_subtitle')?></em></h3>
 				<ul>

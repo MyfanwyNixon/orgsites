@@ -64,7 +64,7 @@ register_field_group(array (
       'name' => 'case_subtitle',
       'type' => 'text',
       'instructions' => 'The subtitle that apears alongside \'Case Studies\'',
-      'required' => '1',
+      'required' => '0',
       'default_value' => 'See what our customers had to say',
       'formatting' => 'none',
       'key' => 'field_4fc2006a8048a',

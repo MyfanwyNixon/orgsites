@@ -18,7 +18,7 @@ register_field_group(array (
       'name' => 'pricing',
       'type' => 'text',
       'instructions' => 'The subtitle that appears above the pricing section',
-      'required' => '1',
+      'required' => '0',
       'default_value' => 'Our charges are all-inclusive, with no hidden extras',
       'formatting' => 'none',
       'key' => 'field_4fc1fed74d3ae',

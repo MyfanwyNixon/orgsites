@@ -61,6 +61,10 @@
 										$key = 'for_orgs';
 								        array_push($tags,$key);
 								        break;
+									case 'ms_council':
+										$key = 'for_councils';
+								        array_push($tags,$key);
+								        break;
 								    case 'ms_volunteer':
 										$key = 'for_volunteers';
 								        array_push($tags,$key);

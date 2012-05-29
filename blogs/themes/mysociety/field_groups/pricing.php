@@ -57,24 +57,14 @@ register_field_group(array (
         2 => 
         array (
           'key' => 'field_4fb25835ae78a',
-          'label' => 'Price from',
-          'name' => 'from',
+          'label' => 'Price*',
+          'name' => 'price',
           'type' => 'text',
-          'default_value' => '1000',
-          'formatting' => 'none',
+          'default_value' => 'Prices from X then Y pa',
+          'formatting' => 'html',
           'order_no' => '2',
         ),
         3 => 
-        array (
-          'key' => 'field_4f425835ae78a',
-          'label' => 'Price ongoing',
-          'name' => 'ongoing',
-          'type' => 'text',
-          'default_value' => '1000',
-          'formatting' => 'none',
-          'order_no' => '3',
-        ),
-        4 => 
         array (
           'key' => 'field_4fb25835ae795',
           'label' => 'Details',

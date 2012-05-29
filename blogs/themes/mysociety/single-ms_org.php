@@ -94,7 +94,7 @@
 					<ul>
 						<?php foreach($prices as $price): ?><li>
 							<h4><?php echo $price['overview'] ?></h4>
-							<p>From: <strong>&pound;<?php echo $price['from'] ?></strong> then &pound;<?php echo $price['ongoing']; ?> p.a.</p>
+							<p><?php echo $price['price'] ?></p>
 							<p><?php echo $price['details'] ?></p>
 						</li><?php endforeach ?>
 					</ul>
@@ -105,7 +105,7 @@
 						<?php foreach(get_field('extras') as $extra): ?>
 							<li>
 								+ <h4><?php echo $extra['name']?></h4>
-								<p><strong>First year from: &pound;<?php echo $extra['from']?></strong> then &pound;<?php echo $extra['ongoing']?> p.a.</p>
+								<p><?php echo $extra['price']?></p>
 							</li>
 						<?php endforeach ?>
 						</ul>

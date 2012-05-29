@@ -7,12 +7,45 @@ Description: A theme to rule all themes
 Version: 0.0
 */
 
-@import "normalise";
-@import "colours";
-@import "typography";
-@import "forms";
-@import "buttons";
+// Base Styles
+@import "base/normalise";
+@import "base/mixins";
+@import "base/grid";
+@import "base/colours";
+@import "base/icons";
+@import "base/logos";
+@import "base/typography";
+@import "base/buttons";
+@import "base/forms";
+
+
+// Modules
+@import "modules/project_filters";
+@import "modules/project_list";
+
+@import "modules/section_intro";
+@import "modules/section_features";
+@import "modules/section_options";
+@import "modules/casestudies";
+
+@import "modules/search";
+@import "modules/errors";
+@import "modules/navigation";
+
+@import "modules/article";
+@import "modules/blogposts";
+@import "modules/media";
+@import "modules/slideshow";
+@import "modules/tweets";
+
+
+// Specific Styles
+@import "specific/header";
+@import "specific/footer";
+
+
+// Plugins
+@import "plugins/isotope";
+
 
 @import "default";
-@import "enhancements";
-@import "isotope";

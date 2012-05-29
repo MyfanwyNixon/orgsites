@@ -1,7 +1,9 @@
 <? get_header(); ?>
 
 <body id="mysociety-org" class="productpage for_orgs fms">
-	
+
+	<?php //TODO Design in the edit this page link?>
+	<?php edit_post_link(); ?>
 	<header id="header">
 		<h1 class="logo"><a href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></h1>
 	</header>
@@ -20,7 +22,7 @@
 				</ul>
 				
 				<hgroup>
-					<h2><strong><?php the_title();?></strong> <?php echo entitle($post);?></h2>
+					<h2><?php the_title();?></h2>
 					<h3><?php echo get_field('strapline')?></h3>
 				</hgroup>
 				
@@ -31,9 +33,21 @@
 			<section class="product-facets">
 				<ul>
 					<?php foreach(get_field('facet') as $post_object): ?><li>
-				    	<h3><?php echo get_field('headline', $post_object->ID)?></h3>
-						<p><?php echo get_field('one_liner', $post_object->ID)?></p>
-						<p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_field('link_text', $post_object->ID)?></a></p>
+						<?php if(get_field('headline', $post_object->ID)): ?>
+					    	<h3><?php echo get_field('headline', $post_object->ID); ?></h3>
+						<?php else :?>
+							<h3><?php echo get_the_title($post_object->ID); ?></h3>
+						<?php endif; ?>
+						<?php if(get_field('one_liner', $post_object->ID)): ?>
+							<p><?php echo get_field('one_liner', $post_object->ID)?></p>
+						<?php else : ?>
+							<p><?php echo get_field('strapline', $post_object->ID)?></p>
+						<?php endif?>
+						<?php if(get_field('link_text', $post_object->ID)): ?>
+							<p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_field('link_text', $post_object->ID)?></a></p>
+						<?php else :?>
+							<p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>">Find out more</a></p>
+						<?php endif ?>
 					</li><?php endforeach; ?>
 				</ul>				
 			</section>
@@ -47,18 +61,6 @@
 	</div>
 	
 	<?php get_footer(); ?>
-	
-	
-	<script src="../js/libs/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/libs/jquery.hoverintent.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/libs/jquery.isotope.min.js" type="text/javascript" charset="utf-8"></script>
-	
-	<script src="../js/FancyZoom.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/FancyZoomHTML.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">$(document).ready(function() {
-		setupZoom();
-	});
-	</script>
 	
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Partners
+Template Name: Press
 */
 ?>
 <?php get_header(); ?>

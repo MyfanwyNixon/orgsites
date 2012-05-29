@@ -20,7 +20,7 @@ register_field_group(array (
     1 => 
     array (
       'key' => 'field_4fb258b51f1f8',
-      'label' => 'Overview',
+      'label' => 'Overview*',
       'name' => 'overview',
       'type' => 'textarea',
       'instructions' => 'The overview',
@@ -82,7 +82,7 @@ register_field_group(array (
 	      'value' => 'ms_council',
 	      'order_no' => '0',
 	  ),
-  	  4 => 
+  	  5 => 
 	    array (
 	      'param' => 'post_type',
 	      'operator' => '==',

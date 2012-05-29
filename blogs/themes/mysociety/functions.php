@@ -146,6 +146,9 @@
 			'rewrite'		=> array('slug' => 'international')
 			)
 		);
+		
+		// NOTE: if you add another custom post type uncomment this line below
+		// flush_rewrite_rules();
 	}
 
 	//register custom menu types
@@ -161,6 +164,7 @@
 	// register ACF field groups
 	if(function_exists("register_field_group")) {
 		include 'field_groups/basic.php';
+		include 'field_groups/meta_data.php';
 		include 'field_groups/case_studies.php';
 		include 'field_groups/facet.php';
 		include 'field_groups/features.php';
@@ -170,7 +174,7 @@
 		include 'field_groups/pricing.php';
 		include 'field_groups/extras.php';
 		include 'field_groups/resources.php';
-		include 'field_groups/team_member.php';
+		include 'field_groups/team_member.php';		
 	}
 	
 	//include some custom scripts for helping in page templates

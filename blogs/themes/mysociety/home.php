@@ -4,7 +4,7 @@
 	
 	<header id="header">
 		<h1 class="logo"><a href="homepage.html">mySociety</a></h1>
-		<p class="oneliner">A social enterprise that  makes people powerful <a href="#about-mysociety">learn more…</a></p>
+		<p class="oneliner">Usability with purpose. <a href="#about-mysociety">Learn more…</a></p>
 	</header>
 	
 	<div id="content">
@@ -61,6 +61,10 @@
 										$key = 'for_orgs';
 								        array_push($tags,$key);
 								        break;
+									case 'ms_council':
+										$key = 'for_councils';
+								        array_push($tags,$key);
+								        break;
 								    case 'ms_volunteer':
 										$key = 'for_volunteers';
 								        array_push($tags,$key);
@@ -76,7 +80,7 @@
 							}
 						}
 					?>
-					<li class="<?php echo implode($tags, ' '); ?>">
+					<li class="<?php echo implode($tags, ' '); ?>" <?php if(get_field('icon')){echo 'style=\'background-image: url('.get_field('icon').');\'';} ?>>
 						<?php if( count($tags) > 1 ) : ?>
 							<h3><a href="/<?php the_permalink(); ?>/"><?php the_title(); ?></a></h3>
 						<?php else : ?>

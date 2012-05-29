@@ -45,23 +45,13 @@ register_field_group(array (
         ),
         1 => 
         array (
-          'label' => 'Price from',
-          'name' => 'from',
+          'label' => 'Price*',
+          'name' => 'price',
           'type' => 'text',
-          'default_value' => '',
-          'formatting' => 'none',
+          'default_value' => 'Priced from X',
+          'formatting' => 'html',
           'key' => 'field_4fbdf20871210',
           'order_no' => '1',
-        ),
-        2 => 
-        array (
-          'label' => 'Price Ongoing',
-          'name' => 'ongoing',
-          'type' => 'text',
-          'default_value' => '',
-          'formatting' => 'none',
-          'key' => 'field_4fbdf20871222',
-          'order_no' => '2',
         ),
       ),
       'row_limit' => '',

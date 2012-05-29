@@ -638,7 +638,8 @@ body.homepage #header {
       float: left;
       margin: 0;
       min-height: 7.5em;
-      background: transparent url(img/blankcircle.png) no-repeat scroll top left; }
+      background: transparent no-repeat scroll top left;  
+      background-image: url(img/icons/products/blankcircle.png);}
       #content #products .product-list li h3 {
         margin: 0;
         font-weight: normal; }

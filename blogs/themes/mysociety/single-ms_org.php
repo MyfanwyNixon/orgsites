@@ -2,6 +2,8 @@
 
 <body id="mysociety-org" class="productpage for_orgs fms">
 	
+	<?php //TODO Design in the edit this page link?>
+	<?php edit_post_link(); ?>
 	<header id="header">
 		<h1 class="logo"><a href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></h1>
 	</header>
@@ -20,7 +22,7 @@
 				</ul>
 				
 				<hgroup>
-					<h2><strong><?php the_title();?></strong> <?php echo entitle($post);?></h2>
+					<h2><?php the_title();?></h2>
 					<h3><?php echo get_field('strapline')?></h3>
 				</hgroup>
 				
@@ -40,37 +42,37 @@
 				}
 			?>
 			
-			<?php if($support):?>
+			<?php if(isset($support)):?>
 				<div class="action">
 					<p><a href="mailto:<?php echo $support['url'] ?>"><?php echo $support['text'] ?></a></p>
 				</div>
 			<?php endif ?>
 			
-			
 			<?php 
 				// do some checks and present the correct links
-				$features = get_field('feature');
+				$features = get_field('features');
 				$prices = get_field('offer');
 				$studies = get_field('case_study'); 
 			?>	
+			
+			<?php //TODO Decide whether these signposts are aa little smaller ?>
 			<section class="product-options">
-				<ul><li>
+				<ul><?php if(is_array($features) && count($features) > 0):?><li>
 						<h3>Key Features</h3>
 						<p>You’ll have technical support from our talented team of developers and a real person you can pick up a phone and call instead of fighting with a faceless call centre.</p>
 						<p><a class="btn fms" href="#key-features">Read <strong>Key Features</strong></a></p>
-					</li><li>
+					</li><?php endif ?><?php if(is_array($prices) && count($prices) > 0):?><li>
 						<h3>Pricing Options</h3>
-						<p>Prices range from <strong>£?????</strong> for a branded version of FixMyStreet; to <strong>£??????</strong> for a fully CRM integrated site and mobile apps.<br/>&nbsp;</p>
+						<p>Check out our core product pricing below but feel free to get in touch if you'd like us to cook you up something special.<br/>&nbsp;</p>
 						<p><a class="btn fms" href="#pricing-options">View <strong>Pricing Options</strong></a></p>
-					</li><li>
+					</li><?php endif ?><?php if(is_array($features) && count($studies) > 0):?><li>
 						<h3>Case Studies</h3>
 						<p> An A4 PDF with a breakdown of all the facts, prices and contact information you'll need to make a decision.<br/>&nbsp;</p>
 						<p><a class="btn fms" href="#download-datasheet"><strong>Download the Datasheet</strong> (PDF)</a></p>
-					</li></ul>
+					</li><?php endif?></ul>
 			</section>
-			
-			
-			<?php if(count($features) > 0):?>
+						
+			<?php if(is_array($features) && count($features) > 0):?>
 			<section id='key-features' class="product-options-features">
 				<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
 				<ul>
@@ -86,24 +88,24 @@
 			</section>
 			<?php endif?>
 			
-			<?php if(count($prices) > 0):?>
-				<section class="product-options-pricing">
-					<h3>Pricing: <em>Our charges are all-inclusive, with no hidden extras</em></h3>
+			<?php if(is_array($prices) && count($prices) > 0):?>
+				<section id='#pricing-options' class="product-options-pricing">
+					<h3>Pricing: <em><?php echo get_field('pricing'); ?></em></h3>
 					<ul>
 						<?php foreach($prices as $price): ?><li>
 							<h4><?php echo $price['overview'] ?></h4>
-							<p>From: <strong>&pound;<?php echo $price['from'] ?></strong> then &pound;<?php echo $price['ongoing'] ?> p.a.</p>
+							<p><?php echo $price['price'] ?></p>
 							<p><?php echo $price['details'] ?></p>
 						</li><?php endforeach ?>
 					</ul>
 				
-					<?php if(get_field('extras') && count(get_field('extras')) > 0):?>
+					<?php if(is_array(get_field('extras')) && count(get_field('extras')) > 0):?>
 						<h3>Extras:￼ <em><?php echo get_field('extras_label'); ?></em></h3>
 						<ul class="product-options-pricing-extras">
 						<?php foreach(get_field('extras') as $extra): ?>
 							<li>
 								+ <h4><?php echo $extra['name']?></h4>
-								<p><strong>First year from: &pound;<?php echo $extra['from']?></strong> then &pound;<?php echo $extra['ongoing']?> p.a.</p>
+								<p><?php echo $extra['price']?></p>
 							</li>
 						<?php endforeach ?>
 						</ul>
@@ -111,14 +113,9 @@
 				</section>
 			<?php endif?>
 			
-			<!-- TODO general bespoke development link -->
-			<div class="action">
-				<p><a href="#">If you would like our developers to cook you up something bespoke <strong>get in-touch</strong>.</a></p>
-			</div>
-			
-			<?php if(count($studies) > 0): ?>
+			<?php if(is_array($studies) && count($studies) > 0): ?>
 			<section class="product-options-casestudy">
-				<h3>Case Studies: <em>Our charges are all-inclusive, with no hidden extras</em></h3>
+				<h3>Case Studies: <em><?php echo get_field('case_subtitle')?></em></h3>
 				<ul>
 				<?php foreach($studies as $study): ?><li>
 						<h4>Case Study: <?php echo $study['client']; ?></h4>
@@ -139,18 +136,6 @@
 	</div>
 	
 	<?php get_footer();?>
-	
-	
-	<script src="../js/libs/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/libs/jquery.hoverintent.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/libs/jquery.isotope.min.js" type="text/javascript" charset="utf-8"></script>
-	
-	<script src="../js/FancyZoom.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/FancyZoomHTML.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">$(document).ready(function() {
-		setupZoom();
-	});
-	</script>
 	
 </body>
 </html>

@@ -126,7 +126,6 @@
 							<a href="#"><img src="http://placehold.it/460x195" alt=""></a>
 						<?php endif?>
 						<p><?php echo $study['blurb'] ?></p>
-						<p><a class="btn" href="<?php $study['link'];?>">Download Case Study</a></p>
 					</li><?php endforeach ?>
 				</ul>
 			</section>

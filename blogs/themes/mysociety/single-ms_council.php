@@ -98,7 +98,7 @@
 							<p><?php echo $price['details'] ?></p>
 						</li><?php endforeach ?>
 					</ul>
-				
+			
 					<?php if(is_array(get_field('extras')) && count(get_field('extras')) > 0):?>
 						<h3>Extras:￼ <em><?php echo get_field('extras_label'); ?></em></h3>
 						<ul class="product-options-pricing-extras">
@@ -110,6 +110,7 @@
 						<?php endforeach ?>
 						</ul>
 					<?php endif ?>
+					
 				</section>
 			<?php endif?>
 			
@@ -126,7 +127,6 @@
 							<a href="#"><img src="http://placehold.it/460x195" alt=""></a>
 						<?php endif?>
 						<p><?php echo $study['blurb'] ?></p>
-						<p><a class="btn" href="<?php $study['link'];?>">Download Case Study</a></p>
 					</li><?php endforeach ?>
 				</ul>
 			</section>

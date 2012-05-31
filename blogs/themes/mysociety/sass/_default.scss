@@ -1,9 +1,9 @@
 body{
-	background-color:#f2f2f2;
-	&.homepage{ background-color:#ffffff; }
+	background-color: $colour-background-light;
+	&.homepage{ background-color: $colour-background-lighter; }
 }
 #header{
-	background-color:#ffffff;
+	background-color: $colour-background-lighter;
 	max-width:100%;
 	width: 100%;
 	margin: 0;
@@ -20,10 +20,7 @@ body{
 			background: transparent url(img/logos/logo.png) no-repeat scroll center left;
 			background-size: auto 1em;
 			
-			// Text IR
-			text-indent: 100%;
-			white-space: nowrap;  
-			overflow: hidden;
+			@include text_ir;
 		}
 	}
 	
@@ -343,7 +340,7 @@ body.homepage #header{
 			
 			strong{
 				text-decoration: underline;
-				color: #444;
+				color: $colour-background-dark;
 			}
 			
 			
@@ -430,10 +427,6 @@ body.homepage #header{
 					        border-radius: 0.625em;
 					border: 1px solid #ccc;
 					border-bottom-color: #bbb;
-//					-webkit-box-shadow: 0 0 1em #000;
-//					   -moz-box-shadow: 0 0 1em #000;
-//					     -o-box-shadow: 0 0 1em #000;
-//					        box-shadow: 0 0 1em #000;
 					margin: 0.625em;
 					width: 18.25em;
 					padding:0;
@@ -472,7 +465,6 @@ body.homepage #header{
 					
 					h4{
 						display:inline;
-//						background-color: transparent;
 						padding: 0.625em;
 						border: 1px solid #bbb;
 						-webkit-border-radius: 3px;
@@ -497,7 +489,6 @@ body.homepage #header{
 				padding-right: 1.25em;
 			}
 			&>ul>li{
-				//width: 15em;
 				width:30em;
 			}
 		}
@@ -514,7 +505,6 @@ body.homepage #header{
 				padding-right: 1.25em;
 			}
 			&>ul>li{
-				//width: 15em;
 				width:30em;
 			}
 		}
@@ -538,7 +528,7 @@ body.homepage #header{
 
 #footer{
 	clear:both;
-	background-color: #444;
+	background-color: $colour-background-dark;
 	width: 100%;
 	float:left;
 	padding: 2em 0;

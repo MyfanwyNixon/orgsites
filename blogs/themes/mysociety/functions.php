@@ -179,4 +179,5 @@
 	
 	//include some custom scripts for helping in page templates
 	include('custom_scripts/entitle.php');
+	include('custom_scripts/pages-with-template.php');
 ?>

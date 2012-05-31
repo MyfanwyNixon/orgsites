@@ -435,8 +435,102 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/*
+	Grid.scss - Desktop: 960px+
+	---------
+	mySociety.org uses a twelve column grid for screens large enough to show it. Can be broken into 1,2,3,4,6,12 columns.
+	Roughly based on a 960 grid. 12 Columns of 5em/80px (with 0.625em/10px padding included, equivilant to a 1.25em/20px gutter).
+	
+	
+	use: @include grid-1-of-3
+*/
+/*
+	Colours.scss
+	------------
+	Default colours for mySociety.org
+	
+*/
 body {
   color: #666666; }
+
+/*
+	Icons.scss
+	----------
+	Icons that can be included in buttons or labels, added in html the same way as in twitter bootstrap:
+	<i class="icon-download"></i>
+	
+	To use the mixin (it defaults to 16px white):
+	@include icon('docs');
+	
+	You can pass other options for a different type/size:
+	@include icon('docs', 128px, 'black', 'svg');
+	
+	PNG must be 16px or 32px, 
+	SVG can be anysize but may not be supported by the browser.
+	
+	Colour is either black or white.
+	
+*/
+.icon-docs {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  opacity: 0.5;
+  margin-right: 0.625em;
+  background: transparent url("img/icons/general/16px/docs-white.png") no-repeat scroll center center; }
+
+.icon-download {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  opacity: 0.5;
+  margin-right: 0.625em;
+  background: transparent url("img/icons/general/16px/download-white.png") no-repeat scroll center center; }
+
+.icon-info {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  opacity: 0.5;
+  margin-right: 0.625em;
+  background: transparent url("img/icons/general/16px/info-white.png") no-repeat scroll center center; }
+
+.icon-pricing {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  opacity: 0.5;
+  margin-right: 0.625em;
+  background: transparent url("img/icons/general/16px/pricing-white.png") no-repeat scroll center center; }
+
+.icon-star {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  opacity: 0.5;
+  margin-right: 0.625em;
+  background: transparent url("img/icons/general/16px/star-white.png") no-repeat scroll center center; }
+
+.icon-support {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  opacity: 0.5;
+  margin-right: 0.625em;
+  background: transparent url("img/icons/general/16px/support-white.png") no-repeat scroll center center; }
+
+@mixim logo {
+  background: transparent url(img/logos/logo.png) no-repeat scroll center center;
+  display: inline-block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
 
 body {
   line-height: 1.875em; }
@@ -470,15 +564,94 @@ a {
     background-color: #777; }
 
 body.fms .btn:hover {
-  background-color: #444; }
+  background-color: #444444; }
+
+/*
+	Footer.scss
+	---------
+	Styles for the main page footer.
+	Extends the product-list class for every page except the homepage.
+	
+*/
+.footer {
+  width: 100%;
+  clear: both;
+  float: left;
+  background-color: #444444;
+  padding: 2em 0; }
+
+/*
+	Footer.scss
+	---------
+	Styles for the main page footer.
+	Extends the product-list class for every page except the homepage.
+	
+*/
+.footer {
+  width: 100%;
+  clear: both;
+  float: left;
+  background-color: #444444;
+  padding: 2em 0; }
+
+/* Start: Recommended Isotope styles */
+/**** Isotope Filtering ****/
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+/**** Isotope CSS3 transitions ****/
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s; }
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width; }
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: top, left, opacity;
+  transition-property: transform, opacity; }
+
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s; }
+
+/* End: Recommended Isotope styles */
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none; }
 
 body {
   background-color: #f2f2f2; }
   body.homepage {
-    background-color: #ffffff; }
+    background-color: white; }
 
 #header {
-  background-color: #ffffff;
+  background-color: white;
   max-width: 100%;
   width: 100%;
   margin: 0;
@@ -612,54 +785,54 @@ body.homepage #header {
       color: gray; }
       #content #products .product-filters.filtered li a.selected strong {
         color: #4d4d4d; }
-  #content #products .product-list {
+  #content #products .product-list, #content #products .footer-product-list {
     clear: both;
     padding: 0;
     margin: 0;
     text-indent: 0;
     list-style: none;
     color: #808080; }
-    #content #products .product-list a {
+    #content #products .product-list a, #content #products .footer-product-list a {
       color: #4D4D4D; }
-      #content #products .product-list a:hover {
+      #content #products .product-list a:hover, #content #products .footer-product-list a:hover {
         text-decoration: none; }
-      #content #products .product-list a.for_orgs:hover {
+      #content #products .product-list a.for_orgs:hover, #content #products .footer-product-list a.for_orgs:hover {
         color: #29ABE2; }
-      #content #products .product-list a.for_public:hover {
+      #content #products .product-list a.for_public:hover, #content #products .footer-product-list a.for_public:hover {
         color: #ED1C24; }
-      #content #products .product-list a.for_volunteers:hover {
+      #content #products .product-list a.for_volunteers:hover, #content #products .footer-product-list a.for_volunteers:hover {
         color: #F7931E; }
-      #content #products .product-list a.for_international:hover {
+      #content #products .product-list a.for_international:hover, #content #products .footer-product-list a.for_international:hover {
         color: #dec600; }
-    #content #products .product-list li {
+    #content #products .product-list li, #content #products .footer-product-list li {
       display: block;
       padding: 0.625em 0.625em 0.625em 5.625em;
       width: 20em;
       float: left;
       margin: 0;
       min-height: 7.5em;
-      background: transparent no-repeat scroll top left;  
-      background-image: url(img/icons/products/blankcircle.png);}
-      #content #products .product-list li h3 {
+      background: transparent no-repeat scroll top left;
+      background-image: url("img/icons/products/blankcircle.png"); }
+      #content #products .product-list li h3, #content #products .footer-product-list li h3 {
         margin: 0;
         font-weight: normal; }
-      #content #products .product-list li p {
+      #content #products .product-list li p, #content #products .footer-product-list li p {
         margin: 0;
         font-size: 0.75em;
         line-height: 2; }
-    #content #products .product-list li.blur, #content #products .product-list.for_orgs li {
+    #content #products .product-list li.blur, #content #products .footer-product-list li.blur, #content #products .product-list.for_orgs li, #content #products .for_orgs.footer-product-list li {
       opacity: 0.3; }
-    #content #products .product-list.for_orgs li.for_orgs, #content #products .product-list.for_public li.for_public, #content #products .product-list.for_volunteers li.for_volunteers, #content #products .product-list.for_international li.for_international {
+    #content #products .product-list.for_orgs li.for_orgs, #content #products .for_orgs.footer-product-list li.for_orgs, #content #products .product-list.for_public li.for_public, #content #products .for_public.footer-product-list li.for_public, #content #products .product-list.for_volunteers li.for_volunteers, #content #products .for_volunteers.footer-product-list li.for_volunteers, #content #products .product-list.for_international li.for_international, #content #products .for_international.footer-product-list li.for_international {
       opacity: 1; }
-    #content #products .product-list li.fms {
+    #content #products .product-list li.fms, #content #products .footer-product-list li.fms {
       background-image: url(img/fms.png); }
-    #content #products .product-list li.fmt {
+    #content #products .product-list li.fmt, #content #products .footer-product-list li.fmt {
       background-image: url(img/fmt.png); }
-    #content #products .product-list li.twfy {
+    #content #products .product-list li.twfy, #content #products .footer-product-list li.twfy {
       background-image: url(img/twfy.png); }
-    #content #products .product-list li.afoi {
+    #content #products .product-list li.afoi, #content #products .footer-product-list li.afoi {
       background-image: url(img/afoi.png); }
-    #content #products .product-list li.mapumental {
+    #content #products .product-list li.mapumental, #content #products .footer-product-list li.mapumental {
       background-image: url(img/mapumental.png); }
 #content .product header,
 #content .product section,
@@ -730,7 +903,7 @@ body.homepage #header {
   #content .product .action strong,
   #content .products .action strong {
     text-decoration: underline;
-    color: #444; }
+    color: #444444; }
 #content .product .product-facets h3,
 #content .product .product-options h3,
 #content .product .product-options-pricing h3,
@@ -917,7 +1090,7 @@ body.homepage #header {
 
 #footer {
   clear: both;
-  background-color: #444;
+  background-color: #444444;
   width: 100%;
   float: left;
   padding: 2em 0; }
@@ -958,73 +1131,3 @@ body.homepage #header {
 
 #screenShade {
   background-color: rgba(255, 255, 255, 0.5); }
-
-.svg #header .logo a {
-  background-image: url(img/logos/logo.svg); }
-
-.no-js .sections {
-  display: block;
-  padding-bottom: 2em;
-  color: #ddd; }
-.no-js .product-list > li {
-  height: 10em; }
-.no-js .product-filters {
-  display: none; }
-
-.js .sections {
-  display: none; }
-.js .product-list > li {
-  cursor: pointer; }
-.js .product-list a:hover {
-  text-decoration: none; }
-
-/* Start: Recommended Isotope styles */
-/**** Isotope Filtering ****/
-.isotope-item {
-  z-index: 2; }
-
-.isotope-hidden.isotope-item {
-  pointer-events: none;
-  z-index: 1; }
-
-/**** Isotope CSS3 transitions ****/
-.isotope,
-.isotope .isotope-item {
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  -ms-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  transition-duration: 0.8s; }
-
-.isotope {
-  -webkit-transition-property: height, width;
-  -moz-transition-property: height, width;
-  -ms-transition-property: height, width;
-  -o-transition-property: height, width;
-  transition-property: height, width; }
-
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-  -moz-transition-property: -moz-transform, opacity;
-  -ms-transition-property: -ms-transform, opacity;
-  -o-transition-property: top, left, opacity;
-  transition-property: transform, opacity; }
-
-/**** disabling Isotope CSS3 transitions ****/
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-  -webkit-transition-duration: 0s;
-  -moz-transition-duration: 0s;
-  -ms-transition-duration: 0s;
-  -o-transition-duration: 0s;
-  transition-duration: 0s; }
-
-/* End: Recommended Isotope styles */
-/* disable CSS transitions for containers with infinite scrolling*/
-.isotope.infinite-scrolling {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none; }

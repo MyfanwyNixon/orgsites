@@ -41,6 +41,9 @@
 							case 'public':
 						        $public = $resource;
 						        break;
+							case 'blog':
+						        $blog = $resource;
+						        break;
 						    case 'github':
 						        $github = $resource;
 						        break;
@@ -50,6 +53,21 @@
 							case 'document':
 						        $document = $resource;
 						        break;
+							case 'faq':
+						        $faq = $resource;
+						        break;
+							case 'group':
+						        $group = $resource;
+						        break;
+							case 'twitter':
+						        $twitter = $resource;
+						        break;
+							case 'irc':
+						        $irc = $resource;
+						        break;
+							case 'facebook':
+						        $facebook = $resource;
+						        break;
 						}
 					}
 				}
@@ -57,16 +75,16 @@
 			<section class="product-facets">
 				<?php //TODO add these as ACF repeaters instead ?>
 				<ul>
+					<?php endif ?><?php if(isset($public)):?><li>
+						<h3>Check Out Our Site</h3>
+						<p>We run a version ourselves, have a snoop around to see what you can achieve with our tools.</p>
+						<p><a class="btn fms" href="<?php echo $public['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/info-white.png" style="vertical-align: middle;opacity:0.5" alt=""><?php echo $public['text'];?></a></p>
+					<?php endif ?>
 					<?php if(isset($document)):?><li>
 						<h3>What you will need</h3>
 						<p>We have written some non-technical guides detailing the things you will need to setup your own version.</p>
 						<p><a class="btn fms" href="<?php echo $document['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/info-white.png" style="vertical-align: text-top;opacity:0.5" alt=""> <?php echo $document['text'];?></a></p>
 					</li>
-					<?php endif ?><?php if(isset($public)):?><li>
-						<h3>Check Out Our Site</h3>
-						<p>We run a version ourselves, have a snoop around to see what you can achieve with our tools.</p>
-						<p><a class="btn fms" href="<?php echo $wiki['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/info-white.png" style="vertical-align: middle;opacity:0.5" alt="">
-					<?php endif ?>
 					<?php if(isset($wiki)):?><li>
 						<h3>Read the documentation</h3>
 						<p>Everything a developer should need to get going is in the wiki, if anything is missing let us know or write it yourself.</p>
@@ -77,6 +95,31 @@
 						<p>Everything is packaged up on Github ready for downloading, forking and contributing your changes back to.</p>
 						<p><a class="btn fms" href="<?php echo $github['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/download-white.png" style="vertical-align: text-top;opacity:0.5" alt=""> <?php echo $github['text'];?></a></p>
 					</li><?php endif ?></ul>	
+					<?php endif ?><?php if(isset($blog)):?><li>
+						<h3>What's Happening?</h3>
+						<p>Check out the news on development and goings on in our blog</p>
+						<p><a class="btn fms" href="<?php echo $blog['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/info-white.png" style="vertical-align: middle;opacity:0.5" alt=""><?php echo $blog['text'];?></a></p>
+					<?php endif ?>
+					<?php endif ?><?php if(isset($faq)):?><li>
+						<h3>Need Answers?</h3>
+						<p>Wee've compiled a list of our most frequently asked questions</p>
+						<p><a class="btn fms" href="<?php echo $faq['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/info-white.png" style="vertical-align: middle;opacity:0.5" alt=""><?php echo $faq['text'];?></a></p>
+					<?php endif ?>
+					<?php endif ?><?php if(isset($facebook)):?><li>
+						<h3>Like This?</h3>
+						<p>You can check out our presence on facebook</p>
+						<p><a class="btn fms" href="<?php echo $facebook['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/info-white.png" style="vertical-align: middle;opacity:0.5" alt=""><?php echo $facebook['text'];?></a></p>
+					<?php endif ?>
+					<?php endif ?><?php if(isset($irc)):?><li>
+						<h3>Want to Talk?</h3>
+						<p>We hang out on IRC, feel free to join us in the chatroom.</p>
+						<p><a class="btn fms" href="<?php echo $irc['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/info-white.png" style="vertical-align: middle;opacity:0.5" alt=""><?php echo $irc['text'];?></a></p>
+					<?php endif ?>
+					<?php endif ?><?php if(isset($group):?><li>
+						<h3>Help Each Other</h3>
+						<p>Our google group is the place to share your experiences and help others get up and running</p>
+						<p><a class="btn fms" href="<?php echo $group['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/info-white.png" style="vertical-align: middle;opacity:0.5" alt=""><?php echo $group['text'];?></a></p>
+					<?php endif ?>
 			</section>		
 			
 		</article>		

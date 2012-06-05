@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <body id="mysociety-org" class="productpage for_orgs fms">
 	
-	<header id="header">
+	<header class="header">
 		<h1 class="logo"><a href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></h1>
 	</header>
 	<h1>404</h1>

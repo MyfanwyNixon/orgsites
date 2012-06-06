@@ -4,40 +4,42 @@
 	
 	<header class="header">
 		<h1 class="logo"><a href="homepage.html">mySociety</a></h1>
-		<p class="oneliner">Usability with purpose. <a href="#about-mysociety">Learn more…</a></p>
+		<p class="oneliner">Usability with purpose.</p>
 	</header>
 	
 	<div id="content">
 		<section id="products">
 			<h2>Products</h2>
 			
-			<!-- Insert with JS as it makes more sense to just have a list if the filters aren't going to work anyway -->
-			<ul class="product-filters">	
-				<li>
-					<a class="for_orgs" href="#">
-						<strong>For Organisations</strong>
-						Software products, services and consulting. For Government, Councils and Corporates.
-					</a>
-				</li>
-				<li>
-					<a class="for_public" href="#">
-						<strong>For the Public</strong>
-						Our core charitable UK sites like TheyWorkForYou, FixMyStreet and FixMyTransport
-					</a>
-				</li>
-				<li>
-					<a class="for_volunteers" href="#">
-						<strong>For Volunteers</strong>
-						Most of our sites are Open Source and we welcome contributors
-					</a>
-				</li>
-				<li>
-					<a class="for_international" href="#">
-						<strong>International</strong>
-						Want to run a mySociety site in your own country? We’re here to help.
-					</a>
-				</li>
-			</ul>
+			<?php
+			// <!-- Insert with JS as it makes more sense to just have a list if the filters aren't going to work anyway -->
+			// <!-- <ul class="product-filters">	
+			// 	<li>
+			// 		<a class="for_orgs" href="#">
+			// 			<strong>For Organisations</strong>
+			// 			Software products, services and consulting. For Government, Councils and Corporates.
+			// 		</a>
+			// 	</li>
+			// 	<li>
+			// 		<a class="for_public" href="#">
+			// 			<strong>For the Public</strong>
+			// 			Our core charitable UK sites like TheyWorkForYou, FixMyStreet and FixMyTransport
+			// 		</a>
+			// 	</li>
+			// 	<li>
+			// 		<a class="for_volunteers" href="#">
+			// 			<strong>For Volunteers</strong>
+			// 			Most of our sites are Open Source and we welcome contributors
+			// 		</a>
+			// 	</li>
+			// 	<li>
+			// 		<a class="for_international" href="#">
+			// 			<strong>International</strong>
+			// 			Want to run a mySociety site in your own country? We’re here to help.
+			// 		</a>
+			// 	</li>
+			// </ul> -->
+			?>
 			
 			<ul class="product-list">
 				<?php

@@ -51,10 +51,11 @@
 			
 			<?php 
 				// do some checks and present the correct links
-				$features = get_field('feature');
+				$features = get_field('features');
 				$prices = get_field('offer');
 				$studies = get_field('case_study'); 
 			?>	
+			<?php //TODO Decide whether these signposts are aa little smaller ?>
 			<section class="product-options">
 				<ul><?php if(is_array($features) && count($features) > 0):?><li>
 						<h3>Key Features</h3>
@@ -78,7 +79,6 @@
 				<ul>
 					<?php foreach($features as $feature):?><li>
 							<h4><?php echo $feature['heading'];?></h4>
-							<!-- TODO RESIZE TO 160 wide-->
 							<?php if($feature['image']): ?>
 								<a href="#"><img src="<?php echo $feature['image'];?>" alt="<?php echo $feature['heading'].' Feature Image';?>"></a>
 							<?php endif ?>

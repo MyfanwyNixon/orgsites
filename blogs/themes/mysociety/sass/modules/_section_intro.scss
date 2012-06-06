@@ -1,0 +1,43 @@
+header.section_intro{
+	@include grid-container;
+	padding: 2em 0;
+	
+	.images{
+		@include grid-1-of-2;
+	}
+	
+	p,
+	hgroup
+	{
+		@include grid-1-of-2;
+		float:right;
+		clear:right;
+		
+	}
+	p{padding-bottom: 4em;}
+	
+	hgroup{
+		
+// Main Title
+		h2{
+			font-size: 2.25em;
+			margin: 0;
+			padding:0;
+			color: #4D4D4D;
+
+			strong{
+				font-size: 1.3333em;
+			}
+		}
+		
+// Subtitle
+		h3{
+			font-size: 1.5em;
+			font-weight: normal;
+			color: #B3B3B3;
+			margin: 0;
+			padding:0;
+			line-height: 1;
+		}
+	}
+}

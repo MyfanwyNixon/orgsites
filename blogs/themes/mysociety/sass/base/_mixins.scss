@@ -1,0 +1,21 @@
+@mixin text_ir{
+	// Image replacement
+	text-indent: 100%;
+	white-space: nowrap;  
+	overflow: hidden;
+}
+
+@mixin reset-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-indent:0;
+}
+
+@mixin border-radius($radi){
+	-webkit-border-radius: $radi;
+	     -o-border-radius: $radi;
+	    -ms-border-radius: $radi;
+	   -moz-border-radius: $radi;
+	        border-radius: $radi;
+}

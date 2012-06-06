@@ -18,7 +18,7 @@
 */
 
 // Available Icons:
-$icon-list: 'book', 'arrow-down', 'info', 'coins', 'star', 'support';
+$icon-list: 'book', 'book2', 'arrow-down', 'info', 'coins', 'star', 'support', 'github-cat', 'twitter-bird', 'facebook2', 'comment2', 'feed2', 'pencil';
 
 
 @mixin icon($icon, $icon_colour:'white', $icon_size:16px, $icon_format:'png'){
@@ -28,7 +28,7 @@ $icon-list: 'book', 'arrow-down', 'info', 'coins', 'star', 'support';
 	display: inline-block;
 	width: $icon_size;
 	height: $icon_size;
-	vertical-align: text-top;
+	vertical-align: middle;
 	opacity:0.5;
 	margin-right: $gutter/2;
 	
@@ -39,10 +39,22 @@ $icon-list: 'book', 'arrow-down', 'info', 'coins', 'star', 'support';
 	}
 }
 
+@mixin icon_bg($icon, $icon_colour:'white', $icon_size:16px, $icon_format:'png', $icon_position:left center){
+	// $icon_size: Can be 16px or 32px if png or any size if SVG is supported
+	// $icon_colour: Can be black or white
+	
+	padding-left: $icon_size+($icon_size/2);
+	
+	@if $icon_format == 'svg' {
+		background: transparent url('http://mysociety.org.s3.amazonaws.com/icons/svg/'+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll $icon_position;
+	} @else {
+		background: transparent url('http://mysociety.org.s3.amazonaws.com/icons/'+$icon_size+'/'+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll $icon_position;
+	}
+}
+
 @each $icon-name in $icon-list {
 	.icon-#{$icon-name} { @include icon(#{$icon-name}); }
 }
-
 
 
 

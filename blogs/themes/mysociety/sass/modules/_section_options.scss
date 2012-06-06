@@ -2,7 +2,7 @@
 	@include grid-container;
 	margin-bottom: $gutter*2;
 	
-	ul{
+	&>ul{
 		@include reset-list;
 		display: block;
 		width: 100%;

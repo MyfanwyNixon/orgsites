@@ -1,0 +1,48 @@
+.section-links{
+	@include grid-container;
+	margin-bottom: $gutter*2;
+	clear: both;
+}
+
+ul.linked_list{
+	
+	@include reset-list;
+	li{
+		margin: 0;
+		margin-bottom: $gutter/2;
+		
+		a{
+			display: block;
+			color: #333;
+			opacity: 0.6;
+			padding: $gutter/4 $gutter/2;
+		
+			&:hover{
+				opacity: 1;
+				text-decoration: none;
+			}
+		}
+	}
+	
+	
+	.link-github{ @include icon_bg('github-cat', 'black'); }
+	.link-facebook{ @include icon_bg('facebook2', 'black'); }
+	.link-twitter{ @include icon_bg('twitter-bird', 'black'); }
+	.link-wiki{ @include icon_bg('pencil', 'black'); }
+	.link-docs{ @include icon_bg('book2', 'black'); }
+	.link-faq{ @include icon_bg('support', 'black'); }
+	.link-blog{ @include icon_bg('feed2', 'black'); }
+	.link-irc{ @include icon_bg('comment2', 'black'); }
+}
+
+.four_up ul.linked_list{
+	li{
+		
+		a{
+			font-size: 0.75em;
+			line-height: 1.1667em;
+			border-top: #ccc 2px solid;
+			margin: 0;
+		}
+	}
+}

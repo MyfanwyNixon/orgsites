@@ -12,7 +12,7 @@ VHOST_DIR=$(    dirname $ORGSITES_DIR )
 WEB_DIR=$BLOGS_DIR/web
 
 # get WP from their svn server
-svn co http://core.svn.wordpress.org/tags/3.3.1 $WEB_DIR;
+svn co http://core.svn.wordpress.org/tags/3.3.2 $WEB_DIR;
 
 ##### copy in the custom php files
 # change to this directory so that the paths are easier
@@ -25,21 +25,23 @@ for PHP_FILE in `find . -name '*.php'`; do
     cp -pfv $PHP_FILE $DST_DIR/;
 done;
 
-# uploads and plugins are both stored outside version control and
-# are backed up
+# uploads are stored outside version control and backed up
+# (blogs.dir is the multisite uploads directory)
 mkdir -pv $VHOST_DIR/blog-uploads
-mkdir -pv $VHOST_DIR/blog-plugins
 mkdir -pv $VHOST_DIR/blogs.dir
 rm -rfv $WEB_DIR/wp-content/uploads
-rm -rfv $WEB_DIR/wp-content/plugins
 rm -rfv $WEB_DIR/wp-content/blogs.dir
 ln -sfv  $VHOST_DIR/blog-uploads $WEB_DIR/wp-content/uploads
-ln -sfv  $VHOST_DIR/blog-plugins $WEB_DIR/wp-content/plugins
 ln -sfv  $VHOST_DIR/blogs.dir    $WEB_DIR/wp-content/blogs.dir
 
-# Themes are store under VC but not in the WP structure
-rm -rfv $WEB_DIR/wp-content/themes
-ln -sfv $BLOGS_DIR/themes $WEB_DIR/wp-content/themes
+# Plugins and themes can be in version control, so symlink them in if present
+# Themes are stored under VC but not in the WP structure, symlink them in
+for THING in plugins themes; do
+    [ ! -e $BLOGS_DIR/$THING ] && continue
+    for DIR in `ls $BLOGS_DIR/$THING`; do
+        ln -sfv $BLOGS_DIR/$THING/$DIR $WEB_DIR/wp-content/$THING/$DIR
+    done
+done
 
 echo "All done - $0 completed successfully"
 

@@ -5,7 +5,7 @@
 	Roughly based on a 960 grid. 12 Columns of 5em/80px (with 0.625em/10px padding included, equivilant to a 1.25em/20px gutter).
 	
 	
-	use: @include grid-1-of-3
+	use: @include grid-1-of-3   or   @include grid-container
 */
 
 $max_page_width: 60em;

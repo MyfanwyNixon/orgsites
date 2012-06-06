@@ -17,4 +17,15 @@
 		padding-bottom: $gutter * 2;
 		font-size: 1em;
 	}
+	
+	a.back-to-top{
+		
+		opacity: 0.6;
+		
+		&:hover{
+			opacity: 1;
+			text-decoration: none;
+		}
+	
+	}
 }

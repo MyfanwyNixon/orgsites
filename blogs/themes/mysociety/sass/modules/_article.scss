@@ -5,6 +5,19 @@
 	h2{
 		font-size: 2em;
 	}
+	header{
+		margin-bottom: 2em;
+		h2{
+			margin-bottom: 0;
+		}
+		.meta{
+			color: #ccc;
+			margin: 0;
+			a{
+				color: #999;
+			}
+		}
+	}
 	
 	&>p{
 		font-size: 1.2em;

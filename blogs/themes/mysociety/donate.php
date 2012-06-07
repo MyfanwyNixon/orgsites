@@ -7,10 +7,8 @@ Template Name: Donate
 	<body>
 	
 	<?php //TODO Design in the edit this page link?>
-	<?php edit_post_link(); ?>
-	<header class="header">
-		<h1 class="logo"><a href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></h1>
-	</header>	
+	
+	<?php get_template_part('logo')?>	
 		
 	<h1><?php the_title(); ?></h1>
 	

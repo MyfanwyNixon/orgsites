@@ -83,7 +83,7 @@
 						}
 					?>
 					<li class="<?php echo implode($tags, ' '); ?>" <?php if(get_field('icon')){echo 'style=\'background-image: url('.get_field('icon').');\'';} ?>>
-						<?php if( count($tags) > 1 ) : ?>
+						<?php if( isset($tags) || is_array($tags) && count($tags) > 1 ) : ?>
 							<h3><a href="/<?php the_permalink(); ?>/"><?php the_title(); ?></a></h3>
 						<?php else : ?>
 							<?php //TODO: link straight through to the permalink of the single project page if possible?>

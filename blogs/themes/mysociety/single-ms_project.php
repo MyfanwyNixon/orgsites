@@ -29,7 +29,7 @@
 			</header>
 			
 			<section class="section-options">
-				<ul class="<?php echo options_how_many_cols(count(get_field('facet'))); ?>">
+				<ul class="">
 					<?php $facets = get_field('facet'); ?>
 					<?php if(is_array($facets) && count($facets) > 0) : ?>
 						<?php foreach(get_field('facet') as $post_object): ?><li>

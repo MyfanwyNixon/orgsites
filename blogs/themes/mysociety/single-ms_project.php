@@ -12,14 +12,16 @@
 		
 		<article class="products">
 			
-			<header>
-				<ul class="screenshots">
-					<?php if(get_field('image')):?>
+			<header class="section_intro">
+				<div class="images">
+					<ul class="slider">
+						<?php if(get_field('image')):?>
 						<li><a href="#"><img src="<?php echo get_field('image'); ?>" alt="<?php the_title().' Feature Image';?>"></a></li>
 					<?php else :?>
 						<li><a href="#"><img src="http://placehold.it/460x370" alt="Default image"></a></li>
 					<?php endif ?>
-				</ul>
+					</ul>
+				</div>
 				
 				<hgroup>
 					<h2><?php the_title();?></h2>
@@ -30,8 +32,8 @@
 				
 			</header>
 			
-			<section class="product-facets">
-				<ul>
+			<section class="section-options">
+				<ul class="<?php echo options_how_many_cols(count(get_field('facet'))); ?>">
 					<?php foreach(get_field('facet') as $post_object): ?><li>
 						<?php if(get_field('headline', $post_object->ID)): ?>
 					    	<h3><?php echo get_field('headline', $post_object->ID); ?></h3>
@@ -39,9 +41,9 @@
 							<h3><?php echo get_the_title($post_object->ID); ?></h3>
 						<?php endif; ?>
 						<?php if(get_field('one_liner', $post_object->ID)): ?>
-							<p><?php echo get_field('one_liner', $post_object->ID)?></p>
+							<p class="desc"><?php echo get_field('one_liner', $post_object->ID)?></p>
 						<?php else : ?>
-							<p><?php echo get_field('strapline', $post_object->ID)?></p>
+							<p class="desc"><?php echo get_field('strapline', $post_object->ID)?></p>
 						<?php endif?>
 						<?php if(get_field('link_text', $post_object->ID)): ?>
 							<p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_field('link_text', $post_object->ID)?></a></p>

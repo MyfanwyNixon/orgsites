@@ -11,15 +11,16 @@
 	<div id="content">
 		<article class="product">
 
-			<header>
-				
-				<ul class="screenshots">
-					<?php if(get_field('image')):?>
+			<header class="section_intro">
+				<div class="images">
+					<ul class="slider">
+						<?php if(get_field('image')):?>
 						<li><a href="#"><img src="<?php echo get_field('image'); ?>" alt="<?php the_title().' Feature Image';?>"></a></li>
 					<?php else :?>
 						<li><a href="#"><img src="http://placehold.it/460x370" alt="Default image"></a></li>
 					<?php endif ?>
-				</ul>
+					</ul>
+				</div>
 				
 				<hgroup>
 					<h2><?php the_title();?></h2>
@@ -56,34 +57,44 @@
 			?>	
 			
 			<?php //TODO Decide whether these signposts are aa little smaller ?>
-			<section class="product-options">
-				<ul><?php if(is_array($features) && count($features) > 0):?><li>
+			<section class="section-options">
+				<ul class="<?php echo options_how_many_cols(count($features)); ?>">
+				<?php if(is_array($features) && count($features) > 0):?>
+					<li>
 						<h3>Key Features</h3>
-						<p>You’ll have technical support from our talented team of developers and a real person you can pick up a phone and call instead of fighting with a faceless call centre.</p>
+						<p class="desc">You’ll have technical support from our talented team of developers and a real person you can pick up a phone and call instead of fighting with a faceless call centre.</p>
 						<p><a class="btn fms" href="#key-features">Read <strong>Key Features</strong></a></p>
-					</li><?php endif ?><?php if(is_array($prices) && count($prices) > 0):?><li>
+					</li>
+				<?php endif ?><?php if(is_array($prices) && count($prices) > 0):?>
+					<li>
 						<h3>Pricing Options</h3>
-						<p>Check out our core product pricing below but feel free to get in touch if you'd like us to cook you up something special.<br/>&nbsp;</p>
+						<p class="desc">Check out our core product pricing below but feel free to get in touch if you'd like us to cook you up something special.<br/>&nbsp;</p>
 						<p><a class="btn fms" href="#pricing-options">View <strong>Pricing Options</strong></a></p>
-					</li><?php endif ?><?php if(is_array($features) && count($studies) > 0):?><li>
+					</li>
+				<?php endif ?><?php if(is_array($features) && count($studies) > 0):?>
+					<li>
 						<h3>Case Studies</h3>
-						<p> An A4 PDF with a breakdown of all the facts, prices and contact information you'll need to make a decision.<br/>&nbsp;</p>
+						<p class="desc"> An A4 PDF with a breakdown of all the facts, prices and contact information you'll need to make a decision.<br/>&nbsp;</p>
 						<p><a class="btn fms" href="#download-datasheet"><strong>Download the Datasheet</strong> (PDF)</a></p>
-					</li><?php endif?></ul>
+					</li>
+				<?php endif?>
+				</ul>
 			</section>
 						
 			<?php if(is_array($features) && count($features) > 0):?>
-			<section id='key-features' class="product-options-features">
+			<section id='key-features' class="section-features">
 				<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
-				<ul>
-					<?php foreach($features as $feature):?><li>
-							<h4><?php echo $feature['heading'];?></h4>
-							<!-- TODO RESIZE TO 160 wide-->
-							<?php if($feature['image']): ?>
-								<a href="#"><img src="<?php echo $feature['image'];?>" alt="<?php echo $feature['heading'].' Feature Image';?>"></a>
-							<?php endif ?>
-							<p><?php echo $feature['detail'];?></p>
-						</li><?php endforeach ?>
+				<ul class="<?php echo features_how_many_cols(count($features)); ?>">
+				<?php foreach($features as $feature):?>
+					<li>
+						<h4><?php echo $feature['heading'];?></h4>
+						<!-- TODO RESIZE TO 160 wide-->
+						<?php if($feature['image']): ?>
+						<a href="#"><img src="<?php echo $feature['image'];?>" alt="<?php echo $feature['heading'].' Feature Image';?>"></a>
+						<?php endif ?>
+						<p><?php echo $feature['detail'];?></p>
+					</li>
+				<?php endforeach ?>
 				</ul>
 			</section>
 			<?php endif?>
@@ -100,7 +111,7 @@
 					</ul>
 				
 					<?php if(is_array(get_field('extras')) && count(get_field('extras')) > 0):?>
-						<h3>Extras:￼ <em><?php echo get_field('extras_label'); ?></em></h3>
+						<h3>Extras: <em><?php echo get_field('extras_label'); ?></em></h3>
 						<ul class="product-options-pricing-extras">
 						<?php foreach(get_field('extras') as $extra): ?>
 							<li>

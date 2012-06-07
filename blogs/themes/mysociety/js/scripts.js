@@ -12,7 +12,4 @@ $(document).ready(function() {
 	$(".section-options p.desc").equalHeights();
 	tempcolfix();
 	
-	
-}
-	
 });

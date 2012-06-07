@@ -14,13 +14,15 @@
 			
 			<header class="section_intro">
 				
-				<ul class="screenshots">
-					<?php if(get_field('image')):?>
+				<div class="images">
+					<ul class="slider">
+						<?php if(get_field('image')):?>
 						<li><a href="#"><img src="<?php echo get_field('image'); ?>" alt="<?php the_title().' Feature Image';?>"></a></li>
 					<?php else :?>
 						<li><a href="#"><img src="http://placehold.it/460x370" alt="Default image"></a></li>
 					<?php endif ?>
-				</ul>
+					</ul>
+				</div>
 				
 				<hgroup>
 					<h2><?php the_title();?></h2>

@@ -78,21 +78,20 @@
 			</section>
 						
 			<?php if(is_array($features) && count($features) > 0):?>
-			<section id='key-features' class="section-features">
-				<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
-				<ul class="<?php echo features_how_many_cols(count($features)); ?>">
-				<?php foreach($features as $feature):?>
-					<li>
-						<h4><?php echo $feature['heading'];?></h4>
-						<!-- TODO RESIZE TO 160 wide-->
-						<?php if($feature['image']): ?>
-						<a href="#"><img src="<?php echo $feature['image'];?>" alt="<?php echo $feature['heading'].' Feature Image';?>"></a>
-						<?php endif ?>
-						<p><?php echo $feature['detail'];?></p>
-					</li>
-				<?php endforeach ?>
-				</ul>
-			</section>
+				<section id='key-features' class="section-features">
+					<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
+					<ul class="<?php echo feature_cols($features);?>">
+					<?php foreach($features as $feature):?>
+						<li>
+							<h4><?php echo $feature['heading'];?></h4>
+							<?php if($feature['image']): ?>
+							<a href="#"><img src="<?php echo $feature['image'];?>" alt="<?php echo $feature['heading'].' Feature Image';?>"></a>
+							<?php endif ?>
+							<p><?php echo $feature['detail'];?></p>
+						</li>
+					<?php endforeach ?>
+					</ul>
+				</section>
 			<?php endif?>
 			
 			<?php if(is_array($prices) && count($prices) > 0):?>

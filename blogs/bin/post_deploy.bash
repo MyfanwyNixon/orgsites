@@ -39,7 +39,7 @@ ln -sfv  $VHOST_DIR/blogs.dir    $WEB_DIR/wp-content/blogs.dir
 for THING in plugins themes; do
     [ ! -e $BLOGS_DIR/$THING ] && continue
     for DIR in `ls $BLOGS_DIR/$THING`; do
-        ln -sfv $BLOGS_DIR/$THING/$DIR $WEB_DIR/wp-content/$THING/$DIR
+        ln -snfv $BLOGS_DIR/$THING/$DIR $WEB_DIR/wp-content/$THING/$DIR
     done
 done
 

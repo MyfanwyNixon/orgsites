@@ -15,18 +15,18 @@ Template Name: FAQ
 		
 		<section class="q_and_a">
 			
-			<h2><?php get_title();?></h2>
+			<h2><?php the_title();?></h2>
 			<?php 
+
 				$faqs = get_field('faqs'); 
-				$count = 0
+				$count = 0;
 			?>			
 
 			<!--Contents -->
 			<ul id='contents'>
 				<?php if(is_array($faqs) && count($faqs) > 0) : foreach($faqs as $faq) :?>
 					<!-- Write up some FAQs! -->
-					<li><a href="#q<?php prinft($count)?>"><?php printf($faq['question'])?></a></li>
-					<?php $count++; ?>
+					<li><a href="#q<?php echo $count?>"><?php printf($faq['question'])?></a></li>
 				<?php endforeach; endif; ?>
 			</ul>
 
@@ -34,7 +34,7 @@ Template Name: FAQ
 			<?php $count = 0; ?>
 			<?php if(is_array($faqs) && count($faqs) > 0) : foreach($faqs as $faq) :?>
 				<!-- Write up some FAQs! -->
-				<dt id="q<?php prinft($count)?>"><?php printf($faq['question'])?></dt>
+				<dt id="q<?php echo $count;?>"><?php printf($faq['question'])?></dt>
 				<dd>
 					<?php printf($faq['answer'])?>
 					<p><a class="back-to-top" href="#content"><strong>&#8673;</strong> back to top</a></p>

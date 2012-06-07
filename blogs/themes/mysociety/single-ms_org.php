@@ -54,7 +54,7 @@
 			
 			<?php //TODO Decide whether these signposts are aa little smaller ?>
 			<section class="section-options">
-				<ul class="<?php echo options_how_many_cols(count($features)); ?>">
+				<ul class="three_up">
 				<?php if(is_array($features) && count($features) > 0):?>
 					<li>
 						<h3>Key Features</h3>

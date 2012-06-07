@@ -7,6 +7,7 @@
 	  mySociety (http://www.mysociety.org/)
 	  -------------------------------------
 -->
+	
 	<meta name="creator" content="http://www.mysociety.org/">
 	<meta http-equiv="imagetoolbar" content="false">
 	<meta name="description" content="mySociety, A social enterprise that makes people powerful by building tools for the public, government, councils and organisations.">
@@ -19,11 +20,12 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
 	<script src="../js/libs/modernizr-2.5.3.js" type="text/javascript" charset="utf-8"></script>
-	
+	<script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body id="mysociety-org" class="productpage for_orgs fms">
 	
-	<header id="header">
+	<header class="header">
 		<h1 class="logo"><a href="homepage.html">mySociety</a></h1>
 	</header>
 	
@@ -31,11 +33,13 @@
 		
 		<article class="products">
 			
-			<header>
+			<header class="section_intro">
 				
-				<ul class="screenshots">
-					<li><img src="../img/fms/fms-opensource.png" alt=""></li>
-				</ul>
+				<div class="images">
+					<ul class="slider">
+						<li><img src="../img/fms/fms-opensource.png" alt=""></li>
+					</ul>
+				</div>
 				
 				<hgroup>
 					<h2>Get your own <strong>FixMyStreet</strong></h2>
@@ -45,24 +49,32 @@
 				
 			</header>
 			
-			<section class="product-facets">
+			<section class="section-options">
 				
-				<ul><li>
+				<ul class="three_up"><li>
 						<h3>What you will need</h3>
 						<p>We have written some non-technical guides detailing the things you will need to setup your own version.</p>
-						<p><a class="btn fms" href="#FIXME"><img src="../img/icons/general/16/info-white.png" style="vertical-align: text-top;opacity:0.5" alt=""> &nbsp; Read the <strong>guides and introduction</strong></a></p>
+						<p><a class="btn fms" href="#FIXME"><i class="icon-support"></i> Read the <strong>guides and intro</strong></a></p>
 					</li><li>
 						<h3>Read the documentation</h3>
 						<p>Everything a developer should need to get going is in the wiki, if anything is missing let us know or write it yourself.</p>
-						<p><a class="btn fms" href="https://github.com/mysociety/fixmystreet/wiki"><img src="../img/icons/general/16/docs-white.png" style="vertical-align: middle;opacity:0.5" alt=""> &nbsp; Browse the <strong>Documentation</strong></a></p>
+						<p><a class="btn fms" href="https://github.com/mysociety/fixmystreet/wiki"><i class="icon-book"></i> Browse the <strong>Documentation</strong></a></p>
 					</li><li>
 						<h3>Download the code</h3>
 						<p>Everything is packaged up on Github ready for downloading, forking and contributing your changes back to.</p>
-						<p><a class="btn fms" href="https://github.com/mysociety/fixmystreet"><img src="../img/icons/general/16/download-white.png" style="vertical-align: text-top;opacity:0.5" alt=""> &nbsp; <strong>Download</strong> the code</a></p>
+						<p><a class="btn fms" href="https://github.com/mysociety/fixmystreet"><i class="icon-arrow-down"></i> <strong>Download</strong> the code</a></p>
 					</li></ul>
 				
 			</section>
-			
+			<section class="section-links">
+				<h3>Other resources:</h3>
+				<ul class="linked_list">
+					<li><a class="link-facebook" href="#">Like this? Like us on <strong>Facebook</strong></a></li>
+					<li><a class="link-blog" href="#">Keep up to date, <strong>read our blog</strong></a></li>
+					<li><a class="link-faq" href="#">Read answers to common questions in the <strong>FAQ</strong></a></li>
+					<li><a class="link-irc" href="#">Talk to us on <strong>IRC</strong></a></li>
+				</ul>
+			</section>
 			
 		</article>
 		

@@ -180,4 +180,78 @@
 	//include some custom scripts for helping in page templates
 	include('custom_scripts/entitle.php');
 	include('custom_scripts/pages-with-template.php');
+	
+	
+	
+	// Try and work out how many columns should be shown if a value isn't given from the admin interface
+	// TODO: Might be better looking at even division of 2 and 3 instead.
+	function options_how_many_cols($li_count) {
+		switch ($li_count) {
+			case '1':
+				return 'one_up';
+				break;
+			case '2':
+				return 'two_up';
+				break;
+			case '3':
+				return 'three_up';
+				break;
+			case '4':
+				return 'four_up';
+				break;
+			case '5':
+				return 'three_up';
+				break;
+			case '6':
+				return 'three_up';
+				break;
+			case '7':
+				return 'four_up';
+				break;
+			case '8':
+				return 'four_up';
+				break;
+			
+			default:
+				return 'four_up';
+				break;
+		}
+	}
+	// Try and work out how many columns should be shown if a value isn't given from the admin interface
+	function features_how_many_cols($li_count) {
+		switch ($li_count) {
+			case '1':
+				return 'one_up';
+				break;
+			case '2':
+				return 'two_up';
+				break;
+			case '3':
+				return 'three_up';
+				break;
+			case '4':
+				return 'two_up';
+				break;
+			case '5':
+				return 'three_up';
+				break;
+			case '6':
+				return 'three_up';
+				break;
+			case '7':
+				return 'two_up';
+				break;
+			case '8':
+				return 'two_up';
+				break;
+			case '9':
+				return 'three_up';
+				break;
+			
+			default:
+				return 'two_up';
+				break;
+		}
+	}
+	
 ?>

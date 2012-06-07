@@ -163,18 +163,19 @@
 
 	// register ACF field groups
 	if(function_exists("register_field_group")) {
-		include 'field_groups/basic.php';
-		include 'field_groups/meta_data.php';
-		include 'field_groups/case_studies.php';
-		include 'field_groups/facet.php';
-		include 'field_groups/features.php';
-		include 'field_groups/homepage_filter.php';
-		include 'field_groups/project_text.php';
-		include 'field_groups/partners.php';
-		include 'field_groups/pricing.php';
-		include 'field_groups/extras.php';
-		include 'field_groups/resources.php';
-		include 'field_groups/team_member.php';		
+		include 'field_groups/basic.php';//Basic project info
+		include 'field_groups/meta_data.php';//Page meta data
+		include 'field_groups/case_studies.php';//Project case studies
+		include 'field_groups/facet.php';//Facets of a project (for orgs, for councils etc)
+		include 'field_groups/features.php';//Project features
+		include 'field_groups/homepage_filter.php';//Text that appears for the project on the homepage
+		include 'field_groups/project_text.php';//Text that appears for the facet on it's parent project page
+		include 'field_groups/partners.php';//Commerical and charitable partners
+		include 'field_groups/pricing.php';//Core pricing
+		include 'field_groups/extras.php'; //Pricing extras
+		include 'field_groups/resources.php'; //Project reqsources
+		include 'field_groups/team_member.php';	//People
+		include 'field_groups/faq.php'; //FAQs	
 	}
 	
 	//include some custom scripts for helping in page templates

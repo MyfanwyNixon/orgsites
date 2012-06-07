@@ -1,0 +1,59 @@
+.article{
+	@include grid-container;
+	margin-bottom: $gutter*2;
+	
+	h2{
+		font-size: 2em;
+	}
+	header{
+		margin-bottom: 2em;
+		h2{
+			margin-bottom: 0;
+		}
+		.meta{
+			color: #ccc;
+			margin: 0;
+			a{
+				color: #999;
+			}
+		}
+	}
+	
+	&>p{
+		font-size: 1.2em;
+		clear: left;
+		max-width: 40em;
+		width: 100%;
+	}
+	
+	ol, ul{
+		font-size: 1.2em;
+	}
+	ol ol, ol ul, ul ul, ul ol{
+		font-size: 1em;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	ol ol{
+		list-style-type: lower-roman;
+	}
+	ul ul{
+		list-style-type: circle;
+	}
+	
+	q{
+		font-style: italic;
+		padding: 0 0.3em 0 0.3em;
+		background-color: #eeeeee;
+		@include border-radius(10px);
+	}
+	
+	img{
+		float:right;
+		padding: $gutter/2;
+		margin-left: $gutter;
+		background-color: #fff;
+		border: 1px solid #eee;
+		@include border-radius(3px);
+	}
+}

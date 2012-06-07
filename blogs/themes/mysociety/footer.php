@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer class="footer">
 	<section>		
 		<nav id="footer_links">
 			<ul>

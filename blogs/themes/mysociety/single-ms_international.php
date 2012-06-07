@@ -4,13 +4,13 @@
 	
 	<?php //TODO Design in the edit this page link?>
 	<?php edit_post_link(); ?>
-	<header id="header">
+	<header class="header">
 		<h1 class="logo"><a href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></h1>
 	</header>
 	
 	<div id="content">
 		
-		<article class="products">
+		<article class="product">
 			
 			<header>
 				

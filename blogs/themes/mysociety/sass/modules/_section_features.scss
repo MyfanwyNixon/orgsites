@@ -1,0 +1,20 @@
+.section-features{
+	@extend .section-options;
+	
+	img{
+		float: right;
+		max-width: 50%;
+		margin-left: $gutter/2;
+	}
+	&>ul.three_up img{
+		float: left;
+		margin-right: $gutter/2;
+		margin-left: 0;	
+	}
+	&>ul.four_up img{
+		display: block;
+		float: none;
+		max-width: 100%;
+		margin: auto;
+	}
+}

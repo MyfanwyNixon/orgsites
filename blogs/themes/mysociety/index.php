@@ -1,7 +1,6 @@
 <?php get_header();?>
-<header class="header">
-	<h1 class="logo"><a href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></h1>
-</header>
+
+<?php get_template_part('logo')?>	
 
 <?php if (is_search()) : ?>		
 	<h1 class="pagetitle">Search Results: &ldquo;<?php the_search_query(); ?>&rdquo; <?php if (get_query_var('paged')) echo ' &mdash; Page '.get_query_var('paged'); ?></h1>

@@ -24,18 +24,6 @@ register_field_group(array (
       'formatting' => 'none',
       'order_no' => '0',
     ),
-    1 => 
-    array (
-      'key' => 'field_4fc4098eb2c81',
-      'label' => 'Meta keywords',
-      'name' => 'meta_keywords',
-      'type' => 'text',
-      'instructions' => 'Comma separated meta keywords for the page (no default)',
-      'required' => '0',
-      'default_value' => '',
-      'formatting' => 'none',
-      'order_no' => '1',
-    ),
   ),
   'location' => 
   array (

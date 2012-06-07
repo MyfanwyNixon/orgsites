@@ -6,15 +6,11 @@
 	<meta name="creator" content="http://www.mysociety.org/">
 	<meta http-equiv="imagetoolbar" content="false">
 	
-	<?php if(get_field('meta_description')) :?>
-	<meta name="description" content="<?php echo get_field('meta_description'); ?>">
+	<?php if(is_arry(get_field('meta_description'))) :?>
+		<meta name="description" content="<?php echo get_field('meta_description'); ?>">
 	<?php else :?>
-	<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta name="description" content="<?php bloginfo('description'); ?>">
 	<?php endif?>
-	
-	<?php if(get_field('meta_description')) :?>
-	<meta name="keywords" content="<?php echo get_field('meta_keywords'); ?>">
-	<?php endif ?>
 	
 	<title><?php
 	        if ( is_single() ) { single_post_title(); }

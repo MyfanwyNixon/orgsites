@@ -59,7 +59,7 @@
 			?>	
 			<?php //TODO Decide whether these signposts are aa little smaller ?>
 			<section class="section-options">
-				<ul>
+				<ul class="<?php echo options_how_many_cols(count(get_field('facet'))); ?>">
 				<?php if(is_array($features) && count($features) > 0):?>
 					<li>
 						<h3>Key Features</h3>
@@ -83,9 +83,9 @@
 			
 			
 			<?php if(is_array($features) && count($features) > 0):?>
-			<section id='key-features' class="product-options-features">
+			<section id='key-features' class="section-features">
 				<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
-				<ul>
+				<ul class="<?php echo features_how_many_cols(count($features)); ?>">
 					<?php foreach($features as $feature):?><li>
 							<h4><?php echo $feature['heading'];?></h4>
 							<?php if($feature['image']): ?>

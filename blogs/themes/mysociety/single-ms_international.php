@@ -76,7 +76,7 @@
 			?>
 
 			<section class="section-options">
-				<ul>
+				<ul class="<?php echo options_how_many_cols(count(get_field('facet'))); ?>">
 				<?php if(isset($public)):?>
 					<li>
 						<h3>Visit the original version</h3>

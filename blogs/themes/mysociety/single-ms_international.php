@@ -75,13 +75,14 @@
 				}
 			?>
 
-			<section class="product-facets">
+			<section class="section-options">
 				<ul>
 				<?php if(isset($public)):?>
 					<li>
 						<h3>Visit the original version</h3>
 						<p class="desc">This code grew from mySociety's own site - check out the original here.</p>
 						<p><a class="btn fms" href="<?php echo $public['url'];?>"><img src="<?php echo get_bloginfo('template_directory');?>/img/icons/general/16/info-white.png" style="vertical-align: middle;opacity:0.5" alt=""><?php echo $public['text'];?></a></p>
+					</li>
 				<?php endif ?>
 				<?php if(isset($document)):?>
 					<li>

@@ -6,7 +6,7 @@ Template Name: FAQ
 <?php get_header(); ?>
 
 <header class="header">
-	<h1 class="logo"><a href="homepage.html">mySociety</a></h1>
+	<h1 class="logo"><a href="/">mySociety</a></h1>
 </header>
 
 <div id="content">

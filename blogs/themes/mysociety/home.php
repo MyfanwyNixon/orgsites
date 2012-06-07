@@ -3,7 +3,7 @@
 <body id="mysociety-org" class="homepage">
 	
 	<header class="header">
-		<h1 class="logo"><a href="homepage.html">mySociety</a></h1>
+		<h1 class="logo"><a href="/">mySociety</a></h1>
 		<p class="oneliner">Usability with purpose.</p>
 	</header>
 	

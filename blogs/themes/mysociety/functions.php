@@ -181,8 +181,7 @@
 	//include some custom scripts for helping in page templates
 	include('custom_scripts/entitle.php');
 	include('custom_scripts/pages-with-template.php');
-	
-	
+	include 'custom_scripts/theme_comments.php';
 	
 	// Try and work out how many columns should be shown if a value isn't given from the admin interface
 	// TODO: Might be better looking at even division of 2 and 3 instead.

@@ -185,79 +185,10 @@
 	}
 	
 	//include some custom scripts for helping in page templates
-	include('custom_scripts/entitle.php');
-	include('custom_scripts/pages-with-template.php');
-	include 'custom_scripts/theme_comments.php';
+	include('custom_scripts/entitle.php'); //rewrites titles in facet pages correctly (TODO deprecate)
+	include('custom_scripts/pages-with-template.php'); //runs meta queries on wordpress to check whether a page has a certina template
+	include 'custom_scripts/theme_comments.php'; //writes out comment blocks in blog posts
+	include 'custom_scripts/resources.php'; //counts resources and features to ensure we mark up in CS correctly
 	
-	// Try and work out how many columns should be shown if a value isn't given from the admin interface
-	// TODO: Might be better looking at even division of 2 and 3 instead.
-	function options_how_many_cols($li_count) {
-		switch ($li_count) {
-			case '1':
-				return 'one_up';
-				break;
-			case '2':
-				return 'two_up';
-				break;
-			case '3':
-				return 'three_up';
-				break;
-			case '4':
-				return 'four_up';
-				break;
-			case '5':
-				return 'three_up';
-				break;
-			case '6':
-				return 'three_up';
-				break;
-			case '7':
-				return 'four_up';
-				break;
-			case '8':
-				return 'four_up';
-				break;
-			
-			default:
-				return 'four_up';
-				break;
-		}
-	}
-	// Try and work out how many columns should be shown if a value isn't given from the admin interface
-	function features_how_many_cols($li_count) {
-		switch ($li_count) {
-			case '1':
-				return 'one_up';
-				break;
-			case '2':
-				return 'two_up';
-				break;
-			case '3':
-				return 'three_up';
-				break;
-			case '4':
-				return 'two_up';
-				break;
-			case '5':
-				return 'three_up';
-				break;
-			case '6':
-				return 'three_up';
-				break;
-			case '7':
-				return 'two_up';
-				break;
-			case '8':
-				return 'two_up';
-				break;
-			case '9':
-				return 'three_up';
-				break;
-			
-			default:
-				return 'two_up';
-				break;
-		}
-	}
 	
 ?>

@@ -41,7 +41,7 @@
 ?>
 
 <section class="section-options">
-	<ul class="<?php echo options_how_many_cols(count($resources)); ?>">
+	<ul class="<?php echo resource_cols($resources); ?>">
 	<?php if(isset($public)):?>
 		<li>
 			<h3>Visit the original version</h3>

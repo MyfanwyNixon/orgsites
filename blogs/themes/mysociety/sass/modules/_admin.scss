@@ -8,8 +8,8 @@
 	color: white;
 	width: auto;
 	@include icon_bg('wrench', 'white', '16px', 'png', 10px center);
-	background-color: #000;
-	opacity: 0.4;
+	background-color: #555;
+	opacity: 0.9;
 	
 	&:hover{
 		opacity: 1;

@@ -35,6 +35,17 @@ ul.linked_list{
 	.link-irc{ @include icon_bg('comment2', 'black'); }
 }
 
+.three_up ul.linked_list{
+	li{
+		
+		a{
+			font-size: 0.75em;
+			line-height: 1.1667em;
+			border-top: #ccc 2px solid;
+			margin: 0;
+		}
+	}
+}
 .four_up ul.linked_list{
 	li{
 		
@@ -46,3 +57,4 @@ ul.linked_list{
 		}
 	}
 }
+

@@ -23,7 +23,8 @@
 			'public'			=> true,
 			'has_archive'	=> false,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'projects')
+			'rewrite'		=> array('slug' => 'projects'),
+			'with_front' 	=> false
 			)
 		);
 		
@@ -47,7 +48,8 @@
 			'public'			=> true,
 			'has_archive'	=> false,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'for-orgs')
+			'rewrite'		=> array('slug' => 'for-orgs'),
+			'with_front' 	=> false
 			)
 		);
 		
@@ -71,7 +73,8 @@
 			'public'			=> true,
 			'has_archive'	=> false,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'for-councils')
+			'rewrite'		=> array('slug' => 'for-councils'),
+			'with_front' 	=> false
 			)
 		);
 		
@@ -95,7 +98,8 @@
 			'public'			=> true,
 			'has_archive'	=> false,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'for-the-public')
+			'rewrite'		=> array('slug' => 'for-the-public'),
+			'with_front' 	=> false
 			)
 		);
 		
@@ -119,7 +123,8 @@
 			'public'			=> true,
 			'has_archive'	=> false,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'for-volunteers')
+			'rewrite'		=> array('slug' => 'for-volunteers'),
+			'with_front' 	=> false
 			)
 		);
 		
@@ -143,12 +148,13 @@
 			'public'			=> true,
 			'has_archive'	=> false,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'international')
+			'rewrite'		=> array('slug' => 'international'),
+			'with_front' 	=> false
 			)
 		);
 		
 		// NOTE: if you add another custom post type uncomment this line below
-		// flush_rewrite_rules();
+		flush_rewrite_rules();
 	}
 
 	//register custom menu types

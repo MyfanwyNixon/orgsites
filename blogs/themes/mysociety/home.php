@@ -51,8 +51,8 @@
 					<?php 
 						// loop over the posts facets and assign the correct tags
 						$loop -> the_post();
+						$tags = array(); // an array of tags
 						if(get_field('facet')){
-							$tags = array(); // an array of tags
 							foreach(get_field('facet') as $ms_post){
 								switch ($ms_post->post_type){
 								    case 'ms_public':
@@ -83,7 +83,7 @@
 						}
 					?>
 					<li class="<?php echo implode($tags, ' '); ?>" <?php if(get_field('icon')){echo 'style=\'background-image: url('.get_field('icon').');\'';} ?>>
-						<?php if( isset($tags) || is_array($tags) && count($tags) > 1 ) : ?>
+						<?php if(is_array($tags) && count($tags) > 1 ) : ?>
 							<h3><a href="/<?php the_permalink(); ?>/"><?php the_title(); ?></a></h3>
 						<?php else : ?>
 							<?php //TODO: link straight through to the permalink of the single project page if possible?>

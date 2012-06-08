@@ -12,13 +12,15 @@ $(document).ready(function() {
 	tempcolfix();
 	$(".section-options p.desc").equalHeights();
 	$(".section-options h3").equalHeights();
-	
+	$(".section-features li").equalHeights();
 
 // Homepage specific scripts
 	if($('body').hasClass('homepage')){
 		
 		var productList = $('.product-list');
 		var filters = $('.product-filters a');
+		
+		productList.on('click', 'li', function(e){});
 		
 		// Count down for ordering the products in the same order as loaded
 		var orderCountdown = productList.children('li').length * 4;

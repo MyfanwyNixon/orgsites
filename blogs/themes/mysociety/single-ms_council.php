@@ -54,6 +54,7 @@
 				$studies = get_field('case_study'); 
 			?>	
 			<?php //TODO Decide whether these signposts are aa little smaller ?>
+			<?php/*
 			<section class="section-options">
 				<ul class="">
 				<?php if(is_array($features) && count($features) > 0):?>
@@ -73,6 +74,23 @@
 						<h3>Case Studies</h3>
 						<p class="desc"> An A4 PDF with a breakdown of all the facts, prices and contact information you'll need to make a decision.<br/>&nbsp;</p>
 						<p><a class="btn fms" href="#download-datasheet"><strong>Download the Datasheet</strong> (PDF)</a></p>
+					</li>
+				<?php endif?></ul>
+			</section>
+			*/ ?>
+			<section class="section-options">
+				<ul class="">
+				<?php if(is_array($features) && count($features) > 0):?>
+					<li>
+						<p><a class="btn fms" href="#key-features">Read <strong>Key Features</strong></a></p>
+					</li>
+				<?php endif ?><?php if(is_array($prices) && count($prices) > 0):?>
+					<li>
+						<p><a class="btn fms" href="#pricing-options"><strong>Pricing</strong></a></p>
+					</li>
+				<?php endif ?><?php if(is_array($features) && count($studies) > 0):?>
+					<li>
+						<p><a class="btn fms" href="#case-studies"><strong>Case Stud<?php if(count($studies) == 1	){ echo 'y'; }else{ echo 'ies'; } ?></strong></a></p>
 					</li>
 				<?php endif?></ul>
 			</section>
@@ -120,7 +138,7 @@
 			<?php endif?>
 			
 			<?php if(is_array($studies) && count($studies) > 0): ?>
-			<section class="product-options-casestudy">
+			<section id="case-studies" class="product-options-casestudy">
 				<h3>Case Studies: <em><?php echo get_field('case_subtitle')?></em></h3>
 				<ul>
 				<?php foreach($studies as $study): ?><li>

@@ -122,7 +122,7 @@
 			<p style="clear:both"></p>
 		</section>
 
-		<?php get_footer('about')?>
+		<?php /* get_footer('about')*/ ?>
 		
 	</div>
 	

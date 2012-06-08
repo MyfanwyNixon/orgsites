@@ -4,7 +4,7 @@
 	
 	<header class="header">
 		<h1 class="logo"><a href="/">mySociety</a></h1>
-		<p class="oneliner">Usability with purpose.</p>
+		<p class="oneliner"><?php echo get_bloginfo('description'); ?></p>
 	</header>
 	
 	<div id="content">

@@ -17,7 +17,7 @@ body {
 
 /*Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'MuseoSlab500', 'sans-serif';
+  font-family: "myriad-pro", 'sans-serif';
   font-weight: normal; }
 
 h1 {
@@ -73,7 +73,7 @@ table {
 
 th {
   border-bottom: 1px solid #333;
-  font-weight: bold; }
+  font-weight: 600; }
 
 td {
   border-bottom: 1px solid #333; }

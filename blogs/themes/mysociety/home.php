@@ -84,10 +84,10 @@
 					?>
 					<li class="<?php echo implode($tags, ' '); ?>" <?php if(get_field('icon')){echo 'style=\'background-image: url('.get_field('icon').');\'';} ?>>
 						<?php if(is_array($tags) && count($tags) > 1 ) : ?>
-							<h3><a href="/<?php the_permalink(); ?>/"><?php the_title(); ?></a></h3>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<?php else : ?>
 							<?php //TODO: link straight through to the permalink of the single project page if possible?>
-							<h3><a href="/<?php the_permalink(); ?>/"><?php the_title(); ?></a></h3>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<?php endif ?>
 						<p><?php echo get_field('one_liner'); ?></p>
 						<p class="sections">
@@ -128,7 +128,6 @@
 	
 	<?php get_footer(); ?>
 	
-	<script src="<?php bloginfo('template_url'); ?>/js/homepage.js" type="text/javascript"></script>
 	
 </body>
 </html>

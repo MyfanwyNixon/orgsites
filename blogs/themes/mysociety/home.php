@@ -4,7 +4,7 @@
 	
 	<header class="header">
 		<h1 class="logo"><a href="/">mySociety</a></h1>
-		<p class="oneliner"><?php echo get_bloginfo('description'); ?></p>
+		<p class="oneliner"><a href="/about/"><?php echo get_bloginfo('description'); ?> <span class="info">(click to learn more about mysociety)</span></a></p>
 	</header>
 	
 	<div id="content">

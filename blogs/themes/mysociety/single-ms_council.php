@@ -119,8 +119,9 @@
 			<section id="case-studies" class="product-options-casestudy">
 				<h3>Case Studies: <em><?php echo get_field('case_subtitle')?></em></h3>
 				<ul>
-				<?php foreach($studies as $study): ?><li>
-						<h4>Case Study: <?php echo $study['client']; ?></h4>
+				<?php foreach($studies as $study): ?>
+					<li>
+						<h4><?php echo $study['client']; ?></h4>
 						<!-- TODO image if and link to client page -->
 						<?php if($study['image']) :?>
 							<a href="<?php $study['link'];?>"><img src="<?php echo $study['image']; ?>" alt="<?php echo $study['client']; ?>"></a>
@@ -128,7 +129,8 @@
 							<a href="#"><img src="http://placehold.it/460x195" alt=""></a>
 						<?php endif?>
 						<p><?php echo $study['blurb'] ?></p>
-					</li><?php endforeach ?>
+					</li>
+				<?php endforeach ?>
 				</ul>
 			</section>
 			<?php endif?>

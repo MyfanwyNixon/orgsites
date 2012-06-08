@@ -81,7 +81,7 @@
 			<?php if(is_array($features) && count($features) > 0):?>
 			<section id='key-features' class="section-features">
 				<h3>Features <em><?php echo get_field('feature_text');?></em></h3>
-				<ul class="">
+				<ul class="two_up">
 					<?php foreach($features as $feature):?><li>
 							<h4><?php echo $feature['heading'];?></h4>
 							<?php if($feature['image']): ?>

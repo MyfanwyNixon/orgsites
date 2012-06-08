@@ -6,7 +6,7 @@ var tempcolfix=function(){var a=$(".section-options ul").removeClass("four_up").
 $(document).ready(function() {
 	
 // Setup the lightbox for any internal image links
-	//setupZoom();
+	setupZoom();
 	
 // Make options boxes the same height
 	tempcolfix();

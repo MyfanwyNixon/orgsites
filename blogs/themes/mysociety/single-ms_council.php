@@ -11,7 +11,7 @@
 				<div class="images">
 					<ul class="slider">
 						<?php if(get_field('image')):?>
-						<li><a href="#"><img src="<?php echo get_field('image'); ?>" alt="<?php the_title().' Feature Image';?>"></a></li>
+						<li><a href="<?php echo get_field('image'); ?>"><img src="<?php echo get_field('image'); ?>" alt="<?php the_title().' Feature Image';?>"></a></li>
 					<?php else :?>
 						<li><a href="#"><img src="http://placehold.it/460x370" alt="Default image"></a></li>
 					<?php endif ?>

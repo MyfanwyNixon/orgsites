@@ -25,7 +25,8 @@
 				</hgroup>
 				
 				<p><?php echo get_field('overview')?></p>
-				<p><a class="btn" href="">visit <strong>siteUrlHere</strong>.com</a></p>
+				<?php // TODO add a field in admin for the main site url and add it here, have done it manually for now
+				//<p><a class="btn" href="">visit <strong>siteUrlHere</strong>.com</a></p> ?>
 				
 			</header>
 			

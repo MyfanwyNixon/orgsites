@@ -20,7 +20,22 @@ $(document).ready(function() {
 		var productList = $('.product-list');
 		var filters = $('.product-filters a');
 		
-		productList.on('click', 'li', function(e){});
+		
+		productList.children('li').each(function() { 
+			var head_link = $(this).find('h3 a');
+			
+			// Change main link on single facet projects to go directly
+			if($(this).find('p.sections a').length == 1){
+				var n_url = $(this).find('p.sections a').attr('href');
+				head_link.attr('href', n_url);	
+			}
+			
+			// On clicking anywhere on the LI go to the main link href
+			$(this).on('click', function(){
+				window.location = head_link.attr('href');
+				return false;
+			});
+		});
 		
 		// Count down for ordering the products in the same order as loaded
 		var orderCountdown = productList.children('li').length * 4;

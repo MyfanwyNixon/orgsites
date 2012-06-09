@@ -108,6 +108,9 @@
 										    case 'ms_international':
 												array_push($sections, '<a class="for_international" href="'.$ms_post->guid.'">International</a>'); 
 										        break;
+										    case 'ms_council':
+												array_push($sections, '<a class="for_councils" href="'.$ms_post->guid.'">Councils</a>'); 
+										        break;
 										}
 									}
 									echo implode($sections, ' | ');

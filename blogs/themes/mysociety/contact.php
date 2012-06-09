@@ -3,17 +3,14 @@
 Template Name: Contact
 */
 ?>
+
 <?php get_header(); ?>
 	<body>
-		
-<?php edit_post_link(); ?>
-	<header class="header">
-		<h1 class="logo"><a href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></h1>
-	</header>
+	
+	<?php get_template_part('logo')?>	
+	
 	
 	<div id="content">
-		
-		<article class="products">
 			
 			<article class="article">
 			
@@ -31,14 +28,9 @@ Template Name: Contact
 	 ?>
 				
 			</article>
-			
-			
-			
-		</article>
-		
-		
-		
 		
 	</div>
-	</body>
+	
 <?php get_footer(); ?>
+	</body>
+</html>

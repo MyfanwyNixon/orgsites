@@ -1,6 +1,7 @@
 header.section_intro{
 	@include grid-container;
-	padding: 2em 0;
+	@extend .clearfix;
+	padding: 2em 0 0 0;
 	
 	.images{
 		@include grid-1-of-2;
@@ -14,7 +15,7 @@ header.section_intro{
 		clear:right;
 		
 	}
-	p:last-child{ padding-bottom: 4em; }
+	//p:last-child{ padding-bottom: 4em; }
 	
 	hgroup{
 		
@@ -33,7 +34,7 @@ header.section_intro{
 // Subtitle
 		h3{
 			font-size: 1.5em;
-			font-weight: normal;
+			font-weight: 600;
 			color: #B3B3B3;
 			margin: 0;
 			padding:0;

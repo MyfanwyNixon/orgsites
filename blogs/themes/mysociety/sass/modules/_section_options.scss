@@ -1,6 +1,11 @@
 .section-options{
 	@include grid-container;
+	@extend .clearfix;
 	margin-bottom: $gutter*2;
+	
+	h3{
+		margin-top: 0;
+	}
 	
 	&>ul{
 		@include reset-list;

@@ -8,7 +8,6 @@ body.homepage  .header .logo a{ background: transparent url(img/logos/logo-large
 
 	
 .section-options{
-	
 	ul{
 		@include reset-list;
 		display: block;
@@ -22,11 +21,13 @@ body.homepage  .header .logo a{ background: transparent url(img/logos/logo-large
 		}
 		&.three_up li{
 			@include grid-1-of-3;
+			.btn{width: 100%;}
 		}
 		&.four_up li{
 			@include grid-1-of-4;
 			.btn{
 				font-size: 0.7em;
+				width: 100%;
 			}
 		}
 		
@@ -36,5 +37,12 @@ body.homepage  .header .logo a{ background: transparent url(img/logos/logo-large
 			margin: $gutter/2;
 			padding: $gutter/2;
 		}
+	}
+}
+
+// Show Case Studies 2by2
+.product-options-casestudy{
+	ul li{
+		@include grid-1-of-2;
 	}
 }

@@ -60,7 +60,7 @@
 				<ul class="">
 				<?php if(is_array($features) && count($features) > 0):?>
 					<li>
-						<p><a class="btn fms" href="#key-features">Read <strong>Key Features</strong></a></p>
+						<p><a class="btn fms" href="#key-features"><strong>Key Features</strong></a></p>
 					</li>
 				<?php endif ?><?php if(is_array($prices) && count($prices) > 0):?>
 					<li>

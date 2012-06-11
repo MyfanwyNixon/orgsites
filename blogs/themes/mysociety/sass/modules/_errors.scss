@@ -1,0 +1,15 @@
+article.error{
+	padding: 2em 0;
+}
+header.error{
+	@extend header.section_intro;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin: 2em 0;
+	@include border-radius(1em);
+	
+	.images{
+		float: right;
+		width: 200px;
+	}
+}

@@ -64,7 +64,7 @@
 					</li>
 				<?php endif ?><?php if(is_array($prices) && count($prices) > 0):?>
 					<li>
-						<p><a class="btn fms" href="#pricing-options"><strong>Pricing</strong></a></p>
+						<p><a class="btn fms" href="#product-options-pricing"><strong>Pricing</strong></a></p>
 					</li>
 				<?php endif ?><?php if(is_array($features) && count($studies) > 0):?>
 					<li>

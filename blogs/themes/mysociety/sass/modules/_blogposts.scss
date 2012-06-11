@@ -50,6 +50,10 @@
 	}
 }
 
+.post.type-post{
+	@extend .blog-post;
+}
+
 .linked-blog-post{
 	@extend .article;
 	@include grid-9-of-12;

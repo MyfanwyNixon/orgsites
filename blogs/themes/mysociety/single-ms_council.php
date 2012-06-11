@@ -70,7 +70,9 @@
 					<li>
 						<p><a class="btn fms" href="#case-studies"><strong>Case Stud<?php if(count($studies) == 1	){ echo 'y'; }else{ echo 'ies'; } ?></strong></a></p>
 					</li>
-				<?php endif?></ul>
+				<?php endif?>
+					<li><a class="btn fms" href="#newsletter-signup"><strong>Local Gov Newsletter</strong></a></li>
+				</ul>
 			</section>
 			
 			
@@ -134,6 +136,23 @@
 				</ul>
 			</section>
 			<?php endif?>
+			
+			
+			<section id="newsletter-signup" class="product-newsletter-signup">
+				<h3> Sign-up to our Locol Gov Mailinglist <em>Occasional emails about mySociety's work in local government</em></h3>
+				<form action="https://secure.mysociety.org/admin/lists/mailman/subscribe/local-government" method="" accept-charset="utf-8">
+					<input type="hidden" name="digest" value="0">
+					<p>
+						<label for="email">Full Name</label> <input type="text" name="fullname" value="" placeholder="optional">
+					</p>
+					<p>
+						<label for="email">Email Address</label> <input type="text" name="email" value="">
+					</p>
+					<p>
+						<input type="submit" value="Join Mailinglist">
+					</p>
+				</form>
+			</section>
 		</article>
 
 	</div>

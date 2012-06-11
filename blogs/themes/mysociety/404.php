@@ -5,7 +5,7 @@
 	
 	<div id="content">
 			
-			<article class="products">
+			<article class="error">
 			
 				<header class="error">
 				

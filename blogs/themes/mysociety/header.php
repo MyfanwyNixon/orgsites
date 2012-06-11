@@ -5,6 +5,7 @@
 	
 	<meta name="creator" content="http://www.mysociety.org/">
 	<meta http-equiv="imagetoolbar" content="false">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<?php if(is_single() || is_page()): ?>
 		<?php if(is_array(get_field('meta_description'))) :?>
 			<meta name="description" content="<?php echo get_field('meta_description'); ?>">
@@ -24,7 +25,8 @@
 	
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/print.css" type="text/css" media="print" charset="utf-8">
-	  
+	<!--[if IE 7]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/ie/ie7.css" type="text/css" media="screen, print" charset="utf-8"><![endif]-->
+	
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
 	<script src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-2.5.3.js" type="text/javascript" charset="utf-8"></script>

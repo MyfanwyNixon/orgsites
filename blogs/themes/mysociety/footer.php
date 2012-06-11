@@ -22,3 +22,8 @@
 <script src="<?php bloginfo('template_url'); ?>/js/FancyZoom.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/FancyZoomHTML.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/scripts.js" type="text/javascript"></script>
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+    <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+  <![endif]-->

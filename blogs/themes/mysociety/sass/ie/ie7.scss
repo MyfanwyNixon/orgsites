@@ -1,0 +1,40 @@
+@import "../base/mixins";
+@import "../base/grid";
+
+// No background size use fixed size logo
+.header .logo a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll center left; }
+body.homepage  .header .logo a{ background: transparent url(img/logos/logo-large.png) no-repeat scroll center center; }
+
+
+	
+.section-options{
+	
+	ul{
+		@include reset-list;
+		display: block;
+		width: 100%;
+		float: left;
+		clear: both;
+		
+		&.two_up li{
+			@include grid-1-of-2;
+			.btn{width: 100%;}
+		}
+		&.three_up li{
+			@include grid-1-of-3;
+		}
+		&.four_up li{
+			@include grid-1-of-4;
+			.btn{
+				font-size: 0.7em;
+			}
+		}
+		
+		li{
+			display: block;
+			float: left;
+			margin: $gutter/2;
+			padding: $gutter/2;
+		}
+	}
+}

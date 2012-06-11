@@ -31,6 +31,16 @@
 		
 	}
 	
+	p img{
+		max-width: 40%;
+		&.fullpage{
+			max-width: 100%;
+			width: 100%;
+			display: block;
+			margin: 0;
+		}
+	}
+	
 	footer{
 		a.comments-link{
 			@include icon_bg('comment2', 'black', '32px');

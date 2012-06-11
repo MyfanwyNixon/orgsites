@@ -9,9 +9,7 @@
 	<?php if(is_single() || is_page()): ?>
 		<?php if(is_array(get_field('meta_description'))) :?>
 			<meta name="description" content="<?php echo get_field('meta_description'); ?>">
-		<?php else :?>
-			<meta name="description" content="<?php bloginfo('description'); ?>">
-		<?php endif?>
+		<?php endif; ?>
 	<?php endif; ?>
 	
 	<title><?php
@@ -19,9 +17,10 @@
 	        elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); }
 	        elseif ( is_page() ) { bloginfo('name'); print ' | '; single_post_title(''); }
 	        elseif ( is_search() ) { bloginfo('name'); print ' | Search results for ' . wp_specialchars($s); get_page_number(); }
+			elseif ( is_category() ) { bloginfo('name'); single_cat_title(' | Posts in category '); }
 	        elseif ( is_404() ) { bloginfo('name'); print ' | Not Found'; }
 	        else { bloginfo('name'); wp_title('|'); get_page_number(); }
-	    ?></title>
+	?></title>
 	
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/print.css" type="text/css" media="print" charset="utf-8">

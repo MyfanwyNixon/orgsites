@@ -149,7 +149,7 @@
 						<label for="email">Email Address</label> <input type="text" name="email" value="">
 					</p>
 					<p>
-						<input type="submit" value="Join Mailinglist">
+						<input class="btn" type="submit" value="Join Mailinglist">
 					</p>
 				</form>
 			</section>

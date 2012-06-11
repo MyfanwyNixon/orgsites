@@ -25,7 +25,7 @@
 	
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/print.css" type="text/css" media="print" charset="utf-8">
-	<!--[if IE 7]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/ie/ie7.css" type="text/css" media="screen, print" charset="utf-8"><![endif]-->
+	<!--[if IE]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/ie.css" type="text/css" media="screen, print" charset="utf-8"><![endif]-->
 	
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	

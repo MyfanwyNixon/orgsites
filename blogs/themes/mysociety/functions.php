@@ -47,7 +47,7 @@
 			'public'			=> true,
 			'has_archive'	=> false,
 			'menu_position'	=> 5,
-			'rewrite'		=> array('slug' => 'for-orgs', 'with_front'	=> false),
+			'rewrite'		=> array('slug' => 'for-organisations', 'with_front'	=> false),
 			)
 		);
 		

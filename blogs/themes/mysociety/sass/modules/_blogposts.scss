@@ -1,6 +1,7 @@
 .blog-entries{
 	float: left;
 	padding-bottom: 5em;
+	@include grid-8-of-12;
 }
 
 .blog-post{

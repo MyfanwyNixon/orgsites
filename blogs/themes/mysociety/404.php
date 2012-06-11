@@ -7,17 +7,19 @@
 			
 			<article class="products">
 			
-				<header class="section_intro">
+				<header class="error">
+				
+				
+				<hgroup>
+					<h2> Page Not Found <em>404</em></h2>
+					<h3>Ceci n'est pas un cheval</h3>
+				</hgroup>
+				
 				<div class="images">
 					<ul class="slider">
 						<li><img src="<?php bloginfo('template_url'); ?>/img/404.png" alt="Ceci n'est pas un cheval"></li>
 					</ul>
 				</div>
-				
-				<hgroup>
-					<h2><em>404</em> Page Not Found</h2>
-					<h3>Ceci n'est pas un cheval</h3>
-				</hgroup>
 				
 				<p></p>
 			</header>

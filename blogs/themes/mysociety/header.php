@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/print.css" type="text/css" media="print" charset="utf-8">
 	<!--[if IE]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/ie.css" type="text/css" media="screen, print" charset="utf-8"><![endif]-->
-		
+
 	<script src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-2.5.3.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>

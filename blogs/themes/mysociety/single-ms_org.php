@@ -1,6 +1,6 @@
 <? get_header(); ?>
 
-<body id="mysociety-org" class="productpage for_orgs fms">
+<body id="mysociety-org" class="productpage">
 	
 	<?php get_template_part('logo')?>	
 	

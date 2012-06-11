@@ -33,7 +33,7 @@
 			}
 			
 			li{
-				display: block;
+				display: inline;
 				float: left;
 				margin: $gutter/2;
 				padding: $gutter/2;
@@ -45,6 +45,7 @@
 	.product-options-casestudy{
 		ul li{
 			@include grid-1-of-2;
+			display: inline;
 		}
 	}
 	
@@ -52,6 +53,8 @@
 	// Remove IE double margins
 	.product-list li{
 		width: 300px;
+		margin: 0;
+		padding: $gutter/2;
 		display: inline;
 	}
 	

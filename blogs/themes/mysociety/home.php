@@ -97,19 +97,19 @@
 									foreach(get_field('facet') as $ms_post){
 										switch ($ms_post->post_type){
 										    case 'ms_org':
-												array_push($sections,'<a class="for_orgs" href="'.$ms_post->guid.'">for&nbsp;Organisations</a>');  
+												array_push($sections,'<a class="for_orgs" href="'.get_permalink($ms_post).'">for&nbsp;Organisations</a>');  
 										        break;
 										    case 'ms_public':
-												array_push($sections, '<a class="for_public" href="'.$ms_post->guid.'">for&nbsp;the&nbsp;Public</a>'); 
+												array_push($sections, '<a class="for_public" href="'.get_permalink($ms_post).'">for&nbsp;the&nbsp;Public</a>'); 
 										        break;
 										    case 'ms_volunteer':
-												array_push($sections, '<a class="for_volunteers" href="'.$ms_post->guid.'">for&nbsp;Volunteers</a>'); 
+												array_push($sections, '<a class="for_volunteers" href="'.get_permalink($ms_post).'">for&nbsp;Volunteers</a>'); 
 										        break;
 										    case 'ms_international':
-												array_push($sections, '<a class="for_international" href="'.$ms_post->guid.'">International</a>'); 
+												array_push($sections, '<a class="for_international" href="'.get_permalink($ms_post).'">International</a>'); 
 										        break;
 										    case 'ms_council':
-												array_push($sections, '<a class="for_councils" href="'.$ms_post->guid.'">Councils</a>'); 
+												array_push($sections, '<a class="for_councils" href="'.get_permalink($ms_post).'">Councils</a>'); 
 										        break;
 										}
 									}

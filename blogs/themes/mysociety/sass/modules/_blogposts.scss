@@ -32,12 +32,14 @@
 	}
 	
 	p img{
-		max-width: 40%;
-		&.fullpage{
+		
+		&.fullpage,
+		&.size-full
+		{
 			max-width: 100%;
-			width: 100%;
 			display: block;
 			margin: 0;
+			float: none;
 		}
 	}
 	

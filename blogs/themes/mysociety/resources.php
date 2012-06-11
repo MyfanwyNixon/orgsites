@@ -65,7 +65,7 @@
 	<?php endif ?>
 	<?php if(isset($github)):?><li>
 			<h3>Download the code</h3>
-			<p class="desc">Everything's packaged up on Github: download, fork.. and contribute your changes back.</p>
+			<p class="desc">Everything's packaged up on Github: download, fork… and contribute your changes back.</p>
 			<p><a class="btn fms" href="<?php echo $github['url'];?>"><?php echo $github['text'];?></a></p>
 		</li>
 	<?php endif ?>

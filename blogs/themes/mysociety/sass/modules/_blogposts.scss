@@ -167,6 +167,30 @@
 
 #content.blog{
 	@include grid-container;
+	
+	hgroup{
+		padding: 2em 0 0 0;
+		h2{
+			font-size: 2.25em;
+			margin: 1em 0 0 0;
+			padding:0;
+			color: #4D4D4D;
+
+			strong{
+				font-size: 1.3333em;
+			}
+		}
+		
+// Subtitle
+		h3{
+			font-size: 1.5em;
+			font-weight: 600;
+			color: #B3B3B3;
+			margin: 0;
+			padding:0;
+			line-height: 1;
+		}
+	}
 }
 
 

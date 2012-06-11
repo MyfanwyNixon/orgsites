@@ -5,7 +5,7 @@ header.error{
 	@extend header.section_intro;
 	background-color: #fff;
 	border: 1px solid #ddd;
-	margin: 2em 0;
+	margin: 2em auto;
 	@include border-radius(1em);
 	
 	.images{

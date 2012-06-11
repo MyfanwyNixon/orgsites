@@ -95,7 +95,7 @@
 			<?php endif?>
 			
 			<?php if(is_array($prices) && count($prices) > 0):?>
-				<section id='#pricing-options' class="product-options-pricing">
+				<section id='pricing-options' class="product-options-pricing">
 					<h3>Pricing: <em><?php echo get_field('pricing'); ?></em></h3>
 					<ul>
 						<?php foreach($prices as $price): ?><li>

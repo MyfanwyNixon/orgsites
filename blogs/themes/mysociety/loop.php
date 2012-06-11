@@ -3,7 +3,7 @@
 
 	<header>
 		<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-		<p class="meta">Written by <span class="author-link"><?php the_author_posts_link() ?></span> on <time datetime="<?php the_time('Y-m-d')?>">Posted <strong><?php the_time('jS F Y') ?></strong></time> in <?php the_category(', '); ?></p>
+		<p class="meta">Written by <span class="author-link"><?php the_author_posts_link() ?></span> on <time datetime="<?php the_time('Y-m-d')?>">Posted <strong><?php the_time('jS F Y') ?></strong></time> in <span class='category-link'><?php the_category(', '); ?></span></p>
 	</header>
 
 	<p class="entry">

@@ -4,7 +4,7 @@
 	
 	<header class="header">
 		<h1 class="logo"><a href="/">mySociety</a></h1>
-		<p class="oneliner">Usability with purpose.</p>
+		<p class="oneliner"><a href="/about/"><?php echo get_bloginfo('description'); /*  <span class="info">(click to learn more about mysociety)</span> */ ?></a></p>
 	</header>
 	
 	<div id="content">
@@ -108,6 +108,9 @@
 										    case 'ms_international':
 												array_push($sections, '<a class="for_international" href="'.$ms_post->guid.'">International</a>'); 
 										        break;
+										    case 'ms_council':
+												array_push($sections, '<a class="for_councils" href="'.$ms_post->guid.'">Councils</a>'); 
+										        break;
 										}
 									}
 									echo implode($sections, ' | ');
@@ -122,7 +125,7 @@
 			<p style="clear:both"></p>
 		</section>
 
-		<?php get_footer('about')?>
+		<?php /* get_footer('about')*/ ?>
 		
 	</div>
 	

@@ -11,8 +11,6 @@ Template Name: About
 	
 	
 	<div id="content">
-		
-		<article class="products">
 			
 			<article class="article">
 			
@@ -30,16 +28,9 @@ Template Name: About
 	 ?>
 				
 			</article>
-			
-			
-			
-		</article>
-		
-		
-		
 		
 	</div>
 	
-	
-	</body>
 <?php get_footer(); ?>
+	</body>
+</html>

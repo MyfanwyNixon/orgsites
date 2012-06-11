@@ -1,6 +1,12 @@
 .section-features{
 	@extend .section-options;
-	
+	h3{
+		font-size: 2em;
+	}
+	h4{
+		font-size: 1.5em;
+		margin: 0;
+	}	
 	img{
 		float: right;
 		max-width: 50%;

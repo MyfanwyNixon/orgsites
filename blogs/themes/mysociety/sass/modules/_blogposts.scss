@@ -1,0 +1,247 @@
+.blog-entries{
+	float: left;
+	padding-bottom: 5em;
+}
+
+.blog-post{
+	@extend .article;
+	@include grid-8-of-12;
+	margin-left: ($max_page_width / 12) - $gutter;
+	background-color: #ffffff;
+	@include border-radius($gutter/4);
+	padding: $gutter/2;
+	
+	&>header{
+		background: transparent url(img/icons/products/mysociety.png) no-repeat center left;
+		background-size: (($max_page_width / 12) - $gutter) auto;
+		
+		margin-left: -(($max_page_width / 12) - $gutter/2);
+		padding-left: ($max_page_width / 12) - ($gutter/2);
+		
+		h2{
+			a{
+				color: inherit;
+				&:hover{
+					color: #0071BC;
+					text-decoration: none;
+				}
+			}
+		}
+		
+	}
+	
+	footer{
+		a.comments-link{
+			@include icon_bg('comment2', 'black', '32px');
+			display: block;
+			padding: $gutter;
+			padding-left: 40px;
+			color: #000;
+			
+			opacity:0.6;
+				
+			&:hover{
+			    opacity: 1;
+			    color: #333;
+			    text-decoration: none;
+			}
+		}
+	}
+}
+
+.linked-blog-post{
+	@extend .article;
+	@include grid-9-of-12;
+	@include border-radius($gutter/4);
+	
+	border: 1px solid #dddddd;
+	background-color: #ffffff;
+	padding: $gutter/2;
+	
+	header{
+		background: transparent url(img/icons/products/mysociety.png) no-repeat center left;
+		background-size: (($max_page_width / 12) - $gutter) auto;
+		.meta{ font-size: 0.8em; }
+		padding-left: ($max_page_width / 12) - $gutter;
+		margin: 0;
+		h2{
+			margin: 0;
+			font-size: 1.4em;
+			a{
+				color: inherit;
+				&:hover{
+					color: #0071BC;
+					text-decoration: none;
+				}
+			}
+		}
+		
+	}
+	&.fms header{ background-image: url(img/icons/products/fms.png); }
+	&.fmt header{ background-image: url(img/icons/products/fmt.png); }
+	&.alaveteli header{ background-image: url(img/icons/products/afoi.png); }
+	&.twfy header{ background-image: url(img/icons/products/twfy.png); }
+}
+
+.linked-blog-post,
+.blog-post
+{
+	.meta{
+		a{
+			color: #000;
+			
+			
+			opacity:0.7;
+			text-shadow: 0px 0px 1px rgba(0,0,0,0);
+			&:hover{
+			    opacity: 1;
+			    color: #333;
+			    text-decoration: none;
+			}
+		}
+		.category-link a{ @include icon_bg('tag4', 'black');padding-left: 20px; }
+		.author-link a{ @include icon_bg('user', 'black');padding-left: 20px; }
+		.externalblog-link a{ @include icon_bg('link2', 'black');padding-left: 20px; }
+	}
+}
+
+.blogs-meta{
+	@include grid-3-of-12;
+	float: right;
+	h3{
+		margin-bottom: 0;
+		font-weight: 600;
+		font-size: 1.2em;
+		color: #666666;
+	}
+	ul{
+		@include reset-list;
+		font-size: 0.8em;
+	}
+	a{
+		color: #888888;
+		font-weight: 600;
+	}
+	section{
+		clear: both;
+		margin-bottom: 3em;
+		&.blogkey{
+			a{
+				display: block;
+				min-height: 2em;
+				padding-left: 2em + ($gutter/2);
+				background: transparent url(img/icons/products/blankcircle.png) no-repeat center left;
+				background-size: 2em;
+				
+				&.mysociety{ background-image: url(img/icons/products/mysociety.png); }
+				&.fms{ background-image: url(img/icons/products/fms.png); }
+				&.fmt{ background-image: url(img/icons/products/fmt.png); }
+				&.alaveteli{ background-image: url(img/icons/products/afoi.png); }
+				&.twfy{ background-image: url(img/icons/products/twfy.png); }
+				
+				&:hover{
+					color: #555555;
+				}
+			}
+		}
+	}
+}
+
+#content.blog{
+	@include grid-container;
+}
+
+
+/* Comment style from FMT blog */
+/*
+Comments
+*/
+#comments{
+	img{
+		padding: 0;
+	}
+}
+.comment-list, .comment-list li{
+	list-style: none;
+	text-indent:0;padding:0;margin:0;
+	display:block;
+}
+.comment-list{
+	padding-bottom: 1em;
+	border-bottom: 2px solid #ccc;
+}
+.comment-list li{
+	padding: 1em;
+	border-top: 2px solid #ccc;
+	margin-top:2em;
+}
+.comment-list ul.children{
+	margin:0;
+	padding-left: 20px;
+}
+.comment-list ul.children li{
+	border-top: 1px dotted #ccc;
+
+}
+.comment-list p{
+	/*padding-left: 54px;*/
+	font-size: 0.8em;
+}
+.comment-list nav{
+	text-align:right;
+	font-size: 0.7em;
+}
+.comment-list cite.fn{
+	font-weight: 600;
+	font-style: normal;
+}
+.comment-list cite.fn a{
+	color: #333;
+	text-decoration: none;
+	border-bottom: #ccc 1px dotted;
+}
+.comment-list .says{
+	color: #888;
+}
+.comment-list header{
+	display: block;
+	float:left;
+	height:100%;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+.postedtime{
+	float:right;
+	font-size: 0.7em;
+}
+.postedtime a{
+	color: #555;
+}
+a.comment-reply-link{
+	padding: 3px 20px;
+	color: #555;
+	background: transparent url('images/reply.gif') no-repeat scroll left center;
+}
+a.comment-edit-link{
+	padding: 3px 20px;
+	color: #555;
+	background: transparent url('images/edit.gif') no-repeat scroll left center;
+}
+.form-allowed-tags{
+	font-size: 0.7em;
+}
+.comment-form-comment label{
+	display:block;
+}
+a[title="Log out of this account"]{
+	font-size:0.7em;
+}
+a[title="Log out of this account"]:before{
+	font-size:0.7em;
+	padding-left:1em;
+	content:"( ";
+}
+a[title="Log out of this account"]:after{
+	font-size:0.7em;
+	content:" )";
+}

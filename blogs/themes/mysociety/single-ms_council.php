@@ -64,7 +64,7 @@
 					</li>
 				<?php endif ?><?php if(is_array($prices) && count($prices) > 0):?>
 					<li>
-						<p><a class="btn fms" href="#product-options-pricing"><strong>Pricing</strong></a></p>
+						<p><a class="btn fms" href="#pricing-options"><strong>Pricing</strong></a></p>
 					</li>
 				<?php endif ?><?php if(is_array($features) && count($studies) > 0):?>
 					<li>
@@ -92,7 +92,7 @@
 			<?php endif?>
 			
 			<?php if(is_array($prices) && count($prices) > 0):?>
-				<section class="product-options-pricing">
+				<section id='pricing-options' class="product-options-pricing">
 					<h3>Pricing: <em><?php echo get_field('pricing'); ?></em></h3>
 					<ul>
 						<?php foreach($prices as $price): ?><li>

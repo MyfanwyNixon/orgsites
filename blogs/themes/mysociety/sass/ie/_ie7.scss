@@ -46,3 +46,9 @@ body.homepage  .header .logo a{ background: transparent url(img/logos/logo-large
 		@include grid-1-of-2;
 	}
 }
+
+
+// Remove IE double margins
+.product-list li{
+	display: inline;
+}

@@ -6,7 +6,7 @@
 body.homepage  .header .logo a{ background: transparent url(img/logos/logo-large.png) no-repeat scroll center center; }
 
 
-	
+// Stop the links from running over with no gaps
 .section-options{
 	ul{
 		@include reset-list;

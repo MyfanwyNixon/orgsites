@@ -71,7 +71,7 @@
 						<p><a class="btn fms" href="#case-studies"><strong>Case Stud<?php if(count($studies) == 1	){ echo 'y'; }else{ echo 'ies'; } ?></strong></a></p>
 					</li>
 				<?php endif?>
-					<li><a class="btn fms" href="#newsletter-signup"><strong>Local Gov Newsletter</strong></a></li>
+					<li><p><a class="btn fms" href="#newsletter-signup"><strong>Local Gov Newsletter</strong></a></p></li>
 				</ul>
 			</section>
 			

@@ -11,8 +11,10 @@ VHOST_DIR=$(    dirname $ORGSITES_DIR )
 
 WEB_DIR=$BLOGS_DIR/web
 
-# get WP from their svn server
-svn co http://core.svn.wordpress.org/tags/3.3.2 $WEB_DIR;
+# get WP from their svn server if not already present
+if [ ! -e $WEB_DIR/index.php ]; then
+    svn co http://core.svn.wordpress.org/tags/3.3.2 $WEB_DIR
+fi
 
 ##### copy in the custom php files
 # change to this directory so that the paths are easier

@@ -139,7 +139,7 @@
 			
 			
 			<section id="newsletter-signup" class="product-newsletter-signup">
-				<h3> Sign-up to our Locol Gov Mailinglist <em>Occasional emails about mySociety's work in local government</em></h3>
+				<h3> Sign-up to our Local Gov Mailinglist <em>Occasional emails about mySociety's work in local government</em></h3>
 				<form action="https://secure.mysociety.org/admin/lists/mailman/subscribe/local-government" method="" accept-charset="utf-8">
 					<input type="hidden" name="digest" value="0">
 					<p>

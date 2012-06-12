@@ -18,7 +18,7 @@
 */
 
 // Available Icons:
-$icon-list: 'book', 'book2', 'arrow-down', 'info', 'coins', 'star', 'support', 'github-cat', 'twitter-bird', 'facebook2', 'comment2', 'feed2', 'pencil', 'wrench', 'tag', 'tag4', 'user', 'link2';
+$icon-list: 'book', 'book2', 'arrow-down', 'info', 'coins', 'star', 'support', 'github-cat', 'twitter-bird', 'facebook2', 'comment2', 'feed2', 'pencil', 'wrench', 'tag', 'tag4', 'user', 'link2', 'file-pdf', 'announcement';
 
 
 @mixin icon($icon, $icon_colour:'white', $icon_size:16px, $icon_format:'png'){

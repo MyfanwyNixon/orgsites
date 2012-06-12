@@ -5,6 +5,9 @@ header.section_intro{
 	
 	.images{
 		@include grid-1-of-2;
+		.council-options{
+			text-align: center;
+		}
 	}
 	
 	p,

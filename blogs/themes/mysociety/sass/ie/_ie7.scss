@@ -4,7 +4,20 @@
 .ie6, ie7{
 	// No background size use fixed size logo
 	.header .logo a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
-	body.homepage  .header .logo a{ background: transparent url(img/logos/logo-large.png) no-repeat scroll center center; }
+	
+	body.homepage .header{
+		.logo{
+			a{ background: transparent url(img/logos/logo-large.png) no-repeat scroll center center; }
+		}
+		.oneliner{
+		color: #757575;
+		font-size: 1.5em;
+		a{
+			color: #757575;
+		}
+		
+	}
+}
 	
 	
 	// Stop the links from running over with no gaps

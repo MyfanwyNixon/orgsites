@@ -16,6 +16,7 @@
 						<li><a href="#"><img src="http://placehold.it/460x370" alt="Default image"></a></li>
 					<?php endif ?>
 					</ul>
+					<p class="council-options"><a href="#newsletter-signup"><i class="icon-announcement"></i> <strong>Local Gov Newsletter</strong></a>  <a href="http://eclipse.ukcod.org.uk/~jedidiah/fms_councils-A4.pdf"><i class="icon-file-pdf"></i> <strong>Download Brochure</strong></a></p>
 				</div>
 				
 				
@@ -71,7 +72,7 @@
 						<p><a class="btn fms" href="#case-studies"><strong>Case Stud<?php if(count($studies) == 1	){ echo 'y'; }else{ echo 'ies'; } ?></strong></a></p>
 					</li>
 				<?php endif?>
-					<li><p><a class="btn fms" href="#newsletter-signup"><strong>Local Gov Newsletter</strong></a></p></li>
+					
 				</ul>
 			</section>
 			
@@ -139,7 +140,7 @@
 			
 			
 			<section id="newsletter-signup" class="product-newsletter-signup">
-				<h3> Sign-up to our Local Gov Mailinglist <em>Occasional emails about mySociety's work in local government</em></h3>
+				<h3> Sign-up to our Local Gov Newsletter <em>Occasional emails about mySociety's work in local government</em></h3>
 				<form action="https://secure.mysociety.org/admin/lists/mailman/subscribe/local-government" method="" accept-charset="utf-8">
 					<input type="hidden" name="digest" value="0">
 					<p>

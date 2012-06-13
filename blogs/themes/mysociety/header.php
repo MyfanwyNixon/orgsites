@@ -29,4 +29,7 @@
 	<script src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-2.5.3.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
+	
+	<link rel="shortcut icon" href="/favicon.ico" />
 </head>

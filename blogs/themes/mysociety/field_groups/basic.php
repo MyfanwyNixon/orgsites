@@ -98,12 +98,8 @@ register_field_group(array (
 	'layout' => 'default',
 	'show_on_page' => 
 	array (
-	  	0 => 'about',
-		1 => 'team',
-		2 => 'partners',
-		3 => 'contact',
-		4 => 'volunteer',
-		5 => 'donate',
+	  	0 => 'slug',
+		1 => 'custom_fields',
 	)
   ),
   'menu_order' => 0

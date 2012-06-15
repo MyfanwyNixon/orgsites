@@ -88,6 +88,8 @@ register_field_group(array (
     'layout' => 'default',
     'show_on_page' => 
     array (
+		0 => 'slug',
+		1 => 'custom_fields',
     ),
   ),
   'menu_order' => 0,

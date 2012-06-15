@@ -1,0 +1,258 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-gb"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en-gb"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9" lang="en-gb"><![endif]--><!--[if gt IE 8]>
+<!-- --><html lang="en-gb" class="no-js"><![endif]-->
+<head>
+	<meta charset="UTF-8">
+<!--
+	  -------------------------------------
+	  mySociety (http://www.mysociety.org/)
+	  -------------------------------------
+-->
+	<meta name="creator" content="http://www.mysociety.org/">
+	<meta http-equiv="imagetoolbar" content="false">
+	<meta name="description" content="mySociety, A social enterprise that makes people powerful by building tools for the public, government, councils and organisations.">
+	
+	<title>Donation Page</title>
+	
+	<link rel="stylesheet" href="../style.css" type="text/css" media="screen, print" charset="utf-8">
+	<link rel="stylesheet" href="../print.css" type="text/css" media="print" charset="utf-8">
+	  
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<script src="../js/libs/modernizr-2.5.3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body id="mysociety-org" class="productpage">
+	
+	<header class="header">
+		<h1 class="logo"><a href="/">mySociety</a></h1>
+	</header>
+	
+	<div id="content">
+			
+			<article class="article">
+				<header>
+					<h2>Donate</h2>
+				</header>
+				<p>To support the work of mySociety, you can make a donation to UK Citizens Online Democracy, mySociety’s parent charity (registered number 1076346). If you love mySociety and its sites with such unbridled passion that you don’t need any actual persuading to donate, then please just go ahead and let rip (fill in the form below).</p>
+			</article>
+		
+			<div class='donation'>
+				<h3 >Set up a regular monthly payment via PayPal</h3>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<input type="hidden" name="cmd" value="_xclick-subscriptions">
+						<input type="hidden" name="business" value="finance@mysociety.org">
+						<input type="hidden" name="item_name" value="Monthly Donation to mySociety">
+						<input type="hidden" name="no_shipping" value="1">
+						<input type="hidden" name="lc" value="GB">
+						<input type="hidden" name="bn" value="PP-SubscriptionsBF">
+						<input type="hidden" name="p3" value="1">
+						<input type="hidden" name="t3" value="M">
+						<input type="hidden" name="src" value="1">
+						<input type="hidden" name="sra" value="1">
+						<input type="hidden" name="rm" value="1">
+						<input type="hidden" name="return" value="https://secure.mysociety.org/donate/thanks">
+						<input type="hidden" name="cancel_return" value="https://secure.mysociety.org/donate/cancel">
+						<input type="hidden" name="cn" value="Please tell us why you're donating">
+
+						<p><label for="amount_regular">I would like to donate</label><br>
+						<select name="currency_code">
+							<option value="GBP">UK &pound;</option>
+							<option value="USD">US Dollar $</option>
+							<option value="EUR">Euro &euro;</option>
+							<option value="AUD">Australian Dollar</option>
+							<option value="CAD">Canadian Dollar</option>
+							<option value="CZK">Czech Koruna</option>
+							<option value="DKK">Danish Krone</option>
+							<option value="HKD">Hong Kong Dollar</option>
+							<option value="HUF">Hungarian Forint</option>
+							<option value="JPY">Japanese Yen</option>
+							<option value="NOK">Norwegian Krone</option>
+							<option value="NZD">New Zealand Dollar</option>
+							<option value="PLN">Polish Zloty</option>
+							<option value="SEK">Swedish Krona</option>
+							<option value="SGD">Singapore Dollar</option>
+							<option value="CHF">Swiss Franc</option>
+							<option value="THB">Thai Baht</option>
+						</select>
+
+						<input id="amount_regular" name="a3" size="10">
+						once a month, starting tomorrow, until I cancel the payments.</p>
+
+						<input type="hidden" name="on0" value="Donation with Gift Aid">
+						<p>I want all donations I make to UK Citizens Online
+						Democracy from this date until further notice to be
+						Gift Aid donations:
+						<input type="radio" id="giftaid_yes_s" name="os0" value="Yes">
+						<label for="giftaid_yes_s">Yes</label>
+						<input type="radio" id="giftaid_no_s" name="os0" value="No" checked>
+						<label for="giftaid_no_s">No</label>
+						(<a href="#giftaid">?</a>)</p>
+
+						<p align="right">
+						<input type="submit" value="Donate"></p>
+					</form>
+			</div>
+			<div class='donation'>
+					<h3 class="d">Make a one off donation via PayPal</h3>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<input type="hidden" name="cmd" value="_xclick">
+						<input type="hidden" name="business" value="finance@mysociety.org">
+						<input type="hidden" name="item_name" value="Donation to mySociety">
+						<input type="hidden" name="no_shipping" value="2">
+						<input type="hidden" name="tax" value="0">
+						<input type="hidden" name="lc" value="GB">
+
+						<input type="hidden" name="bn" value="PP-DonationsBF">
+						<input type="hidden" name="rm" value="1">
+						<input type="hidden" name="return" value="https://secure.mysociety.org/donate/thanks">
+						<input type="hidden" name="cancel_return" value="https://secure.mysociety.org/donate/cancel">
+						<input type="hidden" name="cn" value="Please tell us why you're donating">
+
+						<p><label for="amount_donate">I would like to donate</label><br>
+						<select id="currency" name="currency_code">
+						<option value="GBP">UK &pound;</option>
+						<option value="USD">US Dollar $</option>
+						<option value="EUR">Euro &euro;</option>
+						<option value="AUD">Australian Dollar</option>
+
+						<option value="CAD">Canadian Dollar</option>
+						<option value="CZK">Czech Koruna</option>
+						<option value="DKK">Danish Krone</option>
+						<option value="HKD">Hong Kong Dollar</option>
+						<option value="HUF">Hungarian Forint</option>
+						<option value="JPY">Japanese Yen</option>
+						<option value="NOK">Norwegian Krone</option>
+						<option value="NZD">New Zealand Dollar</option>
+						<option value="PLN">Polish Zloty</option>
+
+						<option value="SEK">Swedish Krona</option>
+						<option value="CHF">Swiss Franc</option>
+						<option value="SGD">Singapore Dollar</option>
+						<option value="THB">Thai Baht</option>
+						</select>
+						<input id="amount_donate" name="amount" size="10">
+						</p>
+
+						<input type="hidden" name="on0" value="Donation with Gift Aid">
+						<p>I want all donations I make to UK Citizens Online Democracy from this date until further notice to be Gift Aid donations:
+						<input type="radio" id="giftaid_yes" name="os0" value="Yes">
+						<label for="giftaid_yes">Yes</label>
+
+						<input type="radio" id="giftaid_no" name="os0" value="No" checked>
+						<label for="giftaid_no">No</label>
+						(<a href="#giftaid">?</a>)</p>
+
+						<p align="right">
+						<input type="submit" value="Donate"></p>
+					</form>
+				</div>
+			
+			<article class="article">
+			
+				<header>
+					<h2>Article Title</h2>
+					<p class="meta">Written by <a href="#">Author Name</a> on <time datetime="2012-06-01">1st June 2012</time></p>
+				</header>
+				
+				<img src="http://placekitten.com/300/400" alt="">
+				<p>
+					An <em>.article</em> block is used for freeform text. Lorem <strong>ipsum</strong> <em>dolor</em> sit amet, <abbr title="consectetur">cons</abbr> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <a href="#">consequat</a>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				<p>Lorem ipsum dolor sit amet, &ldquo;<q>consectetur adipisicing elit</q>&rdquo;, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna occaecat cupidatat non.</p>
+					<cite>Tom Steinberg</cite>
+				</blockquote>
+				
+				<p>Lorem ipsum <del>dolar</del> <ins>dolor</ins> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				<ol>
+					<li>List item 1</li>
+					<li>Another list item</li>
+					<li>Just another list item
+						<ol>
+							<li>sub list item</li>
+							<li>Another sub list item</li>
+						</ol>
+					</li>
+					<li>List item 4</li>
+					<li>Guess what another list item</li>
+				</ol>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim officia deserunt mollit anim id est laborum.</p>
+				
+				<ul>
+					<li>List item 1</li>
+					<li>Another list item</li>
+					<li>Just another list item
+						<ul>
+							<li>sub list item</li>
+							<li>Another sub list item</li>
+						</ul>
+					</li>
+					<li>List item 4</li>
+					<li>Guess what another list item</li>
+				</ul>
+				
+				<h3> Secondary Title </h3>
+				
+				<p>Lorem ipsum dolor sit amet, &ldquo;<q>consectetur adipisicing elit</q>&rdquo;, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				<code>
+				<div>
+					<span style="color:#ffc66d;">&lt;section </span><span style="color:#cc7832;">class</span><span style="color:#ffc66d;">=</span><span style="color:#a5c261;">&quot;article&quot;</span><span style="color:#ffc66d;">&gt;</span><br />
+&nbsp;&nbsp;<span style="color:#ffc66d;">&lt;h2&gt;</span>Article Title<span style="color:#ffc66d;">&lt;/h2&gt;</span><br />
+&nbsp;&nbsp;<span style="color:#ffc66d;">&lt;p&gt;</span>Lorem <span style="color:#ffc66d;">&lt;strong&gt;</span>ipsum<span style="color:#ffc66d;">&lt;/strong&gt;</span> <span style="color:#ffc66d;">&lt;em&gt;</span>dolor<span style="color:#ffc66d;">&lt;/em&gt;</span> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <span style="color:#ffc66d;">&lt;a </span><span style="color:#cc7832;">href</span><span style="color:#ffc66d;">=</span><span style="color:#a5c261;">&quot;</span><span style="color:#586e75;">#</span><span style="color:#a5c261;">&quot;</span><span style="color:#ffc66d;">&gt;</span>consequat<span style="color:#ffc66d;">&lt;/a&gt;</span>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span style="color:#ffc66d;">&lt;/p&gt;</span><br />
+<span style="color:#ffc66d;">&lt;/section&gt;</span>
+				</div>
+			</code>
+				
+				<p>Lorem ipsum dolor sit amet, <q>consectetur adipisicing elit</q>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+			</article>
+			
+			
+
+		
+		
+		
+		
+	</div>
+	
+	<footer class="footer">
+		<section>
+
+			<nav id="footer_links">
+				<ul>
+					<li><a class="logo" href="#">mySociety</a></li>
+					<li><a href="#">about</a></li>
+					<li><a href="#">blog</a></li>
+					<li><a href="#">contact</a></li>
+					<li><a href="#">jobs</a></li>
+				</ul>
+			</nav>
+
+			<div id="footer_blurb">
+				<p>We build websites that give the public simple, tangible ways to connect with and improve their society. As well as offering tools directly to the public we provide integration and development services for local authorities, corporates and government. As a UK Charity our own work has a national focus but our vision is global,  we open source our projects and encourage international adaptation.</p>
+			</div>
+
+		</section>
+	</footer>
+	
+	
+	<script src="../js/libs/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/libs/jquery.hoverintent.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/libs/jquery.isotope.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../js/FancyZoom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/FancyZoomHTML.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">$(document).ready(function() {
+		setupZoom();
+	});
+	</script>
+	
+</body>
+</html>

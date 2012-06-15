@@ -11,12 +11,19 @@ header.section_intro{
 	}
 	
 	p,
+	ul,
 	hgroup
 	{
 		@include grid-1-of-2;
 		float:right;
 		clear:right;
 		
+	}
+	ul{
+		padding-left: $gutter;
+		li{
+			display: list-item;
+		}
 	}
 	//p:last-child{ padding-bottom: 4em; }
 	

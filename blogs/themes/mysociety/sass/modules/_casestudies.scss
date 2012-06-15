@@ -1,9 +1,8 @@
 .product-options-casestudy{
 	@include grid-container;
 	h3{
-		
+		margin: 0 $gutter/4 0 $gutter/4;
 		font-size:2em;
-		margin-bottom:0;
 		
 		em{
 			font-size: 0.65em;

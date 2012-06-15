@@ -9,7 +9,7 @@
 .footer{
 	@include grid-fullpage;
 	background-color: $colour-background-dark;
-	padding: 2em 0;
+	
 }
 .footer-product-list{
 	@extend .product-list;
@@ -20,22 +20,42 @@
 	background-color: $colour-background-dark;
 	width: 100%;
 	float:left;
-	padding: 2em 0;
+	padding: 0;
+	@media (min-width : 60em) {
+		padding: 2em 0;
+	}
 	
 	section{
-		max-width:100%;
-		width: 60em;
+		max-width:60em;
+		width: 100%;
 		margin: 0 auto;
 		padding-bottom: 2em;
 	}
 	
 	#footer_links{
-		width: 15em;
-		float:left;
+		width: 95%;
+		@media (min-width : 60em) {
+			max-width: 15em;
+		}
+		margin: 0 auto;
 		padding: 0.625em;
+		
+		#menu-footer{
+			padding: 0;
+			font-size: 1.25em;
+			@media (min-width : 60em) {
+				font-size: 1em;
+				float:left;
+				padding-left: 2.5em;
+			}
+		}
 		
 		a{
 			color: #bbb;
+			margin: $gutter/2 0;
+			@media (min-width : 60em) {
+				margin: 0;
+			}
 			&:hover{
 				color: #fff;
 			}
@@ -47,7 +67,9 @@
 				max-width:100%;
 				background: transparent url(img/logos/logo-inverse.png) no-repeat scroll center left;
 				background-size: 80% auto;
-				margin-left: -10%;
+				@media (min-width : 60em) {
+					margin-left: -10%;
+				}
 				
 				// Text IR
 				text-indent: 100%;
@@ -59,11 +81,15 @@
 	
 	#footer_blurb{
 		display: block;
-		width: 40em;
-		margin-right: 5em;
+		width: 80%;
+		max-width: 40em;
+		margin: 0 auto;
 		padding: 0.625em;
-		padding-top: 5em; //2.125em;
-		float: right;
+		@media (min-width : 60em) {
+			float: right;
+			margin-right: 5em;
+			padding-top: 5em; //2.125em;
+		}
 		color: #aaa;
 		
 		p{

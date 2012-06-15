@@ -33,9 +33,18 @@ h1, h2, h3, h4, h5, h6{
 	
 	em{
 		font-weight: 400;
-		padding-left: 0.5em;
-		font-size: 0.65em;
 		color: #999;
+		display: block;
+		font-size: 0.45em;
+		line-height: 1;
+		@media (min-width : 60em) {
+			font-size: 0.65em;
+		}
+		@media (min-width : 60em) {
+			display: inline;
+			padding-left: 0.5em;
+		}
+		
 	}
 }
 

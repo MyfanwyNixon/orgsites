@@ -5,27 +5,52 @@ header.section_intro{
 	
 	.images{
 		@include grid-1-of-2;
+		margin-top: 2em;
+		
 		.council-options{
 			text-align: center;
+			line-height: 1;
+			margin-top: 0;
+			@media (min-width : 60em) {
+				line-height: inherit;
+			}
+			a{
+				display: block;
+				@media (min-width : 60em) {
+					display: inline;
+				}
+			}
 		}
 	}
 	
-	p,
-	hgroup
+	.description
 	{
-		@include grid-1-of-2;
-		float:right;
-		clear:right;
+		padding: $gutter/2;
+		@media (min-width : 60em) {
+			@include grid-1-of-2;
+				float:right;
+				clear:right;
+		}
 		
 	}
 	//p:last-child{ padding-bottom: 4em; }
 	
 	hgroup{
+		display: block;
+		margin: 0 $gutter/2;
+		
+		@media (min-width : 60em) {
+			@include grid-1-of-2;
+			float: right;
+		}
 		
 // Main Title
 		h2{
 			font-size: 2.25em;
-			margin: 1em 0 0 0;
+			margin: 0;
+			@media (min-width : 60em) {
+				margin: 1em 0 0 0;
+			}
 			padding:0;
 			color: #4D4D4D;
 

@@ -128,7 +128,17 @@ Template Name: Donate
 					</form>
 				</div>
 			</article>
-		
+			
+			<article class='article'>
+				<h3 class="d"><a name="giftaid" id="giftaid"></a>Are you from the UK? Gift Aid it!</h3>
+				<p>
+				To increase the value your donations at no extra cost to yourself,
+				if you are a UK tax payer, please select the appropriate option.
+				You must pay an amount of Income
+				Tax and/or Capital Gains Tax at least equal to the tax that we'll
+				reclaim on your donations (currently 28p for each &pound;1 you give).
+				</p>
+			</article>
 			
 				
 			<article class="article">

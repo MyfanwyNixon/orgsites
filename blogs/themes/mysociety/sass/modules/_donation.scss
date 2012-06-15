@@ -1,0 +1,12 @@
+.donation{
+	@extend .article;
+	margin: $gutter auto;
+	padding: 0;
+	
+	h3{
+		margin-top: 2em;
+	}
+	select{
+		width: 6em;
+	}
+}

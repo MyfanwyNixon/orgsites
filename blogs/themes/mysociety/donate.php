@@ -136,7 +136,7 @@ Template Name: Donate
 				if you are a UK tax payer, please select the appropriate option.
 				You must pay an amount of Income
 				Tax and/or Capital Gains Tax at least equal to the tax that we'll
-				reclaim on your donations (currently 28p for each &pound;1 you give).
+				reclaim on your donations (currently 25p for each &pound;1 you give).
 				</p>
 			</article>
 			

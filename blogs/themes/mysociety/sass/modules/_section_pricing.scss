@@ -109,11 +109,15 @@
 			
 			h4{
 				display:inline;
-				padding: 0.625em;
-				border: 1px solid #bbb;
-				-webkit-border-radius: 3px;
-				   -moz-border-radius: 3px;
-				        border-radius: 3px;
+				background-color: #fff;
+				@media (min-width : 60em) {
+					padding: 0.625em;
+					background-color: #ddd;
+					border: 1px solid #bbb;
+					-webkit-border-radius: 3px;
+					   -moz-border-radius: 3px;
+					        border-radius: 3px;
+				}
 				em{ display: inline; }
 			}
 			p{

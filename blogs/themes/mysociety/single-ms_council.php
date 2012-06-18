@@ -8,6 +8,12 @@
 		<article class="product">
 
 			<header class="section_intro">
+				
+				<hgroup>
+					<h2><?php the_title();?></h2>
+					<h3><?php echo get_field('strapline')?></h3>
+				</hgroup>
+			
 				<div class="images">
 					<ul class="slider">
 						<?php if(get_field('image')):?>
@@ -19,13 +25,9 @@
 					<p class="council-options"><a href="#newsletter-signup"><i class="icon-black-announcement"></i><strong>Local Gov Newsletter</strong></a> &nbsp;&nbsp; <a href="<?php bloginfo('template_url'); ?>/pdfs/fms_councils-A4.pdf"><i class="icon-black-file-pdf"></i><strong>Download Brochure</strong></a></p>
 				</div>
 				
-				
-				<hgroup>
-					<h2><?php the_title();?></h2>
-					<h3><?php echo get_field('strapline')?></h3>
-				</hgroup>
-				
-				<p><?php echo get_field('overview')?></p>
+				<div class="description">
+					<p><?php echo get_field('overview')?></p>
+				</div>
 				
 			</header>
 			

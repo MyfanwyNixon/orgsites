@@ -10,6 +10,11 @@
 			
 			<header class="section_intro">
 				
+				<hgroup>
+					<h2><?php the_title();?></h2>
+					<h3><?php echo get_field('strapline')?></h3>
+				</hgroup>
+				
 				<div class="images">
 					<ul class="slider">
 						<?php if(get_field('image')):?>
@@ -20,12 +25,9 @@
 					</ul>
 				</div>
 				
-				<hgroup>
-					<h2><?php the_title();?></h2>
-					<h3><?php echo get_field('strapline')?></h3>
-				</hgroup>
-				
-				<p><?php echo get_field('overview')?></p>
+				<div class="description">
+					<p><?php echo get_field('overview')?></p>
+				</div>
 				
 			</header>
 			

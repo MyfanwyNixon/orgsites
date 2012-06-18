@@ -9,6 +9,12 @@
 		<article class="products">
 			
 			<header class="section_intro">
+				
+				<hgroup>
+					<h2><?php the_title();?></h2>
+					<h3><?php echo get_field('strapline')?></h3>
+				</hgroup>
+			
 				<div class="images">
 					<ul class="slider">
 						<?php if(get_field('image')):?>
@@ -19,14 +25,13 @@
 					</ul>
 				</div>
 				
-				<hgroup>
-					<h2><?php the_title();?></h2>
-					<h3><?php echo get_field('strapline')?></h3>
-				</hgroup>
-				
-				<p><?php echo get_field('overview')?></p>
-				<?php // TODO add a field in admin for the main site url and add it here, have done it manually for now
+				<div class="description">
+					<p><?php echo get_field('overview')?></p>
+					<?php // TODO add a field in admin for the main site url and add it here, have done it manually for now
 				//<p><a class="btn" href="">visit <strong>siteUrlHere</strong>.com</a></p> ?>
+				</div>				
+				
+				
 				
 			</header>
 			

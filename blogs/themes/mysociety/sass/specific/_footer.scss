@@ -35,7 +35,8 @@
 	#footer_links{
 		width: 95%;
 		@media (min-width : 60em) {
-			max-width: 15em;
+			width: 15em;
+			float: left;
 		}
 		margin: 0 auto;
 		padding: 0.625em;

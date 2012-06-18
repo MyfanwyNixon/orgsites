@@ -1,22 +1,32 @@
 .blog-entries{
-	float: left;
+	
 	padding-bottom: 5em;
-	@include grid-8-of-12;
+	@media (min-width : 30em) {
+		@include grid-8-of-12;
+	}
+	@media (min-width : 60em) {
+		float: left;
+	}
 }
 
 .blog-post{
 	@extend .article;
 	@include grid-8-of-12;
-	margin-left: ($max_page_width / 12) - $gutter;
+	@media (min-width : 60em) {
+		margin-left: ($max_page_width / 12) - $gutter;
+	}
 	background-color: #ffffff;
 	@include border-radius($gutter/4);
+	margin: 0;
 	padding: $gutter/2;
 	
 	&>header{
 		background: transparent url(img/icons/products/mysociety.png) no-repeat center left;
 		background-size: (($max_page_width / 12) - $gutter) auto;
 		
-		margin-left: -(($max_page_width / 12) - $gutter/2);
+		@media (min-width : 60em) {
+			margin-left: -(($max_page_width / 12) - $gutter/2);
+		}
 		padding-left: ($max_page_width / 12) - ($gutter/2);
 		
 		h2{
@@ -124,8 +134,13 @@
 }
 
 .blogs-meta{
-	@include grid-3-of-12;
-	float: right;
+	width: 100%;
+	padding: $gutter/2;
+	margin: 0;
+	@media (min-width : 60em) {
+		@include grid-3-of-12;
+		float: right;
+	}
 	h3{
 		margin-bottom: 0;
 		font-weight: 600;
@@ -141,7 +156,17 @@
 		font-weight: 600;
 	}
 	section{
-		clear: both;
+		
+		width:50%;
+		float: left;
+		@media (min-width : 60em) {
+			clear: both;
+			float: none;
+			width: 100%;
+		}
+		&:nth-child(2n+1){
+			clear: left;
+		}
 		margin-bottom: 3em;
 		&.blogkey{
 			a{
@@ -169,10 +194,14 @@
 	@include grid-container;
 	
 	hgroup{
-		padding: 2em 0 0 0;
+		padding: 0 $gutter/2;
+		margin: 1em 0;
+		@media (min-width : 60em) {
+			padding: 0 $gutter/2;
+		}
 		h2{
 			font-size: 2.25em;
-			margin: 1em 0 0 0;
+			margin: 0;
 			padding:0;
 			color: #4D4D4D;
 
@@ -201,6 +230,9 @@ Comments
 #comments{
 	img{
 		padding: 0;
+	}
+	textarea{
+		max-width: 100%;
 	}
 }
 .comment-list, .comment-list li{

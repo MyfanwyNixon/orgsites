@@ -6,6 +6,7 @@
 	<meta name="creator" content="http://www.mysociety.org/">
 	<meta http-equiv="imagetoolbar" content="false">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<?php if(is_single() || is_page()): ?>
 		<?php if(is_array(get_field('meta_description'))) :?>
 			<meta name="description" content="<?php echo get_field('meta_description'); ?>">

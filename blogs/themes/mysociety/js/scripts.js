@@ -13,6 +13,9 @@ $(document).ready(function() {
 	
 	tempcolfix();
 	
+	var productList = $('.product-list');
+	var filters = $('.product-filters a');
+		
 // media query event handler
 	if (matchMedia) {
 		var mq = window.matchMedia("(min-width: 60em)");
@@ -70,9 +73,6 @@ $(document).ready(function() {
 	
 	// Homepage specific scripts
 	if($('body').hasClass('homepage')){
-		
-		var productList = $('.product-list');
-		var filters = $('.product-filters a');
 		
 		
 		productList.children('li').each(function() {

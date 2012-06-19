@@ -4,7 +4,7 @@
 
 body{
 	line-height: 1.875em;
-	font-family: "myriad-pro", "Myriad Pro", 'MyriadPro-Regular', 'Myriad Pro Regular', Frutiger, DroidSans, 'Droid Sans', 'DroidSans', sans-serif;
+	font-family: "myriad-pro", "Myriad Pro", 'MyriadPro-Regular', 'Myriad Pro Regular', Frutiger, 'Ubuntu', DroidSans, 'Droid Sans', 'DroidSans', sans-serif;
 }
 
 
@@ -45,6 +45,12 @@ h1, h2, h3, h4, h5, h6{
 			padding-left: 0.5em;
 		}
 		
+	}
+}
+html.no-js{
+	h1, h2, h3, h4, h5, h6
+	{
+		font-family: 'UbuntuCondensed-Regular', 'Ubuntu Condensed', DroidSans, 'Droid Sans', 'DroidSans', sans-serif;
 	}
 }
 

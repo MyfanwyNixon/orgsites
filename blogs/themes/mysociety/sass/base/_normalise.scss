@@ -80,9 +80,16 @@ button,
 input,
 select,
 textarea {
-    font-family: 'myriad-pro', 'Myriad Pro', 'MyriadPro-Regular', sans-serif;
+    font-family: 'myriad-pro', 'Myriad Pro', 'MyriadPro-Regular', 'Droid Sans', sans-serif;
 }
-
+html.no-js,
+html.no-js body,
+html.no-js button,
+html.no-js input,
+html.no-js select,
+html.no-js textarea{
+	font-family: 'Droid Sans', sans-serif;
+}
 /*
  * Addresses margins handled incorrectly in IE6/7
  */

@@ -142,7 +142,7 @@
 			
 			
 			<section id="newsletter-signup" class="product-newsletter-signup">
-				<h3> Sign-up to our Local Gov Newsletter <em>Occasional emails about mySociety's work in local government</em></h3>
+				<h3> Sign up to our Local Gov Newsletter <em>Occasional emails about mySociety's work in local government</em></h3>
 				<form action="https://secure.mysociety.org/admin/lists/mailman/subscribe/local-government" method="" accept-charset="utf-8">
 					<input type="hidden" name="digest" value="0">
 					<p>
@@ -152,7 +152,7 @@
 						<label for="email">Email Address</label> <input type="text" name="email" value="">
 					</p>
 					<p>
-						<input class="btn" type="submit" value="Join Mailinglist">
+						<input class="btn" type="submit" value="Join mailing list">
 					</p>
 				</form>
 			</section>

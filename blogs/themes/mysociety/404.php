@@ -21,7 +21,9 @@
 					</ul>
 				</div>
 				
-				<p>Sorry. Please try our <a href="/">home page</a> or <a href="mailto:hello@mysociety.org">get in touch</a> and we'll help you find what you're looking for.</p>
+				<div class="description">
+					<p>Sorry. Please try our <a href="/">home page</a> or <a href="mailto:hello@mysociety.org">get in touch</a> and we'll help you find what you're looking for.</p>
+				</div>
 			</header>
 		</article>
 		

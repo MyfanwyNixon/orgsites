@@ -16,7 +16,7 @@ Template Name: Donate
 				<header>
 					<h2><?php the_title(); ?></h2>
 				</header>
-				<p>To support the work of mySociety, you can make a donation to UK Citizens Online Democracy, mySociety’s parent charity (registered number 1076346).I f you love mySociety and its sites with such unbridled passion that you don’t need any actual persuading to donate, then please just go ahead and let rip (fill in the form below).</p>
+				<p>To support the work of mySociety, you can make a donation to UK Citizens Online Democracy, mySociety’s parent charity (registered number 1076346).If you love mySociety and its sites with such unbridled passion that you don’t need any actual persuading to donate, then please just go ahead and let rip (fill in the form below).</p>
 				<div class='donation'>
 				<h3 >Set up a regular monthly payment via PayPal</h3>
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">

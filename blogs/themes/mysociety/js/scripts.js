@@ -15,15 +15,9 @@ $(document).ready(function() {
 	
 	var productList = $('.product-list');
 	var filters = $('.product-filters a');
-		
-// media query event handler
-	if (matchMedia) {
-		var mq = window.matchMedia("(min-width: 60em)");
-		mq.addListener(WidthChange);
-		WidthChange(mq);
-	}
-// media query change
-	function WidthChange(mq) {
+	
+	// media query change
+	function widthChange(mq) {
 		if (mq.matches) {
 		// window width is at least 60em
 			// Make options boxes the same height
@@ -69,6 +63,14 @@ $(document).ready(function() {
 			
 		}
 	}
+	
+// media query event handler
+	if (window.matchMedia) {
+		var mq = window.matchMedia("(min-width: 60em)");
+		mq.addListener(widthChange);
+		widthChange(mq);
+	}
+
 
 	
 	// Homepage specific scripts

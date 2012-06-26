@@ -9,7 +9,7 @@
         <ul class="slider">
             <?php if ($image_id = get_field('image')) {
                 $img_tag = wp_get_attachment_image( $image_id, 'feature-thumb' );
-                $img_src = wp_get_attachment_image_src( $image_id, 'feature-thumb' );
+                $img_src = wp_get_attachment_image_src( $image_id, 'full' );
 ?>
                 <li><a href="<?=$img_src[0] ?>"><?=$img_tag ?></a></li>
             <?php } ?>

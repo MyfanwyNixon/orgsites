@@ -26,6 +26,7 @@ ul.linked_list{
 	
 	
 	.link-github{ @include icon_bg('github-cat', 'black'); }
+	.link-public{ @include icon_bg('globe', 'black'); }
 	.link-facebook{ @include icon_bg('facebook2', 'black'); }
 	.link-twitter{ @include icon_bg('twitter-bird', 'black'); }
 	.link-wiki{ @include icon_bg('pencil', 'black'); }

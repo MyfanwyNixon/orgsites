@@ -7,11 +7,12 @@
 
     <div class="images">
         <ul class="slider">
-            <?php if(get_field('image')):?>
-                <li><a href="<?php echo get_field('image'); ?>"><img src="<?php echo get_field('image'); ?>" alt="<?php the_title().' Feature Image';?>"></a></li>
-            <?php else :?>
-                <li><a href="#"><img src="http://placehold.it/460x370" alt="Default image"></a></li>
-            <?php endif ?>
+            <?php if ($image_id = get_field('image')) {
+                $img_tag = wp_get_attachment_image( $image_id, 'feature-thumb' );
+                $img_src = wp_get_attachment_image_src( $image_id, 'feature-thumb' );
+?>
+                <li><a href="<?=$img_src[0] ?>"><?=$img_tag ?></a></li>
+            <?php } ?>
         </ul>
         <? if (get_post_type() == 'ms_council') { ?>
             <p class="council-options"><a href="#newsletter-signup"><i class="icon-black-announcement"></i><strong>Local Gov Newsletter</strong></a> &nbsp;&nbsp; <a href="<?php bloginfo('template_url'); ?>/pdfs/fms_councils-A4.pdf"><i class="icon-black-file-pdf"></i><strong>Download Brochure</strong></a></p>

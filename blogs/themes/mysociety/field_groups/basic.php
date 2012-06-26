@@ -38,7 +38,7 @@ register_field_group(array (
       'type' => 'image',
       'instructions' => 'The headline image to appear aside the title on the project page',
       'required' => '0',
-      'save_format' => 'url',
+      'save_format' => 'id',
       'preview_size' => 'thumbnail',
       'order_no' => '2',
     ),

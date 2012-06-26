@@ -34,3 +34,5 @@
 	
 	<link rel="shortcut icon" href="/favicon.ico">
 </head>
+
+<body id="mysociety-org" <? body_class(); ?>>

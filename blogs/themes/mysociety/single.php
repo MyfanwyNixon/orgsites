@@ -1,7 +1,5 @@
 <?php get_header();?>
 
-<body id="mysociety-org" class="blog">
-
 <?php get_template_part('logo')?>	
 
 <div id='content' class='blog'>

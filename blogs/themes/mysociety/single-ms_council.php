@@ -1,7 +1,5 @@
 <? get_header(); ?>
 
-<body id="mysociety-org" class="productpage for_orgs">
-	
 	<?php get_template_part('logo')?>	
 	
 	<div id="content">

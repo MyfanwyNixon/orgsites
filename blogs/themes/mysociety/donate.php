@@ -5,7 +5,6 @@ Template Name: Donate
 ?>
 
 <?php get_header(); ?>
-	<body>
 	
 	<?php get_template_part('logo')?>	
 	

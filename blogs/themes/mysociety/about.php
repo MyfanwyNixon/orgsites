@@ -5,7 +5,6 @@ Template Name: About
 ?>
 
 <?php get_header(); ?>
-	<body>
 	
 	<?php get_template_part('logo')?>	
 	

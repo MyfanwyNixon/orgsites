@@ -1,18 +1,10 @@
 <?php get_header();?>
 
-<?php
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args= array(
-	'post_type' => 'post',
-	'paged' => $paged
-);
-query_posts($args);
-?>
 <div id='content' class='blog'>
 	<?php if (is_search()) : ?>		
 		<hgroup>
-			<h2>Search results</h2>
-			<h3>Search Results: &ldquo;<?php the_search_query(); ?>&rdquo; <?php if (get_query_var('paged')) echo ' &mdash; Page '.get_query_var('paged'); ?></h3>
+			<h2>mySociety Blog</h2>
+			<h3>Search results for &ldquo;<?php the_search_query(); ?>&rdquo; <?php if (get_query_var('paged')) echo ' &mdash; Page '.get_query_var('paged'); ?></h3>
 		</hgroup>
 	<?php elseif (is_category()) : ?>
 		<hgroup>

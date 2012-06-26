@@ -37,8 +37,14 @@
 <body id="mysociety-org" <? body_class(); ?>>
 
 <?
-
-if (!is_home()) {
+if (is_home()) {
+?>
+	<header class="header">
+		<h1 class="logo"><a href="/">mySociety</a></h1>
+		<p class="oneliner"><a href="/about/"><?php echo get_bloginfo('description'); /*  <span class="info">(click to learn more about mysociety)</span> */ ?></a></p>
+	</header>
+<?
+} else {
 	get_template_part('logo');
 }
 

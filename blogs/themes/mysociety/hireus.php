@@ -32,5 +32,3 @@ Template Name: Hire Us
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

@@ -148,5 +148,3 @@ Template Name: Donate
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

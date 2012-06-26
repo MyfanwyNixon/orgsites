@@ -32,5 +32,3 @@ Template Name: Work for Us
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

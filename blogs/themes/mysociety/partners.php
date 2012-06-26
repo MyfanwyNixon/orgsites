@@ -13,5 +13,5 @@ Template Name: Partners
 
 		endwhile; endif;
 	 ?>
-	</body>
+
 <?php get_footer(); ?>

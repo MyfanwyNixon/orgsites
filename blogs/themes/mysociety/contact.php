@@ -31,5 +31,3 @@ Template Name: Contact
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

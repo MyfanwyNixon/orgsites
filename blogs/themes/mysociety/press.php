@@ -30,5 +30,3 @@ Template Name: Press
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

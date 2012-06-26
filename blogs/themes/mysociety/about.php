@@ -31,5 +31,3 @@ Template Name: About
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

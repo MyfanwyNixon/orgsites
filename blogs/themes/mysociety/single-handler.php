@@ -47,17 +47,17 @@ function show_features_prices_studies() {
     //TODO Decide whether these signposts are aa little smaller ?>
     <section class="section-options">
         <ul class="">
-        <?php if(is_array($features) && count($features) > 0):?>
+        <?php if (is_array($features) && count($features) > 0):?>
             <li>
                 <p><a class="btn fms" href="#key-features"><strong>Key Features</strong></a></p>
             </li>
-        <?php endif ?><?php if(is_array($prices) && count($prices) > 0):?>
+        <?php endif ?><?php if (is_array($prices) && count($prices) > 0):?>
             <li>
                 <p><a class="btn fms" href="#pricing-options"><strong>Pricing</strong></a></p>
             </li>
-        <?php endif ?><?php if(is_array($features) && count($studies) > 0):?>
+        <?php endif ?><?php if (is_array($studies) && count($studies) > 0):?>
             <li>
-                <p><a class="btn fms" href="#case-studies"><strong>Case Stud<?php if(count($studies) == 1    ){ echo 'y'; }else{ echo 'ies'; } ?></strong></a></p>
+                <p><a class="btn fms" href="#case-studies"><strong>Case Stud<?php if (count($studies) == 1){ echo 'y'; }else{ echo 'ies'; } ?></strong></a></p>
             </li>
         <?php endif?>
 

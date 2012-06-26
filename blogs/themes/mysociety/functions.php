@@ -185,7 +185,6 @@ if ( function_exists('add_image_size') ) {
 	
 	//include some custom scripts for helping in page templates
 	include('custom_scripts/entitle.php'); //rewrites titles in facet pages correctly (TODO deprecate)
-	include('custom_scripts/pages-with-template.php'); //runs meta queries on wordpress to check whether a page has a certina template
 	include 'custom_scripts/theme_comments.php'; //writes out comment blocks in blog posts
 	include 'custom_scripts/resources.php'; //counts resources and features to ensure we mark up in CS correctly
 	

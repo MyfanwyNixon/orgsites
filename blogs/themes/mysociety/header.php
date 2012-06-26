@@ -22,7 +22,7 @@
 	        elseif ( is_404() ) { bloginfo('name'); print ' | Not Found'; }
 	        else { bloginfo('name'); wp_title('|'); get_page_number(); }
 	?></title>
-	<noscript><link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'></noscript>
+	<!--[if !IE]><!--><noscript><link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'></noscript><!-- <![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/print.css" type="text/css" media="print" charset="utf-8">
 	<!--[if IE]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/ie.css" type="text/css" media="screen, print" charset="utf-8"><![endif]-->
@@ -32,5 +32,5 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 	
-	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="shortcut icon" href="/favicon.ico">
 </head>

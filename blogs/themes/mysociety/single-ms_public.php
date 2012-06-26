@@ -1,19 +1,9 @@
 <!-- Public Page -->
-<?php get_header(); ?>
+<?php
+get_header();
+get_template_part('header', 'single');
 
-<h1><?php the_title();?></h1>
-
-<h2><?php echo get_field('strapline')?> </h2>
-
-<?php if(get_field('image')) :?>
-	<div>
-		<img src='<?php echo get_field('image')?>' alt='<?php the_title().' image';?>'>
-	</div>
-<?php endif ?>
-
-<p><?php echo get_field('overview')?> </p>
-
-<?php if(get_field('resources')) : ?>
+if(get_field('resources')) : ?>
 	<h3>Resources</h3>
 	<ul>
 	<?php foreach(get_field('resources') as $resource): ?>

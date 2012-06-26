@@ -1,21 +1,42 @@
 <?php
 
 # Handles all the different custom post types
+$post_type = get_post_type();
 
 get_header();
 echo '<div id="content">
         <article class="product">';
 get_template_part('header', 'single');
-show_support_resource();
-show_features_prices_studies();
-if (get_post_type() == 'ms_council') {
+if ($post_type == 'ms_council' || $post_type == 'ms_org') {
+    show_support_resource();
+    show_features_prices_studies();
+}
+if ($post_type == 'ms_council') {
     show_newsletter();
 }
-get_template_part('resources');
+if ($post_type == 'ms_project') {
+    show_project_facets();
+} else {
+    get_template_part('resources');
+}
 echo '</article>
-    /div>';
-
+    </div>';
 get_footer();
+
+/* XXX from public.php - is this needed?
+// TODO get some posts to display
+$args = array( 'post_type' => 'post', 'posts_per_page' => 5 );
+$loop = new WP_Query( $args );
+echo '<h3>Blog</h3>';
+while ( $loop->have_posts() ) {
+    $loop->the_post();
+?>
+    <h4><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h4>
+    <p><?php the_content(); ?></p>
+    <p><small><?php the_category(', ');?></small></p>
+<?php
+}
+*/
 
 # ---
 
@@ -145,3 +166,31 @@ function show_newsletter() { ?>
 <?
 }
 
+function show_project_facets() {
+    $facets = get_field('facet');
+?>
+    <section class="section-options">
+        <ul class="">
+            <?php if(is_array($facets) && count($facets) > 0) : ?>
+                <?php foreach(get_field('facet') as $post_object): ?><li>
+                    <?php if(get_field('headline', $post_object->ID)): ?>
+                        <h3><?php echo get_field('headline', $post_object->ID); ?></h3>
+                    <?php else :?>
+                        <h3><?php echo get_the_title($post_object->ID); ?></h3>
+                    <?php endif; ?>
+                    <?php if(get_field('one_liner', $post_object->ID)): ?>
+                        <p class="desc"><?php echo get_field('one_liner', $post_object->ID)?></p>
+                    <?php else : ?>
+                        <p class="desc"><?php echo get_field('strapline', $post_object->ID)?></p>
+                    <?php endif?>
+                    <?php if(get_field('link_text', $post_object->ID)): ?>
+                        <p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_field('link_text', $post_object->ID)?></a></p>
+                    <?php else :?>
+                        <p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>">Find out more</a></p>
+                    <?php endif ?>
+                </li><?php endforeach; ?>
+            <?php endif; ?>
+        </ul>
+    </section>
+<?
+}

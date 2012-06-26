@@ -1,4 +1,4 @@
-<? get_header(); ?>
+<?php get_header(); ?>
 
     <div id="content">
         <article class="product">
@@ -130,8 +130,10 @@
             </section>
             <? } ?>
 
+            <?php get_template_part('resources'); ?>
+
         </article>
 
     </div>
 
-<?php get_footer();?>
+<?php get_footer();

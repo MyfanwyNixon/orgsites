@@ -123,7 +123,7 @@ function show_features_prices_studies() {
         <?php endforeach ?>
         </ul>
     </section>
-    <?php endif
+    <?php endif;
 }
 
 function show_newsletter() { ?>

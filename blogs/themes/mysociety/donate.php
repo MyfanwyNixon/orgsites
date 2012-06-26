@@ -6,11 +6,8 @@ Template Name: Donate
 
 <?php get_header(); ?>
 	
-	<?php get_template_part('logo')?>	
-	
-	
-	<div id="content">
-			
+    <div id="content">
+
 			<article class="article">
 				<header>
 					<h2><?php the_title(); ?></h2>

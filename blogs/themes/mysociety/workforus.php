@@ -7,9 +7,6 @@ Template Name: Work for Us
 
 <?php get_header(); ?>
 	
-	<?php get_template_part('logo')?>	
-	
-	
 	<div id="content">
 			
 			<article class="article">

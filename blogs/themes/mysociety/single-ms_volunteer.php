@@ -1,8 +1,6 @@
 <!-- a page for volunteers -->
 <? get_header(); ?>
 
-<?php get_template_part('logo')?>	
-
 <h1><?php the_title();?></h1>
 
 <h2><?php echo get_field('strapline')?> </h2>

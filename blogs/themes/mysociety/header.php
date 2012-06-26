@@ -31,8 +31,14 @@
 	<script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
-	
 	<link rel="shortcut icon" href="/favicon.ico">
 </head>
 
 <body id="mysociety-org" <? body_class(); ?>>
+
+<?
+
+if (!is_home()) {
+	get_template_part('logo');
+}
+

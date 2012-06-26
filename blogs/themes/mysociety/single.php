@@ -1,7 +1,5 @@
 <?php get_header();?>
 
-<?php get_template_part('logo')?>	
-
 <div id='content' class='blog'>
 	 <!-- Start the Loop. -->
 	<?php if ( have_posts() ) : ?>

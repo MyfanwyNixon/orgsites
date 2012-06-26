@@ -6,11 +6,8 @@ Template Name: About
 
 <?php get_header(); ?>
 	
-	<?php get_template_part('logo')?>	
-	
-	
-	<div id="content">
-			
+    <div id="content">
+
 			<article class="article">
 			
 				<header>

@@ -17,10 +17,10 @@
 	        if ( is_single() ) { single_post_title(); }
 	        elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); }
 	        elseif ( is_page() ) { bloginfo('name'); print ' | '; single_post_title(''); }
-	        elseif ( is_search() ) { bloginfo('name'); print ' | Search Results for ' . wp_specialchars($s); get_page_number(); }
+	        elseif ( is_search() ) { bloginfo('name'); print ' | Search Results for ' . wp_specialchars($s); }
 			elseif ( is_category() ) { bloginfo('name'); single_cat_title(' | Posts in Category '); }
 	        elseif ( is_404() ) { bloginfo('name'); print ' | Not Found'; }
-	        else { bloginfo('name'); wp_title('|'); get_page_number(); }
+	        else { bloginfo('name'); wp_title('|'); }
 	?></title>
 	<!--[if !IE]><!--><noscript><link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'></noscript><!-- <![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">

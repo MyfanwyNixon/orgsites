@@ -1,5 +1,10 @@
 <?
 
+// Add other size image support
+if ( function_exists('add_image_size') ) {
+    add_image_size( 'feature-thumb', 460, 9999 );
+}
+
   //register custom post types
   add_action( 'init', 'create_post_type' );
   function create_post_type() {

@@ -5,13 +5,9 @@ Template Name: Contact
 ?>
 
 <?php get_header(); ?>
-	<body>
 	
-	<?php get_template_part('logo')?>	
-	
-	
-	<div id="content">
-			
+    <div id="content">
+
 			<article class="article">
 			
 				<header>
@@ -32,5 +28,3 @@ Template Name: Contact
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

@@ -27,7 +27,7 @@ $(document).ready(function() {
 			
 			
 			// Homepage specific scripts
-			if($('body').hasClass('homepage')){
+			if($('body').hasClass('home')){
 				
 				// Count down for ordering the products in the same order as loaded
 				var orderCountdown = productList.children('li').length * 4;
@@ -74,7 +74,7 @@ $(document).ready(function() {
 
 	
 	// Homepage specific scripts
-	if($('body').hasClass('homepage')){
+	if($('body').hasClass('home')){
 		
 		
 		productList.children('li').each(function() {

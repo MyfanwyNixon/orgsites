@@ -1,12 +1,5 @@
 <?get_header();?>
 
-<body id="mysociety-org" class="homepage">
-	
-	<header class="header">
-		<h1 class="logo"><a href="/">mySociety</a></h1>
-		<p class="oneliner"><a href="/about/"><?php echo get_bloginfo('description'); /*  <span class="info">(click to learn more about mysociety)</span> */ ?></a></p>
-	</header>
-	
 	<div id="content">
 		<section id="products">
 			<h2>Products</h2>
@@ -129,8 +122,4 @@
 		
 	</div>
 	
-	<?php get_footer(); ?>
-	
-	
-</body>
-</html>
+<?php get_footer(); ?>

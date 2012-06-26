@@ -4,7 +4,6 @@ Template Name: Partners
 */
 ?>
 <?php get_header(); ?>
-	<body>
 	<h1><?php the_title(); ?></h1>
 	
 	<?php
@@ -14,5 +13,5 @@ Template Name: Partners
 
 		endwhile; endif;
 	 ?>
-	</body>
+
 <?php get_footer(); ?>

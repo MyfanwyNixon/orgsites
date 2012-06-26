@@ -4,10 +4,6 @@ Template Name: Press
 */
 ?>
 <?php get_header(); ?>
-	<body>
-	
-	<?php get_template_part('logo')?>	
-	
 	
 	<div id="content">
 			
@@ -31,5 +27,3 @@ Template Name: Press
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

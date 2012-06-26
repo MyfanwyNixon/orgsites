@@ -6,13 +6,9 @@ Template Name: Hire Us
 
 
 <?php get_header(); ?>
-	<body>
 	
-	<?php get_template_part('logo')?>	
-	
-	
-	<div id="content">
-			
+    <div id="content">
+
 			<article class="article">
 			
 				<header>
@@ -33,5 +29,3 @@ Template Name: Hire Us
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

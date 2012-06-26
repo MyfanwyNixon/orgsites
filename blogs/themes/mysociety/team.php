@@ -6,8 +6,6 @@ Template Name: Team
 
 <?php get_header();?>
 
-<?php get_template_part('logo')?>	
-
 <h1><?php the_title();?></h1>
 <?php $values = get_field('people'); ?>
 <?php if($values) : ?>

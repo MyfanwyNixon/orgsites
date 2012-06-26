@@ -5,12 +5,8 @@ Template Name: FAQ
 ?>
 <?php get_header(); ?>
 
-<header class="header">
-	<h1 class="logo"><a href="/">mySociety</a></h1>
-</header>
+    <div id="content">
 
-<div id="content">
-	
 	<article class="products">
 		
 		<section class="q_and_a">

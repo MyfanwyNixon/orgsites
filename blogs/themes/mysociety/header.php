@@ -17,10 +17,10 @@
 	        if ( is_single() ) { single_post_title(); }
 	        elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); }
 	        elseif ( is_page() ) { bloginfo('name'); print ' | '; single_post_title(''); }
-	        elseif ( is_search() ) { bloginfo('name'); print ' | Search Results for ' . wp_specialchars($s); get_page_number(); }
+	        elseif ( is_search() ) { bloginfo('name'); print ' | Search Results for ' . wp_specialchars($s); }
 			elseif ( is_category() ) { bloginfo('name'); single_cat_title(' | Posts in Category '); }
 	        elseif ( is_404() ) { bloginfo('name'); print ' | Not Found'; }
-	        else { bloginfo('name'); wp_title('|'); get_page_number(); }
+	        else { bloginfo('name'); wp_title('|'); }
 	?></title>
 	<!--[if !IE]><!--><noscript><link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'></noscript><!-- <![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">
@@ -31,6 +31,20 @@
 	<script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
-	
 	<link rel="shortcut icon" href="/favicon.ico">
 </head>
+
+<body id="mysociety-org" <? body_class(); ?>>
+
+<?
+if (is_home()) {
+?>
+	<header class="header">
+		<h1 class="logo"><a href="/">mySociety</a></h1>
+		<p class="oneliner"><a href="/about/"><?php echo get_bloginfo('description'); /*  <span class="info">(click to learn more about mysociety)</span> */ ?></a></p>
+	</header>
+<?
+} else {
+	get_template_part('logo');
+}
+

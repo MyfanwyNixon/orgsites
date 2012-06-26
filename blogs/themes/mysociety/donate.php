@@ -5,13 +5,9 @@ Template Name: Donate
 ?>
 
 <?php get_header(); ?>
-	<body>
 	
-	<?php get_template_part('logo')?>	
-	
-	
-	<div id="content">
-			
+    <div id="content">
+
 			<article class="article">
 				<header>
 					<h2><?php the_title(); ?></h2>
@@ -149,5 +145,3 @@ Template Name: Donate
 	</div>
 	
 <?php get_footer(); ?>
-	</body>
-</html>

@@ -69,7 +69,7 @@
             <?php if(is_array($prices) && count($prices) > 0):?>
                 <section id='pricing-options' class="product-options-pricing">
                     <h3>Pricing: <em><?php echo get_field('pricing'); ?></em></h3>
-                    <ul class="<?=resource_cols($prices) ?>">
+                    <ul class="clearfix <?=resource_cols($prices) ?>">
                         <?php foreach($prices as $price): ?><li>
                             <h4><?php echo $price['overview'] ?></h4>
                             <p><?php echo $price['price'] ?></p>

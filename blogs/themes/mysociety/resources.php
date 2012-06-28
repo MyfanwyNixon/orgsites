@@ -1,7 +1,5 @@
 <?php
-
-$resources = get_field('resources');
-if (!is_array($resources)) $resources = array();
+    global $resources;
 
 ?>
 

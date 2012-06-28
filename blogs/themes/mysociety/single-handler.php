@@ -3,6 +3,12 @@
 # Handles all the different custom post types
 $post_type = get_post_type();
 
+# only get resources once so we can remove things from it as
+# we display them
+global $resources;
+$resources = get_field('resources');
+if (!is_array($resources)) $resources = array();
+
 get_header();
 echo '<div id="content">
         <article class="product">';
@@ -41,11 +47,12 @@ while ( $loop->have_posts() ) {
 # ---
 
 function show_support_resource() {
+    global $resources;
     // check that we have an email support or sales resource
-    $resources = get_field('resources');
     if(count($resources) > 0) {
-        foreach($resources as $resource) {
+        foreach($resources as $key => $resource) {
             if($resource['type'] == 'email' || $resource['type'] == 'sales'){
+                unset($resources[$key]);
                 $support = $resource;
             }
         }

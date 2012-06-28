@@ -15,7 +15,7 @@
             <?php } ?>
         </ul>
         <? if (get_post_type() == 'ms_council') { ?>
-            <p class="council-options"><a href="#newsletter-signup"><i class="icon-black-announcement"></i><strong>Local Gov Newsletter</strong></a> &nbsp;&nbsp; <a href="<?php bloginfo('template_url'); ?>/pdfs/fms_councils-A4.pdf"><i class="icon-black-file-pdf"></i><strong>Download Brochure</strong></a></p>
+        <p class="council-options"><a href="#newsletter-signup"><i class="icon-black-announcement"></i><strong>Local Gov Newsletter</strong></a> &nbsp;&nbsp; <?php show_brochure_resource() ?></p>
         <? } ?>
     </div>
 

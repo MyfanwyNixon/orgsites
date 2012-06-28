@@ -40,6 +40,7 @@ register_field_group(array (
 			'facebook' => 'Facebook page',
             'faq' => 'FAQ',
             'document' => 'Document',
+            'brochure' => 'Brochure',
 			'email' => 'Support email',
 			'press' => 'Press email',
 			'sales' => 'Sales email'

@@ -66,6 +66,24 @@ function show_support_resource() {
     }
 }
 
+function show_brochure_resource() {
+    global $resources;
+    // check that we have an email support or sales resource
+    if(count($resources) > 0) {
+        foreach($resources as $key => $resource) {
+            if($resource['type'] == 'brochure' ){
+                unset($resources[$key]);
+                $brochure = $resource;
+            }
+        }
+    }
+
+    if (isset($brochure)) { ?>
+        <a href="<?php echo $brochure['url'] ?>"><i class="icon-black-file-pdf"></i><strong><?php echo $brochure['text'] ?></strong></a>
+<?php
+    }
+}
+
 function show_features_prices_studies() {
     // do some checks and present the correct links
     $features = get_field('features');

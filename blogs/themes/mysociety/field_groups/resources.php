@@ -69,6 +69,16 @@ register_field_group(array (
           'formatting' => 'none',
           'order_no' => '2',
         ),
+        3 => 
+        array (
+          'key' => 'field_4fb277b04e060',
+          'label' => 'Promoted',
+          'name' => 'promoted',
+          'type' => 'textarea',
+          'default_value' => '',
+          'formatting' => 'html',
+          'order_no' => '3',
+        ),
       ),
       'row_limit' => '',
       'layout' => 'table',

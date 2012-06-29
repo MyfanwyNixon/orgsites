@@ -3,13 +3,10 @@
     <section class="blogkey">
         <h3>Our Blogs:</h3>
         <ul>
-            <li><a class="mysociety" href="<?php //TEMP FIX- TODO: check this function currently returning null, have hardcoded link as a temporary fix //get_bloginfo( 'url', 'raw' );?>/blog/">Company Blog</a></li>
-            <li><a class="diy" href="http://diy.mysociety.org/">DIY mySociety Blog</a></li>
-<?php
-    //<li><a class="fmt" href="#">FixMyTransport Blog</a></li>
-    //<li><a class="twfy" href="#">TheyWorkForYou Blog</a></li>
-    //<li><a class="" href="#">Bloggity Blog Blog</a></li>
-?>
+        <?php $our_blogs = get_bookmarks( array( 'category_name' => 'our blogs', 'orderby' => 'rating' ) ) ?>
+        <?php foreach ( $our_blogs as $blog ) { ?>
+            <li><a class="<?php echo $blog->link_name ?>" href="<?php echo $blog->link_url ?>"><?php echo $blog->link_description ?></a></li>
+        <?php } ?>
         </ul>
     </section>
     

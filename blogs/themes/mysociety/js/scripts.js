@@ -64,12 +64,7 @@ $(document).ready(function() {
 		}
 	}
 	
-// media query event handler
-	if (window.matchMedia) {
-		var mq = window.matchMedia("(min-width: 60em)");
-		mq.addListener(widthChange);
-		widthChange(mq);
-	}
+
 
 
 	
@@ -98,3 +93,11 @@ $(document).ready(function() {
 // Setup the lightbox for any internal image links
 	setupZoom();
 });
+$(window).load(function() {
+    // media query event handler
+	if (window.matchMedia) {
+		var mq = window.matchMedia("(min-width: 60em)");
+		mq.addListener(widthChange);
+		widthChange(mq);
+	}
+}

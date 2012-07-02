@@ -157,16 +157,18 @@ $gutter: 1.25em;
 
     // No background size use fixed size logo
     .header .logo a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
-    body.home .header{
-        .logo{
-            a{ 
-                display: block;
-                height: 82px;
-                width: 398px;
-                background: transparent url(img/logos/logo-large.png) no-repeat scroll top left;
-            }
+body.home .header{
+    .logo{
+        a{ 
+            display: block;
+            height: 82px;
+            width: 398px;
+            
+            background: transparent url(img/logos/logo-large.png) no-repeat scroll top left;
+            margin: auto;
         }
-        .oneliner{
+    }
+    .oneliner{
         color: #757575;
         font-size: 1.5em;
         a{
@@ -175,7 +177,17 @@ $gutter: 1.25em;
         
     }
     
+}
 
+html.lt-ie8 body.home .header{
+    body.home .header{
+        .logo{
+            a{ 
+                background: transparent url(img/logos/logo-large.png) no-repeat scroll top left;
+                margin: 0;
+            }
+        }
+    }
 }
     // Stop the links from running over with no gaps
     .section-options{
@@ -236,9 +248,16 @@ $gutter: 1.25em;
             padding: 0.625em 0.625em 0.625em 5em;
             float:left;
             min-height: 7.5em;
-            width: 210px;
+            width: 300px;
             margin: 0;
             display: inline;
+        }
+    }
+}
+html.lt-ie8 #products{
+    .product-list{
+        li{
+            width: 210px;
         }
     }
 }

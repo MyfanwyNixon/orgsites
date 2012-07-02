@@ -37,7 +37,7 @@
 <body id="mysociety-org" <? body_class(); ?>>
 
 <?
-if (is_home()) {
+if (is_front_page()) {
 ?>
 	<header class="header">
 		<h1 class="logo"><a href="/">mySociety</a></h1>

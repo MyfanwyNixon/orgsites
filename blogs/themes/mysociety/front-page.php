@@ -118,8 +118,6 @@
 			<p style="clear:both"></p>
 		</section>
 
-		<?php /* get_footer('about')*/ ?>
-		
 	</div>
 	
 <?php get_footer(); ?>

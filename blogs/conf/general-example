@@ -40,7 +40,7 @@ define('OPTION_WORDPRESS_LOGGED_IN_SALT',   'XXXX - put random string in here - 
 define('OPTION_WORDPRESS_NONCE_SALT',       'XXXX - put random string in here - XXXX');
 
 //any additional keys for wordpress purchases etc. 
-define('OPTION_WORDPRESS_ACF_REPEATER',       'XXXX - put random string in here - XXXX');
+define('OPTION_WORDPRESS_ACF_REPEATER',       ''); // needs an actual key otherwise repeater fields don't work
 
 // Change the table prefix from the default of 'wp_' here 
 define('OPTION_WORDPRESS_TABLE_PREFIX', 'wp_');

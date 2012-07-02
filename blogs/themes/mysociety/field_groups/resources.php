@@ -40,6 +40,7 @@ register_field_group(array (
 			'facebook' => 'Facebook page',
             'faq' => 'FAQ',
             'document' => 'Document',
+            'brochure' => 'Brochure',
 			'email' => 'Support email',
 			'press' => 'Press email',
 			'sales' => 'Sales email'
@@ -68,6 +69,16 @@ register_field_group(array (
           'default_value' => 'http//example.com',
           'formatting' => 'none',
           'order_no' => '2',
+        ),
+        3 => 
+        array (
+          'key' => 'field_4fb277b04e060',
+          'label' => 'Promoted',
+          'name' => 'promoted',
+          'type' => 'textarea',
+          'default_value' => '',
+          'formatting' => 'html',
+          'order_no' => '3',
         ),
       ),
       'row_limit' => '',

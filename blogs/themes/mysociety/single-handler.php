@@ -89,7 +89,8 @@ function show_features_prices_studies() {
     $features = get_field('features');
     $prices = get_field('offer');
     $studies = get_field('case_study');
-
+    
+    if(is_array($features) && count($features) > 1){
     //TODO Decide whether these signposts are aa little smaller ?>
     <section class="section-options">
         <ul class="">
@@ -109,6 +110,7 @@ function show_features_prices_studies() {
 
         </ul>
     </section>
+    }
 
     <?php if(is_array($features) && count($features) > 0):?>
     <section id='key-features' class="section-features">

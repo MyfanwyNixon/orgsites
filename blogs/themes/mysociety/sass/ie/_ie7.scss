@@ -1,81 +1,86 @@
 @import "../base/mixins";
 @import "../base/grid";
 
-.ie6, ie7{
-	// No background size use fixed size logo
-	.header .logo a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
-	
-	body.home .header{
-		.logo{
-			a{ background: transparent url(img/logos/logo-large.png) no-repeat scroll center center; }
-		}
-		.oneliner{
-		color: #757575;
-		font-size: 1.5em;
-		a{
-			color: #757575;
-		}
-		
-	}
-}
-	
-	
-	// Stop the links from running over with no gaps
-	.section-options{
-		ul{
-			@include reset-list;
-			display: block;
-			width: 100%;
-			float: left;
-			clear: both;
-			
-			&.two_up li{
-				@include grid-1-of-2;
-				.btn{width: 100%;}
-			}
-			&.three_up li{
-				@include grid-1-of-3;
-				.btn{width: 100%;}
-			}
-			&.four_up li{
-				@include grid-1-of-4;
-				.btn{
-					font-size: 0.7em;
-					width: 100%;
-				}
-			}
-			
-			li{
-				display: inline;
-				float: left;
-				margin: $gutter/2;
-				padding: $gutter/2;
-			}
-		}
-	}
-	
-	// Show Case Studies 2by2
-	.product-options-casestudy{
-		ul li{
-			@include grid-1-of-2;
-			display: inline;
-		}
-	}
-	
-	
-	// Remove IE double margins
-	.product-list li{
-		width: 300px;
-		margin: 0;
-		padding: $gutter/2;
-		display: inline;
-	}
-	
-	.footer{
-		#footer_blurb,
-		#footer_links
-		{
-			display: inline;
-		}
-	}
+
+    // No background size use fixed size logo
+    .header .logo a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
+    
+    body.home .header{
+        .logo{
+            a{ 
+                display: block;
+                height: 82px;
+                width: 398px;
+                background: transparent url(img/logos/logo-large.png) no-repeat scroll top left;
+            }
+        }
+        .oneliner{
+        color: #757575;
+        font-size: 1.5em;
+        a{
+            color: #757575;
+        }
+        
+    }
+
+    
+    
+    // Stop the links from running over with no gaps
+    .section-options{
+        ul{
+            @include reset-list;
+            display: block;
+            width: 100%;
+            float: left;
+            clear: both;
+            
+            &.two_up li{
+                @include grid-1-of-2;
+                .btn{width: 100%;}
+            }
+            &.three_up li{
+                @include grid-1-of-3;
+                .btn{width: 100%;}
+            }
+            &.four_up li{
+                @include grid-1-of-4;
+                .btn{
+                    font-size: 0.7em;
+                    width: 100%;
+                }
+            }
+            
+            li{
+                display: inline;
+                float: left;
+                margin: $gutter/2;
+                padding: $gutter/2;
+            }
+        }
+    }
+    
+    // Show Case Studies 2by2
+    .product-options-casestudy{
+        ul li{
+            @include grid-1-of-2;
+            display: inline;
+        }
+    }
+    
+    
+    // Remove IE double margins
+    .product-list li{
+        width: 300px;
+        margin: 0;
+        padding: $gutter/2;
+        display: inline;
+    }
+    
+    .footer{
+        #footer_blurb,
+        #footer_links
+        {
+            display: inline;
+        }
+    }
 }

@@ -155,8 +155,9 @@ $gutter: 1.25em;
 
 
 
-    // No background size use fixed size logo
-    .header .logo a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
+// No background size use fixed size logo
+
+.header .logo a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
 body.home .header{
     .logo{
         a{ 
@@ -265,39 +266,87 @@ html.lt-ie8 #products{
 
 .footer{
     padding: 2em 0;
-	
-	section{
-		max-width:60em;
-		width: 100%;
-		margin: 0 auto;
-		padding-bottom: 2em;
-	}
-	
-	#footer_links{
-    	width: 15em;
-		float: left;
-		
-		#menu-footer{
-			padding: 0;
-			font-size: 1em;
-			float:left;
-			padding-left: 2.5em;
-		}
-		
-		a{
-    		margin: 0;
-			&.logo{
-				margin-left: -10%;
-			}
-		}	
-	}
-	
-	#footer_blurb{
-    	float: none;
-		margin-right: 5em;
-		padding-top: 1.5em; //2.125em;
-	}
+    
+    section{
+        max-width:60em;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 2em;
+    }
+    
+    #footer_links{
+        width: 15em;
+        float: left;
+        
+        #menu-footer{
+            padding: 0;
+            font-size: 1em;
+            float:left;
+            padding-left: 2.5em;
+        }
+        
+        a{
+            margin: 0;
+            &.logo{
+                margin-left: -10%;
+            }
+        }   
+    }
+    
+    #footer_blurb{
+        float: none;
+        margin-right: 5em;
+        padding-top: 1.5em; //2.125em;
+    }
 }
 
+
+
+
+.blog-entries{
+    padding-bottom: 5em;
+    @include grid-8-of-12;
+    float: left;
+}
+
+.blog-post{
+    @extend .article;
+    @include grid-8-of-12;
+    margin-left: ($max_page_width / 12) - $gutter;
+    & header{
+        margin-left: -(($max_page_width / 12) - $gutter/2);
+    }
+}
+
+.linked-blog-post{
+    @extend .article;
+    @include grid-9-of-12;
+    @include border-radius($gutter/4);
+}
+
+.blogs-meta{
+    @include grid-3-of-12;
+    float: right;
+
+    section{
+        clear: both;
+        float: none;
+        width: 100%;
+        &.blogkey{
+        a
+        {
+            display: block;
+            padding-left:0;
+            background: none !important;
+        }
+    }
+}
+    
+    
+}
+#content.blog{
+    @include grid-container;
+    width: 60em;
+}
 
 

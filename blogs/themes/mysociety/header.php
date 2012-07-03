@@ -24,8 +24,8 @@
 	?></title>
 	<!--[if !IE]><!--><noscript><link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'></noscript><!-- <![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">
+	<!--[if lte IE 8]><link rel="stylesheet" href="/wp-content/themes/mysociety/ie.css" type="text/css" media="screen, print" charset="utf-8"><![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/print.css" type="text/css" media="print" charset="utf-8">
-	<!--[if IE]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/ie.css" type="text/css" media="screen, print" charset="utf-8"><![endif]-->
 
 	<script src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-2.5.3.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>

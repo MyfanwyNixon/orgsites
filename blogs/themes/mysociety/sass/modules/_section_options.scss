@@ -1,52 +1,52 @@
 .section-options{
-	@include grid-container;
-	@extend .clearfix;
-	margin-bottom: $gutter*2;
-	
-	h3{
-		display: block;
-		margin-top: 0;
-	}
-	p{
-		margin: 0 0 $gutter/2 0;
-	}
-	
-	&>ul{
-		@include reset-list;
-		display: block;
-		width: 100%;
-		float: left;
-		clear: both;
-		
-		&.two_up li{
-			@include grid-1-of-2;
-			&:nth-child(odd){
-				clear: left;
-			}
-		}
-		&.three_up li{
-			@include grid-1-of-3;
-			&:nth-child(3n+1){
-				clear: left;
-			}
-		}
-		&.four_up li{
-			@include grid-1-of-4;
-			&:nth-child(4n+1){
-				clear: left;
-			}
-			.btn{
-				font-size: 0.7em;
-			}
-		}
-		
-		li{
-			display: block;
-			float: left;
-			padding: 0 $gutter/2;
-			margin: 0;
-			.btn{width: 100%;}
-			//padding: $gutter/2;
-		}
-	}
+    @include grid-container;
+    @extend .clearfix;
+    margin-bottom: $gutter*2;
+    
+    h3{
+        display: block;
+        margin-top: 0;
+    }
+    p{
+        margin: 0 0 $gutter/2 0;
+    }
+    
+    &>ul{
+        @include reset-list;
+        display: block;
+        width: 100%;
+        float: left;
+        clear: both;
+        
+        &.two_up li{
+            @include grid-1-of-2;
+            &:nth-child(odd){
+                clear: left;
+            }
+        }
+        &.three_up li{
+            @include grid-1-of-3;
+            &:nth-child(3n+1){
+                clear: left;
+            }
+        }
+        &.four_up li{
+            @include grid-1-of-4;
+            &:nth-child(4n+1){
+                clear: left;
+            }
+            .btn{
+                font-size: 0.7em;
+            }
+        }
+        
+        li{
+            display: block;
+            float: left;
+            padding: 0 $gutter/2;
+            margin: 0;
+            .btn{width: 100%;}
+            //padding: $gutter/2;
+        }
+    }
 }

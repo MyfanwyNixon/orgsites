@@ -1,217 +1,217 @@
 #about-mysociety{
-		//border-top: #ddd 1px solid;
-		max-width:100%;
-		width: 60em;
-		margin: 0 auto;
-		margin-bottom: 3em;
-		padding: 0 5em;
-		
-		nav{
-			width: 13.75em;
-			float:right;
-			padding: 0 0.625em;
-			color: #808080;
-			
-			ul{
-				padding: 0;
-				margin-top: 0;
-			}
-		}
-		
-		h2{
-			font-size: 2.25em;
-			font-weight: 600;
-			color: #4D4D4D;
-			padding: 0 0.2778em;
-		}
-		
-		h3{
-			font-size: 2.25em;
-			font-weight: 600;
-			color: #4D4D4D;
-			padding: 0 0.2778em;
-		}
-		
-		p{
-			width: 28.75em;
-			color: #808080;
-			padding: 0 0.625em;
-		}
-		
-	}
-	
-	#products{
+        //border-top: #ddd 1px solid;
+        max-width:100%;
+        width: 60em;
+        margin: 0 auto;
+        margin-bottom: 3em;
+        padding: 0 5em;
+        
+        nav{
+            width: 13.75em;
+            float:right;
+            padding: 0 0.625em;
+            color: #808080;
+            
+            ul{
+                padding: 0;
+                margin-top: 0;
+            }
+        }
+        
+        h2{
+            font-size: 2.25em;
+            font-weight: 600;
+            color: #4D4D4D;
+            padding: 0 0.2778em;
+        }
+        
+        h3{
+            font-size: 2.25em;
+            font-weight: 600;
+            color: #4D4D4D;
+            padding: 0 0.2778em;
+        }
+        
+        p{
+            width: 28.75em;
+            color: #808080;
+            padding: 0 0.625em;
+        }
+        
+    }
+    
+    #products{
 
-		max-width:100%;
-		width: 60em;
-		margin: 0 auto;
-		padding-bottom: 2em;
-		@media (min-width : 60em) {
-			padding-bottom: 5em;
-		}
+        max-width:100%;
+        width: 60em;
+        margin: 0 auto;
+        padding-bottom: 2em;
+        @media (min-width : 60em) {
+            padding-bottom: 5em;
+        }
 
-		&>h2{
-			display:none;
-		}
+        &>h2{
+            display:none;
+        }
 
-		.product-filters{
-			padding:0;
-			padding-bottom: 1.5em;
-			margin:0;
-			margin-bottom: 1.5em;
-			text-indent:0;
-			list-style:none;
-			float:left;
-			border-bottom: #ddd 1px solid;
-			
-			li{
-				display:inline;
-			}
-			a, a > strong{
-				-webkit-transition: color 0.5s ease-in;
-				   -moz-transition: color 0.5s ease-in;
-				     -o-transition: color 0.5s ease-in;
-				        transition: color 0.5s ease-in;
-			}
-			a{
-				display:block;
-				padding: 0.625em;
-				width:25%;
-				float:left;
-				color: #808080;
-				
-				strong{
-					display:block;
-					color: #4D4D4D;
-					font-size:1.5em;
-					font-weight: 600;
-					margin-bottom: 0.5em;
-				}
-			}
-			
-			&:hover li a,
-			&.filtered li
-			{
-				color:rgba(128,128,128,0.5);
-				strong{
-					color:rgba(77,77,77,0.5);
-				}
-			}
-			&.filtered li a
-			{
-				color:rgba(128,128,128,0.3);
-				strong{
-					color:rgba(77,77,77,0.3);
-				}
-			}
-			
-			&:hover li a:hover{
-				color:rgba(128,128,128,1);
-				text-decoration:none;
-				strong{
-					color:rgba(77,77,77,1);
-				}
-			}
-			&.filtered li a.selected{
-				color:rgba(128,128,128,1);
-				
-//				&.for_orgs strong { color:#29ABE2; }
-//				&.for_public strong { color:#ED1C24; }
-//				&.for_volunteers strong { color:#F7931E; }
-//				&.for_international strong { color: #dec600; }
-				
-				strong{
-					color:rgba(77,77,77,1);
-				}
-			}
-		}
-		
-		.product-list{
-			clear:both;
-			padding:0;
-			margin:0;
-			text-indent:0;
-			list-style:none;
-			color: #808080;
-			
-			a{
-				color: #4D4D4D;
-				&:hover{ text-decoration:none; }
-				&.for_orgs:hover{ color:#29ABE2; }
-				&.for_public:hover{ color:#ED1C24; }
-				&.for_volunteers:hover{ color:#F7931E; }
-				&.for_international:hover{ color: #dec600; }
-			}
-			
-			
-			li{
-				display:block;
-				padding: 0.625em 0.625em 0.625em 5.625em;
-				width:90%;
-				margin:0 auto;
-				background: transparent no-repeat scroll top left;
-				background-image: url('img/icons/products/blankcircle.png');
-				min-height: 6em;
-				
-				@media (max-width : 15em) {
-					width:100%;
-					background-size: 3em;
-					background: transparent no-repeat scroll center left;
-					padding: 0.625em 0.625em 0.625em 3.25em;
-					min-height: 4em;
-				}
-				@media (min-width : 30em) {
-					width:50%;
-					float:left;
-					min-height: 8.5em;
-				}
-				@media (min-width : 60em) {
-					width:20em;
-					min-height: 7.5em;
-				}
-				
-				h3{
-					margin:0;
-					font-weight: 600;
-					@media (max-width : 15em) {
-						font-size: 1em;
-					}
-					@media (min-width : 30em) {
-						font-size: 1.25em;
-					}
-					@media (min-width : 60em) {
-						font-size: 1.5em;
-					}
-				}
-				p{
-					font-size: 1em;
-					margin:0;
-					line-height: 1.5;
-					@media (max-width : 15em) {
-						font-size: 0.8em;
-					}
-				}
-				
-			}
-			li.blur,
-			&.for_orgs li
-			{
-				opacity: 0.3;
-			}
-			
-			&.for_orgs li.for_orgs,
-			&.for_public li.for_public,
-			&.for_volunteers li.for_volunteers,
-			&.for_international li.for_international
-			{
-				opacity: 1;
-			}
-			
-			li.fms{ background-image: url(img/fms.png); }
-			li.fmt{ background-image: url(img/fmt.png); }
-			li.twfy{ background-image: url(img/twfy.png); }
-			li.afoi{ background-image: url(img/afoi.png); }
-			li.mapumental{ background-image: url(img/mapumental.png); }
-		}
-	}
-	.sections{ display: none; }
+        .product-filters{
+            padding:0;
+            padding-bottom: 1.5em;
+            margin:0;
+            margin-bottom: 1.5em;
+            text-indent:0;
+            list-style:none;
+            float:left;
+            border-bottom: #ddd 1px solid;
+            
+            li{
+                display:inline;
+            }
+            a, a > strong{
+                -webkit-transition: color 0.5s ease-in;
+                   -moz-transition: color 0.5s ease-in;
+                     -o-transition: color 0.5s ease-in;
+                        transition: color 0.5s ease-in;
+            }
+            a{
+                display:block;
+                padding: 0.625em;
+                width:25%;
+                float:left;
+                color: #808080;
+                
+                strong{
+                    display:block;
+                    color: #4D4D4D;
+                    font-size:1.5em;
+                    font-weight: 600;
+                    margin-bottom: 0.5em;
+                }
+            }
+            
+            &:hover li a,
+            &.filtered li
+            {
+                color:rgba(128,128,128,0.5);
+                strong{
+                    color:rgba(77,77,77,0.5);
+                }
+            }
+            &.filtered li a
+            {
+                color:rgba(128,128,128,0.3);
+                strong{
+                    color:rgba(77,77,77,0.3);
+                }
+            }
+            
+            &:hover li a:hover{
+                color:rgba(128,128,128,1);
+                text-decoration:none;
+                strong{
+                    color:rgba(77,77,77,1);
+                }
+            }
+            &.filtered li a.selected{
+                color:rgba(128,128,128,1);
+                
+//              &.for_orgs strong { color:#29ABE2; }
+//              &.for_public strong { color:#ED1C24; }
+//              &.for_volunteers strong { color:#F7931E; }
+//              &.for_international strong { color: #dec600; }
+                
+                strong{
+                    color:rgba(77,77,77,1);
+                }
+            }
+        }
+        
+        .product-list{
+            clear:both;
+            padding:0;
+            margin:0;
+            text-indent:0;
+            list-style:none;
+            color: #808080;
+            
+            a{
+                color: #4D4D4D;
+                &:hover{ text-decoration:none; }
+                &.for_orgs:hover{ color:#29ABE2; }
+                &.for_public:hover{ color:#ED1C24; }
+                &.for_volunteers:hover{ color:#F7931E; }
+                &.for_international:hover{ color: #dec600; }
+            }
+            
+            
+            li{
+                display:block;
+                padding: 0.625em 0.625em 0.625em 5.625em;
+                width:90%;
+                margin:0 auto;
+                background: transparent no-repeat scroll top left;
+                background-image: url('img/icons/products/blankcircle.png');
+                min-height: 6em;
+                
+                @media (max-width : 15em) {
+                    width:100%;
+                    background-size: 3em;
+                    background: transparent no-repeat scroll center left;
+                    padding: 0.625em 0.625em 0.625em 3.25em;
+                    min-height: 4em;
+                }
+                @media (min-width : 30em) {
+                    width:50%;
+                    float:left;
+                    min-height: 8.5em;
+                }
+                @media (min-width : 60em) {
+                    width:20em;
+                    min-height: 7.5em;
+                }
+                
+                h3{
+                    margin:0;
+                    font-weight: 600;
+                    @media (max-width : 15em) {
+                        font-size: 1em;
+                    }
+                    @media (min-width : 30em) {
+                        font-size: 1.25em;
+                    }
+                    @media (min-width : 60em) {
+                        font-size: 1.5em;
+                    }
+                }
+                p{
+                    font-size: 1em;
+                    margin:0;
+                    line-height: 1.5;
+                    @media (max-width : 15em) {
+                        font-size: 0.8em;
+                    }
+                }
+                
+            }
+            li.blur,
+            &.for_orgs li
+            {
+                opacity: 0.3;
+            }
+            
+            &.for_orgs li.for_orgs,
+            &.for_public li.for_public,
+            &.for_volunteers li.for_volunteers,
+            &.for_international li.for_international
+            {
+                opacity: 1;
+            }
+            
+            li.fms{ background-image: url(img/fms.png); }
+            li.fmt{ background-image: url(img/fmt.png); }
+            li.twfy{ background-image: url(img/twfy.png); }
+            li.afoi{ background-image: url(img/afoi.png); }
+            li.mapumental{ background-image: url(img/mapumental.png); }
+        }
+    }
+    .sections{ display: none; }

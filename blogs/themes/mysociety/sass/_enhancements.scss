@@ -1,17 +1,17 @@
 .svg{
-	#header .logo a{
-		background-image: url(img/logos/logo.svg);
-	}
+    #header .logo a{
+        background-image: url(img/logos/logo.svg);
+    }
 }
 
 .no-js{
-	.sections{ display: block; padding-bottom: 2em; color:#ddd; }
-	.product-list>li{ height:10em; }
-	.product-filters{ display:none; }
+    .sections{ display: block; padding-bottom: 2em; color:#ddd; }
+    .product-list>li{ height:10em; }
+    .product-filters{ display:none; }
 }
  
 .js{
-	.sections{ display: none; }
-	.product-list>li{ cursor: pointer; }
-	.product-list a:hover{ text-decoration:none; }
+    .sections{ display: none; }
+    .product-list>li{ cursor: pointer; }
+    .product-list a:hover{ text-decoration:none; }
 }

@@ -1,6 +1,6 @@
 @mixin logo{
-	background: transparent url(img/logos/logo.png) no-repeat scroll center center;
-	display: inline-block;
-	
-	@include text_ir;
+    background: transparent url(img/logos/logo.png) no-repeat scroll center center;
+    display: inline-block;
+    
+    @include text_ir;
 }

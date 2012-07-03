@@ -1,113 +1,113 @@
 /*
-	Footer.scss
-	---------
-	Styles for the main page footer.
-	Extends the product-list class for every page except the homepage.
-	
+    Footer.scss
+    ---------
+    Styles for the main page footer.
+    Extends the product-list class for every page except the homepage.
+    
 */
 
 .footer{
-	@include grid-fullpage;
-	background-color: $colour-background-dark;
-	
+    @include grid-fullpage;
+    background-color: $colour-background-dark;
+    
 }
 .footer-product-list{
-	@extend .product-list;
+    @extend .product-list;
 }
 
 .footer{
-	clear:both;
-	background-color: $colour-background-dark;
-	width: 100%;
-	float:left;
-	padding: 0;
-	@media (min-width : 60em) {
-		padding: 2em 0;
-	}
-	
-	section{
-		max-width:60em;
-		width: 100%;
-		margin: 0 auto;
-		padding-bottom: 2em;
-	}
-	
-	#footer_links{
-		width: 95%;
-		@media (min-width : 60em) {
-			width: 15em;
-			float: left;
-		}
-		margin: 0 auto;
-		padding: 0.625em;
-		
-		#menu-footer{
-			padding: 0;
-			font-size: 1.25em;
-			@media (min-width : 60em) {
-				font-size: 1em;
-				float:left;
-				padding-left: 2.5em;
-			}
-		}
-		
-		a{
-			color: #bbb;
-			margin: $gutter/2 0;
-			@media (min-width : 60em) {
-				margin: 0;
-			}
-			&:hover{
-				color: #fff;
-			}
-			
-			&.logo{
-				display:block;
-				height: 3em;
-				width: 150px;
-				max-width:100%;
-				background: transparent url(img/logos/logo-inverse.png) no-repeat scroll center left;
-				background-size: 80% auto;
-				@media (min-width : 60em) {
-					margin-left: -10%;
-				}
-				
-				// Text IR
-				text-indent: 100%;
-				white-space: nowrap;  
-				overflow: hidden;
-			}
-		}	
-	}
-	
-	#footer_blurb{
-		display: block;
-		width: 80%;
-		max-width: 40em;
-		margin: 0 auto;
-		padding: 0.625em;
-		@media (min-width : 60em) {
-			float: right;
-			margin-right: 5em;
-			padding-top: 1.5em; //2.125em;
-		}
-		color: #aaa;
-		
-		p{
-			font-size: 0.8em;
-		}
-		
-	}
-	
-	.charity_number{
-		@include transition(color 0.5s linear);
-		clear: both;
-		text-align: center;
-		margin-top: 2em;
-		font-size: 0.8em;
-		color: #777;
-		&:hover{
-			color: #aaa;
-		}
-	}
+    clear:both;
+    background-color: $colour-background-dark;
+    width: 100%;
+    float:left;
+    padding: 0;
+    @media (min-width : 60em) {
+        padding: 2em 0;
+    }
+    
+    section{
+        max-width:60em;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 2em;
+    }
+    
+    #footer_links{
+        width: 95%;
+        @media (min-width : 60em) {
+            width: 15em;
+            float: left;
+        }
+        margin: 0 auto;
+        padding: 0.625em;
+        
+        #menu-footer{
+            padding: 0;
+            font-size: 1.25em;
+            @media (min-width : 60em) {
+                font-size: 1em;
+                float:left;
+                padding-left: 2.5em;
+            }
+        }
+        
+        a{
+            color: #bbb;
+            margin: $gutter/2 0;
+            @media (min-width : 60em) {
+                margin: 0;
+            }
+            &:hover{
+                color: #fff;
+            }
+            
+            &.logo{
+                display:block;
+                height: 3em;
+                width: 150px;
+                max-width:100%;
+                background: transparent url(img/logos/logo-inverse.png) no-repeat scroll center left;
+                background-size: 80% auto;
+                @media (min-width : 60em) {
+                    margin-left: -10%;
+                }
+                
+                // Text IR
+                text-indent: 100%;
+                white-space: nowrap;  
+                overflow: hidden;
+            }
+        }   
+    }
+    
+    #footer_blurb{
+        display: block;
+        width: 80%;
+        max-width: 40em;
+        margin: 0 auto;
+        padding: 0.625em;
+        @media (min-width : 60em) {
+            float: right;
+            margin-right: 5em;
+            padding-top: 1.5em; //2.125em;
+        }
+        color: #aaa;
+        
+        p{
+            font-size: 0.8em;
+        }
+        
+    }
+    
+    .charity_number{
+        @include transition(color 0.5s linear);
+        clear: both;
+        text-align: center;
+        margin-top: 2em;
+        font-size: 0.8em;
+        color: #777;
+        &:hover{
+            color: #aaa;
+        }
+    }
 }

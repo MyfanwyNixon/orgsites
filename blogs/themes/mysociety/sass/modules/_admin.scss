@@ -1,18 +1,18 @@
 .post-edit-link{
-	@extend .btn;
-	position: absolute;
-	top: 65px;
-	right: 2em;
-	padding: 2px 10px 2px 35px;
-	-webkit-border-radius: 0 0 10px 10px;
-	color: white;
-	width: auto;
-	@include icon_bg('wrench', 'white', '16px', 'png', 10px center);
-	background-color: #555;
-	opacity: 0.9;
-	
-	&:hover{
-		opacity: 1;
-		color: #ddd;
-	}
+    @extend .btn;
+    position: absolute;
+    top: 65px;
+    right: 2em;
+    padding: 2px 10px 2px 35px;
+    -webkit-border-radius: 0 0 10px 10px;
+    color: white;
+    width: auto;
+    @include icon_bg('wrench', 'white', '16px', 'png', 10px center);
+    background-color: #555;
+    opacity: 0.9;
+    
+    &:hover{
+        opacity: 1;
+        color: #ddd;
+    }
 }

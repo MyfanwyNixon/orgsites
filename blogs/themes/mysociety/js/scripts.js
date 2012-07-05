@@ -8,96 +8,129 @@ jQuery.fn.supersleight=function(a){a=jQuery.extend({imgs:true,backgrounds:true,s
 
 // iPhone ZoomFix https://gist.github.com/901295
 (function(e){var c="addEventListener",b="gesturestart",g="querySelectorAll",f=[1,1],d=g in e?e[g]("meta[name=viewport]"):[];function a(){d.content="width=device-width,minimum-scale="+f[0]+",maximum-scale="+f[1];e.removeEventListener(b,a,true);}if((d=d[d.length-1])&&c in e){a();f=[0.25,1.6];e[c](b,a,true);}}(document));
-
+// media query change
+    var widthChange = function(mq) {
+        if (mq.matches) {
+        // window width is at least 60em
+            // Make options boxes the same height
+            $(".section-options p.desc").equalHeights();
+            $(".section-options h3").equalHeights();
+            $(".section-features li").equalHeights();
+            
+            
+            // Homepage specific scripts
+            if($('body').hasClass('home')){
+                
+                // Count down for ordering the products in the same order as loaded
+                var orderCountdown = productList.children('li').length * 4;
+                
+                productList.isotope({
+                    itemSelector : 'li',
+                    layoutMode : 'fitRows',
+                    getSortData : {
+                        for_orgs : function( $elem ) {
+                            if($elem.hasClass('for_orgs')){ return orderCountdown--; }
+                            else{ return 0; }
+                        },
+                        for_public : function( $elem ) {
+                            if($elem.hasClass('for_public')){ return orderCountdown--; }
+                            else{ return 0; }
+                        },
+                        for_volunteers : function( $elem ) {
+                            if($elem.hasClass('for_volunteers')){ return orderCountdown--; }
+                            else{ return 0; }
+                        },
+                        for_international : function( $elem ) {
+                            if($elem.hasClass('for_international')){ return orderCountdown--; }
+                            else{ return 0; }
+                        }
+                    }
+                });
+                
+            }
+        }
+        else {
+            // window width is less than 500px
+            
+            
+        }
+    }
+    
 $(document).ready(function() {
-	
-	tempcolfix();
-	
-	var productList = $('.product-list');
-	var filters = $('.product-filters a');
-	
-	// media query change
-	function widthChange(mq) {
-		if (mq.matches) {
-		// window width is at least 60em
-			// Make options boxes the same height
-			$(".section-options p.desc").equalHeights();
-			$(".section-options h3").equalHeights();
-			$(".section-features li").equalHeights();
-			
-			
-			// Homepage specific scripts
-			if($('body').hasClass('home')){
-				
-				// Count down for ordering the products in the same order as loaded
-				var orderCountdown = productList.children('li').length * 4;
-				
-				productList.isotope({
-					itemSelector : 'li',
-					layoutMode : 'fitRows',
-					getSortData : {
-						for_orgs : function( $elem ) {
-							if($elem.hasClass('for_orgs')){ return orderCountdown--; }
-							else{ return 0; }
-						},
-						for_public : function( $elem ) {
-							if($elem.hasClass('for_public')){ return orderCountdown--; }
-							else{ return 0; }
-						},
-						for_volunteers : function( $elem ) {
-							if($elem.hasClass('for_volunteers')){ return orderCountdown--; }
-							else{ return 0; }
-						},
-						for_international : function( $elem ) {
-							if($elem.hasClass('for_international')){ return orderCountdown--; }
-							else{ return 0; }
-						}
-					}
-				});
-				
-			}
-		}
-		else {
-			// window width is less than 500px
-			
-			
-		}
-	}
-	
+    
+    tempcolfix();
+    
+    var productList = $('.product-list');
+    var filters = $('.product-filters a');
+    
 
+    $('.people_list').hide();
 
-
-	
-	// Homepage specific scripts
-	if($('body').hasClass('home')){
-		
-		
-		productList.children('li').each(function() {
-			var head_link = $(this).find('h3 a');
-			
-			// Change main link on single facet projects to go directly
-			if($(this).find('p.sections a').length === 1){
-				var n_url = $(this).find('p.sections a').attr('href');
-				head_link.attr('href', n_url);
-			}
-			
-			// On clicking anywhere on the LI go to the main link href
-			$(this).on('click', function(){
-				window.location = head_link.attr('href');
-				return false;
-			});
-		});
-	}
-	
-	
+    
+    // Homepage specific scripts
+    if($('body').hasClass('home')){
+        
+        
+        productList.children('li').each(function() {
+            var head_link = $(this).find('h3 a');
+            
+            // Change main link on single facet projects to go directly
+            if($(this).find('p.sections a').length === 1){
+                var n_url = $(this).find('p.sections a').attr('href');
+                head_link.attr('href', n_url);
+            }
+            
+            // On clicking anywhere on the LI go to the main link href
+            $(this).on('click', function(){
+                window.location = head_link.attr('href');
+                return false;
+            });
+        });
+    }
+    
+    
 // Setup the lightbox for any internal image links
-	setupZoom();
+    setupZoom();
 });
+
 $(window).load(function() {
+    
+    if($('body').hasClass('teampage')){
+        
+        $('.people_list')
+        .fadeIn()
+        .isotope({
+            itemSelector : 'li',
+            layoutMode : 'fitRows',
+            //sortBy: 'random'
+            getSortData : {
+                core_mix : function ( $elem ) {
+                    var ret_val = 0;
+                    
+                    if($elem.find("a[name='steiny']").length > 0){
+                      ret_val = 0;
+                    } else if($elem.find("a[name='louisecrow']").length > 0){
+                      ret_val = 1;
+                    } else if($elem.find("a[name='matthew']").length > 0){
+                      ret_val = 2;
+                    } else if($elem.find("a[name='mark']").length > 0){
+                      ret_val = 3;
+                    } else {
+                        ret_val = Math.floor(Math.random() * 20) + 4;
+                    }
+                    console.log(ret_val);
+                    return ret_val;
+                }
+            },
+            sortBy: 'core_mix'
+        });
+        
+    }
+
     // media query event handler
-	if (window.matchMedia) {
-		var mq = window.matchMedia("(min-width: 60em)");
-		mq.addListener(widthChange);
-		widthChange(mq);
-	}
-}
+    if (window.matchMedia) {
+        var mq = window.matchMedia("(min-width: 60em)");
+        mq.addListener(widthChange);
+        widthChange(mq);
+    }
+});

@@ -93,7 +93,7 @@ function show_features_prices_studies() {
     if(is_array($features) && count($features) > 1):
     //TODO Decide whether these signposts are aa little smaller ?>
     <section class="section-options">
-        <ul class="">
+        <ul class="three_up">
         <?php if (is_array($features) && count($features) > 0):?>
             <li>
                 <p><a class="btn fms" href="#key-features"><strong>Key Features</strong></a></p>

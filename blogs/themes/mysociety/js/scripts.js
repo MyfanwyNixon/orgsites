@@ -9,7 +9,10 @@ jQuery.fn.supersleight=function(a){a=jQuery.extend({imgs:true,backgrounds:true,s
 // iPhone ZoomFix https://gist.github.com/901295
 (function(e){var c="addEventListener",b="gesturestart",g="querySelectorAll",f=[1,1],d=g in e?e[g]("meta[name=viewport]"):[];function a(){d.content="width=device-width,minimum-scale="+f[0]+",maximum-scale="+f[1];e.removeEventListener(b,a,true);}if((d=d[d.length-1])&&c in e){a();f=[0.25,1.6];e[c](b,a,true);}}(document));
 // media query change
+
+
     var widthChange = function(mq) {
+        var productList = $('.product-list');
         if (mq.matches) {
         // window width is at least 60em
             // Make options boxes the same height
@@ -54,7 +57,7 @@ jQuery.fn.supersleight=function(a){a=jQuery.extend({imgs:true,backgrounds:true,s
             
             
         }
-    }
+    };
     
 $(document).ready(function() {
     
@@ -118,7 +121,6 @@ $(window).load(function() {
                     } else {
                         ret_val = Math.floor(Math.random() * 20) + 4;
                     }
-                    console.log(ret_val);
                     return ret_val;
                 }
             },

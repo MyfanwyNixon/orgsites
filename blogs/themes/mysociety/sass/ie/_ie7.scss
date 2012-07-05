@@ -156,40 +156,36 @@ $gutter: 1.25em;
 
 
 // No background size use fixed size logo
+.header{
+    @include grid-fullpage;
+}
 
-.header .logo a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
 body.home .header{
+    margin: 1em auto 1em auto;
+    padding: 2em 0 0 0;
     .logo{
-        a{ 
+        a{
             display: block;
             height: 82px;
             width: 398px;
-            
             background: transparent url(img/logos/logo-large.png) no-repeat scroll top left;
             margin: auto;
         }
     }
+    
     .oneliner{
+        font-size: 2em;
+        border: none;
         color: #757575;
-        font-size: 1.5em;
+        font-size: 3em;
         a{
             color: #757575;
+            color: rgba(0,0,0,0.4);
         }
         
     }
-    
 }
 
-html.lt-ie8 body.home .header{
-    body.home .header{
-        .logo{
-            a{ 
-                background: transparent url(img/logos/logo-large.png) no-repeat scroll top left;
-                margin: 0;
-            }
-        }
-    }
-}
     // Stop the links from running over with no gaps
     .section-options{
         ul{

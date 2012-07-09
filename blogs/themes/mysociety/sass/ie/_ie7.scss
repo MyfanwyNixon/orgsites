@@ -159,7 +159,11 @@ $gutter: 1.25em;
 .header{
     @include grid-fullpage;
 }
-.header .logo a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
+html .header{
+    .logo{
+        a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
+    }
+}
 body.home .header{
     .logo{
         a{ 

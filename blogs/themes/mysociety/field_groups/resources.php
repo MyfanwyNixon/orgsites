@@ -43,7 +43,7 @@ register_field_group(array (
             'brochure' => 'Brochure',
 			'email' => 'Support email',
 			'press' => 'Press email',
-			'sales' => 'Sales email'
+			'sales' => 'Sales email (wrap action in <strong></strong>)'
           ),
           'default_value' => '',
           'allow_null' => '0',

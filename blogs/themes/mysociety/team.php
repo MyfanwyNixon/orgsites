@@ -27,7 +27,7 @@ Template Name: Team
                 <span class="jobtitle"><?php echo $value['position']; ?></span>
             </div>
             <?php if($value['mug']) : ?>
-                <img src="<?php echo $value['mug']; ?>" alt="<?php echo 'mugshot of '.$value['name']; ?>">
+                <img width="220px" height="220px" src="<?php echo $value['mug']; ?>" alt="<?php echo 'mugshot of '.$value['name']; ?>">
             <?php endif ?>
             </a>
         </li>

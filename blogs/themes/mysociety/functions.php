@@ -188,5 +188,16 @@ if ( function_exists('add_image_size') ) {
 	include 'custom_scripts/theme_comments.php'; //writes out comment blocks in blog posts
 	include 'custom_scripts/resources.php'; //counts resources and features to ensure we mark up in CS correctly
 	
+
+  // for some pages we require extra body classes
+  function add_extra_page_classes($classes) {
+      switch (basename(get_page_template())) {
+          case 'team.php':
+              $classes[] = 'teampage';
+      }
+      return $classes;
+  }
+
+  add_filter('body_class', 'add_extra_page_classes');
 	
 ?>

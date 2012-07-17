@@ -129,3 +129,17 @@ body.home .header{
         
     }
 }
+
+
+body.about{
+    @extend body.home;
+    .oneliner{
+        margin-bottom: 0;
+    }
+    #team_photo{
+        text-align: center;
+        img{
+            max-width: 100%;
+        }
+    }
+}

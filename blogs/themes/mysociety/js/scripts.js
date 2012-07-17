@@ -2,7 +2,7 @@
 (function(a){a.fn.equalHeights=function(d,c){var b=0;b=(d)?d:0;this.each(function(){if(a(this).height()>b){b=a(this).height();}});if((c)&&b>c){b=c;}return this.each(function(){a(this).height(b).css("overflow","auto");});};})(jQuery);
 // Temp col count fix
 var tempcolfix=function(){var a=$(".section-options ul").removeClass("four_up").removeClass("three_up").removeClass("two_up").children("li").length;var b="three_up";if(a%3===0){b="three_up";}else{if(a%4===0){b="four_up";}else{if(a%2===0){b="two_up";}}}$(".section-options ul").addClass(b);
-    $(".section-features ul.two_up li:nth-child(odd)").addClass('clear');$(".product-options-casestudy ul.two_up li:nth-child(odd)").addClass('clear');
+    $(".section-features ul.two_up li:nth-child(odd)").addClass('clear');$(".product-options-casestudy ul li:nth-child(odd)").addClass('clear');
 };
 
 // IE6 PNG fix - http://allinthehead.com/retro/338/supersleight-jquery-plugin
@@ -21,7 +21,7 @@ jQuery.fn.supersleight=function(a){a=jQuery.extend({imgs:true,backgrounds:true,s
             $(".section-options p.desc").equalHeights();
             $(".section-options h3").equalHeights();
             $(".section-features li").equalHeights();
-            
+            $(".product-options-casestudy li").equalHeights();
             
             // Homepage specific scripts
             if($('body').hasClass('home')){
@@ -102,24 +102,22 @@ $(window).load(function() {
     
     if($('body').hasClass('teampage')){
         
-        $('.people_list')
-        .fadeIn()
-        .isotope({
+        $(".people_list").show().isotope({
             itemSelector : 'li',
-            layoutMode : 'fitRows',
-            //sortBy: 'random'
+            layoutMode : 'masonry',
+            //sortBy: 'random',
             getSortData : {
-                core_mix : function ( $elem ) {
+                "core_mix" : function ( $elem ) {
                     var ret_val = 0;
                     
                     if($elem.find("a[name='steiny']").length > 0){
-                      ret_val = 0;
+                        ret_val = 0;
                     } else if($elem.find("a[name='louisecrow']").length > 0){
-                      ret_val = 1;
+                        ret_val = 1;
                     } else if($elem.find("a[name='matthew']").length > 0){
-                      ret_val = 2;
+                        ret_val = 2;
                     } else if($elem.find("a[name='mark']").length > 0){
-                      ret_val = 3;
+                        ret_val = 3;
                     } else {
                         ret_val = Math.floor(Math.random() * 20) + 4;
                     }

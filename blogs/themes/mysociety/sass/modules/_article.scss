@@ -55,6 +55,10 @@
         margin-left: $gutter;
         background-color: #fff;
         border: 1px solid #ddd;
+        height: auto;
+        @media ( max-width: 30em ) {
+            max-width: 320px;
+        }
         @include border-radius(3px);
     }
 }

@@ -50,7 +50,9 @@
     }
     
     img{
-        float:right;
+        @media ( min-width: 50em ) {
+            float:right;
+        }
         padding: $gutter/2;
         margin-left: $gutter;
         background-color: #fff;

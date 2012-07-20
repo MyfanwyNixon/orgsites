@@ -3,15 +3,13 @@
 $body_id = 'moretravel';
 
 include "interactive_map.php";
-include "../../wp/wp-blog-header.php";
+include "../../wp-blog-header.php";
 header('HTTP/1.0 200 OK');
 add_action('wp_head', 'add_swfobject_js');
-function fix_title($title) {
-    return 'More travel-time maps &raquo; Travel time / house price maps (BBC Television Centre &amp; Olympic Stadium site)';
-}
-add_filter('wp_title', 'fix_title');
-include "../../wp/wp-content/themes/mysociety/header.php"; 
+include "../../wp-content/themes/mysociety/header.php";
 ?>
+
+<div id="content"><article class="article">
 
 <h1>Travel time and house price maps</h1>
 
@@ -36,4 +34,6 @@ times to work and with varying house prices.</p>
 
 <p><a href="./">Main page explaining these maps</a></p>
 
-<?php include "../../wp/wp-content/themes/mysociety/footer.php"; ?>
+</article></div>
+
+<?php include "../../wp-content/themes/mysociety/footer.php"; ?>

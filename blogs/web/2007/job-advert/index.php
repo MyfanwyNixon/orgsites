@@ -1,11 +1,7 @@
 <?php
-include "../../wp/wp-blog-header.php";
+include "../../wp-blog-header.php";
 header('HTTP/1.0 200 OK');
-function fix_title($title) {
-    return 'mySociety is hiring';
-}
-add_filter('wp_title', 'fix_title');
-include "../../wp/wp-content/themes/mysociety/header.php"; 
+include "../../wp-content/themes/mysociety/header.php";
 
 # Needs reorganising to have more important things at the top
 ?>
@@ -69,5 +65,5 @@ mySociety, contact Tom on +44 7811 082158.</strong>
 
 </div>
 
-<?php include "../../wp/wp-content/themes/mysociety/footer.php"; ?>
+<?php include "../../wp-content/themes/mysociety/footer.php"; ?>
 

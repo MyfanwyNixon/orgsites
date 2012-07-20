@@ -3,15 +3,13 @@
 $body_id = 'moretravel';
 
 include "interactive_map.php";
-include "../../wp/wp-blog-header.php";
+include "../../wp-blog-header.php";
 header('HTTP/1.0 200 OK');
 add_action('wp_head', 'add_swfobject_js');
-function fix_title($title) {
-    return 'Travel-time maps';
-}
-add_filter('wp_title', 'fix_title');
-include "../../wp/wp-content/themes/mysociety/header.php"; 
+include "../../wp-content/themes/mysociety/header.php";
 ?>
+
+<div id="content"><article class="article">
 
 <h1>More travel-time maps and their uses</h1>
 
@@ -48,7 +46,7 @@ work.</p>
 
 </div>
 
-<?php print file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/../includer/maps_ad.php"); ?>
+<?php print file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/../../mysocietyorg/includer/maps_ad.php"); ?>
 
 <br class="clear"/>
 <p>Following widespread interest across the net and a major feature in
@@ -225,5 +223,7 @@ code</a> for the scripts that made these maps, and we can give you copies of
 the OpenStreetMap base mapping. Some other data, such as NaPTAN, will require
 permission from their owners.</p>
 
-<?php include "../../wp/wp-content/themes/mysociety/footer.php"; ?>
+</article></div>
+
+<?php include "../../wp-content/themes/mysociety/footer.php"; ?>
 

@@ -1,12 +1,10 @@
 <?php 
-include "../../wp/wp-blog-header.php";
+include "../../wp-blog-header.php";
 header('HTTP/1.0 200 OK');
-function fix_title($title) {
-    return 'Travel-time maps: methods';
-}
-add_filter('wp_title', 'fix_title');
-include "../../wp/wp-content/themes/mysociety/header.php"; 
+include "../../wp-content/themes/mysociety/header.php";
 ?>
+
+<div id="content"><article class="article">
 
 <h1>Travel-time Maps: Methods</h1>
 
@@ -207,4 +205,6 @@ Scale Colour Raster Maps</a> (Ordnance Survey)</dt>
 <p>These data were kindly supplied by agreement with the
 <a href="http://www.dft.gov.uk/">Department&nbsp;for&nbsp;Transport</a>.</p>
 
-<?php include "../../wp/wp-content/themes/mysociety/footer.php"; ?>
+</article></div>
+
+<?php include "../../wp-content/themes/mysociety/footer.php"; ?>

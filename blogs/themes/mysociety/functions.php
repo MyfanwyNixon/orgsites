@@ -1,5 +1,7 @@
 <?
 
+add_theme_support( 'automatic-feed-links' );
+
 // Add other size image support
 if ( function_exists('add_image_size') ) {
     add_image_size( 'feature-thumb', 460, 9999 );

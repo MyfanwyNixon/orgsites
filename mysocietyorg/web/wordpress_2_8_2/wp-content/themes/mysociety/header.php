@@ -38,7 +38,7 @@
 	<div id="divHeader">
 		<div id="imgLogo">
 			<a href="/" title="mySociety.org homepage">
-				<img src="http://www.mysociety.org/contimg/<?=$logo ?>" alt="mySociety.org" width="<?=$logo_w?>" height="<?=$logo_h?>" />
+				<img src="http://old.mysociety.org/contimg/<?=$logo ?>" alt="mySociety.org" width="<?=$logo_w?>" height="<?=$logo_h?>" />
 			</a>
 		</div>
 

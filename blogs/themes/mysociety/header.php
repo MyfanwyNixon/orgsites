@@ -32,6 +32,8 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 	<link rel="shortcut icon" href="/favicon.ico">
+
+    <? wp_head(); ?>
 </head>
 
 <body id="mysociety-org" <? body_class(); ?>>

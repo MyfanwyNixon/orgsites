@@ -1,0 +1,17 @@
+$from_name = mySociety::Config::get('NEWSLETTER_MAPU_FROM_NAME');
+$to = mySociety::Config::get('NEWSLETTER_MAPU_TO');
+$from = mySociety::Config::get('NEWSLETTER_MAPU_FROM');
+$footer = 'Mapumental Ltd is a start-up of mySociety.
+Our registered company number is 0788037.';
+$html_title = 'An update from Mapumental';
+$product = 'Mapumental';
+$hr_colour = '4a8594';
+$arrow_colour = '4a8594';
+$style_bullet = "font-family:Georgia, 'Times New Roman', Times, serif; font-size:14px; color:#4a8594;";
+$style_body   = "font-family:Georgia, 'Times New Roman', Times, serif; color:#414141; font-size:14px;";
+$style_head   = "font-family:Georgia, 'Times New Roman', Times, serif; font-size:18px; color:#333; font-weight:normal; text-transform:uppercase; line-height:20px;";
+$style_link   = "color:#4a8594;text-decoration:underline;";
+$style_toc    = "font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold;";
+($style_larger = $style_body) =~ s/14px/16px/;
+
+1;

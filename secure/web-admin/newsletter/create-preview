@@ -3,7 +3,7 @@
 # create-preview:
 # Used to create HTML mails
 # 
-# Command line arguments are type (html, plain, or email), and optionally email
+# Command line arguments are type (html, plain, or email), newsletter, and optionally email
 # address to send proof to.
 # Pass in, as STDIN or filename in 4th argument some Markdown text.
 
@@ -19,13 +19,25 @@ use Markdown;
 
 mySociety::Config::set_file( "$FindBin::Bin/../../conf/general" );
 
-my $from = mySociety::Config::get('NEWSLETTER_MYSOC_FROM');
 
-my ($type, $email) = (shift, shift);
+my ($type, $newsletter, $email ) = (shift, shift, shift);
 unless ($type) {
     print "Usage: $0 TYPE [EMAIL]\n";
     exit;
 }
+
+my %allowed = map { $_ => 1 } split('\|', mySociety::Config::get('NEWSLETTER_ALLOWED'));
+
+unless ( $allowed{$newsletter} ) {
+    print "Newsletter $newsletter disallowed\n";
+    exit;
+}
+
+our ( $from, $to, $from_name, $footer, $html_title, $product, $style_bullet,
+     $style_head, $style_link, $style_toc, $style_larger, $style_body, $hr_colour,
+     $arrow_colour );
+
+require "$newsletter-format";
 
 my $text = join('', <>);
 $text =~ s/\r//g;
@@ -71,6 +83,7 @@ EOF
     return $email;
 }
 
+
 # construct_email TEXT SUBJECT
 # Given constituent parts, construct an HTML email
 sub construct_email {
@@ -83,8 +96,8 @@ sub construct_email {
     my $id = strftime('%Y-%m-%d.%H-%M-%S.message@news.mysociety.org', localtime());
     my $date = strftime('%a, %d %b %Y %H:%M:%S %z', localtime());
     my $email = <<EOF;
-From: Myf Nixon <$from>
-To: mySociety Newsletter <news\@lists.mysociety.org>
+From: $from_name <$from>
+To: $to
 Date: $date
 Message-Id: <$id>
 Subject: $subject
@@ -111,23 +124,14 @@ sub create_html {
     my ($in, $subject) = @_;
     $_ = Markdown::Markdown($in);
 
-    # Set up generic styles
-    my $style_bullet = "font-family:Georgia, 'Times New Roman', Times, serif; font-size:14px; color:#2c9e2c;";
-    my $style_body   = "font-family:Georgia, 'Times New Roman', Times, serif; color:#414141; font-size:14px;";
-    my $style_head   = "font-family:Georgia, 'Times New Roman', Times, serif; font-size:18px; color:#333; font-weight:normal; text-transform:uppercase; line-height:20px;";
-    my $style_link   = "color:#2c9e2c;text-decoration:underline;";
-    my $style_toc    = "font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold;";
-    (my $style_larger = $style_body) =~ s/14px/16px/;
-
     # Links
     s/(<a[^>]*)>/$1 style="$style_link">/g;
 
     # Separators
-    # Used to be <td style="font-size:16px; color: #fff; background-color: #fff; border: 1px dotted #2c9e2c; border-style: none none dotted;"><br></td>
     s{\n\n<hr \/>}{</td>
     </tr>
     <tr>
-      <td><hr style="color: #fff; background-color: #fff; border: 1px dotted #2c9e2c; border-style: none none dotted; display:block;"></td>
+      <td><hr style="color: #fff; background-color: #fff; border: 1px dotted #$hr_colour; border-style: none none dotted; display:block;"></td>
     </tr>
     <tr>
       <td><br>}g;
@@ -146,7 +150,7 @@ sub create_html {
     my ($first_list) = m{<ul>(.*?)</ul>}s;
     if ($first_list) {
         my $copy = $first_list;
-        $copy =~ s{<li>(.*?)</li>}{<span style="$style_toc"><span style="color:#ccea64;">&raquo;</span> $1</span><br>}g;
+        $copy =~ s{<li>(.*?)</li>}{<span style="$style_toc"><span style="color:#$arrow_colour;">&raquo;</span> $1</span><br>}g;
         s/\Q$first_list\E/$copy/;
         s{<ul>(.*?)</ul>}{$1<br>\n\n}s;
     }
@@ -174,12 +178,13 @@ sub create_html {
 
     # Output
     my $date = `php -r"print date('jS F Y');"`;
+    (my $footer_br = $footer) =~ s/\n/<br>/;
     my $html = <<EOF;
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>mySociety Newsletter</title>
+<title>$html_title</title>
 </head>
 
 <body>
@@ -189,13 +194,13 @@ sub create_html {
       <tr>
         <td colspan="2"><table width="600" border="0" cellpadding="8">
   <tr>
-    <td><span style="font-family:Helvetica, Arial, sans-serif; font-size:35px; font-weight:bold; color:#000;">mySociety <span style="color:#ccea64;">&raquo;</span> $heading</span><br>
+    <td><span style="font-family:Helvetica, Arial, sans-serif; font-size:35px; font-weight:bold; color:#000;">$product <span style="color:#$arrow_colour;">&raquo;</span> $heading</span><br>
           <span style="font-family:Helvetica, Arial, sans-serif; font-size:18px; font-weight:bold; color:#646464;">$date</span></td>
   </tr>
 </table>
 <table width="100%" border="0">
           <tr>
-            <td><hr style="color: #fff; background-color: #fff; border: 1px dotted #2c9e2c; border-style: none none dotted; display:block;"></td>
+            <td><hr style="color: #fff; background-color: #fff; border: 1px dotted #$hr_colour; border-style: none none dotted; display:block;"></td>
           </tr>
         </table>
 </td>
@@ -211,11 +216,11 @@ $_
       <tr>
         <td colspan="2" align="center" valign="top" style="font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:normal; color:#666666;"><table width="100%" border="0">
           <tr>
-            <td><hr style="color: #fff; background-color: #fff; border: 1px dotted #2c9e2c; border-style: none none dotted; display:block;"></td>
+            <td><hr style="color: #fff; background-color: #fff; border: 1px dotted #$hr_colour; border-style: none none dotted; display:block;"></td>
           </tr>
         </table>
           <br>
-          mySociety is a project of UK Citizens Online Democracy (UKCOD).<br>UKCOD is a registered charity in England and Wales, no. 1076346. </td>
+          $footer_br </td>
         </tr>
     </table></td>
   </tr>
@@ -244,12 +249,13 @@ sub create_plain {
 
 
 -- 
-mySociety is a project of UK Citizens Online Democracy (UKCOD).
-UKCOD is a registered charity in England and Wales, no. 1076346.
+$footer
 EOF
     $_ = wrap_text($_);
     return $_;
 }
+
+1;
 
 sub wrap_text {
     $_ = shift;

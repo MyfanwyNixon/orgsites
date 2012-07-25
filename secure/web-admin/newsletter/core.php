@@ -28,7 +28,7 @@ if ($text && $subject) {
 
 ?>
 
-<h2>Form</h2>
+    <h2>Form for <?php echo $newsletter; ?> newsletter</h2>
 
 <form method="post">
 Subject: <input type="text" name="subject" value="<?=htmlspecialchars($subject)?>">

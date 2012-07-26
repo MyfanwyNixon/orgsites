@@ -17,7 +17,6 @@ jQuery.fn.supersleight=function(a){a=jQuery.extend({imgs:true,backgrounds:true,s
             $(".section-options p.desc").equalHeights();
             $(".section-options h3").equalHeights();
             $(".section-features li").equalHeights();
-            $(".product-options-casestudy li").equalHeights();
             
             // Homepage specific scripts
             if($('body').hasClass('home')){

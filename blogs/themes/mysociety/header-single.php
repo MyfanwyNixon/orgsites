@@ -16,6 +16,8 @@
         </ul>
         <? if (get_post_type() == 'ms_council') { ?>
         <p class="council-options"><a href="#newsletter-signup"><i class="icon-black-announcement"></i><strong>Local Gov Newsletter</strong></a> &nbsp;&nbsp; <?php show_brochure_resource() ?></p>
+        <? } else if (get_post_type() == 'ms_org') { ?>
+        <p class="council-options"><?php show_brochure_resource() ?></p>
         <? } ?>
     </div>
 

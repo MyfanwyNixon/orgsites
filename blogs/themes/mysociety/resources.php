@@ -17,7 +17,7 @@
 
 <?php if ( count($promoted_resources) ) { ?>
 <section class="section-options">
-    <ul class="three_up">
+    <ul class="<?php echo resource_cols($promoted_resources); ?>">
     <?php foreach ($promoted_resources as $resource) { ?>
         <li>
             <?php echo $resource['promoted'] ?>

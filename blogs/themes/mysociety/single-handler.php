@@ -91,9 +91,14 @@ function show_features_prices_studies() {
     $studies = get_field('case_study');
     
     if(is_array($features) && count($features) > 1):
+    $class = 'two_up';
+    if ( count($prices) && count($studies) ) {
+        $class = 'three_up';
+    }
+
     //TODO Decide whether these signposts are aa little smaller ?>
     <section class="section-options">
-        <ul class="three_up">
+        <ul class="<?php echo $class; ?>">
         <?php if (is_array($features) && count($features) > 0):?>
             <li>
                 <p><a class="btn fms" href="#key-features"><strong>Key Features</strong></a></p>
@@ -197,7 +202,7 @@ function show_project_facets() {
     $facets = get_field('facet');
 ?>
     <section class="section-options">
-        <ul class="">
+        <ul class="<?php echo feature_cols($facets); ?>">
             <?php if(is_array($facets) && count($facets) > 0) : ?>
                 <?php foreach(get_field('facet') as $post_object): ?><li>
                     <?php if(get_field('headline', $post_object->ID)): ?>

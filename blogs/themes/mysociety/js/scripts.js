@@ -1,9 +1,5 @@
 // Equal heights
 (function(a){a.fn.equalHeights=function(d,c){var b=0;b=(d)?d:0;this.each(function(){if(a(this).height()>b){b=a(this).height();}});if((c)&&b>c){b=c;}return this.each(function(){a(this).height(b).css("overflow","auto");});};})(jQuery);
-// Temp col count fix
-var tempcolfix=function(){var a=$(".section-options ul").removeClass("four_up").removeClass("three_up").removeClass("two_up").children("li").length;var b="three_up";if(a%3===0){b="three_up";}else{if(a%4===0){b="four_up";}else{if(a%2===0){b="two_up";}}}$(".section-options ul").addClass(b);
-    $(".section-features ul.two_up li:nth-child(odd)").addClass('clear');$(".product-options-casestudy ul li:nth-child(odd)").addClass('clear');
-};
 
 // IE6 PNG fix - http://allinthehead.com/retro/338/supersleight-jquery-plugin
 jQuery.fn.supersleight=function(a){a=jQuery.extend({imgs:true,backgrounds:true,shim:"x.gif",apply_positioning:true},a);return this.each(function(){if(jQuery.browser.msie&&parseInt(jQuery.browser.version,10)<7&&parseInt(jQuery.browser.version,10)>4){jQuery(this).find("*").andSelf().each(function(d,f){var b=jQuery(f);if(a.backgrounds&&b.css("background-image").match(/\.png/i)!==null){var c=b.css("background-image");var h=c.substring(5,c.length-2);var g=(b.css("background-repeat")==="no-repeat"?"crop":"scale");var e={filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+h+"', sizingMethod='"+g+"')","background-image":"url("+a.shim+")"};b.css(e);}if(a.imgs&&b.is("img[src$=png]")){var e={width:b.width()+"px",height:b.height()+"px",filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+b.attr("src")+"', sizingMethod='scale')"};b.css(e).attr("src",a.shim);}if(a.apply_positioning&&b.is("a, input")&&(b.css("position")===""||b.css("position")==="static")){b.css("position","relative");}});}});};
@@ -62,8 +58,6 @@ jQuery.fn.supersleight=function(a){a=jQuery.extend({imgs:true,backgrounds:true,s
     };
     
 $(document).ready(function() {
-    
-    tempcolfix();
     
     var productList = $('.product-list');
     var filters = $('.product-filters a');

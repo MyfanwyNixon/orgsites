@@ -18,6 +18,7 @@ RewriteRule  ^[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*) $1 [L]
 RewriteRule  ^[_0-9a-zA-Z-]+/(.*\.php)$ $1 [L]
 RewriteRule . index.php [L]
 
+Redirect /projects/hearfromyourmp/ http://www.mysociety.org/hearfromyourmp/
 RedirectPermanent /theyworkforyou-press-use http://www.mysociety.org/press-area/theyworkforyou
 RedirectPermanent /fixmystreet-press-use http://www.mysociety.org/press-area/fixmystreet
 RedirectPermanent /fixmytransport-press-use http://www.mysociety.org/press-area/fixmytransport

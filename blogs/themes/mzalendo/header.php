@@ -9,7 +9,7 @@
         <meta http-equiv="cleartype" content="on">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <link rel="stylesheet" type="text/css" href="http://info.mzalendo.com/static/css/all.css" media="screen, handheld" />
+        <link rel="stylesheet" type="text/css" href="http://info.mzalendo.com/static/css/kenya.css" media="screen, handheld" />
 
         <!--[if (lt IE 9) & (!IEMobile)]>
             <script src="http://info.mzalendo.com/static/js/respond.v1.1.0.min.js"></script>

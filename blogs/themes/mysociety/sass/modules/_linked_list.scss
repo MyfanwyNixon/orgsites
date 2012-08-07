@@ -34,6 +34,7 @@ ul.linked_list{
     .link-faq{ @include icon_bg('support', 'black'); }
     .link-blog{ @include icon_bg('feed2', 'black'); }
     .link-irc{ @include icon_bg('comment2', 'black'); }
+    .link-brochure{ @include icon_bg('file-pdf', 'black'); }
 }
 
 .three_up ul.linked_list{

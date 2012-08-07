@@ -9,7 +9,7 @@
         <meta http-equiv="cleartype" content="on">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <link rel="stylesheet" type="text/css" href="http://info.mzalendo.com/static/css/all.css" media="screen, handheld" />
+        <link rel="stylesheet" type="text/css" href="http://info.mzalendo.com/static/css/kenya.css" media="screen, handheld" />
 
         <!--[if (lt IE 9) & (!IEMobile)]>
             <script src="http://info.mzalendo.com/static/js/respond.v1.1.0.min.js"></script>
@@ -90,7 +90,7 @@
                       </ul>
                   
                   </li>
-                  <li><a href="http://info.mzalendo.com/person/politicians/">Politicians</a></li>
+                  <li><a href="http://info.mzalendo.com/position/mp/">Politicians</a></li>
                   <li><a href="http://info.mzalendo.com/info/parliament-overview">Parliament</a>
                   
                       <ul id="parliament-overview">
@@ -122,23 +122,29 @@
                               <a href="http://info.mzalendo.com/info/places-overview">Places Overview</a>
                           </li>
                           <li>
-                              <a href="http://info.mzalendo.com/place/constituencies/">Constituencies</a>
+                              <a href="http://info.mzalendo.com/place/is/constituency/">Constituencies</a>
                           </li>
                           <li>
-                              <a href="http://info.mzalendo.com/place/counties/">Counties</a>
+                              <a href="http://info.mzalendo.com/place/is/county/">Counties</a>
                           </li>
                       </ul>
                   
                   </li>
-                  <li><a href="http://info.mzalendo.com/info/2012-overview">2012</a>
+                  <li><a href="http://info.mzalendo.com/info/2012-overview">Election</a>
                   
                       <ul id="2012">
                           <li>
-                              <a href="http://info.mzalendo.com/info/2012-overview">2012 Overview</a>
+                              <a href="http://info.mzalendo.com/info/2012-overview">Election Overview</a>
                           </li>
-                          <li>
-                              <a href="http://info.mzalendo.com/info/2012-aspirants">Aspirants</a>
-                          </li>
+                  
+                          <li><a href="http://info.mzalendo.com/position/aspirant-president/">Presidential Aspirants</a></li>
+                          <li><a href="http://info.mzalendo.com/position/aspirant-mp/">Aspirant MPs</a></li>
+                          <li><a href="http://info.mzalendo.com/position/aspirant-governor/">Aspirant Governors</a></li>
+                          <li><a href="http://info.mzalendo.com/position/aspirant-senator/">Aspirant Senators</a></li>
+                          <li><a href="http://info.mzalendo.com/position/aspirant-ward-representative/">Aspirant Ward reps</a></li>
+                          <li><a href="http://info.mzalendo.com/position/aspirant-women-representative/">Aspirant Women reps</a></li>
+                  
+                  
                       </ul>
                   
                   </li>

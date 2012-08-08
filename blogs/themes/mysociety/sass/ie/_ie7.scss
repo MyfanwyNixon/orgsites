@@ -481,6 +481,7 @@ header.section_intro{
         }
         &.three_up li{
             @include grid-1-of-3;
+            width: 18em;
             &:nth-child(3n+1){
                 clear: left;
             }

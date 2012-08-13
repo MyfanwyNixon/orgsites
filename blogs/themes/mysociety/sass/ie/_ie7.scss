@@ -524,6 +524,9 @@ header.section_intro{
     & ul li{
         @include grid-1-of-2;
     }
+    li.clear {
+        clear: left;
+    }
 }
 
 

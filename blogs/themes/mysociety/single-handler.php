@@ -121,13 +121,15 @@ function show_features_prices_studies() {
     <section id='key-features' class="section-features">
         <h3>Features <em><?php echo get_field('feature_text');?></em></h3>
         <ul class="two_up">
-            <?php foreach($features as $feature):?><li>
-                    <h4><?php echo $feature['heading'];?></h4>
-                    <?php if($feature['image']): ?>
-                        <a href="#"><img src="<?php echo $feature['image'];?>" alt="<?php echo $feature['heading'].' Feature Image';?>"></a>
-                    <?php endif ?>
-                    <p><?php echo $feature['detail'];?></p>
-                </li><?php endforeach ?>
+            <?php $count = 1; ?>
+            <?php foreach($features as $feature):?><li<?php if ( $count % 2 == 1 ) { echo ' class="clear"'; } ?>>
+                <h4><?php echo $feature['heading'];?></h4>
+                <?php if($feature['image']): ?>
+                    <a href="#"><img src="<?php echo $feature['image'];?>" alt="<?php echo $feature['heading'].' Feature Image';?>"></a>
+                <?php endif ?>
+                <p><?php echo $feature['detail'];?></p>
+                <?php $count++; ?>
+            </li><?php endforeach ?>
         </ul>
     </section>
     <?php endif?>
@@ -136,10 +138,15 @@ function show_features_prices_studies() {
         <section id='pricing-options' class="product-options-pricing">
             <h3>Pricing: <em><?php echo get_field('pricing'); ?></em></h3>
             <ul class="clearfix <?=resource_cols($prices) ?>">
-                <?php foreach($prices as $price): ?><li>
+            <?php
+                $mod = clear_col($prices);
+                $count = 1;
+            ?>
+                <?php foreach($prices as $price): ?><li<?php if ( $count % $mod == 1 ) { echo ' class="clear"'; } ?>>
                     <h4><?php echo $price['overview'] ?></h4>
                     <p><?php echo $price['price'] ?></p>
                     <p><?php echo $price['details'] ?></p>
+                    <?php $count++; ?>
                 </li><?php endforeach ?>
             </ul>
 
@@ -162,8 +169,12 @@ function show_features_prices_studies() {
     <section id="case-studies" class="product-options-casestudy">
         <h3>Case Studies: <em><?php echo get_field('case_subtitle')?></em></h3>
         <ul>
+        <?php
+            $mod = 2;
+            $count = 1;
+        ?>
         <?php foreach($studies as $study): ?>
-            <li>
+            <li<?php if ( $count % $mod == 1 ) { echo ' class="clear"'; } ?>>
                 <h4><?php echo $study['client']; ?></h4>
                 <!-- TODO image if and link to client page -->
                 <?php if($study['image']) :?>
@@ -173,6 +184,7 @@ function show_features_prices_studies() {
                 <?php endif?>
                 <p><?php echo $study['blurb'] ?></p>
             </li>
+            <?php $count++; ?>
         <?php endforeach ?>
         </ul>
     </section>
@@ -202,9 +214,13 @@ function show_project_facets() {
     $facets = get_field('facet');
 ?>
     <section class="section-options">
+        <?php
+            $mod = clear_col($facets);
+            $count = 1;
+        ?>
         <ul class="<?php echo feature_cols($facets); ?>">
             <?php if(is_array($facets) && count($facets) > 0) : ?>
-                <?php foreach(get_field('facet') as $post_object): ?><li>
+            <?php foreach(get_field('facet') as $post_object): ?><li<?php if ( $count % $mod == 1 ) { echo ' class="clear"'; } ?>>
                     <?php if(get_field('headline', $post_object->ID)): ?>
                         <h3><?php echo get_field('headline', $post_object->ID); ?></h3>
                     <?php else :?>
@@ -220,6 +236,7 @@ function show_project_facets() {
                     <?php else :?>
                         <p><a class='btn' href="<?php echo get_permalink($post_object->ID); ?>">Find out more</a></p>
                     <?php endif ?>
+                    <?php $count++; ?>
                 </li><?php endforeach; ?>
             <?php endif; ?>
         </ul>

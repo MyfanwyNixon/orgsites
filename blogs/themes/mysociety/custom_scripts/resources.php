@@ -11,6 +11,18 @@
 			return 'four_up';
 		}
 	}
+
+  function clear_col($li) {
+		if(!(count($li) % 4)){
+			return 4;
+		}else if(!(count($li) % 3)){
+			return 3;
+		}else if(!(count($li) % 2)){
+			return 2;
+		}else{
+			return 4;
+		}
+  }
 	
 	function feature_cols($li) {
 		if(!(count($li) % 3)){

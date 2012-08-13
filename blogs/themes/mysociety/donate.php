@@ -12,7 +12,11 @@ Template Name: Donate
 				<header>
 					<h2><?php the_title(); ?></h2>
 				</header>
-				<p>To support the work of mySociety, you can make a donation to UK Citizens Online Democracy, mySociety’s parent charity (registered number 1076346). If you love mySociety and its sites with such unbridled passion that you don’t need any actual persuading to donate, then please just go ahead and let rip (fill in the form below).</p>
+
+            <?php if (have_posts()) : while (have_posts()) : the_post() ?>
+                <?php global $more; $more = 0; the_content( '', '', false );?>
+            <?php endwhile; endif;?>
+
 				<div class='donation'>
 				<h3 >Set up a regular monthly payment via PayPal</h3>
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -123,23 +127,9 @@ Template Name: Donate
 						<input class="btn" type="submit" value="Donate"></p>
 					</form>
 				</div>
-			</article>
 			
-			<article class='article'>
-				<h3 class="d"><a name="giftaid" id="giftaid"></a>Are you from the UK? Gift Aid it!</h3>
-				<p>
-				To increase the value your donations at no extra cost to yourself,
-				if you are a UK tax payer, please select the appropriate option.
-				You must pay an amount of Income
-				Tax and/or Capital Gains Tax at least equal to the tax that we'll
-				reclaim on your donations (currently 25p for each &pound;1 you give).
-				</p>
-			</article>
-			
-				
-			<article class="article">
 				<?php if (have_posts()) : while (have_posts()) : the_post() ?>
-						<?php the_content();?>
+						<?php the_content( '', true, '' );?>
 				<?php endwhile; endif;?>
 			</article>
 	</div>

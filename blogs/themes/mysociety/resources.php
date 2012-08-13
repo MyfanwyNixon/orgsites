@@ -35,7 +35,14 @@
     <h3>Other resources:</h3>
     <ul class="linked_list">
     <?php foreach ($std_resources as $resource) { ?>
-        <li><a class="link-<?=$resource['type']?>" href="<?=$resource['url']?>"><?=$resource['text'] ?></a></li>
+    <?php
+        $url = $resource['url'];
+        /* rough check to do the right thing with resources */
+        if ( is_email($url) && strpos($url, 'mailto:') === FALSE ) {
+            $url = "mailto:$url";
+        }
+    ?>
+        <li><a class="link-<?=$resource['type']?>" href="<?=$url?>"><?=$resource['text'] ?></a></li>
     <?php } ?>
     </ul>
 </section>

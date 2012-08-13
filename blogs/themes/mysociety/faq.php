@@ -19,7 +19,7 @@ Template Name: FAQ
 			?>			
 
 			<!--Contents -->
-			<ul id='contents'>
+      <ul id='contents' class="contents">
 				<?php if(is_array($faqs) && count($faqs) > 0) : foreach($faqs as $faq) :?>
 					<!-- Write up some FAQs! -->
 					<li><a href="#q<?php echo $count?>"><?php printf($faq['question'])?></a></li>

@@ -1,6 +1,7 @@
 <?php 
 
 $body_id = 'moretravel';
+$mysoc_static_title = 'More travel-time maps and their uses';
 
 include "interactive_map.php";
 include "../../wp-blog-header.php";

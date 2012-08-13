@@ -1,4 +1,5 @@
 <?php 
+$mysoc_static_title = 'Travel-time Maps and their Uses';
 include "../../wp-blog-header.php";
 header('HTTP/1.0 200 OK');
 include "../../wp-content/themes/mysociety/header.php";

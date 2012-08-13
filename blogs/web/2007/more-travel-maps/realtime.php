@@ -1,6 +1,7 @@
 <?php 
 
 $body_id = 'moretravel';
+$mysoc_static_title = 'Real time travel maps';
 
 include "../../wp-blog-header.php";
 header('HTTP/1.0 200 OK');

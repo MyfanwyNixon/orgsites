@@ -1,6 +1,7 @@
 <?php 
 
 $body_id = 'moretravel';
+$mysoc_static_title = 'Travel time and house price maps';
 
 include "interactive_map.php";
 include "../../wp-blog-header.php";

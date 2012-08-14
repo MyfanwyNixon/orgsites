@@ -13,6 +13,7 @@
 		</div>
 		
 	</section>
+  <p class="charity_number"><a href="/privacy">Privacy and cookies</a></p>
 	<p class="charity_number"><strong>mySociety</strong> limited (<strong>05798215</strong>) is a project of <strong>UK Citizens Online Democracy</strong> (<abbr title="UK Citizens Online Democracy">UKCOD</abbr>) a registered charity in England and Wales, charity number <strong>1076346</strong>, company number <strong>03277032</strong>.</p>
 </footer>
 

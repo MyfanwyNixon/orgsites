@@ -127,6 +127,24 @@ Template Name: Donate
 						<input class="btn" type="submit" value="Donate"></p>
 					</form>
 				</div>
+
+        <div class="donation">
+          <h3>Donate by BACS or set up a regular donation via Standing Order</h3>
+          <form action="https://secure.mysociety.org/donate/details" method="post">
+          <p>We'll collect your name and address, and then give you our BACS details or let you download a standing order form.</p>
+
+          <p>I want all donations I make to UK Citizens Online Democracy from this date until further notice to be Gift Aid donations:<br>
+          <input type="radio" id="giftaid_yes_o" name="giftaid" value="Yes">
+          <label for="giftaid_yes_o">Yes</label>
+          <input type="radio" id="giftaid_no_o" name="giftaid" value="No" checked>
+          <label for="giftaid_no_o">No</label>
+
+          (<a href="#giftaid">?</a>)</p>
+
+          <p>
+          <input class="btn" type="submit" value="Donate"></p>
+          </form>
+        </div>
 			
 				<?php if (have_posts()) : while (have_posts()) : the_post() ?>
 						<?php the_content( '', true, '' );?>

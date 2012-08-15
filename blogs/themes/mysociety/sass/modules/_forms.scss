@@ -4,4 +4,7 @@
         width: 12em;
         display: inline-block;
     }
+    .required, .errortext {
+        color: red;
+    }
 }

@@ -1,0 +1,39 @@
+To create a fresh deploy configure the vhost and the database.
+
+deploy using the normal 'mysociety vhost blogs.mysociety.org' command
+
+go to http://blogs.mysociety.org/wp-admin/install.php and fill in the needed details
+
+Go to the login page, will most likely crash.
+
+Edit the file '/data/vhost/blogs.mysociety.org/orgsites/blogs/web/wp-config.php' and comment out the whole block of defines after the comment 'start using multisites'.
+
+Go to http://blogs.mysociety.org/wp-admin/ and log in
+
+In the wp-config.php file uncomment the "define( 'WP_ALLOW_MULTISITE', true );" line.
+
+Refresh the page http://blogs.mysociety.org/wp-admin/
+
+On the left menu of options select 'Tools' -> 'Network Setup'
+
+Select the 'Sub-directories' option put something like 'mySociety Blog Network' in the 'Network Title' box.
+
+Click install.
+
+Now in the wp-config.php file uncomment the rest of those lines.
+
+Go to http://blogs.mysociety.org/wp-login.php to login again.
+
+In the top left of the admin screen you will now see a link called 'My Sites'.
+
+Go to 'My Sites' -> 'Network Admin' -> 'Dashboard'
+
+Go 'Plugins' -> 'Add New'
+
+Search for 'MU Domain Mapping'. Find the 'WordPress MU Domain Mapping' plugin (version 0.5.4.2 at time of writing) and click 'Install Now'.
+
+Once installed click on 'Network Activate'.
+
+The activation of the multisite will have made changes to the '.htaccess' file in web. Use 'git status' to find it and 'git checkout' to restore it, otherwise future deployments will get blocked.
+
+All done :)

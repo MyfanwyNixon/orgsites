@@ -1,0 +1,73 @@
+.people{
+    @include grid-container;
+    @extend .clearfix;
+    @extend .section-options;
+    
+    margin-bottom: $gutter*2;
+    
+    h2{
+        padding: 0 $gutter/4;
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+    p{
+        @include grid-2_of_3;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+     &>ul{
+        margin-top: 2em;
+         li{
+            display: block;
+            margin-bottom: $gutter;
+            padding-bottom: 0;
+            height: 13.75em;
+            a{
+                text-decoration: none;
+                div.label{
+                    display: block;
+                    margin-top: 10em;
+                    margin-bottom: -13em;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    line-height: 1;
+                    height: 3em;
+                    position: absolute;
+                    padding: 0.3em 0.625em;
+                    @include transition(opacity 1s ease-out);
+                    strong.name{
+                         display: block;
+                         font-size: 1.125em;
+                         color: #333333;
+                         text-decoration: none;
+                     }
+                     span.jobtitle{
+                         color: #666666;
+                         text-decoration: none;
+                     }
+                 }
+                
+            }
+            
+         }
+         
+         &.fade{
+             li{
+                a{
+                    div.label{
+                        opacity: 0;
+                    }
+                    &:hover{
+                        div.label{
+                            opacity: 1;
+                            @include transition(none);
+                        }
+                    }
+                }
+             }
+         }
+         
+     }
+    
+}
+

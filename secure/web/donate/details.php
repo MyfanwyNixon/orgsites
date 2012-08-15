@@ -104,7 +104,7 @@ function donor_form($donor, $errors = array()){
     $ret .= "</fieldset>";
     $ret .= "<input type=\"hidden\" name=\"giftaid\" id=\"giftaid\" value=" . $donor['giftaid'] . ">";
     $ret .= '<input type="hidden" name="donor_submit" value="true">';
-    $ret .= "<p align=\"right\"><input type=\"submit\" value=\"submit\"></p>";
+    $ret .= "<p><input class=\"btn\" type=\"submit\" value=\"submit\"></p>";
     $ret .= "</form>";
 
     return $ret; 

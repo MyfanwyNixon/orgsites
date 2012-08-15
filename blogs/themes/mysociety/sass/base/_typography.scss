@@ -1,0 +1,127 @@
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+body{
+    line-height: 1.875em;
+    font-family: "myriad-pro", "Myriad Pro", 'MyriadPro-Regular', 'Myriad Pro Regular', Frutiger, 'Ubuntu', DroidSans, 'Droid Sans', 'DroidSans', sans-serif;
+}
+
+
+// Emphasis
+
+abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+em, i{
+    font-style: italic;
+}
+
+
+// Headings
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+    font-style: normal;
+    text-rendering: optimizelegibility;
+    
+    em{
+        font-weight: 400;
+        color: #999;
+        display: block;
+        font-size: 0.45em;
+        line-height: 1;
+        @media (min-width : 60em) {
+            font-size: 0.65em;
+        }
+        @media (min-width : 60em) {
+            display: inline;
+            padding-left: 0.5em;
+        }
+        
+    }
+}
+html.no-js{
+    h1, h2, h3, h4, h5, h6
+    {
+        font-family: 'UbuntuCondensed-Regular', 'Ubuntu Condensed', DroidSans, 'Droid Sans', 'DroidSans', sans-serif;
+    }
+}
+
+h1{
+    line-height: 2;
+}
+h2, h3{
+    line-height: 1.5em;
+}
+h4, h5, h6 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+
+// Code Block
+
+code{
+    
+    font-family: 'Menlo Regular', monospace;
+    
+    
+    div{
+        text-align:left;
+        color:#e6e1dc;
+        background-color:#2b2b2b;
+        padding: $gutter;
+        overflow:auto;
+        font-size:small;
+        font-family:'Menlo Regular', monospace;
+    }
+    
+    span{
+        font-family: 'Menlo Regular', monospace;
+    }
+}
+
+
+// Ins & Del
+ins{
+    background-color: #d6f1da;
+    padding: 0 0.5em;
+    text-decoration: none;
+}
+del{
+    background-color: rgba(222,117,117,0.3);
+    color: rgba(96,20,20,0.5);
+    text-decoration: line-through;
+    padding: 0 0.5em;
+}
+
+
+// Blockquotes
+
+blockquote{
+    
+    @include grid-2-of-3;
+    max-width: 70%;
+    border-left: #ddd solid 0.5em;
+    padding: $gutter/2 $gutter/2 $gutter/2 0.5em;
+    margin-bottom: $gutter/2;
+    
+    p{
+        font-size: 1.5em;
+        font-style: italic;
+        margin: 0;
+    }
+    
+    cite{
+        font-style: normal;
+        color: gray;
+    }
+    
+}

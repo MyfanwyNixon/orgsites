@@ -1,0 +1,1255 @@
+@import "_colours";
+@import "_mixins";
+@import "compass";
+
+
+/*
+GENERAL NOTES
+
+Image replacement:
+  This project used the teqniue employed by H5BP and the Compass framework
+  See http://nicolasgallagher.com/another-css-image-replacement-technique/
+  It will generally follow this pattern:
+  .selector {
+    font: 0/0 a;
+    color: transparent;
+  }
+  .ie6 .selector {
+    text-indent:-999999px;
+  }
+
+  We then apply the more traditional text-indent method to IE6 as otherwise
+  you are left with a small line over the image.
+
+*/
+
+
+/*** TYPOGRAPHY ***/
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_300-webfont.eot');
+  src: url('../fonts/MuseoSans_300-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_300-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_300-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_300-webfont.svg#MuseoSans300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_300_Italic-webfont.eot');
+  src: url('../fonts/MuseoSans_300_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_300_Italic-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_300_Italic-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_300_Italic-webfont.svg#MuseoSans300Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_500-webfont.eot');
+  src: url('../fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_500-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_500-webfont.svg#MuseoSans500') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('../fonts/MuseoSans_500_Italic-webfont.eot');
+  src: url('../fonts/MuseoSans_500_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MuseoSans_500_Italic-webfont.woff') format('woff'),
+       url('../fonts/MuseoSans_500_Italic-webfont.ttf') format('truetype'),
+       url('../fonts/MuseoSans_500_Italic-webfont.svg#MuseoSans500Italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Museo300-display';
+  src: url('../fonts/Museo300-Regular-webfont.eot');
+  src: url('../fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Museo300-Regular-webfont.woff') format('woff'),
+       url('../fonts/Museo300-Regular-webfont.ttf') format('truetype'),
+       url('../fonts/Museo300-Regular-webfont.svg#Museo300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Opera has a bug (from around 10.5 upwards to current 11.6) with showing the
+ * table caption *at all* if the header is set to a font-face :( */
+noindex:-o-prefocus, #site-header {
+  font-family: sans-serif;
+}
+
+
+body {
+  font-family: 'MuseoSans', 'Helvetica', 'Arial', sans-serif;
+  font-size:1em;
+  line-height:1.5em;
+  color:#222222;
+}
+
+::-moz-selection { background: #555555; color: #FFFFFF; text-shadow: none; }
+::selection { background: #555555; color: #FFFFFF; text-shadow: none; }
+
+p {
+  font-size: 1em;
+  font-weight: normal;
+  margin:0 0 1em 0;
+  background:#ffffff url(../images/grid_24.gif) center repeat;
+}
+
+//NOTE: each time the font-size is reset to another em value
+//the line-height/margin/padding must be set as an em value
+//derived from the new font-size
+
+small{
+  font-family: 'helvetica', 'arial',sans-serif;
+  font-style: italic;
+  font-size: 0.8125em; //13px
+  line-height: 1.23076923076923em; //16px
+}
+
+h1 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 2em; //32px
+  line-height: 1.125em; //36px
+  margin-top: 1.5em; //48px
+  margin-bottom: 0.5em; //16px
+  font-weight: normal;
+  color: #555555;
+}
+
+h2 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.875em; //30px
+  line-height: 1.1em; //33px
+  margin-top: 0.53333333333333em; //16px
+  margin-bottom: 0.53333333333333em; //16px
+  font-weight: normal;
+  color: #AAAAAA;
+}
+
+h3 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.375em; //22px
+  line-height: 1.18181818181818em; //26px
+  margin-top: 0.72727272727273em; //16px
+  margin-bottom: 0.72727272727273em; //16px
+  font-weight: normal;
+  color: #555555;
+}
+
+h4 {
+  font-family:'Museo300-display', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.25em; //20px
+  line-height: 1.2em; //24px
+  margin-top: 1.2em; //24px
+  margin-bottom: 0.8em; //16px
+  font-weight: normal;
+  color: #000000;
+}
+
+/* LISTS */
+ul, ol {
+  font-size: 1em;
+  margin-bottom: 2em;  
+  margin-left: 2em;
+  padding:0;
+}
+
+li{
+  margin-bottom: 0.5em;
+}
+
+ul li{
+  list-style: square;
+}
+
+ol li {
+  list-style:decimal;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+  dt {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: bold;
+  }
+  dd {
+    font-weight: 1em;
+    line-height: 1.5em;
+    margin:0 0 1em 0;
+  }
+}
+
+ul.plain-list {
+  @include list-reset-soft;
+}
+
+blockquote {
+  p:before {
+    content: '“';
+  }
+  p:after {
+    content: '”';
+  }
+}
+
+pre {
+  font-family: monospace;
+}
+
+
+/* MISC TEXT*/
+p.meta {
+  color: #555555;
+}
+
+/* LINKS */
+a {
+  text-decoration:none;
+  color:#0BA7D1;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration:underline;
+    color:#0D7CCE;
+    outline: 0;
+  }
+}
+
+
+/* IMAGES */
+img {
+  height:auto;
+  max-width:100%;
+}
+
+
+/* FORMS */
+
+// Input placeholders: these need to be on separate lines as if the browser
+// can't understand a selector it will invalidate the whole line.
+::-webkit-input-placeholder {
+  color: #666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+:-moz-placeholder {
+  color:#666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+:-ms-placeholder {
+  color:#666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+//this only gets used when the browser doesn't support @placeholder and js adds it
+.placeholder {
+  color:#666666;
+  font: {
+    style:italic;
+    size:0.9375em;
+  }
+}
+
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  font-size: 1em;
+  padding:0.25em;
+  border: 0.125em solid #888888;
+  @include border-radius(0.25em);
+  &:focus {
+    border-color:#333333;
+  }
+}
+
+textarea {
+  font-family: 'helvetica', 'arial', sans-serif;
+  line-height: 1.5em;
+}
+
+input {
+  line-height: 1em;
+}
+
+label{
+  display: block;
+  margin-top: 1.25em;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+  &.inline{
+    display: inline;
+    padding: 0 2em 0 1em;
+    font-weight: normal;
+  }
+}
+
+
+
+/* BUTTONS */
+
+.button,
+button,
+input.button,
+a.button {
+  @include button-reset;
+}
+
+//for some reason these properties need forcing
+.ie6, .ie7 {
+  a.button {
+    color:#ffffff;
+    text-decoration:none;
+    padding:0.6em 1.5em;//slight padding discrepency
+  }
+}
+
+
+//coloured buttons
+.pink_button   {@include button-reset($pink, $pink/1.1);}
+.purple_button {@include button-reset($purple, $purple/1.1);}
+.yellow_button {@include button-reset($yellow, $yellow/1.04, #333333);}
+.blue_button   {@include button-reset($blue, $blue/1.1);}
+.green_button  {@include button-reset($green, $green/1.04);}
+.orange_button {@include button-reset($orange, $orange/1.04);}
+.red_button    {@include button-reset($red, $red/1.2);}
+.grey_button   {@include button-reset;}
+.white_button  {@include button-reset(#ffffff, #f7f7f7, #333333);}
+//fallback for if the colour var doesn't happen in the php script
+._button {@include button-reset;}
+
+
+//green one with arrow
+a.examples-link {
+  @include button-reset(#0cb80c, #6E6F71, #ffffff, 0 0 0.25em 0.25em);
+  float:right;
+  margin:0 0 2em 0;
+  padding:0.5em 2.25em 0.5em 1em;
+  background: #0cb80c url('../images/sprite.png') right -100px no-repeat;
+  @include box-shadow(none);
+  @include background(
+    image-url('../images/sprite.png') right -100px no-repeat,
+    linear-gradient(#13d745, #0cb80c)          
+  );
+  &:hover {
+    background-image:url(../images/sprite.png);
+    background-repeat:no-repeat;
+    background-position:right -100px;
+  }
+  &.inactive {
+    margin-top:-2em;
+    background: #0cb80c url('../images/sprite.png') right -60px no-repeat;
+    @include background(
+      image-url('../images/sprite.png') right -60px no-repeat,
+      linear-gradient(#13d745, #0cb80c)          
+    );
+    @include border-radius(0);
+  }
+}
+
+//alerts and notices
+
+
+.alert {
+  padding: 0.75em 0.75em 0.75em 3em;
+  background: #FFDD4F url(../images/notice-alert.png) 10px center no-repeat;
+}
+
+.error {
+  padding: 0.75em 0.75em 0.75em 3em;
+  background: #FF5300 url(../images/notice-error.png) 10px center no-repeat;
+  color:#fff;
+}
+
+.confirm {
+  padding: 0.75em 0.75em 0.75em 3em;
+  margin: 0.25em 0;
+  background: #43C250 url(../images/notice-confirm.png) 0.9em center no-repeat;
+  color:#fff;
+}
+
+.slider_prev,
+.slider_next {
+  display:block;
+  cursor:pointer;
+  margin:0;
+  padding:0;
+  font:0/0 a;
+  color:transparent;
+  width:28px;
+  height:28px;
+  background: url(../images/sprite.png) 0 0 no-repeat;
+  @include box-shadow(none);
+}
+.slider_prev {
+  background: url(../images/sprite.png) -56px -307px no-repeat;
+  &:hover {
+    background: url(../images/sprite.png) -106px -307px no-repeat;
+  }
+}
+.slider_next {
+  background: url(../images/sprite.png) -56px -247px no-repeat;
+  &:hover {
+    background: url(../images/sprite.png) -106px -247px no-repeat;
+  }
+}
+.ie6 .slider_prev,
+.ie6 .slider_next {
+  text-indent:-999999em;
+}
+
+
+/* ICONS */
+.pound, .build, .github, .codeblog, .wikidocs, .bubble, .twitter, .example, .link, .download, .clients {
+  background-image:url(../images/icons_grey.png);
+  background-position:0 -3px;
+  background-repeat:no-repeat;
+  padding-left:50px;
+}
+.pound    {background-position: 0 -3px;}
+.build    {background-position: 0 -86px;}
+.github   {background-position: 0 -174px;}
+.codeblog {background-position: 0 -262px;}
+.wikidocs {background-position: 0 -356px;}
+.bubble   {background-position: 0 -448px;}
+.twitter  {background-position: 0 -558px;}
+.example  {background-position: 0 -672px;}
+.link     {background-position: 0 -784px;}
+.download {background-position: 0 -900px;}
+.clients {background-position: 0 -1028px;}
+//here we include all the alternate coloured images
+@include coloured_icons;
+
+
+/************************/
+/*** LAYOUT and STYLE ***/
+/************************/
+
+body {
+  background:#ffffff url(../images/grid_8.gif) center repeat fixed;
+}
+
+// Padding creates page margins on mobile
+.container{
+  width:100%;
+  padding: 0 1em;
+}
+
+/* HEADER */
+#site-header {
+  background:#ffffff;
+  height:4em;
+  @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+  .container {
+    padding:1em;
+    height:4em;
+    position:relative;
+    #site-logo {
+      display:block;
+      background:url(../images/sprite.png) 0 0 no-repeat;
+      width:122px;
+      height:25px;
+      font:0/0 a;
+      color:transparent;
+      margin-top:4px;
+    }
+    #skip-to-nav {
+      @include button-reset(#555555, #333333);
+      text-transform:uppercase;
+      font-size:0.8125em; //13px
+      padding:1em 2em;
+      position:absolute;
+      right:1.2308em; //16px
+      top:1em;
+    }
+  }
+}
+.ie6 #site-logo {
+  text-indent:-999999px;
+}
+
+/* FOOTER */
+#banners {
+  margin-top:2em;
+  text-align:center;
+  a.hire-us-banner,
+  a.donate-banner {
+    display:block;
+    img {@include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);}
+    &:hover {
+      img {@include box-shadow(rgba(0, 0, 0, 0.75) 0 0 10px);}
+    }
+  }
+  a.donate-banner {
+    margin-top:2em;
+  }
+}
+#site-footer {
+  clear:both;
+  margin-top:2em;
+  background:#ffffff;
+  padding:1em 0;
+  small {
+    font-style:normal;
+  }
+}
+
+/* MENU */
+#nav-wrapper {
+  .container {
+    header {
+      @extend .full-width;
+      background:#FFFFFF;
+      padding:1em;
+      height:4em;
+      position:relative;
+      @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+      #skip-to-top {
+        @include button-reset(#555555, #333333);
+        text-transform:uppercase;
+        font-size:0.8125em; //13px
+        padding:1em 2em;
+        position:absolute;
+        right:1.2308em; //16px
+        top:1em;
+      }
+    }
+    ul {
+      @include list-reset-soft;
+      @extend .full-width;
+      li {
+        a {
+          display:block;
+          font-size:1.375em; //22px
+          padding:0.7272em; //16px
+          color:#555555;
+          border-bottom:1px solid #ffffff;
+          &:hover {
+            text-decoration:none;
+            background:#dddddd;
+          }
+        }
+        &:last-child a {
+          border-bottom:none;
+        }
+      }
+      &#secondary-menu li a {
+        background:#eeeeee;
+        &:hover {
+          background:#dddddd;
+        }
+      }
+      &#primary-menu li a {
+        background:#f6f6f6;
+        border-color:1px solid #eeeeee;
+        &:hover {
+          background:#dddddd;
+        }
+      }
+    }
+    #site-search {
+      @extend .full-width;
+      background:#FFFFFF;
+      padding:1em;
+      height:4em;
+      @include box-shadow(rgba(0, 0, 0, 0.25) 0 0 10px);
+      input {
+        width:80%;
+        float:left;
+        color:#555555;
+        border-right:0;
+        border-color:#333333;
+        @include border-radius(0.25em 0 0 0.25em);
+        &:focus {
+          border-color:#000000;
+        }
+      }
+      button {
+        width:20%;
+        float:left;
+        padding:0.45em 1.5em;
+        @include border-radius(0 0.25em 0.25em 0);
+        @include box-shadow(none);
+      }
+    }
+  }
+}
+
+/* MAIN CONTENT */
+.entry-header {
+  h2 {
+    font-family:'Museosans', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    a {
+      color:#333333;
+    }
+  }
+  div.entry-date{
+    width: 55%;
+    float:left;
+    color:#888888;
+    font-size: 0.75em;
+    font-style: italic;
+    margin-bottom: 1.3333em
+  }    
+  div.entry-categories{
+    float:right;
+    width: 35%;
+    text-align: right;
+    color:#888888;
+    font-size: 0.75em;
+    margin-bottom: 1.3333em
+  }
+}
+article.post .entry-header,
+article.ms_faq .entry-header {
+  overflow: hidden;
+}
+.entry-content {
+  .wp-caption-text {
+    font-size: 0.75em;
+    color:#888888;
+    margin-top: 0.5em;
+    margin-bottom: 1em
+  }
+}
+.entry-meta {
+  border-top: 1px solid #cccccc;
+  padding-top: 0.5em;
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 4em;
+  .entry-tags {
+    width: 70%;
+    color: #888888;
+    font-size: 0.75em;
+    font-style: italic;
+    float: left;
+    a{
+      background:#eeeeee;
+      padding:0.25em 0.5em;
+      color:#888888;
+      @include border-radius(0.25em);
+      margin-right: 0.5em;
+      &:hover {
+        text-decoration:none;
+        background:#aaaaaa;
+        color:#ffffff;
+      }
+    }
+    .sep {
+      display: none;
+    }
+  }
+  .blue_button{
+    float: right;
+    padding: 0.25em 0.5em;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    @include box-shadow(0px 0px 0px 0px #ffffff);
+
+  }
+}
+
+/* SIDE BAR */
+.sidebar {
+  margin-top:3em;
+  margin-bottom: 3em;
+  h3 {
+    text-transform: lowercase;
+    font-size: 1.125em;
+    margin-bottom: 0;
+  }
+  ul.sidebar-list {
+    @include list-reset-soft;
+  }  
+
+}
+
+/* GENERAL ELEMENTS */
+.block-list {
+  @include list-reset;
+  // make rhs stick to edge
+  margin:0 -1em 0 0;
+  li {
+    width:18em; //288px - this is so the combined end size is 20em (320px)
+    // provide rhs margin here on each li,
+    // that way we will always rhs margin even when 2/3 col
+    margin:0 1em 1em 0;
+    // force the total height to items don't get stuck under each other
+    height:14em; //224px
+    h2, p {
+      clear:both;
+    }
+    .thumb {
+      margin-bottom:0.5em;
+    }
+  }
+}
+
+.featured-gallery {
+  padding:1em;
+  background:#f6f6f6;
+  text-align:center;
+  position:relative;
+  @extend .full-width;
+  ul {
+    @include list-reset-soft;
+    li {
+      display:none;
+      &.first {
+        display:block;
+      }
+    }
+  }
+  nav {
+    margin:1em 0 0 0;
+    overflow:hidden;
+    .slider_prev {
+      position: absolute;
+      left:16px;
+      bottom:16px;
+    }
+    .slider_next {
+      position: absolute;
+      right:16px;
+      bottom:16px;
+    }
+    span {
+      em {
+        color:#b7b7b7;
+        margin:0 0.125em;
+        &.on {
+          color:$grey;
+        }
+      }
+    }
+  }
+}
+
+.resource-list {
+  @include list-reset-soft;
+  li {
+    border-bottom:0.125em solid #cccccc; //2px
+    &:last-child {
+      border-bottom:none;
+    }
+    a {
+      font-size:1.5em; //24px
+      display:block;
+      color:#555555;
+      //fix the icon position
+      padding-top:0.33333333333333em; //8px
+      padding-bottom:0.33333333333333em; //8px
+      //make the rest of the spacing with margin so the icons don't go too high
+      margin:0.33333333333333em 0; //8px
+      &:hover {
+        text-decoration:none;
+      }
+    }
+  }
+}
+
+.tweets {
+  @include list-reset-soft;
+  margin-bottom:1em;
+  li {
+    padding:0.5em 0;
+    //hide all but first li (mob only)
+    display:none;
+    &:first-child {
+      display:block;
+    }
+    span {
+      display:block;
+      font-size:0.8125em; //13px
+      text: {
+        transform:uppercase;
+        align:right;
+      }
+      color:#AAAAAA;
+    }
+    small {
+      display:block;
+      font-style:normal;
+      a {
+
+      }
+    }
+  }
+}
+
+.twitter_box {
+  border-bottom:0.25em solid #CFCFCF;
+  margin-bottom:1em;
+  >h2 {
+    float:left;
+  }
+  >a {
+    float:right;
+    margin-top:1em;
+  }
+  ul {
+    clear:both;
+  }
+}
+
+.news-list {
+  @include list-reset-soft;
+  li {
+    margin-bottom:0.5em;
+    padding-bottom:0.5em;
+    h3 {
+      margin:0;
+      a {
+        color:#333333;
+      }
+    }
+    .entry-date {
+      color:#888888;
+      font-style:normal;
+    }
+  }
+}
+
+.news_box {
+  border-bottom:0.25em solid #CFCFCF; //3px
+  margin-bottom:1em;
+  padding-bottom:1em;
+}
+
+#searchform {
+  #searchform-search {
+    width:75%;
+    float:left;
+  }
+  button {
+    width:20%;
+    float:right;
+  }
+}
+
+#pagination {
+  width:100%;
+  overflow:hidden;
+  margin:1em 0 0 0;
+  a {
+    @include button-reset;
+    text-transform:uppercase;
+    background-repeat:no-repeat;
+    font-size:0.875em; //14px
+  }
+  .nav-previous {
+    float:left;
+    a {
+      background-image:url(../images/sprite.png);
+      background-position:0 -412px;
+      padding-left:2.5em;
+    }
+  }
+  .nav-next {
+    float:right;
+    a {
+      background-image:url(../images/sprite.png);
+      background-position:right -372px;
+      padding-right:2.5em;
+    }
+  }
+}
+
+//2 col
+#blog-sidebar {
+  overflow:hidden;
+  section {
+    width:45%;
+    float:left;
+    margin-right:5%;
+    &:nth-child(even) {
+      margin-right:0;
+      margin-left:5%;
+    }
+    &:nth-child(odd) {
+      clear:left;
+    }
+    &.sidebar-mailing-list {
+      clear:both;
+      margin:2em 0 0 0;
+      width:100%;
+    }
+  }
+}
+
+#mc-embedded-subscribe-form {
+  background:#CFCFCF;
+  padding:1em;
+  overflow:hidden;
+  h3 {
+    margin:0 0 0.5em 0;
+    text-transform:none;
+  }
+  input {
+    width:75%;
+    float:left;
+  }
+  button {
+    width:23%;
+    float:right;
+    padding:0.5em;
+  }
+}
+
+/* PAGE SPECIFIC */
+
+//homepage
+article.homepage {
+  .entry-header {
+    .banner {
+      margin:1em 0;
+      text-align:center;
+    }
+    p.entry-intro {
+      font-size:1.375em; //22px
+      line-height:1.27272727272727em; //28px
+      color:#333333;
+      text-align:center;
+    }
+  }
+  .twitter_box {
+    margin-bottom:2em;
+  }
+  .project_product-section {
+    .project_product-section-inner {
+      ul.block-list {
+        width:100%;
+        li {
+          width:100%;
+          display:block;
+          height:auto;
+          padding:0;
+          margin:0;
+          border-bottom:0.125em solid #cccccc; //2px
+          .thumb {
+            display:none;
+          }
+          h3 {
+            margin:0;
+            a {
+              width:100%;
+              padding:1em 0;
+            }
+          }
+        }
+        &:last-child li:last-child {
+          border-bottom:none;
+        }
+      }
+    }
+  }
+  #our-clients {
+    text-align:center;
+    h2 {
+      text-align:left;
+    }
+    img {
+
+    }
+  }
+}
+
+//comments
+#comments {
+  h2#comments-title {
+    font: {
+      size: 1.5em;
+      weight: bold;
+      family:'Museosans', 'Helvetica', 'Arial', sans-serif;
+    }
+    margin-bottom: 0.25em;
+    color:#333333;
+  }
+  ol.commentlist {
+    padding: 0;
+    margin: 0;
+    p{
+      background: none;
+      font-size: 0.8125em;
+      padding-right: 0.5em
+    }
+    ul.children {
+      margin: 0;
+    }
+    li{
+      background: #fff;
+      @include box-shadow(0px 0px 0.5em 0px #cccccc);
+      padding: 0.5em 0em 0em 48px;
+      list-style: none;
+      margin: 0 0 0.5em 0;
+      header {
+        border-bottom: 1px solid #ddd;
+        margin-right: 0.75em;
+        .avatar {
+          width: 32px;
+          height: 32px;
+          position: absolute;
+          margin-left: -40px;
+          margin-top: 0px;
+        }
+        .comment-awaiting-moderation {
+          background: #FFDD4F;
+          padding: 0.25em 0.5em;
+          font-size: 0.7em;
+          font-family: 'arial', sans-serif;
+          text-transform: uppercase;
+          line-height: 1.428em;
+          text-align: center;
+        }        
+      }
+      ul.children li {
+        padding: 1em 0em 0em 48px;
+        margin-left: -38px;
+        .avatar {
+          position: absolute;
+          margin-left: -38px;
+          margin-top: 0px;
+        }
+      }
+    }
+    div.reply {
+      height: 2em;
+      a.comment-reply-link,
+      a.comment-permalink {
+        @include button-reset($background: #aaaaaa, $background2: #000000);
+        @include box-shadow(0px 0px);
+        font-size: 0.7em;
+        float: right;
+        text-transform: uppercase;
+        font-family: 'arial', sans-serif;
+        font-weight: bold;
+        padding: 0.25em 0.5em;
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+#commentform {
+  background: #f6f6f6;
+  border: 0.16em solid #ddd;
+  padding: 1em 1em 0 1em;
+  overflow: hidden;
+  p {
+    background: none;
+  }
+  #comment_submit {
+    @include button-reset ($green);
+    margin: 1em 0;
+    float: right;
+  }
+}
+
+
+//just for /products (products.php)
+.product-section-header {
+  clear:both;
+  h2 {// font base size is 30px
+    //go full width
+    margin-left:-0.53333333333333em; //16px
+    margin-right:-0.53333333333333em; //16px
+    padding:0.26666666666667em 0.53333333333333em; // 8px 16px
+    border-bottom:0.1em solid #AAAAAA; //3px
+  }
+  p {
+    margin-top:1em;
+  }
+}
+.product-intros {
+  clear:both;
+  // make rhs stick to edge
+  margin:0 -1em 0 0;
+  div {
+    float:left;
+    width: 18em; //288px
+    margin:0 1em 1em 0;
+  }
+}
+.product-examples {
+  clear:both;
+  @extend .full-width;
+  background:#F7F7F7;
+  overflow:hidden;
+  padding:1em 0 1em 1em;
+  div {
+    width:18em; //288px
+    // prob need's a height?
+    float:left;
+    margin:0 1em 0 0;
+    a.thumb img {
+      border: #FFFFFF solid 0.25em;
+      @include box-shadow(0px 0px 10px 0px #dddddd);
+    }
+    a:hover.thumb img {
+      @include box-shadow(0px 0px 10px 0px #AAAAAA);
+    }
+    h3 {
+      margin-bottom:0;
+    }
+    p {
+      background:none;
+    }
+  }
+}
+
+//project/product entries
+.project_product-section {
+  background:$grey;
+  padding:1em;
+  margin:1em 0;
+  @include box-shadow(rgba(0, 0, 0, 0.5) 0 0 10px);
+  >h2 {
+    margin-top:0;
+    color:#ffffff;
+    @extend .white_icon;
+  }
+  .project_product-section-inner {
+    background:#ffffff url(../images/grid_12.gif) center repeat;
+    padding:1em;
+    @include box-shadow(inset rgba(0, 0, 0, 0.5) 0 0 10px);
+    p {
+      background:none;
+    }
+    .resource-list {
+
+    }
+  }
+}
+
+//author pages
+#author-info {
+  background:#CFCFCF;
+  overflow:hidden;
+  margin:1em 0 2em 0;
+  padding:1em;
+  #author-avatar {
+    float:left;
+    margin-right:1em;
+  }
+  #author-description {
+    float:left;
+    h2 {
+      font-size:1.5em;
+      color:#333333;
+      margin-top:0;
+    }
+  }
+}
+
+
+/* COLOUR CLASSES */
+
+//backgrounds
+.pink_back   {background-color:$pink !important;}
+.purple_back {background-color:$purple !important;}
+.yellow_back {background-color:$yellow !important;}
+.blue_back   {background-color:$blue !important;}
+.green_back  {background-color:$green !important;}
+.orange_back {background-color:$orange !important;}
+.red_back    {background-color:$red !important;}
+.grey_back   {background-color:$grey !important;}
+.white_back  {background-color:$white !important;}
+
+//texts
+.pink_text   {color:$pink !important;}
+.purple_text {color:$purple !important;}
+.yellow_text {color:$yellow !important;}
+.blue_text   {color:$blue !important;}
+.green_text  {color:$green !important;}
+.orange_text {color:$orange !important;}
+.red_text    {color:$red !important;}
+.grey_text   {color:$grey !important;}
+.white_text  {color:$white !important;}
+
+//fallbacks for if no colour var happens in the php script
+._back       {background-color:$grey;}
+._text       {color:$grey;}
+
+
+
+/* HELPERS */
+
+// Use .full-width to reverse .container margins
+// It is at the end so it overrides properly when @extended
+.full-width {
+  margin:0 -1em;
+}
+
+// hide on mobile, show on desktop
+.desk-only,
+// hide anything with this class if js is working
+.js .hidden-js,
+// hide anything with this class if js is NOT working
+.no-js .hidden-nojs {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+//swipe.js required styles
+.swipe-active {
+  overflow:hidden;
+  position:relative;
+}
+.swipe-active > * {
+  display:block;
+  visibility:hidden;
+  position:absolute;
+  top:0;
+  left:0;
+}

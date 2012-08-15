@@ -1,0 +1,26 @@
+article.error{
+    padding: 2em 0;
+}
+header.error{
+    @extend header.section_intro;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 2em auto;
+    @include border-radius(1em);
+    
+    hgroup{     
+        h2{
+            margin: 0;
+        }
+    }
+    
+    .images{
+        width:45%;
+        float: left;
+        text-align: right;
+        //width: 200px;
+    }
+    .description{
+        clear: none;
+    }
+}

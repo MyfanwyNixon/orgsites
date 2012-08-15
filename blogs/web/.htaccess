@@ -1,0 +1,31 @@
+
+# htaccess file for a multisite setup
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+# uploaded files
+RewriteRule ^([_0-9a-zA-Z-]+/)?files/(.+) wp-includes/ms-files.php?file=$2 [L]
+
+# add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule  ^[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*) $1 [L]
+RewriteRule  ^[_0-9a-zA-Z-]+/(.*\.php)$ $1 [L]
+RewriteRule . index.php [L]
+
+Redirect /projects/hearfromyourmp/ http://www.mysociety.org/hearfromyourmp/
+RedirectPermanent /theyworkforyou-press-use http://www.mysociety.org/press-area/theyworkforyou
+RedirectPermanent /fixmystreet-press-use http://www.mysociety.org/press-area/fixmystreet
+RedirectPermanent /fixmytransport-press-use http://www.mysociety.org/press-area/fixmytransport
+RedirectPermanent /hearfromyourmp-press-use http://www.mysociety.org/press-area/hearfromyourmp
+RedirectPermanent /whatdotheyknow-press-use http://www.mysociety.org/press-area/whatdotheyknow
+RedirectPermanent /pdfs/hearfromyourcouncillor.pdf http://www.mysociety.org/projects/hearfromyourmp/
+RedirectPermanent /pdfs/writetothem.pdf http://www.mysociety.org/projects/writetothem/
+RedirectPermanent /moin.cgi/TomSteinberg http://www.mysociety.org/about-tom-steinberg/
+RedirectPermanent /more-projects http://www.mysociety.org/
+RedirectPermanent /projects/no10-petitions-website/ http://www.mysociety.org/projects/epetitions/

@@ -1,0 +1,130 @@
+.product-options-pricing
+{
+    @include grid-container();
+    @extend .clearfix;
+    h3{
+        
+        font-size:2em;
+        margin: 0 $gutter/4 0 $gutter/4;
+    }
+    h4{
+        font-size: 1.5em;
+        margin-bottom:0;
+    }
+    &>ul{
+        display:block;
+        list-style:none;
+        padding:0;
+        max-width:100%;
+        width: 60em;
+        margin: 0 auto;
+        vertical-align: top;
+    }
+    
+    &>ul>li{
+        display: inline-block;
+        vertical-align: top;
+        width: 20em;
+        padding: 0.625em;
+        
+        img{
+            max-width:100%;
+        }
+    }
+
+    .footnote{ color: #999; }
+    
+    h4{
+        font-size: 1em;
+        color: #555;
+    }
+    ul{
+        &.two_up li{
+            @include grid-1-of-2;
+            &:nth-child(odd){
+                clear: left;
+            }
+        }
+        &.three_up li{
+            @include grid-1-of-3;
+            &:nth-child(3n+1){
+                clear: left;
+            }
+        }
+        &.four_up li{
+            @include grid-1-of-4;
+            &:nth-child(4n+1){
+                clear: left;
+            }
+            .btn{
+                font-size: 0.7em;
+            }
+        }
+        
+        li{
+            
+            color: #aaa;
+            background-color: #fff;
+            @media (min-width : 60em) {
+                -webkit-border-radius: 0.625em;
+                   -moz-border-radius: 0.625em;
+                        border-radius: 0.625em;
+                border: 1px solid #ccc;
+                border-bottom-color: #bbb;
+            }
+            padding:0;
+            
+            p{
+                color: #666666;
+                padding: 0 0.625em;
+            }
+            
+            h4{
+                padding: 0.625em;
+                margin-top: 0.5em;
+                background-color: #ffd000;
+                background-color: #ddd;
+                
+                em{
+                    display:block;
+                    font-weight:normal;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    &>ul.product-options-pricing-extras{
+        @include grid-container();
+        li{
+            display: block;
+//                  border:none;
+            width: 100%;
+            padding: 0 0.625em;
+            background-color: #fff;
+            margin-bottom: 0.5em;
+            -webkit-border-radius: 0.625em;
+                  -moz-border-radius: 0.625em;
+                       border-radius: 0.625em;
+            margin-bottom: 1.25em;
+            
+            h4{
+                display:inline;
+                background-color: transparent;
+                @media (min-width : 60em) {
+                    padding: 0.625em;
+                    background-color: #ddd;
+                    border: 1px solid #bbb;
+                    -webkit-border-radius: 3px;
+                        -moz-border-radius: 3px;
+                             border-radius: 3px;
+                }
+                em{ display: inline; }
+            }
+            p{
+                display:inline;
+                //padding-left:2em;
+                padding: 0.625em;
+            }
+        }
+    }
+}

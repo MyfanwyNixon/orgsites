@@ -1,0 +1,72 @@
+header.section_intro{
+    @include grid-container;
+    @extend .clearfix;
+    padding: 2em 0 0 0;
+    
+    .images{
+        @include grid-1-of-2;
+        margin-top: 2em;
+        
+        .council-options{
+            text-align: center;
+            line-height: 1;
+            margin-top: 0;
+            @media (min-width : 60em) {
+                line-height: inherit;
+            }
+            a{
+                display: block;
+                @media (min-width : 60em) {
+                    display: inline;
+                }
+            }
+        }
+    }
+    
+    .description
+    {
+        padding: $gutter/2;
+        @media (min-width : 60em) {
+            @include grid-1-of-2;
+                float:right;
+                clear:right;
+        }
+        
+    }
+    //p:last-child{ padding-bottom: 4em; }
+    
+    hgroup{
+        display: block;
+        margin: 0 $gutter/2;
+        
+        @media (min-width : 60em) {
+            @include grid-1-of-2;
+            float: right;
+        }
+        
+// Main Title
+        h2{
+            font-size: 2.25em;
+            margin: 0;
+            @media (min-width : 60em) {
+                margin: 1em 0 0 0;
+            }
+            padding:0;
+            color: #4D4D4D;
+
+            strong{
+                font-size: 1.3333em;
+            }
+        }
+        
+// Subtitle
+        h3{
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #B3B3B3;
+            margin: 0;
+            padding:0;
+            line-height: 1;
+        }
+    }
+}

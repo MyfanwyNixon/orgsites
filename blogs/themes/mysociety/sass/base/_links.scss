@@ -1,0 +1,22 @@
+/*
+   Links.scss
+   -----------
+   
+*/
+
+
+a{
+    color: #0071BC;
+    text-decoration:none;
+    
+    &:hover{
+        outline: 0;
+        text-decoration:underline;
+    }
+    &:active{
+        outline: 0;
+    }
+    &:focus{
+        outline: thin dotted;
+    }
+}

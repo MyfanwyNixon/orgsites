@@ -5,35 +5,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <title>mySociety Secure Server</title>
-<link rel="stylesheet" href="/nonsecure/wp/wp-content/themes/mysociety/memespring.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="/nonsecure/wp/wp-content/themes/mysociety/style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="/nonsecure/wp-content/themes/mysociety/style.css" type="text/css" media="screen, print" charset="utf-8">
+        <style type="text/css">
+            .secure li {
+                line-height: 1.1em;;
+                font-size: 0.8em;
+            }
+        </style>
 </head>
-<body>
-
-<div id="divPage">
-
-    <a href="#divContent" class="hide">Skip navigation</a>
+<body id="mysociety-org" class="page secure">
 
     <!--Header-->
-    <div id="divHeader">
-        <div id="imgLogo">
-            <a href="/" title="mySociety.org homepage">
-                <img src="/nonsecure/contimg/logo.png" alt="mySociety.org" width="297" height="62" />
-            </a>
-        </div>
+    <header class="header">
+    <h1 class="logo"><a href="http://www.mysociety.org">mySociety</a></h1>
+    <a class="home-link" href="http://www.mysociety.org"> <img src="http://mysociety.org.s3.amazonaws.com/icons/32px/black/home.png" alt="Home"></a>
+    </header>
 
-        <p id="pHeaderDonate" >
-            <a id="aPiggy" href="http://www.mysociety.org/donate/" title="Donate to mySociety" >
-                &nbsp;
-            </a>
-            Help us to make more<br/> useful things.
-            <br/>
-
-            <a href="http://www.mysociety.org/donate/">Donate to mySociety</a>
-        </p>
-    </div>
-
-    <div id="divContent">
+    <div id="content">
+        <article class="article">
 
 <h1 class="pagetitle">mySociety Secure Server</h1>
 
@@ -45,7 +34,7 @@ This page is for developers and administrators.</p>
 
 <td valign="top" width="30%">
 
-<h1>Democracy</h1>
+<h4>Democracy</h4>
 
 <ul>
 <li><a href="/admin/fyr/index.php">WriteToThem admin</a></li>
@@ -62,7 +51,7 @@ This page is for developers and administrators.</p>
 
 <td valign="top" width="30%">
 
-<h1>Community</h1>
+<h4>Community</h4>
 
 <ul>
 <li><a href="/admin/pb/index.php">PledgeBank admin</a></li>
@@ -71,7 +60,7 @@ This page is for developers and administrators.</p>
 <li><a href="/admin/fmt/">FixMyTransport admin</a></li>
 </ul>
 
-<h1>Other</h1>
+<h4>Other</h4>
 
 <ul>
 <li><a href="/admin/news/">NeWs admin pages</a></li>
@@ -81,14 +70,14 @@ This page is for developers and administrators.</p>
 
 <td valign="top" width="30%">
 
-<h1>Development</h1>
+<h4>Development</h4>
 <ul>
 <li><a href="https://github.com/mysociety">github</a> - bug tracker, git browsing</li>
 <li><a href="cvstrac">cvstrac</a> - bug tracker, cvs browsing</li>
 <li><a href="/admin/cvswww/">cvswww</a> - old volunteer system</li>
 </ul>
 
-<h1>System admin</h1>
+<h4>System admin</h4>
 <ul>
 <li><a href="https://secure.mysociety.org/intranet">Intranet</a> - private wiki</li>
 <li><a href="/admin/lists/mailman/admin">Mailman lists</a> (modify URLs for private lists)</li>
@@ -96,7 +85,7 @@ This page is for developers and administrators.</p>
 <li><a href="/admin/nagios/">Monitoring</a> - nagios</li>
 </ul>
 
-<h1>Surveys and analysis</h1>
+<h4>Surveys and analysis</h4>
 
 <ul>
 <li><a href="https://secure.mysociety.org/admin/sitestats/auth/user/">Sitestats newsletter admin</li>
@@ -112,6 +101,7 @@ This page is for developers and administrators.</p>
 </table>
 
 </div>
+</article>
 </div>
 
 </body>

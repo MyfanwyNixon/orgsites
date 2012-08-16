@@ -1,0 +1,551 @@
+@import "../base/mixins";
+
+/*
+    Grid.scss - Desktop: 960px+
+    ---------
+    mySociety.org uses a twelve column grid for screens large enough to show it. Can be broken into 1,2,3,4,6,12 columns.
+    Roughly based on a 960 grid. 12 Columns of 5em/80px (with 0.625em/10px padding included, equivilant to a 1.25em/20px gutter).
+    
+    
+    use: @include grid-1-of-3   or   @include grid-container
+*/
+
+$max_page_width: 60em; // Can't seem to use a variable in a media query, if you change this find/replace the queries below to match
+$column_count: 12;
+$gutter: 1.25em;
+
+
+
+@mixin grid-fullpage{
+    width: 100%;
+    clear:both;
+    float:left;
+}
+
+@mixin grid-container{
+    margin: 0 auto;
+    clear:both;
+    max-width:100%;
+    padding: ($gutter/2) 0;
+        width: $max_page_width;
+}
+
+@mixin grid{
+    display:block;
+    margin: $gutter/2;
+    padding:0;
+    float:left;
+    max-width:100%;
+}
+
+
+// 1 Column
+@mixin grid-1-of-1 {
+    @include grid;
+        width: $max_page_width - $gutter;
+        margin: $gutter/2;
+        padding: 0; 
+}
+
+
+
+// 2 Column
+@mixin grid-1-of-2 {
+    @include grid;
+        width: ($max_page_width / 2) - $gutter;
+        margin: $gutter/2;
+}
+
+
+// 3 Column
+@mixin grid-1-of-3 {
+    @include grid;
+        width: ($max_page_width / 3) - $gutter;
+        margin: $gutter/2;
+}
+@mixin grid-2-of-3 {
+    @include grid;
+        width: (($max_page_width / 3)*2) - $gutter;
+}
+
+
+// 4 Column
+@mixin grid-1-of-4 {
+    @include grid;
+        width: ($max_page_width / 4) - $gutter;
+}
+@mixin grid-2-of-4 {
+    @include grid;
+        width: (($max_page_width / 4)*2) - $gutter;
+}
+@mixin grid-3-of-4 {
+    @include grid;
+        width: (($max_page_width / 4)*3) - $gutter;
+}
+
+
+// 6 Column
+@mixin grid-1-of-6 {
+    @include grid;
+        width: ($max_page_width / 6) - $gutter;
+}
+@mixin grid-2-of-6 {
+    @include grid;
+        width: (($max_page_width / 6)*2) - $gutter;
+}
+@mixin grid-3-of-6 {
+    @include grid;
+        width: (($max_page_width / 6)*3) - $gutter;
+}
+@mixin grid-4-of-6 {
+    @include grid;
+        width: (($max_page_width / 6)*4) - $gutter;
+}
+@mixin grid-5-of-6 {
+    @include grid;
+        width: (($max_page_width / 6)*5) - $gutter;
+}
+
+
+// 12 Column
+@mixin grid-1-of-12 {
+    @include grid;
+        width: ($max_page_width / 12) - $gutter;
+}
+@mixin grid-2-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*2) - $gutter;
+}
+@mixin grid-3-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*3) - $gutter;
+}
+@mixin grid-4-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*4) - $gutter;
+}
+@mixin grid-5-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*5) - $gutter;
+}
+@mixin grid-6-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*6) - $gutter;
+}
+@mixin grid-7-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*7) - $gutter;
+}
+@mixin grid-8-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*8) - $gutter;
+}
+@mixin grid-9-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*9) - $gutter;
+}
+@mixin grid-10-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*10) - $gutter;
+}
+@mixin grid-11-of-12 {
+    @include grid;
+        width: (($max_page_width / 12)*11) - $gutter;
+}
+
+
+
+// No background size use fixed size logo
+.header{
+    @include grid-fullpage;
+}
+html .header{
+    .logo{
+        a{ background: transparent url(img/logos/logo-ie-small.png) no-repeat scroll top left; height:50px; }
+    }
+}
+body.home .header{
+    .logo{
+        a{ 
+            display: block;
+            height: 82px;
+            width: 398px;
+            
+            background: transparent url(img/logos/logo-large.png) no-repeat scroll top left;
+            margin: auto;
+        }
+    }
+    .oneliner{
+        font-size: 2em;
+        border: none;
+        color: #757575;
+        font-size: 3em;
+        a{
+            color: #757575;
+            color: rgba(0,0,0,0.4);
+        }
+        
+    }
+    
+}
+
+html.lt-ie8 body.home .header{
+    body.home .header{
+        .logo{
+            a{ 
+                background: transparent url(img/logos/logo-large.png) no-repeat scroll top left;
+                margin: 0;
+            }
+        }
+    }
+}
+
+    // Stop the links from running over with no gaps
+    .section-options{
+        ul{
+            @include reset-list;
+            display: block;
+            width: 100%;
+            float: left;
+            clear: both;
+            
+            &.two_up li{
+                @include grid-1-of-2;
+                .btn{width: 100%;}
+            }
+            &.three_up li{
+                @include grid-1-of-3;
+                .btn{width: 100%;}
+            }
+            &.four_up li{
+                @include grid-1-of-4;
+                .btn{
+                    font-size: 0.7em;
+                    width: 100%;
+                }
+            }
+            
+            li{
+                display: inline;
+                float: left;
+                margin: $gutter/2;
+                padding: $gutter/2;
+            }
+        }
+    }
+    
+// Show Case Studies 2by2
+.product-options-casestudy{
+    ul li{
+        @include grid-1-of-2;
+        display: inline;
+    }
+}
+
+
+.footer{
+    #footer_blurb,
+    #footer_links
+    {
+        display: inline;
+    }
+}
+
+#products{
+    .product-list{
+        li{
+            background-size: 3em;
+            background: transparent no-repeat scroll top left;
+            padding: 0.625em 0.625em 0.625em 5em;
+            float:left;
+            min-height: 7.5em;
+            width: 300px;
+            margin: 0;
+            display: inline;
+        }
+    }
+}
+html.lt-ie8 #products{
+    .product-list{
+        li{
+            width: 210px;
+        }
+    }
+}
+
+
+.footer{
+    padding: 2em 0;
+    
+    section{
+        max-width:60em;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 2em;
+    }
+    
+    #footer_links{
+        width: 15em;
+        float: left;
+        
+        #menu-footer{
+            padding: 0;
+            font-size: 1em;
+            float:left;
+            padding-left: 2.5em;
+        }
+        
+        a{
+            margin: 0;
+            &.logo{
+                margin-left: -10%;
+            }
+        }   
+    }
+    
+    #footer_blurb{
+        float: none;
+        margin-right: 5em;
+        padding-top: 1.5em; //2.125em;
+    }
+}
+
+
+
+
+.blog-entries{
+    padding-bottom: 5em;
+    @include grid-8-of-12;
+    float: left;
+}
+
+.blog-post{
+    @extend .article;
+    @include grid-8-of-12;
+    margin-left: ($max_page_width / 12) - $gutter;
+    & header{
+        margin-left: -(($max_page_width / 12) - $gutter/2);
+    }
+}
+
+.linked-blog-post{
+    @extend .article;
+    @include grid-9-of-12;
+    @include border-radius($gutter/4);
+}
+
+.blogs-meta{
+    @include grid-3-of-12;
+    float: right;
+
+    section{
+        clear: both;
+        float: none;
+        width: 100%;
+        &.blogkey{
+        a
+        {
+            display: block;
+            padding-left:0;
+            background: none !important;
+        }
+    }
+}
+    
+    
+}
+#content.blog{
+    @include grid-container;
+    width: 60em;
+}
+
+header.section_intro{
+    @include grid-container;
+    
+    .images{
+        @include grid-1-of-2;
+        margin-top: 2em;
+        
+        .council-options{
+            line-height: inherit;
+            a{
+                display: block;
+                display: inline;
+            }
+        }
+    }
+    
+    .description
+    {
+        padding: $gutter/2;
+        @include grid-1-of-2;
+        float:right;
+        clear:right;
+    }
+    
+    hgroup{
+        display: block;
+        margin: 0 $gutter/2;
+        @include grid-1-of-2;
+        float: right;
+    }
+}
+
+
+
+
+
+
+.section-options{
+    @include grid-container;
+    
+    & ul{
+        @include reset-list;
+        display: block;
+        width: 100%;
+        float: left;
+        clear: both;
+        
+        &.two_up li{
+            @include grid-1-of-2;
+            &:nth-child(odd){
+                clear: left;
+            }
+        }
+        &.three_up li{
+            @include grid-1-of-3;
+            &:nth-child(3n+1){
+                clear: left;
+            }
+        }
+        &.four_up li{
+            @include grid-1-of-4;
+            &:nth-child(4n+1){
+                clear: left;
+            }
+            .btn{
+                font-size: 0.7em;
+            }
+        }
+        
+    }
+}
+
+
+.section-features{
+    @extend .section-options;
+    & ul.three_up img{
+        float: left;
+        margin-right: $gutter/2;
+        margin-left: 0; 
+    }
+    & ul.four_up img{
+        display: block;
+        float: none;
+        max-width: 100%;
+        margin: auto;
+    }
+    li.clear{
+        clear: left;
+    }
+}
+.product-options-pricing
+{
+    @include grid-container();
+    & ul{
+        display:block;
+        list-style:none;
+        padding:0;
+        max-width:100%;
+        width: 60em;
+        margin: 0 auto;
+        vertical-align: top;
+    }
+    
+    & ul li{
+        display: inline-block;
+        vertical-align: top;
+        width: 20em;
+        padding: 0.625em;
+        
+        img{
+            max-width:100%;
+        }
+    }
+    ul{
+        &.two_up li{
+            @include grid-1-of-2;
+            &:nth-child(odd){
+                clear: left;
+            }
+        }
+        &.three_up li{
+            @include grid-1-of-3;
+            width: 18em;
+            &:nth-child(3n+1){
+                clear: left;
+            }
+        }
+        &.four_up li{
+            @include grid-1-of-4;
+            &:nth-child(4n+1){
+                clear: left;
+            }
+            .btn{
+                font-size: 0.7em;
+            }
+        }
+        
+        li{
+                -webkit-border-radius: 0.625em;
+                   -moz-border-radius: 0.625em;
+                        border-radius: 0.625em;
+                border: 1px solid #ccc;
+                border-bottom-color: #bbb;
+        }
+    }
+    &>ul.product-options-pricing-extras{
+        @include grid-container();
+        li{
+            h4{
+                padding: 0.625em;
+                background-color: #ddd;
+                border: 1px solid #bbb;
+            }
+        }
+    }
+}
+
+
+
+
+.product-options-casestudy{
+    @include grid-container;
+    & ul li{
+        @include grid-1-of-2;
+    }
+    li.clear {
+        clear: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+.article{
+    @include grid-container;
+    & p{
+        font-size: 1.2em;
+        clear: left;
+        max-width: 40em;
+        width: 100%;
+    }
+}
+.product-newsletter-signup{
+    @extend .article;
+}

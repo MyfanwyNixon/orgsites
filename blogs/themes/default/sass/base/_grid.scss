@@ -1,0 +1,237 @@
+/*
+    Grid.scss - Desktop: 960px+
+    ---------
+    mySociety.org uses a twelve column grid for screens large enough to show it. Can be broken into 1,2,3,4,6,12 columns.
+    Roughly based on a 960 grid. 12 Columns of 5em/80px (with 0.625em/10px padding included, equivilant to a 1.25em/20px gutter).
+    
+    
+    use: @include grid-1-of-3   or   @include grid-container
+*/
+
+$max_page_width: 60em; // Can't seem to use a variable in a media query, if you change this find/replace the queries below to match
+$column_count: 12;
+$gutter: 1.25em;
+
+
+
+@mixin grid-fullpage{
+    width: 100%;
+    clear:both;
+    float:left;
+}
+
+@mixin grid-container{
+    margin: 0 auto;
+    clear:both;
+    width: 100%;
+    max-width:100%;
+    padding: ($gutter/2) 0;
+    
+    @media  ( min-width: 60em) {
+        width: $max_page_width;
+    }
+}
+
+@mixin grid{
+    display:block;
+    margin: $gutter/2;
+    padding:0;
+    float:left;
+    max-width:100%;
+}
+
+
+// 1 Column
+@mixin grid-1-of-1 {
+    @include grid;
+    width: 100%;
+    margin: 0;
+    padding: 0 $gutter/2;
+    @media  ( min-width: 60em) {
+        width: $max_page_width - $gutter;
+        margin: $gutter/2;
+        padding: 0;
+    }
+    
+}
+
+
+
+// 2 Column
+@mixin grid-1-of-2 {
+    @include grid;
+    
+    @media  ( min-width: 30em){
+        width: 45%;
+        margin: $gutter/2 2.5%;
+    }
+    
+    @media  ( min-width: 60em) {
+        width: ($max_page_width / 2) - $gutter;
+        margin: $gutter/2;
+    }
+}
+
+
+// 3 Column
+@mixin grid-1-of-3 {
+    @include grid;
+    @include grid-1-of-1;
+
+    
+    @media  ( min-width: 40em) {
+        width: 30%;
+        margin: 0 1%;
+    }
+    @media  ( min-width: 60em) {
+        width: ($max_page_width / 3) - $gutter;
+        margin: $gutter/2;
+    }
+}
+@mixin grid-2-of-3 {
+    @include grid;
+    @include grid-1-of-1;
+
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 3)*2) - $gutter;
+    }
+}
+
+
+// 4 Column
+@mixin grid-1-of-4 {
+    @include grid;
+    @include grid-1-of-2;
+    
+    @media  ( min-width: 60em) {
+        width: ($max_page_width / 4) - $gutter;
+    }
+}
+@mixin grid-2-of-4 {
+    @include grid;
+    @include grid-1-of-2;
+    
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 4)*2) - $gutter;
+    }
+}
+@mixin grid-3-of-4 {
+    @include grid;
+    @include grid-1-of-2;
+    
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 4)*3) - $gutter;
+    }
+}
+
+
+// 6 Column
+@mixin grid-1-of-6 {
+    @include grid;
+    @include grid-1-of-3;
+    
+    @media  ( min-width: 60em) {
+        width: ($max_page_width / 6) - $gutter;
+    }
+}
+@mixin grid-2-of-6 {
+    @include grid;
+    @include grid-1-of-3;
+    
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 6)*2) - $gutter;
+    }
+}
+@mixin grid-3-of-6 {
+    @include grid;
+    @include grid-1-of-3;
+    
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 6)*3) - $gutter;
+    }
+}
+@mixin grid-4-of-6 {
+    @include grid;
+    @include grid-2-of-3;
+    
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 6)*4) - $gutter;
+    }
+}
+@mixin grid-5-of-6 {
+    @include grid;
+    @include grid-2-of-3;
+    
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 6)*5) - $gutter;
+    }
+}
+
+
+// 12 Column
+@mixin grid-1-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: ($max_page_width / 12) - $gutter;
+    }
+}
+@mixin grid-2-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*2) - $gutter;
+    }
+}
+@mixin grid-3-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*3) - $gutter;
+    }
+}
+@mixin grid-4-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*4) - $gutter;
+    }
+}
+@mixin grid-5-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*5) - $gutter;
+    }
+}
+@mixin grid-6-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*6) - $gutter;
+    }
+}
+@mixin grid-7-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*7) - $gutter;
+    }
+}
+@mixin grid-8-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*8) - $gutter;
+    }
+}
+@mixin grid-9-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*9) - $gutter;
+    }
+}
+@mixin grid-10-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*10) - $gutter;
+    }
+}
+@mixin grid-11-of-12 {
+    @include grid;
+    @media  ( min-width: 60em) {
+        width: (($max_page_width / 12)*11) - $gutter;
+    }
+}

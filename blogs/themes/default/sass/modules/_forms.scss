@@ -1,0 +1,10 @@
+.formrow {
+    label {
+        text-align: right;
+        width: 12em;
+        display: inline-block;
+    }
+    .required, .errortext {
+        color: red;
+    }
+}

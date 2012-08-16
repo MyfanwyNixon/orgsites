@@ -37,14 +37,13 @@
     <? wp_head(); ?>
 </head>
 
-<body id="mysociety-org" <? body_class(); ?>>
+<body id="mysociety-org">
 
 <?
 if (is_front_page()) {
 ?>
 	<header class="header">
-		<h1 class="logo"><a href="/">mySociety</a></h1>
-		<p class="oneliner"><a href="/about/"><?php echo get_bloginfo('description'); /*  <span class="info">(click to learn more about mysociety)</span> */ ?></a></p>
+		<h1 class="logo"><a href="http://www.mysociety.org/">mySociety</a></h1>
 	</header>
 <?
 } else {

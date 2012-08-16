@@ -1,6 +1,12 @@
 <?php get_header();?>
 
 <div id='content' class='blog'>
+    
+    <hgroup>
+		<h2><?php bloginfo('name'); ?></h2>
+		<h3><?php echo get_bloginfo('description'); ?></h3>
+	</hgroup>
+    
 	 <!-- Start the Loop. -->
 	<?php if ( have_posts() ) : ?>
 	

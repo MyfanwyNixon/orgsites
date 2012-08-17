@@ -213,6 +213,9 @@ if ( function_exists('add_image_size') ) {
               return $html;
   }
 
+  // Don't show the admin bar as we have our own edit this page button
+  add_filter('show_admin_bar', '__return_false');
+
   // Remove links to the extra feeds (e.g. category feeds)
   remove_action( 'wp_head', 'feed_links_extra', 3 );
 
@@ -239,3 +242,5 @@ if ( function_exists('add_image_size') ) {
 
   // Remove XHTML generator showing WP version
   remove_action( 'wp_head', 'wp_generator' );
+  
+  

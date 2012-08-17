@@ -33,10 +33,6 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<link rel="shortcut icon" href="/favicon.ico">
-	<?php
-    	// Stop the default admin bar styles from being added to the head as they are pushing down our edit button
-    	wp_deregister_style( 'admin-bar' );
-	?>
     <? wp_head(); ?>
 </head>
 

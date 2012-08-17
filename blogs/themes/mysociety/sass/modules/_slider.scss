@@ -1,10 +1,13 @@
 .slider{
     
     @include reset-list;
-    
+    li{
+        padding: 1em;
+    }
     img {
         max-width: 100%;
         height: auto;
+        @include box_shadow(0, $gutter/2, $gutter, 0, rgba(0,0,0,0.5));
     }
 }
 

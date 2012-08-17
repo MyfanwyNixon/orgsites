@@ -27,6 +27,12 @@
        -moz-transition: $arg;
             transition: $arg;
 }
+
+@mixin box_shadow($x, $y, $blur-radius, $spread-radius, $shadow-color) {
+  -webkit-box-shadow: $x $y $blur-radius $spread-radius $shadow-color; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+          box-shadow: $x $y $blur-radius $spread-radius $shadow-color; /* Opera 10.5, IE9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
 .clearfix {
     zoom:1;
     &:before, &:after {

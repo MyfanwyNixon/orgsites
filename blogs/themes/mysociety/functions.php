@@ -212,7 +212,9 @@ if ( function_exists('add_image_size') ) {
           $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
               return $html;
   }
-
+  
+  // Stop the default admin bar styles from being added to the head as they are pushing down our edit button
+  wp_deregister_style( 'admin-bar' );
 
   // Remove links to the extra feeds (e.g. category feeds)
   remove_action( 'wp_head', 'feed_links_extra', 3 );
@@ -231,7 +233,7 @@ if ( function_exists('add_image_size') ) {
 
   // Remove prev link
   remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
-
+  remove_action('wp_head','adjacent_posts_rel_link_wp_head');
   // Remove start link
   remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
 

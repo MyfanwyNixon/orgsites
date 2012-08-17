@@ -19,7 +19,8 @@
 
 // Available Icons:
 $icon-list: 'book', 'book2', 'arrow-down', 'info', 'coins', 'star', 'support', 'github-cat', 'twitter-bird', 'facebook2', 'comment2', 'feed2', 'pencil', 'wrench', 'tag', 'tag4', 'user', 'link2', 'file-pdf', 'announcement', 'globe';
-
+$icon-base-url: 'http://mysociety.org.s3.amazonaws.com/icons/';
+$icon-svg-base-url: 'http://mysociety.org.s3.amazonaws.com/icons/svg/';
 
 @mixin icon($icon, $icon_colour:'white', $icon_size:16px, $icon_format:'png'){
     // $icon_size: Can be 16px or 32px if png or any size if SVG is supported
@@ -33,9 +34,9 @@ $icon-list: 'book', 'book2', 'arrow-down', 'info', 'coins', 'star', 'support', '
     margin-right: $gutter/2;
     
     @if $icon_format == 'svg' {
-        background: transparent url('http://mysociety.org.s3.amazonaws.com/icons/svg/'+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll center center;
+        background: transparent url($icon-svg-base-url+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll center center;
     } @else {
-        background: transparent url('http://mysociety.org.s3.amazonaws.com/icons/'+$icon_size+'/'+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll center center;
+        background: transparent url($icon-base-url+$icon_size+'/'+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll center center;
     }
 }
 
@@ -46,9 +47,9 @@ $icon-list: 'book', 'book2', 'arrow-down', 'info', 'coins', 'star', 'support', '
     padding-left: $icon_size+($icon_size/2);
     
     @if $icon_format == 'svg' {
-        background: transparent url('http://mysociety.org.s3.amazonaws.com/icons/svg/'+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll $icon_position;
+        background: transparent url($icon-svg-base-url+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll $icon_position;
     } @else {
-        background: transparent url('http://mysociety.org.s3.amazonaws.com/icons/'+$icon_size+'/'+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll $icon_position;
+        background: transparent url($icon-base-url+$icon_size+'/'+$icon_colour+'/'+$icon+'.'+$icon_format) no-repeat scroll $icon_position;
     }
 }
 

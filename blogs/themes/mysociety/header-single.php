@@ -11,7 +11,7 @@
                 $img_tag = wp_get_attachment_image( $image_id, 'feature-thumb' );
                 $img_src = wp_get_attachment_image_src( $image_id, 'full' );
 ?>
-                <li><a href="<?=$img_src[0] ?>"><?=$img_tag ?></a></li>
+                <li><a href="<?=$img_src[0] ?>"><?php echo remove_thumbnail_dimensions($img_tag) ?></a></li>
             <?php } ?>
         </ul>
         <? if (get_post_type() == 'ms_council') { ?>

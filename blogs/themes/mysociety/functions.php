@@ -201,41 +201,42 @@ if ( function_exists('add_image_size') ) {
   }
 
   add_filter('body_class', 'add_extra_page_classes');
-  
-  
-  
-################################################################################
-// Actions + Filters
-################################################################################
 
-// Remove links to the extra feeds (e.g. category feeds)
-remove_action( 'wp_head', 'feed_links_extra', 3 );
+  // make sure that thumbnails do not have height and width as it does bad
+  // things to the responsive layout
+  add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+  add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+  add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
 
-// Remove links to the general feeds (e.g. posts and comments)
-//remove_action( 'wp_head', 'feed_links', 2 );
+  function remove_thumbnail_dimensions( $html ) {
+          $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+              return $html;
+  }
 
-// Remove link to the RSD service endpoint, EditURI link
-remove_action( 'wp_head', 'rsd_link' );
 
-// Remove link to the Windows Live Writer manifest file
-remove_action( 'wp_head', 'wlwmanifest_link' );
+  // Remove links to the extra feeds (e.g. category feeds)
+  remove_action( 'wp_head', 'feed_links_extra', 3 );
 
-// Remove index link
-remove_action( 'wp_head', 'index_rel_link' );
+  // Remove links to the general feeds (e.g. posts and comments)
+  //remove_action( 'wp_head', 'feed_links', 2 );
 
-// Remove prev link
-remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
+  // Remove link to the RSD service endpoint, EditURI link
+  remove_action( 'wp_head', 'rsd_link' );
 
-// Remove start link
-remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+  // Remove link to the Windows Live Writer manifest file
+  remove_action( 'wp_head', 'wlwmanifest_link' );
 
-// Display relational links for adjacent posts
-remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 );
+  // Remove index link
+  remove_action( 'wp_head', 'index_rel_link' );
 
-// Remove XHTML generator showing WP version
-remove_action( 'wp_head', 'wp_generator' );
+  // Remove prev link
+  remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
 
-  
-  
-	
-?>
+  // Remove start link
+  remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+
+  // Display relational links for adjacent posts
+  remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 );
+
+  // Remove XHTML generator showing WP version
+  remove_action( 'wp_head', 'wp_generator' );

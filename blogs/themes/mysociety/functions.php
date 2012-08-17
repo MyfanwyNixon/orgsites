@@ -201,5 +201,16 @@ if ( function_exists('add_image_size') ) {
   }
 
   add_filter('body_class', 'add_extra_page_classes');
-	
+
+  // make sure that thumbnails do not have height and width as it does bad
+  // things to the responsive layout
+  add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+  add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+  add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
+
+  function remove_thumbnail_dimensions( $html ) {
+          $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+              return $html;
+  }
+
 ?>

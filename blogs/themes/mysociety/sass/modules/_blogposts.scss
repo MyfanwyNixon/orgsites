@@ -176,7 +176,7 @@
                 background: transparent url(img/icons/products/blankcircle.png) no-repeat center left;
                 background-size: 2em;
                 
-                &[href=/blog/] { background-image: url(img/icons/products/mysociety.png); }
+                &[href="/blog/"] { background-image: url(img/icons/products/mysociety.png); }
                 &.fms{ background-image: url(img/icons/products/fms.png); }
                 &.fmt{ background-image: url(img/icons/products/fmt.png); }
                 &.alaveteli{ background-image: url(img/icons/products/afoi.png); }

@@ -29,4 +29,7 @@ $args = array(
             <?php wp_list_categories( $args ); ?> 
         </ul>
     </section>
+
+<?php if ( !dynamic_sidebar() ) { } ?>
+
 </div>

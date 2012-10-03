@@ -1,6 +1,12 @@
 <?
 
 add_theme_support( 'automatic-feed-links' );
+register_sidebar(array(
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget' => '</section>',
+    'before_title' => '<h3 class="widget_title"><i class="icon-black-tag"></i>',
+    'after_title' => '</h3>',
+));
 
 // Add other size image support
 if ( function_exists('add_image_size') ) {
@@ -242,5 +248,4 @@ if ( function_exists('add_image_size') ) {
 
   // Remove XHTML generator showing WP version
   remove_action( 'wp_head', 'wp_generator' );
-  
-  
+

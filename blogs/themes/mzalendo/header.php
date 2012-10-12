@@ -17,10 +17,10 @@
 
         <script type="text/javascript">
             window.mzalendo_settings = {
-                analytics_id : 'UA-660910-5',
-                facebook_app_id: '315517795130516',
+                google_analytics_account : 'UA-660910-5',
+                facebook_app_id:           '315517795130516',
                 static_url:                'http://info.mzalendo.com/static/',
-                static_generation_number:  '21',
+                static_generation_number:  '22',
                 extra_js: ["<?php bloginfo('template_url'); ?>/assets/js/blog.js"]
             }
         </script>

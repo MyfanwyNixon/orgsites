@@ -14,13 +14,6 @@
         <link href="/wp-content/themes/alaveteli/stylesheets/main.css" media="all" rel="stylesheet" title="Main" type="text/css">
         <link href="/wp-content/themes/alaveteli/stylesheets/fonts.css" media="all" rel="stylesheet" type="text/css">
         <link href="/wp-content/themes/alaveteli/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
-
-        <!--[if LT IE 7]>
-        <style type="text/css">@import url("/stylesheets/ie6.css");</style>
-        <![endif]-->
-        <!--[if LT IE 7]>
-        <style type="text/css">@import url("/stylesheets/ie6-custom.css");</style>
-        <![endif]-->
         <!--[if LT IE 8]>
         <style type="text/css">@import url("/stylesheets/ie7.css");</style>
         <![endif]-->

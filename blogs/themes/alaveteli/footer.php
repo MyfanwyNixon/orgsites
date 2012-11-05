@@ -5,7 +5,7 @@
     </div>
 
     <div id="footer">
- <img src="http://www.alaveteli.org/images/twitter-16.png" alt="twitter icon" class="twitter-icon"> <a href="http://www.twitter.com/alaveteli_foi">Follow us on twitter</a>
+ <img src="/wp-content/themes/alaveteli/images/twitter-16.png" alt="twitter icon" class="twitter-icon"> <a href="http://www.twitter.com/alaveteli_foi">Follow us on twitter</a>
 
 </div>
 <div class="after-footer">&nbsp;</div>

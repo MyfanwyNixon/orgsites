@@ -11,9 +11,9 @@
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-        <link href="http://www.alaveteli.org/stylesheets/main.css?1328784189" media="all" rel="stylesheet" title="Main" type="text/css">
-        <link href="http://www.alaveteli.org/stylesheets/fonts.css?1314786482" media="all" rel="stylesheet" type="text/css">
-        <link href="http://www.alaveteli.org/stylesheets/print.css?1328784189" media="print" rel="stylesheet" type="text/css">
+        <link href="/wp-content/themes/alaveteli/stylesheets/main.css" media="all" rel="stylesheet" title="Main" type="text/css">
+        <link href="/wp-content/themes/alaveteli/stylesheets/fonts.css" media="all" rel="stylesheet" type="text/css">
+        <link href="/wp-content/themes/alaveteli/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
 
         <!--[if LT IE 7]>
         <style type="text/css">@import url("/stylesheets/ie6.css");</style>
@@ -52,7 +52,7 @@
 
 
           <div id="logged_in_bar">
- <img src="http://www.alaveteli.org/images/twitter-16.png" alt="twitter icon" class="twitter-icon"> <a href="http://www.twitter.com/alaveteli_foi">Follow us on twitter</a>
+ <img src="/wp-content/themes/alaveteli/images/twitter-16.png" alt="twitter icon" class="twitter-icon"> <a href="http://www.twitter.com/alaveteli_foi">Follow us on twitter</a>
 
           </div>
 
@@ -61,12 +61,12 @@
             <form action="/" id="navigation_search_form" method="get">
                <p>
                    <input id="navigation_search_query" name="s" size="40" type="text" value="<?php the_search_query(); ?>">
-                   <input src="http://www.alaveteli.org/images/search-button.png?1314786482" type="image">
+                   <input src="/wp-content/themes/alaveteli/images/search-button.png" type="image">
                </p>
             </form>
         </div>
 
-        <a href="/" id="logo"><img src="http://www.alaveteli.org/alavetelitheme/images/logo.png?1328785848" alt="Logo"></a>
+        <a href="/" id="logo"><img src="/wp-content/themes/alaveteli/images/logo.png" alt="Logo"></a>
 
 
         <div id="topnav">

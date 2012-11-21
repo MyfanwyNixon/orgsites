@@ -1,31 +1,20 @@
 <?php
-/**
- * The base configurations of the WordPress.
- *
- * This file has the following configurations: MySQL settings, Table Prefix,
- * Secret Keys, WordPress Language, and ABSPATH. You can find more information
- * by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
- * wp-config.php} Codex page. You can get the MySQL settings from your web host.
- *
- * This file is used by the wp-config.php creation script during the
- * installation. You don't have to use the web site, you can just copy this file
- * to "wp-config.php" and fill in the values.
- *
- * @package WordPress
- */
+// ** MySQL settings ** //
+if (!@include "../conf/general") {
+    if (!@include "../../conf/general") {
+        if (!@include "../../../conf/general") {
+            if (!@include(dirname(__FILE__) . "../../../conf/general")) {
+                print "Error including conf/general in wp-config.php on cee.mysociety.org WordPress";
+                exit;
+            }
+        }
+    }
+}
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'tmtm_diyblog_wp');
-
-/** MySQL database username */
-define('DB_USER', 'tmtm_diyblog_wp');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'xYeWbFjP4dGt');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_NAME', OPTION_DIY_DB_NAME);     // The name of the database
+define('DB_USER', OPTION_DIY_DB_USER);     // Your MySQL username
+define('DB_PASSWORD', OPTION_DIY_DB_PASS); // ...and password
+define('DB_HOST', OPTION_DIY_DB_HOST);     // 99% chance you won't need to change this value
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

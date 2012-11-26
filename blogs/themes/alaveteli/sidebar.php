@@ -20,7 +20,8 @@
 		 <h2>Recent blog posts</h2>
 		 <ul class="no_bullets">
 		 <?php
-		 	$recent_posts = wp_get_recent_posts();
+		    $post_args = array('post_status' => 'publish');
+            $recent_posts = wp_get_recent_posts($post_args);
 		 	foreach( $recent_posts as $recent ){
 		 		echo '<li><a href="' . get_permalink($recent["ID"]) . '" title="Look '.$recent["post_title"].'" >' .   $recent["post_title"].'</a> </li> ';
 		 	}

@@ -1,8 +1,12 @@
 <?php
 
+header('Content-Type: text/html; charset=utf-8');
+print file_get_contents('header.html');
+
 $file = file_get_contents('http://www.mysociety.org/donate/');
-$file = preg_replace('#href="/#', 'href="http://www.mysociety.org/', $file);
-$file = preg_replace('#(rel="stylesheet" href=")http://www.mysociety.org/wp-content/themes/mysociety/#', '$1/nonsecure/', $file);
-$file = preg_replace('#src="/wp-content/themes/mysociety/#', 'src="/nonsecure/', $file);
+$file = preg_replace('#^.*?<article class="article">#s', '', $file);
+$file = preg_replace('#</article>.*#s', '', $file);
 print $file;
+
+print file_get_contents('footer.html');
 

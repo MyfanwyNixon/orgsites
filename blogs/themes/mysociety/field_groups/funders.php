@@ -9,14 +9,14 @@ if(function_exists("register_field_group"))
 {
 register_field_group(array (
   'id' => '4fc35498a9865',
-  'title' => 'Partners',
+  'title' => 'Funders',
   'fields' => 
   array (
     0 => 
     array (
       'key' => 'field_4fb4edd1496d8',
-      'label' => 'Partner',
-      'name' => 'partner',
+      'label' => 'Funders',
+      'name' => 'funders',
       'type' => 'repeater',
       'instructions' => 'Add a partner\'s details',
       'required' => '0',
@@ -47,7 +47,8 @@ register_field_group(array (
           'key' => 'field_4fb4edd149716',
           'label' => 'Detail',
           'name' => 'detail',
-          'type' => 'wysiwyg',
+          'type' => 'textarea',
+		  'formatting' => 'html',
           'toolbar' => 'basic',
           'media_upload' => 'no',
           'order_no' => '2',
@@ -55,7 +56,7 @@ register_field_group(array (
       ),
       'row_limit' => '',
       'layout' => 'row',
-      'button_label' => '+ Add Parnter',
+      'button_label' => '+ Add Funder',
       'order_no' => '0',
     ),
   ),
@@ -67,7 +68,7 @@ register_field_group(array (
       array (
         'param' => 'page_template',
         'operator' => '==',
-        'value' => 'partners.php',
+        'value' => 'funders.php',
         'order_no' => '0',
       ),
     ),

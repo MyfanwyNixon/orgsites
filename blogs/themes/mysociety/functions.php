@@ -179,11 +179,12 @@ if ( function_exists('add_image_size') ) {
 		include 'field_groups/basic.php';//Basic project info
 		include 'field_groups/meta_data.php';//Page meta data
 		include 'field_groups/case_studies.php';//Project case studies
+		include 'field_groups/clients.php';  //Our clients list (on /clients page)
 		include 'field_groups/facet.php';//Facets of a project (for orgs, for councils etc)
 		include 'field_groups/features.php';//Project features
 		include 'field_groups/homepage_filter.php';//Text that appears for the project on the homepage
 		include 'field_groups/project_text.php';//Text that appears for the facet on it's parent project page
-		include 'field_groups/partners.php';//Commerical and charitable partners
+		include 'field_groups/funders.php';//Our charitable funders (on /funders page)
 		include 'field_groups/pricing.php';//Core pricing
 		include 'field_groups/extras.php'; //Pricing extras
 		include 'field_groups/resources.php'; //Project reqsources

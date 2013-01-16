@@ -17,7 +17,6 @@
 	margin: 0 0 0 0;
 }
 .open311-text {
-	font-family: monospace;
 	border: 1px solid black;
 	padding: 0.5em;
 	width: 70%;
@@ -27,6 +26,7 @@
 	line-height: 1.2em;
 }
 .open311-text p {
+	font-family: 'Menlo Regular', monospace;
 	margin: 0.5em 0.333em 0.333em 25%;
 	padding: 0.5em 0;
 }
@@ -82,4 +82,14 @@
 	background: inherit;
 	border: 1 px solid black;
 	font-weight: bold;
+}
+blockquote {
+max-width: 100%;
+clear:both;
+}
+blockquote p {
+font-size: 1.2em;
+font-style: normal;
+margin: 0;
+padding-left: 1.5em;
 }

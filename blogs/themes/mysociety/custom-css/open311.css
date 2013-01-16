@@ -1,0 +1,85 @@
+/* custom stylesheet for the open311 (blue cat and robot) blog post(s) */
+.open311-wrapper {
+	max-width: 600px;
+	position: relative;
+	margin: 1em 0;
+}
+.open311-clear{
+	clear: both;
+}
+.open311-illustration{
+	width: 100%;
+	clear: both;
+	margin: -20px 0 2em 0;
+}
+.open311-illustration img{
+	width: 100%;
+	margin: 0 0 0 0;
+}
+.open311-text {
+	font-family: monospace;
+	border: 1px solid black;
+	padding: 0.5em;
+	width: 70%;
+	margin: 2%;
+	position: relative;
+	color: #000;
+	line-height: 1.2em;
+}
+.open311-text p {
+	margin: 0.5em 0.333em 0.333em 25%;
+	padding: 0.5em 0;
+}
+.open311-text-client {
+	background-color: #ddddff;
+	border: 1px solid #333399;
+}
+.open311-text-server{
+	background-color: #ffdb91;
+	border: 1px solid #ff9966;
+}
+.open311-text-left {
+	float: left;
+}
+.open311-text-right {
+	float: right;
+}
+.open311-text-label {
+	font-family: "myriad-pro","Myriad Pro","MyriadPro-Regular","Myriad Pro Regular",Frutiger,"Ubuntu",DroidSans,"Droid Sans","DroidSans",sans-serif;
+	
+	border:1px solid gray;
+	padding: 0.333em 0.5em;
+	float: right;
+	margin: 0  2%;
+	background: white;
+	transform: rotate(-8deg);
+	-ms-transform: rotate(-8deg); /* IE 9 */
+	-webkit-transform: rotate(-8deg); /* Safari and Chrome */
+	-o-transform: rotate(-8deg); /* Opera */
+	-moz-transform: rotate(-8deg); /* Firefox */
+	-moz-box-shadow: 2px 2px 4px #666;
+	-webkit-box-shadow: 2px 2px 4px #666;
+	box-shadow: 2px 2px 4px #666;
+}
+.open311-thumb {
+	width: 20%;
+	float: left;
+}
+.open311-text .open311-thumb img {
+	width: 100%;
+	margin: -33% 0 0 0;
+	background-color: transparent;
+	border: none;
+	padding:0;
+	z-index: 99;
+	position: relative;
+}
+.open311-label {
+	position: absolute;
+	top:-10px;
+	right:10px;
+	padding: 0.5em;
+	background: inherit;
+	border: 1 px solid black;
+	font-weight: bold;
+}

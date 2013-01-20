@@ -26,11 +26,11 @@
 	<!--Header-->
 <?
     if ($_SERVER['SERVER_NAME'] == 'cee.mysociety.org') {
-        $logo = 'cee.png';
+        $logo = 'https://secure.mysociety.org/cvstrac/getfile?f=mysociety/ms/web/contimg/cee.png';
         $logo_w = 360;
         $logo_h = 62;
     } else {
-        $logo = 'logo.png';
+        $logo = 'http://old.mysociety.org/contimg/logo.png';
         $logo_w = 297;
         $logo_h = 62;
     }
@@ -38,7 +38,7 @@
 	<div id="divHeader">
 		<div id="imgLogo">
 			<a href="/" title="mySociety.org homepage">
-				<img src="http://old.mysociety.org/contimg/<?=$logo ?>" alt="mySociety.org" width="<?=$logo_w?>" height="<?=$logo_h?>" />
+				<img src="<?=$logo ?>" alt="mySociety.org" width="<?=$logo_w?>" height="<?=$logo_h?>" />
 			</a>
 		</div>
 

@@ -29,7 +29,7 @@ if ( function_exists('add_image_size') ) {
 					'view_item'			=> __( 'View Project', 'mysociety'),
 					'search_items'		=> __( 'Search Projects', 'mysociety' ),
 					'not_found'			=> __( 'No projects found', 'mysociety' ),
-					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety' 
+					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety'
 				)
 			),
 			'taxonomies'		=> array('category'),
@@ -39,7 +39,7 @@ if ( function_exists('add_image_size') ) {
 			'rewrite'		=> array('slug' => 'projects', 'with_front'	=> false),
 			)
 		);
-		
+
 		//for organisations
 		register_post_type(
 			'ms_org',
@@ -53,7 +53,7 @@ if ( function_exists('add_image_size') ) {
 					'view_item'			=> __( 'View commercial Project', 'mysociety'),
 					'search_items'		=> __( 'Search Commercial Projects', 'mysociety' ),
 					'not_found'			=> __( 'No projects found', 'mysociety' ),
-					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety' 
+					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety'
 				)
 			),
 			'taxonomies'		=> array('category'),
@@ -63,7 +63,7 @@ if ( function_exists('add_image_size') ) {
 			'rewrite'		=> array('slug' => 'for-organisations', 'with_front'	=> false),
 			)
 		);
-		
+
 		//for councils
 		register_post_type(
 			'ms_council',
@@ -77,7 +77,7 @@ if ( function_exists('add_image_size') ) {
 					'view_item'			=> __( 'View Civic Project', 'mysociety'),
 					'search_items'		=> __( 'Search Civic Projects', 'mysociety' ),
 					'not_found'			=> __( 'No projects found', 'mysociety' ),
-					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety' 
+					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety'
 				)
 			),
 			'taxonomies'		=> array('category'),
@@ -87,7 +87,7 @@ if ( function_exists('add_image_size') ) {
 			'rewrite'		=> array('slug' => 'for-councils', 'with_front' => false),
 			)
 		);
-		
+
 		//for the public
 		register_post_type(
 			'ms_public',
@@ -101,7 +101,7 @@ if ( function_exists('add_image_size') ) {
 					'view_item'			=> __( 'View Public Project', 'mysociety'),
 					'search_items'		=> __( 'Search Public Projects', 'mysociety' ),
 					'not_found'			=> __( 'No projects found', 'mysociety' ),
-					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety' 
+					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety'
 				)
 			),
 			'taxonomies'		=> array('category'),
@@ -111,7 +111,7 @@ if ( function_exists('add_image_size') ) {
 			'rewrite'		=> array('slug' => 'for-the-public', 'with_front' 	=> false),
 			)
 		);
-		
+
 		//for volunteers
 		register_post_type(
 			'ms_volunteer',
@@ -125,7 +125,7 @@ if ( function_exists('add_image_size') ) {
 					'view_item'			=> __( 'View Volunteer Project', 'mysociety'),
 					'search_items'		=> __( 'Search Volunteer Projects', 'mysociety' ),
 					'not_found'			=> __( 'No projects found', 'mysociety' ),
-					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety' 
+					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety'
 				)
 			),
 			'taxonomies'		=> array('category'),
@@ -135,7 +135,7 @@ if ( function_exists('add_image_size') ) {
 			'rewrite'		=> array('slug' => 'for-volunteers', 'with_front' 	=> false),
 			)
 		);
-		
+
 		//International
 		register_post_type(
 			'ms_international',
@@ -149,7 +149,7 @@ if ( function_exists('add_image_size') ) {
 					'view_item'			=> __( 'View International Project', 'mysociety'),
 					'search_items'		=> __( 'Search International Projects', 'mysociety' ),
 					'not_found'			=> __( 'No projects found', 'mysociety' ),
-					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety' 
+					'not_found_in_trash'	=> __( 'No projects found in Trash', 'mysociety'
 				)
 			),
 			'taxonomies'		=> array('category'),
@@ -159,7 +159,31 @@ if ( function_exists('add_image_size') ) {
 			'rewrite'		=> array('slug' => 'international', 'with_front' 	=> false),
 			)
 		);
-		
+
+		//Stream
+		register_post_type(
+			'ms_stream',
+			array(
+				'labels' => array(
+					'name'				=> __( 'Streams', 'mysociety' ),
+					'singular_name'		=> __( 'Stream', 'mysociety' ),
+					'add_new_item'		=> __( 'Add New Stream', 'mysociety' ),
+					'edit_item'			=> __( 'Edit Stream', 'mysociety'),
+					'new_item'			=> __( 'New Stream', 'mysociety' ),
+					'view_item'			=> __( 'View Stream', 'mysociety'),
+					'search_items'		=> __( 'Search Streams', 'mysociety' ),
+					'not_found'			=> __( 'No streams found', 'mysociety' ),
+					'not_found_in_trash'	=> __( 'No streams found in Trash', 'mysociety'
+				)
+			),
+			'taxonomies'		=> array('category'),
+			'public'			=> true,
+			'has_archive'	=> false,
+			'menu_position'	=> 5,
+			'rewrite'		=> array('slug' => 'stream', 'with_front' 	=> false),
+			)
+		);
+
 		// NOTE: if you add another custom post type uncomment this line below
 		flush_rewrite_rules();
 	}
@@ -189,14 +213,14 @@ if ( function_exists('add_image_size') ) {
 		include 'field_groups/extras.php'; //Pricing extras
 		include 'field_groups/resources.php'; //Project reqsources
 		include 'field_groups/team_member.php';	//People
-		include 'field_groups/faq.php'; //FAQs	
+		include 'field_groups/faq.php'; //FAQs
 	}
-	
+
 	//include some custom scripts for helping in page templates
 	include('custom_scripts/entitle.php'); //rewrites titles in facet pages correctly (TODO deprecate)
 	include 'custom_scripts/theme_comments.php'; //writes out comment blocks in blog posts
 	include 'custom_scripts/resources.php'; //counts resources and features to ensure we mark up in CS correctly
-	
+
 
   // for some pages we require extra body classes
   function add_extra_page_classes($classes) {

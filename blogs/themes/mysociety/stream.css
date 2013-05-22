@@ -1,0 +1,172 @@
+body{
+	font-family: "myriad-pro","Myriad Pro","MyriadPro-Regular","Myriad Pro Regular",Frutiger,"Ubuntu",DroidSans,"Droid Sans","DroidSans",sans-serif;
+	font-size: 16px;
+	color: #808080;
+	background: url(img/stream/gradient-bg.png) top repeat-x;
+	margin-bottom: 100px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #404040;
+	font-family: "myriad-pro-semibold","Myriad Pro Semibold","MyriadPro-Semibold",Frutiger,"Ubuntu",DroidSans,"Droid Sans","DroidSans",sans-serif;
+}
+
+p {
+	margin: 5px 0;
+}
+
+p.lead {
+	font-size: 18px;
+	min-height: 54px;
+}
+
+h2 {
+	font-size: 25px;
+}
+
+h3 {
+	font-size: 18px;
+	margin: 0;
+}
+
+a {
+	color: #0071BC;
+	text-decoration: none;
+}
+
+a.cta {
+	font-family: "myriad-pro-semibold","Myriad Pro Semibold","MyriadPro-Semibold",Frutiger,"Ubuntu",DroidSans,"Droid Sans","DroidSans",sans-serif;
+}
+
+a:hover {
+	color: #338dc9;
+	text-decoration: underline;
+}
+
+h3 a {
+	text-decoration: none;
+	color: #404040;
+}
+
+h3 a:hover {
+	text-decoration: none;
+	color: #404040;
+}
+
+hr {
+	height: 1px;
+    border: 0;
+    border-top: 1px solid #EEE;
+}
+
+#header-bar {
+	border-top: 3px solid #FFF;
+}
+
+#header-nav-button {
+	display: none;
+	margin: 10px 0;
+	font-size: 14px;
+}
+
+#header-nav-button a {
+	color: #404040;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#header-nav {
+	text-align: right;
+	list-style: none;
+}
+
+#header-nav li {
+	display: inline-block;
+	margin: 15px 20px 0 20px;
+	font-size: 14px;
+}
+
+#header-nav li a {
+	color: #4D4D4D;
+	text-decoration: none;
+}
+
+#header-tab {
+	float: right;
+	background: #FFF;
+	margin: -3px 0 0 40px;
+	padding: 10px 15px 3px 15px;
+	border-radius: 0 0 15px 15px;
+	box-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+#top-wrapper {
+	position: relative;
+}
+
+#top-strapline {
+	position: absolute;
+	font-size: 18px;
+	margin: 0;
+	bottom: 8px;
+	right: 0;
+}
+
+.adbanner {
+	clear: both;
+	width: 100%;
+	height: 190px;
+	text-align: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 10px 0 20px 0;
+}
+
+.adbanner img {
+	max-width: 90%;
+}
+
+ul.product-list {
+	list-style: none;
+}
+
+ul.product-list li {
+	clear: both;
+}
+
+ul.product-list li p {
+	margin: 0;
+}
+
+.product-icon {
+	float: left;
+}
+
+@media only screen and (max-width : 768px) {
+
+	#header-nav-button {
+		display: block;
+	}
+
+	#header-nav {
+		text-align: left;
+		clear: both;
+		display: none;
+		margin-top: 20px;
+	}
+
+	#header-nav li {
+		display: block;
+		margin: 15px 0;
+	}
+
+	#top-wrapper {
+		position: inherit;
+		text-align: center;
+	}
+
+	#top-strapline {
+		position: inherit;
+		font-size: 18px;
+	}
+}

@@ -73,12 +73,12 @@
 			<?php foreach(get_field('services') as $post_object): ?>
 			
 				<li>
-					<img class="product-icon" src="<?php bloginfo('template_directory'); ?>/img/stream/product-icon.png">
+					<a href="<?php echo get_permalink($post_object); ?>"><img class="product-icon" src="<?php if(get_field('icon', $post_object->ID)){ echo get_field('icon', $post_object->ID); } else { bloginfo('template_directory'); echo '/img/stream/product-icon.png'; }?>"></a>
 					
 					<?php if(get_field('headline', $post_object->ID)): ?>
-                        <h3><?php echo get_field('headline', $post_object->ID); ?></h3>
+                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_field('headline', $post_object->ID); ?></a></h3>
                     <?php else :?>
-                        <h3><?php echo get_the_title($post_object->ID); ?></h3>
+                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
                     <?php endif; ?>
                     <?php if(get_field('one_liner', $post_object->ID)): ?>
                         <p><?php echo get_field('one_liner', $post_object->ID)?></p>
@@ -107,12 +107,12 @@
 
 			
 				<li>
-					<img class="product-icon" src="<?php bloginfo('template_directory'); ?>/img/stream/product-icon.png">
+					<a href="<?php echo get_permalink($post_object); ?>"><img class="product-icon" src="<?php if(get_field('icon', $post_object->ID)){ echo get_field('icon', $post_object->ID); } else { bloginfo('template_directory'); echo '/img/stream/product-icon.png'; }?>"></a>
 					
 					<?php if(get_field('headline', $post_object->ID)): ?>
-                        <h3><?php echo get_field('headline', $post_object->ID); ?></h3>
+                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_field('headline', $post_object->ID); ?></a></h3>
                     <?php else :?>
-                        <h3><?php echo get_the_title($post_object->ID); ?></h3>
+                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
                     <?php endif; ?>
                     <?php if(get_field('one_liner', $post_object->ID)): ?>
                         <p><?php echo get_field('one_liner', $post_object->ID)?></p>
@@ -145,12 +145,12 @@
 
 			
 				<li>
-					<img class="product-icon" src="<?php bloginfo('template_directory'); ?>/img/stream/product-icon.png">
+					<a href="<?php echo get_permalink($post_object); ?>"><img class="product-icon" src="<?php if(get_field('icon', $post_object->ID)){ echo get_field('icon', $post_object->ID); } else { bloginfo('template_directory'); echo '/img/stream/product-icon.png'; }?>"></a>
 					
 					<?php if(get_field('headline', $post_object->ID)): ?>
-                        <h3><?php echo get_field('headline', $post_object->ID); ?></h3>
+                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_field('headline', $post_object->ID); ?></a></h3>
                     <?php else :?>
-                        <h3><?php echo get_the_title($post_object->ID); ?></h3>
+                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
                     <?php endif; ?>
                     <?php if(get_field('one_liner', $post_object->ID)): ?>
                         <p><?php echo get_field('one_liner', $post_object->ID)?></p>

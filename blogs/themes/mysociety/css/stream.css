@@ -2,7 +2,7 @@ body{
 	font-family: "myriad-pro","Myriad Pro","MyriadPro-Regular","Myriad Pro Regular",Frutiger,"Ubuntu",DroidSans,"Droid Sans","DroidSans",sans-serif;
 	font-size: 16px;
 	color: #808080;
-	background: url(img/stream/gradient-bg.png) top repeat-x;
+	background: url(../img/stream/gradient-bg.png) top repeat-x;
 	margin-bottom: 100px;
 }
 

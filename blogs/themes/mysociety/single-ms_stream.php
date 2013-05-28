@@ -10,10 +10,10 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/base.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/skeleton.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/layout.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/stream.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/base.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/skeleton.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/layout.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/stream.css">
 
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
 

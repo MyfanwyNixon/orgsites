@@ -36,9 +36,9 @@
 				</div>
 				<div id="header-nav">
 					<ul>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="http://www.mysociety.org/about/">About</a></li>
+						<li><a href="http://www.mysociety.org/blog/">Blog</a></li>
+						<li><a href="http://www.mysociety.org/contact/">Contact</a></li>
 					</ul>
 				</div>
 			</div>

@@ -136,12 +136,16 @@
 			<p class="lead"><?php echo get_field('tools_strapline'); ?></p>
 
 		</div>
+		
+		<?php $tools = get_field('tools'); ?>
 
 		<div class="eight columns">
 
 			<ul class="product-list">
 			
-				<?php foreach(get_field('tools') as $post_object): ?>
+				<?php for($i = 0; $i < count($tools); $i+=2):
+					
+					$post_object = $tools[$i]; ?>
 
 			
 				<li>
@@ -159,7 +163,36 @@
                     <?php endif?>
 				</li>
 				
-			<?php endforeach; ?>
+			<?php endfor; ?>
+			
+			</ul>
+		</div>
+		
+		<div class="eight columns">
+
+			<ul class="product-list">
+			
+				<?php for($i = 1; $i < count($tools); $i+=2):
+					
+					$post_object = $tools[$i]; ?>
+
+			
+				<li>
+					<a href="<?php echo get_permalink($post_object); ?>"><img class="product-icon" src="<?php if(get_field('icon', $post_object->ID)){ echo get_field('icon', $post_object->ID); } else { bloginfo('template_directory'); echo '/img/stream/product-icon.png'; }?>"></a>
+					
+					<?php if(get_field('headline', $post_object->ID)): ?>
+                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_field('headline', $post_object->ID); ?></a></h3>
+                    <?php else :?>
+                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
+                    <?php endif; ?>
+                    <?php if(get_field('one_liner', $post_object->ID)): ?>
+                        <p><?php echo get_field('one_liner', $post_object->ID)?></p>
+                    <?php else : ?>
+                        <p><?php echo get_field('strapline', $post_object->ID)?></p>
+                    <?php endif?>
+				</li>
+				
+			<?php endfor; ?>
 			
 			</ul>
 		</div>

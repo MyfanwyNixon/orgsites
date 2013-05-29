@@ -29,15 +29,3 @@ RedirectPermanent /pdfs/writetothem.pdf http://www.mysociety.org/projects/writet
 RedirectPermanent /moin.cgi/TomSteinberg http://www.mysociety.org/about-tom-steinberg/
 RedirectPermanent /more-projects http://www.mysociety.org/
 RedirectPermanent /projects/no10-petitions-website/ http://www.mysociety.org/projects/epetitions/
-
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-</IfModule>
-
-# END WordPress

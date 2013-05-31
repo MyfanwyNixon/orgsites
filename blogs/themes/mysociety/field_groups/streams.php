@@ -179,7 +179,7 @@ register_field_group(array (
         ),
       ),
       'row_limit' => '',
-      'layout' => 'table',
+      'layout' => 'row',
       'button_label' => 'Add Section',
       'order_no' => '6',
     ),

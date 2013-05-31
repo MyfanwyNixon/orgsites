@@ -60,142 +60,91 @@
 			<p><?php echo get_field('blurb'); ?></p>
 		</div>
 
-		<div class="eight columns">
+		<?php foreach (get_field('sections') as $section): ?>
 
-			<hr>
+			<?php if ($section['width'] == 'single'): ?>
 
-			<h2>Services</h2>
+				<div class="eight columns">
 
-			<p class="lead"><?php echo get_field('services_strapline'); ?></p>
-			
-			<ul class="product-list">
+					<hr>
 
-			<?php foreach(get_field('services') as $post_object): ?>
-			
-				<li>
-					<a href="<?php echo get_permalink($post_object); ?>"><img class="product-icon" src="<?php if(get_field('icon', $post_object->ID)){ echo get_field('icon', $post_object->ID); } else { bloginfo('template_directory'); echo '/img/stream/product-icon.png'; }?>"></a>
-					
-					<?php if(get_field('headline', $post_object->ID)): ?>
-                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_field('headline', $post_object->ID); ?></a></h3>
-                    <?php else :?>
-                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
-                    <?php endif; ?>
-                    <?php if(get_field('one_liner', $post_object->ID)): ?>
-                        <p><?php echo get_field('one_liner', $post_object->ID)?></p>
-                    <?php else : ?>
-                        <p><?php echo get_field('strapline', $post_object->ID)?></p>
-                    <?php endif?>
-				</li>
-				
-			<?php endforeach; ?>
-			
-			</ul>
+					<h2><?php echo $section['title']; ?></h2>
 
-		</div>
+					<p class="lead"><?php echo $section['strapline']; ?></p>
 
-		<div class="eight columns">
+					<ul class="product-list">
 
-			<hr>
+						<?php foreach($section['items'] as $item): ?>
 
-			<h2>Products</h2>
+						<li>
+							<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
+	                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
+	                        <p><?php echo $item['strapline']; ?></p>
+						</li>
 
-			<p class="lead"><?php echo get_field('products_strapline'); ?></p>
-			
-			<ul class="product-list">
-			
-			<?php foreach(get_field('products') as $post_object): ?>
+						<?php endforeach; ?>
 
-			
-				<li>
-					<a href="<?php echo get_permalink($post_object); ?>"><img class="product-icon" src="<?php if(get_field('icon', $post_object->ID)){ echo get_field('icon', $post_object->ID); } else { bloginfo('template_directory'); echo '/img/stream/product-icon.png'; }?>"></a>
-					
-					<?php if(get_field('headline', $post_object->ID)): ?>
-                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_field('headline', $post_object->ID); ?></a></h3>
-                    <?php else :?>
-                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
-                    <?php endif; ?>
-                    <?php if(get_field('one_liner', $post_object->ID)): ?>
-                        <p><?php echo get_field('one_liner', $post_object->ID)?></p>
-                    <?php else : ?>
-                        <p><?php echo get_field('strapline', $post_object->ID)?></p>
-                    <?php endif?>
-				</li>
-				
-			<?php endforeach; ?>
-				
-			</ul>
+					</ul>
 
-		</div>
+				</div>
 
-		<div class="sixteen columns">
+			<?php else if ($section['width'] == 'double'): ?>
 
-			<hr>
+				<div class="sixteen columns">
 
-			<h2>Tools</h2>
+					<hr>
 
-			<p class="lead"><?php echo get_field('tools_strapline'); ?></p>
+					<h2><?php echo $section['title']; ?></h2>
 
-		</div>
-		
-		<?php $tools = get_field('tools'); ?>
+					<p class="lead"><?php echo $section['strapline']; ?></p>
 
-		<div class="eight columns">
+				</div>
 
-			<ul class="product-list">
-			
-				<?php for($i = 0; $i < count($tools); $i+=2):
-					
-					$post_object = $tools[$i]; ?>
+				<?php $items = $section['items']; ?>
 
-			
-				<li>
-					<a href="<?php echo get_permalink($post_object); ?>"><img class="product-icon" src="<?php if(get_field('icon', $post_object->ID)){ echo get_field('icon', $post_object->ID); } else { bloginfo('template_directory'); echo '/img/stream/product-icon.png'; }?>"></a>
-					
-					<?php if(get_field('headline', $post_object->ID)): ?>
-                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_field('headline', $post_object->ID); ?></a></h3>
-                    <?php else :?>
-                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
-                    <?php endif; ?>
-                    <?php if(get_field('one_liner', $post_object->ID)): ?>
-                        <p><?php echo get_field('one_liner', $post_object->ID)?></p>
-                    <?php else : ?>
-                        <p><?php echo get_field('strapline', $post_object->ID)?></p>
-                    <?php endif?>
-				</li>
-				
-			<?php endfor; ?>
-			
-			</ul>
-		</div>
-		
-		<div class="eight columns">
+				<div class="eight columns">
 
-			<ul class="product-list">
-			
-				<?php for($i = 1; $i < count($tools); $i+=2):
-					
-					$post_object = $tools[$i]; ?>
+					<ul class="product-list">
 
-			
-				<li>
-					<a href="<?php echo get_permalink($post_object); ?>"><img class="product-icon" src="<?php if(get_field('icon', $post_object->ID)){ echo get_field('icon', $post_object->ID); } else { bloginfo('template_directory'); echo '/img/stream/product-icon.png'; }?>"></a>
-					
-					<?php if(get_field('headline', $post_object->ID)): ?>
-                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_field('headline', $post_object->ID); ?></a></h3>
-                    <?php else :?>
-                        <h3><a href="<?php echo get_permalink($post_object); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
-                    <?php endif; ?>
-                    <?php if(get_field('one_liner', $post_object->ID)): ?>
-                        <p><?php echo get_field('one_liner', $post_object->ID)?></p>
-                    <?php else : ?>
-                        <p><?php echo get_field('strapline', $post_object->ID)?></p>
-                    <?php endif?>
-				</li>
-				
-			<?php endfor; ?>
-			
-			</ul>
-		</div>
+						<?php for($i = 0; $i < count($items); $i+=2):
+
+							$item = $items[$i]; ?>
+
+
+						<li>
+							<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
+	                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
+	                        <p><?php echo $item['strapline']; ?></p>
+						</li>
+
+					<?php endfor; ?>
+
+					</ul>
+				</div>
+
+				<div class="eight columns">
+
+					<ul class="product-list">
+
+						<?php for($i = 1; $i < count($items); $i+=2):
+
+							$item = $items[$i]; ?>
+
+
+						<li>
+							<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
+	                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
+	                        <p><?php echo $item['strapline']; ?></p>
+						</li>
+
+					<?php endfor; ?>
+
+					</ul>
+				</div>
+
+			<?php endif; ?>
+
+		<?php endforeach; ?>
 
 	</div>
 

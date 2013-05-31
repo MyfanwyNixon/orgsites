@@ -1,11 +1,11 @@
 <?php
 
 register_field_group(array (
-  'id' => '51a61ebfde445',
+  'id' => '51a8855acc5b2',
   'title' => 'Streams',
-  'fields' => 
+  'fields' =>
   array (
-    0 => 
+    0 =>
     array (
       'key' => 'field_51a61953bd198',
       'label' => 'Logo Image',
@@ -17,7 +17,7 @@ register_field_group(array (
       'preview_size' => 'medium',
       'order_no' => '0',
     ),
-    1 => 
+    1 =>
     array (
       'key' => 'field_51a61953bda81',
       'label' => 'Strapline',
@@ -29,7 +29,7 @@ register_field_group(array (
       'formatting' => 'html',
       'order_no' => '1',
     ),
-    2 => 
+    2 =>
     array (
       'key' => 'field_51a61c39cd79d',
       'label' => 'Banner Background Image',
@@ -41,7 +41,7 @@ register_field_group(array (
       'preview_size' => 'medium',
       'order_no' => '2',
     ),
-    3 => 
+    3 =>
     array (
       'key' => 'field_51a61c39cddb6',
       'label' => 'Banner Button Image',
@@ -53,8 +53,9 @@ register_field_group(array (
       'preview_size' => 'medium',
       'order_no' => '3',
     ),
-    4 => 
+    4 =>
     array (
+      'key' => 'field_51a61d45a510e',
       'label' => 'Banner Button Destination',
       'name' => 'banner_button_destination',
       'type' => 'text',
@@ -62,10 +63,9 @@ register_field_group(array (
       'required' => '1',
       'default_value' => '',
       'formatting' => 'html',
-      'key' => 'field_51a61d45a510e',
       'order_no' => '4',
     ),
-    5 => 
+    5 =>
     array (
       'key' => 'field_51a61b375d4f2',
       'label' => 'Blurb',
@@ -77,138 +77,136 @@ register_field_group(array (
       'formatting' => 'html',
       'order_no' => '5',
     ),
-    6 => 
+    6 =>
     array (
-      'key' => 'field_51a61b375da85',
-      'label' => 'Services Strapline',
-      'name' => 'services_strapline',
-      'type' => 'text',
-      'instructions' => 'A short line to advertise services.',
-      'required' => '1',
-      'default_value' => '',
-      'formatting' => 'html',
+      'key' => 'field_51a8851d6ddba',
+      'label' => 'Sections',
+      'name' => 'sections',
+      'type' => 'repeater',
+      'instructions' => 'Sections to appear under the blurb.',
+      'required' => '0',
+      'sub_fields' =>
+      array (
+        0 =>
+        array (
+          'key' => 'field_51a8851d6de20',
+          'label' => 'Width',
+          'name' => 'width',
+          'type' => 'select',
+          'choices' =>
+          array (
+            'single' => 'Single Column',
+            'double' => 'Double Column',
+          ),
+          'default_value' => 'single',
+          'allow_null' => '0',
+          'multiple' => '0',
+          'order_no' => '0',
+        ),
+        1 =>
+        array (
+          'key' => 'field_51a8851d6de93',
+          'label' => 'Title',
+          'name' => 'title',
+          'type' => 'text',
+          'default_value' => '',
+          'formatting' => 'html',
+          'order_no' => '1',
+        ),
+        2 =>
+        array (
+          'key' => 'field_51a8851d6def3',
+          'label' => 'Strapline',
+          'name' => 'strapline',
+          'type' => 'text',
+          'default_value' => '',
+          'formatting' => 'html',
+          'order_no' => '2',
+        ),
+        3 =>
+        array (
+          'key' => 'field_51a8851d6df5b',
+          'label' => 'Items',
+          'name' => 'items',
+          'type' => 'repeater',
+          'sub_fields' =>
+          array (
+            0 =>
+            array (
+              'key' => 'field_51a8851d6dfc8',
+              'label' => 'Title',
+              'name' => 'title',
+              'type' => 'text',
+              'default_value' => '',
+              'formatting' => 'html',
+              'order_no' => '0',
+            ),
+            1 =>
+            array (
+              'key' => 'field_51a8851d6e030',
+              'label' => 'Strapline',
+              'name' => 'strapline',
+              'type' => 'text',
+              'default_value' => '',
+              'formatting' => 'html',
+              'order_no' => '1',
+            ),
+            2 =>
+            array (
+              'key' => 'field_51a8851d6e099',
+              'label' => 'Icon',
+              'name' => 'icon',
+              'type' => 'image',
+              'save_format' => 'url',
+              'preview_size' => 'medium',
+              'order_no' => '2',
+            ),
+            3 =>
+            array (
+              'key' => 'field_51a8851d6e101',
+              'label' => 'Destination',
+              'name' => 'destination',
+              'type' => 'text',
+              'default_value' => '',
+              'formatting' => 'none',
+              'order_no' => '3',
+            ),
+          ),
+          'row_limit' => '',
+          'layout' => 'table',
+          'button_label' => 'Add Item',
+          'order_no' => '3',
+        ),
+      ),
+      'row_limit' => '',
+      'layout' => 'table',
+      'button_label' => 'Add Section',
       'order_no' => '6',
     ),
-    7 => 
-    array (
-      'key' => 'field_51a61b375dfe8',
-      'label' => 'Services',
-      'name' => 'services',
-      'type' => 'relationship',
-      'instructions' => 'Which mySociety services relate to this stream?',
-      'required' => '1',
-      'post_type' => 
-      array (
-        0 => 'ms_project',
-        1 => 'ms_org',
-        2 => 'ms_council',
-        3 => 'ms_public',
-        4 => 'ms_volunteer',
-        5 => 'ms_international',
-      ),
-      'taxonomy' => 
-      array (
-        0 => 'all',
-      ),
-      'max' => '-1',
-      'order_no' => '7',
-    ),
-    8 => 
-    array (
-      'label' => 'Products Strapline',
-      'name' => 'products_strapline',
-      'type' => 'text',
-      'instructions' => 'A short line to advertise products.',
-      'required' => '1',
-      'default_value' => '',
-      'formatting' => 'html',
-      'key' => 'field_51a61d45a785f',
-      'order_no' => '8',
-    ),
-    9 => 
-    array (
-      'label' => 'Products',
-      'name' => 'products',
-      'type' => 'relationship',
-      'instructions' => 'Which mySociety products relate to this stream?',
-      'required' => '1',
-      'post_type' => 
-      array (
-        0 => 'ms_project',
-        1 => 'ms_org',
-        2 => 'ms_council',
-        3 => 'ms_public',
-        4 => 'ms_volunteer',
-        5 => 'ms_international',
-      ),
-      'taxonomy' => 
-      array (
-        0 => 'all',
-      ),
-      'max' => '-1',
-      'key' => 'field_51a61d45a7e02',
-      'order_no' => '9',
-    ),
-    10 => 
-    array (
-      'label' => 'Tools Strapline',
-      'name' => 'tools_strapline',
-      'type' => 'text',
-      'instructions' => 'A short line to advertise tools.',
-      'required' => '1',
-      'default_value' => '',
-      'formatting' => 'html',
-      'key' => 'field_51a61d45a83bf',
-      'order_no' => '10',
-    ),
-    11 => 
-    array (
-      'label' => 'Tools',
-      'name' => 'tools',
-      'type' => 'relationship',
-      'instructions' => 'Which mySociety tools relate to this stream?',
-      'required' => '1',
-      'post_type' => 
-      array (
-        0 => 'ms_project',
-        1 => 'ms_org',
-        2 => 'ms_council',
-        3 => 'ms_public',
-        4 => 'ms_volunteer',
-        5 => 'ms_international',
-      ),
-      'taxonomy' => 
-      array (
-        0 => 'all',
-      ),
-      'max' => '-1',
-      'key' => 'field_51a61d45a8ac5',
-      'order_no' => '11',
-    ),
   ),
-  'location' => 
+  'location' =>
   array (
-    'rules' => 
+    'rules' =>
     array (
-      0 => 
+      1 =>
       array (
         'param' => 'post_type',
         'operator' => '==',
         'value' => 'ms_stream',
-        'order_no' => '0',
+        'order_no' => '1',
       ),
     ),
     'allorany' => 'all',
   ),
-  'options' => 
+  'options' =>
   array (
     'position' => 'normal',
     'layout' => 'default',
-    'show_on_page' => 
-	array (
-	  	0 => 'slug',
-		1 => 'custom_fields',
-	)
+    'show_on_page' =>
+    array (
+      0 => 'slug',
+      1 => 'custom_fields',
+    )
   ),
   'menu_order' => 0,
 ));

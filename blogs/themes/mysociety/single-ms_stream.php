@@ -88,7 +88,7 @@
 
 				</div>
 
-			<?php else if ($section['width'] == 'double'): ?>
+			<?php elseif ($section['width'] == 'double'): ?>
 
 				<div class="sixteen columns">
 

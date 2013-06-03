@@ -10,9 +10,9 @@ if(function_exists("register_field_group"))
 register_field_group(array (
   'id' => '4fb51908266be',
   'title' => 'Team Members',
-  'fields' => 
+  'fields' =>
   array (
-    0 => 
+    0 =>
     array (
       'key' => 'field_4fb25ace1cdc2',
       'label' => 'People',
@@ -20,9 +20,9 @@ register_field_group(array (
       'type' => 'repeater',
       'instructions' => 'Add a number of team members',
       'required' => '0',
-      'sub_fields' => 
+      'sub_fields' =>
       array (
-        0 => 
+        0 =>
         array (
           'key' => 'field_4fb25ace1cdd9',
           'label' => 'Name',
@@ -32,7 +32,7 @@ register_field_group(array (
           'formatting' => 'none',
           'order_no' => '0',
         ),
-        1 => 
+        1 =>
         array (
           'label' => 'Position',
           'name' => 'position',
@@ -42,7 +42,7 @@ register_field_group(array (
           'key' => 'field_4fb4e82cb8a8f',
           'order_no' => '1',
         ),
-        2 => 
+        2 =>
         array (
           'key' => 'field_4fb25ace1cde7',
           'label' => 'Mugshot',
@@ -52,7 +52,7 @@ register_field_group(array (
           'preview_size' => 'thumbnail',
           'order_no' => '2',
         ),
-        3 => 
+        3 =>
         array (
           'key' => 'field_4fb25ace1cdf2',
           'label' => 'About',
@@ -68,12 +68,24 @@ register_field_group(array (
       'button_label' => '+ Add Team Member',
       'order_no' => '0',
     ),
-  ),
-  'location' => 
-  array (
-    'rules' => 
+    1 =>
     array (
-      1 => 
+      'key' => 'field_51a61b375d4e3',
+      'label' => 'Post-Mugshots Text',
+      'name' => 'post_team_text',
+      'type' => 'textarea',
+      'instructions' => 'Test to follow the team mugshots.',
+      'required' => '0',
+      'default_value' => '',
+      'formatting' => 'html',
+      'order_no' => '1',
+    ),
+  ),
+  'location' =>
+  array (
+    'rules' =>
+    array (
+      1 =>
       array (
         'param' => 'page_template',
         'operator' => '==',
@@ -83,11 +95,11 @@ register_field_group(array (
     ),
     'allorany' => 'all',
   ),
-  'options' => 
+  'options' =>
   array (
     'position' => 'normal',
     'layout' => 'default',
-    'show_on_page' => 
+    'show_on_page' =>
     array (
       0 => 'the_content',
       1 => 'custom_fields',

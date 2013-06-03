@@ -34,6 +34,9 @@ Template Name: Team
 		<?php endforeach ?>
     </ul>
 <?php endif ?>
+
+<?php if (get_field('post_team_text')) echo '<p>' . get_field('post_team_text') . '</p>'; ?>
+
     </article>
 </div>
 

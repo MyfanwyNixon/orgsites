@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<title><?php echo get_the_title(); ?> - mySociety</title>
 
-	<meta name="description" content="<?php echo get_field('strapline'); ?>">
+	<meta name="description" content="<?php echo get_field('meta_description'); ?>">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 

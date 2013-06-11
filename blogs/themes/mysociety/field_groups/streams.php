@@ -7,7 +7,7 @@ register_field_group(array (
   array (
     0 =>
     array (
-      'key' => 'field_51a61953bda81',
+      'key' => 'field_51a79953bda81',
       'label' => 'Meta Description',
       'name' => 'meta_description',
       'type' => 'text',

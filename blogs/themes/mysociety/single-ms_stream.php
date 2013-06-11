@@ -53,9 +53,11 @@
 				<p id="top-strapline"><?php echo get_field('strapline'); ?></p>
 			</div>
 
+			<?php if (get_field('banner_background_image') AND get_field('banner_button_destination') AND get_field('banner_button_image')): ?>
 			<div class="adbanner" style="background-image:url(<?php echo get_field('banner_background_image'); ?>)">
 				<a href="<?php echo get_field('banner_button_destination'); ?>"><img src="<?php echo get_field('banner_button_image'); ?>" style="margin:20px"></a>
 			</div>
+			<?php endif; ?>
 
 			<p><?php echo get_field('blurb'); ?></p>
 		</div>

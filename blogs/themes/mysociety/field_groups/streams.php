@@ -8,10 +8,10 @@ register_field_group(array (
     0 =>
     array (
       'key' => 'field_51a61953bda81',
-      'label' => 'Strapline',
+      'label' => 'Meta Description',
       'name' => 'meta_description',
       'type' => 'text',
-      'instructions' => 'A strapline to appear at the side of the stream logo.',
+      'instructions' => 'Text to appear in this page\'s meta description.',
       'required' => '1',
       'default_value' => '',
       'formatting' => 'html',

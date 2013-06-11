@@ -6,7 +6,9 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>mySociety Commercial</title>
+	<title><?php echo get_the_title(); ?> - mySociety</title>
+
+	<meta name="description" content="<?php echo get_field('strapline'); ?>">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -50,7 +52,7 @@
 
 			<div id="top-wrapper">
 				<p id="top-logo"><img src="<?php echo get_field('logo_image'); ?>" style="height:80px"></p>
-				<p id="top-strapline"><?php echo get_field('strapline'); ?></p>
+				<p id="top-strapline">v</p>
 			</div>
 
 			<?php if (get_field('banner_background_image') AND get_field('banner_button_destination') AND get_field('banner_button_image')): ?>

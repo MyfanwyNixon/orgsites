@@ -7,6 +7,18 @@ register_field_group(array (
   array (
     0 =>
     array (
+      'key' => 'field_51a61953bda81',
+      'label' => 'Strapline',
+      'name' => 'meta_description',
+      'type' => 'text',
+      'instructions' => 'A strapline to appear at the side of the stream logo.',
+      'required' => '1',
+      'default_value' => '',
+      'formatting' => 'html',
+      'order_no' => '0',
+    ),
+    1 =>
+    array (
       'key' => 'field_51a61953bd198',
       'label' => 'Logo Image',
       'name' => 'logo_image',
@@ -15,9 +27,9 @@ register_field_group(array (
       'required' => '1',
       'save_format' => 'url',
       'preview_size' => 'medium',
-      'order_no' => '0',
+      'order_no' => '1',
     ),
-    1 =>
+    2 =>
     array (
       'key' => 'field_51a61953bda81',
       'label' => 'Strapline',
@@ -27,9 +39,9 @@ register_field_group(array (
       'required' => '1',
       'default_value' => '',
       'formatting' => 'html',
-      'order_no' => '1',
+      'order_no' => '2',
     ),
-    2 =>
+    3 =>
     array (
       'key' => 'field_51a61c39cd79d',
       'label' => 'Banner Background Image',
@@ -39,9 +51,9 @@ register_field_group(array (
       'required' => '0',
       'save_format' => 'url',
       'preview_size' => 'medium',
-      'order_no' => '2',
+      'order_no' => '3',
     ),
-    3 =>
+    4 =>
     array (
       'key' => 'field_51a61c39cddb6',
       'label' => 'Banner Button Image',
@@ -51,9 +63,9 @@ register_field_group(array (
       'required' => '0',
       'save_format' => 'url',
       'preview_size' => 'medium',
-      'order_no' => '3',
+      'order_no' => '4',
     ),
-    4 =>
+    5 =>
     array (
       'key' => 'field_51a61d45a510e',
       'label' => 'Banner Button Destination',
@@ -63,9 +75,9 @@ register_field_group(array (
       'required' => '0',
       'default_value' => '',
       'formatting' => 'html',
-      'order_no' => '4',
+      'order_no' => '5',
     ),
-    5 =>
+    6 =>
     array (
       'key' => 'field_51a61b375d4f2',
       'label' => 'Blurb',
@@ -75,9 +87,9 @@ register_field_group(array (
       'required' => '1',
       'default_value' => '',
       'formatting' => 'html',
-      'order_no' => '5',
+      'order_no' => '6',
     ),
-    6 =>
+    7 =>
     array (
       'key' => 'field_51a8851d6ddba',
       'label' => 'Sections',
@@ -181,7 +193,7 @@ register_field_group(array (
       'row_limit' => '',
       'layout' => 'row',
       'button_label' => 'Add Section',
-      'order_no' => '6',
+      'order_no' => '7',
     ),
   ),
   'location' =>

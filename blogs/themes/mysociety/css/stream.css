@@ -127,9 +127,9 @@ hr {
 }
 
 .blurb ul {
-    margin: 20px 0;
-    list-style: disc;
-    list-style-position: inside;
+	margin: 20px 0;
+	list-style: disc;
+	list-style-position: inside;
 }
 
 ul.product-list {

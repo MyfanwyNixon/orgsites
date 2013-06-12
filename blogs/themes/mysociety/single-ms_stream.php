@@ -48,23 +48,25 @@
 	</div>
 
 	<div class="container">
-		<div class="sixteen columns">
+		<div class="row">
+			<div class="sixteen columns">
 
-			<div id="top-wrapper">
-				<p id="top-logo"><img src="<?php echo get_field('logo_image'); ?>" style="min-height:45px"></p>
-				<p id="top-strapline"><?php echo get_field('strapline'); ?></p>
-			</div>
+				<div id="top-wrapper">
+					<p id="top-logo"><img src="<?php echo get_field('logo_image'); ?>" style="min-height:45px"></p>
+					<p id="top-strapline"><?php echo get_field('strapline'); ?></p>
+				</div>
 
-			<?php if (get_field('banner_background_image') AND get_field('banner_button_destination') AND get_field('banner_button_image')): ?>
-			<div class="adbanner" style="background-image:url(<?php echo get_field('banner_background_image'); ?>)">
-				<a href="<?php echo get_field('banner_button_destination'); ?>"><img src="<?php echo get_field('banner_button_image'); ?>" style="margin:20px"></a>
-			</div>
-			<?php else: ?>
-			<hr>
-			<?php endif; ?>
+				<?php if (get_field('banner_background_image') AND get_field('banner_button_destination') AND get_field('banner_button_image')): ?>
+				<div class="adbanner" style="background-image:url(<?php echo get_field('banner_background_image'); ?>)">
+					<a href="<?php echo get_field('banner_button_destination'); ?>"><img src="<?php echo get_field('banner_button_image'); ?>" style="margin:20px"></a>
+				</div>
+				<?php else: ?>
+				<hr>
+				<?php endif; ?>
 
-			<div class="blurb">
-				<?php echo get_field('blurb'); ?>
+				<div class="blurb">
+					<?php echo get_field('blurb'); ?>
+				</div>
 			</div>
 		</div>
 
@@ -98,56 +100,62 @@
 
 			<?php elseif ($section['width'] == 'double'): ?>
 
-				<div class="sixteen columns">
+				<div class="row">
+					<div class="sixteen columns">
 
-					<hr>
+						<hr>
 
-					<h2><?php echo $section['title']; ?></h2>
+						<h2><?php echo $section['title']; ?></h2>
 
-					<p class="lead"><?php echo $section['strapline']; ?></p>
+						<p class="lead"><?php echo $section['strapline']; ?></p>
 
+					</div>
 				</div>
+
+				<div class="row">
 
 				<?php $items = $section['items']; ?>
 
-				<div class="eight columns">
+					<div class="eight columns">
 
-					<ul class="product-list">
+						<ul class="product-list">
 
-						<?php for($i = 0; $i < count($items); $i+=2):
+							<?php for($i = 0; $i < count($items); $i+=2):
 
-							$item = $items[$i]; ?>
-
-
-						<li>
-							<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
-	                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
-	                        <p><?php echo $item['strapline']; ?></p>
-						</li>
-
-					<?php endfor; ?>
-
-					</ul>
-				</div>
-
-				<div class="eight columns">
-
-					<ul class="product-list">
-
-						<?php for($i = 1; $i < count($items); $i+=2):
-
-							$item = $items[$i]; ?>
+								$item = $items[$i]; ?>
 
 
-						<li>
-							<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
-	                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
-	                        <p><?php echo $item['strapline']; ?></p>
-						</li>
+							<li>
+								<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
+		                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
+		                        <p><?php echo $item['strapline']; ?></p>
+							</li>
 
-					<?php endfor; ?>
+						<?php endfor; ?>
 
-					</ul>
+						</ul>
+					</div>
+
+					<div class="eight columns">
+
+						<ul class="product-list">
+
+							<?php for($i = 1; $i < count($items); $i+=2):
+
+								$item = $items[$i]; ?>
+
+
+							<li>
+								<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
+		                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
+		                        <p><?php echo $item['strapline']; ?></p>
+							</li>
+
+						<?php endfor; ?>
+
+						</ul>
+					</div>
+
 				</div>
 
 			<?php endif; ?>

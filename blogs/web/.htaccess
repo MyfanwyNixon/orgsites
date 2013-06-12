@@ -29,3 +29,7 @@ RedirectPermanent /pdfs/writetothem.pdf http://www.mysociety.org/projects/writet
 RedirectPermanent /moin.cgi/TomSteinberg http://www.mysociety.org/about-tom-steinberg/
 RedirectPermanent /more-projects http://www.mysociety.org/
 RedirectPermanent /projects/no10-petitions-website/ http://www.mysociety.org/projects/epetitions/
+
+RedirectPermanent /uk http://www.mysociety.org/stream/in-the-uk/
+RedirectPermanent /international http://www.mysociety.org/stream/international/
+RedirectPermanent /services http://www.mysociety.org/stream/commercial/

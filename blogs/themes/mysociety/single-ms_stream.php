@@ -61,7 +61,9 @@
 			</div>
 			<?php endif; ?>
 
-			<p><?php echo get_field('blurb'); ?></p>
+			<div class="blurb">
+				<?php echo get_field('blurb'); ?>
+			</div>
 		</div>
 
 		<?php foreach (get_field('sections') as $section): ?>

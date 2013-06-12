@@ -126,6 +126,11 @@ hr {
 	max-width: 90%;
 }
 
+.blurb ul {
+    margin: 20px 0;
+    list-style: disc;
+}
+
 ul.product-list {
 	list-style: none;
 }

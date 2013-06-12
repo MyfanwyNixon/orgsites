@@ -59,6 +59,8 @@
 			<div class="adbanner" style="background-image:url(<?php echo get_field('banner_background_image'); ?>)">
 				<a href="<?php echo get_field('banner_button_destination'); ?>"><img src="<?php echo get_field('banner_button_image'); ?>" style="margin:20px"></a>
 			</div>
+			<?php else: ?>
+			<hr>
 			<?php endif; ?>
 
 			<div class="blurb">

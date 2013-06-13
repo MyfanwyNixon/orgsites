@@ -30,6 +30,8 @@ RedirectPermanent /moin.cgi/TomSteinberg http://www.mysociety.org/about-tom-stei
 RedirectPermanent /more-projects http://www.mysociety.org/
 RedirectPermanent /projects/no10-petitions-website/ http://www.mysociety.org/projects/epetitions/
 
+RedirectMatch /commercial$ http://www.mysociety.org/services
+
 RedirectMatch /uk$ http://www.mysociety.org/stream/in-the-uk/
 RedirectMatch /international$ http://www.mysociety.org/stream/international/
-RedirectMatch /services$ http://www.mysociety.org/stream/commercial/
+RedirectMatch /services$ http://www.mysociety.org/stream/services/

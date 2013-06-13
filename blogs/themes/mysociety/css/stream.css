@@ -54,7 +54,6 @@ h3 a:hover {
 }
 
 hr {
-	height: 1px;
     border: 0;
     border-top: 1px solid #EEE;
 }
@@ -142,6 +141,10 @@ ul.product-list li {
 
 ul.product-list li p {
 	margin: 0;
+}
+
+ul.product-list li h3 {
+    padding-top: 8px;
 }
 
 .product-icon {

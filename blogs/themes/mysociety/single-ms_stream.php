@@ -61,12 +61,16 @@
 					<a href="<?php echo get_field('banner_button_destination'); ?>"><img src="<?php echo get_field('banner_button_image'); ?>" style="margin:20px"></a>
 				</div>
 				<?php else: ?>
+					<?php if (get_field('blurb')): ?>
 				<hr>
+					<?php endif; ?>
 				<?php endif; ?>
 
+				<?php if (get_field('blurb')): ?>
 				<div class="blurb">
 					<?php echo get_field('blurb'); ?>
 				</div>
+				<?php endif; ?>
 			</div>
 		</div>
 

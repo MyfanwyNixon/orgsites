@@ -84,7 +84,7 @@ register_field_group(array (
       'name' => 'blurb',
       'type' => 'textarea',
       'instructions' => 'A short one-paragraph blurb to describe this stream.',
-      'required' => '1',
+      'required' => '0',
       'default_value' => '',
       'formatting' => 'html',
       'order_no' => '6',

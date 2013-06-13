@@ -84,7 +84,9 @@
 
 					<h2><?php echo $section['title']; ?></h2>
 
+					<?php if ($section['strapline']): ?>
 					<p class="lead"><?php echo $section['strapline']; ?></p>
+					<?php endif; ?>
 
 					<ul class="product-list">
 
@@ -111,7 +113,9 @@
 
 						<h2><?php echo $section['title']; ?></h2>
 
+						<?php if ($section['strapline']): ?>
 						<p class="lead"><?php echo $section['strapline']; ?></p>
+						<?php endif; ?>
 
 					</div>
 				</div>

@@ -52,7 +52,7 @@
 			<div class="sixteen columns">
 
 				<div id="top-wrapper">
-					<p id="top-logo"><img src="<?php echo get_field('logo_image'); ?>" style="min-height:45px"></p>
+					<p id="top-logo"><img class="page-logo" src="<?php echo get_field('logo_image'); ?>"></p>
 					<p id="top-strapline"><?php echo get_field('strapline'); ?></p>
 				</div>
 

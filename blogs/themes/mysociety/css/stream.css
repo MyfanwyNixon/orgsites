@@ -111,6 +111,10 @@ hr {
 	right: 0;
 }
 
+.page-logo {
+	max-width: 100%;
+}
+
 .adbanner {
 	clear: both;
 	width: 100%;
@@ -155,7 +159,14 @@ ul.product-list li h3 {
 	margin: 0;
 }
 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 959px) {
+
+	#top-strapline {
+		position: inherit;
+	}
+}
+
+@media only screen and (max-width : 767px) {
 
 	#header-nav-button {
 		display: block;
@@ -176,10 +187,5 @@ ul.product-list li h3 {
 	#top-wrapper {
 		position: inherit;
 		text-align: center;
-	}
-
-	#top-strapline {
-		position: inherit;
-		font-size: 18px;
 	}
 }

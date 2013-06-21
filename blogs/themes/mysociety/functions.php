@@ -214,7 +214,6 @@ if ( function_exists('add_image_size') ) {
 		include 'field_groups/resources.php'; //Project reqsources
 		include 'field_groups/team_member.php';	//People
 		include 'field_groups/faq.php'; //FAQs
-                include 'field_groups/streams.php'; //Streams
 	}
 
 	//include some custom scripts for helping in page templates

@@ -12,24 +12,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><?php echo get_the_title(); ?> - mySociety</title>
-
-    <meta name="description" content="<?php echo get_field('meta_description'); ?>">
-
-    <link rel="icon" href="<?php bloginfo('template_directory'); ?>/new/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/new/apple-touch-icon-precomposed.png">
-
+    <title>mySociety</title>
+    <meta name="description" content="Thoughtful software for organisations and governments">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/new/main/css/gumby.css">
-
-    <script src="<?php bloginfo('template_directory'); ?>/new/js/libs/modernizr-2.6.2.min.js"></script>
-
-    <script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>
+    <link rel="stylesheet" href="css/gumby.css" type="text/css">
+    <script src="js/libs/modernizr-2.6.2.min.js" type="text/javascript">
+</script>
+    <script type="text/javascript" src="http://use.typekit.com/bth0qpr.js">
+</script>
     <script type="text/javascript">
-		try{Typekit.load();}catch(e){}
+try{Typekit.load();}catch(e){}
     </script>
-
 </head>
 
 <body>
@@ -59,36 +54,31 @@
         </div>
 
         <div class="row">
-            <h2><img src="<?php echo get_field('logo_image'); ?>"></h2>
+            <h2><img src="img/commercial/logo.png"></h2>
         </div>
     </div>
 
     <div class="container">
-
-    	<?php if (get_field('strapline') AND get_field('strapline_background_colour') AND get_field('strapline_text_colour')): ?>
         <div class="row">
-            <div class="twelve columns special strapline" style="color:<?php echo get_field('strapline_text_colour'); ?>;background:<?php echo get_field('strapline_background_colour'); ?>;">
-                <p><?php echo get_field('strapline'); ?></p>
+            <div class="twelve columns special strapline" style="color:#FFF;background:#986FB6;">
+                <p>We help you focus on your users' needs</p>
             </div>
         </div>
-        <?php endif; ?>
 
-        <?php if (get_field('banner_background_image') AND get_field('banner_height') AND get_field('banner_destination')): ?>
         <div class="row not-on-mobile">
-            <a href="<?php echo get_field('banner_destination'); ?>">
-            <div class="twelve columns special image-banner" style="height:<?php echo get_field('banner_height'); ?>px;background:url(<?php echo get_field('banner_background_image'); ?>);">
+            <a href="#">
+            <div class="twelve columns special image-banner" style="height:230px;background:url(img/commercial/zurich-bg.jpg);">
                 <div class="row">
                     <div class="ten columns centered">
                         <div class="row">
-                            <?php if (get_field('banner_logo')): ?>
-                            <div class="four columns valign" style="height:<?php echo get_field('banner_height'); ?>px;text-align:center;">
-                                <div><img src="<?php echo get_field('banner_logo'); ?>"></div>
+                            <div class="four columns valign" style="height:230px;text-align:center;">
+                                <div><img src="img/commercial/zurich-logo.png"></div>
                             </div>
-                            <?php endif; ?>
 
-                            <?php if (get_field('banner_strapline') AND get_field('banner_strapline_text_colour') AND get_field('banner_strapline_background_colour')): ?>
-                            <div class="eight columns" style="color:<?php echo get_field('banner_strapline_text_colour'); ?>;background:<?php echo get_field('banner_strapline_background_colour'); ?>;padding:20px 10px;">
-                                <?php echo get_field('banner_strapline'); ?>
+                            <div class="eight columns" style="color:white;background:rgba(75,140,197,0.8);padding:20px 10px;">
+                                <p class="strapline">FixMyStreet launches in Zürich</p>
+
+                                <p>Learn more...</p>
                             </div>
                         </div>
                     </div>
@@ -96,17 +86,24 @@
             </div>
             </a>
         </div>
-        <?php endif; ?>
 
-        <?php if (count(get_field('logo_banner_images')) > 0 AND get_field('logo_banner_background_colour')): ?>
         <div class="row not-on-mobile">
-            <div class="twelve columns" style="text-align:center;background:<?php echo get_field('logo_banner_background_colour'); ?>;">
-                <?php foreach (get_field('logo_banner_images') as $logo_banner_image): ?>
-                <img src="<?php echo $logo_banner_image['image']; ?>">
-                <?php endforeach; ?>
+            <div class="twelve columns" style="text-align:center;background:#785690;">
+                <div class="row">
+                    <div class="two columns"><img src="img/commercial/logos/channel4.png"></div>
+
+                    <div class="two columns"><img src="img/commercial/logos/nhs.png"></div>
+
+                    <div class="two columns"><img src="img/commercial/logos/which.png"></div>
+
+                    <div class="two columns"><img src="img/commercial/logos/bromley.png"></div>
+
+                    <div class="two columns"><img src="img/commercial/logos/barnet.png"></div>
+
+                    <div class="two columns"><img src="img/commercial/logos/worldbank.png"></div>
+                </div>
             </div>
         </div>
-        <?php endif; ?>
 
         <div class="row">
             <div class="four columns special itemlist">
@@ -206,14 +203,13 @@
             </div>
         </div>
 
-        <?php if (get_field('cta_background_colour') AND get_field('cta_text')): ?>
         <div class="row">
-            <div class="twelve columns special cta" style="background:<?php echo get_field('cta_background_colour'); ?>;">
-                <?php echo get_field('cta_text'); ?>
+            <div class="twelve columns special cta" style="background:#DAD1E0;">
+                <p>Talk to us about working for you:</p>
+
+                <p class="action">Call +44 (0) 000 0000 or email <a href="mailto:commercial@mysociety.org">commercial@mysociety.org</a></p>
             </div>
         </div>
-        <?php endif; ?>
-
     </div>
 
     <div class="container special footer">
@@ -265,187 +261,5 @@ window._gaq = [['_setAccount','UA-660910-12'],['_trackPageview'],['_trackPageLoa
     });
 
     </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div id="header-bar">
-		<div class="container">
-			<div class="sixteen columns">
-				<div id="header-tab">
-					<a href="http://mysociety.org"><img src="<?php bloginfo('template_directory'); ?>/img/stream/mysociety_header-logo.png"></a>
-				</div>
-				<div id="header-nav-button">
-					<a href="#"><i class="icon-reorder"></i> Menu</a>
-				</div>
-				<div id="header-nav">
-					<ul>
-						<li><a href="http://www.mysociety.org/about/">About</a></li>
-						<li><a href="http://www.mysociety.org/blog/">Blog</a></li>
-						<li><a href="http://www.mysociety.org/contact/">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="sixteen columns">
-
-				<div id="top-wrapper">
-					<p id="top-logo"><img class="page-logo" src="<?php echo get_field('logo_image'); ?>"></p>
-					<p id="top-strapline"><?php echo get_field('strapline'); ?></p>
-				</div>
-
-				<?php if (get_field('banner_background_image') AND get_field('banner_button_destination') AND get_field('banner_button_image')): ?>
-				<div class="adbanner" style="background-image:url(<?php echo get_field('banner_background_image'); ?>)">
-					<a href="<?php echo get_field('banner_button_destination'); ?>"><img src="<?php echo get_field('banner_button_image'); ?>" style="margin:20px"></a>
-				</div>
-				<?php else: ?>
-					<?php if (get_field('blurb')): ?>
-				<hr>
-					<?php endif; ?>
-				<?php endif; ?>
-
-				<?php if (get_field('blurb')): ?>
-				<div class="blurb">
-					<?php echo get_field('blurb'); ?>
-				</div>
-				<?php endif; ?>
-			</div>
-		</div>
-
-		<?php foreach (get_field('sections') as $section): ?>
-
-			<?php if ($section['width'] == 'single'): ?>
-
-				<div class="eight columns">
-
-					<hr>
-
-					<h2><?php echo $section['title']; ?></h2>
-
-					<?php if ($section['strapline']): ?>
-					<p class="lead"><?php echo $section['strapline']; ?></p>
-					<?php endif; ?>
-
-					<ul class="product-list">
-
-						<?php foreach($section['items'] as $item): ?>
-
-						<li>
-							<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
-	                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
-	                        <p><?php echo $item['strapline']; ?></p>
-						</li>
-
-						<?php endforeach; ?>
-
-					</ul>
-
-				</div>
-
-			<?php elseif ($section['width'] == 'double'): ?>
-
-				<div class="row">
-					<div class="sixteen columns">
-
-						<hr>
-
-						<h2><?php echo $section['title']; ?></h2>
-
-						<?php if ($section['strapline']): ?>
-						<p class="lead"><?php echo $section['strapline']; ?></p>
-						<?php endif; ?>
-
-					</div>
-				</div>
-
-				<div class="row">
-
-				<?php $items = $section['items']; ?>
-
-					<div class="eight columns">
-
-						<ul class="product-list">
-
-							<?php for($i = 0; $i < count($items); $i+=2):
-
-								$item = $items[$i]; ?>
-
-
-							<li>
-								<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
-		                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
-		                        <p><?php echo $item['strapline']; ?></p>
-							</li>
-
-						<?php endfor; ?>
-
-						</ul>
-					</div>
-
-					<div class="eight columns">
-
-						<ul class="product-list">
-
-							<?php for($i = 1; $i < count($items); $i+=2):
-
-								$item = $items[$i]; ?>
-
-
-							<li>
-								<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
-		                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
-		                        <p><?php echo $item['strapline']; ?></p>
-							</li>
-
-						<?php endfor; ?>
-
-						</ul>
-					</div>
-
-				</div>
-
-			<?php endif; ?>
-
-		<?php endforeach; ?>
-
-	</div>
-
-	<script type="text/javascript">
-
-	$(function() {
-		$('#header-nav-button a').click(function() {
-			$('#header-nav').toggle();
-		});
-	});
-
-	</script>
-
 </body>
 </html>

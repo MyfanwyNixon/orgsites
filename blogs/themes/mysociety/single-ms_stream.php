@@ -86,8 +86,8 @@
                                 </div>
                                 <?php endif; ?>
 
-                                <?php if (get_field('banner_strapline') AND get_field('banner_strapline_text_colour') AND get_field('banner_strapline_background_colour')): ?>
-                                <div class="eight columns" style="color:<?php echo get_field('banner_strapline_text_colour'); ?>;background:<?php echo get_field('banner_strapline_background_colour'); ?>;padding:20px 10px;">
+                                <?php if (get_field('banner_strapline') AND get_field('banner_strapline_text_colour') AND get_field('banner_strapline_background_fallback_colour') AND get_field('banner_strapline_background_colour')): ?>
+                                <div class="eight columns" style="color:<?php echo get_field('banner_strapline_text_colour'); ?>;background:<?php echo get_field('banner_strapline_background_fallback_colour'); ?>;background:<?php echo get_field('banner_strapline_background_colour'); ?>;padding:20px 10px;">
                                     <?php echo get_field('banner_strapline'); ?>
                                 </div>
                                 <?php endif; ?>

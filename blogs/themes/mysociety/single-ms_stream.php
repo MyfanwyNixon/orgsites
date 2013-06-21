@@ -48,7 +48,7 @@
                     <ul>
                         <li><a href="http://www.mysociety.org/about/">About</a></li>
 
-                        <li><a href="http://www.mysociety.org/projects/">Projects</a></li>
+                        <!--<li><a href="http://www.mysociety.org/projects/">Projects</a></li>-->
 
                         <li><a href="http://www.mysociety.org/blog/">Blog</a></li>
 

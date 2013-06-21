@@ -35,7 +35,7 @@
       <div class="eight columns special head">
         <nav class="greylinks main-nav">
           <ul>
-            <li><a href="http://www.mysociety.org/projects">Projects</a></li>
+            <!--<li><a href="http://www.mysociety.org/projects">Projects</a></li>-->
             <li><a href="http://www.mysociety.org/contact">Contact</a></li>
             <li><a href="http://www.mysociety.org/blog">Blog</a></li>
             <li><a href="http://www.mysociety.org/about">About</a></li>
@@ -60,7 +60,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/home/uk.png"></p>
+        <p class="home-img hide-on-mobile"><a href="uk"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/home/uk.png"></a></p>
 
         <div class="blocklink"><a href="uk">
           <div class="blocklink-top blocklink-red">&nbsp;</div>
@@ -74,7 +74,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/home/international.png"></p>
+        <p class="home-img hide-on-mobile"><a href="international"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/home/international.png"></a></p>
 
         <div class="blocklink"><a href="international">
           <div class="blocklink-top blocklink-blue">&nbsp;</div>
@@ -88,7 +88,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/home/products.png"></p>
+        <p class="home-img hide-on-mobile"><a href="services"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/home/products.png"></a></p>
 
         <div class="blocklink"><a href="services">
           <div class="blocklink-top blocklink-purple">&nbsp;</div>

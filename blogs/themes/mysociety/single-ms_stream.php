@@ -27,7 +27,7 @@
 
     <script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>
     <script type="text/javascript">
-		try{Typekit.load();}catch(e){}
+        try{Typekit.load();}catch(e){}
     </script>
 
 </head>
@@ -37,7 +37,7 @@
         <div class="row">
             <div class="twelve columns">
                 <div class="ms-tab">
-                    <a href="http://mysociety.org"><img src="img/ms-tab-logo.png"></a>
+                    <a href="http://mysociety.org"><img src="<?php bloginfo('template_directory'); ?>/new/main/img/ms-tab-logo.png"></a>
                 </div>
 
                 <div class="menu-link">
@@ -65,7 +65,7 @@
 
     <div class="container">
 
-    	<?php if (get_field('strapline') AND get_field('strapline_background_colour') AND get_field('strapline_text_colour')): ?>
+        <?php if (get_field('strapline') AND get_field('strapline_background_colour') AND get_field('strapline_text_colour')): ?>
         <div class="row">
             <div class="twelve columns special strapline" style="color:<?php echo get_field('strapline_text_colour'); ?>;background:<?php echo get_field('strapline_background_colour'); ?>;">
                 <p><?php echo get_field('strapline'); ?></p>
@@ -76,7 +76,7 @@
         <?php if (get_field('banner_background_image') AND get_field('banner_height') AND get_field('banner_destination')): ?>
         <div class="row not-on-mobile">
             <a href="<?php echo get_field('banner_destination'); ?>">
-            <div class="twelve columns special image-banner" style="height:<?php echo get_field('banner_height'); ?>px;background:url(<?php echo get_field('banner_background_image'); ?>);">
+            <div class="twelve columns special image-banner" style="height:<?php echo get_field('banner_height'); ?>px;background:<?php echo get_field('banner_background_colour'); ?> url(<?php echo get_field('banner_background_image'); ?>);">
                 <div class="row">
                     <div class="ten columns centered">
                         <div class="row">
@@ -90,6 +90,7 @@
                             <div class="eight columns" style="color:<?php echo get_field('banner_strapline_text_colour'); ?>;background:<?php echo get_field('banner_strapline_background_colour'); ?>;padding:20px 10px;">
                                 <?php echo get_field('banner_strapline'); ?>
                             </div>
+                <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -109,101 +110,90 @@
         <?php endif; ?>
 
         <div class="row">
-            <div class="four columns special itemlist">
-                <h3>Services</h3>
 
-                <p class="lead">Our knowledge, at your disposal</p>
+            <?php $rowtotal = 0; ?>
 
-                <ul>
-                    <li>
-                        <a href="#"><img class="product-icon" src="img/blankcircle.png"></a>
+            <?php foreach (get_field('list_sections') as $section): ?>
 
-                        <h4><a href="#">Consulting</a></h4>
+                <?php
 
-                        <p>How to make all the right digital decisions</p>
-                    </li>
+                switch ($section['width']) {
 
-                    <li>
-                        <a href="#"><img class="product-icon" src="img/blankcircle.png"></a>
+                    case 'four':
 
-                        <h4><a href="#">Web &amp; Mobile Development</a></h4>
+                        $width = 4;
+                        $cols = 1;
+                        $subcolwidth = 'twelve';
+                        break;
 
-                        <p>We make your online offerings sing</p>
-                    </li>
+                    case 'eight':
 
-                    <li>
-                        <a href="#"><img class="product-icon" src="img/blankcircle.png"></a>
+                        $width = 8;
+                        $cols = 2;
+                        $subcolwidth = 'six';
+                        break;
 
-                        <h4><a href="#">Data Visualisation</a></h4>
+                    case 'twelve':
 
-                        <p>Present your complex truth simply digital</p>
-                    </li>
-                </ul>
-            </div>
+                        $width = 12;
+                        $cols = 3;
+                        $subcolwidth = 'four';
+                        break;
+                }
 
-            <div class="four columns special itemlist">
-                <h3>Products</h3>
+                // Catch any overrunning rows and skip them down
 
-                <p class="lead">Manage your customer contact with the human touch</p>
+                $rowtotal += $width;
 
-                <ul>
-                    <li>
-                        <a href="#"><img class="product-icon" src="img/blankcircle.png"></a>
+                if ($rowtotal > 12) {
+                    echo '</div><div class="row">';
+                    $rowtotal = $width;
+                }
 
-                        <h4><a href="#">FixMyStreet</a></h4>
+                ?>
 
-                        <p>How to make all the right digital decisions</p>
-                    </li>
+                <div class="<?php echo $section['width']; ?> columns special itemlist">
 
-                    <li>
-                        <a href="#"><img class="product-icon" src="img/blankcircle.png"></a>
+                    <?php if ($section['title']): ?>
+                    <h3><?php echo $section['title']; ?></h3>
+                    <?php endif; ?>
 
-                        <h4><a href="#">WhatDoTheyKnow</a></h4>
+                    <?php if ($section['lead_text']): ?>
+                    <p class="lead"><?php echo $section['lead_text']; ?></p>
+                    <?php endif; ?>
 
-                        <p>We make your online offerings sing</p>
-                    </li>
+                    <div class="row">
 
-                    <li>
-                        <a href="#"><img class="product-icon" src="img/blankcircle.png"></a>
+                        <?php for ($i = 0; $i < $cols; $i++): ?>
 
-                        <h4><a href="#">ePetitions</a></h4>
+                        <div class="<?php echo $subcolwidth; ?> columns">
 
-                        <p>Present your complex truth simply digital</p>
-                    </li>
-                </ul>
-            </div>
+                            <ul>
 
-            <div class="four columns special itemlist">
-                <h3>Tools</h3>
+                                <?php for ($j = $i; $j < count($section['items']); $j+=$cols):
+                                $item = $section['items'][$j]; ?>
 
-                <p class="lead">Other exceptionally useful stuff for organisations and governments</p>
+                                <li>
+                                    <a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon'] ? $item['icon'] : bloginfo('template_directory') . '/new/main/img/product-icon.png'; ?>"></a>
+                                    <div class="product-inset">
+                                        <h4><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h4>
 
-                <ul>
-                    <li>
-                        <a href="#"><img class="product-icon" src="img/blankcircle.png"></a>
+                                        <p><?php echo $item['text']; ?></p>
+                                    </div>
+                                </li>
 
-                        <h4><a href="#">MapIt</a></h4>
+                                <?php endfor; ?>
 
-                        <p>How to make all the right digital decisions</p>
-                    </li>
+                            </ul>
 
-                    <li>
-                        <a href="#"><img class="product-icon" src="img/blankcircle.png"></a>
+                        </div>
+                        <?php endfor; ?>
 
-                        <h4><a href="#">APIs and Feeds</a></h4>
+                    </div>
+                </div>
 
-                        <p>We make your online offerings sing</p>
-                    </li>
+            <?php endforeach; ?>
 
-                    <li>
-                        <a href="#"><img class="product-icon" src="img/blankcircle.png"></a>
-
-                        <h4><a href="#">Pledgebank</a></h4>
-
-                        <p>Present your complex truth simply digital</p>
-                    </li>
-                </ul>
-            </div>
         </div>
 
         <?php if (get_field('cta_background_colour') AND get_field('cta_text')): ?>
@@ -238,22 +228,29 @@
                 <p>mySociety limited (05798215) is a project of UK Citizens Online Democracy (UKCOD) a registered charity in England and Wales, charity number 1076346, company number 03277032.</p>
             </div>
         </div>
-    </div><!-- Grab Google CDN's jQuery, fall back to local if offline -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript">
-</script><script type="text/javascript">
-window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')
-    </script><script src="js/libs/gumby.min.js" type="text/javascript">
-</script><script src="js/plugins.js" type="text/javascript">
-</script><script src="js/main.js" type="text/javascript">
-</script><script type="text/javascript">
-window._gaq = [['_setAccount','UA-660910-12'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-    </script><!--[if lt IE 7 ]>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/new/js/libs/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+    <script src="<?php bloginfo('template_directory'); ?>/new/js/libs/gumby.min.js" type="text/javascript"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/new/js/plugins.js" type="text/javascript"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/new/js/main.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        window._gaq = [['_setAccount','UA-660910-12'],['_trackPageview'],['_trackPageLoadTime']];
+        Modernizr.load({
+          load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+        });
+    </script>
+
+    <!--[if lt IE 7 ]>
     <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
+    <![endif]-->
+
     <script type="text/javascript">
 
     var menuIn = false;
@@ -265,187 +262,6 @@ window._gaq = [['_setAccount','UA-660910-12'],['_trackPageview'],['_trackPageLoa
     });
 
     </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div id="header-bar">
-		<div class="container">
-			<div class="sixteen columns">
-				<div id="header-tab">
-					<a href="http://mysociety.org"><img src="<?php bloginfo('template_directory'); ?>/img/stream/mysociety_header-logo.png"></a>
-				</div>
-				<div id="header-nav-button">
-					<a href="#"><i class="icon-reorder"></i> Menu</a>
-				</div>
-				<div id="header-nav">
-					<ul>
-						<li><a href="http://www.mysociety.org/about/">About</a></li>
-						<li><a href="http://www.mysociety.org/blog/">Blog</a></li>
-						<li><a href="http://www.mysociety.org/contact/">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="sixteen columns">
-
-				<div id="top-wrapper">
-					<p id="top-logo"><img class="page-logo" src="<?php echo get_field('logo_image'); ?>"></p>
-					<p id="top-strapline"><?php echo get_field('strapline'); ?></p>
-				</div>
-
-				<?php if (get_field('banner_background_image') AND get_field('banner_button_destination') AND get_field('banner_button_image')): ?>
-				<div class="adbanner" style="background-image:url(<?php echo get_field('banner_background_image'); ?>)">
-					<a href="<?php echo get_field('banner_button_destination'); ?>"><img src="<?php echo get_field('banner_button_image'); ?>" style="margin:20px"></a>
-				</div>
-				<?php else: ?>
-					<?php if (get_field('blurb')): ?>
-				<hr>
-					<?php endif; ?>
-				<?php endif; ?>
-
-				<?php if (get_field('blurb')): ?>
-				<div class="blurb">
-					<?php echo get_field('blurb'); ?>
-				</div>
-				<?php endif; ?>
-			</div>
-		</div>
-
-		<?php foreach (get_field('sections') as $section): ?>
-
-			<?php if ($section['width'] == 'single'): ?>
-
-				<div class="eight columns">
-
-					<hr>
-
-					<h2><?php echo $section['title']; ?></h2>
-
-					<?php if ($section['strapline']): ?>
-					<p class="lead"><?php echo $section['strapline']; ?></p>
-					<?php endif; ?>
-
-					<ul class="product-list">
-
-						<?php foreach($section['items'] as $item): ?>
-
-						<li>
-							<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
-	                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
-	                        <p><?php echo $item['strapline']; ?></p>
-						</li>
-
-						<?php endforeach; ?>
-
-					</ul>
-
-				</div>
-
-			<?php elseif ($section['width'] == 'double'): ?>
-
-				<div class="row">
-					<div class="sixteen columns">
-
-						<hr>
-
-						<h2><?php echo $section['title']; ?></h2>
-
-						<?php if ($section['strapline']): ?>
-						<p class="lead"><?php echo $section['strapline']; ?></p>
-						<?php endif; ?>
-
-					</div>
-				</div>
-
-				<div class="row">
-
-				<?php $items = $section['items']; ?>
-
-					<div class="eight columns">
-
-						<ul class="product-list">
-
-							<?php for($i = 0; $i < count($items); $i+=2):
-
-								$item = $items[$i]; ?>
-
-
-							<li>
-								<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
-		                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
-		                        <p><?php echo $item['strapline']; ?></p>
-							</li>
-
-						<?php endfor; ?>
-
-						</ul>
-					</div>
-
-					<div class="eight columns">
-
-						<ul class="product-list">
-
-							<?php for($i = 1; $i < count($items); $i+=2):
-
-								$item = $items[$i]; ?>
-
-
-							<li>
-								<a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon']; ?>"></a>
-		                        <h3><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h3>
-		                        <p><?php echo $item['strapline']; ?></p>
-							</li>
-
-						<?php endfor; ?>
-
-						</ul>
-					</div>
-
-				</div>
-
-			<?php endif; ?>
-
-		<?php endforeach; ?>
-
-	</div>
-
-	<script type="text/javascript">
-
-	$(function() {
-		$('#header-nav-button a').click(function() {
-			$('#header-nav').toggle();
-		});
-	});
-
-	</script>
 
 </body>
 </html>

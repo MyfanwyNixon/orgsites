@@ -50,13 +50,13 @@ $blocklink-offset: 3;
 }
 
 .special.strapline {
-	padding: 20px 0;
+	padding: 20px 10px;
 }
 
 .special.strapline p {
 	@include font-size($larger);
 	text-align: center;
-	margin: 0 10px;
+	margin: 0;
 }
 
 .special.strapline a {
@@ -113,10 +113,17 @@ $blocklink-offset: 3;
 
 .special.itemlist .product-icon {
 	float: left;
+	height: 80px;
+	width: 80px;
+}
+
+.special.itemlist .product-inset {
+	padding-left: 80px;
 }
 
 .special.cta {
-	padding: 20px 0;
+	margin: 25px 0;
+	padding: 20px 5px;
 }
 
 .special.cta p {
@@ -169,15 +176,15 @@ $blocklink-offset: 3;
 		display: block;
 		margin: 15px 0;
 	}
-	
+
 	.special.strapline p {
 		@include font-size($larger);
 	}
-	
+
 	.special.itemlist p.lead {
 		min-height: inherit;
 	}
-	
+
 	.special.cta p {
 		@include font-size($med);
 	}

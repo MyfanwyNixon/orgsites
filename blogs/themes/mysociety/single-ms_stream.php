@@ -75,27 +75,27 @@
 
         <?php if (get_field('banner_background_image') AND get_field('banner_height') AND get_field('banner_destination')): ?>
         <div class="row not-on-mobile">
-            <a href="<?php echo get_field('banner_destination'); ?>">
             <div class="twelve columns special image-banner" style="height:<?php echo get_field('banner_height'); ?>px;background:<?php echo get_field('banner_background_colour'); ?> url(<?php echo get_field('banner_background_image'); ?>);">
-                <div class="row">
-                    <div class="ten columns centered">
-                        <div class="row">
-                            <?php if (get_field('banner_logo')): ?>
-                            <div class="four columns valign" style="height:<?php echo get_field('banner_height'); ?>px;text-align:center;">
-                                <div><img src="<?php echo get_field('banner_logo'); ?>"></div>
-                            </div>
-                            <?php endif; ?>
+                <a href="<?php echo get_field('banner_destination'); ?>">
+                    <div class="row">
+                        <div class="ten columns centered">
+                            <div class="row">
+                                <?php if (get_field('banner_logo')): ?>
+                                <div class="four columns valign" style="height:<?php echo get_field('banner_height'); ?>px;text-align:center;">
+                                    <div><img src="<?php echo get_field('banner_logo'); ?>"></div>
+                                </div>
+                                <?php endif; ?>
 
-                            <?php if (get_field('banner_strapline') AND get_field('banner_strapline_text_colour') AND get_field('banner_strapline_background_colour')): ?>
-                            <div class="eight columns" style="color:<?php echo get_field('banner_strapline_text_colour'); ?>;background:<?php echo get_field('banner_strapline_background_colour'); ?>;padding:20px 10px;">
-                                <?php echo get_field('banner_strapline'); ?>
+                                <?php if (get_field('banner_strapline') AND get_field('banner_strapline_text_colour') AND get_field('banner_strapline_background_colour')): ?>
+                                <div class="eight columns" style="color:<?php echo get_field('banner_strapline_text_colour'); ?>;background:<?php echo get_field('banner_strapline_background_colour'); ?>;padding:20px 10px;">
+                                    <?php echo get_field('banner_strapline'); ?>
+                                </div>
+                                <?php endif; ?>
                             </div>
-                <?php endif; ?>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-            </a>
         </div>
         <?php endif; ?>
 

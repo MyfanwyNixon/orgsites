@@ -1,17 +1,17 @@
 <footer class="footer">
-	<section>		
+	<section>
 		<nav id="footer_links">
 			<ul>
 				<li><a class="logo" href="<?php echo get_bloginfo( 'url', 'raw' ); ?>">mySociety</a></li>
 				<?php wp_nav_menu(array('menu' => 'footer_menu')); ?>
 			</ul>
 		</nav>
-		
+
 		<div id="footer_blurb">
 			<p>We build websites that give the public simple, tangible ways to connect with and improve their society. As well as offering tools directly to the public we provide integration and development services for local authorities, corporates and government. As a UK Charity our own work has a national focus but our vision is global,  we open source our projects and encourage international adaptation.</p>
-			
+
 		</div>
-		
+
 	</section>
   <p class="charity_number"><a href="/privacy">Privacy and cookies</a></p>
 	<p class="charity_number"><strong>mySociety</strong> limited (<strong>05798215</strong>) is a project of <strong>UK Citizens Online Democracy</strong> (<abbr title="UK Citizens Online Democracy">UKCOD</abbr>) a registered charity in England and Wales, charity number <strong>1076346</strong>, company number <strong>03277032</strong>.</p>
@@ -42,6 +42,18 @@
       })();
     </script>
     <?php } ?>
-	
+
+    <script type="text/javascript">
+
+    var menuIn = false;
+
+    $(function() {
+        $('.menu-link a').click(function() {
+            $('.header nav').toggle();
+        });
+    });
+
+    </script>
+
 </body>
 </html>

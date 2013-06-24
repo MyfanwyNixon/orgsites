@@ -2,7 +2,7 @@
 <!-- --><html lang="en-gb" class="no-js"><![endif]-->
 <head>
 	<meta charset="UTF-8">
-	
+
 	<meta name="creator" content="http://www.mysociety.org/">
 	<meta http-equiv="imagetoolbar" content="false">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,7 +12,7 @@
 			<meta name="description" content="<?php echo get_field('meta_description'); ?>">
 		<?php endif; ?>
 	<?php endif; ?>
-	
+
 	<title><?php
 	        if ( is_single() ) { single_post_title(); }
 	        elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); }
@@ -25,6 +25,7 @@
 	?></title>
 	<!--[if !IE]><!--><noscript><link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'></noscript><!-- <![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen, print" charset="utf-8">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/new/new-header.css" type="text/css" media="screen, print" charset="utf-8">
 	<!--[if lte IE 8]><link rel="stylesheet" href="/wp-content/themes/mysociety/ie.css" type="text/css" media="screen, print" charset="utf-8"><![endif]-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/print.css" type="text/css" media="print" charset="utf-8">
 
@@ -47,6 +48,6 @@ if (is_front_page()) {
 	</header>
 <?
 } else {
-	get_template_part('logo');
+	get_template_part('header-bar');
 }
 

@@ -96,7 +96,7 @@
           Products &amp; Consulting
         </a></div>
 
-        <p class="hide-on-mobile">Take advantage of our talents and knowledge, supporting a good cause in the process.</p>
+        <p class="hide-on-mobile">Software that helps you cut your costs, simplify your processes, and delight your users.</p>
 
       </div>
 

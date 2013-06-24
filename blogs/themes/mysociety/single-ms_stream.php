@@ -63,19 +63,22 @@
         </div>
     </div>
 
-    <div class="container">
+    <?php if (get_field('strapline') AND get_field('strapline_background_colour') AND get_field('strapline_text_colour')): ?>
+    <div class="container special strapline" style="color:<?php echo get_field('strapline_text_colour'); ?>;background:<?php echo get_field('strapline_background_colour'); ?>;">
 
-        <?php if (get_field('strapline') AND get_field('strapline_background_colour') AND get_field('strapline_text_colour')): ?>
         <div class="row">
-            <div class="twelve columns special strapline" style="color:<?php echo get_field('strapline_text_colour'); ?>;background:<?php echo get_field('strapline_background_colour'); ?>;">
+            <div class="twelve columns">
                 <p><?php echo get_field('strapline'); ?></p>
             </div>
         </div>
-        <?php endif; ?>
 
-        <?php if (get_field('banner_background_image') AND get_field('banner_height') AND get_field('banner_destination')): ?>
+    </div>
+    <?php endif; ?>
+
+    <?php if (get_field('banner_background_image') AND get_field('banner_height') AND get_field('banner_destination')): ?>
+    <div class="container special image-banner" style="height:<?php echo get_field('banner_height'); ?>px;background:<?php echo get_field('banner_background_colour'); ?> url(<?php echo get_field('banner_background_image'); ?>) center;">
         <div class="row not-on-mobile">
-            <div class="twelve columns special image-banner" style="height:<?php echo get_field('banner_height'); ?>px;background:<?php echo get_field('banner_background_colour'); ?> url(<?php echo get_field('banner_background_image'); ?>);">
+            <div class="twelve columns">
                 <a href="<?php echo get_field('banner_destination'); ?>">
                     <div class="row">
                         <div class="ten columns centered">
@@ -97,18 +100,22 @@
                 </a>
             </div>
         </div>
-        <?php endif; ?>
+    </div>
+    <?php endif; ?>
 
-        <?php if (count(get_field('logo_banner_images')) > 0 AND get_field('logo_banner_background_colour')): ?>
+    <?php if (count(get_field('logo_banner_images')) > 0 AND get_field('logo_banner_background_colour')): ?>
+    <div class="container" style="background:<?php echo get_field('logo_banner_background_colour'); ?>;">
         <div class="row not-on-mobile">
-            <div class="twelve columns" style="text-align:center;background:<?php echo get_field('logo_banner_background_colour'); ?>;">
+            <div class="twelve columns" style="text-align:center;">
                 <?php foreach (get_field('logo_banner_images') as $logo_banner_image): ?>
                 <img src="<?php echo $logo_banner_image['image']; ?>">
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php endif; ?>
+    </div>
+    <?php endif; ?>
 
+    <div class="container">
         <div class="row">
 
             <?php $rowtotal = 0; ?>
@@ -195,16 +202,17 @@
             <?php endforeach; ?>
 
         </div>
+    </div>
 
-        <?php if (get_field('cta_background_colour') AND get_field('cta_text')): ?>
+    <?php if (get_field('cta_background_colour') AND get_field('cta_text')): ?>
+    <div class="container special cta" style="background:<?php echo get_field('cta_background_colour'); ?>;">
         <div class="row">
-            <div class="twelve columns special cta" style="background:<?php echo get_field('cta_background_colour'); ?>;">
+            <div class="twelve columns">
                 <?php echo get_field('cta_text'); ?>
             </div>
         </div>
-        <?php endif; ?>
-
     </div>
+    <?php endif; ?>
 
     <div class="container special footer">
         <div class="row">

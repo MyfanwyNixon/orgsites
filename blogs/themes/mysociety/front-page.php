@@ -20,7 +20,7 @@
 
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/new/home/css/gumby.css">
 
-  <script src="<?php bloginfo('template_directory'); ?>/new/home/js/libs/modernizr-2.6.2.min.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/new/js/libs/modernizr-2.6.2.min.js"></script>
 
 </head>
 

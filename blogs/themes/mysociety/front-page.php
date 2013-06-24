@@ -13,14 +13,14 @@
   <title>mySociety</title>
   <meta name="description" content="Thoughtful software for organisations and governments">
 
-  <link rel="icon" href="<?php bloginfo('template_directory'); ?>/new-home/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/new-home/apple-touch-icon-precomposed.png">
+  <link rel="icon" href="<?php bloginfo('template_directory'); ?>/new/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/new/apple-touch-icon-precomposed.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/new-home/css/gumby.css">
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/new/home/css/gumby.css">
 
-  <script src="<?php bloginfo('template_directory'); ?>/new-home/js/libs/modernizr-2.6.2.min.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/new/home/js/libs/modernizr-2.6.2.min.js"></script>
 
 </head>
 
@@ -30,7 +30,7 @@
 
     <div class="row">
       <div class="four columns special head">
-        <h1><a href="#" onclick="toggleMenu();" class="menu-toggle only-on-mobile"><i class="icon-menu"></i></a><a href="http://www.mysociety.org"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/mysoc-logo.png" gumby-retina style="width:198px;height:41px;"></a></h1>
+        <h1><a href="#" onclick="toggleMenu();" class="menu-toggle only-on-mobile"><i class="icon-menu"></i></a><a href="http://www.mysociety.org"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/mysoc-logo.png" gumby-retina style="width:198px;height:41px;"></a></h1>
       </div>
       <div class="eight columns special head">
         <nav class="greylinks main-nav">
@@ -60,7 +60,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><a href="uk"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/home/uk.png"></a></p>
+        <p class="home-img hide-on-mobile"><a href="uk"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/uk.png"></a></p>
 
         <div class="blocklink"><a href="uk">
           <div class="blocklink-top blocklink-red">&nbsp;</div>
@@ -74,7 +74,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><a href="international"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/home/international.png"></a></p>
+        <p class="home-img hide-on-mobile"><a href="international"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/international.png"></a></p>
 
         <div class="blocklink"><a href="international">
           <div class="blocklink-top blocklink-blue">&nbsp;</div>
@@ -88,7 +88,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><a href="services"><img src="<?php bloginfo('template_directory'); ?>/new-home/img/home/products.png"></a></p>
+        <p class="home-img hide-on-mobile"><a href="services"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/products.png"></a></p>
 
         <div class="blocklink"><a href="services">
           <div class="blocklink-top blocklink-purple">&nbsp;</div>
@@ -121,11 +121,11 @@
 
   <!-- Grab Google CDN's jQuery, fall back to local if offline -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/new-home/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/new/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
 
-  <script src="<?php bloginfo('template_directory'); ?>/new-home/js/libs/gumby.min.js"></script>
-  <script src="<?php bloginfo('template_directory'); ?>/new-home/js/plugins.js"></script>
-  <script src="<?php bloginfo('template_directory'); ?>/new-home/js/main.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/new/js/libs/gumby.min.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/new/js/plugins.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/new/js/main.js"></script>
 
   <script>
     window._gaq = [['_setAccount','UA-660910-12'],['_trackPageview'],['_trackPageLoadTime']];

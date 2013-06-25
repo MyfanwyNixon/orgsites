@@ -29,6 +29,10 @@
     <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
   <![endif]-->
 
+    <?php if (get_field('javascript_inject')):
+    echo get_field('javascript_inject');
+    endif; ?>
+
     <?php if ( !OPTION_STAGING ) { ?>
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -54,12 +58,6 @@
     });
 
     </script>
-
-    <?php if (get_field('javascript_inject')): ?>
-    <script type="text/javascript">
-      <?php echo get_field('strapline'); ?>
-    </script>
-    <?php endif; ?>
 
 </body>
 </html>

@@ -16,6 +16,7 @@
 
     <meta name="description" content="<?php echo get_field('meta_description'); ?>">
 
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/new/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="icon" href="<?php bloginfo('template_directory'); ?>/new/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/new/apple-touch-icon-precomposed.png">
 

@@ -33,7 +33,10 @@
 	<script type="text/javascript" src="http://use.typekit.com/bth0qpr.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/new/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="<?php bloginfo('template_directory'); ?>/new/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/new/apple-touch-icon-precomposed.png">
+
     <? wp_head(); ?>
 </head>
 

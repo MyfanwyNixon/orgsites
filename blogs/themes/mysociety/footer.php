@@ -55,5 +55,11 @@
 
     </script>
 
+    <?php if (get_field('javascript_inject')): ?>
+    <script type="text/javascript">
+      <?php echo get_field('strapline'); ?>
+    </script>
+    <?php endif; ?>
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 <header class="header">
 	<div class="wrap">
 		<div class="ms-tab">
-	        <a href="http://mysociety.org"><img src="<?php bloginfo('template_url'); ?>/new/main/img/ms-tab-logo.png"></a>
+	        <a href="http://mysociety.org"><img src="<?php bloginfo('template_url'); ?>/new/main/img/ms-tab-logo.png" gumby-retina style="width:116px;height:24px;"></a>
 	    </div>
 
 	    <div class="menu-link">

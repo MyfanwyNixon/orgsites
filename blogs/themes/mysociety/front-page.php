@@ -30,15 +30,15 @@
 
     <div class="row">
       <div class="four columns special head">
-        <h1><a href="#" onclick="toggleMenu();" class="menu-toggle only-on-mobile"><i class="icon-menu"></i></a><a href="http://www.mysociety.org"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/mysoc-logo.png" gumby-retina style="width:198px;height:41px;"></a></h1>
+        <h1><a href="#" onclick="toggleMenu();" class="menu-toggle only-on-mobile"><i class="icon-menu"></i></a><a href="http://www.mysociety.org"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/mysoc-logo.png" gumby-retina style="width:198px;height:41px;" title="mySociety" alt="mySociety Logo"></a></h1>
       </div>
       <div class="eight columns special head">
         <nav class="greylinks main-nav">
           <ul>
             <!--<li><a href="http://www.mysociety.org/projects">Projects</a></li>-->
-            <li><a href="http://www.mysociety.org/contact">Contact</a></li>
-            <li><a href="http://www.mysociety.org/blog">Blog</a></li>
             <li><a href="http://www.mysociety.org/about">About</a></li>
+            <li><a href="http://www.mysociety.org/blog">Blog</a></li>
+            <li><a href="http://www.mysociety.org/contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -60,7 +60,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><a href="uk"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/uk.png"></a></p>
+        <p class="home-img hide-on-mobile"><a href="uk"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/uk.png" title="UK Sites &amp; Apps" alt="Telephone box"></a></p>
 
         <div class="blocklink"><a href="uk">
           <div class="blocklink-top blocklink-red">&nbsp;</div>
@@ -74,7 +74,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><a href="international"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/international.png"></a></p>
+        <p class="home-img hide-on-mobile"><a href="international"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/international.png" title="International" alt="Suitcase"></a></p>
 
         <div class="blocklink"><a href="international">
           <div class="blocklink-top blocklink-blue">&nbsp;</div>
@@ -88,7 +88,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><a href="services"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/products.png"></a></p>
+        <p class="home-img hide-on-mobile"><a href="services"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/products.png" title="Products &amp; Consulting" alt="Quill and inkwell"></a></p>
 
         <div class="blocklink"><a href="services">
           <div class="blocklink-top blocklink-purple">&nbsp;</div>
@@ -110,7 +110,7 @@
       <div class="twelve columns">
         <ul class="greylinks hide-on-mobile">
           <li><a href="http://www.mysociety.org/jobs">Work for us</a></li>
-          <li><a href="https://secure.mysociety.org/admin/lists/mailman/listinfo/developers-public">Mailing list</a></li>
+          <li><a href="https://secure.mysociety.org/admin/lists/mailman/listinfo/news">Mailing list</a></li>
           <li><a href="http://www.mysociety.org/contact">Contact</a></li>
         </ul>
         <p>mySociety limited (05798215) is a project of UK Citizens Online Democracy (UKCOD) a registered charity in England and Wales, charity number 1076346, company number 03277032.</p>

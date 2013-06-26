@@ -188,6 +188,11 @@ if ( function_exists('add_image_size') ) {
 		flush_rewrite_rules();
 	}
 
+	function stream_rewrite_rule() {
+		add_rewrite_rule('(.*?)$', 'index.php?ms_stream=$matches[1]', 'top');
+	}
+	add_action('after_setup_theme', 'stream_rewrite_rule');
+
 	//register custom menu types
 	add_action('init', 'register_custom_menu');
 

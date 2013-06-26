@@ -60,7 +60,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><a href="uk"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/uk.png" title="UK Sites &amp; Apps" alt="Telephone box"></a></p>
+        <p class="home-img hide-on-mobile"><a href="uk"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/uk.png" alt="UK Sites &amp; Apps"></a></p>
 
         <div class="blocklink"><a href="uk">
           <div class="blocklink-top blocklink-red">&nbsp;</div>
@@ -74,7 +74,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><a href="international"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/international.png" title="International" alt="Suitcase"></a></p>
+        <p class="home-img hide-on-mobile"><a href="international"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/international.png" alt="International"></a></p>
 
         <div class="blocklink"><a href="international">
           <div class="blocklink-top blocklink-blue">&nbsp;</div>
@@ -88,7 +88,7 @@
 
       <div class="four columns product">
 
-        <p class="home-img hide-on-mobile"><a href="services"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/products.png" title="Products &amp; Consulting" alt="Quill and inkwell"></a></p>
+        <p class="home-img hide-on-mobile"><a href="services"><img src="<?php bloginfo('template_directory'); ?>/new/home/img/home/products.png" alt="Products &amp; Consulting"></a></p>
 
         <div class="blocklink"><a href="services">
           <div class="blocklink-top blocklink-purple">&nbsp;</div>

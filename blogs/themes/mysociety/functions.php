@@ -185,7 +185,7 @@ if ( function_exists('add_image_size') ) {
 		);
 
 		// NOTE: if you add another custom post type uncomment this line below
-		flush_rewrite_rules();
+		//flush_rewrite_rules();
 	}
 
 	function stream_rewrite_rule() {

@@ -31,3 +31,6 @@ RedirectPermanent /more-projects http://www.mysociety.org/
 RedirectPermanent /projects/no10-petitions-website/ http://www.mysociety.org/projects/epetitions/
 
 RedirectMatch /commercial$ http://www.mysociety.org/services
+
+# Redirecting removed pages to their new locations.
+RedirectPermanent /for-organisations/fixmystreet/ http://www.mysociety.org/for-councils/fixmystreet/

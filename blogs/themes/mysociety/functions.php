@@ -188,9 +188,12 @@ if ( function_exists('add_image_size') ) {
 		//flush_rewrite_rules();
 	}
 
+	/* This causes pages to try rewriting their URLs in weird and wonderful ways. Parked until a more elegant solution is found.
 	function stream_rewrite_rule() {
-		add_rewrite_rule('(.*?)$', 'index.php?ms_stream=$matches[1]', 'top');
+		add_rewrite_rule('(.*?)$', 'index.php?ms_stream=$matches[1]', 'bottom');
 	}
+	*/
+
 	add_action('after_setup_theme', 'stream_rewrite_rule');
 
 	//register custom menu types

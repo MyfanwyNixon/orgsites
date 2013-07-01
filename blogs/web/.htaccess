@@ -34,3 +34,4 @@ RedirectMatch /commercial$ http://www.mysociety.org/services
 
 # Redirecting removed pages to their new locations.
 RedirectPermanent /for-organisations/fixmystreet/ http://www.mysociety.org/for-councils/fixmystreet/
+RedirectPermanent /for-organisations/fixmystreet http://www.mysociety.org/for-councils/fixmystreet/

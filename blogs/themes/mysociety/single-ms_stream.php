@@ -105,8 +105,8 @@
     <?php endif; ?>
 
     <?php if (count(get_field('logo_banner_images')) > 0 AND get_field('logo_banner_background_colour')): ?>
-    <div class="container" style="background:<?php echo get_field('logo_banner_background_colour'); ?>;">
-        <div class="row not-on-mobile">
+    <div class="container not-on-mobile" style="background:<?php echo get_field('logo_banner_background_colour'); ?>;">
+        <div class="row">
             <div class="twelve columns" style="text-align:center;">
                 <?php foreach (get_field('logo_banner_images') as $logo_banner_image): ?>
                 <img src="<?php echo $logo_banner_image['image']; ?>">
@@ -182,12 +182,13 @@
                                 $item = $section['items'][$j]; ?>
 
                                 <li>
-                                    <a href="<?php echo $item['destination']; ?>"><img class="product-icon" src="<?php echo $item['icon'] ? $item['icon'] : bloginfo('template_directory') . '/new/main/img/product-icon.png'; ?>"></a>
-                                    <div class="product-inset">
-                                        <h4><a href="<?php echo $item['destination']; ?>"><?php echo $item['title']; ?></a></h4>
-
-                                        <p><?php echo $item['text']; ?></p>
-                                    </div>
+                                    <a href="<?php echo $item['destination']; ?>"><div>
+                                        <img class="product-icon" src="<?php echo $item['icon'] ? $item['icon'] : bloginfo('template_directory') . '/new/main/img/product-icon.png'; ?>">
+                                        <div class="product-inset">
+                                            <h4><?php echo $item['title']; ?></h4>
+                                            <p><?php echo $item['text']; ?></p>
+                                        </div>
+                                    </div></a>
                                 </li>
 
                                 <?php endfor; ?>

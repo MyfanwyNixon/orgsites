@@ -105,7 +105,7 @@ coast of Scotland, cannot be reached at all by rail and a taxi journey of up to
 one hour.</p>
 
 <p>The map shows that the fastest journeys are those along the
-<a href="http://en.wikipedia.org/East_Coast_Main_Line">East Coast Main Line</a>
+<a href="http://en.wikipedia.org/wiki/East_coast_main_line">East Coast Main Line</a>
 north to Edinburgh, and those south to London, which is served by frequent fast
 trains. Everywhere in England can be reached within about seven hours (so by
 two o'clock in this example), and everywhere in Wales within about ten hours,
@@ -169,9 +169,9 @@ which chiefly means buses within town and from outlying villages into the city
 center. Here we ask how early must you get up and leave your home to reach a
 particular place of work by public transport. In this example the destination
 we've selected is the University of Cambridge's
-<a href="http://www-building.arct.cam.ac.uk/westc/index.html">West Cambridge
+<a href="http://www.ukspa.org.uk/science_parks/content/1124/university_of_cambridge_west_cambridge_site">West Cambridge
 Site</a>, which is also home to a number of commercial employers including
-<a href="http://www.research.microsoft.com/labs/cam.asp">Microsoft</a>.</p>
+<a href="http://www.microsoft.com/en-gb/about/offices/cambridgemsresearch.aspx">Microsoft</a>.</p>
 
 <p>
 <a href="multimodal-cambridge-center-700px.png"><img src="multimodal-cambridge-center-350px.png" width="350" height="300" alt="Map of Cambridge showing times of departure to reach the West Cambridge site by 9 o'clock on a weekday morning"></a>
